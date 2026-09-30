@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="vi" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chiến Quốc Remaster</title>
+  <meta name="description" content="Chiến Quốc Remaster: hồi sinh MMORPG Chiến Quốc (2008) trên nền tảng Godot 4, giữ trọn lối chơi kinh điển của bản gốc.">
+  <meta name="theme-color" content="#0a1330">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chiến Quốc Remaster">
+  <meta property="og:description" content="15 năm sau, vết nứt thời gian mở ra ở Ba Khâu. Cố nhân, đã đến lúc trở lại.">
+  <meta property="og:image" content="assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ THANH ĐIỀU HƯỚNG ============ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#top" aria-label="Chiến Quốc Remaster, về đầu trang">
+      <img src="assets/favicon.svg" alt="" width="34" height="34">
+      <span>Chiến Quốc <em>Remaster</em></span>
+    </a>
+    <nav class="nav__links" id="navLinks" aria-label="Mục chính">
+      <a href="#cot-truyen">Cốt truyện</a>
+      <a href="#loi-hua">Lời hứa</a>
+      <a href="#hinh-anh">Hình ảnh</a>
+      <a href="#khac-biet">Khác bản gốc</a>
+      <a href="#lo-trinh">Lộ trình</a>
+      <a href="#tai-ve" class="nav__cta">Tải game</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Mở menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <canvas class="hero__fx" id="heroFx" aria-hidden="true"></canvas>
+
+    <div class="container hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow reveal">Huyền thoại MMORPG 2.5D Việt Nam trở lại</p>
+        <h1 class="hero__title reveal">
+          <span class="hero__title-top">Chiến Quốc</span>
+          <span class="hero__title-main">Remaster</span>
+        </h1>
+        <p class="hero__lead reveal">
+          Tái sinh thế giới Chiến Quốc (2008) trên nền tảng công nghệ mới,
+          giữ trọn vẹn linh hồn và lối chơi kinh điển của bản gốc.
+          Hình ảnh sắc nét hơn, nhưng vẫn là Tân Thủ Thôn ngày ấy.
+        </p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--gold" href="#tai-ve">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" /></svg>
+            Tải bản chơi thử
+          </a>
+          <a class="btn btn--ghost" href="#cot-truyen">Đọc cốt truyện</a>
+        </div>
+        <ul class="hero__tags reveal" aria-label="Thông tin nhanh">
+          <li>Miễn phí</li>
+          <li>Nâng cấp đồ hoạ</li>
+          <li>Nâng cấp lối chơi</li>
+          <li>Nói không với nạp thẻ</li>
+        </ul>
+      </div>
+
+      <div class="hero__shot reveal">
+        <div class="frame">
+          <div class="frame__bar"><i></i><i></i><i></i><span>Chiến Quốc Remaster</span></div>
+          <img src="assets/img/hero.jpg" alt="Màn hình chính của Chiến Quốc Remaster: hai tượng kỳ lân trắng, cung điện trên núi và thác nước" width="1581" height="1186">
+        </div>
+        <div class="hero__badge">
+          <div class="hero__badge-row">
+            <strong>2.0</strong>
+            <span>Bản demo<small>có thể chơi offline</small></span>
+          </div>
+          <div class="hero__badge-row hero__badge-row--next">
+            <strong>3.0</strong>
+            <span>Bản online<small>dự kiến sắp ra mắt</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="hero__scroll" href="#cot-truyen" aria-label="Cuộn xuống">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ CỐT TRUYỆN ============ -->
+  <section class="section story" id="cot-truyen">
+    <div class="container story__grid">
+      <div class="story__head reveal">
+        <p class="eyebrow">Lời mở đầu</p>
+        <h2 class="section__title">Cố Nhân Quy Lai</h2>
+        <p class="muted">Hiện ra một lần duy nhất, khi nhân vật mới của bạn đặt chân vào thế giới.</p>
+      </div>
+      <div class="scroll-paper reveal">
+        <p class="story__line">15 năm trước, ngươi từng rong ruổi khắp bảy nước Chiến Quốc.</p>
+        <p class="story__line">Từng ngồi bên đống lửa Tân Thủ Thôn, từng thức trắng đêm cùng bằng hữu săn Trộm Bảo Phi Tặc, săn Boss Tử Kim, hẹn nhau ở Chu Quốc khi trời vừa sáng.</p>
+        <p class="story__line">Ngươi còn nhớ những đêm hồi hộp đến nghẹt thở bên lò rèn, cầu nguyện cho từng ngôi sao trên trang bị rực sáng, những lần đập đoạn thạch mà tiền thì mất mà sao thì tạch.</p>
+        <p class="story__line">Rồi máy chủ tắt dần, bằng hữu tản mát, mỗi người một ngả. Chiến Quốc tưởng như chỉ còn là kí ức tuổi thơ...</p>
+        <p class="story__line story__line--accent">Đêm nay, phía Ba Khâu loé lên một vệt sáng tím. Một vết nứt thời gian đã mở ra.</p>
+        <p class="story__line">Tiếng gọi xưa vọng về: cố nhân, đã đến lúc trở lại.</p>
+        <p class="story__line story__line--big">Chào mừng ngươi về nhà.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LỜI HỨA ============ -->
+  <section class="section pledge" id="loi-hua">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Lời hứa của đội ngũ</p>
+        <h2 class="section__title">Làm vì yêu Chiến Quốc</h2>
+        <p class="muted">Chiến Quốc Remaster được làm bởi cộng đồng những người thực sự yêu thích Chiến Quốc, không phải bởi một công ty.</p>
+      </div>
+
+      <div class="pledge__grid">
+        <article class="pledge__item reveal">
+          <div class="pledge__icon"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5 M11 20c0-3 2.5-5 5-5s5 2 5 5"/></svg></div>
+          <h3>Từ cộng đồng, cho cộng đồng</h3>
+          <p>Mỗi bản sửa, mỗi tính năng đều đến từ những người từng chơi Chiến Quốc và muốn thấy nó sống lại.</p>
+        </article>
+        <article class="pledge__item reveal">
+          <div class="pledge__icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
+          <h3>Miễn phí mãi mãi</h3>
+          <p>Không nạp thẻ, không bán vật phẩm, không có bất cứ hình thức thu tiền nào.</p>
+        </article>
+        <article class="pledge__item reveal">
+          <div class="pledge__icon"><svg viewBox="0 0 24 24"><path d="M12 3v18 M5 7h14 M5 7l-3 6a3 3 0 0 0 6 0z M19 7l-3 6a3 3 0 0 0 6 0z M8 21h8"/></svg></div>
+          <h3>Giữ cốt lõi, sửa lỗi, cân bằng</h3>
+          <p>Duy trì mọi giá trị cốt lõi của game cũ, đồng thời sửa các lỗi và cân bằng lại lối chơi.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HÌNH ẢNH ============ -->
+  <section class="section" id="hinh-anh">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Hình ảnh trong game</p>
+        <h2 class="section__title">Vẫn là thế giới ấy, rõ nét hơn</h2>
+      </div>
+
+      <div class="gallery">
+        <figure class="shot reveal">
+          <button type="button" data-lightbox="0" aria-label="Phóng to ảnh giao diện HD">
+            <img src="assets/img/giao-dien.jpg" alt="Toàn cảnh giao diện trong game: thanh máu, bản đồ tròn, ô phím tắt, nhân vật cưỡi thú giữa Tân Thủ Thôn" loading="lazy" width="1508" height="1131">
+          </button>
+          <figcaption><b>Nâng cấp giao diện HD</b>Duy trì giá trị cốt lõi của game, nâng tầm giao diện.</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <button type="button" data-lightbox="1" aria-label="Phóng to ảnh Lăng Ba Vi Bộ">
+            <img src="assets/img/lang-ba.jpg" alt="Chiến Thần DNT lướt Lăng Ba Vi Bộ, để lại vệt tàn ảnh tím quanh Lữ Bố" loading="lazy" width="720" height="540">
+          </button>
+          <span class="shot__tag">Xem trước</span>
+          <figcaption><b>Bổ sung các kĩ năng giang hồ mới</b>Lăng Ba Vi Bộ, khinh công thượng thừa. Đang hoàn thiện, chưa mở trong bản demo.</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <button type="button" data-lightbox="2" aria-label="Phóng to ảnh thông tin nhân vật">
+            <img src="assets/img/nhan-vat.jpg" alt="Bảng Nhân vật và bảng Chỉ số trong game: ô trang bị, thuộc tính, khí huyết, ngoại công, né tránh, bạo kích" loading="lazy" width="1508" height="1131">
+          </button>
+          <figcaption><b>Thông tin nhân vật chi tiết</b>Trang bị, thuộc tính và toàn bộ chỉ số trong một bảng.</figcaption>
+        </figure>
+        <figure class="shot reveal">
+          <button type="button" data-lightbox="3" aria-label="Phóng to ảnh Thiên Quân Phá Trận">
+            <img src="assets/img/tran-phai.jpg" alt="Chiến Thần DNT thi triển Thiên Quân Phá Trận: trận pháp vàng dưới chân, kiếm quang giáng xuống" loading="lazy" width="960" height="720">
+          </button>
+          <span class="shot__tag">Xem trước</span>
+          <figcaption><b>Bổ sung các kĩ năng trấn phái mới</b>Thiên Quân Phá Trận, kĩ năng trấn phái của Cấm Vệ Quân. Đang hoàn thiện, chưa mở trong bản demo.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KHÁC BẢN GỐC ============ -->
+  <section class="section compare" id="khac-biet">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Remaster khác gì bản gốc</p>
+        <h2 class="section__title">Giữ linh hồn, sửa chỗ chưa vừa</h2>
+      </div>
+
+      <ul class="keep reveal" aria-label="Giữ nguyên như bản gốc">
+        <li class="keep__label">Giữ nguyên</li>
+        <li>Khung nhìn 800×600</li>
+        <li>Công thức chiến đấu gốc</li>
+        <li>Bảng kinh nghiệm gốc</li>
+      </ul>
+
+      <div class="compare__table reveal" role="table" aria-label="So sánh bản gốc và bản remaster">
+        <div class="crow crow--head" role="row">
+          <span role="columnheader"></span>
+          <span role="columnheader">Bản gốc 2008</span>
+          <span role="columnheader">Remaster</span>
+        </div>
+        <div class="crow" role="row">
+          <b role="cell">Hình ảnh</b>
+          <span role="cell" data-label="Bản gốc">Sprite gốc</span>
+          <span role="cell" data-label="Remaster">Nét gấp đôi</span>
+        </div>
+        <div class="crow" role="row">
+          <b role="cell">Cốt truyện</b>
+          <span role="cell" data-label="Bản gốc">Không có cốt truyện xuyên suốt</span>
+          <span role="cell" data-label="Remaster">Một cốt truyện xuyên suốt</span>
+        </div>
+        <div class="crow" role="row">
+          <b role="cell">Lỗi và lag</b>
+          <span role="cell" data-label="Bản gốc">Còn lỗi, có chỗ bị lag</span>
+          <span role="cell" data-label="Remaster">Sửa lỗi, hết lag, cân bằng lại lối chơi</span>
+        </div>
+        <div class="crow" role="row">
+          <b role="cell">Kỹ năng mới</b>
+          <span role="cell" data-label="Bản gốc">Không có</span>
+          <span role="cell" data-label="Remaster">Lăng Ba Vi Bộ, Thiên Quân Phá Trận (đang hoàn thiện)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LỘ TRÌNH ============ -->
+  <section class="section" id="lo-trinh">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow">Lộ trình</p>
+        <h2 class="section__title">Từ kí ức tới máy chủ mới</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="tl reveal">
+          <span class="tl__dot"></span>
+          <time>2008</time>
+          <h3>Chiến Quốc ra mắt</h3>
+          <p>MMORPG 2.5D isometric, bảy nước, bảy môn phái. Tuổi thơ của cả một thế hệ game thủ Việt.</p>
+        </li>
+        <li class="tl tl--done reveal">
+          <span class="tl__dot"></span>
+          <time>Tháng 9/2026</time>
+          <h3>Bản demo 2.0, chơi offline</h3>
+          <p>Lần đầu người chơi quay lại Tân Thủ Thôn: bốn vùng đất, cốt truyện Vết Nứt, môn phái Cấm Vệ Quân và cuộc gặp gỡ Lữ Bố. Đã gom các bản sửa lỗi theo góp ý của người chơi.</p>
+        </li>
+        <li class="tl tl--next reveal">
+          <span class="tl__dot"></span>
+          <time>Sắp tới</time>
+          <h3>Bản 3.0, chơi online (dự kiến)</h3>
+          <p>Máy chủ riêng, chơi cùng bằng hữu. Đang lên kế hoạch, tin mới sẽ báo trong nhóm cộng đồng.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ TẢI VỀ ============ -->
+  <section class="section download" id="tai-ve">
+    <div class="container download__box reveal">
+      <div class="download__text">
+        <p class="eyebrow">Chơi thử ngay</p>
+        <h2 class="section__title">Về nhà thôi, cố nhân</h2>
+        <p>Bản demo chạy offline trên Windows, không cần tài khoản, không cần mạng. Giải nén, bấm chạy, tạo nhân vật.</p>
+        <div class="hero__actions">
+          <a class="btn btn--gold" id="downloadBtn" href="#cong-dong">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" /></svg>
+            <span>Tải bản demo 2.0</span>
+          </a>
+        </div>
+        <p class="small muted" id="downloadNote">Tải cả thư mục về, giải nén, để ChienQuocRemaster.exe và ChienQuocRemaster.pck cùng một chỗ rồi chạy file .exe.</p>
+      </div>
+      <div class="spec-wrap">
+        <p class="spec__title">Cấu hình gợi ý</p>
+        <dl class="spec">
+        <div><dt>Hệ điều hành</dt><dd>Windows 10 hoặc 11, 64 bit</dd></div>
+        <div><dt>Dung lượng</dt><dd>Gói tải khoảng 5,5 GB, giải nén cần thêm 6 GB ổ trống</dd></div>
+        <div><dt>Bộ nhớ</dt><dd>8 GB RAM</dd></div>
+        <div><dt>Đồ hoạ</dt><dd>Card đồ hoạ 2 GB, hỗ trợ OpenGL 3.3</dd></div>
+        <div><dt>Mạng</dt><dd>Không cần (bản offline)</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CỘNG ĐỒNG ============ -->
+  <section class="section community" id="cong-dong">
+    <div class="container community__box reveal">
+      <h2 class="section__title">Cùng toàn thể nghĩa sĩ chung tay</h2>
+      <p>Bản chơi thử không tránh khỏi những hạt sạn. Mỗi lời góp ý bạn gửi là một viên gạch để thế giới này ngày một hoàn mỹ.</p>
+      <a class="btn btn--gold" href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3h-3a4 4 0 0 0-4 4v3H7v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        Góp ý và tham gia cộng đồng
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <a class="brand" href="#top"><img src="assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
+      <p class="small muted">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+    </div>
+    <p class="small muted footer__legal">
+      Dự án phục dựng phi thương mại của người hâm mộ, làm để học tập và lưu giữ kí ức.
+      Tên gọi, hình ảnh và tài nguyên gốc của Chiến Quốc thuộc bản quyền của chủ sở hữu.
+    </p>
+  </div>
+</footer>
+
+<!-- ============ XEM ẢNH LỚN ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Xem ảnh" hidden>
+  <button class="lightbox__close" type="button" aria-label="Đóng">&times;</button>
+  <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Ảnh trước">&#8249;</button>
+  <figure>
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+  <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Ảnh sau">&#8250;</button>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
