@@ -345,6 +345,8 @@ button { font: inherit; color: inherit; }
 .hero__badge span { font-size: .9rem; font-weight: 600; color: var(--text); line-height: 1.25; }
 .hero__badge small { display: block; font-size: .78rem; font-weight: 400; color: var(--text-muted); }
 .hero__badge-row--next strong { color: var(--jade-400); }
+.hero__badge-row--old strong { color: var(--text-muted); font-size: 1.35rem; }
+.hero__badge-row--old span { color: var(--text-muted); }
 
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
@@ -599,6 +601,26 @@ button { font: inherit; color: inherit; }
 }
 .download__text > p:not(.eyebrow):not(.small) { margin-top: 14px; color: #d3dcf3; }
 .download__text .small { margin-top: 14px; }
+.download__old a { color: var(--gold-300); text-decoration: underline; text-underline-offset: 3px; }
+/* Ba bước cài: số tròn vàng, chữ đậm là việc phải làm. */
+.steps { list-style: none; counter-reset: step; margin: 22px 0 0; padding: 0; display: grid; gap: 10px; }
+.steps li { counter-increment: step; position: relative; padding-left: 40px; color: #d3dcf3; font-size: .95rem; line-height: 1.5; }
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: .85rem;
+  font-weight: 700;
+  color: #2a1a02;
+  background: linear-gradient(180deg, var(--gold-300), var(--gold-500));
+}
+.steps b { color: var(--gold-300); font-weight: 600; }
 .spec__title { font-size: .9rem; font-weight: 600; color: var(--jade-400); margin-bottom: 10px; }
 .spec { margin: 0; display: grid; gap: 10px; }
 .spec div {

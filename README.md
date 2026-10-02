@@ -35,7 +35,9 @@ Chỉ chép `website/`, **không** đẩy repo chính: repo chính là private v
 
 | Muốn | Sửa ở |
 |---|---|
-| Có link tải công khai | `CONFIG.downloadUrl` đầu [js/main.js](js/main.js). Để trống thì nút dẫn về nhóm Facebook |
+| Đổi link tải (bản 3.0: zip launcher trên VPS) | `CONFIG.downloadUrl` đầu [js/main.js](js/main.js) **và** `href` của `#downloadBtn` trong `index.html` (để chạy được khi tắt JS). Để trống `downloadUrl` thì nút dẫn về nhóm Facebook |
+| Bản demo 2.0 offline (Google Drive) | dòng "Bản cũ" (`.download__old`) trong mục `#tai-ve`; không còn cập nhật |
+| Tính năng bản hiện hành | mục `#ban-3` của `index.html` (nguồn: `documents/tong-quan/00-tong-quan.md` của repo game) |
 | Đổi link nhóm cộng đồng | `CONFIG.communityUrl` trong `main.js` **và** nút ở mục `#cong-dong` của `index.html` (nguồn gốc: `godot/data/custom/about.json`) |
 | Thay / thêm ảnh | `assets/img/`, rồi thêm một `<figure class="shot">` trong mục `#hinh-anh` (nhớ `data-lightbox` tăng dần) |
 | Đổi màu | biến `--gold-*`, `--ink-*`, `--jade-*` trong `:root` của `style.css` |
@@ -49,7 +51,7 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
 
 | Ảnh | Lấy từ |
 |---|---|
-| `hero.jpg`, `og.jpg` | `build/ui_start.png` (màn chính) |
+| `hero.jpg`, `og.jpg` | `build/ui_start.png` (màn chính). **Cũ:** chụp từ bản demo (nút "Chơi offline", góc ghi "Bản Demo 1.0"), cần chụp lại màn chính bản 3.0 |
 | `giao-dien.jpg` | `./run.sh shot build/web_001_ride.png --map=001 --cuoi --ui` |
 | `nhan-vat.jpg` | `./run.sh shot build/web_char.png --map=001 --ui --bang=char` |
 | `lang-ba.jpg`, `tran-phai.jpg` | khung f0430 / f0470 của `./run.sh demo hero` (`build/demo_hero_f/`), cắt quanh chỗ hành động, phóng ×2 |

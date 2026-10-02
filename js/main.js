@@ -2,11 +2,12 @@
 (function () {
   "use strict";
 
-  // Link tải bản chơi thử. Để trống thì nút dẫn về nhóm cộng đồng (bản 2.0 đang
-  // phát qua Google Drive, chia sẻ theo link trong nhóm). Có link công khai thì dán vào đây.
+  // Link tải launcher bản 3.0 online (zip nhỏ, launcher tự tải gói game ~4,5 GB từ VPS).
+  // Để trống thì nút dẫn về nhóm cộng đồng. Bản demo 2.0 offline (Google Drive) chỉ còn
+  // ở dòng "Bản cũ" trong mục #tai-ve của index.html, không còn cập nhật.
   var CONFIG = {
-    downloadUrl: "https://drive.google.com/drive/folders/1uryoIZk5M8_CemebYR23FHE8yvL3dEbW",
-    downloadLabel: "Tải bản demo 2.0",
+    downloadUrl: "https://180-93-118-219.sslip.io/packs/ChienQuocRemaster-Launcher-3.0.0.zip",
+    downloadLabel: "Tải launcher 3.0",
     communityUrl: "https://www.facebook.com/groups/1795609961479061"
   };
 
@@ -18,9 +19,8 @@
   var dlBtn = document.getElementById("downloadBtn");
   if (dlBtn) {
     if (CONFIG.downloadUrl) {
+      // Link tải file zip trực tiếp: không mở tab mới (tab trắng rồi tự đóng trông như lỗi).
       dlBtn.href = CONFIG.downloadUrl;
-      dlBtn.target = "_blank";
-      dlBtn.rel = "noopener";
       dlBtn.querySelector("span").textContent = CONFIG.downloadLabel;
     } else {
       dlBtn.href = CONFIG.communityUrl;
