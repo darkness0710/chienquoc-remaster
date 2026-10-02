@@ -339,3 +339,71 @@ h1, h2, h3, p { margin: 0; }
 .foot__small { margin-top: 10px; font-size: .85rem; color: var(--muted); }
 .foot__legal { grid-column: 1 / -1; margin-top: 0; padding-top: 18px; border-top: 1px solid var(--line); }
 @media (max-width: 719px) { .foot__in { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- thanh trên: link phụ (Hướng dẫn) ---------- */
+.bar__nav { display: flex; align-items: center; gap: 18px; }
+.bar__link { color: var(--text); font-weight: 600; font-size: .95rem; }
+.bar__link:hover, .bar__link[aria-current="page"] { color: var(--gold-400); }
+@media (max-width: 379px) { .bar__nav { gap: 12px; } .brand span { font-size: 1rem; } }
+
+/* ---------- trang hướng dẫn (huong-dan/index.html) ---------- */
+/* Đầu trang thấp hơn trang chủ: chỉ tiêu đề + mục lục dạng chip. */
+.guide-hero { padding: 48px 0 40px; text-align: center; background:
+    url("../assets/pattern-cloud.svg") repeat,
+    radial-gradient(ellipse at 50% 0%, rgba(232, 195, 106, .16), transparent 60%),
+    linear-gradient(180deg, var(--ink-900), var(--ink-800));
+  border-bottom: 1px solid var(--line); }
+.guide-hero .hero__title { margin-top: 0; font-size: clamp(2.2rem, 6vw, 3.4rem); }
+.guide-hero .hero__lead { margin: 14px auto 0; }
+.toc { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.toc a { display: inline-block; padding: 7px 16px; border-radius: 999px; font-size: .92rem; font-weight: 600;
+  color: var(--text); border: 1px solid var(--line-strong); background: rgba(15, 29, 68, .6); }
+.toc a:hover { color: var(--gold-300); background: rgba(22, 41, 90, .9); }
+
+/* Một mục hướng dẫn: thẻ rộng, tiêu đề + thông tin nhanh (chip) + đoạn văn / danh sách / bảng. */
+.guide { display: grid; gap: 16px; }
+.gcard { padding: 24px; border-radius: var(--radius); border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(22, 41, 90, .7), rgba(15, 29, 68, .55)); min-width: 0; }
+@media (max-width: 539px) { .gcard { padding: 18px; } }
+.gcard h3 { font-size: 1.25rem; color: var(--gold-300); }
+.gcard h4 { margin: 18px 0 6px; font-size: 1rem; color: var(--gold-400); }
+.gcard p, .gcard li { color: #d3dcf3; font-size: .97rem; }
+.gcard p { margin-top: 10px; }
+.gcard ul, .gcard ol { margin: 8px 0 0; padding-left: 1.2em; display: grid; gap: 4px; }
+.gcard strong { color: var(--gold-300); font-weight: 600; }
+.facts { list-style: none; margin: 12px 0 0 !important; padding: 0 !important; display: flex !important; flex-wrap: wrap; gap: 8px !important; }
+.facts li { padding: 3px 12px; border-radius: 999px; font-size: .85rem; color: var(--jade-400);
+  border: 1px solid rgba(111, 214, 226, .35); background: rgba(111, 214, 226, .07); }
+.tip { margin-top: 14px !important; padding: 10px 14px; border-radius: 10px; font-size: .92rem !important;
+  border-left: 3px solid var(--gold-500); background: rgba(232, 195, 106, .08); }
+
+/* Bảng số liệu: điện thoại cuộn ngang trong khung, trang không tràn. */
+.tbl { margin-top: 12px; overflow-x: auto; border-radius: 10px; border: 1px solid var(--line); }
+.tbl table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.tbl th, .tbl td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.tbl th { color: var(--gold-500); font-weight: 600; background: rgba(7, 13, 34, .5); }
+.tbl tr:last-child td { border-bottom: 0; }
+.tbl td.wrap-ok { white-space: normal; min-width: 180px; }
+
+/* Môn phái: chip chọn phái (link neo), mỗi phái một thẻ, hai nhánh cạnh nhau. */
+.sects { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: -12px 0 28px; }
+.sects a { padding: 6px 14px; border-radius: 999px; font-size: .9rem; font-weight: 600; color: var(--gold-300);
+  border: 1px solid var(--line); background: rgba(7, 13, 34, .5); }
+.sects a:hover { border-color: var(--line-strong); }
+.sect__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+.sect__role { font-size: .9rem; color: var(--jade-400); font-weight: 600; }
+.branches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 16px; }
+@media (max-width: 719px) { .branches { grid-template-columns: minmax(0, 1fr); } }
+.branch { padding: 16px; border-radius: 12px; background: rgba(7, 13, 34, .45); border: 1px solid var(--line); min-width: 0; }
+.branch h4 { margin: 0; }
+.branch > p { margin-top: 4px; font-size: .9rem; color: var(--muted); }
+.skills { list-style: none; padding: 0 !important; margin-top: 10px !important; gap: 8px !important; }
+.skills li { font-size: .93rem; }
+.skills b { color: var(--gold-300); font-weight: 600; }
+.skills .lv { display: inline-block; min-width: 3.4em; margin-right: 6px; padding: 0 6px; border-radius: 6px;
+  font-size: .78rem; font-weight: 600; text-align: center; color: #2a1a02; background: var(--gold-500); }
+.back-top { margin-top: 32px; text-align: center; font-size: .92rem; }
+.badge { display: inline-block; margin-left: 8px; padding: 2px 10px; border-radius: 999px; vertical-align: middle;
+  font-family: var(--font-body); font-size: .75rem; font-weight: 600; color: #2a1a02; background: var(--jade-400); }
+.badge--lock { color: var(--muted); background: rgba(168, 179, 209, .15); border: 1px solid rgba(168, 179, 209, .35); }
+.gcard--soon { border-style: dashed; background: rgba(7, 13, 34, .4); }

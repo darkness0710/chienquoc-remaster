@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hướng dẫn · Chiến Quốc Remaster</title>
+  <meta name="description" content="Hướng dẫn Chiến Quốc Remaster 3.0: nhiệm vụ sư môn, rèn trang bị (nâng sao, tăng phẩm, tái tạo, giải phong ấn) và kĩ năng 7 môn phái.">
+  <meta name="theme-color" content="#0a1330">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/">
+  <meta property="og:title" content="Hướng dẫn Chiến Quốc Remaster 3.0">
+  <meta property="og:description" content="Nhiệm vụ hằng ngày, rèn trang bị và kĩ năng 7 môn phái.">
+  <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Nguồn số liệu: repo game, bản 3.0 (2026-10-02).
+     Sư môn: godot/data/custom/sect_quests.json · Rèn: forge.json, equip_rules.json ·
+     Môn phái: sect_skills.json (nguồn duy nhất, đè tài liệu kế hoạch 28).
+     Vương Bộ Đầu (criminal.json) và Cổ Mộ (kế hoạch 33) chưa có trong bản đã phát: gắn "Sắp mở". -->
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="brand" href="../" aria-label="Chiến Quốc Remaster, về trang chủ">
+      <img src="../assets/favicon.svg" alt="" width="32" height="32">
+      <span>Chiến Quốc <em>Remaster</em></span>
+    </a>
+    <nav class="bar__nav">
+      <a class="bar__link" href="./" aria-current="page">Hướng dẫn</a>
+      <a class="btn btn--gold btn--sm" href="../#cai-dat">Tải game</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="guide-hero">
+    <div class="wrap">
+      <h1 class="hero__title">Hướng dẫn</h1>
+      <p class="hero__lead">Việc nên làm mỗi ngày, cách rèn trang bị và kĩ năng của bảy môn phái trong bản 3.0.</p>
+      <ul class="toc">
+        <li><a href="#hang-ngay">Nhiệm vụ hằng ngày</a></li>
+        <li><a href="#tinh-nang">Rèn trang bị</a></li>
+        <li><a href="#mon-phai">Môn phái</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= NHIỆM VỤ HẰNG NGÀY ================= -->
+  <section class="section" id="hang-ngay">
+    <div class="wrap">
+      <h2 class="title">Nhiệm vụ hằng ngày</h2>
+      <p class="sub">Mọi việc hằng ngày làm mới lúc 23:00 giờ Việt Nam. Xem nhanh tiến độ trong bảng Hoạt động hôm nay.</p>
+
+      <div class="guide">
+
+        <article class="gcard" id="su-mon">
+          <h3>Nhiệm vụ sư môn</h3>
+          <ul class="facts">
+            <li>Từ cấp 10, đã bái sư</li>
+            <li>10 việc mỗi ngày</li>
+            <li>Nhận và trả ở sư phụ</li>
+          </ul>
+          <p>
+            Gặp <strong>sư phụ</strong> ở căn cứ môn phái của mình (đứng trong 6 ô) để nhận việc. Muốn tới căn cứ,
+            nói chuyện với <strong>Sứ Giả Môn Phái</strong> ở Chu Quốc, đưa đi miễn phí. Sổ nhiệm vụ (<strong>Alt+Q</strong>)
+            ghi bản đồ, toạ độ và tiến độ, bấm vào là tự đi.
+          </p>
+
+          <h4>Mười việc theo thứ tự</h4>
+          <ol>
+            <li><strong>Việc 1 đến 3, thăm hỏi:</strong> tới nói chuyện với một NPC (có khi ngay trong căn cứ).</li>
+            <li><strong>Việc 4 đến 6, mua đồ:</strong> mua vật phẩm ở tiệm rồi mang về nộp, ví dụ 5 Hành Quân Tán ở Chủ Tiệm Y Dược.</li>
+            <li><strong>Việc 7 đến 9, đánh quái:</strong> diệt 12 con (từ cấp 20 là 15 con), việc 8 có thể là nhặt đồ quái rơi.</li>
+            <li><strong>Việc 10, khiêu chiến:</strong> nói chuyện với NPC, chọn Khiêu chiến để đấu một phân thân chỉ mình bạn thấy. Có 180 giây, thua thì thử lại không giới hạn.</li>
+          </ol>
+
+          <h4>Phần thưởng</h4>
+          <p>Mỗi việc cho kinh nghiệm, ngân lượng và <strong>1 điểm sư môn</strong>. Việc càng về sau thưởng càng lớn (việc 10 chiếm gần một phần năm cả ngày). Thưởng tính theo cấp lúc nhận việc.</p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Cấp</th><th>Ngân lượng cả ngày</th><th>Kinh nghiệm cả ngày</th></tr></thead>
+              <tbody>
+                <tr><td>10</td><td>50.000</td><td>khoảng 18.000</td></tr>
+                <tr><td>20</td><td>100.000</td><td>khoảng 59.000</td></tr>
+                <tr><td>30</td><td>170.000</td><td>khoảng 167.000</td></tr>
+                <tr><td>40</td><td>260.000</td><td>khoảng 341.000</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Trả xong việc 10 được quay <strong>vòng quay sư môn</strong>: thưởng thêm ngân lượng bằng 1,1 đến 1,5 lần tiền việc 10. Lỡ đóng bảng thì quay lại sư phụ nhận sau.</p>
+          <p><strong>Điểm sư môn</strong> dùng ở sư phụ: đổi set sư môn từ cấp 25, hoặc đổi Thăng Phẩm Thạch (10 điểm) và Tái Tạo Thạch (5 điểm) ở thẻ Đề xuất.</p>
+          <p class="tip">Việc khó quá thì chọn "Đổi việc khác" ở sư phụ: giữ số thứ tự, đổi mục tiêu, chờ 60 giây giữa hai lần đổi. Việc làm dở được giữ sang hôm sau.</p>
+        </article>
+
+        <article class="gcard gcard--soon" id="vuong-bo-dau">
+          <h3>Truy bắt cùng Vương Bộ Đầu <span class="badge">Sắp mở</span></h3>
+          <ul class="facts">
+            <li>Từ cấp 10, đã bái sư</li>
+            <li>10 vòng mỗi ngày</li>
+            <li>Chu Quốc</li>
+          </ul>
+          <p>
+            Vương Bộ Đầu ở Chu Quốc giao lệnh truy bắt <strong>phản đồ</strong> các môn phái đang lẩn trốn trên bản đồ hợp cấp.
+            Tới gần, bấm vào phản đồ, chọn Truy bắt và hạ hắn, rồi về phục mệnh. Mỗi vòng có 30 phút, vòng sau phản đồ mạnh hơn và biết thêm chiêu.
+          </p>
+          <p>Thưởng ngân lượng mỗi vòng (cấp 10 là 7.000, cấp 40 là 22.000), vòng 10 có vòng quay thưởng thêm. Quá giờ hoặc bỏ truy bắt thì hôm đó dừng, tiền các vòng đã xong vẫn giữ.</p>
+          <p class="tip">Đang hoàn thiện, cách chơi có thể đổi khi mở chính thức.</p>
+        </article>
+
+        <article class="gcard gcard--soon" id="co-mo">
+          <h3>Phó bản Cổ Mộ <span class="badge">Sắp mở</span></h3>
+          <ul class="facts">
+            <li>Tổ đội 1 đến 5 người</li>
+            <li>Cổ Mộ Xa Phu, Chu Quốc</li>
+          </ul>
+          <p>
+            Cùng tổ đội vào lăng mộ cổ, vượt qua đám Thạch Dũng canh mộ để đối đầu trùm cuối Lữ Bố.
+            Phó bản có nhiều độ khó, phần thưởng có Đoạn Thạch để nâng sao. Chi tiết sẽ báo trong nhóm cộng đồng khi mở.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RÈN TRANG BỊ ================= -->
+  <section class="section section--alt" id="tinh-nang">
+    <div class="wrap">
+      <h2 class="title">Rèn trang bị</h2>
+      <p class="sub">
+        Tới <strong>Chủ Tiệm Sửa Chữa</strong> ở Tân Thủ Thôn, Sở hoặc Chu, chọn "Rèn luyện trang bị". Rèn được vũ khí, áo, nón, giày,
+        yêu đới, hạng liên, kể cả đồ đang mặc. Kéo đồ vào ô trái, đá vào ô phải, bấm Tiến hành. Kết quả lưu ngay, không hoàn tác được.
+      </p>
+
+      <div class="guide">
+
+        <article class="gcard" id="nang-sao">
+          <h3>Nâng sao và hợp thành Đoạn Thạch</h3>
+          <ul class="facts">
+            <li>Tối đa 10 sao</li>
+            <li>1 Đoạn Thạch mỗi lần, không tốn tiền</li>
+          </ul>
+          <p>Mỗi sao cộng thêm vào chỉ số chính của món đồ (vũ khí: ngoại công và nội công; áo, nón, yêu đới: hai loại kháng; giày: thân thủ và ngoại kháng; hạng liên: ngoại công và nội công). Đồ cấp càng cao, mỗi sao cộng càng nhiều.</p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Lên sao</th><th>Cần đá</th><th>Tỉ lệ thành công</th></tr></thead>
+              <tbody>
+                <tr><td>1, 2</td><td>Sơ Cấp Đoạn Thạch</td><td>100 %, 80 %</td></tr>
+                <tr><td>3, 4</td><td>Trung Cấp Đoạn Thạch</td><td>60 %, 45 %</td></tr>
+                <tr><td>5, 6</td><td>Cao Cấp Đoạn Thạch</td><td>30 %, 20 %</td></tr>
+                <tr><td>7, 8</td><td>Đỉnh Cấp Đoạn Thạch</td><td>12 %, 8 %</td></tr>
+                <tr><td>9, 10</td><td>Chí Tôn Cấp Đoạn Thạch</td><td>4 %, 2 %</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Thất bại:</strong> mất đá và tụt 1 sao. Đồ không bao giờ vỡ. Nâng thành công thì món đồ bị <strong>phong ấn</strong> (xem Giải phong ấn).</p>
+
+          <h4>Hợp thành Đoạn Thạch</h4>
+          <p>Ở thẻ Hợp thành Đoạn Thạch: 2 viên cùng loại thành 1 viên loại kế tiếp, không tốn tiền. Mỗi viên đá chiếm một ô hành trang, nhớ chừa chỗ.</p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Hợp thành</th><th>Tỉ lệ</th><th>Thất bại mất</th></tr></thead>
+              <tbody>
+                <tr><td>Sơ Cấp thành Trung Cấp</td><td>85 %</td><td>1 viên</td></tr>
+                <tr><td>Trung Cấp thành Cao Cấp</td><td>70 %</td><td>1 viên</td></tr>
+                <tr><td>Cao Cấp thành Đỉnh Cấp</td><td>50 %</td><td>2 viên</td></tr>
+                <tr><td>Đỉnh Cấp thành Chí Tôn Cấp</td><td>35 %</td><td>2 viên</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tip">Sơ Cấp Đoạn Thạch có ở quà điểm danh hằng ngày (ngày thứ 7 gấp đôi) và Chiến Quốc Bảo Điển (mỗi lần lên cấp được thêm một lượt quay). Các loại cao hơn chỉ có qua hợp thành.</p>
+        </article>
+
+        <article class="gcard" id="tang-pham">
+          <h3>Tăng phẩm</h3>
+          <ul class="facts">
+            <li>1 Thăng Phẩm Thạch</li>
+            <li>4.000 ngân lượng × cấp đồ</li>
+          </ul>
+          <p>Phẩm càng cao, chỉ số gốc càng lớn và có thêm dòng phụ, thêm lỗ khảm. Quái chỉ rơi đồ Trắng.</p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Phẩm</th><th>Chỉ số gốc</th><th>Dòng phụ</th><th>Cách có</th></tr></thead>
+              <tbody>
+                <tr><td>Trắng</td><td>× 1,0</td><td>0</td><td>quái rơi</td></tr>
+                <tr><td>Xanh</td><td>× 1,2</td><td>2</td><td>tăng phẩm từ Trắng, 25 %</td></tr>
+                <tr><td>Vàng</td><td>× 1,4</td><td>3</td><td>tăng phẩm từ Xanh, 10 %</td></tr>
+                <tr><td>Tím</td><td>× 1,6</td><td>4</td><td>set sư môn</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Thành công: lên một phẩm, thêm dòng phụ ngẫu nhiên, giữ nguyên sao và dòng cũ. Thất bại: mất đá và tiền, đồ không đổi. Đồ cấp 10 tốn 40.000 ngân lượng mỗi lần.</p>
+          <p class="tip">Thăng Phẩm Thạch có ở Chiến Quốc Bảo Điển, hoặc đổi 10 điểm sư môn ở sư phụ.</p>
+        </article>
+
+        <article class="gcard" id="tai-tao">
+          <h3>Tái tạo</h3>
+          <ul class="facts">
+            <li>Đồ Xanh, Vàng</li>
+            <li>1 Tái Tạo Thạch</li>
+            <li>1.000 ngân lượng × cấp đồ</li>
+            <li>Luôn thành công</li>
+          </ul>
+          <p>Quay lại toàn bộ dòng phụ chưa khoá. Bấm <strong>Khoá</strong> ở dòng muốn giữ (khoá không tốn thêm), phải chừa ít nhất một dòng để quay. Dòng mới không trùng loại với dòng đã khoá. Phẩm, sao và đá khảm giữ nguyên.</p>
+          <p>Mỗi dòng ra một trong ba bậc: <strong>Thường</strong> (60 % mức trần, ra 6 lần trên 10), <strong>Tốt</strong> (80 %, 3 lần trên 10) và <strong>Hiếm</strong> (đủ mức trần, 1 lần trên 10).</p>
+          <p class="tip">Tái Tạo Thạch có ở Chiến Quốc Bảo Điển, hoặc đổi 5 điểm sư môn ở sư phụ.</p>
+        </article>
+
+        <article class="gcard" id="giai-phong-an">
+          <h3>Giải phong ấn</h3>
+          <ul class="facts">
+            <li>5.000.000 ngân lượng</li>
+            <li>Không tốn đá, không thất bại</li>
+          </ul>
+          <p>Nâng sao thành công sẽ <strong>phong ấn</strong> món đồ: vẫn mặc, cất, rèn tiếp, bán tiệm được, chỉ là <strong>không giao dịch</strong> với người khác. Giải phong ấn để mở lại giao dịch. Nâng sao thành công lần nữa thì bị phong ấn lại.</p>
+          <p class="tip">Muốn bán đồ sao cho bằng hữu, nâng xong hết sao rồi mới giải phong ấn một lần.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MÔN PHÁI ================= -->
+  <section class="section" id="mon-phai">
+    <div class="wrap">
+      <h2 class="title">Bảy môn phái</h2>
+      <p class="sub">
+        Đủ cấp 10 và xong nhiệm vụ "Vấn Đạo Thất Môn" ở Tân Thủ Thôn thì tới căn cứ bái sư. Sư phụ tặng vũ khí phái và tín vật,
+        tẩy điểm thuộc tính miễn phí một lần để cộng lại theo môn phái.
+      </p>
+      <nav class="sects" aria-label="Chọn môn phái">
+        <a href="#dao-hoa">Đào Hoa</a>
+        <a href="#thuc-son">Thục Sơn</a>
+        <a href="#cam-ve-quan">Cấm Vệ Quân</a>
+        <a href="#duong-mon">Đường Môn</a>
+        <a href="#mao-son">Mao Sơn</a>
+        <a href="#con-luan">Côn Luân</a>
+        <a href="#van-mong">Vân Mộng</a>
+      </nav>
+
+      <div class="guide">
+
+        <article class="gcard" id="cach-hoc">
+          <h3>Cách học kĩ năng</h3>
+          <ul>
+            <li>Học và nâng ở sư phụ, mục "Học kĩ năng môn phái". <strong>Alt+R</strong> xem cây kĩ năng.</li>
+            <li>Cây có <strong>5 ô</strong>, mỗi ô chọn một trong hai chiêu (nhánh A hoặc nhánh B), được trộn hai nhánh. Học ô sau cần đã có chiêu ở ô trước.</li>
+            <li>Thêm <strong>3 chiêu chung</strong> (mở ở cấp 12, 25, 35) và <strong>2 nội tại</strong> tự mạnh lên theo tổng cấp chiêu của nhánh.</li>
+            <li>Mỗi cấp nhân vật được 1 điểm kĩ năng. Cấp 1 của mọi chiêu chỉ tốn ngân lượng, không tốn điểm. Cấp chiêu tối đa tăng dần theo cấp nhân vật.</li>
+            <li><strong>Tẩy điểm</strong> ở sư phụ: lần đầu miễn phí, sau đó 100.000 ngân lượng mỗi lần.</li>
+            <li>Chiêu <strong>trấn phái</strong> của mỗi phái đã hiện trong cây nhưng chưa mở ở bản này.</li>
+          </ul>
+        </article>
+
+        <!-- 1. Đào Hoa -->
+        <article class="gcard" id="dao-hoa">
+          <div class="sect__head">
+            <h3>Đào Hoa Nguyên</h3>
+            <span class="sect__role">Cận chiến, ngoại công, đỡ đòn</span>
+          </div>
+          <ul class="facts">
+            <li>Sư phụ: Vô Ức</li>
+            <li>Đào Nguyên Thôn (80, 54)</li>
+            <li>Quyền sáo</li>
+            <li>Dùng Nguyên Khí</li>
+          </ul>
+          <p>Đánh tay không, đòn trúng thì tích Nguyên Khí rồi xả ra bằng chiêu mạnh. Hợp đánh tay đôi hoặc đứng trước kéo quái cho tổ đội.</p>
+          <div class="branches">
+            <div class="branch">
+              <h4>Thái Cổ Quyền</h4>
+              <p>Dồn sát thương</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Hắc Hổ Đào Tâm</b>: đấm nhanh một mục tiêu, trúng thì thêm Nguyên Khí.</li>
+                <li><span class="lv">Cấp 15</span><b>Thốn Kình</b>: gây Trọng Thương, giảm công và thủ của địch.</li>
+                <li><span class="lv">Cấp 20</span><b>Phong Ma Quyết</b>: Trầm Mặc (không ra chiêu được) và giảm công của quái.</li>
+                <li><span class="lv">Cấp 30</span><b>Khí Tráng Sơn Hà</b>: xả 3 đến 10 Nguyên Khí, mỗi điểm thêm 10 % sát thương.</li>
+                <li><span class="lv">Cấp 40</span><b>Nhất Quyền Bạt Sơn</b>: xuyên thủ, quái dưới nửa máu chắc chắn bạo kích.</li>
+              </ul>
+            </div>
+            <div class="branch">
+              <h4>Đào Hoa Hộ Thể</h4>
+              <p>Đỡ đòn, giữ quái</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Lạc Kích</b>: phá giáp, cả tổ đội đánh mạnh hơn, hút thù hận gấp đôi.</li>
+                <li><span class="lv">Cấp 15</span><b>Khiêu Trận</b>: đánh vùng và khiêu khích quái quanh mình.</li>
+                <li><span class="lv">Cấp 20</span><b>Đào Hoa Lạc Ảnh</b>: dựng trận giam địch, không bước ra được.</li>
+                <li><span class="lv">Cấp 30</span><b>Phản Tỏa</b>: phản sát thương trong 10 giây, kèm một đòn phản kích.</li>
+                <li><span class="lv">Cấp 40</span><b>Đại Hải Vô Lượng</b>: ba đợt sóng hình nón, đợt cuối đẩy lùi và làm choáng.</li>
+              </ul>
+            </div>
+          </div>
+          <h4>Chiêu chung</h4>
+          <ul>
+            <li><strong>Dã Tính Cuồng Lực</strong> (thế công) và <strong>Kim Cương Thân Pháp</strong> (thế thủ): chỉ bật được một thế.</li>
+            <li><strong>Nguyên Khí Quy Nguyên</strong>: hồi 6 Nguyên Khí và hồi máu dần.</li>
+          </ul>
+          <p><strong>Trấn phái:</strong> Hàng Long Hữu Hối <span class="badge badge--lock">Chưa mở</span></p>
+        </article>
+
+        <!-- 2. Thục Sơn -->
+        <article class="gcard" id="thuc-son">
+          <div class="sect__head">
+            <h3>Thục Sơn</h3>
+            <span class="sect__role">Cận chiến hoặc tầm xa, hỗ trợ</span>
+          </div>
+          <ul class="facts">
+            <li>Sư phụ: Tử Hằng Đạo Nhân</li>
+            <li>Thục Sơn (205, 158)</li>
+            <li>Kiếm hoặc đao</li>
+            <li>Dùng Pháp Lực</li>
+          </ul>
+          <p>Dồn Lực thì cầm đao xông lên, dồn Tinh Thần thì cầm kiếm bắn phép xa 9 ô. Đòn đánh tích Khắc Ấn (tối đa 5 tầng) để tăng uy lực chiêu sau. Có thêm hồi máu và buff kháng cho tổ đội.</p>
+          <div class="branches">
+            <div class="branch">
+              <h4>Đao</h4>
+              <p>Cận chiến</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Đơn Đao Trực Nhập</b>: chém một mục tiêu, hồi Pháp Lực.</li>
+                <li><span class="lv">Cấp 15</span><b>Nghênh Phong Trảm</b>: gây Xuất Huyết và Trọng Thương.</li>
+                <li><span class="lv">Cấp 20</span><b>Lực Phách Hoa Sơn</b>: làm choáng, đủ 3 Khắc Ấn thì choáng lâu hơn.</li>
+                <li><span class="lv">Cấp 30</span><b>Lưu Tinh Truy Mạng</b>: lướt tới mục tiêu trong 8 ô, đòn không trượt, xoá một hiệu ứng tốt của địch.</li>
+                <li><span class="lv">Cấp 40</span><b>Khai Thiên Tịch Địa</b>: nhảy tới, xẻ đất thẳng hàng, mỗi tầng Khắc Ấn thêm 6 %.</li>
+              </ul>
+            </div>
+            <div class="branch">
+              <h4>Kiếm</h4>
+              <p>Tầm xa</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Tiên Nhân Chỉ Lộ</b>: kiếm khí xa, xuyên thêm một kẻ.</li>
+                <li><span class="lv">Cấp 15</span><b>Vạn Kiếm Xuyên Tâm</b>: xuyên cả hàng, tối đa 6 kẻ.</li>
+                <li><span class="lv">Cấp 20</span><b>Băng Tâm Thức</b>: nổ vùng, làm chậm.</li>
+                <li><span class="lv">Cấp 30</span><b>Lăng Không Chỉ Huyệt</b>: làm choáng rồi lướt lùi 4 ô, đánh mạnh hơn lên kẻ đang bị khống chế.</li>
+                <li><span class="lv">Cấp 40</span><b>Ngự Kiếm Phi Tiên</b>: kiếm rơi ba đợt xuống vùng rộng, tối đa 9 kẻ.</li>
+              </ul>
+            </div>
+          </div>
+          <h4>Chiêu chung</h4>
+          <ul>
+            <li><strong>Tiên Khí</strong>: hồi máu cho mình hoặc đồng đội, xoá một trạng thái xấu.</li>
+            <li><strong>Đại Chu Thiên</strong>: tăng ngoại kháng và nội kháng cho cả tổ đội trong 30 phút.</li>
+            <li><strong>Tiên Thân Vô Địch</strong>: mọi đòn chỉ trừ 1 máu, tự bật khi trúng đòn chí mạng.</li>
+          </ul>
+          <p><strong>Trấn phái:</strong> Bát Quái Kiếm Trận <span class="badge badge--lock">Chưa mở</span></p>
+        </article>
+
+        <!-- 3. Cấm Vệ Quân -->
+        <article class="gcard" id="cam-ve-quan">
+          <div class="sect__head">
+            <h3>Cấm Vệ Quân</h3>
+            <span class="sect__role">Cận chiến, ngoại công</span>
+          </div>
+          <ul class="facts">
+            <li>Sư phụ: Quân Giáo Đầu</li>
+            <li>Doanh trại thành Chu (185, 74)</li>
+            <li>Thương hoặc côn</li>
+            <li>Dùng Nguyên Khí</li>
+          </ul>
+          <p>Quân nhân triều đình. Cầm thương để hạ gục từng mục tiêu, cầm côn để dọn cả bầy quái và trụ đòn. Sư phụ tặng cả thương lẫn côn.</p>
+          <div class="branches">
+            <div class="branch">
+              <h4>Thương</h4>
+              <p>Đơn mục tiêu</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Mãng Xà Xuất Động</b>: đâm xuyên thủ, trúng thì thêm Nguyên Khí.</li>
+                <li><span class="lv">Cấp 15</span><b>Trực Đảo Hoàng Long</b>: gây Trọng Thương.</li>
+                <li><span class="lv">Cấp 20</span><b>Thiên Bồng Nhất Kích</b>: quái bị choáng và giảm công.</li>
+                <li><span class="lv">Cấp 30</span><b>Thiên Lý Tất Sát</b>: lướt tới mục tiêu trong 8 ô, làm choáng 2 giây.</li>
+                <li><span class="lv">Cấp 40</span><b>Lôi Đình Kích</b>: ba nhát đâm, nhát thứ ba chắc chắn bạo kích.</li>
+              </ul>
+            </div>
+            <div class="branch">
+              <h4>Côn</h4>
+              <p>Đánh vùng, trụ đòn</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Ngạo Thiên Côn</b>: nện mục tiêu, dư chấn lan sang hai kẻ cạnh.</li>
+                <li><span class="lv">Cấp 15</span><b>Hoành Tảo Thiên Quân</b>: quét vòng quanh mình.</li>
+                <li><span class="lv">Cấp 20</span><b>Chấn Thiên Nộ Hống</b>: gầm làm choáng tối đa 8 kẻ xung quanh.</li>
+                <li><span class="lv">Cấp 30</span><b>Đại Hải Cuồng Đào</b>: kéo quái trong 5 ô về phía mình, làm chậm.</li>
+                <li><span class="lv">Cấp 40</span><b>Ba Đào Nộ Lãng</b>: ba đợt sóng đánh vùng rộng.</li>
+              </ul>
+            </div>
+          </div>
+          <h4>Chiêu chung</h4>
+          <ul>
+            <li><strong>Phá Quân Thế</strong> (thế công) và <strong>Thiết Bích Thế</strong> (thế thủ): chỉ bật được một thế.</li>
+            <li><strong>Luân Hồi Vạn Chuyển</strong>: khi máu dưới 70 %, hồi máu, đầy Nguyên Khí và xoá thời gian chờ chiêu.</li>
+          </ul>
+          <p><strong>Trấn phái:</strong> Thiên Quân Phá Trận <span class="badge badge--lock">Chưa mở</span></p>
+        </article>
+
+        <!-- 4. Đường Môn -->
+        <article class="gcard" id="duong-mon">
+          <div class="sect__head">
+            <h3>Đường Môn</h3>
+            <span class="sect__role">Tầm xa hoặc ám sát, ngoại công</span>
+          </div>
+          <ul class="facts">
+            <li>Sư phụ: Đường Bưu</li>
+            <li>Trang Viện (92, 117)</li>
+            <li>Ám khí</li>
+            <li>Dùng Pháp Lực</li>
+          </ul>
+          <p>Ném ám khí xa 9 ô. Một lối thả diều tầm xa kèm độc, một lối ẩn thân áp sát đâm sau lưng.</p>
+          <div class="branches">
+            <div class="branch">
+              <h4>Ám Khí</h4>
+              <p>Tầm xa, độc</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Mai Hoa Châm</b>: châm xa 7 ô, nảy sang hai kẻ khác.</li>
+                <li><span class="lv">Cấp 15</span><b>Thấu Cốt Đinh</b>: giảm ngoại kháng, gây Trúng Độc.</li>
+                <li><span class="lv">Cấp 20</span><b>Nhiếp Hồn Châm</b>: khói độc định thân tối đa 6 kẻ.</li>
+                <li><span class="lv">Cấp 30</span><b>Bách Bộ Xuyên Dương</b>: nhắm 1 giây rồi bắn xuyên thẳng 10 ô, mục tiêu đầu chắc chắn bạo kích.</li>
+                <li><span class="lv">Cấp 40</span><b>Mãn Thiên Hoa Vũ</b>: ba đợt mưa ám khí, mạnh hơn lên kẻ trúng độc.</li>
+              </ul>
+            </div>
+            <div class="branch">
+              <h4>Ám Sát</h4>
+              <p>Áp sát, bạo kích</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Thích Sát</b>: đâm kề, chảy máu cộng dồn tới 3 lớp.</li>
+                <li><span class="lv">Cấp 15</span><b>Ám Kích</b>: đánh sau lưng thì chắc chắn bạo kích.</li>
+                <li><span class="lv">Cấp 20</span><b>Ma Tâm Thuật</b>: né hoàn toàn đòn đơn mục tiêu trong 8 giây.</li>
+                <li><span class="lv">Cấp 30</span><b>Bộ Phong Hành</b>: lướt ra sau lưng mục tiêu, làm choáng.</li>
+                <li><span class="lv">Cấp 40</span><b>Bí Sát</b>: chỉ dùng khi đang ẩn thân, ba nhát chắc chắn bạo kích.</li>
+              </ul>
+            </div>
+          </div>
+          <h4>Chiêu chung</h4>
+          <ul>
+            <li><strong>Ẩn Thân Thuật</strong>: tàng hình tới 30 giây, đòn đầu khi lộ diện mạnh hơn.</li>
+            <li><strong>Lạc Tuyết Vô Ngân</strong>: tăng né tránh và tốc độ chạy.</li>
+            <li><strong>Thanh Tâm Quyết</strong>: giải mọi trạng thái xấu, hồi máu, miễn khống chế 2 giây.</li>
+          </ul>
+          <p><strong>Trấn phái:</strong> Bạo Vũ Lê Hoa <span class="badge badge--lock">Chưa mở</span></p>
+        </article>
+
+        <!-- 5. Mao Sơn -->
+        <article class="gcard" id="mao-son">
+          <div class="sect__head">
+            <h3>Mao Sơn</h3>
+            <span class="sect__role">Tầm xa, nội công, triệu hồi</span>
+          </div>
+          <ul class="facts">
+            <li>Sư phụ: Linh Toán Tử</li>
+            <li>Mao Sơn (266, 183)</li>
+            <li>Kiếm</li>
+            <li>Dùng Pháp Lực và Bùa Giấy</li>
+          </ul>
+          <p>Đạo sĩ bắn phép xa. Một lối gọi quỷ tốt, cương thi, ma vương đánh thay; một lối gieo lời nguyền làm địch yếu đi. Vài chiêu triệu hồi tốn Bùa Giấy, sư phụ tặng 50 lá khi nhập môn.</p>
+          <div class="branches">
+            <div class="branch">
+              <h4>Thuận Thiên</h4>
+              <p>Triệu hồi</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Huyết Ma Chú</b>: huyết chú xa 7 ô, hồi Pháp Lực cho mình và máu cho Quỷ Tốt.</li>
+                <li><span class="lv">Cấp 15</span><b>Phục Ma Quyết</b>: đòn nặng, ra lệnh mọi thú dồn đánh mục tiêu.</li>
+                <li><span class="lv">Cấp 20</span><b>Triệu Hồi Cương Thi</b>: gọi Cương Thi đỡ đòn, gây Trọng Thương và làm chậm.</li>
+                <li><span class="lv">Cấp 30</span><b>Huyết Tế</b>: cho thú nổ vùng, hồi máu cho mình và đồng đội.</li>
+                <li><span class="lv">Cấp 40</span><b>Tế Ma Vương</b>: gọi Ma Vương 25 giây, đánh vùng và làm choáng.</li>
+              </ul>
+            </div>
+            <div class="branch">
+              <h4>Nghịch Thiên</h4>
+              <p>Nguyền rủa</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Thực Giáp</b>: bùa giảm hai loại kháng, cộng dồn tới 5 lần.</li>
+                <li><span class="lv">Cấp 15</span><b>Thực Tâm</b>: nguyền cả vùng, mất máu dần trong 10 giây.</li>
+                <li><span class="lv">Cấp 20</span><b>Thực Hồn</b>: định thân kèm Trầm Mặc.</li>
+                <li><span class="lv">Cấp 30</span><b>Ám Ma Nhập Thể</b>: nổ vùng, mạnh hơn lên kẻ dính lời nguyền và làm mới lời nguyền.</li>
+                <li><span class="lv">Cấp 40</span><b>Lôi Động Cửu Thiên</b>: ba đợt sét, làm chậm, đợt cuối làm choáng.</li>
+              </ul>
+            </div>
+          </div>
+          <h4>Chiêu chung</h4>
+          <ul>
+            <li><strong>Triệu Hồi Quỷ Tốt</strong>: thú phun lửa đánh xa, bấm lại để thu về.</li>
+            <li><strong>Thần Tuệ Pháp Chú</strong>: khiên chắn 10 giây, tăng kháng.</li>
+            <li><strong>Xuyên Không Thành</strong>: đặt dấu, bấm lần hai để quay về chỗ dấu, gỡ khống chế và hồi máu.</li>
+          </ul>
+          <p><strong>Trấn phái:</strong> Cương Thi Vương <span class="badge badge--lock">Chưa mở</span></p>
+        </article>
+
+        <!-- 6. Côn Luân -->
+        <article class="gcard" id="con-luan">
+          <div class="sect__head">
+            <h3>Côn Luân</h3>
+            <span class="sect__role">Tầm xa, pháp sư tấn công</span>
+          </div>
+          <ul class="facts">
+            <li>Sư phụ: Văn Xương Chân Quân</li>
+            <li>Côn Luân Sơn (111, 137)</li>
+            <li>Kiếm hoặc đao</li>
+            <li>Dùng Pháp Lực</li>
+          </ul>
+          <p>Pháp sư đánh xa 6 đến 8 ô. Cầm kiếm thì theo nội công, cầm đao thì theo ngoại công, sức mạnh như nhau. Một lối phù chú lửa băng dồn đơn mục tiêu, một lối trận pháp đánh vùng.</p>
+          <div class="branches">
+            <div class="branch">
+              <h4>Phù Chú</h4>
+              <p>Đơn mục tiêu, lửa và băng</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Phong Hoả Quyết</b>: bùa đánh xa 8 ô.</li>
+                <li><span class="lv">Cấp 15</span><b>Hoả Long Quyết</b>: gây Thiêu Đốt 6 giây.</li>
+                <li><span class="lv">Cấp 20</span><b>Phong Ma Chú</b>: làm choáng.</li>
+                <li><span class="lv">Cấp 30</span><b>Thương Long Quyết</b>: làm chậm, kích nổ ngay Thiêu Đốt còn lại.</li>
+                <li><span class="lv">Cấp 40</span><b>Huyền Long Chân Khí</b>: ba đòn, mạnh hơn lên kẻ đang bị Thiêu Đốt hoặc làm chậm.</li>
+              </ul>
+            </div>
+            <div class="branch">
+              <h4>Trận Pháp</h4>
+              <p>Đánh vùng</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Ngự Lôi Thuật</b>: sét xa 6 ô, lan sang hai kẻ.</li>
+                <li><span class="lv">Cấp 15</span><b>Kim Quang Trận</b>: trận kiếm đánh vùng.</li>
+                <li><span class="lv">Cấp 20</span><b>Khốn Ma Trận</b>: kéo quái về tâm trận và định thân.</li>
+                <li><span class="lv">Cấp 30</span><b>Hàn Băng Trận</b>: trận băng làm chậm, đứng lâu trong trận thì Đóng Băng.</li>
+                <li><span class="lv">Cấp 40</span><b>Lôi Long Quyết</b>: vận công 1 giây, ba đợt sét vùng rộng, đợt cuối làm choáng.</li>
+              </ul>
+            </div>
+          </div>
+          <h4>Chiêu chung</h4>
+          <ul>
+            <li><strong>Càn Khôn Na Di</strong>: hộ thể, chuyển sát thương nhận vào sang Pháp Lực.</li>
+            <li><strong>Đằng Vân Giá Vũ</strong>: lướt 6 ô, giải làm chậm và định thân.</li>
+            <li><strong>Phá Chú</strong>: giải mọi khống chế (kể cả khi đang choáng), dùng được lên đồng đội.</li>
+          </ul>
+          <p><strong>Trấn phái:</strong> Cửu Thiên Lôi Trận <span class="badge badge--lock">Chưa mở</span></p>
+        </article>
+
+        <!-- 7. Vân Mộng -->
+        <article class="gcard" id="van-mong">
+          <div class="sect__head">
+            <h3>Vân Mộng Cốc</h3>
+            <span class="sect__role">Tầm xa, nội công, hồi máu</span>
+          </div>
+          <ul class="facts">
+            <li>Sư phụ: Tô Tần</li>
+            <li>Vân Mộng Cốc (103, 26)</li>
+            <li>Kiếm</li>
+            <li>Dùng Pháp Lực</li>
+          </ul>
+          <p>Một lối y tiên hồi máu, cứu đồng đội mà vẫn tự đánh quái được; một lối phép gió khống chế cả vùng.</p>
+          <div class="branches">
+            <div class="branch">
+              <h4>Y Tiên</h4>
+              <p>Hồi máu, hỗ trợ</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Kim Châm Độ Ách</b>: kim châm xa 6 ô, đồng thời hồi máu cho người ít máu nhất.</li>
+                <li><span class="lv">Cấp 15</span><b>Sơ Trị</b>: hồi máu ngay, thêm bốn đợt hồi trong 8 giây.</li>
+                <li><span class="lv">Cấp 20</span><b>Cải Tử Hoàn Sinh</b>: hồi sinh đồng đội đã ngã, hoặc gieo hộ mệnh 10 giây.</li>
+                <li><span class="lv">Cấp 30</span><b>Toàn Phong Quyết</b>: giữ phép 6 giây, hút máu chia cho tổ đội, làm chậm.</li>
+                <li><span class="lv">Cấp 40</span><b>Cam Lộ Trì</b>: ao hồi máu ba đợt, mỗi đợt gỡ một hiệu ứng xấu.</li>
+              </ul>
+            </div>
+            <div class="branch">
+              <h4>Phong Trận</h4>
+              <p>Phép gió, khống chế</p>
+              <ul class="skills">
+                <li><span class="lv">Cấp 10</span><b>Liệt Phong Quyết</b>: gió xa 8 ô, xuyên thêm một kẻ.</li>
+                <li><span class="lv">Cấp 15</span><b>Phong Vũ Kinh Thiên</b>: một đòn rồi cứa thêm bốn đợt trong 8 giây.</li>
+                <li><span class="lv">Cấp 20</span><b>Thôi Miên Thuật</b>: ru ngủ cả vùng, bị đánh thì tỉnh.</li>
+                <li><span class="lv">Cấp 30</span><b>Độn Giáp Trận</b>: trận 8 giây, gây sát thương mỗi giây và làm chậm.</li>
+                <li><span class="lv">Cấp 40</span><b>Bá Khí Phi Yến</b>: ba đợt én gió, đợt cuối làm choáng.</li>
+              </ul>
+            </div>
+          </div>
+          <h4>Chiêu chung</h4>
+          <ul>
+            <li><strong>Linh Khí Hộ Thể</strong>: khiên cho mình hoặc đồng đội, dùng lên mình thì lướt lùi 4 ô.</li>
+            <li><strong>Cường Thể Thuật</strong>: tăng máu và công lực cho cả tổ đội trong 30 phút.</li>
+            <li><strong>Rải Đậu Thành Binh</strong>: vòng đậu binh định thân rồi làm chậm địch.</li>
+          </ul>
+          <p><strong>Trấn phái:</strong> Từ Bi Tế Vũ <span class="badge badge--lock">Chưa mở</span></p>
+        </article>
+
+      </div>
+      <p class="back-top"><a href="#top">Về đầu trang</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="brand" href="../"><img src="../assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
+      <p class="foot__small">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+    </div>
+    <ul class="foot__links">
+      <li><a href="../">Trang chủ: tải game</a></li>
+      <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook: góp ý, báo lỗi</a></li>
+    </ul>
+    <p class="foot__small foot__legal">
+      Dự án phục dựng phi thương mại của người hâm mộ, làm để học tập và lưu giữ kí ức.
+      Tên gọi, hình ảnh và tài nguyên gốc của Chiến Quốc thuộc bản quyền của chủ sở hữu.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
