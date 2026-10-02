@@ -1,61 +1,57 @@
-# website/ · trang giới thiệu Chiến Quốc Remaster
+# Chiến Quốc Remaster · trang tải game
 
-Trang tĩnh thuần HTML + CSS + JS, không cần build, không thư viện ngoài (chỉ font Google).
-Dự kiến chép sang repo công khai `chienquoc-remaster` rồi bật GitHub Pages.
+Trang tĩnh: một file HTML + một file CSS, **không JS**, không cần build, không thư viện ngoài
+(chỉ font Google). Chạy trên GitHub Pages: https://darkness0710.github.io/chienquoc-remaster/
 
 ```
-website/
-├── index.html          toàn bộ nội dung
-├── css/style.css       giao diện (màu ở :root)
-├── js/main.js          menu, hiện dần, đếm số, hạt sáng, xem ảnh, bảng phím
+├── index.html          toàn bộ nội dung: đầu trang, "Bản 3.0 có gì", "Cài đặt 3 bước", chân trang
+├── css/style.css       giao diện (màu ở :root: xanh mực + vàng kim như giao diện game)
 ├── assets/
 │   ├── favicon.svg
-│   └── img/            ảnh chụp trong game, đã nén JPG
-└── .nojekyll           báo GitHub Pages đừng chạy Jekyll
+│   ├── pattern-cloud.svg   hoạ tiết mây lành ở nền đầu trang
+│   └── img/
+│       ├── giao-dien.jpg   ảnh trong game ở đầu trang
+│       └── og.jpg          ảnh hiện khi chia sẻ link (1200×630, cắt từ giao-dien.jpg)
+├── .nojekyll           báo GitHub Pages đừng chạy Jekyll
+└── tmp/                nháp cục bộ (bài Facebook, ảnh chụp kiểm), bỏ qua trong .gitignore
 ```
 
 ## Xem thử trên máy
 
 ```bash
-cd website && python -m http.server 8000     # rồi mở http://localhost:8000
+python -m http.server 8000     # rồi mở http://localhost:8000
 ```
 
-Mở thẳng `index.html` bằng trình duyệt cũng chạy (mọi đường dẫn đều tương đối).
-
-## Đưa lên GitHub Pages
-
-1. Tạo repo `chienquoc-remaster` (public), chép **nội dung** thư mục `website/` vào gốc repo đó.
-2. Settings → Pages → *Deploy from a branch* → nhánh `main`, thư mục `/ (root)`.
-3. Trang lên ở `https://<tài khoản>.github.io/chienquoc-remaster/`.
-
-Chỉ chép `website/`, **không** đẩy repo chính: repo chính là private và chứa
-`original_source/` (save, log có tên người chơi, `taikhoan.ini` mật khẩu chữ thô).
+Mở thẳng `index.html` bằng trình duyệt cũng chạy (mọi đường dẫn đều tương đối, trừ `og:image` phải tuyệt đối
+để Facebook đọc được).
 
 ## Sửa thường gặp
 
 | Muốn | Sửa ở |
 |---|---|
-| Đổi link tải (bản 3.0: zip launcher trên VPS) | `CONFIG.downloadUrl` đầu [js/main.js](js/main.js) **và** `href` của `#downloadBtn` trong `index.html` (để chạy được khi tắt JS). Để trống `downloadUrl` thì nút dẫn về nhóm Facebook |
-| Bản demo 2.0 offline (Google Drive) | dòng "Bản cũ" (`.download__old`) trong mục `#tai-ve`; không còn cập nhật |
-| Tính năng bản hiện hành | mục `#ban-3` của `index.html` (nguồn: `documents/tong-quan/00-tong-quan.md` của repo game) |
-| Đổi link nhóm cộng đồng | `CONFIG.communityUrl` trong `main.js` **và** nút ở mục `#cong-dong` của `index.html` (nguồn gốc: `godot/data/custom/about.json`) |
-| Thay / thêm ảnh | `assets/img/`, rồi thêm một `<figure class="shot">` trong mục `#hinh-anh` (nhớ `data-lightbox` tăng dần) |
+| Đổi link tải launcher | `index.html`: **hai** nút có link `ChienQuocRemaster-Launcher-…zip` (đầu trang và mục `#cai-dat`) |
+| Đổi cỡ file / dung lượng | `index.html`: dòng `hero__meta`, bước 1 và 2 của `#cai-dat`, bảng `.spec` |
+| Đổi tính năng bản hiện hành | lưới `#ban-3` (nguồn: `documents/tong-quan/00-tong-quan.md` của repo game) |
+| Đổi link nhóm cộng đồng | nút "Nhóm Facebook" đầu trang **và** link ở chân trang (nguồn gốc: `godot/data/custom/about.json` của repo game) |
+| Bản demo 2.0 offline (Google Drive) | link "Bản cũ" ở chân trang; không còn cập nhật |
 | Đổi màu | biến `--gold-*`, `--ink-*`, `--jade-*` trong `:root` của `style.css` |
 
 ## Quy ước chữ
 
-Chữ trên trang là chữ người chơi đọc, theo đúng luật của game (CLAUDE.md): không viết hoa
+Chữ trên trang là chữ người chơi đọc, theo đúng luật của game (CLAUDE.md của repo game): không viết hoa
 cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, dùng dấu phẩy, hai chấm, ngoặc đơn.
 
-## Nguồn ảnh
+## Kiểm trước khi đẩy
 
-| Ảnh | Lấy từ |
-|---|---|
-| `hero.jpg`, `og.jpg` | `build/ui_start.png` (màn chính). **Cũ:** chụp từ bản demo (nút "Chơi offline", góc ghi "Bản Demo 1.0"), cần chụp lại màn chính bản 3.0 |
-| `giao-dien.jpg` | `./run.sh shot build/web_001_ride.png --map=001 --cuoi --ui` |
-| `nhan-vat.jpg` | `./run.sh shot build/web_char.png --map=001 --ui --bang=char` |
-| `lang-ba.jpg`, `tran-phai.jpg` | khung f0430 / f0470 của `./run.sh demo hero` (`build/demo_hero_f/`), cắt quanh chỗ hành động, phóng ×2 |
+- Khổ điện thoại 375 px không tràn ngang. Cách kiểm đã dùng (2026-10-02): chạy `python -m http.server`,
+  đặt trang trong `<iframe>` rộng 375 px rồi liệt kê phần tử có `getBoundingClientRect().right > 375`
+  (Edge headless không thu cửa sổ dưới ~500 px nên chụp thẳng `--window-size=375` sẽ sai).
+- Ảnh chụp kiểm để trong `tmp/`, không commit.
 
-Nền phần đầu trang **không dùng ảnh**: CSS + `assets/pattern-cloud.svg`. Đã thử ảnh màn chính làm mờ
-(chủ repo: "mờ khó chịu") và ảnh chụp map Ba Khâu phủ tối (trông xỉn, tranh chỗ với khung ảnh).
-Khung ảnh ở hero cũng **không xoay 3D**: nghiêng thì chữ trong ảnh bị mờ.
+## Lịch sử thiết kế
+
+- 2026-09-30: bản đầu nhiều mục (lời mở đầu, lời hứa, thư viện ảnh, bảng so sánh, lộ trình) + JS (hạt sáng,
+  xem ảnh). Nền đầu trang **không dùng ảnh**: đã thử ảnh màn chính làm mờ (chủ repo: "mờ khó chịu") và ảnh
+  map Ba Khâu phủ tối (xỉn). Khung ảnh **không xoay 3D**: nghiêng thì chữ trong ảnh mờ.
+- 2026-10-02: bản 3.0 online. Chủ repo: "làm đẹp lại, đơn giản hơn" ⇒ còn 3 mục cho người tải game, bỏ JS.
+  Ảnh màn chính cũ (`hero.jpg`, ghi "Bản Demo 1.0") và ảnh kĩ năng đã bỏ; còn trong lịch sử git.
