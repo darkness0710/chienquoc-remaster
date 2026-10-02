@@ -58,9 +58,34 @@
         <p class="hero__meta">Windows 64 bit · file tải 39 MB · tự cập nhật</p>
       </div>
 
-      <figure class="shot">
-        <img src="assets/img/giao-dien.jpg" alt="Trong game: nhân vật cưỡi thú giữa Tân Thủ Thôn, thanh máu, bản đồ nhỏ và ô phím tắt" width="1508" height="1131">
-      </figure>
+      <!-- Ảnh trượt ngang: CSS scroll-snap (vuốt / kéo được cả khi tắt JS); js/main.js thêm chấm vị trí,
+           nút trái phải, tự chuyển 5 s (dừng khi rê chuột, chạm, hoặc người dùng chọn giảm chuyển động). -->
+      <div class="slider" id="slider" role="region" aria-roledescription="carousel" aria-label="Ảnh trong game">
+        <div class="shot">
+          <div class="slider__track" id="sliderTrack" tabindex="0">
+            <figure class="slide">
+              <img src="assets/img/giao-dien.jpg" alt="Nhân vật cưỡi thú giữa Tân Thủ Thôn, thanh máu, bản đồ nhỏ và ô phím tắt" width="1508" height="1131">
+              <figcaption>Tân Thủ Thôn, giao diện HD</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="assets/img/nhan-vat.jpg" alt="Bảng Nhân vật và bảng Chỉ số: ô trang bị, thuộc tính, khí huyết, ngoại công, né tránh, bạo kích" width="1508" height="1131" loading="lazy">
+              <figcaption>Trang bị và toàn bộ chỉ số trong một bảng</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="assets/img/lang-ba.jpg" alt="Lướt Lăng Ba Vi Bộ, để lại vệt tàn ảnh tím" width="720" height="540" loading="lazy">
+              <figcaption>Lăng Ba Vi Bộ, khinh công thượng thừa</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="assets/img/tran-phai.jpg" alt="Thiên Quân Phá Trận: trận pháp vàng dưới chân, kiếm quang giáng xuống" width="960" height="720" loading="lazy">
+              <span class="slide__tag">Xem trước</span>
+              <figcaption>Thiên Quân Phá Trận, trấn phái Cấm Vệ Quân</figcaption>
+            </figure>
+          </div>
+          <button class="slider__nav slider__nav--prev" type="button" data-step="-1" aria-label="Ảnh trước" hidden>&#8249;</button>
+          <button class="slider__nav slider__nav--next" type="button" data-step="1" aria-label="Ảnh sau" hidden>&#8250;</button>
+        </div>
+        <div class="slider__dots" id="sliderDots"></div>
+      </div>
     </div>
   </section>
 
@@ -103,8 +128,33 @@
     </div>
   </section>
 
+  <!-- Lời hứa (giữ từ bản đầu 2026-09-30, chủ repo hỏi lại 2026-10-02). -->
+  <section class="section section--alt" id="loi-hua">
+    <div class="wrap">
+      <h2 class="title">Làm vì yêu Chiến Quốc</h2>
+      <p class="sub">Chiến Quốc Remaster được làm bởi cộng đồng những người thực sự yêu thích Chiến Quốc, không phải bởi một công ty.</p>
+      <ul class="grid">
+        <li class="card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5"/></svg>
+          <h3>Từ cộng đồng, cho cộng đồng</h3>
+          <p>Mỗi bản sửa, mỗi tính năng đều đến từ những người từng chơi Chiến Quốc và muốn thấy nó sống lại.</p>
+        </li>
+        <li class="card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+          <h3>Miễn phí mãi mãi</h3>
+          <p>Không nạp thẻ, không bán vật phẩm, không có bất cứ hình thức thu tiền nào.</p>
+        </li>
+        <li class="card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 7h14M5 7l-3 6a3 3 0 0 0 6 0zM19 7l-3 6a3 3 0 0 0 6 0zM8 21h8"/></svg>
+          <h3>Giữ cốt lõi, sửa lỗi, cân bằng</h3>
+          <p>Duy trì mọi giá trị cốt lõi của game cũ, đồng thời sửa các lỗi và cân bằng lại lối chơi.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <!-- Cài đặt 3 bước + cấu hình. Số (39 MB, 5,6 GB, 8 GB): phiên điều phối 2026-10-02. -->
-  <section class="section section--alt" id="cai-dat">
+  <section class="section" id="cai-dat">
     <div class="wrap">
       <h2 class="title">Cài đặt 3 bước</h2>
       <ol class="steps">
@@ -139,6 +189,34 @@
       </dl>
     </div>
   </section>
+  <!-- Lộ trình. -->
+  <section class="section section--alt" id="lo-trinh">
+    <div class="wrap">
+      <h2 class="title">Từ kí ức tới máy chủ mới</h2>
+      <ol class="timeline">
+        <li>
+          <time>2008</time>
+          <h3>Chiến Quốc ra mắt</h3>
+          <p>MMORPG 2.5D isometric, bảy nước, bảy môn phái. Tuổi thơ của cả một thế hệ game thủ Việt.</p>
+        </li>
+        <li class="is-done">
+          <time>Tháng 9/2026</time>
+          <h3>Bản demo 2.0, chơi offline</h3>
+          <p>Lần đầu người chơi quay lại Tân Thủ Thôn: bốn vùng đất, cốt truyện Vết Nứt, môn phái Cấm Vệ Quân và cuộc gặp gỡ Lữ Bố.</p>
+        </li>
+        <li class="is-done">
+          <time>Tháng 10/2026</time>
+          <h3>Bản 3.0, chơi online</h3>
+          <p>Máy chủ mới, chơi cùng bằng hữu. Đủ bảy môn phái, cấp tối đa 40, tổ đội 5 người, nhiệm vụ sư môn, điểm danh và thợ rèn. Launcher tự tải và tự cập nhật game.</p>
+        </li>
+        <li class="is-next">
+          <time>Sắp tới</time>
+          <h3>Vá lỗi và mở thêm nội dung</h3>
+          <p>Sửa theo góp ý của người chơi, mở dần kĩ năng trấn phái và vùng đất mới. Tin mới sẽ báo trong nhóm cộng đồng.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
 </main>
 
 <footer class="foot">
@@ -158,5 +236,6 @@
   </div>
 </footer>
 
+<script src="js/main.js" defer></script>
 </body>
 </html>

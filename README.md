@@ -1,16 +1,17 @@
 # Chiến Quốc Remaster · trang tải game
 
-Trang tĩnh: một file HTML + một file CSS, **không JS**, không cần build, không thư viện ngoài
+Trang tĩnh: HTML + CSS + một file JS nhỏ (ảnh trượt), không cần build, không thư viện ngoài
 (chỉ font Google). Chạy trên GitHub Pages: https://darkness0710.github.io/chienquoc-remaster/
 
 ```
-├── index.html          toàn bộ nội dung: đầu trang, "Bản 3.0 có gì", "Cài đặt 3 bước", chân trang
+├── index.html          toàn bộ nội dung: đầu trang (ảnh trượt ngang), "Bản 3.0 có gì", "Lời hứa", "Cài đặt 3 bước", "Lộ trình", chân trang
 ├── css/style.css       giao diện (màu ở :root: xanh mực + vàng kim như giao diện game)
+├── js/main.js          ảnh trượt: chấm vị trí, nút trái phải, phím mũi tên, tự chuyển 5 s
 ├── assets/
 │   ├── favicon.svg
 │   ├── pattern-cloud.svg   hoạ tiết mây lành ở nền đầu trang
 │   └── img/
-│       ├── giao-dien.jpg   ảnh trong game ở đầu trang
+│       ├── giao-dien.jpg, nhan-vat.jpg, lang-ba.jpg, tran-phai.jpg   ảnh trượt ở đầu trang
 │       └── og.jpg          ảnh hiện khi chia sẻ link (1200×630, cắt từ giao-dien.jpg)
 ├── .nojekyll           báo GitHub Pages đừng chạy Jekyll
 └── tmp/                nháp cục bộ (bài Facebook, ảnh chụp kiểm), bỏ qua trong .gitignore
@@ -34,6 +35,7 @@ Mở thẳng `index.html` bằng trình duyệt cũng chạy (mọi đường d�
 | Đổi tính năng bản hiện hành | lưới `#ban-3` (nguồn: `documents/tong-quan/00-tong-quan.md` của repo game) |
 | Đổi link nhóm cộng đồng | nút "Nhóm Facebook" đầu trang **và** link ở chân trang (nguồn gốc: `godot/data/custom/about.json` của repo game) |
 | Bản demo 2.0 offline (Google Drive) | link "Bản cũ" ở chân trang; không còn cập nhật |
+| Thêm / bớt ảnh trượt | một `<figure class="slide">` trong `#sliderTrack` (chấm vị trí tự sinh theo số ảnh) |
 | Đổi màu | biến `--gold-*`, `--ink-*`, `--jade-*` trong `:root` của `style.css` |
 
 ## Quy ước chữ
@@ -53,5 +55,9 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
 - 2026-09-30: bản đầu nhiều mục (lời mở đầu, lời hứa, thư viện ảnh, bảng so sánh, lộ trình) + JS (hạt sáng,
   xem ảnh). Nền đầu trang **không dùng ảnh**: đã thử ảnh màn chính làm mờ (chủ repo: "mờ khó chịu") và ảnh
   map Ba Khâu phủ tối (xỉn). Khung ảnh **không xoay 3D**: nghiêng thì chữ trong ảnh mờ.
-- 2026-10-02: bản 3.0 online. Chủ repo: "làm đẹp lại, đơn giản hơn" ⇒ còn 3 mục cho người tải game, bỏ JS.
-  Ảnh màn chính cũ (`hero.jpg`, ghi "Bản Demo 1.0") và ảnh kĩ năng đã bỏ; còn trong lịch sử git.
+- 2026-10-02: bản 3.0 online. Chủ repo: "làm đẹp lại, đơn giản hơn" ⇒ gọn lại, bỏ lời mở đầu, bảng so sánh,
+  hạt sáng, xem ảnh lớn. Chủ repo hỏi lại "mấy ảnh cũ đâu" và "lời hứa với lộ trình đâu" ⇒ ảnh cũ thành dải
+  trượt ngang ở đầu trang (CSS scroll-snap, vuốt được cả khi tắt JS), giữ "Lời hứa" và "Lộ trình".
+  Ảnh màn chính cũ (`hero.jpg`, ghi "Bản Demo 1.0", nút "Chơi offline") đã bỏ; còn trong lịch sử git.
+- Kiểm ảnh trượt bằng Edge headless: chạy với `--force-prefers-reduced-motion` (cuộn tức thì) mới đọc được
+  `scrollLeft` sau khi bấm nút; ở chế độ thường, thời gian ảo của headless không chạy hết hiệu ứng cuộn mượt.

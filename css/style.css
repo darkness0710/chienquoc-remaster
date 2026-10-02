@@ -1,7 +1,8 @@
 /* Chiến Quốc Remaster: trang tải game.
    Bảng màu lấy từ giao diện trong game: nền xanh mực, viền vàng kim, điểm ngọc lam.
-   2026-10-02 làm gọn (chủ repo: "làm đẹp lại, đơn giản hơn"): bỏ JS, bỏ lộ trình / bảng so sánh /
-   thư viện ảnh / lời mở đầu; còn đầu trang, "Bản 3.0 có gì", "Cài đặt 3 bước", chân trang. */
+   2026-10-02 làm gọn (chủ repo: "làm đẹp lại, đơn giản hơn"): bỏ bảng so sánh, lời mở đầu, hạt sáng;
+   thư viện ảnh thành ảnh trượt ngang ở đầu trang. Còn: đầu trang, "Bản 3.0 có gì", "Lời hứa",
+   "Cài đặt 3 bước", "Lộ trình", chân trang. */
 
 :root {
   --ink-900: #070d22;
@@ -130,7 +131,77 @@ h1, h2, h3, p { margin: 0; }
   background: linear-gradient(145deg, rgba(243, 217, 138, .8), rgba(143, 106, 35, .5) 45%, rgba(63, 184, 201, .5));
   box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
 }
-.shot img { border-radius: 14px; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.shot { position: relative; }
+
+/* ---------- ảnh trượt ngang ở đầu trang ---------- */
+.slider { min-width: 0; }
+.slider__track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  border-radius: 14px;
+  scrollbar-width: none;
+}
+.slider__track::-webkit-scrollbar { display: none; }
+.slide { position: relative; flex: 0 0 100%; margin: 0; scroll-snap-align: start; }
+.slide img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.slide figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 16px 12px;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--gold-300);
+  text-align: left;
+  background: linear-gradient(180deg, transparent, rgba(7, 13, 34, .85));
+}
+.slide__tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 600;
+  color: #2a1a02;
+  background: linear-gradient(180deg, var(--gold-300), var(--gold-500));
+}
+.slider__nav {
+  position: absolute;
+  top: 50%;
+  width: 38px;
+  height: 38px;
+  margin-top: -19px;
+  display: grid;
+  place-items: center;
+  padding: 0 0 3px;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--gold-300);
+  background: rgba(7, 13, 34, .7);
+  cursor: pointer;
+}
+.slider__nav:hover { background: rgba(22, 41, 90, .95); }
+.slider__nav[hidden] { display: none; }
+.slider__nav--prev { left: 16px; }
+.slider__nav--next { right: 16px; }
+.slider__dots { display: flex; justify-content: center; gap: 8px; margin-top: 14px; min-height: 10px; }
+.slider__dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(232, 195, 106, .3);
+  cursor: pointer;
+  transition: width .25s ease, background .25s ease;
+}
+.slider__dots button.is-on { width: 26px; background: var(--gold-500); }
 
 @media (max-width: 859px) {
   .hero { padding: 40px 0 48px; }
@@ -155,7 +226,9 @@ h1, h2, h3, p { margin: 0; }
   color: var(--gold-400);
 }
 
-/* lưới "Bản 3.0 có gì" */
+.sub { max-width: 640px; margin: -20px auto 32px; text-align: center; color: var(--muted); }
+
+/* lưới "Bản 3.0 có gì" và "Lời hứa" */
 .grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 @media (max-width: 859px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 539px) { .grid { grid-template-columns: minmax(0, 1fr); } }
@@ -235,6 +308,28 @@ h1, h2, h3, p { margin: 0; }
 .spec dt { font-size: .78rem; font-weight: 600; color: var(--gold-500); }
 .spec dd { margin: 0; font-size: .95rem; }
 @media (max-width: 459px) { .spec div { flex: 1 1 100%; display: flex; justify-content: space-between; gap: 12px; align-items: baseline; } }
+
+/* ---------- lộ trình ---------- */
+.timeline { list-style: none; margin: 0 auto; padding: 0; max-width: 720px; position: relative; }
+.timeline::before { content: ""; position: absolute; left: 9px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(180deg, var(--gold-600), var(--jade-400)); opacity: .6; }
+.timeline li { position: relative; padding: 0 0 28px 44px; }
+.timeline li:last-child { padding-bottom: 0; }
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-600);
+  background: var(--ink-800);
+}
+.timeline li.is-done::before { background: var(--gold-500); border-color: var(--gold-300); box-shadow: 0 0 14px rgba(232, 195, 106, .6); }
+.timeline li.is-next::before { border-color: var(--jade-400); }
+.timeline time { font-size: .85rem; font-weight: 600; color: var(--jade-400); }
+.timeline h3 { margin-top: 2px; font-size: 1.15rem; color: var(--gold-300); }
+.timeline p { margin-top: 6px; color: var(--muted); }
 
 /* ---------- chân trang ---------- */
 .foot { padding: 40px 0; background: var(--ink-900); border-top: 1px solid var(--line); }
