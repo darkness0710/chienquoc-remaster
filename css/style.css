@@ -347,63 +347,119 @@ h1, h2, h3, p { margin: 0; }
 @media (max-width: 379px) { .bar__nav { gap: 12px; } .brand span { font-size: 1rem; } }
 
 /* ---------- trang hướng dẫn (huong-dan/index.html) ---------- */
-/* Đầu trang thấp hơn trang chủ: chỉ tiêu đề + mục lục dạng chip. */
-.guide-hero { padding: 48px 0 40px; text-align: center; background:
+/* 2026-10-04 (chủ repo: "làm dạng tab, cần có ảnh, viết ngắn gọn cho game thủ"): 5 tab lớn dính dưới
+   thanh trên, tab con dạng chip, mỗi mục một thẻ chữ + ảnh chụp game. Tab do js/tabs.js bật; không JS
+   thì mọi mục hiện liền nhau, thanh tab thành mục lục neo. */
+.guide-hero { padding: 40px 0 32px; text-align: center; background:
     url("../assets/pattern-cloud.svg") repeat,
     radial-gradient(ellipse at 50% 0%, rgba(232, 195, 106, .16), transparent 60%),
-    linear-gradient(180deg, var(--ink-900), var(--ink-800));
-  border-bottom: 1px solid var(--line); }
+    linear-gradient(180deg, var(--ink-900), var(--ink-800)); }
 .guide-hero .hero__title { margin-top: 0; font-size: clamp(2.2rem, 6vw, 3.4rem); }
-.guide-hero .hero__lead { margin: 14px auto 0; }
-.toc { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-.toc a { display: inline-block; padding: 7px 16px; border-radius: 999px; font-size: .92rem; font-weight: 600;
-  color: var(--text); border: 1px solid var(--line-strong); background: rgba(15, 29, 68, .6); }
-.toc a:hover { color: var(--gold-300); background: rgba(22, 41, 90, .9); }
+.guide-hero .hero__lead { margin: 12px auto 0; }
 
-/* Một mục hướng dẫn: thẻ rộng, tiêu đề + thông tin nhanh (chip) + đoạn văn / danh sách / bảng. */
+/* Tab lớn: dính ngay dưới thanh trên (60 px); điện thoại vuốt ngang. */
+.tabs-bar { position: sticky; top: 60px; z-index: 9; background: rgba(7, 13, 34, .92);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs a { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 14px 16px 11px;
+  font-weight: 600; font-size: .98rem; color: var(--muted); border-bottom: 3px solid transparent; white-space: nowrap; }
+.tabs a:first-child { margin-left: auto; }
+.tabs a:last-child { margin-right: auto; }
+.tabs a:hover { color: var(--gold-300); }
+.tabs a.is-on { color: var(--gold-300); border-bottom-color: var(--gold-500); }
+.tabs svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+/* Điện thoại: bỏ biểu tượng, thu lề để đủ 5 tab trong 375 px (có biểu tượng thì "Tiện ích" khuất). */
+@media (max-width: 539px) {
+  .tabs { padding: 0 4px; gap: 0; }
+  .tabs a { padding: 12px 5px 9px; font-size: .82rem; }
+  .tabs svg { display: none; }
+}
+
+/* Có tab thì chỉ hiện mục đang chọn; neo #id chừa chỗ cho thanh trên + thanh tab. */
+html.tabs-on { scroll-padding-top: 124px; }
+html.tabs-on .tab-panel:not(.is-active), html.tabs-on .sub-panel:not(.is-active) { display: none; }
+.tab-panel { padding: 32px 0 64px; }
+.tab-panel + .tab-panel { border-top: 1px solid var(--line); }
+html.tabs-on .tab-panel + .tab-panel { border-top: 0; }
+.tab-panel .lead { max-width: 720px; margin: 0 auto 20px; text-align: center; color: var(--muted); }
+.tab-panel .lead strong { color: var(--gold-300); font-weight: 600; }
+
+/* Tab con: chip; điện thoại một hàng vuốt ngang. */
+.subtabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 0 20px; }
+.subtabs a { padding: 7px 16px; border-radius: 999px; font-size: .92rem; font-weight: 600; color: var(--text);
+  border: 1px solid var(--line-strong); background: rgba(15, 29, 68, .6); white-space: nowrap; }
+.subtabs a:hover { color: var(--gold-300); background: rgba(22, 41, 90, .9); }
+.subtabs a.is-on { color: #2a1a02; border-color: var(--gold-400);
+  background: linear-gradient(180deg, var(--gold-300), var(--gold-500)); }
+@media (max-width: 539px) {
+  .subtabs { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none;
+    margin-left: calc(-1 * var(--gutter)); margin-right: calc(-1 * var(--gutter)); padding: 0 var(--gutter) 2px; }
+  .subtabs::-webkit-scrollbar { display: none; }
+}
 .guide { display: grid; gap: 16px; }
+
+/* Một mục: thẻ, đầu (tên + chip thông tin nhanh), chữ, ảnh chụp game.
+   Máy tính: chữ trái, ảnh phải (dính khi cuộn). `--wide` (môn phái): ảnh cạnh đầu, hai nhánh chiêu
+   trải hết chiều ngang. Điện thoại: đầu, ảnh, chữ. */
 .gcard { padding: 24px; border-radius: var(--radius); border: 1px solid var(--line);
   background: linear-gradient(180deg, rgba(22, 41, 90, .7), rgba(15, 29, 68, .55)); min-width: 0; }
 @media (max-width: 539px) { .gcard { padding: 18px; } }
-.gcard h3 { font-size: 1.25rem; color: var(--gold-300); }
+.gpanel { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); grid-template-areas: "head shot" "text shot";
+  grid-template-rows: auto 1fr; gap: 0 32px; align-items: start; }
+.gpanel--wide { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); grid-template-areas: "head shot" "text text";
+  grid-template-rows: auto auto; }
+.ghead { grid-area: head; min-width: 0; }
+.gtext { grid-area: text; min-width: 0; }
+.gshot { grid-area: shot; position: sticky; top: 140px; margin: 0; }
+.gpanel--wide .gshot { position: static; }
+@media (max-width: 859px) {
+  .gpanel, .gpanel--wide { grid-template-columns: minmax(0, 1fr); grid-template-areas: "head" "shot" "text"; }
+  .gshot { position: static; margin-top: 16px; }
+}
+.gshot img { width: 100%; border-radius: 12px; border: 1px solid var(--line-strong); box-shadow: 0 14px 36px rgba(0, 0, 0, .45); }
+.gshot figcaption { margin-top: 8px; font-size: .85rem; color: var(--muted); text-align: center; }
+
+.gcard h3 { font-size: 1.3rem; color: var(--gold-300); }
 .gcard h4 { margin: 18px 0 6px; font-size: 1rem; color: var(--gold-400); }
 .gcard p, .gcard li { color: #d3dcf3; font-size: .97rem; }
 .gcard p { margin-top: 10px; }
-.gcard ul, .gcard ol { margin: 8px 0 0; padding-left: 1.2em; display: grid; gap: 4px; }
+.gcard ul, .gcard ol { margin: 8px 0 0; padding-left: 1.2em; display: grid; gap: 5px; }
 .gcard strong { color: var(--gold-300); font-weight: 600; }
+.gcard kbd { padding: 0 6px; border-radius: 5px; font-family: var(--font-body); font-size: .88em; font-weight: 600;
+  color: var(--gold-300); border: 1px solid var(--line-strong); background: rgba(7, 13, 34, .6); }
 .facts { list-style: none; margin: 12px 0 0 !important; padding: 0 !important; display: flex !important; flex-wrap: wrap; gap: 8px !important; }
 .facts li { padding: 3px 12px; border-radius: 999px; font-size: .85rem; color: var(--jade-400);
   border: 1px solid rgba(111, 214, 226, .35); background: rgba(111, 214, 226, .07); }
 .tip { margin-top: 14px !important; padding: 10px 14px; border-radius: 10px; font-size: .92rem !important;
   border-left: 3px solid var(--gold-500); background: rgba(232, 195, 106, .08); }
 
+/* Danh sách bước: nhãn vàng bên trái (10 việc sư môn...). */
+.steps-mini { list-style: none; padding: 0 !important; gap: 8px !important; }
+.steps-mini li { display: grid; grid-template-columns: 6.2em minmax(0, 1fr); gap: 10px; align-items: baseline; }
+.steps-mini b { padding: 1px 6px; border-radius: 6px; font-size: .8rem; font-weight: 600; text-align: center;
+  color: #2a1a02; background: var(--gold-500); }
+
 /* Bảng số liệu: điện thoại cuộn ngang trong khung, trang không tràn. */
 .tbl { margin-top: 12px; overflow-x: auto; border-radius: 10px; border: 1px solid var(--line); }
 .tbl table { width: 100%; border-collapse: collapse; font-size: .92rem; }
-.tbl th, .tbl td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.tbl th, .tbl td { padding: 7px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
 .tbl th { color: var(--gold-500); font-weight: 600; background: rgba(7, 13, 34, .5); }
 .tbl tr:last-child td { border-bottom: 0; }
-.tbl td.wrap-ok { white-space: normal; min-width: 180px; }
 
-/* Môn phái: chip chọn phái (link neo), mỗi phái một thẻ, hai nhánh cạnh nhau. */
-.sects { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: -12px 0 28px; }
-.sects a { padding: 6px 14px; border-radius: 999px; font-size: .9rem; font-weight: 600; color: var(--gold-300);
-  border: 1px solid var(--line); background: rgba(7, 13, 34, .5); }
-.sects a:hover { border-color: var(--line-strong); }
-.sect__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
-.sect__role { font-size: .9rem; color: var(--jade-400); font-weight: 600; }
-.branches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 16px; }
+/* Môn phái: hai nhánh cạnh nhau. */
+.sect__role { display: block; margin-top: 2px; font-size: .92rem; color: var(--jade-400); font-weight: 600; }
+.branches { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
 @media (max-width: 719px) { .branches { grid-template-columns: minmax(0, 1fr); } }
 .branch { padding: 16px; border-radius: 12px; background: rgba(7, 13, 34, .45); border: 1px solid var(--line); min-width: 0; }
 .branch h4 { margin: 0; }
-.branch > p { margin-top: 4px; font-size: .9rem; color: var(--muted); }
+.branch > p { margin-top: 2px; font-size: .9rem; color: var(--muted); }
 .skills { list-style: none; padding: 0 !important; margin-top: 10px !important; gap: 8px !important; }
 .skills li { font-size: .93rem; }
 .skills b { color: var(--gold-300); font-weight: 600; }
 .skills .lv { display: inline-block; min-width: 3.4em; margin-right: 6px; padding: 0 6px; border-radius: 6px;
   font-size: .78rem; font-weight: 600; text-align: center; color: #2a1a02; background: var(--gold-500); }
-.back-top { margin-top: 32px; text-align: center; font-size: .92rem; }
 .badge { display: inline-block; margin-left: 8px; padding: 2px 10px; border-radius: 999px; vertical-align: middle;
   font-family: var(--font-body); font-size: .75rem; font-weight: 600; color: #2a1a02; background: var(--jade-400); }
 .badge--lock { color: var(--muted); background: rgba(168, 179, 209, .15); border: 1px solid rgba(168, 179, 209, .35); }
-.gcard--soon { border-style: dashed; background: rgba(7, 13, 34, .4); }
