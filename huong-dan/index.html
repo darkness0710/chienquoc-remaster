@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hướng dẫn · Chiến Quốc Remaster</title>
-  <meta name="description" content="Hướng dẫn Chiến Quốc Remaster 3.0: nhiệm vụ sư môn, rèn trang bị (nâng sao, tăng phẩm, tái tạo, giải phong ấn) và kĩ năng 7 môn phái.">
+  <meta name="description" content="Hướng dẫn Chiến Quốc Remaster 3.1: sư môn, truy bắt Vương Bộ Đầu, phó bản Cổ Mộ, Bảng Thần Thú, rèn trang bị và kĩ năng 7 môn phái.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/">
-  <meta property="og:title" content="Hướng dẫn Chiến Quốc Remaster 3.0">
-  <meta property="og:description" content="Nhiệm vụ hằng ngày, rèn trang bị và kĩ năng 7 môn phái.">
+  <meta property="og:title" content="Hướng dẫn Chiến Quốc Remaster 3.1">
+  <meta property="og:description" content="Nhiệm vụ hằng ngày, Cổ Mộ, Bảng Thần Thú, rèn trang bị và kĩ năng 7 môn phái.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -22,10 +22,13 @@
 </head>
 <body>
 
-<!-- Nguồn số liệu: repo game, bản 3.0 (2026-10-02).
-     Sư môn: godot/data/custom/sect_quests.json · Rèn: forge.json, equip_rules.json ·
+<!-- Nguồn số liệu: repo game, bản 3.1.0 (2026-10-03), thư mục godot/data/custom/.
+     Sư môn: sect_quests.json, sect_sets.json (exchange) · Rèn: forge.json, equip_rules.json ·
      Môn phái: sect_skills.json (nguồn duy nhất, đè tài liệu kế hoạch 28).
-     Vương Bộ Đầu (criminal.json) và Cổ Mộ (kế hoạch 33) chưa có trong bản đã phát: gắn "Sắp mở". -->
+     Vương Bộ Đầu: criminal.json (rules, cash, khối team) + tài liệu 34, 35 · Cổ Mộ: dungeon_gumu.json + tài liệu 33.
+     Thần thú: beasts.json + tài liệu 38 · Tống Bảo Tiểu Yêu: rare_monster.json · Dịch Trạm: sect_bases.json (relay) ·
+     Hổ Phù: tài liệu 39 §7 · Bằng hữu: gameplay/40 · Thuốc: gameplay/42.
+     Cả hai mục Vương Bộ Đầu và Cổ Mộ đã có trong bản đã phát (bỏ nhãn "Sắp mở" từ 3.1.0). -->
 
 <header class="bar">
   <div class="wrap bar__in">
@@ -45,9 +48,10 @@
   <section class="guide-hero">
     <div class="wrap">
       <h1 class="hero__title">Hướng dẫn</h1>
-      <p class="hero__lead">Việc nên làm mỗi ngày, cách rèn trang bị và kĩ năng của bảy môn phái trong bản 3.0.</p>
+      <p class="hero__lead">Việc nên làm mỗi ngày, Bảng Thần Thú, cách rèn trang bị và kĩ năng của bảy môn phái trong bản 3.1.</p>
       <ul class="toc">
         <li><a href="#hang-ngay">Nhiệm vụ hằng ngày</a></li>
+        <li><a href="#than-thu">Thần thú và tiện ích</a></li>
         <li><a href="#tinh-nang">Rèn trang bị</a></li>
         <li><a href="#mon-phai">Môn phái</a></li>
       </ul>
@@ -97,35 +101,247 @@
             </table>
           </div>
           <p>Trả xong việc 10 được quay <strong>vòng quay sư môn</strong>: thưởng thêm ngân lượng bằng 1,1 đến 1,5 lần tiền việc 10. Lỡ đóng bảng thì quay lại sư phụ nhận sau.</p>
-          <p><strong>Điểm sư môn</strong> dùng ở sư phụ: đổi set sư môn từ cấp 25, hoặc đổi Thăng Phẩm Thạch (10 điểm) và Tái Tạo Thạch (5 điểm) ở thẻ Đề xuất.</p>
+          <p><strong>Điểm sư môn</strong> dùng ở sư phụ: đổi set sư môn từ cấp 25, hoặc đổi Thăng Phẩm Thạch (10 điểm), Tái Tạo Thạch (2 điểm) và Thẻ Thần Thú chọn con (20 điểm) ở thẻ Đề xuất.</p>
           <p class="tip">Việc khó quá thì chọn "Đổi việc khác" ở sư phụ: giữ số thứ tự, đổi mục tiêu, chờ 60 giây giữa hai lần đổi. Việc làm dở được giữ sang hôm sau.</p>
         </article>
 
-        <article class="gcard gcard--soon" id="vuong-bo-dau">
-          <h3>Truy bắt cùng Vương Bộ Đầu <span class="badge">Sắp mở</span></h3>
+        <article class="gcard" id="vuong-bo-dau">
+          <h3>Truy bắt cùng Vương Bộ Đầu</h3>
           <ul class="facts">
             <li>Từ cấp 10, đã bái sư</li>
-            <li>10 vòng mỗi ngày</li>
-            <li>Chu Quốc</li>
+            <li>5 vòng mỗi ngày</li>
+            <li>Chu Quốc (313, 140)</li>
           </ul>
           <p>
             Vương Bộ Đầu ở Chu Quốc giao lệnh truy bắt <strong>phản đồ</strong> các môn phái đang lẩn trốn trên bản đồ hợp cấp.
-            Tới gần, bấm vào phản đồ, chọn Truy bắt và hạ hắn, rồi về phục mệnh. Mỗi vòng có 30 phút, vòng sau phản đồ mạnh hơn và biết thêm chiêu.
+            Tới gần, bấm vào phản đồ, chọn Truy bắt và hạ hắn, rồi về phục mệnh. Mỗi vòng có <strong>30 phút</strong> tính từ lúc nhận tới lúc trả.
+            Phản đồ ra chiêu đúng môn phái của hắn; vòng sau mạnh hơn, từ vòng 2 và vòng 4 biết thêm chiêu, còn nửa máu thì tự tăng sức.
           </p>
-          <p>Thưởng ngân lượng mỗi vòng (cấp 10 là 7.000, cấp 40 là 22.000), vòng 10 có vòng quay thưởng thêm. Quá giờ hoặc bỏ truy bắt thì hôm đó dừng, tiền các vòng đã xong vẫn giữ.</p>
-          <p class="tip">Đang hoàn thiện, cách chơi có thể đổi khi mở chính thức.</p>
+          <p>
+            Mỗi vòng thưởng ngân lượng bằng 4.000 cộng 1.000 nhân cấp lúc nhận (cấp 10 là 14.000, cấp 40 là 44.000)
+            và kinh nghiệm bằng 10 con quái cùng cấp. Xong vòng 5 được quay vòng quay thưởng thêm ngân lượng.
+            Quá giờ hoặc bỏ truy bắt thì hôm đó dừng, tiền các vòng đã xong vẫn giữ.
+          </p>
+
+          <h4>Truy bắt nhóm</h4>
+          <ul>
+            <li>Đội <strong>2 đến 5 người</strong>, đội trưởng nói với Vương Bộ Đầu. Mọi người đứng trong 8 ô quanh NPC, từ cấp 10, đã vào phái, cấp cao nhất và thấp nhất lệch không quá 10.</li>
+            <li>Vé mỗi người: <strong>12.500 ngân lượng nhân cấp người thấp nhất đội</strong> (cấp 20 là 250.000, cấp 40 là 500.000). Ai thiếu tiền thì cả đội chưa đi được.</li>
+            <li><strong>Một lượt mỗi ngày</strong>, vào bản đồ là tính lượt, riêng với 5 vòng truy bắt đơn. Cả chuyến 30 phút, hết giờ về Chu Quốc, tiền đã lật vẫn giữ.</li>
+            <li>Qua <strong>7 ải</strong>, mỗi ải phản đồ của một môn phái ở bản đồ thí luyện của phái đó. Số phản đồ bằng số người; từ người thứ 3, mỗi người thêm làm phản đồ mạnh hơn 10 %.</li>
+            <li>Hạ hết một ải: mỗi người được kinh nghiệm bằng 5 con quái cùng cấp, rồi lật <strong>1 thẻ ngân lượng</strong> trong 30 giây (hết giờ thì tự lật). Ải càng sau thẻ càng giá trị; số nhận tính theo cấp, cấp 40 cả chuyến được khoảng 756.000.</li>
+            <li>Chết thì sống lại ở điểm vào ải sau 10 giây. Trang bị bị khoá suốt lượt, nhớ mặc đồ tốt nhất trước khi đi.</li>
+          </ul>
         </article>
 
-        <article class="gcard gcard--soon" id="co-mo">
-          <h3>Phó bản Cổ Mộ <span class="badge">Sắp mở</span></h3>
+        <article class="gcard" id="co-mo">
+          <h3>Phó bản Cổ Mộ</h3>
           <ul class="facts">
             <li>Tổ đội 1 đến 5 người</li>
-            <li>Cổ Mộ Xa Phu, Chu Quốc</li>
+            <li>Cổ Mộ Xa Phu, Chu Quốc (276, 163)</li>
+            <li>1 lượt thưởng mỗi ngày</li>
           </ul>
           <p>
-            Cùng tổ đội vào lăng mộ cổ, vượt qua đám Thạch Dũng canh mộ để đối đầu trùm cuối Lữ Bố.
-            Phó bản có nhiều độ khó, phần thưởng có Đoạn Thạch để nâng sao. Chi tiết sẽ báo trong nhóm cộng đồng khi mở.
+            Đội trưởng nói với <strong>Cổ Mộ Xa Phu</strong>, chọn độ khó. Cả đội phải đứng trong 8 ô quanh NPC, cấp cao nhất và thấp nhất lệch không quá 10,
+            mỗi người tự trả phí vào. Đi một mình cũng được.
           </p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Độ khó</th><th>Phí vào</th><th>Thời gian</th><th>Điểm phó bản</th></tr></thead>
+              <tbody>
+                <tr><td>Dễ</td><td>100.000</td><td>30 phút</td><td>50</td></tr>
+                <tr><td>Thường</td><td>200.000</td><td>45 phút</td><td>100</td></tr>
+                <tr><td>Khó</td><td>300.000</td><td>60 phút</td><td>150</td></tr>
+                <tr><td>Địa Ngục</td><td>500.000</td><td>75 phút</td><td>200</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Độ Dễ từ cấp 10, các mức khác từ cấp 20 (mọi người trong đội đều phải đủ). Độ khó càng cao, quái và trùm càng mạnh (Địa Ngục gấp đôi Dễ).</p>
+
+          <h4>Trong mộ</h4>
+          <ul>
+            <li>Ba đợt <strong>Thạch Dũng</strong> dọc đường, rồi tiểu boss <strong>Thủ Mộ Thạch Tướng</strong>, cuối cùng là <strong>Lữ Bố</strong>.</li>
+            <li>Lữ Bố mạnh theo người mạnh nhất đội và số người. Hắn dùng Thiên Quân Phá Trận và Thiên Lý Tất Sát, có vòng đỏ dưới đất báo trước, đứng yên là ăn trọn đòn. Kéo hắn ra xa quá 15 ô thì hắn về chỗ và hồi đầy máu.</li>
+            <li>Chết thì hồi sinh ở cửa mộ sau 10 giây, không mất tiền hay kinh nghiệm.</li>
+            <li><strong>Trang bị bị khoá suốt lượt</strong>, từ lúc vào tới lúc ra (thuốc vẫn dùng được). Mặc sẵn đồ tốt nhất trước khi vào.</li>
+          </ul>
+
+          <h4>Bảng thẻ lật</h4>
+          <ul>
+            <li>Lữ Bố chết, cả đội thấy chung một bảng <strong>16 thẻ</strong>. Mỗi người lật tối đa <strong>2 thẻ</strong> miễn phí, mỗi lần lật cần còn 1 ô trống hành trang.</li>
+            <li>Trong bảng có Đoạn Thạch, Tái Tạo Thạch, Thăng Phẩm Thạch, Thẻ Thần Thú và túi tiền (túi nhỏ bằng nửa phí vào, túi lớn gấp đôi phí vào).</li>
+            <li>Mỗi bảng có đúng <strong>một thẻ độc đắc</strong>: Dễ là Thăng Phẩm Thạch, Thường là Cao Cấp Đoạn Thạch, Khó là 3 Thẻ Thần Thú cùng loại, Địa Ngục là Đỉnh Cấp Đoạn Thạch. Lật trúng thì cả máy chủ được báo.</li>
+            <li>Khi mọi người đã lật hết lượt miễn phí, mỗi người được lật thêm 1 thẻ bằng tiền (1,5 lần phí vào, trong 20 giây). Sau đó cả bảng ngửa ra cho mọi người xem.</li>
+            <li>Đồ lật được là đồ thường: bán tiệm, vứt, giao dịch được.</li>
+          </ul>
+
+          <h4>Lượt thưởng và Tiệm Cổ Mộ</h4>
+          <p>
+            Mỗi ngày một lượt thưởng, chung cho mọi độ khó, tính lúc Lữ Bố chết. Đã nhận thì hôm đó không vào Cổ Mộ được nữa;
+            thua hoặc hết giờ thì lần sau vẫn nhận được (vào lại phải trả phí).
+            Người nhận thưởng được <strong>điểm phó bản</strong>, đổi ở mục Tiệm Cổ Mộ của Xa Phu (đồ khoá): Thẻ Thần Thú chọn con 300 điểm, Thăng Phẩm Thạch 50 điểm, Tái Tạo Thạch 10 điểm.
+          </p>
+        </article>
+
+        <article class="gcard" id="tong-bao">
+          <h3>Chiến Quốc Tống Bảo Tiểu Yêu</h3>
+          <ul class="facts">
+            <li>Thưởng 5 con mỗi ngày</li>
+            <li>Bản đồ hoang từ cấp 10</li>
+            <li>Sinh lại sau 60 phút</li>
+          </ul>
+          <p>
+            Mỗi bản đồ hoang có một con quái hiếm tên xanh <strong>Chiến Quốc Tống Bảo Tiểu Yêu</strong>. Bị hạ thì đúng 60 phút sau nó xuất hiện lại ở chỗ ngẫu nhiên trong bản đồ.
+            Mở Chiến Quốc Bảo Điển, thẻ <strong>Tống Yêu</strong> để xem bản đồ nào hợp cấp mình đang có con, rồi tự đi tìm.
+          </p>
+          <p>
+            Thưởng mỗi người: kinh nghiệm bằng 40 con quái cùng cấp mình, ngân lượng bằng cấp quái nhân 750, kèm thuốc (có khi là viên tăng chỉ số 1 giờ).
+            Đội gây nhiều sát thương nhất được tính công, không phải người ra đòn cuối.
+          </p>
+          <p class="tip">Mỗi nhân vật nhận thưởng tối đa 5 con mỗi ngày (bảng Hoạt động hôm nay có dòng đếm). Cấp mình cao hơn quái quá 10 cấp thì không có thưởng.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= THẦN THÚ VÀ TIỆN ÍCH (3.1.0) ================= -->
+  <section class="section section--alt" id="than-thu">
+    <div class="wrap">
+      <h2 class="title">Thần thú và tiện ích</h2>
+      <p class="sub">Những thứ thêm vào từ bản 3.1.0: Bảng Thần Thú, Dịch Trạm, cốt truyện Hổ Phù, bằng hữu và thuốc tăng chỉ số.</p>
+
+      <div class="guide">
+
+        <article class="gcard" id="bang-than-thu">
+          <h3>Bảng Thần Thú</h3>
+          <ul class="facts">
+            <li>Alt+W, tab Thần Thú</li>
+            <li>12 con giáp, tối đa 10 sao</li>
+            <li>Chọn 1 con đi theo</li>
+          </ul>
+          <p>
+            Sưu tập 12 thần thú bằng <strong>Thẻ Thần Thú</strong>. Mỗi con đã mở cộng chỉ số cho nhân vật, cộng dồn tất cả các con,
+            kể cả con không đi theo. Dùng thẻ trong hành trang hoặc bấm nút trong bảng.
+          </p>
+          <ul>
+            <li><strong>Mở con mới:</strong> dùng thẻ của con chưa có thì mở con đó 1 sao, chắc chắn thành công, không tốn tiền.</li>
+            <li><strong>Nâng sao:</strong> tốn 1 thẻ cùng loại và 20.000 ngân lượng nhân số sao muốn lên. Tỉ lệ thành công giảm dần: lên 2 sao 90 %, lên 5 sao 60 %, lên 10 sao 10 % (mỗi sao bớt 10 %). Trượt thì mất thẻ nhưng <strong>giữ nguyên sao</strong>.</li>
+            <li><strong>Thẻ Thần Thú (chọn con):</strong> dùng cho con nào cũng được, mở con chưa có hoặc nâng sao như thẻ cùng loại.</li>
+          </ul>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Con</th><th>Mỗi sao cộng</th><th>10 sao</th></tr></thead>
+              <tbody>
+                <tr><td>Tý (Chuột)</td><td>Né tránh 0,4 %</td><td>4 %</td></tr>
+                <tr><td>Sửu (Trâu)</td><td>Khí Huyết tối đa 0,8 %</td><td>8 %</td></tr>
+                <tr><td>Dần (Hổ)</td><td>Bạo Kích 0,4 %</td><td>4 %</td></tr>
+                <tr><td>Mão (Thỏ)</td><td>Nội Công 0,6 %</td><td>6 %</td></tr>
+                <tr><td>Thìn (Rồng)</td><td>Ngoại Công 0,6 %</td><td>6 %</td></tr>
+                <tr><td>Tỵ (Rắn)</td><td>Chính Xác 0,4 %</td><td>4 %</td></tr>
+                <tr><td>Ngọ (Ngựa)</td><td>Tốc độ chạy 0,5 %</td><td>5 %</td></tr>
+                <tr><td>Mùi (Dê)</td><td>Hồi Khí Huyết 3 %</td><td>30 %</td></tr>
+                <tr><td>Thân (Khỉ)</td><td>Thân Thủ 0,8 %</td><td>8 %</td></tr>
+                <tr><td>Dậu (Gà)</td><td>Pháp Lực tối đa 0,8 %</td><td>8 %</td></tr>
+                <tr><td>Tuất (Chó)</td><td>Ngoại Kháng 0,8 %</td><td>8 %</td></tr>
+                <tr><td>Hợi (Heo)</td><td>Nội Kháng 0,8 %</td><td>8 %</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Xuất trận</h4>
+          <p>
+            Kéo icon một con vào ô <strong>Xuất trận</strong> hoặc nhấp đúp vào nó, niệm 2 giây (đi, đánh hay bị đánh là huỷ).
+            Con xuất trận đi theo bạn, không đánh và quái không đánh nó, được cộng thêm <strong>50 %</strong> chỉ số của chính nó
+            (Thìn 10 sao: Ngoại Công 6 % thành 9 %). Kéo icon ra khỏi ô để cho về.
+          </p>
+
+          <h4>Tam Hợp</h4>
+          <p>Đủ 3 con cùng nhóm, mỗi con từ 5 sao, thì cộng thêm:</p>
+          <ul>
+            <li><strong>Thân Tý Thìn:</strong> Công lực 2 %.</li>
+            <li><strong>Tỵ Dậu Sửu:</strong> Khí Huyết tối đa 3 %.</li>
+            <li><strong>Dần Ngọ Tuất:</strong> Bạo Kích 2 %.</li>
+            <li><strong>Hợi Mão Mùi:</strong> Ngoại Kháng và Nội Kháng 3 %.</li>
+          </ul>
+          <p class="tip">
+            Thẻ Thần Thú có ở bảng thẻ lật Cổ Mộ, Chiến Quốc Bảo Điển (ô hiếm), quà điểm danh ngày thứ 7, quà Thành tựu cấp 20, 30, 40.
+            Thẻ chọn con đổi ở sư phụ (20 điểm sư môn), Tiệm Cổ Mộ (300 điểm phó bản), và có ở nhiệm vụ cuối cốt truyện Hổ Phù.
+          </p>
+        </article>
+
+        <article class="gcard" id="dich-tram">
+          <h3>Chủ Dịch Trạm</h3>
+          <ul class="facts">
+            <li>Từ cấp 10</li>
+            <li>Tân Thủ Thôn, Chu Quốc, Sở Quốc</li>
+            <li>Phí 1 đến 1.700 ngân lượng</li>
+          </ul>
+          <p>
+            Nói chuyện với <strong>Chủ Dịch Trạm</strong> ở Tân Thủ Thôn, Chu Quốc hoặc Sở Quốc (Sở có hai trạm), chọn nơi đến,
+            đồng ý giá là tới ngay. Mỗi trạm đi được 8 nơi: hai thành còn lại trong số Tân Thủ Thôn, Chu Quốc, Sở Quốc,
+            và căn cứ sáu môn phái Đào Hoa Nguyên, Thục Sơn, Đường Môn, Côn Luân, Mao Sơn, Vân Mộng Cốc
+            (Cấm Vệ Quân đóng ngay trong thành Chu nên không có trong danh sách).
+          </p>
+          <p>Phí tuỳ quãng đường: Tân Thủ Thôn và Chu Quốc đi lại chỉ 1 ngân lượng, xa nhất là Tân Thủ Thôn tới Côn Luân 1.700. Dưới cấp 10 hoặc thiếu tiền thì trạm từ chối.</p>
+          <p class="tip">Các nước khác sẽ hiện thêm trong danh sách khi bản đồ của nước đó mở.</p>
+        </article>
+
+        <article class="gcard" id="ho-phu">
+          <h3>Cốt truyện Hổ Phù</h3>
+          <ul class="facts">
+            <li>Cấp 10 đến 40</li>
+            <li>6 hồi, 55 nhiệm vụ</li>
+            <li>Bắt đầu: Vệ Đội Trưởng, Tân Thủ Thôn</li>
+          </ul>
+          <p>
+            Nối tiếp chuỗi nhiệm vụ cấp 1 đến 10. Xong chuỗi đầu, bạn cầm Nửa Mảnh Hổ Phù khắc chữ "Lữ"; về Tân Thủ Thôn gặp
+            <strong>Vệ Đội Trưởng</strong> để đi tiếp. Truyện dẫn đi khắp các bản đồ đang mở và đủ bảy căn cứ môn phái,
+            hồi 8 có 2 nhiệm vụ riêng cho môn phái của bạn. Sổ nhiệm vụ (<strong>Alt+Q</strong>) ghi nơi cần tới.
+          </p>
+          <ul>
+            <li>Hồi 5, Đường lên Lạc Ấp: cấp 10 đến 15.</li>
+            <li>Hồi 6, Thiên tử ở Lạc Ấp: cấp 15 đến 20.</li>
+            <li>Hồi 7, Hợp Tung: cấp 20 đến 25.</li>
+            <li>Hồi 8, Hổ Lao Quan: cấp 25 đến 30.</li>
+            <li>Hồi 9, Đầm Vân Mộng: cấp 30 đến 35.</li>
+            <li>Hồi 10, Xích Bích: cấp 35 đến 40.</li>
+          </ul>
+          <p>
+            Thưởng cả chuỗi: 155.600 kinh nghiệm, 820.000 ngân lượng và đồ khoá gồm 9 Tái Tạo Thạch, 3 Thăng Phẩm Thạch,
+            3 Trung Cấp Đoạn Thạch, 1 Cao Cấp Đoạn Thạch, 1 Thẻ Thần Thú chọn con (nhiệm vụ cuối, cấp 40) cùng nhiều thuốc.
+          </p>
+          <p class="tip">Hai nhiệm vụ đưa vào Cổ Mộ chỉ cần hạ Thủ Mộ Thạch Tướng, không bắt buộc hạ Lữ Bố.</p>
+        </article>
+
+        <article class="gcard" id="bang-huu">
+          <h3>Bằng hữu</h3>
+          <ul class="facts">
+            <li>Chơi trực tuyến</li>
+            <li>Tối đa 50 bạn</li>
+          </ul>
+          <p>
+            Chuột phải vào người chơi khác, chọn <strong>Thêm bạn bè</strong>. Người kia đồng ý (bấm Enter cũng được) thì cả hai có tên nhau trong danh sách.
+            Nút <strong>Bằng Hữu</strong> ở góc dưới phải, ngay trái nút Cài Đặt: xem ai đang trực tuyến, cấp và môn phái,
+            bấm Tin tức để xem bạn đang trực tuyến dù khác bản đồ. Xoá bạn thì mất ở cả hai phía.
+          </p>
+        </article>
+
+        <article class="gcard" id="thuoc">
+          <h3>Thuốc tăng chỉ số 1 giờ</h3>
+          <ul class="facts">
+            <li>Có từ Tống Bảo Tiểu Yêu</li>
+            <li>Uống chung được cả năm loại</li>
+          </ul>
+          <ul>
+            <li><strong>Khí Mạch Đan:</strong> Khí Huyết tối đa tăng 18 %.</li>
+            <li><strong>Chu Thiên Đơn:</strong> Pháp Lực tối đa tăng 20 %.</li>
+            <li><strong>Tiêu Dao Tán:</strong> Ngoại Công tăng 10 %.</li>
+            <li><strong>Kim Cang Tán:</strong> Ngoại Kháng tăng 12 % (tính theo lúc uống; còn hạn thì không uống thêm được).</li>
+            <li><strong>Tử Tâm Đơn:</strong> Nội Công tăng 10 %.</li>
+          </ul>
+          <p>Uống lại cùng loại thì thời gian đặt lại 1 giờ, không cộng dồn. Chết không mất; thời gian chỉ trôi khi bạn đang trong game. Rê chuột lên biểu tượng trên thanh trạng thái để xem còn bao lâu.</p>
+          <p>Cùng nguồn còn có <strong>Tái Tạo Hoàn</strong> (hồi đầy Khí Huyết và Pháp Lực, dùng chung thời gian chờ 30 giây với thuốc máu) và <strong>Tử Sâm Đơn</strong> (thêm 2.000 tiềm năng).</p>
         </article>
 
       </div>
@@ -133,7 +349,7 @@
   </section>
 
   <!-- ================= RÈN TRANG BỊ ================= -->
-  <section class="section section--alt" id="tinh-nang">
+  <section class="section" id="tinh-nang">
     <div class="wrap">
       <h2 class="title">Rèn trang bị</h2>
       <p class="sub">
@@ -147,7 +363,8 @@
           <h3>Nâng sao và hợp thành Đoạn Thạch</h3>
           <ul class="facts">
             <li>Tối đa 10 sao</li>
-            <li>1 Đoạn Thạch mỗi lần, không tốn tiền</li>
+            <li>1 Đoạn Thạch mỗi lần</li>
+            <li>800 ngân lượng × cấp đồ × sao muốn lên</li>
           </ul>
           <p>Mỗi sao cộng thêm vào chỉ số chính của món đồ (vũ khí: ngoại công và nội công; áo, nón, yêu đới: hai loại kháng; giày: thân thủ và ngoại kháng; hạng liên: ngoại công và nội công). Đồ cấp càng cao, mỗi sao cộng càng nhiều.</p>
           <div class="tbl">
@@ -162,6 +379,7 @@
               </tbody>
             </table>
           </div>
+          <p>Tiền trừ mỗi lần nâng, thành hay bại: đồ cấp 10 lên 1 sao tốn 8.000, đồ cấp 40 lên 5 sao 160.000, lên 10 sao 320.000.</p>
           <p><strong>Thất bại:</strong> mất đá và tụt 1 sao. Đồ không bao giờ vỡ. Nâng thành công thì món đồ bị <strong>phong ấn</strong> (xem Giải phong ấn).</p>
 
           <h4>Hợp thành Đoạn Thạch</h4>
@@ -177,7 +395,7 @@
               </tbody>
             </table>
           </div>
-          <p class="tip">Sơ Cấp Đoạn Thạch có ở quà điểm danh hằng ngày (ngày thứ 7 gấp đôi) và Chiến Quốc Bảo Điển (mỗi lần lên cấp được thêm một lượt quay). Các loại cao hơn chỉ có qua hợp thành.</p>
+          <p class="tip">Sơ Cấp Đoạn Thạch có ở Chiến Quốc Bảo Điển (mỗi lần lên cấp và mỗi ngày điểm danh được thêm lượt quay), quà Thành tựu cấp và bảng thẻ Cổ Mộ. Trung Cấp, Cao Cấp có ở bảng thẻ Cổ Mộ, quà Thành tựu cấp và cốt truyện Hổ Phù; Đỉnh Cấp là thẻ độc đắc Cổ Mộ Địa Ngục. Còn lại thì hợp thành.</p>
         </article>
 
         <article class="gcard" id="tang-pham">
@@ -186,20 +404,20 @@
             <li>1 Thăng Phẩm Thạch</li>
             <li>4.000 ngân lượng × cấp đồ</li>
           </ul>
-          <p>Phẩm càng cao, chỉ số gốc càng lớn và có thêm dòng phụ, thêm lỗ khảm. Quái chỉ rơi đồ Trắng.</p>
+          <p>Phẩm càng cao, chỉ số gốc càng lớn và có thêm dòng phụ, thêm lỗ khảm. Quái thường rơi đồ Trắng; quái từ cấp 30 có 8 % rơi đồ Xanh.</p>
           <div class="tbl">
             <table>
               <thead><tr><th>Phẩm</th><th>Chỉ số gốc</th><th>Dòng phụ</th><th>Cách có</th></tr></thead>
               <tbody>
                 <tr><td>Trắng</td><td>× 1,0</td><td>0</td><td>quái rơi</td></tr>
                 <tr><td>Xanh</td><td>× 1,2</td><td>2</td><td>tăng phẩm từ Trắng, 25 %</td></tr>
-                <tr><td>Vàng</td><td>× 1,4</td><td>3</td><td>tăng phẩm từ Xanh, 10 %</td></tr>
+                <tr><td>Vàng</td><td>× 1,4</td><td>3</td><td>tăng phẩm từ Xanh, 5 %</td></tr>
                 <tr><td>Tím</td><td>× 1,6</td><td>4</td><td>set sư môn</td></tr>
               </tbody>
             </table>
           </div>
           <p>Thành công: lên một phẩm, thêm dòng phụ ngẫu nhiên, giữ nguyên sao và dòng cũ. Thất bại: mất đá và tiền, đồ không đổi. Đồ cấp 10 tốn 40.000 ngân lượng mỗi lần.</p>
-          <p class="tip">Thăng Phẩm Thạch có ở Chiến Quốc Bảo Điển, hoặc đổi 10 điểm sư môn ở sư phụ.</p>
+          <p class="tip">Thăng Phẩm Thạch có ở Chiến Quốc Bảo Điển và bảng thẻ Cổ Mộ, hoặc đổi 10 điểm sư môn ở sư phụ, 50 điểm phó bản ở Tiệm Cổ Mộ.</p>
         </article>
 
         <article class="gcard" id="tai-tao">
@@ -212,16 +430,16 @@
           </ul>
           <p>Quay lại toàn bộ dòng phụ chưa khoá. Bấm <strong>Khoá</strong> ở dòng muốn giữ (khoá không tốn thêm), phải chừa ít nhất một dòng để quay. Dòng mới không trùng loại với dòng đã khoá. Phẩm, sao và đá khảm giữ nguyên.</p>
           <p>Mỗi dòng ra một trong ba bậc: <strong>Thường</strong> (60 % mức trần, ra 6 lần trên 10), <strong>Tốt</strong> (80 %, 3 lần trên 10) và <strong>Hiếm</strong> (đủ mức trần, 1 lần trên 10).</p>
-          <p class="tip">Tái Tạo Thạch có ở Chiến Quốc Bảo Điển, hoặc đổi 5 điểm sư môn ở sư phụ.</p>
+          <p class="tip">Tái Tạo Thạch có ở quà điểm danh mỗi ngày (ngày thứ 7 gấp đôi), Chiến Quốc Bảo Điển, bảng thẻ Cổ Mộ, hoặc đổi 2 điểm sư môn ở sư phụ, 10 điểm phó bản ở Tiệm Cổ Mộ.</p>
         </article>
 
         <article class="gcard" id="giai-phong-an">
           <h3>Giải phong ấn</h3>
           <ul class="facts">
-            <li>5.000.000 ngân lượng</li>
+            <li>100.000 ngân lượng × cấp đồ</li>
             <li>Không tốn đá, không thất bại</li>
           </ul>
-          <p>Nâng sao thành công sẽ <strong>phong ấn</strong> món đồ: vẫn mặc, cất, rèn tiếp, bán tiệm được, chỉ là <strong>không giao dịch</strong> với người khác. Giải phong ấn để mở lại giao dịch. Nâng sao thành công lần nữa thì bị phong ấn lại.</p>
+          <p>Nâng sao thành công sẽ <strong>phong ấn</strong> món đồ: vẫn mặc, cất, rèn tiếp, bán tiệm được, chỉ là <strong>không giao dịch</strong> với người khác. Giải phong ấn để mở lại giao dịch (đồ cấp 20 tốn 2.000.000, cấp 40 tốn 4.000.000). Nâng sao thành công lần nữa thì bị phong ấn lại.</p>
           <p class="tip">Muốn bán đồ sao cho bằng hữu, nâng xong hết sao rồi mới giải phong ấn một lần.</p>
         </article>
 
@@ -230,7 +448,7 @@
   </section>
 
   <!-- ================= MÔN PHÁI ================= -->
-  <section class="section" id="mon-phai">
+  <section class="section section--alt" id="mon-phai">
     <div class="wrap">
       <h2 class="title">Bảy môn phái</h2>
       <p class="sub">
