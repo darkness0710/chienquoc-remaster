@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hướng dẫn · Chiến Quốc Remaster</title>
-  <meta name="description" content="Hướng dẫn nhanh Chiến Quốc Remaster 3.1: việc hằng ngày, Cổ Mộ, Bảng Thần Thú, rèn trang bị, kĩ năng 7 môn phái, kèm ảnh trong game.">
+  <meta name="description" content="Hướng dẫn nhanh Chiến Quốc Remaster 3.2: việc hằng ngày, Cổ Mộ, Bảng Thần Thú, rèn trang bị, kĩ năng 7 môn phái, kèm ảnh trong game.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/">
-  <meta property="og:title" content="Hướng dẫn Chiến Quốc Remaster 3.1">
+  <meta property="og:title" content="Hướng dẫn Chiến Quốc Remaster 3.2">
   <meta property="og:description" content="Việc hằng ngày, Cổ Mộ, Bảng Thần Thú, rèn trang bị và kĩ năng 7 môn phái.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<!-- Nguồn số liệu: repo game, bản 3.1.0 (2026-10-03), thư mục godot/data/custom/.
+<!-- Nguồn số liệu: repo game, bản 3.2.0 (2026-10-04; Cổ Mộ bản 3, Phong Yêu Kính, thú cưỡi), thư mục godot/data/custom/.
      Sư môn: sect_quests.json, sect_sets.json (exchange) · Rèn: forge.json, equip_rules.json ·
      Môn phái: sect_skills.json (nguồn duy nhất, đè tài liệu kế hoạch 28).
      Vương Bộ Đầu: criminal.json (rules, cash, khối team) + tài liệu 34, 35 · Cổ Mộ: dungeon_gumu.json + tài liệu 33.
@@ -70,6 +70,7 @@
         <a href="#su-mon">Sư môn</a>
         <a href="#vuong-bo-dau">Truy bắt</a>
         <a href="#co-mo">Cổ Mộ</a>
+        <a href="#phong-yeu-kinh">Phong Yêu Kính</a>
         <a href="#tong-bao">Tống Bảo Tiểu Yêu</a>
       </nav>
 
@@ -169,27 +170,52 @@
               <table>
                 <thead><tr><th>Độ khó</th><th>Từ cấp</th><th>Phí vào</th><th>Thời gian</th><th>Điểm</th></tr></thead>
                 <tbody>
-                  <tr><td>Dễ</td><td>10</td><td>100.000</td><td>30 phút</td><td>50</td></tr>
                   <tr><td>Thường</td><td>20</td><td>200.000</td><td>45 phút</td><td>100</td></tr>
-                  <tr><td>Khó</td><td>20</td><td>300.000</td><td>60 phút</td><td>150</td></tr>
-                  <tr><td>Địa Ngục</td><td>20</td><td>500.000</td><td>75 phút</td><td>200</td></tr>
+                  <tr><td>Khó</td><td>30</td><td>500.000</td><td>60 phút</td><td>200</td></tr>
+                  <tr><td>Địa Ngục</td><td>40</td><td>1.000.000</td><td>75 phút</td><td>300</td></tr>
                 </tbody>
               </table>
             </div>
             <h4>Trong mộ</h4>
             <ul>
-              <li>3 đợt Thạch Dũng, rồi Thủ Mộ Thạch Tướng, cuối cùng là <strong>Lữ Bố</strong>.</li>
+              <li>3 đợt Thạch Dũng, rồi Thủ Mộ Thạch Tướng, cuối cùng là <strong>Lữ Bố</strong>. Ở Khó và Địa Ngục, Lữ Bố hết máu lần đầu sẽ hiện lại ở dạng thứ hai, mạnh hơn.</li>
+              <li>Lữ Bố đánh người gây nhiều sát thương nhất, lướt tới người đứng xa, đánh lâu quá thì nổi giận.</li>
               <li>Thấy <strong>vòng đỏ</strong> dưới chân thì chạy ra ngay. Kéo Lữ Bố xa quá 15 ô thì hắn về chỗ, hồi đầy máu.</li>
               <li>Chết: hồi sinh ở cửa mộ sau 10 giây, không mất gì. Trang bị bị khoá, thuốc vẫn dùng được.</li>
             </ul>
             <h4>Lật thẻ</h4>
             <ul>
-              <li>Lữ Bố chết: cả đội chung một bảng <strong>16 thẻ</strong>, mỗi người lật <strong>2 thẻ</strong> miễn phí (cần ô trống hành trang).</li>
+              <li>Lữ Bố chết: mỗi người nhận Vô Song Điểm Phiếu (khoá), cả đội chung một bảng <strong>16 thẻ</strong>, mỗi người lật <strong>2 thẻ</strong> miễn phí. Hành trang đầy thì quà vào túi chờ, có chỗ là tự nhận.</li>
               <li>Lật xong, mỗi người được mua thêm 1 thẻ, giá 1,5 lần phí vào.</li>
-              <li>Mỗi bảng có <strong>1 thẻ độc đắc</strong>: Dễ là Thăng Phẩm Thạch, Thường là Cao Cấp Đoạn Thạch, Khó là 3 Thẻ Thần Thú, Địa Ngục là Đỉnh Cấp Đoạn Thạch.</li>
+              <li>Mỗi bảng có <strong>1 thẻ độc đắc</strong>: Thường là Cao Cấp Đoạn Thạch, Khó là 2 Thẻ Thần Thú chọn con, Địa Ngục là Đỉnh Cấp Đoạn Thạch. Mỗi bảng có thêm 1 Thẻ Thú Cưỡi (Thường, Hiếm, Quý theo độ khó).</li>
               <li>Đồ lật được bán, vứt, giao dịch được.</li>
             </ul>
-            <p class="tip">Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt. Điểm phó bản đổi ở Tiệm Cổ Mộ của Xa Phu: Thẻ Thần Thú chọn con 300, Thăng Phẩm Thạch 50, Tái Tạo Thạch 10.</p>
+            <p class="tip">Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt. Điểm phó bản đổi ở Tiệm Cổ Mộ của Xa Phu: Thẻ Thần Thú chọn con 300, Thăng Phẩm Thạch 50, Tái Tạo Thạch 10, Thú Hồn 10.</p>
+          </div>
+        </article>
+
+        <article class="gcard gpanel sub-panel" id="phong-yeu-kinh">
+          <div class="ghead">
+            <h3>Phó bản Phong Yêu Kính</h3>
+            <ul class="facts">
+              <li>1 đến 5 người, từ cấp 20</li>
+              <li>Tả Khâu Minh, Chu Quốc (251, 161)</li>
+              <li>Vào 1 lần mỗi ngày</li>
+            </ul>
+          </div>
+          <div class="gtext">
+            <p>Đội trưởng nói với Tả Khâu Minh, chọn một món trang bị phẩm Xanh trở lên trong hành trang làm vé (món bị đốt). Cả đội đứng gần, cấp lệch không quá 10. Vào là tính lượt trong ngày.</p>
+            <h4>Trong kính</h4>
+            <ul>
+              <li>Bản đồ là một vùng luyện cấp hợp cấp cả đội. Có <strong>60 yêu ma</strong>, mỗi người thêm 20: Kính Yêu đánh gần, Kính Ma ném ám khí, Kính Quỷ đánh phép từ xa.</li>
+              <li>Diệt đủ thì <strong>Kính Ma</strong> hiện ra (Long Nha, Hổ Cảnh hoặc Khuyển Thần), mỗi con có chiêu riêng, Long Nha gọi bầy. Kính Ma đánh như Lữ Bố: đổi mục tiêu, lướt tới, nổi giận.</li>
+              <li>15 phút. Chết: hồi sinh ở cổng vào sau 10 giây. Kinh nghiệm mỗi con bằng nửa quái thường.</li>
+            </ul>
+            <h4>Lật thẻ</h4>
+            <ul>
+              <li>Hạ Kính Ma: mỗi người 1 Vô Song Điểm Phiếu (khoá) và lật <strong>2 thẻ</strong> trong bảng 16 thẻ: Tinh Thạch, pháp bảo, Sơ Cấp Đoạn Thạch, Thẻ Thú Cưỡi. Thẻ độc đắc là Thẻ Thú Cưỡi Quý.</li>
+              <li>45 giây chưa lật thì được lật hộ. Hành trang đầy thì quà vào túi chờ.</li>
+            </ul>
           </div>
         </article>
 
@@ -274,6 +300,27 @@
               <li><strong>Hợi Mão Mùi:</strong> Ngoại Kháng và Nội Kháng 3 %.</li>
             </ul>
             <p class="tip">Thẻ Thần Thú có ở bảng thẻ Cổ Mộ, Chiến Quốc Bảo Điển, quà điểm danh ngày thứ 7, quà Thành tựu cấp 20, 30, 40. Thẻ chọn con: đổi ở sư phụ (20 điểm sư môn), Tiệm Cổ Mộ (300 điểm phó bản), nhiệm vụ cuối cốt truyện Hổ Phù.</p>
+          </div>
+        </article>
+
+        <article class="gcard gpanel" id="thu-cuoi">
+          <div class="ghead">
+            <h3>Thú cưỡi</h3>
+            <ul class="facts">
+              <li>34 con, 4 phẩm</li>
+              <li>Alt+W, tab Thú cưỡi</li>
+              <li>Nâng sao ở Bảo Thú Đại Phu</li>
+            </ul>
+          </div>
+          <div class="gtext">
+            <ul>
+              <li>Lên cấp 20 nhận <strong>Hồng Tông Mã</strong>. Bấm <strong>C</strong> (hoặc kĩ năng cơ bản Lên / xuống ngựa, Alt+R) để cưỡi; ra đòn thì tự xuống. Người khác thấy bạn cưỡi.</li>
+              <li>Mỗi con cộng <strong>một loại chỉ số</strong> (Khí Huyết, Ngoại Công, Nội Công, Ngoại Kháng hoặc Nội Kháng), cộng dồn mọi con đã mở. Phẩm càng cao mỗi sao cộng càng nhiều.</li>
+              <li><strong>Thẻ Thú Cưỡi</strong> Thường / Hiếm / Quý mở một con chưa có của phẩm đó; có đủ rồi thì ra Thú Hồn. Thẻ có ở Cổ Mộ và Phong Yêu Kính.</li>
+              <li>Nâng sao: lên sao N cần N Thú Hồn và 20.000 × N lượng, càng cao càng khó, trượt giữ sao. Thú Hồn đổi ở Tiệm Cổ Mộ (10 điểm).</li>
+              <li>Truyền Thuyết mở bằng 200 Vô Song Điểm Phiếu ngay trong tab. Quý và Truyền Thuyết đủ 10 sao thì đổi hình.</li>
+            </ul>
+            <p class="tip">Chọn con cưỡi bằng nút "Đặt làm mặc định". Thần thú cũng vậy: đặt con mặc định ở tab Thần Thú, gọi ra bằng kĩ năng cơ bản Triệu hồi thần thú.</p>
           </div>
         </article>
 
