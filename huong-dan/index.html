@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hướng dẫn · Chiến Quốc Remaster</title>
-  <meta name="description" content="Hướng dẫn nhanh Chiến Quốc Remaster 3.2: việc hằng ngày, Cổ Mộ, Bảng Thần Thú, rèn trang bị, kĩ năng 7 môn phái, kèm ảnh trong game.">
+  <meta name="description" content="Hướng dẫn nhanh Chiến Quốc Remaster 3.2: việc hằng ngày, Cổ Mộ, Bảng Thần Thú, pháp bảo, cánh, rèn trang bị, kĩ năng 7 môn phái, kèm ảnh trong game.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/">
   <meta property="og:title" content="Hướng dẫn Chiến Quốc Remaster 3.2">
-  <meta property="og:description" content="Việc hằng ngày, Cổ Mộ, Bảng Thần Thú, rèn trang bị và kĩ năng 7 môn phái.">
+  <meta property="og:description" content="Việc hằng ngày, Cổ Mộ, Bảng Thần Thú, pháp bảo, cánh, rèn trang bị và kĩ năng 7 môn phái.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -48,7 +48,8 @@
   <section class="guide-hero">
     <div class="wrap">
       <h1 class="hero__title">Hướng dẫn</h1>
-      <p class="hero__lead">Mỗi ngày làm gì, nuôi thần thú, rèn đồ, chọn môn phái. Đọc nhanh, có ảnh trong game (bản 3.1).</p>
+      <p class="hero__lead">Mỗi ngày làm gì, nuôi thần thú, đeo pháp bảo, rèn đồ, chọn môn phái. Đọc nhanh, có ảnh trong game.</p>
+      <a class="hero__watch" href="../#trailer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Xem video: ba anh hùng đấu Lữ Bố ở Cổ Mộ</a>
     </div>
   </section>
 
@@ -56,7 +57,7 @@
     <nav class="wrap tabs" data-tabs aria-label="Chủ đề hướng dẫn">
       <a href="#hang-ngay"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Hằng ngày</a>
       <a href="#than-thu"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="10" r="2"/><circle cx="9.5" cy="5.5" r="2"/><circle cx="14.5" cy="5.5" r="2"/><circle cx="18.5" cy="10" r="2"/></svg>Thần Thú</a>
-      <a href="#tinh-nang"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 4l7 7-3 3-7-7zM10 9l-7 7 3 3 7-7"/></svg>Rèn đồ</a>
+      <a href="#tinh-nang"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 4l7 7-3 3-7-7zM10 9l-7 7 3 3 7-7"/></svg>Trang bị</a>
       <a href="#mon-phai"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4L9 15M20 4h-5M20 4v5M6 12l6 6M4 20l4-4"/></svg>Môn phái</a>
       <a href="#tien-ich"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>Tiện ích</a>
     </nav>
@@ -340,19 +341,61 @@
     </div>
   </section>
 
-  <!-- ================= RÈN ĐỒ ================= -->
+  <!-- ================= TRANG BỊ (id cũ #tinh-nang giữ cho link cũ) =================
+       Pháp bảo: talisman.json + tài liệu 45 · Quầng vũ khí: logic/weapon_glow.gd (STAR_TIER_COLORS, LAYERS) ·
+       Đồ lưng: treasury.json khối back_gear + logic/back_gear.gd. Ảnh 3 mục mới: khung quay `./run.sh studio gumu`. -->
   <section class="tab-panel" id="tinh-nang">
     <div class="wrap">
-      <p class="lead">Tới <strong>Chủ Tiệm Sửa Chữa</strong> (Tân Thủ Thôn, Sở, Chu), chọn "Rèn luyện trang bị". Kéo đồ vào ô trái, đá vào ô phải, bấm Tiến hành. Rèn được cả đồ đang mặc; kết quả lưu ngay, không hoàn tác.</p>
-      <nav class="subtabs" data-subtabs aria-label="Các kiểu rèn">
+      <p class="lead">Rèn đồ và pháp bảo ở <strong>Chủ Tiệm Sửa Chữa</strong> (Tân Thủ Thôn, Sở, Chu), chọn "Rèn luyện trang bị". Kéo đồ vào ô trái, đá vào ô phải, bấm Tiến hành. Rèn được cả đồ đang mặc; kết quả lưu ngay, không hoàn tác.</p>
+      <nav class="subtabs" data-subtabs aria-label="Trang bị và rèn đồ">
+        <a href="#phap-bao">Pháp bảo</a>
         <a href="#nang-sao">Nâng sao</a>
+        <a href="#quang-vu-khi">Quầng vũ khí</a>
         <a href="#hop-thanh">Hợp thành đá</a>
         <a href="#tang-pham">Tăng phẩm</a>
         <a href="#tai-tao">Tái tạo</a>
         <a href="#giai-phong-an">Phong ấn</a>
+        <a href="#do-lung">Cánh, phi phong</a>
       </nav>
 
       <div class="guide">
+
+        <article class="gcard gpanel sub-panel" id="phap-bao">
+          <div class="ghead">
+            <h3>Pháp bảo</h3>
+            <ul class="facts">
+              <li>5 loại, đeo 1 món</li>
+              <li>Sao 0 tới 10</li>
+              <li>Vòng sáng dưới chân</li>
+            </ul>
+          </div>
+          <figure class="gshot">
+            <img src="../assets/img/huong-dan/phap-bao.jpg" width="760" height="380" loading="lazy" alt="Ba nhân vật trong Cổ Mộ, mỗi người một vòng pháp bảo dưới chân: vàng, tím hồng, xanh băng">
+            <figcaption>Mỗi loại pháp bảo một vòng riêng, người khác cùng thấy</figcaption>
+          </figure>
+          <div class="gtext">
+            <p>Đeo ở ô pháp bảo (Alt+W). Chỉ món đang đeo có tác dụng. Số đầu là 0 sao, số sau là 10 sao, giữa hai mốc tăng đều.</p>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Pháp bảo</th><th>Hiệu ứng (0 sao → 10 sao)</th></tr></thead>
+                <tbody>
+                  <tr><td>Linh Thông</td><td>Mọi chỉ số +5 → +20, máu và pháp lực +20 → +80</td></tr>
+                  <tr><td>Cửu Long</td><td>Khiên 15 → 35 % máu tối đa, đỡ 60 → 90 % đòn</td></tr>
+                  <tr><td>Nhiếp Hồn</td><td>Đòn đánh thường 10 → 35 % làm choáng 1,5 s</td></tr>
+                  <tr><td>Chiêu Hồn</td><td>Đeo đủ 20 → 10 phút: ngã thì 3 s sau tự dậy, 20 → 80 % máu</td></tr>
+                  <tr><td>Truyền Thế</td><td>Hồi 2 → 5 % máu và pháp lực mỗi 15 s</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul>
+              <li><strong>Cửu Long:</strong> khiên hồi 10 % mỗi 10 s. <strong>Nhiếp Hồn:</strong> trùm chỉ choáng 1 s, sau đó miễn choáng một lúc. <strong>Chiêu Hồn:</strong> không chạy trong Cổ Mộ.</li>
+              <li><strong>Nguồn:</strong> thẻ lật Cổ Mộ và Phong Yêu Kính, tiệm Cổ Mộ (100 điểm, khoá), Tống Bảo Tiểu Yêu (5 %).</li>
+              <li><strong>Nâng sao</strong> (Chủ Tiệm Sửa Chữa, mục Pháp bảo): ăn một món cùng loại 0 sao, 20.000 lượng nhân số sao muốn lên. Lên 1 sao 100 %, mỗi sao sau kém 10 %, lên 10 sao 10 %. Trượt thì mất nguyên liệu và tiền nhưng giữ sao.</li>
+              <li><strong>Linh Khí:</strong> thu hồi món 0 sao thừa ra Linh Khí (phí 5.000), 30 Linh Khí đổi một món 0 sao loại tuỳ chọn. Pháp bảo chỉ mòn khi ngã, sửa bằng Linh Khí.</li>
+            </ul>
+            <p class="tip">Đánh trùm thì Cửu Long giữ mạng, luyện cấp lâu thì Truyền Thế đỡ tốn thuốc.</p>
+          </div>
+        </article>
 
         <article class="gcard gpanel sub-panel" id="nang-sao">
           <div class="ghead">
@@ -386,6 +429,37 @@
               <li>Tiền mất dù thành hay bại: đồ cấp 40 lên 5 sao 160.000, lên 10 sao 320.000.</li>
             </ul>
             <p class="tip">Nâng thành công thì đồ bị phong ấn (không giao dịch được). Xem tab Phong ấn.</p>
+          </div>
+        </article>
+
+        <article class="gcard gpanel sub-panel" id="quang-vu-khi">
+          <div class="ghead">
+            <h3>Quầng sáng vũ khí</h3>
+            <ul class="facts">
+              <li>Theo số sao vũ khí</li>
+              <li>5 màu</li>
+              <li>Người khác cùng thấy</li>
+            </ul>
+          </div>
+          <figure class="gshot">
+            <img src="../assets/img/huong-dan/quang-vu-khi.jpg" width="600" height="620" loading="lazy" alt="Tiểu Long Nữ cầm kiếm 10 sao, lưỡi kiếm toả quầng đỏ">
+            <figcaption>Kiếm 10 sao: quầng đỏ</figcaption>
+          </figure>
+          <div class="gtext">
+            <p>Vũ khí có sao thì toả quầng, mỗi cặp sao một màu. Từ 7 sao quầng dày lên thêm lớp.</p>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Sao vũ khí</th><th>Màu quầng</th></tr></thead>
+                <tbody>
+                  <tr><td>1, 2</td><td><span class="swatch" style="--c: #39ff39"></span>Xanh lục</td></tr>
+                  <tr><td>3, 4</td><td><span class="swatch" style="--c: #296dff"></span>Xanh lam</td></tr>
+                  <tr><td>5, 6</td><td><span class="swatch" style="--c: #ffc239"></span>Vàng</td></tr>
+                  <tr><td>7, 8</td><td><span class="swatch" style="--c: #633cff"></span>Tím, quầng dày hơn</td></tr>
+                  <tr><td>9, 10</td><td><span class="swatch" style="--c: #ff2818"></span>Đỏ, quầng dày nhất</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="tip">Muốn quầng đỏ: nâng vũ khí lên 9 sao (tab Nâng sao). Quầng đi theo sao, không theo màu đồ.</p>
           </div>
         </article>
 
@@ -504,6 +578,40 @@
               <li>Nâng sao thành công lần nữa thì bị phong ấn lại.</li>
             </ul>
             <p class="tip">Muốn bán đồ sao cho bằng hữu: nâng xong hết sao rồi mới giải phong ấn, chỉ tốn một lần.</p>
+          </div>
+        </article>
+
+        <article class="gcard gpanel sub-panel" id="do-lung">
+          <div class="ghead">
+            <h3>Cánh và phi phong</h3>
+            <ul class="facts">
+              <li>Đồ lưng 10 bậc</li>
+              <li>100 Vô Song Điểm Phiếu mỗi lần</li>
+              <li>Bậc 5 đổi dáng</li>
+            </ul>
+          </div>
+          <figure class="gshot">
+            <img src="../assets/img/huong-dan/canh.jpg" width="760" height="470" loading="lazy" alt="Đường Tam đeo cánh xanh lam, Tiêu Viêm đeo cánh dơi đỏ, cùng ra chiêu trong Cổ Mộ">
+            <figcaption>Cánh trên lưng, vòng pháp bảo dưới chân</figcaption>
+          </figure>
+          <div class="gtext">
+            <p>Đổi ở <strong>Quân Sư Vô Song Thành</strong> bằng Vô Song Điểm Phiếu (nhận ở phó bản). Hai dòng, mỗi dòng một món theo giới:</p>
+            <ul>
+              <li><strong>Phi phong</strong> (thiên ngoại công): Vương Giả Phi Phong cho nam, Xí Nhiệt Phi Phong cho nữ.</li>
+              <li><strong>Cánh</strong> (thiên nội công): Thánh Linh Chi Dực, vàng nhạt cho nam, trắng thuần cho nữ.</li>
+            </ul>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Việc</th><th>Phiếu</th><th>Kết quả</th></tr></thead>
+                <tbody>
+                  <tr><td>Nhận bậc 1</td><td>100</td><td>10 % chỉ số của món</td></tr>
+                  <tr><td>Lên một bậc</td><td>100</td><td>Mỗi bậc thêm 10 %, bậc 10 đủ chỉ số</td></tr>
+                  <tr><td>Đổi dòng</td><td>100</td><td>Phi phong sang cánh hoặc ngược lại, giữ bậc</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Bậc 1 tới 4 mang dáng phụ (phi phong xanh, cánh dơi); từ bậc 5 hiện dáng chính. Lên đủ bậc 10 tốn 1.000 phiếu.</p>
+            <p class="tip">Muốn khoe dáng chính sớm: dồn phiếu lên bậc 5 trước (500 phiếu).</p>
           </div>
         </article>
 

@@ -463,3 +463,65 @@ html.tabs-on .tab-panel + .tab-panel { border-top: 0; }
 .badge { display: inline-block; margin-left: 8px; padding: 2px 10px; border-radius: 999px; vertical-align: middle;
   font-family: var(--font-body); font-size: .75rem; font-weight: 600; color: #2a1a02; background: var(--jade-400); }
 .badge--lock { color: var(--muted); background: rgba(168, 179, 209, .15); border: 1px solid rgba(168, 179, 209, .35); }
+
+/* ---------- video trailer (trang chủ, #trailer) ---------- */
+.trailer {
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(232, 195, 106, .14), transparent 60%),
+    radial-gradient(ellipse at 50% 100%, rgba(255, 140, 170, .08), transparent 55%),
+    linear-gradient(180deg, var(--ink-800), var(--ink-900));
+  border-bottom: 1px solid var(--line);
+}
+.trailer__pill { margin-bottom: 14px; }
+.trailer__frame {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 8px;
+  border-radius: 22px;
+  background: linear-gradient(145deg, rgba(243, 217, 138, .9), rgba(143, 106, 35, .55) 45%, rgba(63, 184, 201, .55));
+  box-shadow: 0 0 0 1px rgba(243, 217, 138, .25), 0 30px 80px rgba(0, 0, 0, .6), 0 0 90px rgba(232, 195, 106, .18);
+}
+.trailer__frame video { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; border-radius: 15px; background: #000; }
+.trailer__play {
+  position: absolute; left: 50%; top: 50%;
+  width: 92px; height: 92px; margin: -46px 0 0 -46px;
+  border-radius: 50%; border: 2px solid rgba(255, 241, 184, .85); cursor: pointer;
+  background: radial-gradient(circle, rgba(232, 195, 106, .95), rgba(201, 154, 62, .9));
+  box-shadow: 0 0 0 10px rgba(232, 195, 106, .2), 0 12px 40px rgba(0, 0, 0, .55);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.trailer__play svg { width: 40px; height: 40px; margin-left: 6px; fill: #2a1a02; }
+.trailer__play:hover, .trailer__play:focus-visible { transform: scale(1.08); box-shadow: 0 0 0 16px rgba(232, 195, 106, .22), 0 12px 40px rgba(0, 0, 0, .55); }
+@media (prefers-reduced-motion: no-preference) {
+  .trailer__play:not([hidden]) { animation: trailer-pulse 2.4s ease-in-out infinite; }
+}
+@keyframes trailer-pulse { 50% { box-shadow: 0 0 0 18px rgba(232, 195, 106, .08), 0 12px 40px rgba(0, 0, 0, .55); } }
+@media (max-width: 459px) {
+  .trailer__frame { padding: 5px; border-radius: 16px; }
+  .trailer__play { width: 68px; height: 68px; margin: -34px 0 0 -34px; }
+  .trailer__play svg { width: 30px; height: 30px; }
+}
+
+/* ba thẻ ảnh dưới video, dẫn sang trang hướng dẫn */
+.showcase { list-style: none; margin: 28px auto 0; padding: 0; max-width: 900px;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; text-align: left; }
+@media (max-width: 719px) { .showcase { grid-template-columns: minmax(0, 1fr); } }
+.showcase__item { display: flex; flex-direction: column; height: 100%; overflow: hidden; color: var(--muted);
+  border-radius: var(--radius); border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(22, 41, 90, .75), rgba(15, 29, 68, .6));
+  transition: transform .2s ease, border-color .2s ease; }
+.showcase__item:hover, .showcase__item:focus-visible { transform: translateY(-3px); border-color: var(--line-strong); }
+.showcase__item img { width: 100%; height: 150px; object-fit: cover; object-position: center 40%; display: block; }
+.showcase__body { display: block; padding: 14px 16px 16px; font-size: .92rem; }
+.showcase__body strong { display: block; margin-bottom: 4px; font-size: 1.05rem; color: var(--gold-300); }
+@media (max-width: 719px) {
+  .showcase__item { flex-direction: row; }
+  .showcase__item img { width: 120px; height: auto; min-height: 96px; flex: 0 0 120px; }
+}
+
+.hero__watch { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-weight: 600; color: var(--gold-400); }
+.hero__watch svg { width: 22px; height: 22px; padding: 4px; border-radius: 50%; fill: #2a1a02; background: var(--gold-500); }
+.swatch { display: inline-block; width: .8em; height: .8em; margin-right: 8px; border-radius: 50%; vertical-align: -.05em;
+  background: var(--c); box-shadow: 0 0 8px var(--c); }

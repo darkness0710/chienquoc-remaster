@@ -75,3 +75,18 @@
   mark();
   restart();
 })();
+
+// Video trailer (#trailer): nút phát lớn giữa khung. Không JS thì nút ẩn, dùng thanh điều khiển của
+// trình duyệt. Phát rồi thì nút ẩn; dừng hoặc hết thì hiện lại.
+(function () {
+  "use strict";
+  var v = document.getElementById("trailerVideo");
+  var b = document.getElementById("trailerPlay");
+  if (!v || !b) return;
+  function sync() { b.hidden = !v.paused; }
+  b.addEventListener("click", function () { v.play(); });
+  v.addEventListener("play", sync);
+  v.addEventListener("pause", sync);
+  v.addEventListener("ended", sync);
+  sync();
+})();

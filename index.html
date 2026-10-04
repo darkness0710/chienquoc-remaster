@@ -59,6 +59,7 @@
           </a>
         </div>
         <p class="hero__meta">Windows 64 bit · file tải 39 MB · tự cập nhật</p>
+        <a class="hero__watch" href="#trailer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Xem video: ba anh hùng đấu Lữ Bố</a>
       </div>
 
       <!-- Ảnh trượt ngang: CSS scroll-snap (vuốt / kéo được cả khi tắt JS); js/main.js thêm chấm vị trí,
@@ -89,6 +90,44 @@
         </div>
         <div class="slider__dots" id="sliderDots"></div>
       </div>
+    </div>
+  </section>
+
+  <!-- Video trailer: quay thẳng trong game bằng `./run.sh studio gumu` (repo game, tools/README §studio),
+       bản web 960x720 H.264 + AAC, faststart. Nút phát lớn do js/main.js gắn; không JS thì dùng nút của trình duyệt. -->
+  <section class="section trailer" id="trailer">
+    <div class="wrap">
+      <p class="pill trailer__pill">Quay trong game, có nhạc nền</p>
+      <h2 class="title">Ba anh hùng, một Lữ Bố</h2>
+      <p class="sub">Đường Tam, Tiêu Viêm và Tiểu Long Nữ cùng vào Cổ Mộ, hạ Lữ Bố rồi lật thẻ chia đồ. Pháp bảo dưới chân, cánh trên lưng, vũ khí 10 sao rực sáng.</p>
+      <div class="trailer__frame" id="trailerFrame">
+        <video id="trailerVideo" controls preload="metadata" playsinline poster="assets/img/trailer.jpg" width="960" height="720">
+          <source src="assets/video/co-mo.mp4" type="video/mp4">
+        </video>
+        <button class="trailer__play" type="button" id="trailerPlay" aria-label="Phát video" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <ul class="showcase">
+        <li>
+          <a class="showcase__item" href="huong-dan/#phap-bao">
+            <img src="assets/img/huong-dan/phap-bao.jpg" alt="Ba vòng pháp bảo dưới chân ba nhân vật" width="760" height="380" loading="lazy">
+            <span class="showcase__body"><strong>Pháp bảo</strong> Năm loại, 10 sao: khiên, choáng, hồi sinh, hồi máu.</span>
+          </a>
+        </li>
+        <li>
+          <a class="showcase__item" href="huong-dan/#do-lung">
+            <img src="assets/img/huong-dan/canh.jpg" alt="Cánh xanh lam và cánh dơi đỏ giữa trận" width="760" height="470" loading="lazy">
+            <span class="showcase__body"><strong>Cánh và phi phong</strong> Đồ lưng 10 bậc, bậc 5 đổi dáng.</span>
+          </a>
+        </li>
+        <li>
+          <a class="showcase__item" href="huong-dan/#quang-vu-khi">
+            <img src="assets/img/huong-dan/quang-vu-khi.jpg" alt="Kiếm 10 sao toả quầng đỏ" width="600" height="620" loading="lazy" style="object-position: center 75%">
+            <span class="showcase__body"><strong>Quầng vũ khí</strong> Năm màu theo sao, 10 sao rực đỏ.</span>
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 

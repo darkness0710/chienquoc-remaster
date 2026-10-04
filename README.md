@@ -4,17 +4,19 @@ Trang tĩnh: HTML + CSS + một file JS nhỏ (ảnh trượt), không cần bui
 (chỉ font Google). Chạy trên GitHub Pages: https://darkness0710.github.io/chienquoc-remaster/
 
 ```
-├── index.html          trang chủ: đầu trang (ảnh trượt ngang), "Bản 3.0 có gì", "Lời hứa", "Cài đặt 3 bước", "Lộ trình", chân trang
+├── index.html          trang chủ: đầu trang (ảnh trượt ngang), video trailer #trailer + 3 thẻ ảnh, "Bản 3.0 có gì", "Lời hứa", "Cài đặt 3 bước", "Lộ trình", chân trang
 ├── huong-dan/index.html  trang /huong-dan/: 5 tab (Hằng ngày, Thần Thú, Rèn đồ, Môn phái, Tiện ích), tab con, ảnh trong game
 ├── css/style.css       giao diện (màu ở :root: xanh mực + vàng kim như giao diện game)
-├── js/main.js          ảnh trượt: chấm vị trí, nút trái phải, phím mũi tên, tự chuyển 5 s
+├── js/main.js          ảnh trượt: chấm vị trí, nút trái phải, phím mũi tên, tự chuyển 5 s; nút phát lớn của video
 ├── js/tabs.js          tab trang hướng dẫn (không JS thì mọi mục hiện liền nhau)
 ├── assets/
 │   ├── favicon.svg
 │   ├── pattern-cloud.svg   hoạ tiết mây lành ở nền đầu trang
+│   ├── video/co-mo.mp4    trailer Cổ Mộ (960×720, H.264 + AAC, faststart, ~6 MB)
 │   └── img/
 │       ├── giao-dien.jpg, nhan-vat.jpg, lang-ba.jpg, tran-phai.jpg   ảnh trượt ở đầu trang
 │       ├── og.jpg          ảnh hiện khi chia sẻ link (1200×630, cắt từ giao-dien.jpg)
+│       ├── trailer.jpg     ảnh bìa video (khung 330 của bản quay)
 │       └── huong-dan/      19 ảnh minh hoạ trang hướng dẫn (rộng 760 px, JPEG 80)
 ├── .nojekyll           báo GitHub Pages đừng chạy Jekyll
 └── tmp/                nháp cục bộ (bài Facebook, ảnh chụp kiểm), bỏ qua trong .gitignore
@@ -38,6 +40,7 @@ Mở thẳng `index.html` bằng trình duyệt cũng chạy (mọi đường d�
 | Đổi tính năng bản hiện hành | lưới `#ban-3` (nguồn: `documents/tong-quan/00-tong-quan.md` của repo game) |
 | Đổi link nhóm cộng đồng | nút "Nhóm Facebook" đầu trang **và** link ở chân trang (nguồn gốc: `godot/data/custom/about.json` của repo game) |
 | Bản demo 2.0 offline (Google Drive) | link "Bản cũ" ở chân trang; không còn cập nhật |
+| Làm lại video trailer | repo game: `./run.sh studio gumu` (≈3 phút, ra `build/studio_gumu.mp4` 1600×1200 có tiếng; cách dựng ở `tools/README.md` §studio), rồi thu về bản web: `ffmpeg -i build/studio_gumu.mp4 -vf scale=960:720:flags=lanczos -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart assets/video/co-mo.mp4` (ffmpeg có sẵn trong `build/venv-video` của repo game, `imageio_ffmpeg.get_ffmpeg_exe()`) |
 | Thêm / bớt ảnh trượt | một `<figure class="slide">` trong `#sliderTrack` (chấm vị trí tự sinh theo số ảnh) |
 | Sửa trang hướng dẫn | `huong-dan/index.html`. Nguồn số liệu (repo game): sư môn `godot/data/custom/sect_quests.json`; rèn `forge.json`, `equip_rules.json`; môn phái `sect_skills.json`. Vương Bộ Đầu và Cổ Mộ đang gắn nhãn "Sắp mở": mở thật thì bỏ `gcard--soon` + nhãn, thêm số liệu |
 | Thêm mục hướng dẫn | một `<article class="gcard gpanel sub-panel" id=…>` trong `.guide` của tab lớn + một link `#id` trong `.subtabs` của tab đó. `js/tabs.js` tự nhận, không phải sửa JS |
@@ -64,6 +67,7 @@ rồi cắt khung bảng và thu về rộng 760 px. Cờ đã dùng (2026-10-04
 | `phong-yeu-kinh` | `--bang=dbg:level_max,mirror_fight` (vào kính, kéo 8 yêu ma lại gần, đứng yên) |
 | `phong-yeu-kinh-the` | `--bang=dbg:level_max,mirror_board` (diệt hết, hạ Kính Ma, lật 2 thẻ, cắt khung bảng) |
 | `thoi-tiet` | `--map=282 --weather=petal --shot-frames=700` (Đào Hoa Nguyên, chờ hoa rơi đầy màn) |
+| `phap-bao`, `canh`, `quang-vu-khi` | cắt từ khung 850 / 330 / 850 của `./run.sh studio gumu` (`build/studio_gumu/f*.jpg`, 1600×1200) |
 | 6 phái còn lại | ảnh cũ `build/g7_<phái>_<chiêu>.png` của repo game (`--demo-sect=<mã chiêu>`) |
 
 `dbg:<việc>` gửi đúng lệnh nút F2 (`gateway/debug_service.gd`); `charpet`, `tongyeu`, `dbg:` nằm ở
@@ -105,3 +109,11 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   xong làm đổi bố cục), và cuộn lại sau `load` vì Chrome tự cuộn tới `#id` tới lúc tải xong.
   Chụp headless trang đã cuộn hiện một khoảng tối phía trên thanh trên: lỗi chụp, đo `getBoundingClientRect`
   thì thanh trên ở y = 0.
+- 2026-10-05: video trailer Cổ Mộ (chủ repo: "cho video trên, bổ sung hướng dẫn phần pháp bảo hoặc các phần core, miễn sao
+  trang chủ và trang hướng dẫn hấp dẫn"). Trang chủ: mục `#trailer` ngay dưới đầu trang, khung viền vàng như ảnh trượt,
+  nút phát lớn (JS; không JS thì thanh điều khiển của trình duyệt), 3 thẻ ảnh dẫn sang hướng dẫn; đầu trang thêm dòng "Xem
+  video". Trang hướng dẫn: tab "Rèn đồ" đổi tên "Trang bị" (giữ id `#tinh-nang` cho link cũ, không thêm tab lớn thứ 6 vì
+  375 px chỉ vừa 5), thêm tab con Pháp bảo (đầu tiên), Quầng vũ khí, Cánh, phi phong. Bảng pháp bảo 3 cột tràn ở
+  1280 px (cột 10 sao bị cắt) -> 2 cột "0 sao → 10 sao". Số lớp quầng đổi theo họ vũ khí nên ghi "dày hơn", không ghi số
+  lớp. Kiểm 375 px: 0 phần tử tràn ở trang chủ + 3 mục mới (iframe trong `tmp/w375.html`; mỗi trang phải khác query,
+  chỉ khác `#` thì iframe không `load` lại).
