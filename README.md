@@ -63,7 +63,7 @@ rồi cắt khung bảng và thu về rộng 760 px. Cờ đã dùng (2026-10-04
 | `thu-cuoi` | `--bang=dbg:level_max,dbg:mount_all10,charmount` (cắt khung bảng) |
 | `phong-yeu-kinh` | `--bang=dbg:level_max,mirror_fight` (vào kính, kéo 8 yêu ma lại gần, đứng yên) |
 | `phong-yeu-kinh-the` | `--bang=dbg:level_max,mirror_board` (diệt hết, hạ Kính Ma, lật 2 thẻ, cắt khung bảng) |
-| `thoi-tiet` | `--map=080 --weather=petal` / `leaf` / `snow` / `rain`, ghép 4 dải dọc |
+| `thoi-tiet` | `--map=282 --weather=petal --shot-frames=700` (Đào Hoa Nguyên, chờ hoa rơi đầy màn) |
 | 6 phái còn lại | ảnh cũ `build/g7_<phái>_<chiêu>.png` của repo game (`--demo-sect=<mã chiêu>`) |
 
 `dbg:<việc>` gửi đúng lệnh nút F2 (`gateway/debug_service.gd`); `charpet`, `tongyeu`, `dbg:` nằm ở
