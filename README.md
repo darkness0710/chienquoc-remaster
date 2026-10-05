@@ -5,7 +5,7 @@ Trang tĩnh: HTML + CSS + một file JS nhỏ (ảnh trượt), không cần bui
 
 ```
 ├── index.html          trang chủ: đầu trang (ảnh trượt ngang), video trailer #trailer + 3 thẻ ảnh, "Bản 3.0 có gì", "Lời hứa", "Cài đặt 3 bước", "Lộ trình", chân trang
-├── huong-dan/index.html  trang /huong-dan/: 5 tab (Hằng ngày, Thần Thú, Rèn đồ, Môn phái, Tiện ích), tab con, ảnh trong game
+├── huong-dan/index.html  trang /huong-dan/: 6 tab (Hằng ngày, Chủ tuyến, Thần Thú, Trang bị, Môn phái, Tiện ích), tab con, ảnh trong game
 ├── css/style.css       giao diện (màu ở :root: xanh mực + vàng kim như giao diện game)
 ├── js/main.js          ảnh trượt: chấm vị trí, nút trái phải, phím mũi tên, tự chuyển 5 s; nút phát lớn của video
 ├── js/tabs.js          tab trang hướng dẫn (không JS thì mọi mục hiện liền nhau)
@@ -43,6 +43,7 @@ Mở thẳng `index.html` bằng trình duyệt cũng chạy (mọi đường d�
 | Làm lại video trailer | repo game: `./run.sh studio gumu` (≈3 phút, ra `build/studio_gumu.mp4` 1600×1200 có tiếng; cách dựng ở `tools/README.md` §studio), rồi thu về bản web: `ffmpeg -i build/studio_gumu.mp4 -vf scale=960:720:flags=lanczos -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart assets/video/co-mo.mp4` (ffmpeg có sẵn trong `build/venv-video` của repo game, `imageio_ffmpeg.get_ffmpeg_exe()`) |
 | Thêm / bớt ảnh trượt | một `<figure class="slide">` trong `#sliderTrack` (chấm vị trí tự sinh theo số ảnh) |
 | Sửa trang hướng dẫn | `huong-dan/index.html`. Nguồn số liệu (repo game): sư môn `godot/data/custom/sect_quests.json`; rèn `forge.json`, `equip_rules.json`; môn phái `sect_skills.json`. Vương Bộ Đầu và Cổ Mộ đang gắn nhãn "Sắp mở": mở thật thì bỏ `gcard--soon` + nhãn, thêm số liệu |
+| Sửa tab Chủ tuyến (`#chu-tuyen`) | `huong-dan/index.html`, mục `#ct-tong-quan`, `#ct-vet-nut`, `#ct-hoi-5` đến `#ct-hoi-10`. Nguồn số liệu (repo game): `godot/data/custom/quests/001.json` + `001-act05.json` đến `001-act10.json` (bỏ `001-archive-*`), luật đọc `godot/logic/quest.gd`; tên món `item_names_vi.json` + `custom_items.json`; NPC đứng map nào: `assets/converted/map/<map>/npcs.json`; bảng luyện cấp: `travel.json` (Tân Thủ Tiên Cô). Số thứ tự nhiệm vụ = số trong sổ nhiệm vụ (73 mỗi người: nhiệm vụ riêng phái hồi 8 mang số 55, 56). Bảng nhiệm vụ dùng `.tbl tbl--quest` (điện thoại: mỗi dòng thành một khối dọc) |
 | Thêm mục hướng dẫn | một `<article class="gcard gpanel sub-panel" id=…>` trong `.guide` của tab lớn + một link `#id` trong `.subtabs` của tab đó. `js/tabs.js` tự nhận, không phải sửa JS |
 | Chụp lại ảnh hướng dẫn | xem mục *Ảnh trang hướng dẫn* dưới |
 | Đổi màu | biến `--gold-*`, `--ink-*`, `--jade-*` trong `:root` của `style.css` |
@@ -117,3 +118,11 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   1280 px (cột 10 sao bị cắt) -> 2 cột "0 sao → 10 sao". Số lớp quầng đổi theo họ vũ khí nên ghi "dày hơn", không ghi số
   lớp. Kiểm 375 px: 0 phần tử tràn ở trang chủ + 3 mục mới (iframe trong `tmp/w375.html`; mỗi trang phải khác query,
   chỉ khác `#` thì iframe không `load` lại).
+- 2026-10-05: tab lớn thứ 6 **Chủ tuyến** `#chu-tuyen` (nhiệm vụ chính cấp 1 đến 40, quà từng nhiệm vụ, từng hồi), đặt sau Hằng ngày.
+  Sáu tab ở chữ .82rem rộng 429 px, "Tiện ích" khuất ⇒ màn ≤ 419 px chữ .74rem, lề 3 px; ≤ 374 px chữ .7rem. Đo bằng
+  `tmp/w375-ct.html?<rộng iframe>`: iframe 390 (màn 375) hàng tab vừa 375 px; 0 phần tử tràn ở 390 / 375 / 360 cho 8 mục mới.
+  Bảng nhiệm vụ `.tbl--quest`: máy tính ba cột cho xuống dòng, điện thoại mỗi nhiệm vụ một khối dọc (không cuộn ngang).
+- 2026-10-05: tab Hằng ngày viết lại Truy bắt (đơn + nhóm ba độ khó Thường / Khó / Địa Ngục), Cổ Mộ (phí Địa Ngục 700.000,
+  lật 2 / 3 / 3 thẻ, không lật trả tiền), Phong Yêu Kính (độc đắc thú Hiếm), Tống Bảo; mỗi mục có **bảng tỉ lệ quà** (số thẻ / 16
+  và cơ hội có ít nhất một trong cả lượt lật). Số lấy từ repo game `criminal.json`, `dungeon_gumu.json`, `rare_monster.json`
+  (tài liệu game 37 §4.28 đến §4.31). Ô chữ dài dùng `td.wrap-cell`.

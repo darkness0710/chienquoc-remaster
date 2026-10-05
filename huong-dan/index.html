@@ -56,6 +56,7 @@
   <div class="tabs-bar">
     <nav class="wrap tabs" data-tabs aria-label="Chủ đề hướng dẫn">
       <a href="#hang-ngay"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Hằng ngày</a>
+      <a href="#chu-tuyen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 01-3-3z"/><path d="M5 17a3 3 0 013-3h11M9 8h6"/></svg>Chủ tuyến</a>
       <a href="#than-thu"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="15.5" r="4"/><circle cx="5.5" cy="10" r="2"/><circle cx="9.5" cy="5.5" r="2"/><circle cx="14.5" cy="5.5" r="2"/><circle cx="18.5" cy="10" r="2"/></svg>Thần Thú</a>
       <a href="#tinh-nang"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 4l7 7-3 3-7-7zM10 9l-7 7 3 3 7-7"/></svg>Trang bị</a>
       <a href="#mon-phai"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4L9 15M20 4h-5M20 4v5M6 12l6 6M4 20l4-4"/></svg>Môn phái</a>
@@ -127,6 +128,7 @@
               <li>Cấp 10, đã bái sư</li>
               <li>Chu Quốc (313, 140)</li>
               <li>Đơn 5 vòng, nhóm 1 lượt mỗi ngày</li>
+              <li>Thường, Khó, Địa Ngục</li>
             </ul>
           </div>
           <figure class="gshot">
@@ -136,19 +138,59 @@
           <div class="gtext">
             <h4>Truy bắt một mình</h4>
             <ul>
-              <li>Nhận lệnh, tới bản đồ có phản đồ, bấm vào hắn chọn <strong>Truy bắt</strong>. Hạ xong về phục mệnh.</li>
-              <li>5 vòng mỗi ngày, mỗi vòng <strong>30 phút</strong>. Vòng sau phản đồ mạnh hơn, biết thêm chiêu.</li>
-              <li>Thưởng mỗi vòng: ngân lượng 4.000 + 1.000 × cấp (cấp 40: 44.000), kinh nghiệm bằng 10 quái cùng cấp. Xong vòng 5 được quay thưởng.</li>
+              <li>Nói với Vương Bộ Đầu, chọn <strong>Truy bắt đơn</strong> rồi chọn độ khó. Độ khó chọn ở vòng 1 và giữ nguyên cả 5 vòng hôm đó.</li>
+              <li>Tới bản đồ có phản đồ, bấm vào hắn chọn <strong>Truy bắt</strong>. Hạ xong về phục mệnh. Mỗi vòng <strong>30 phút</strong>, vòng sau phản đồ mạnh hơn, biết thêm chiêu.</li>
+              <li>Thưởng mỗi vòng: ngân lượng 4.000 + 1.000 × cấp (cấp 40: 44.000) nhân theo độ khó, kinh nghiệm bằng 10 quái cùng cấp. Xong vòng 5 được quay thưởng.</li>
+            </ul>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Độ khó</th><th>Từ cấp</th><th>Lộ phí (cấp 40)</th><th>Tiền mỗi vòng</th><th>Quà vòng 5 ở cấp 40 (khoá)</th></tr></thead>
+                <tbody>
+                  <tr><td>Thường</td><td>10</td><td>0</td><td>× 1</td><td>không</td></tr>
+                  <tr><td>Khó</td><td>25</td><td>3.000 × cấp (120.000)</td><td>× 1,5</td><td class="wrap-cell">1 Trung Cấp Đoạn Thạch, 25 % thêm 1 Thăng Phẩm Thạch</td></tr>
+                  <tr><td>Địa Ngục</td><td>35</td><td>6.000 × cấp (240.000)</td><td>× 2</td><td class="wrap-cell">1 Trung Cấp, 50 % thêm 1 Cao Cấp Đoạn Thạch, 2 Vô Song Điểm Phiếu</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul>
+              <li>Quà vòng 5 theo cấp lúc nhận vòng 5: Khó cấp 25 đến 29 được 2 Sơ Cấp Đoạn Thạch, cấp 30 đến 39 được 1 Trung Cấp; Địa Ngục cấp 35 đến 39 được 1 Trung Cấp và 30 % thêm 1 Cao Cấp.</li>
+              <li>Khó và Địa Ngục: phản đồ ra chiêu dày hơn, chiêu đánh đau hơn, có tính cả pháp bảo của ngươi. Lộ phí trừ một lần ở vòng 1, thất bại không trả lại, không hoàn thành nhanh được. Tiền cả ngày trừ lộ phí gần bằng Thường, phần hơn là quà vòng 5.</li>
               <li>Quá giờ hoặc bỏ: hôm đó dừng, tiền các vòng đã xong vẫn giữ.</li>
             </ul>
             <h4>Truy bắt nhóm</h4>
             <ul>
-              <li>Đội <strong>2 đến 5 người</strong> đứng gần NPC, cấp lệch không quá 10. Đội trưởng nhận việc.</li>
-              <li>Vé mỗi người: 12.500 × cấp người thấp nhất đội (cấp 40: 500.000).</li>
+              <li>Đội <strong>2 đến 5 người</strong> đứng gần NPC, cấp lệch không quá 10. Đội trưởng chọn <strong>Truy bắt nhóm</strong> rồi chọn độ khó; mọi người phải đủ cấp của độ khó đó.</li>
               <li>30 phút qua <strong>7 ải</strong>, mỗi ải phản đồ một phái. Đội càng đông, phản đồ càng đông và mạnh.</li>
-              <li>Hạ hết một ải: kinh nghiệm bằng 5 quái, lật <strong>1 thẻ ngân lượng</strong>. Cấp 40 cả chuyến được khoảng 756.000.</li>
+              <li>Hạ hết một ải: kinh nghiệm bằng 5 quái, mỗi người lật <strong>1 thẻ ngân lượng</strong>. Ải cuối lật nhiều thẻ hơn và có thêm đồ.</li>
+              <li>Thẻ ngân lượng: ải 1 từ 100.000 đến 140.000, mỗi ải sau thêm 40.000. Cấp 40 nhận 38 % giá thẻ (cấp thấp hơn nhận ít hơn theo cấp), Khó nhân 1,4, Địa Ngục nhân 1,92. Trừ vé, cả chuyến cấp 40 còn khoảng 258.000 ở cả ba độ khó.</li>
             </ul>
-            <p class="tip">Trang bị bị khoá suốt lượt: mặc đồ tốt nhất trước khi đi. Chết thì sống lại ở đầu ải sau 10 giây.</p>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Độ khó</th><th>Từ cấp</th><th>Vé mỗi người (cấp 40)</th><th>Ải cuối lật</th><th>Qua đủ 7 ải</th></tr></thead>
+                <tbody>
+                  <tr><td>Thường</td><td>10</td><td class="wrap-cell">12.500 × cấp thấp nhất đội (500.000)</td><td>2 thẻ</td><td>1 phiếu (khoá)</td></tr>
+                  <tr><td>Khó</td><td>25</td><td>20.000 × cấp (800.000)</td><td>3 thẻ</td><td>1 phiếu (khoá)</td></tr>
+                  <tr><td>Địa Ngục</td><td>35</td><td>27.500 × cấp (1.100.000)</td><td>3 thẻ</td><td>2 phiếu (khoá)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Tỉ lệ bảng ải cuối</h4>
+            <p>Mỗi ô ghi số thẻ trên 16 và cơ hội lật trúng ít nhất một thẻ đó trong các lượt của mình. Đồ lật được bán, giao dịch được.</p>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Thẻ</th><th>Thường (2 lượt)</th><th>Khó (3 lượt)</th><th>Địa Ngục (3 lượt)</th></tr></thead>
+                <tbody>
+                  <tr><td>Ngân lượng</td><td>15/16 · 100 %</td><td>10/16 · 96 %</td><td>8/16 · 90 %</td></tr>
+                  <tr><td>Trung Cấp Đoạn Thạch</td><td></td><td>2/16 · 35 %</td><td>1/16 · 19 %</td></tr>
+                  <tr><td>Cao Cấp Đoạn Thạch</td><td></td><td>1/16 · 19 %</td><td>2/16 · 35 %</td></tr>
+                  <tr><td>Thăng Phẩm Thạch</td><td></td><td>2/16 · 35 %</td><td>2/16 · 35 %</td></tr>
+                  <tr><td>Tinh Thạch cấp 2</td><td></td><td></td><td>1/16 · 19 %</td></tr>
+                  <tr><td>Thẻ Thần Thú (ngẫu nhiên)</td><td></td><td></td><td>1/16 · 19 %</td></tr>
+                  <tr><td>Độc đắc</td><td>Thăng Phẩm Thạch · 12,5 %</td><td>Thẻ Thần Thú chọn con · 18,8 %</td><td>2 Thẻ Thần Thú chọn con · 18,8 %</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="tip">Trang bị bị khoá suốt lượt: mặc đồ tốt nhất trước khi đi. Chết thì sống lại ở đầu ải sau 10 giây. Lật cùng một bảng với cả đội: thẻ người khác đã lật thì không lật lại được.</p>
           </div>
         </article>
 
@@ -166,14 +208,14 @@
             <figcaption>Bảng 16 thẻ sau khi hạ Lữ Bố, độ Địa Ngục</figcaption>
           </figure>
           <div class="gtext">
-            <p>Đội trưởng nói với Xa Phu, chọn độ khó. Cả đội đứng gần NPC, cấp lệch không quá 10, mỗi người tự trả phí. Đi một mình cũng được.</p>
+            <p>Đội trưởng nói với Xa Phu, chọn <strong>Vào Cổ Mộ</strong> rồi chọn độ khó. Cả đội đứng gần NPC, cấp lệch không quá 10, mỗi người tự trả phí. Đi một mình cũng được.</p>
             <div class="tbl">
               <table>
-                <thead><tr><th>Độ khó</th><th>Từ cấp</th><th>Phí vào</th><th>Thời gian</th><th>Điểm</th></tr></thead>
+                <thead><tr><th>Độ khó</th><th>Từ cấp</th><th>Phí vào</th><th>Thời gian</th><th>Điểm</th><th>Phiếu (khoá)</th><th>Lật thẻ</th></tr></thead>
                 <tbody>
-                  <tr><td>Thường</td><td>20</td><td>200.000</td><td>45 phút</td><td>100</td></tr>
-                  <tr><td>Khó</td><td>30</td><td>500.000</td><td>60 phút</td><td>200</td></tr>
-                  <tr><td>Địa Ngục</td><td>40</td><td>1.000.000</td><td>75 phút</td><td>300</td></tr>
+                  <tr><td>Thường</td><td>20</td><td>200.000</td><td>45 phút</td><td>100</td><td>1</td><td>2</td></tr>
+                  <tr><td>Khó</td><td>30</td><td>500.000</td><td>60 phút</td><td>200</td><td>1</td><td>3</td></tr>
+                  <tr><td>Địa Ngục</td><td>40</td><td>700.000</td><td>75 phút</td><td>300</td><td>2</td><td>3</td></tr>
                 </tbody>
               </table>
             </div>
@@ -182,16 +224,35 @@
               <li>3 đợt Thạch Dũng, rồi Thủ Mộ Thạch Tướng, cuối cùng là <strong>Lữ Bố</strong>. Ở Khó và Địa Ngục, Lữ Bố hết máu lần đầu sẽ hiện lại ở dạng thứ hai, mạnh hơn.</li>
               <li>Lữ Bố đánh người gây nhiều sát thương nhất, lướt tới người đứng xa, đánh lâu quá thì nổi giận.</li>
               <li>Thấy <strong>vòng đỏ</strong> dưới chân thì chạy ra ngay. Kéo Lữ Bố xa quá 15 ô thì hắn về chỗ, hồi đầy máu.</li>
-              <li>Chết: hồi sinh ở cửa mộ sau 10 giây, không mất gì. Trang bị bị khoá, thuốc vẫn dùng được.</li>
+              <li>Chết: hồi sinh ở cửa mộ sau 10 giây, không mất gì. Trang bị bị khoá, thuốc vẫn dùng được. Pháp bảo Chiêu Hồn kéo dậy được một lần mỗi lượt.</li>
             </ul>
             <h4>Lật thẻ</h4>
             <ul>
-              <li>Lữ Bố chết: mỗi người nhận Vô Song Điểm Phiếu (khoá), cả đội chung một bảng <strong>16 thẻ</strong>, mỗi người lật <strong>2 thẻ</strong> miễn phí. Hành trang đầy thì quà vào túi chờ, có chỗ là tự nhận.</li>
-              <li>Lật xong, mỗi người được mua thêm 1 thẻ, giá 1,5 lần phí vào.</li>
-              <li>Mỗi bảng có <strong>1 thẻ độc đắc</strong>: Thường là Cao Cấp Đoạn Thạch, Khó là 2 Thẻ Thần Thú chọn con, Địa Ngục là Đỉnh Cấp Đoạn Thạch. Mỗi bảng có thêm 1 Thẻ Thú Cưỡi (Thường, Hiếm, Quý theo độ khó).</li>
+              <li>Lữ Bố chết: mỗi người nhận điểm phó bản và Vô Song Điểm Phiếu (khoá), cả đội chung một bảng <strong>16 thẻ</strong>. Thường lật <strong>2 thẻ</strong>, Khó và Địa Ngục lật <strong>3 thẻ</strong>, không có lượt mua thêm.</li>
+              <li>Mỗi bảng có <strong>1 thẻ độc đắc</strong>, lật trúng thì cả server được báo. Hành trang đầy thì quà vào túi chờ, có chỗ là tự nhận.</li>
               <li>Đồ lật được bán, vứt, giao dịch được.</li>
             </ul>
-            <p class="tip">Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt. Điểm phó bản đổi ở Tiệm Cổ Mộ của Xa Phu: Thẻ Thần Thú chọn con 300, Thăng Phẩm Thạch 50, Tái Tạo Thạch 10, Thú Hồn 10.</p>
+            <h4>Tỉ lệ bảng thẻ</h4>
+            <p>Mỗi ô ghi số thẻ trên 16 và cơ hội lật trúng ít nhất một thẻ đó trong các lượt của mình.</p>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Thẻ</th><th>Thường (2 lượt)</th><th>Khó (3 lượt)</th><th>Địa Ngục (3 lượt)</th></tr></thead>
+                <tbody>
+                  <tr><td>Sơ Cấp Đoạn Thạch</td><td>4/16 · 45 %</td><td></td><td></td></tr>
+                  <tr><td>Trung Cấp Đoạn Thạch</td><td>3/16 · 35 %</td><td>3/16 · 49 %</td><td></td></tr>
+                  <tr><td>Cao Cấp Đoạn Thạch</td><td></td><td>2/16 · 35 %</td><td>4/16 · 61 %</td></tr>
+                  <tr><td>Thăng Phẩm Thạch</td><td>1/16 · 12 %</td><td>2/16 · 35 %</td><td>2/16 · 35 %</td></tr>
+                  <tr><td>Thẻ Thần Thú (ngẫu nhiên)</td><td>2/16 · 24 %</td><td>3/16 · 49 %</td><td>3/16 · 49 %</td></tr>
+                  <tr><td>Pháp bảo 0 sao (ngẫu nhiên)</td><td>1/16 · 12 %</td><td>2/16 · 35 %</td><td>2/16 · 35 %</td></tr>
+                  <tr><td>Tinh Thạch</td><td>cấp 1 · 1/16 · 12 %</td><td></td><td>cấp 3 · 1/16 · 19 %</td></tr>
+                  <tr><td>Túi ngân lượng</td><td>100.000 · 1/16 · 12 %</td><td>1.000.000 · 1/16 · 19 %</td><td>1.400.000 · 1/16 · 19 %</td></tr>
+                  <tr><td>Vô Song Điểm Phiếu</td><td>2 phiếu · 1/16 · 12 %</td><td>3 phiếu · 1/16 · 19 %</td><td>5 phiếu · 1/16 · 19 %</td></tr>
+                  <tr><td>Thẻ Thú Cưỡi</td><td>Thường · 1/16 · 12 %</td><td>Hiếm · 1/16 · 19 %</td><td>Quý · 1/16 · 19 %</td></tr>
+                  <tr><td>Độc đắc</td><td>Cao Cấp Đoạn Thạch · 12,5 %</td><td>2 Thẻ Thần Thú chọn con · 18,8 %</td><td>Đỉnh Cấp Đoạn Thạch · 18,8 %</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="tip">Thú cưỡi Quý, Đỉnh Cấp Đoạn Thạch và Tinh Thạch cấp 3 chỉ Địa Ngục mới ra. Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt. Điểm phó bản đổi ở Tiệm Cổ Mộ của Xa Phu: Thẻ Thần Thú chọn con 300, pháp bảo 0 sao chọn loại 100, Sơ Cấp Đoạn Thạch (khoá) 100, Thăng Phẩm Thạch 50, Tinh Thạch cấp 1 chọn loại 25, Tái Tạo Thạch 10, Thú Hồn 10.</p>
           </div>
         </article>
 
@@ -218,9 +279,23 @@
             </ul>
             <h4>Lật thẻ</h4>
             <ul>
-              <li>Hạ Kính Ma: mỗi người 1 Vô Song Điểm Phiếu (khoá) và lật <strong>2 thẻ</strong> trong bảng 16 thẻ: Tinh Thạch, pháp bảo, Sơ Cấp Đoạn Thạch, Thẻ Thú Cưỡi. Thẻ độc đắc là Thẻ Thú Cưỡi Quý.</li>
+              <li>Hạ Kính Ma: mỗi người 1 Vô Song Điểm Phiếu (khoá) và lật <strong>2 thẻ</strong> trong bảng 16 thẻ. Đồ lật được bán, giao dịch được.</li>
               <li>45 giây chưa lật thì được lật hộ. Hành trang đầy thì quà vào túi chờ.</li>
             </ul>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Thẻ</th><th>Số thẻ</th><th>Cơ hội trong 2 lượt</th></tr></thead>
+                <tbody>
+                  <tr><td>Tinh Thạch cấp 1 (ngẫu nhiên loại)</td><td>5/16</td><td>54 %</td></tr>
+                  <tr><td>Tinh Thạch cấp 2</td><td>2/16</td><td>24 %</td></tr>
+                  <tr><td>Pháp bảo 0 sao</td><td>2/16</td><td>24 %</td></tr>
+                  <tr><td>Sơ Cấp Đoạn Thạch</td><td>3/16</td><td>35 %</td></tr>
+                  <tr><td>Thẻ Thú Cưỡi Thường</td><td>2/16</td><td>24 %</td></tr>
+                  <tr><td>Thẻ Thú Cưỡi Hiếm</td><td>1/16</td><td>12 %</td></tr>
+                  <tr><td>Độc đắc: Thẻ Thú Cưỡi Hiếm</td><td>1/16</td><td>12,5 %</td></tr>
+                </tbody>
+              </table>
+            </div>
             <figure class="gshot">
               <img src="../assets/img/huong-dan/phong-yeu-kinh-the.jpg" width="760" height="979" loading="lazy" alt="Bảng 16 thẻ Phong Yêu Kính đã lật ngửa: Tinh Thạch, pháp bảo, Sơ Cấp Đoạn Thạch, Thẻ Thú Cưỡi">
               <figcaption>Bảng thẻ sau khi hạ Kính Ma</figcaption>
@@ -245,11 +320,368 @@
             <ul>
               <li>Mỗi bản đồ hoang có một con quái hiếm tên xanh. Bị hạ thì 60 phút sau hiện lại ở chỗ ngẫu nhiên.</li>
               <li>Mở <strong>Chiến Quốc Bảo Điển</strong>, thẻ <strong>Tống Yêu</strong> để xem map hợp cấp đang có con, rồi tự đi tìm.</li>
-              <li>Thưởng: kinh nghiệm bằng 40 quái cùng cấp, ngân lượng bằng cấp quái × 750, kèm thuốc (có khi là thuốc tăng chỉ số 1 giờ).</li>
+              <li>Thưởng mỗi con: kinh nghiệm bằng 40 quái cùng cấp, ngân lượng bằng cấp quái × 750, một phần thuốc và có thể rơi thêm đồ (bảng dưới).</li>
               <li>Đội gây nhiều sát thương nhất được tính, không cần ra đòn cuối.</li>
             </ul>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Rơi thêm (mỗi người được thưởng)</th><th>Tỉ lệ</th></tr></thead>
+                <tbody>
+                  <tr><td>Tinh Thạch cấp 1 (khoá)</td><td>25 %</td></tr>
+                  <tr><td>Tinh Thạch cấp 2 (khoá, quái cấp 30 trở lên)</td><td>3 %</td></tr>
+                  <tr><td>Pháp bảo 0 sao</td><td>5 %</td></tr>
+                  <tr><td>Sơ Cấp Đoạn Thạch (khoá)</td><td>5 %</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Thuốc (luôn có, một trong các phần)</th><th>Tỉ lệ</th></tr></thead>
+                <tbody>
+                  <tr><td>3 Hạt Lạc Hoàn</td><td>30 %</td></tr>
+                  <tr><td>3 Cấp Cứu Đan</td><td>28 %</td></tr>
+                  <tr><td>2 Tử Sâm Đơn</td><td>20 %</td></tr>
+                  <tr><td>3 Hoạt Tâm Đan</td><td>13,75 %</td></tr>
+                  <tr><td class="wrap-cell">1 thuốc tăng chỉ số 1 giờ (Khí Mạch Đan, Chu Thiên Đơn, Tiêu Dao Tán, Kim Cang Tán hoặc Tử Tâm Đơn)</td><td>5 %</td></tr>
+                  <tr><td>2 Tái Tạo Hoàn</td><td>3,25 %</td></tr>
+                </tbody>
+              </table>
+            </div>
             <p class="tip">Cao hơn quái quá 10 cấp thì không có thưởng.</p>
           </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CHỦ TUYẾN ================= -->
+  <!-- Nguồn: repo game godot/data/custom/quests/001.json + 001-act05..10.json (bỏ 001-archive-*), luật đọc logic/quest.gd,
+       tên món item_names_vi.json + custom_items.json, chỗ NPC assets/converted/map/<map>/npcs.json, bậc luyện cấp travel.json.
+       Số thứ tự = số trong sổ nhiệm vụ (người chơi thấy 73 nhiệm vụ: 18 + 53 chung + 2 của phái mình). -->
+  <section class="tab-panel" id="chu-tuyen">
+    <div class="wrap">
+      <p class="lead">Chuỗi nhiệm vụ chính từ <strong>cấp 1 đến 40</strong>: 10 hồi, mỗi người làm 73 nhiệm vụ. Bắt đầu ở <strong>Thần Tiên Gia Gia</strong>, Tân Thủ Thôn.</p>
+      <nav class="subtabs" data-subtabs aria-label="Các hồi chủ tuyến">
+        <a href="#ct-tong-quan">Tổng quan</a>
+        <a href="#ct-vet-nut">Cấp 1 đến 10</a>
+        <a href="#ct-hoi-5">Hồi 5</a>
+        <a href="#ct-hoi-6">Hồi 6</a>
+        <a href="#ct-hoi-7">Hồi 7</a>
+        <a href="#ct-hoi-8">Hồi 8</a>
+        <a href="#ct-hoi-9">Hồi 9</a>
+        <a href="#ct-hoi-10">Hồi 10</a>
+      </nav>
+
+      <div class="guide">
+
+        <article class="gcard sub-panel" id="ct-tong-quan">
+          <h3>Tổng quan chủ tuyến</h3>
+          <ul class="facts">
+            <li>Cấp 1 đến 40</li>
+            <li>10 hồi, 73 nhiệm vụ</li>
+            <li>Sổ nhiệm vụ: <kbd>Alt+Q</kbd></li>
+          </ul>
+          <p>Làm lần lượt từng nhiệm vụ, xong cái trước mới nhận được cái sau. Bốn hồi đầu (cấp 1 đến 10) dạy cách chơi và kết thúc bằng việc bái sư. Hồi 5 đến 10 là cốt truyện Hổ Phù, dẫn đi khắp các bản đồ và đủ bảy căn cứ phái.</p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Hồi</th><th>Tên</th><th>Cấp</th><th>Nhiệm vụ</th><th>Kinh nghiệm</th><th>Ngân lượng</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Chốn Cũ</td><td>1 đến 3</td><td>6</td><td>80</td><td>6.500</td></tr>
+                <tr><td>2</td><td>U Cốc</td><td>3 đến 5</td><td>4</td><td>180</td><td>6.500</td></tr>
+                <tr><td>3</td><td>Thanh Khê</td><td>5 đến 7</td><td>4</td><td>340</td><td>11.500</td></tr>
+                <tr><td>4</td><td>Ba Khâu</td><td>7 đến 10</td><td>4</td><td>1.000</td><td>25.500</td></tr>
+                <tr><td>5</td><td>Đường Lên Lạc Ấp</td><td>10 đến 15</td><td>10</td><td>2.300</td><td>60.000</td></tr>
+                <tr><td>6</td><td>Thiên Tử Lạc Ấp</td><td>15 đến 20</td><td>10</td><td>5.700</td><td>90.000</td></tr>
+                <tr><td>7</td><td>Hợp Tung</td><td>20 đến 25</td><td>9</td><td>12.300</td><td>120.000</td></tr>
+                <tr><td>8</td><td>Hổ Lao Quan</td><td>25 đến 30</td><td>9</td><td>22.600</td><td>150.000</td></tr>
+                <tr><td>9</td><td>Đầm Vân Mộng</td><td>30 đến 35</td><td>8</td><td>42.100</td><td>180.000</td></tr>
+                <tr><td>10</td><td>Xích Bích</td><td>35 đến 40</td><td>9</td><td>70.600</td><td>220.000</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="3">Cả chuỗi</td><td>73</td><td>157.200</td><td>870.000</td></tr></tfoot>
+            </table>
+          </div>
+          <h4>Mẹo</h4>
+          <ul>
+            <li><kbd>Alt+Q</kbd> mở sổ nhiệm vụ, tab <strong>Cốt Truyện</strong>: mục Hiện Tại ghi việc đang làm, ai giao, trả cho ai, quà gì.</li>
+            <li>Tên NPC trong sổ là link: bấm vào thì tự chạy tới nếu cùng bản đồ; khác bản đồ thì sổ báo nên nhờ ai đưa đi hoặc đi cổng nào. Chỗ cần dò và chỗ trùm có toạ độ, bấm được như tên NPC.</li>
+            <li>Vật phẩm nhiệm vụ chỉ rơi khi đang nhận việc, rơi xuống đất thì bấm <kbd>Space</kbd> để nhặt. Vứt đi là mất tiến độ.</li>
+            <li>Trùm nhiệm vụ (Oa Yêu, Oan Quỷ, Tiểu Đội Trưởng, Sài Cẩu Vũ Giả, Thuỷ Tặc Thủ Lĩnh) hiện riêng cho bạn khi bạn tới đúng bản đồ lúc đang làm việc đó.</li>
+            <li>Trả nhiệm vụ cần đủ ô trống trong hành trang cho quà; lúc bái sư cần thêm ô cho vũ khí phái.</li>
+            <li>Đồ ghi (khoá) không chuyển cho người khác, không bán được.</li>
+            <li>Sổ báo <strong>Cần cấp N</strong> là chưa đủ cấp: luyện thêm ở bản đồ đúng bậc (bảng dưới) hoặc làm <a href="#su-mon">sư môn</a>, <a href="#vuong-bo-dau">truy bắt</a> mỗi ngày.</li>
+          </ul>
+          <h4>Thiếu cấp thì luyện ở đâu</h4>
+          <p><strong>Tân Thủ Tiên Cô</strong> ở Tân Thủ Thôn đưa tới các bản đồ luyện cấp theo bậc (từ cấp 10 phải đủ cấp của bậc mới đi được):</p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Bậc</th><th>Bản đồ</th></tr></thead>
+              <tbody>
+                <tr><td>Cấp 1 đến 4</td><td class="wrap-cell">U Cốc, Thanh Khê</td></tr>
+                <tr><td>Cấp 5 đến 9</td><td class="wrap-cell">Ba Khâu</td></tr>
+                <tr><td>Cấp 10 đến 14</td><td class="wrap-cell">Sở Phương Thành 1, Thượng Dung Quan, Hoa Sơn, Đào Hoa Nguyên, Triều Dương Phong</td></tr>
+                <tr><td>Cấp 15 đến 19</td><td class="wrap-cell">Thủ Dương Sơn</td></tr>
+                <tr><td>Cấp 20 đến 24</td><td class="wrap-cell">Vô Định Hà 1, Vô Định Hà 2</td></tr>
+                <tr><td>Cấp 25 đến 30</td><td class="wrap-cell">Hổ Lao Quan, Dị Thủy</td></tr>
+                <tr><td>Cấp 30 đến 40</td><td class="wrap-cell">Ranh Giới Đầm Lầy, Địa Giới Đầm Lầy, Chân núi Đại Biệt, Đại Biệt Sơn, Vu Sơn, Bà Dương Hồ, Xích Bích, Thái Hồ</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="gcard sub-panel" id="ct-vet-nut">
+          <h3>Vết Nứt (cấp 1 đến 10)</h3>
+          <ul class="facts">
+            <li>Hồi 1 đến 4</li>
+            <li>18 nhiệm vụ</li>
+            <li>Tân Thủ Thôn, U Cốc, Thanh Khê, Ba Khâu</li>
+          </ul>
+          <h4>Hồi 1: Chốn Cũ (cấp 1 đến 3)</h4>
+          <p>Đêm vết nứt tím mở ra ở Ba Khâu, bạn tỉnh dậy giữa Tân Thủ Thôn. Mấy việc đầu dạy lại những điều cơ bản: đánh quái, mặc đồ, uống thuốc, gửi kho, cộng điểm, dùng tín vật về làng.</p>
+          <div class="tbl tbl--quest">
+            <table>
+              <thead><tr><th>Nhiệm vụ</th><th>Việc cần làm</th><th>Quà</th></tr></thead>
+              <tbody>
+                <tr><td><b>1. Cố Nhân Quy Lai</b><span class="qlv">cấp 1</span></td><td>Nói chuyện với <strong>Thần Tiên Gia Gia</strong> (Tân Thủ Thôn).</td><td class="qgift">5 kinh nghiệm<br>1.000 ngân lượng<br>1 Chiến Quốc Bảo Điển</td></tr>
+                <tr><td><b>2. Cây mâu đầu tiên</b><span class="qlv">cấp 1</span></td><td>Hạ 5 Gà Núi hoặc Thỏ Hoang ngoài cổng làng. Kéo tín vật Long Văn Ngọc Bội xuống ô Q, bấm Q về làng, gặp <strong>Chủ Tiệm Vũ Khí</strong>.</td><td class="qgift">10 kinh nghiệm<br>1.000 ngân lượng<br>1 Trường Mâu</td></tr>
+                <tr><td><b>3. Manh áo vải</b><span class="qlv">cấp 1</span></td><td>Nhận áo vải khi nhận việc, mặc vào (<kbd>Alt+E</kbd>, chuột phải vào áo), gặp <strong>Chủ Tiệm Y Dược</strong>.</td><td class="qgift">10 kinh nghiệm<br>1.000 ngân lượng</td></tr>
+                <tr><td><b>4. Thử thuốc ngoài đồng</b><span class="qlv">cấp 1</span></td><td>Nhận 3 Hành Quân Tán. Hạ 3 Gà Núi hoặc Thỏ Hoang, uống một gói giữa trận, gặp <strong>Quản Khố</strong>.</td><td class="qgift">10 kinh nghiệm<br>1.000 ngân lượng</td></tr>
+                <tr><td><b>5. Chỗ gửi đồ</b><span class="qlv">cấp 2</span></td><td>Gửi một món bất kỳ vào kho ở Quản Khố, gặp <strong>Lão Thôn Trưởng</strong>.</td><td class="qgift">10 kinh nghiệm<br>1.000 ngân lượng<br>10 Phi Hành Phù (khoá)</td></tr>
+                <tr><td><b>6. Đá trong rơm</b><span class="qlv">cấp 2</span></td><td>Hạ Bù Nhìn ngoài ruộng làng, nhặt 1 Huỳnh Quang Thạch (<kbd>Space</kbd>), mang tới <strong>Trí Tuệ Lão Nhân</strong>.</td><td class="qgift">35 kinh nghiệm<br>1.500 ngân lượng<br>1 Thảo Thằng</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="2">Cả hồi 1 (6 nhiệm vụ)</td><td class="qgift">80 kinh nghiệm<br>6.500 ngân lượng<br>1 Chiến Quốc Bảo Điển<br>1 Trường Mâu<br>10 Phi Hành Phù (khoá)<br>1 Thảo Thằng</td></tr></tfoot>
+            </table>
+          </div>
+          <h4>Hồi 2: U Cốc (cấp 3 đến 5)</h4>
+          <p>Ong U Cốc bỗng đốt người, kiến khoét ruộng như có người đào. Trong tổ ong có đá sáng y như viên đá nằm trong rơm bù nhìn.</p>
+          <div class="tbl tbl--quest">
+            <table>
+              <thead><tr><th>Nhiệm vụ</th><th>Việc cần làm</th><th>Quà</th></tr></thead>
+              <tbody>
+                <tr><td><b>7. Năm cái gốc</b><span class="qlv">cấp 3</span></td><td>Cộng điểm thuộc tính (<kbd>Alt+W</kbd>, bấm Xác Nhận), báo <strong>Trí Tuệ Lão Nhân</strong>.</td><td class="qgift">30 kinh nghiệm<br>1.500 ngân lượng<br>10 Hành Quân Tán (khoá)<br>10 Chính Khí Tán (khoá)</td></tr>
+                <tr><td><b>8. Sang U Cốc</b><span class="qlv">cấp 3</span></td><td>Sang U Cốc (nhờ Tân Thủ Tiên Cô hoặc đi bộ qua cổng làng), gặp <strong>Mạnh Đại Bá</strong>.</td><td class="qgift">20 kinh nghiệm</td></tr>
+                <tr><td><b>9. Mật đắp vết đốt</b><span class="qlv">cấp 3</span></td><td>Hạ Ong Mật ở U Cốc, lấy 5 Mật Ong, mang tới <strong>Mạnh Thị</strong>.</td><td class="qgift">60 kinh nghiệm<br>2.500 ngân lượng</td></tr>
+                <tr><td><b>10. Cái vò vỡ</b><span class="qlv">cấp 4</span></td><td>Tới cái vò vỡ bên hang kiến phía tây U Cốc, rồi sang Thanh Khê gặp <strong>Khổng Lão Đầu</strong>.</td><td class="qgift">70 kinh nghiệm<br>2.500 ngân lượng<br>1 Ma Y (theo giới tính)</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="2">Cả hồi 2 (4 nhiệm vụ)</td><td class="qgift">180 kinh nghiệm<br>6.500 ngân lượng<br>10 Hành Quân Tán (khoá)<br>10 Chính Khí Tán (khoá)<br>1 Ma Y</td></tr></tfoot>
+            </table>
+          </div>
+          <h4>Hồi 3: Thanh Khê (cấp 5 đến 7)</h4>
+          <p>Suối Thanh Khê đục ngầu, ếch mắt đỏ, đá tím nằm dọc dòng nước. Kẻ mặc giáp sắt đi qua đây đã đánh rơi một cuốn sổ chép thứ chữ không ai đọc được.</p>
+          <div class="tbl tbl--quest">
+            <table>
+              <thead><tr><th>Nhiệm vụ</th><th>Việc cần làm</th><th>Quà</th></tr></thead>
+              <tbody>
+                <tr><td><b>11. Ếch mắt đỏ</b><span class="qlv">cấp 5</span></td><td>Hạ 5 Ếch Đốm quanh suối Thanh Khê, gặp <strong>Đinh Đại Thúc</strong>.</td><td class="qgift">90 kinh nghiệm<br>3.000 ngân lượng<br>1 Sơ Học Giả Hạng Liên</td></tr>
+                <tr><td><b>12. Nguồn nước đục</b><span class="qlv">cấp 6</span></td><td>Lần theo dòng nước đục về phía tây nam Thanh Khê tới chiếc rương gỗ cũ, gặp <strong>Lí Tiểu Mao</strong>.</td><td class="qgift">90 kinh nghiệm<br>3.000 ngân lượng<br>10 Phi Hành Phù (khoá)</td></tr>
+                <tr><td><b>13. Cuốn sổ chữ lạ</b><span class="qlv">cấp 6</span></td><td>Hạ Ếch Đốm ở Thanh Khê tìm lại Tập Giáp Cốt Văn, đưa <strong>Lí Tiểu Mao</strong> xem (sổ vẫn giữ trong hành trang).</td><td class="qgift">80 kinh nghiệm<br>3.000 ngân lượng</td></tr>
+                <tr><td><b>14. Tín vật về làng</b><span class="qlv">cấp 6</span></td><td>Dùng tín vật về Tân Thủ Thôn, đưa Tập Giáp Cốt Văn cho <strong>Vệ Đội Trưởng</strong>.</td><td class="qgift">80 kinh nghiệm<br>2.500 ngân lượng<br>1 Ma Bố Mão (theo giới tính)<br>1 Đằng Mạn Hài</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="2">Cả hồi 3 (4 nhiệm vụ)</td><td class="qgift">340 kinh nghiệm<br>11.500 ngân lượng<br>1 Sơ Học Giả Hạng Liên<br>10 Phi Hành Phù (khoá)<br>1 Ma Bố Mão<br>1 Đằng Mạn Hài</td></tr></tfoot>
+            </table>
+          </div>
+          <h4>Hồi 4: Ba Khâu (cấp 7 đến 10)</h4>
+          <p>Ba Khâu treo cáo thị dẹp yêu vật: bù nhìn thành tinh, giữa đầm có Oa Yêu. Hạ nó xong bạn nhặt được nửa mảnh hổ phù và tới lúc theo một môn phái.</p>
+          <div class="tbl tbl--quest">
+            <table>
+              <thead><tr><th>Nhiệm vụ</th><th>Việc cần làm</th><th>Quà</th></tr></thead>
+              <tbody>
+                <tr><td><b>15. Cáo thị Ba Khâu</b><span class="qlv">cấp 7</span></td><td>Tới Ba Khâu đọc <strong>Bảng Cáo Thị</strong>.</td><td class="qgift">100 kinh nghiệm<br>2.500 ngân lượng</td></tr>
+                <tr><td><b>16. Bù Nhìn Tinh</b><span class="qlv">cấp 7</span></td><td>Hạ 5 Bù Nhìn Tinh ở Ba Khâu, quay lại <strong>Bảng Cáo Thị</strong>.</td><td class="qgift">250 kinh nghiệm<br>5.000 ngân lượng<br>10 Hạt Lạc Hoàn (khoá)</td></tr>
+                <tr><td><b>17. Oa Yêu</b><span class="qlv">cấp 8</span></td><td>Tới đầm lầy góc tây Ba Khâu (50, 80), hạ trùm Oa Yêu, về làng báo <strong>Vệ Đội Trưởng</strong>.</td><td class="qgift">400 kinh nghiệm<br>9.000 ngân lượng<br>1 Nửa Mảnh Hổ Phù<br>5 Hành Quân Tán</td></tr>
+                <tr><td><b>18. Vấn Đạo Thất Môn</b><span class="qlv">cấp 10</span></td><td>Đạt cấp 10 rồi chọn một phái: gặp người chiêu sinh của phái ở Tân Thủ Thôn, nhờ đưa tới căn cứ, bái sư ở <strong>sư phụ</strong>.</td><td class="qgift">250 kinh nghiệm<br>9.000 ngân lượng<br>20 Phi Hành Phù (khoá)<br>20 Hành Quân Tán (khoá)<br>Quà bái sư tuỳ phái: vũ khí môn phái, tín vật môn phái, tẩy điểm thuộc tính</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="2">Cả hồi 4 (4 nhiệm vụ)</td><td class="qgift">1.000 kinh nghiệm<br>25.500 ngân lượng<br>10 Hạt Lạc Hoàn (khoá)<br>1 Nửa Mảnh Hổ Phù<br>5 Hành Quân Tán<br>20 Phi Hành Phù (khoá)<br>20 Hành Quân Tán (khoá)</td></tr></tfoot>
+            </table>
+          </div>
+          <p class="tip">Xong nhiệm vụ 18 là đã vào phái. Vũ khí, tín vật và kĩ năng từng phái xem ở tab <a href="#mon-phai">Môn phái</a>.</p>
+        </article>
+
+        <article class="gcard sub-panel" id="ct-hoi-5">
+          <h3>Hồi 5: Đường Lên Lạc Ấp</h3>
+          <ul class="facts">
+            <li>Cấp 10 đến 15</li>
+            <li>10 nhiệm vụ</li>
+            <li>Tân Thủ Thôn, Ba Khâu, Động Đình Hồ</li>
+            <li>Thành Sở, Hoa Sơn, Đào Hoa Nguyên</li>
+          </ul>
+          <p>Nửa mảnh hổ phù khắc chữ "Lữ" dẫn bạn từ Ba Khâu qua Động Đình Hồ, thành Sở, Hoa Sơn, Đào Hoa Nguyên rồi lên kinh Chu. Ai đó đang gom đá tím khắp nơi.</p>
+          <div class="tbl tbl--quest">
+            <table>
+              <thead><tr><th>Nhiệm vụ</th><th>Việc cần làm</th><th>Quà</th></tr></thead>
+              <tbody>
+                <tr><td><b>19. Nửa mảnh hổ phù</b><span class="qlv">cấp 10</span></td><td>Hỏi Tân Thủ Tiên Cô, rồi gặp <strong>Mạnh Tử</strong> (Tân Thủ Thôn).</td><td class="qgift">150 kinh nghiệm<br>5.000 ngân lượng<br>10 Hạt Lạc Hoàn (khoá)</td></tr>
+                <tr><td><b>20. Vết sẹo trên đầm</b><span class="qlv">cấp 10</span></td><td>Tới giữa đầm Ba Khâu (50, 80), chỗ Oa Yêu chết, rồi đọc <strong>Bảng Cáo Thị</strong>.</td><td class="qgift">150 kinh nghiệm<br>5.000 ngân lượng</td></tr>
+                <tr><td><b>21. Người câu bên hồ</b><span class="qlv">cấp 11</span></td><td>Đi cổng phía bắc Ba Khâu sang Động Đình Hồ, tìm <strong>Trang Tân</strong>.</td><td class="qgift">200 kinh nghiệm<br>5.000 ngân lượng</td></tr>
+                <tr><td><b>22. Ếch nuốt đá</b><span class="qlv">cấp 11</span></td><td>Hạ Kiến Đen hoặc Ếch Tử Mẫu ở Động Đình Hồ, nhặt 4 Huỳnh Quang Thạch, mang tới <strong>Tiễn Lão Cửu</strong> ở thành Sở.</td><td class="qgift">200 kinh nghiệm<br>5.000 ngân lượng</td></tr>
+                <tr><td><b>23. Hỏi chuyện thành Sở</b><span class="qlv">cấp 12</span></td><td>Hỏi Quản Khố, Chủ Tiệm Y Dược, Chủ Tiệm Sửa Chữa ở thành Sở, rồi gặp <strong>Sở Vương</strong>.</td><td class="qgift">250 kinh nghiệm<br>6.000 ngân lượng</td></tr>
+                <tr><td><b>24. Tường thành Phương Thành</b><span class="qlv">cấp 12</span></td><td>Hạ 12 Sở Quân Đao Binh hoặc Sở Quân Kiếm Binh ở Sở Phương Thành, gặp <strong>Sở Quốc Đại Tướng Quân</strong> (thành Sở).</td><td class="qgift">250 kinh nghiệm<br>6.000 ngân lượng</td></tr>
+                <tr><td><b>25. Thư trên lụa</b><span class="qlv">cấp 13</span></td><td>Hạ lính Sở bỏ ngũ ở Thượng Dung Quan, lấy 1 Mật Thư, mang tới <strong>Sở Quốc Sử Tiết</strong> (thành Sở).</td><td class="qgift">250 kinh nghiệm<br>6.000 ngân lượng</td></tr>
+                <tr><td><b>26. Qua Hoa Sơn</b><span class="qlv">cấp 13</span></td><td>Hạ 12 Chó Đốm, Kỳ Nhông hoặc Gấu Ù ở Hoa Sơn, tới Đào Nguyên Thôn gặp <strong>Lão Thôn Trưởng</strong>.</td><td class="qgift">250 kinh nghiệm<br>6.000 ngân lượng</td></tr>
+                <tr><td><b>27. Trùng mắt tím</b><span class="qlv">cấp 14</span></td><td>Hạ 12 Độc Giác Tiên, Thích Vĩ Phong hoặc Bọ Ngựa Càng Xanh ở Đào Hoa Nguyên, gặp <strong>Thôn Trang Hộ Vệ</strong> (Đào Nguyên Thôn).</td><td class="qgift">250 kinh nghiệm<br>7.000 ngân lượng</td></tr>
+                <tr><td><b>28. Nhìn từ Triều Dương</b><span class="qlv">cấp 14</span></td><td>Lên đỉnh Triều Dương Phong (185, 29), rồi tới thành Chu gặp <strong>Tả Khâu Minh</strong>.</td><td class="qgift">350 kinh nghiệm<br>9.000 ngân lượng<br>1 Tái Tạo Thạch (khoá)<br>10 An Thần Hoàn (khoá)</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="2">Cả hồi 5 (10 nhiệm vụ)</td><td class="qgift">2.300 kinh nghiệm<br>60.000 ngân lượng<br>10 Hạt Lạc Hoàn (khoá)<br>1 Tái Tạo Thạch (khoá)<br>10 An Thần Hoàn (khoá)</td></tr></tfoot>
+            </table>
+          </div>
+        </article>
+
+        <article class="gcard sub-panel" id="ct-hoi-6">
+          <h3>Hồi 6: Thiên Tử Lạc Ấp</h3>
+          <ul class="facts">
+            <li>Cấp 15 đến 20</li>
+            <li>10 nhiệm vụ</li>
+            <li>Thành Chu, Thủ Dương Sơn, Cổ Mộ</li>
+            <li>Làm quen việc hằng ngày</li>
+          </ul>
+          <p>Ở Lạc Ấp, tường thành nứt ánh tím, đoàn tiêu chở đá bị cướp, ngục bị phá. Hồi này dẫn bạn làm quen bốn việc hằng ngày: truy bắt, nâng sao, Cổ Mộ, sư môn.</p>
+          <div class="tbl tbl--quest">
+            <table>
+              <thead><tr><th>Nhiệm vụ</th><th>Việc cần làm</th><th>Quà</th></tr></thead>
+              <tbody>
+                <tr><td><b>29. Ba nhà chia Tấn</b><span class="qlv">cấp 15</span></td><td>Gặp <strong>Khổng Phu Tử</strong> ở thành Chu.</td><td class="qgift">400 kinh nghiệm<br>8.000 ngân lượng</td></tr>
+                <tr><td><b>30. Tường nứt</b><span class="qlv">cấp 15</span></td><td>Gặp Đốc Công và Trương Quả Lão ở thành Chu, rồi vào cung gặp <strong>Chu Vương</strong>.</td><td class="qgift">400 kinh nghiệm<br>8.000 ngân lượng</td></tr>
+                <tr><td><b>31. Núi Thủ Dương</b><span class="qlv">cấp 16</span></td><td>Hạ 15 Độc Nhãn Thú hoặc Côn Đồ ở Thủ Dương Sơn, gặp <strong>Vận Tiêu Lão Đầu</strong> ở thành Chu.</td><td class="qgift">550 kinh nghiệm<br>9.000 ngân lượng<br>10 Hạt Lạc Hoàn (khoá)</td></tr>
+                <tr><td><b>32. Ba rương đá</b><span class="qlv">cấp 17</span></td><td>Hạ Côn Đồ ở Thủ Dương Sơn, có đủ 6 Huỳnh Quang Thạch thì gặp <strong>Vương Bộ Đầu</strong> (thành Chu). Đá vẫn giữ lại.</td><td class="qgift">500 kinh nghiệm<br>9.000 ngân lượng</td></tr>
+                <tr><td><b>33. Phản đồ trốn ngục</b><span class="qlv">cấp 17</span></td><td>Nhận một vòng <a href="#vuong-bo-dau">truy bắt</a> ở Vương Bộ Đầu, bắt phản đồ, phục mệnh, rồi nói chuyện lại với <strong>Vương Bộ Đầu</strong>.</td><td class="qgift">550 kinh nghiệm<br>8.000 ngân lượng</td></tr>
+                <tr><td><b>34. Binh khí có sao</b><span class="qlv">cấp 18</span></td><td><a href="#nang-sao">Nâng sao</a> một món trang bị ở Chủ Tiệm Sửa Chữa thành Chu (thành hay trượt đều được), rồi nói chuyện lại với <strong>ông ấy</strong>.</td><td class="qgift">500 kinh nghiệm<br>8.000 ngân lượng</td></tr>
+                <tr><td><b>35. Trả đá cho Sư Gia</b><span class="qlv">cấp 18</span></td><td>Mang 6 Huỳnh Quang Thạch tới <strong>Sư Gia</strong> trong cung Chu (mất đá thì lấy lại từ Côn Đồ ở Thủ Dương Sơn).</td><td class="qgift">600 kinh nghiệm<br>9.000 ngân lượng</td></tr>
+                <tr><td><b>36. Ngôi mộ dưới đài</b><span class="qlv">cấp 20</span></td><td>Gặp Cổ Mộ Xa Phu ở thành Chu, vào <a href="#co-mo">Cổ Mộ</a> (độ khó nào cũng được), hạ Thủ Mộ Thạch Tướng, nói chuyện lại với <strong>Cổ Mộ Xa Phu</strong>.</td><td class="qgift">900 kinh nghiệm<br>11.000 ngân lượng</td></tr>
+                <tr><td><b>37. Họ Lữ</b><span class="qlv">cấp 20</span></td><td>Về gặp <strong>Tả Khâu Minh</strong> ở thành Chu.</td><td class="qgift">650 kinh nghiệm<br>9.000 ngân lượng</td></tr>
+                <tr><td><b>38. Việc của sư môn</b><span class="qlv">cấp 19</span></td><td>Trả một <a href="#su-mon">việc sư môn</a> ở sư phụ phái mình, rồi gặp <strong>Sứ Giả Môn Phái</strong> (Tân Thủ Thôn hoặc thành Chu).</td><td class="qgift">650 kinh nghiệm<br>11.000 ngân lượng<br>1 Tái Tạo Thạch (khoá)<br>1 Thăng Phẩm Thạch (khoá)<br>10 Hạt Lạc Hoàn (khoá)</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="2">Cả hồi 6 (10 nhiệm vụ)</td><td class="qgift">5.700 kinh nghiệm<br>90.000 ngân lượng<br>20 Hạt Lạc Hoàn (khoá)<br>1 Tái Tạo Thạch (khoá)<br>1 Thăng Phẩm Thạch (khoá)</td></tr></tfoot>
+            </table>
+          </div>
+          <p class="tip">Nhiệm vụ 36 cần vào Cổ Mộ: chỉ phải hạ Thủ Mộ Thạch Tướng, không bắt buộc hạ Lữ Bố.</p>
+        </article>
+
+        <article class="gcard sub-panel" id="ct-hoi-7">
+          <h3>Hồi 7: Hợp Tung</h3>
+          <ul class="facts">
+            <li>Cấp 20 đến 25</li>
+            <li>9 nhiệm vụ</li>
+            <li>Thành Chu, Vô Định Hà</li>
+            <li>Đủ bảy căn cứ phái</li>
+          </ul>
+          <p>Thiên tử mời sứ sáu nước về Lạc Ấp bàn Hợp Tung, nhưng mỗi người một bụng. Vua không hợp được thì để bảy môn phái hợp: bạn mang thư tới bảy chưởng môn.</p>
+          <div class="tbl tbl--quest">
+            <table>
+              <thead><tr><th>Nhiệm vụ</th><th>Việc cần làm</th><th>Quà</th></tr></thead>
+              <tbody>
+                <tr><td><b>39. Một cái bàn, sáu cái ghế</b><span class="qlv">cấp 20</span></td><td>Vào cung gặp <strong>Chu Vương</strong>.</td><td class="qgift">900 kinh nghiệm<br>11.000 ngân lượng</td></tr>
+                <tr><td><b>40. Sứ sáu nước</b><span class="qlv">cấp 20</span></td><td>Gặp sứ sáu nước trước điện Chu Vương (Tần, Tề, Yên, Hàn, Triệu, Ngụy), rồi gặp <strong>Tả Khâu Minh</strong>.</td><td class="qgift">1.100 kinh nghiệm<br>12.000 ngân lượng</td></tr>
+                <tr><td><b>41. Lửa ma Vô Định Hà</b><span class="qlv">cấp 21</span></td><td>Hạ 20 Quỷ Hỏa hoặc Ác Đồ ở Vô Định Hà, gặp <strong>Sứ Triệu</strong> ở thành Chu.</td><td class="qgift">1.300 kinh nghiệm<br>13.000 ngân lượng</td></tr>
+                <tr><td><b>42. Giáp Tần dưới áo rách</b><span class="qlv">cấp 22</span></td><td>Hạ Ác Đồ ở Vô Định Hà, lấy 3 Khôi Giáp Nước Tần, mang tới <strong>Sứ Ngụy</strong>.</td><td class="qgift">1.400 kinh nghiệm<br>14.000 ngân lượng</td></tr>
+                <tr><td><b>43. Bảy con ngựa</b><span class="qlv">cấp 23</span></td><td>Gặp <strong>Sứ Tần</strong> trước điện Chu Vương.</td><td class="qgift">1.100 kinh nghiệm<br>11.000 ngân lượng</td></tr>
+                <tr><td><b>44. Đài trốn nợ</b><span class="qlv">cấp 23</span></td><td>Gặp Chủ Tiệm Tạp Hóa, Dược Sư Chu Quốc, Chu Quốc Ngự Trù ở thành Chu, rồi vào cung gặp <strong>Chu Vương</strong>.</td><td class="qgift">1.300 kinh nghiệm<br>13.000 ngân lượng</td></tr>
+                <tr><td><b>45. Thất Môn Hội Minh</b><span class="qlv">cấp 24</span></td><td>Đưa thư tới bảy chưởng môn: Vô Danh Lão Nhân (Đào Nguyên Thôn), Thục Sơn Chân Nhân (Thục Sơn), Đại Tướng Quân (doanh Cấm Vệ Quân, thành Chu), Đường Lão Gia (Trang Viện), Mao Chân Nhân (Mao Sơn), Quảng Thành Tử (Côn Luân Sơn), Quỷ Cốc Tử (Vân Mộng Cốc). Rồi gặp <strong>Sứ Giả Môn Phái</strong>.</td><td class="qgift">2.000 kinh nghiệm<br>18.000 ngân lượng<br>1 Tái Tạo Thạch (khoá)</td></tr>
+                <tr><td><b>46. Oan hồn Trường Bình</b><span class="qlv">cấp 25</span></td><td>Tới Vô Định Hà 2 (150, 117), hạ trùm Oan Quỷ, gặp <strong>Tả Khâu Minh</strong>.</td><td class="qgift">1.800 kinh nghiệm<br>15.000 ngân lượng</td></tr>
+                <tr><td><b>47. Mượn hổ phù</b><span class="qlv">cấp 25</span></td><td>Vào cung gặp <strong>Sư Gia</strong>.</td><td class="qgift">1.400 kinh nghiệm<br>13.000 ngân lượng<br>1 Thăng Phẩm Thạch (khoá)<br>20 Hạt Lạc Hoàn (khoá)<br>20 An Thần Hoàn (khoá)</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="2">Cả hồi 7 (9 nhiệm vụ)</td><td class="qgift">12.300 kinh nghiệm<br>120.000 ngân lượng<br>1 Tái Tạo Thạch (khoá)<br>1 Thăng Phẩm Thạch (khoá)<br>20 Hạt Lạc Hoàn (khoá)<br>20 An Thần Hoàn (khoá)</td></tr></tfoot>
+            </table>
+          </div>
+        </article>
+
+        <article class="gcard sub-panel" id="ct-hoi-8">
+          <h3>Hồi 8: Hổ Lao Quan</h3>
+          <ul class="facts">
+            <li>Cấp 25 đến 30</li>
+            <li>9 nhiệm vụ</li>
+            <li>Hổ Lao Quan, Dị Thủy, Thục Sơn</li>
+            <li>2 nhiệm vụ riêng phái</li>
+          </ul>
+          <p>Hổ Lao Quan và bờ sông Dịch hiện bóng những trận đánh chưa từng xảy ra. Hồi này có thêm 2 nhiệm vụ riêng cho phái của bạn.</p>
+          <div class="tbl tbl--quest">
+            <table>
+              <thead><tr><th>Nhiệm vụ</th><th>Việc cần làm</th><th>Quà</th></tr></thead>
+              <tbody>
+                <tr><td><b>48. Hai cửa của kinh thành</b><span class="qlv">cấp 25</span></td><td>Gặp <strong>Quân Sư</strong> ở doanh Cấm Vệ Quân, thành Chu.</td><td class="qgift">1.800 kinh nghiệm<br>14.000 ngân lượng</td></tr>
+                <tr><td><b>49. Giấc mộng của lính canh</b><span class="qlv">cấp 26</span></td><td>Hạ 25 Tuần Thành Tiểu Binh hoặc Xích Hậu ở Hổ Lao Quan, gặp <strong>Đại Tướng Quân</strong> (doanh Cấm Vệ Quân).</td><td class="qgift">2.600 kinh nghiệm<br>18.000 ngân lượng</td></tr>
+                <tr><td><b>50. Binh phù chữ lạ</b><span class="qlv">cấp 27</span></td><td>Hạ Xích Hậu ở Hổ Lao Quan, lấy 1 Lĩnh Binh Phù, mang tới <strong>Tả Khâu Minh</strong>.</td><td class="qgift">2.400 kinh nghiệm<br>16.000 ngân lượng</td></tr>
+                <tr><td><b>51. Kẻ gọi Phụng Tiên</b><span class="qlv">cấp 28</span></td><td>Tới Hổ Lao Quan (218, 142), hạ trùm Tiểu Đội Trưởng, gặp <strong>Đại Tướng Quân</strong>.</td><td class="qgift">3.200 kinh nghiệm<br>20.000 ngân lượng</td></tr>
+                <tr><td><b>52. Lính tuần nước Yên</b><span class="qlv">cấp 28</span></td><td>Hạ 25 Yên Quốc Tuần Binh ở Dị Thủy, tới Thục Sơn gặp <strong>Nguyên Chân Thiên Sư</strong>.</td><td class="qgift">2.800 kinh nghiệm<br>18.000 ngân lượng</td></tr>
+                <tr><td><b>53. Bờ sông Dịch</b><span class="qlv">cấp 29</span></td><td>Tới bờ sông Dịch ở Dị Thủy (149, 124), về Thục Sơn gặp <strong>Nguyên Chân Thiên Sư</strong>.</td><td class="qgift">2.600 kinh nghiệm<br>16.000 ngân lượng</td></tr>
+                <tr><td><b>54. Lỡ lời</b><span class="qlv">cấp 29</span></td><td>Về thành Chu gặp <strong>Sư Gia</strong>.</td><td class="qgift">3.200 kinh nghiệm<br>20.000 ngân lượng<br>1 Trung Cấp Đoạn Thạch (khoá)<br>1 Tái Tạo Thạch (khoá)<br>10 Tạo Hoá Đơn (khoá)<br>10 Bổ Tâm Đan (khoá)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4>Nhiệm vụ riêng phái (mở sau nhiệm vụ 50)</h4>
+          <p>Mỗi phái 2 nhiệm vụ, sư phụ phái mình giao. Chỉ thấy nhiệm vụ của phái mình; đây là nhánh bên, bỏ qua vẫn làm tiếp hồi 9 được.</p>
+          <div class="tbl tbl--quest">
+            <table>
+              <thead><tr><th>Phái</th><th>Nhiệm vụ 1</th><th>Nhiệm vụ 2</th></tr></thead>
+              <tbody>
+                <tr><td><b>Đào Hoa Nguyên</b></td><td><b>55. Mềm thắng cứng</b><span class="qlv">cấp 26</span>Vô Ức giao, gặp <strong>Vô Tư</strong> (Đào Nguyên Thôn).</td><td><b>56. Mộng hóa bướm</b><span class="qlv">cấp 27</span>Hạ 20 Tuần Thành Tiểu Binh hoặc Xích Hậu ở Dị Thủy, gặp <strong>Vong Tình Bà Bà</strong> (Đào Nguyên Thôn).</td></tr>
+                <tr><td><b>Thục Sơn</b></td><td><b>55. Lấy Thục hay đánh Hàn</b><span class="qlv">cấp 26</span>Tử Hằng Đạo Nhân giao, gặp <strong>Bạch My Đạo Trưởng</strong> (Thục Sơn).</td><td><b>56. Đập sông Mân</b><span class="qlv">cấp 27</span>Hạ 20 Xích Hậu hoặc Tuần Thành Tiểu Binh ở Dị Thủy, gặp <strong>Toàn Chân Đạo Trưởng</strong> (Thục Sơn).</td></tr>
+                <tr><td><b>Cấm Vệ Quân</b></td><td><b>55. Lửa hiệu Ly Sơn</b><span class="qlv">cấp 26</span>Quân Giáo Đầu giao, gặp <strong>Thiên Phu Trưởng</strong> (doanh Cấm Vệ Quân).</td><td><b>56. Chín cái đỉnh</b><span class="qlv">cấp 27</span>Hạ 20 Xích Hậu ở Hổ Lao Quan, gặp <strong>Phó Tướng</strong> (doanh Cấm Vệ Quân).</td></tr>
+                <tr><td><b>Đường Môn</b></td><td><b>55. Chín lần thang mây</b><span class="qlv">cấp 26</span>Đường Bưu giao, gặp <strong>Đường Phiên Phiên</strong> (Trang Viện).</td><td><b>56. Thép nước Hàn</b><span class="qlv">cấp 27</span>Hạ Tuần Thành Tiểu Binh ở Hổ Lao Quan, lấy 5 Hàn Thiết, mang tới <strong>Đường Hổ</strong> (Trang Viện).</td></tr>
+                <tr><td><b>Mao Sơn</b></td><td><b>55. Quốc Thương</b><span class="qlv">cấp 26</span>Linh Toán Tử giao, gặp <strong>Quỷ Sứ</strong> (Mao Sơn).</td><td><b>56. Gói cơm lá</b><span class="qlv">cấp 27</span>Hạ 20 Quỷ Hỏa ở Vô Định Hà, gặp <strong>Thần Tôn</strong> (Mao Sơn).</td></tr>
+                <tr><td><b>Côn Luân</b></td><td><b>55. Năm đức</b><span class="qlv">cấp 26</span>Văn Xương Chân Quân giao, gặp <strong>Thái Tuế Chân Quân</strong> (Côn Luân Sơn).</td><td><b>56. Ông vua áo đen</b><span class="qlv">cấp 27</span>Hạ Quỷ Hỏa ở Vô Định Hà, lấy 5 Hoả Hồn, mang tới <strong>Thái Nhất Chân Quân</strong> (Côn Luân Sơn).</td></tr>
+                <tr><td><b>Vân Mộng Cốc</b></td><td><b>55. Đua ngựa</b><span class="qlv">cấp 26</span>Tô Tần giao, gặp <strong>Tôn Tẫn</strong> (Vân Mộng Cốc).</td><td><b>56. Giảm bếp</b><span class="qlv">cấp 27</span>Hạ Xích Hậu ở Hổ Lao Quan, lấy lại Tôn Tử Binh Pháp, mang tới <strong>Bàng Quyên</strong> (Vân Mộng Cốc).</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Quà, mọi phái như nhau.</strong> Nhiệm vụ 55: 1.500 kinh nghiệm, 12.000 ngân lượng. Nhiệm vụ 56: 2.500 kinh nghiệm, 16.000 ngân lượng, 1 Tái Tạo Thạch (khoá).</p>
+          <h4>Cả hồi 8</h4>
+          <p>9 nhiệm vụ (7 chung, 2 của phái): 22.600 kinh nghiệm, 150.000 ngân lượng, 1 Trung Cấp Đoạn Thạch (khoá), 2 Tái Tạo Thạch (khoá), 10 Tạo Hoá Đơn (khoá), 10 Bổ Tâm Đan (khoá).</p>
+        </article>
+
+        <article class="gcard sub-panel" id="ct-hoi-9">
+          <h3>Hồi 9: Đầm Vân Mộng</h3>
+          <ul class="facts">
+            <li>Cấp 30 đến 35</li>
+            <li>8 nhiệm vụ</li>
+            <li>Đầm lầy, Vân Mộng Cốc</li>
+            <li>Đại Biệt Sơn, Vu Sơn, Mao Sơn</li>
+          </ul>
+          <p>Qua đầm tới Vân Mộng Cốc nhờ Quỷ Cốc Tử đọc chữ trên binh phù. Đá tím đang được chở qua Đại Biệt Sơn và Vu Sơn, kẻ sai khiến để lại dấu vết.</p>
+          <div class="tbl tbl--quest">
+            <table>
+              <thead><tr><th>Nhiệm vụ</th><th>Việc cần làm</th><th>Quà</th></tr></thead>
+              <tbody>
+                <tr><td><b>57. Qua đầm</b><span class="qlv">cấp 30</span></td><td>Hạ 25 Hạt Vĩ Hạt, Chu Chu Quái hoặc Độc Thứ Phong ở Ranh Giới Đầm Lầy, tới Vân Mộng Cốc gặp <strong>Y Sư</strong>.</td><td class="qgift">4.200 kinh nghiệm<br>20.000 ngân lượng</td></tr>
+                <tr><td><b>58. Tơ nhện quanh đá</b><span class="qlv">cấp 31</span></td><td>Hạ Chu Chu Quái hoặc Độc Thứ Phong ở Địa Giới Đầm Lầy, lấy 6 Huỳnh Quang Thạch, mang tới <strong>Tô Tần</strong> (Vân Mộng Cốc).</td><td class="qgift">4.600 kinh nghiệm<br>21.000 ngân lượng</td></tr>
+                <tr><td><b>59. Chữ của bốn trăm năm sau</b><span class="qlv">cấp 32</span></td><td>Gặp Bàng Quyên, Tôn Tẫn, Dược Vương Quỷ Lão ở Vân Mộng Cốc, rồi gặp <strong>Quỷ Cốc Tử</strong>.</td><td class="qgift">5.000 kinh nghiệm<br>22.000 ngân lượng</td></tr>
+                <tr><td><b>60. Quỷ khuân đá</b><span class="qlv">cấp 32</span></td><td>Hạ 25 Ngưu Đầu Quái hoặc Lang Yêu ở Chân Núi Đại Biệt, tới Mao Sơn gặp <strong>Nguyên Thần Tiên Sư</strong>.</td><td class="qgift">5.400 kinh nghiệm<br>23.000 ngân lượng</td></tr>
+                <tr><td><b>61. Thư ký chữ Từ</b><span class="qlv">cấp 33</span></td><td>Hạ Ngưu Đầu Quái hoặc Lang Yêu ở Đại Biệt Sơn, lấy 2 Mật Thư, mang tới <strong>Mao Chân Nhân</strong> (Mao Sơn).</td><td class="qgift">5.600 kinh nghiệm<br>23.000 ngân lượng<br>1 Tái Tạo Thạch (khoá)</td></tr>
+                <tr><td><b>62. Mây Vu Sơn</b><span class="qlv">cấp 34</span></td><td>Hạ 25 Trư Yêu hoặc Sài Cẩu ở Vu Sơn, gặp <strong>Đạo Đồng</strong> ở Mao Sơn.</td><td class="qgift">5.800 kinh nghiệm<br>24.000 ngân lượng</td></tr>
+                <tr><td><b>63. Con đầu đàn</b><span class="qlv">cấp 35</span></td><td>Tới Vu Sơn (140, 110), hạ trùm Sài Cẩu Vũ Giả, về gặp <strong>Đạo Đồng</strong>.</td><td class="qgift">6.200 kinh nghiệm<br>25.000 ngân lượng</td></tr>
+                <tr><td><b>64. Kẻ đứng sau lưng</b><span class="qlv">cấp 35</span></td><td>Về thành Chu gặp <strong>Tả Khâu Minh</strong>.</td><td class="qgift">5.300 kinh nghiệm<br>22.000 ngân lượng<br>2 Trung Cấp Đoạn Thạch (khoá)<br>1 Tái Tạo Thạch (khoá)<br>20 Tạo Hoá Đơn (khoá)<br>20 Bổ Tâm Đan (khoá)</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="2">Cả hồi 9 (8 nhiệm vụ)</td><td class="qgift">42.100 kinh nghiệm<br>180.000 ngân lượng<br>2 Tái Tạo Thạch (khoá)<br>2 Trung Cấp Đoạn Thạch (khoá)<br>20 Tạo Hoá Đơn (khoá)<br>20 Bổ Tâm Đan (khoá)</td></tr></tfoot>
+            </table>
+          </div>
+        </article>
+
+        <article class="gcard sub-panel" id="ct-hoi-10">
+          <h3>Hồi 10: Xích Bích</h3>
+          <ul class="facts">
+            <li>Cấp 35 đến 40</li>
+            <li>9 nhiệm vụ</li>
+            <li>Bà Dương Hồ, Xích Bích, Thái Hồ</li>
+            <li>Côn Luân Sơn, Cổ Mộ, Ba Khâu</li>
+          </ul>
+          <p>Lần theo thuyền chở đá qua Bà Dương Hồ, Xích Bích, Thái Hồ, gom đủ thứ để khoá vết nứt ở Ba Khâu. Hồi cuối, quà lớn nhất cả chuỗi.</p>
+          <div class="tbl tbl--quest">
+            <table>
+              <thead><tr><th>Nhiệm vụ</th><th>Việc cần làm</th><th>Quà</th></tr></thead>
+              <tbody>
+                <tr><td><b>65. Ông lão đếm thuyền</b><span class="qlv">cấp 35</span></td><td>Hạ 25 Trư Yêu hoặc Sài Cẩu ở Bà Dương Hồ, gặp <strong>Chu Tử</strong> (Bà Dương Hồ).</td><td class="qgift">6.500 kinh nghiệm<br>22.000 ngân lượng</td></tr>
+                <tr><td><b>66. Lửa trên sông</b><span class="qlv">cấp 36</span></td><td>Hạ Thuỷ Tặc ở Xích Bích, lấy Cơ Quan Mật Đồ Thượng Bộ, mang tới <strong>Đường Lão Gia</strong> ở Trang Viện.</td><td class="qgift">7.200 kinh nghiệm<br>24.000 ngân lượng</td></tr>
+                <tr><td><b>67. Hồ Thái</b><span class="qlv">cấp 37</span></td><td>Hạ Con Cóc ở Thái Hồ, lấy Cơ Quan Mật Đồ Trung Bộ, về gặp <strong>Đường Lão Gia</strong>.</td><td class="qgift">7.600 kinh nghiệm<br>25.000 ngân lượng</td></tr>
+                <tr><td><b>68. Gương Côn Luân</b><span class="qlv">cấp 37</span></td><td>Nhận Linh Quang Kính khi nhận việc, mang tới <strong>Thái Thượng Lão Quân</strong> ở Côn Luân Sơn.</td><td class="qgift">6.800 kinh nghiệm<br>22.000 ngân lượng</td></tr>
+                <tr><td><b>69. Thuyền đã chờ</b><span class="qlv">cấp 38</span></td><td>Vào cung gặp Chu Vương, hỏi Vương Bộ Đầu, rồi gặp <strong>Sư Gia</strong> (thành Chu).</td><td class="qgift">7.000 kinh nghiệm<br>22.000 ngân lượng</td></tr>
+                <tr><td><b>70. Thủ lĩnh thuỷ tặc</b><span class="qlv">cấp 39</span></td><td>Tới Thái Hồ (150, 110), hạ trùm Thuỷ Tặc Thủ Lĩnh, về gặp <strong>Cổ Mộ Xa Phu</strong> ở thành Chu.</td><td class="qgift">8.400 kinh nghiệm<br>26.000 ngân lượng</td></tr>
+                <tr><td><b>71. Nửa phù kia</b><span class="qlv">cấp 39</span></td><td>Vào <a href="#co-mo">Cổ Mộ</a> (độ khó nào cũng được), hạ Thủ Mộ Thạch Tướng, nói chuyện lại với <strong>Cổ Mộ Xa Phu</strong>.</td><td class="qgift">10.000 kinh nghiệm<br>30.000 ngân lượng<br>1 Nửa Mảnh Hổ Phù (khoá)<br>1 Tái Tạo Thạch (khoá)</td></tr>
+                <tr><td><b>72. Khoá cửa</b><span class="qlv">cấp 39</span></td><td>Tới giữa đầm Ba Khâu (50, 80), về Tân Thủ Thôn gặp <strong>Vệ Đội Trưởng</strong>.</td><td class="qgift">8.100 kinh nghiệm<br>24.000 ngân lượng</td></tr>
+                <tr><td><b>73. Biển đông</b><span class="qlv">cấp 40</span></td><td>Gặp <strong>Thần Tiên Gia Gia</strong> ở Tân Thủ Thôn.</td><td class="qgift">9.000 kinh nghiệm<br>25.000 ngân lượng<br>1 Cao Cấp Đoạn Thạch (khoá)<br>1 Thăng Phẩm Thạch (khoá)<br>1 Thẻ Thần Thú (chọn con) (khoá)<br>1 Tái Tạo Thạch (khoá)<br>30 Tạo Hoá Đơn (khoá)<br>30 Bổ Tâm Đan (khoá)</td></tr>
+              </tbody>
+              <tfoot><tr><td colspan="2">Cả hồi 10 (9 nhiệm vụ)</td><td class="qgift">70.600 kinh nghiệm<br>220.000 ngân lượng<br>1 Nửa Mảnh Hổ Phù (khoá)<br>2 Tái Tạo Thạch (khoá)<br>1 Cao Cấp Đoạn Thạch (khoá)<br>1 Thăng Phẩm Thạch (khoá)<br>1 Thẻ Thần Thú (chọn con) (khoá)<br>30 Tạo Hoá Đơn (khoá)<br>30 Bổ Tâm Đan (khoá)</td></tr></tfoot>
+            </table>
+          </div>
+          <p class="tip">Thẻ Thần Thú (chọn con): chọn một trong 12 thần thú, mở con chưa có hoặc nâng sao con đã có. Xem tab <a href="#than-thu">Thần Thú</a>.</p>
         </article>
 
       </div>
