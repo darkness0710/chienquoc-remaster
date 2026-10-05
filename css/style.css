@@ -252,6 +252,8 @@ h1, h2, h3, p { margin: 0; }
   border: 1px solid var(--line);
 }
 .card h3 { margin-top: 14px; font-size: 1.08rem; color: var(--gold-300); }
+.card h3 a { color: inherit; border-bottom: 1px dashed rgba(232, 195, 106, .45); }
+.card h3 a:hover { color: var(--gold-400); }
 .card p { margin-top: 6px; font-size: .95rem; color: var(--muted); }
 /* Điện thoại: biểu tượng nằm cạnh tiêu đề cho thẻ thấp, đỡ phải cuộn dài. */
 @media (max-width: 539px) {
@@ -439,6 +441,9 @@ html.tabs-on .tab-panel + .tab-panel { border-top: 0; }
 .facts { list-style: none; margin: 12px 0 0 !important; padding: 0 !important; display: flex !important; flex-wrap: wrap; gap: 8px !important; }
 .facts li { padding: 3px 12px; border-radius: 999px; font-size: .85rem; color: var(--jade-400);
   border: 1px solid rgba(111, 214, 226, .35); background: rgba(111, 214, 226, .07); }
+/* Icon món cạnh tên mục (Bùa Ma Thuật, ảnh 79x128 lấy từ repo game godot/assets/custom/icon/item/). */
+.gicon { display: inline-block; width: 32px; height: auto; margin-right: 10px; vertical-align: middle;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .5)); }
 .tip { margin-top: 14px !important; padding: 10px 14px; border-radius: 10px; font-size: .92rem !important;
   border-left: 3px solid var(--gold-500); background: rgba(232, 195, 106, .08); }
 

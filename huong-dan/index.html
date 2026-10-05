@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hướng dẫn · Chiến Quốc Remaster</title>
-  <meta name="description" content="Hướng dẫn nhanh Chiến Quốc Remaster 3.2: việc hằng ngày, Cổ Mộ, Bảng Thần Thú, pháp bảo, cánh, rèn trang bị, kĩ năng 7 môn phái, kèm ảnh trong game.">
+  <meta name="description" content="Hướng dẫn nhanh Chiến Quốc Remaster 3.4: việc hằng ngày, Cổ Mộ, câu cá, Bảng Thần Thú, pháp bảo, cánh, rèn trang bị, kĩ năng 7 môn phái, kèm ảnh trong game.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/">
-  <meta property="og:title" content="Hướng dẫn Chiến Quốc Remaster 3.2">
-  <meta property="og:description" content="Việc hằng ngày, Cổ Mộ, Bảng Thần Thú, pháp bảo, cánh, rèn trang bị và kĩ năng 7 môn phái.">
+  <meta property="og:title" content="Hướng dẫn Chiến Quốc Remaster 3.4">
+  <meta property="og:description" content="Việc hằng ngày, Cổ Mộ, câu cá, Bảng Thần Thú, pháp bảo, cánh, rèn trang bị và kĩ năng 7 môn phái.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -22,11 +22,14 @@
 </head>
 <body>
 
-<!-- Nguồn số liệu: repo game, bản 3.2.0 (2026-10-04; Cổ Mộ bản 3, Phong Yêu Kính, thú cưỡi), thư mục godot/data/custom/.
+<!-- Nguồn số liệu: repo game, bản 3.4.2 (2026-10-06, worktree nhánh rel-3.4.2: Bùa Ma Thuật, câu cá, Tống Bảo không giới hạn), thư mục godot/data/custom/.
      Sư môn: sect_quests.json, sect_sets.json (exchange) · Rèn: forge.json, equip_rules.json ·
      Môn phái: sect_skills.json (nguồn duy nhất, đè tài liệu kế hoạch 28).
      Vương Bộ Đầu: criminal.json (rules, cash, khối team) + tài liệu 34, 35 · Cổ Mộ: dungeon_gumu.json + tài liệu 33.
-     Thần thú: beasts.json + tài liệu 38 · Tống Bảo Tiểu Yêu: rare_monster.json · Dịch Trạm: sect_bases.json (relay) ·
+     Thần thú: beasts.json + tài liệu 38 · Tống Bảo Tiểu Yêu: rare_monster.json + tài liệu 37 §4.11, §2.10 ·
+     Câu cá: fishing.json, custom_items.json, npc_overrides.json (Ngư Ông 080) + tài liệu 54 ·
+     Bùa Ma Thuật: forge.json (charm, rates), custom_items.json + gameplay/24, tài liệu 37 §4.33 · Bảo Khố: treasury.json ·
+     Tiệm đồ Chu / Sở: gameplay/12 §1.10zh, gameplay/npc/080, 060 · Dịch Trạm: sect_bases.json (relay) ·
      Hổ Phù: tài liệu 39 §7 · Bằng hữu: gameplay/40 · Thuốc: gameplay/42.
      Ảnh assets/img/huong-dan/: chụp từ game bằng ./run.sh shot --ui (cờ chụp từng ảnh: README.md). -->
 
@@ -74,6 +77,7 @@
         <a href="#co-mo">Cổ Mộ</a>
         <a href="#phong-yeu-kinh">Phong Yêu Kính</a>
         <a href="#tong-bao">Tống Bảo Tiểu Yêu</a>
+        <a href="#cau-ca">Câu cá</a>
       </nav>
 
       <div class="guide">
@@ -104,7 +108,7 @@
             <ul>
               <li>Mỗi việc: kinh nghiệm, ngân lượng, <strong>1 điểm sư môn</strong>. Việc càng sau thưởng càng to.</li>
               <li>Xong việc 10: quay <strong>vòng quay sư môn</strong>, thêm 1,1 đến 1,5 lần tiền việc 10.</li>
-              <li>Điểm sư môn đổi ở sư phụ: set sư môn (từ cấp 25), Thăng Phẩm Thạch 10 điểm, Tái Tạo Thạch 2 điểm, Thẻ Thần Thú chọn con 20 điểm.</li>
+              <li>Điểm sư môn đổi ở sư phụ: set sư môn (từ cấp 25), Thăng Phẩm Thạch 6 điểm, Tái Tạo Thạch 2 điểm, Thẻ Thần Thú chọn con 20 điểm (đồ đổi bằng điểm bị khoá).</li>
             </ul>
             <div class="tbl">
               <table>
@@ -156,6 +160,8 @@
               <li>Quà vòng 5 theo cấp lúc nhận vòng 5: Khó cấp 25 đến 29 được 2 Sơ Cấp Đoạn Thạch, cấp 30 đến 39 được 1 Trung Cấp; Địa Ngục cấp 35 đến 39 được 1 Trung Cấp và 30 % thêm 1 Cao Cấp.</li>
               <li>Khó và Địa Ngục: phản đồ ra chiêu dày hơn, chiêu đánh đau hơn, có tính cả pháp bảo của ngươi. Lộ phí trừ một lần ở vòng 1, thất bại không trả lại. Tiền cả ngày trừ lộ phí gần bằng Thường, phần hơn là quà vòng 5.</li>
               <li>Quá giờ hoặc bỏ: hôm đó dừng, tiền các vòng đã xong vẫn giữ.</li>
+              <!-- criminal.json: stats.min_hit_pm 20, tiers.kho/dia_nguc.stats.min_hit_pm 30 / 40; skills.dash after_sec 3, cd_sec 10 (37 §4.36) -->
+              <li>Bản 3.4.2 sửa lỗi phản đồ "đánh không mất máu": mỗi đòn trúng ít nhất 2 % máu của người bị đánh (Khó 3 %, Địa Ngục 4 %), đứng ngoài tầm quá 3 giây thì phản đồ lướt tới, chỉ số phản đồ tính lại lúc bấm Truy bắt (đơn và nhóm đều vậy).</li>
             </ul>
             <h4>Truy bắt nhóm</h4>
             <ul>
@@ -190,7 +196,8 @@
                 </tbody>
               </table>
             </div>
-            <p class="tip">Trang bị bị khoá suốt lượt: mặc đồ tốt nhất trước khi đi. Chết thì sống lại ở đầu ải sau 10 giây. Lật cùng một bảng với cả đội: thẻ người khác đã lật thì không lật lại được.</p>
+            <!-- criminal.json team.tiers.<độ khó>.revive_sec 10 / 20 / 30; cả đội ngã: CriminalTeamService._check_wipe (37 §4.34) -->
+            <p class="tip">Trang bị bị khoá suốt lượt: mặc đồ tốt nhất trước khi đi. Chết thì sống lại ở đầu ải sau 10 giây (Khó 20 giây, Địa Ngục 30 giây). Cả đội cùng ngã thì phản đồ còn sống về chỗ cũ, hồi đầy máu. Lật cùng một bảng với cả đội: thẻ người khác đã lật thì không lật lại được.</p>
           </div>
         </article>
 
@@ -234,6 +241,8 @@
             </ul>
             <h4>Tỉ lệ bảng thẻ</h4>
             <p>Mỗi ô ghi số thẻ trên 16 và cơ hội lật trúng ít nhất một thẻ đó trong các lượt của mình.</p>
+            <!-- dungeon_gumu.json difficulties[].cards_mix + jackpot (bản 3.4.2): Địa Ngục beast 3 -> 2, thêm remaster/bua_ma_thuat 1.
+                 Cơ hội: 1 - C(16 - k, lượt) / C(16, lượt). Túi ngân lượng = phí x cash_cards small_pm 500 / big_pm 2000 phần nghìn. -->
             <div class="tbl">
               <table>
                 <thead><tr><th>Thẻ</th><th>Thường (2 lượt)</th><th>Khó (3 lượt)</th><th>Địa Ngục (3 lượt)</th></tr></thead>
@@ -242,7 +251,8 @@
                   <tr><td>Trung Cấp Đoạn Thạch</td><td>3/16 · 35 %</td><td>3/16 · 49 %</td><td></td></tr>
                   <tr><td>Cao Cấp Đoạn Thạch</td><td></td><td>2/16 · 35 %</td><td>4/16 · 61 %</td></tr>
                   <tr><td>Thăng Phẩm Thạch</td><td>1/16 · 12 %</td><td>2/16 · 35 %</td><td>2/16 · 35 %</td></tr>
-                  <tr><td>Thẻ Thần Thú (ngẫu nhiên)</td><td>2/16 · 24 %</td><td>3/16 · 49 %</td><td>3/16 · 49 %</td></tr>
+                  <tr><td>Thẻ Thần Thú (ngẫu nhiên)</td><td>2/16 · 24 %</td><td>3/16 · 49 %</td><td>2/16 · 35 %</td></tr>
+                  <tr><td><a href="#bua-ma-thuat">Bùa Ma Thuật</a></td><td></td><td></td><td>1/16 · 19 %</td></tr>
                   <tr><td>Pháp bảo 0 sao (ngẫu nhiên)</td><td>1/16 · 12 %</td><td>2/16 · 35 %</td><td>2/16 · 35 %</td></tr>
                   <tr><td>Tinh Thạch</td><td>cấp 1 · 1/16 · 12 %</td><td></td><td>cấp 3 · 1/16 · 19 %</td></tr>
                   <tr><td>Túi ngân lượng</td><td>100.000 · 1/16 · 12 %</td><td>1.000.000 · 1/16 · 19 %</td><td>1.400.000 · 1/16 · 19 %</td></tr>
@@ -252,7 +262,8 @@
                 </tbody>
               </table>
             </div>
-            <p class="tip">Thú cưỡi Quý, Đỉnh Cấp Đoạn Thạch và Tinh Thạch cấp 3 chỉ Địa Ngục mới ra. Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt. Điểm phó bản đổi ở Tiệm Cổ Mộ của Xa Phu: Thẻ Thần Thú chọn con 300, pháp bảo 0 sao chọn loại 100, Sơ Cấp Đoạn Thạch (khoá) 100, Thăng Phẩm Thạch 50, Tinh Thạch cấp 1 chọn loại 25, Tái Tạo Thạch 10, Thú Hồn 10.</p>
+            <!-- Tiệm: dungeon_gumu.json shop (thang_pham 30 điểm từ 3.4.2, trước 50) -->
+            <p class="tip">Bùa Ma Thuật, thú cưỡi Quý, Đỉnh Cấp Đoạn Thạch và Tinh Thạch cấp 3 chỉ Địa Ngục mới ra. Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt. Điểm phó bản đổi ở Tiệm Cổ Mộ của Xa Phu: Thẻ Thần Thú chọn con 300, pháp bảo 0 sao chọn loại 100, Sơ Cấp Đoạn Thạch (khoá) 100, Thăng Phẩm Thạch 30, Tinh Thạch cấp 1 chọn loại 25, Tái Tạo Thạch 10, Thú Hồn 10.</p>
           </div>
         </article>
 
@@ -309,7 +320,7 @@
             <ul class="facts">
               <li>Bản đồ hoang từ cấp 10</li>
               <li>Sinh lại sau 60 phút</li>
-              <li>Thưởng 5 con mỗi ngày</li>
+              <li>Giết không giới hạn, 5 lần đầu mỗi ngày rơi đồ</li>
             </ul>
           </div>
           <figure class="gshot">
@@ -319,21 +330,26 @@
           <div class="gtext">
             <ul>
               <li>Mỗi bản đồ hoang có một con quái hiếm tên xanh. Bị hạ thì 60 phút sau hiện lại ở chỗ ngẫu nhiên.</li>
-              <li>Mở <strong>Chiến Quốc Bảo Điển</strong>, thẻ <strong>Tống Yêu</strong> để xem map hợp cấp đang có con, rồi tự đi tìm.</li>
-              <li>Thưởng mỗi con: kinh nghiệm bằng 40 quái cùng cấp, ngân lượng bằng cấp quái × 750, một phần thuốc và có thể rơi thêm đồ (bảng dưới).</li>
-              <li>Đội gây nhiều sát thương nhất được tính, không cần ra đòn cuối.</li>
+              <li>Mở <strong>Chiến Quốc Bảo Điển</strong>, thẻ <strong>Tống Yêu</strong> để xem map đang có con (quái từ thấp hơn bạn 10 cấp tới cao hơn 5 cấp), rồi tự đi tìm.</li>
+              <li>Giết bao nhiêu con cũng được. Con nào cũng cho kinh nghiệm bằng 40 quái cùng cấp và ngân lượng bằng cấp quái × 750.</li>
+              <li><strong>5 lần đầu mỗi ngày</strong> (làm mới 23:00) có thêm một phần thuốc và có thể rơi đồ (bảng dưới). Từ lần thứ 6 vẫn đủ kinh nghiệm và ngân lượng, chỉ không rơi đồ. Bảo Điển ghi "Hôm nay còn N / 5 lần nhận đồ".</li>
+              <li>Đội gây nhiều sát thương nhất được tính, không cần ra đòn cuối. Mỗi người trong đội nhận thưởng và tung đồ riêng.</li>
             </ul>
+            <!-- rare_monster.json bản 3.4.2: rules.daily_limit 5 (lần rơi đồ), gem_drops l1_pm 150 / l2_pm 30 (l2_min_level 30),
+                 gear_drop pm 100 (q 1 = Xanh, seal true), talisman_drop_pm 50, stone_drop sell/0032 pm 50; mỗi dòng một lần tung riêng. -->
             <div class="tbl">
               <table>
-                <thead><tr><th>Rơi thêm (mỗi người được thưởng)</th><th>Tỉ lệ</th></tr></thead>
+                <thead><tr><th>Rơi thêm (5 lần đầu mỗi ngày)</th><th>Tỉ lệ</th></tr></thead>
                 <tbody>
-                  <tr><td>Tinh Thạch cấp 1 (khoá)</td><td>25 %</td></tr>
-                  <tr><td>Tinh Thạch cấp 2 (khoá, quái cấp 30 trở lên)</td><td>3 %</td></tr>
+                  <tr><td class="wrap-cell">Tinh Thạch cấp 1 (khoá, ngẫu nhiên loại)</td><td>15 %</td></tr>
+                  <tr><td class="wrap-cell">Tinh Thạch cấp 2 (khoá, quái cấp 30 trở lên)</td><td>3 %</td></tr>
+                  <tr><td class="wrap-cell">Một món đồ Xanh đúng cấp quái, đã phong ấn</td><td>10 %</td></tr>
                   <tr><td>Pháp bảo 0 sao</td><td>5 %</td></tr>
                   <tr><td>Sơ Cấp Đoạn Thạch (khoá)</td><td>5 %</td></tr>
                 </tbody>
               </table>
             </div>
+            <p>Đồ Xanh ra ngẫu nhiên vũ khí, áo, mũ, giày, dây chuyền hoặc đai, của mọi phái và cả hai giới, đủ 2 dòng phụ. Đồ đã phong ấn: mặc, rèn, bán tiệm được, muốn giao dịch thì giải phong ấn ở thợ rèn. Quái thường chỉ rơi đồ Xanh từ cấp 30, nên ở cấp 10 đến 25 đây là chỗ nhặt đồ Xanh có sẵn.</p>
             <div class="tbl">
               <table>
                 <thead><tr><th>Thuốc (luôn có, một trong các phần)</th><th>Tỉ lệ</th></tr></thead>
@@ -349,6 +365,52 @@
             </div>
             <p class="tip">Cao hơn quái quá 10 cấp thì không có thưởng.</p>
           </div>
+        </article>
+
+        <!-- Câu cá (mới ở 3.4.2): fishing.json (min_level 20, npc_range 10, cast_sec 60, casts_per_day 240, catch_pm 500,
+             sizes, shop), Ngư Ông npc_overrides.json maps.080.add (294,167); món custom_items.json (ca_nau_gung 1.400,
+             goi_ca 1.330 hồi trong 14 s, cấp 20; the_ca_voi mount_nr 044). Tài liệu 54 (196 điểm / ngày: 120 cá x 1,635). -->
+        <article class="gcard sub-panel" id="cau-ca">
+          <h3>Câu cá ở Ngư Ông</h3>
+          <ul class="facts">
+            <li>Từ cấp 20</li>
+            <li>Ngư Ông, Chu Quốc (294, 167)</li>
+            <li>240 lần mỗi ngày</li>
+          </ul>
+          <ul>
+            <li>Đứng gần <strong>Ngư Ông</strong> (bệ đá sát hồ ở Chu Quốc, gần Cổ Mộ Xa Phu và Bảo Thú Đại Phu), chọn <strong>Câu cá</strong>. Nhân vật ngồi xuống câu luôn, không cần cần câu hay mồi. Trên đầu hiện "Đang câu 37/240".</li>
+            <li>Cứ <strong>60 giây</strong> giật cần một lần: một nửa số lần cá chạy mất, một nửa được cá. Câu được gì cũng tự thành <strong>Ngư Điểm</strong>, không chiếm ô hành trang.</li>
+            <li>Đi, đánh, dùng chiêu hay thoát game là dừng câu: chỉ câu khi đang trong game. Tối đa 240 lần mỗi ngày (4 giờ), làm mới 23:00. Bảng Hoạt động hôm nay có dòng Câu cá.</li>
+            <li>Câu cá không cho kinh nghiệm hay ngân lượng. Ngư Điểm để dành qua ngày, không mất.</li>
+          </ul>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Mẻ cá</th><th>Tỉ lệ</th><th>Ngư Điểm</th></tr></thead>
+              <tbody>
+                <tr><td>Cá nhỏ</td><td>79,5 %</td><td>+1</td></tr>
+                <tr><td>Cá vừa</td><td>18 %</td><td>+3</td></tr>
+                <tr><td>Cá to</td><td>2 %</td><td>+10</td></tr>
+                <tr><td class="wrap-cell">Cá Vàng (cả server được báo)</td><td>0,5 %</td><td>+20</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Tỉ lệ tính trên các lần được cá. Treo đủ 240 lần được khoảng 120 con cá, chừng <strong>196 Ngư Điểm</strong> mỗi ngày.</p>
+          <h4>Tiệm Ngư Ông</h4>
+          <p>Chọn <strong>Đổi Ngư Điểm</strong> ở Ngư Ông. Đồ đổi được đều khoá (không giao dịch).</p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Món</th><th>Ngư Điểm</th><th>Dùng làm gì</th></tr></thead>
+              <tbody>
+                <tr><td>Cá Nấu Gừng</td><td>5</td><td class="wrap-cell">Từ cấp 20, hồi 1.400 khí huyết trong 14 giây</td></tr>
+                <tr><td>Gỏi Cá Hảo Hạng</td><td>5</td><td class="wrap-cell">Từ cấp 20, hồi 1.330 khí huyết trong 14 giây</td></tr>
+                <tr><td>Thú Hồn</td><td>30</td><td class="wrap-cell">Nâng sao thú cưỡi</td></tr>
+                <tr><td>Tái Tạo Thạch</td><td>100</td><td class="wrap-cell">Tái tạo dòng phụ ở thợ rèn</td></tr>
+                <tr><td>Thăng Phẩm Thạch</td><td>300</td><td class="wrap-cell">Tăng phẩm ở thợ rèn</td></tr>
+                <tr><td>Thẻ Cá Voi Đom Đóm</td><td>1.000</td><td class="wrap-cell">Mở thú cưỡi Quý Cá Voi Đom Đóm, mỗi nhân vật đổi một lần</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tip">Cá Voi Đom Đóm lên đủ 10 sao thì thành Thần Cá Voi. Treo máy đều tay khoảng 5 ngày là đủ điểm đổi thẻ. Đã có con này rồi thì tiệm không bán thẻ nữa.</p>
         </article>
 
       </div>
@@ -762,7 +824,8 @@
               <li>Lên cấp 20 nhận <strong>Hồng Tông Mã</strong>. Bấm <strong>C</strong> (hoặc kĩ năng cơ bản Lên / xuống ngựa, Alt+R) để cưỡi; ra đòn thì tự xuống. Người khác thấy bạn cưỡi.</li>
               <li>Mỗi con cộng <strong>một loại chỉ số</strong> (Khí Huyết, Ngoại Công, Nội Công, Ngoại Kháng hoặc Nội Kháng), cộng dồn mọi con đã mở. Phẩm càng cao mỗi sao cộng càng nhiều.</li>
               <li><strong>Thẻ Thú Cưỡi</strong> Thường / Hiếm / Quý mở một con chưa có của phẩm đó; có đủ rồi thì ra Thú Hồn. Thẻ có ở Cổ Mộ và Phong Yêu Kính.</li>
-              <li>Nâng sao: lên sao N cần N Thú Hồn và 20.000 × N lượng, càng cao càng khó, trượt giữ sao. Thú Hồn đổi ở Tiệm Cổ Mộ (10 điểm).</li>
+              <li>Nâng sao: lên sao N cần N Thú Hồn và 20.000 × N lượng, càng cao càng khó, trượt giữ sao. Thú Hồn đổi ở Tiệm Cổ Mộ (10 điểm) hoặc <a href="#cau-ca">tiệm Ngư Ông</a> (30 Ngư Điểm).</li>
+              <li><strong>Cá Voi Đom Đóm</strong> (Quý) đổi thẳng ở tiệm Ngư Ông bằng 1.000 Ngư Điểm, mỗi nhân vật một lần.</li>
               <li>Truyền Thuyết mở bằng 200 Vô Song Điểm Phiếu ngay trong tab. Quý và Truyền Thuyết đủ 10 sao thì đổi hình.</li>
             </ul>
             <p class="tip">Chọn con cưỡi bằng nút "Đặt làm mặc định". Thần thú cũng vậy: đặt con mặc định ở tab Thần Thú, gọi ra bằng kĩ năng cơ bản Triệu hồi thần thú.</p>
@@ -782,6 +845,7 @@
       <nav class="subtabs" data-subtabs aria-label="Trang bị và rèn đồ">
         <a href="#phap-bao">Pháp bảo</a>
         <a href="#nang-sao">Nâng sao</a>
+        <a href="#bua-ma-thuat">Bùa Ma Thuật</a>
         <a href="#quang-vu-khi">Quầng vũ khí</a>
         <a href="#hop-thanh">Hợp thành đá</a>
         <a href="#tang-pham">Tăng phẩm</a>
@@ -857,11 +921,46 @@
               </table>
             </div>
             <ul>
-              <li><strong>Thất bại:</strong> mất đá, tụt 1 sao. Đồ không bao giờ vỡ.</li>
+              <li><strong>Thất bại:</strong> mất đá, tụt 1 sao. Đồ không bao giờ vỡ. Tick <a href="#bua-ma-thuat">Bùa Ma Thuật</a> thì thất bại vẫn giữ sao.</li>
               <li>Tiền mất dù thành hay bại: đồ cấp 40 lên 5 sao 160.000, lên 10 sao 320.000.</li>
             </ul>
             <p class="tip">Nâng thành công thì đồ bị phong ấn (không giao dịch được). Xem tab Phong ấn.</p>
           </div>
+        </article>
+
+        <!-- Bùa Ma Thuật (mới ở 3.4.2): forge.json charm {item remaster/bua_ma_thuat, n 1, fail keep}, rates 100..2 %;
+             custom_items.json (value 8.000, chỉ thẻ Cổ Mộ Địa Ngục); gameplay/24 §Bùa; số lần rèn kì vọng: 37 §4.33
+             (không bùa E_k = (1 + (1 - p) E_{k-1}) / p, tính cả lần lên lại sao đã tụt; có bùa 1 / p, mỗi lần mất 1 lá). -->
+        <article class="gcard sub-panel" id="bua-ma-thuat">
+          <h3><img class="gicon" src="../assets/img/huong-dan/bua-ma-thuat.png" width="32" height="52" alt="">Bùa Ma Thuật</h3>
+          <ul class="facts">
+            <li>Nâng sao xịt vẫn giữ sao</li>
+            <li>Mất 1 lá mỗi lần rèn</li>
+            <li>Chỉ có ở Cổ Mộ Địa Ngục</li>
+          </ul>
+          <ul>
+            <li>Ở thẻ <strong>Nâng sao</strong> của thợ rèn, tick ô <strong>Dùng Bùa Ma Thuật</strong> (ô ghi số lá đang có; kéo bùa vào cửa sổ rèn cũng tick được).</li>
+            <li>Có tick: mỗi lần bấm Tiến hành mất <strong>1 lá</strong>, thành hay xịt đều mất. Xịt thì trang bị <strong>giữ nguyên sao</strong>, không tụt.</li>
+            <li>Bùa không tăng tỉ lệ. Đoạn Thạch và ngân lượng vẫn mất như thường.</li>
+            <li>Tick nhầm ở bậc dễ (lên 1 sao là 100 %) vẫn mất lá, nhớ bỏ tick khi không cần.</li>
+            <li><strong>Nguồn:</strong> chỉ một thẻ trong <a href="#co-mo">bảng thẻ Cổ Mộ Địa Ngục</a> (1/16, lật 3 lượt: 19 %). Không tiệm nào bán. Thẻ lật ra là đồ thường: giao dịch, bán lại cho tiệm (8.000) được.</li>
+          </ul>
+          <h4>Vì sao bậc cao nên dùng bùa</h4>
+          <p>Không bùa, xịt là tụt 1 sao, phải nâng lại sao vừa mất rồi mới thử tiếp. Bảng dưới là số lần rèn trung bình để lên được một bậc (cột không bùa đã tính cả các lần nâng lại; cột có bùa cũng là số lá bùa cần).</p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Lên sao</th><th>Tỉ lệ</th><th>Không bùa</th><th>Có bùa</th></tr></thead>
+              <tbody>
+                <tr><td>4 lên 5</td><td>30 %</td><td>16 lần</td><td>3,3</td></tr>
+                <tr><td>5 lên 6</td><td>20 %</td><td>70 lần</td><td>5</td></tr>
+                <tr><td>6 lên 7</td><td>12 %</td><td>518 lần</td><td>8,3</td></tr>
+                <tr><td>7 lên 8</td><td>8 %</td><td>khoảng 6.000</td><td>12,5</td></tr>
+                <tr><td>8 lên 9</td><td>4 %</td><td>khoảng 143.000</td><td>25</td></tr>
+                <tr><td>9 lên 10</td><td>2 %</td><td>khoảng 7 triệu</td><td>50</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tip">Không bùa thì thực tế chỉ lên được khoảng 7 sao. Tới 5 sao rèn không bùa vẫn được, để dành bùa cho bậc 5 lên 6 trở đi. Cả 0 lên 10 sao một món tốn khoảng 100 lá.</p>
         </article>
 
         <article class="gcard gpanel sub-panel" id="quang-vu-khi">
@@ -953,7 +1052,8 @@
               <li><strong>Thành công:</strong> lên một phẩm, thêm 1 dòng phụ ngẫu nhiên, giữ nguyên sao và dòng cũ.</li>
               <li><strong>Thất bại:</strong> mất đá và tiền, đồ giữ nguyên.</li>
             </ul>
-            <p class="tip">Thăng Phẩm Thạch: Chiến Quốc Bảo Điển, bảng thẻ Cổ Mộ, đổi 10 điểm sư môn ở sư phụ hoặc 50 điểm phó bản ở Tiệm Cổ Mộ.</p>
+            <!-- treasury.json general remaster/thang_pham 300.000 (3.4.2, trước 500.000); sect_sets.json exchange 6 điểm; dungeon_gumu.json shop 30; fishing.json shop 300 -->
+            <p class="tip">Thăng Phẩm Thạch: mua ở Bảo Khố 300.000 ngân lượng, Chiến Quốc Bảo Điển, bảng thẻ Cổ Mộ, đổi 6 điểm sư môn ở sư phụ, 30 điểm phó bản ở Tiệm Cổ Mộ hoặc 300 Ngư Điểm ở Ngư Ông.</p>
           </div>
         </article>
 
@@ -987,7 +1087,7 @@
                 </tbody>
               </table>
             </div>
-            <p class="tip">Tái Tạo Thạch: quà điểm danh mỗi ngày (ngày thứ 7 gấp đôi), Chiến Quốc Bảo Điển, bảng thẻ Cổ Mộ, đổi 2 điểm sư môn hoặc 10 điểm phó bản.</p>
+            <p class="tip">Tái Tạo Thạch: quà điểm danh mỗi ngày (ngày thứ 7 gấp đôi), Chiến Quốc Bảo Điển, bảng thẻ Cổ Mộ, mua ở Bảo Khố 100.000, đổi 2 điểm sư môn, 10 điểm phó bản hoặc 100 Ngư Điểm.</p>
           </div>
         </article>
 
@@ -1087,6 +1187,8 @@
               <li>Thêm <strong>3 chiêu chung</strong> (mở ở cấp 12, 25, 35) và <strong>2 nội tại</strong> tự mạnh lên theo tổng cấp chiêu của nhánh.</li>
               <li>Cấp 1 của mọi chiêu chỉ tốn ngân lượng, không tốn điểm. Cấp chiêu tối đa tăng theo cấp nhân vật.</li>
               <li>Kéo chiêu xuống ô phím để dùng.</li>
+              <!-- stat_defs.json sect_mods, StatCard.passive_rows (nhật ký game 2026-10-05 (257)) -->
+              <li>Bảng nhân vật (<kbd>Alt+W</kbd>) có nhóm <strong>Nội tại môn phái</strong> cuối thẻ chỉ số: xem nội tại đang cộng bao nhiêu. Nhiều nội tại chỉ tính lúc đánh (vd tăng sát thương theo %) nên các dòng chỉ số khác không đổi số, đừng lo.</li>
               <li><strong>Tẩy điểm</strong> ở sư phụ: lần đầu miễn phí, sau đó 100.000 mỗi lần.</li>
             </ul>
             <p class="tip">Chiêu trấn phái đã hiện trong cây nhưng chưa mở ở bản này.</p>
@@ -1464,6 +1566,7 @@
     <div class="wrap">
       <nav class="subtabs" data-subtabs aria-label="Tiện ích">
         <a href="#dich-tram">Dịch Trạm</a>
+        <a href="#tiem-do">Tiệm đồ</a>
         <a href="#ho-phu">Cốt truyện Hổ Phù</a>
         <a href="#bang-huu">Bằng hữu</a>
         <a href="#thuoc">Thuốc 1 giờ</a>
@@ -1514,7 +1617,31 @@
               <li>Phí theo quãng đường: Tân Thủ Thôn và Chu Quốc đi lại 1 ngân lượng, xa nhất Tân Thủ Thôn tới Côn Luân 1.700.</li>
             </ul>
             <p class="tip">Nước khác sẽ hiện thêm trong danh sách khi bản đồ nước đó mở.</p>
+            <!-- ItemDb.hotbar_ok nhận Phi Hành Phù (FlyCharm.is_charm), mô tả std/0409 item_names_vi.json -->
+            <p>Trong cùng bản đồ thì dùng <strong>Phi Hành Phù</strong> (Tạp Hóa bán): niệm 2 giây rồi bay tới một chỗ ngẫu nhiên. Phù kéo được xuống ô phím, bấm phím là dùng.</p>
           </div>
+        </article>
+
+        <!-- Tiệm đồ (mở ở 3.4.2): gameplay/12 §1.10zh; ô NPC gameplay/npc/080-hoi-thoai.md (8004 / 8005 / 8006), 060-hoi-thoai.md (6004 / 6005);
+             Bảo Khố: treasury.json general (Thăng Phẩm 300.000, Tái Tạo 100.000). -->
+        <article class="gcard sub-panel" id="tiem-do">
+          <h3>Tiệm đồ trong thành</h3>
+          <ul class="facts">
+            <li>Chu Quốc, Sở Quốc</li>
+            <li>Đồ trắng tới cấp 40</li>
+          </ul>
+          <p>Tiệm Vũ Khí, Trang Phục, Trang Sức đã mở. Hàng là đồ trắng như bản gốc, món cao hơn cấp 40 chưa bày. Bán lại cho tiệm được nửa giá.</p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Tiệm</th><th>Chu Quốc</th><th>Sở Quốc</th></tr></thead>
+              <tbody>
+                <tr><td>Vũ Khí</td><td>(216, 202)</td><td>(203, 210)</td></tr>
+                <tr><td>Trang Phục</td><td>(178, 180)</td><td>(217, 201)</td></tr>
+                <tr><td>Trang Sức</td><td>(175, 178)</td><td>không có</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tip">Sở bán đồ cho người mới, Chu có hàng cấp cao hơn (vũ khí từ cấp 20 tới 40). Đồ trắng mua về tăng phẩm lên Xanh ở thợ rèn được. Bảo Khố bán Thăng Phẩm Thạch 300.000, Tái Tạo Thạch 100.000.</p>
         </article>
 
         <article class="gcard sub-panel" id="ho-phu">

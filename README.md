@@ -17,7 +17,8 @@ Trang tĩnh: HTML + CSS + một file JS nhỏ (ảnh trượt), không cần bui
 │       ├── giao-dien.jpg, nhan-vat.jpg, lang-ba.jpg, tran-phai.jpg   ảnh trượt ở đầu trang
 │       ├── og.jpg          ảnh hiện khi chia sẻ link (1200×630, cắt từ giao-dien.jpg)
 │       ├── trailer.jpg     ảnh bìa video (khung 330 của bản quay)
-│       └── huong-dan/      19 ảnh minh hoạ trang hướng dẫn (rộng 760 px, JPEG 80)
+│       └── huong-dan/      ảnh minh hoạ trang hướng dẫn (rộng 760 px, JPEG 80) + bua-ma-thuat.png (icon món 79×128,
+│                           chép từ repo game godot/assets/custom/icon/item/, hiện 32 px cạnh tên mục, class .gicon)
 ├── .nojekyll           báo GitHub Pages đừng chạy Jekyll
 └── tmp/                nháp cục bộ (bài Facebook, ảnh chụp kiểm), bỏ qua trong .gitignore
 ```
@@ -42,7 +43,7 @@ Mở thẳng `index.html` bằng trình duyệt cũng chạy (mọi đường d�
 | Bản demo 2.0 offline (Google Drive) | link "Bản cũ" ở chân trang; không còn cập nhật |
 | Làm lại video trailer | repo game: `./run.sh studio gumu` (≈3 phút, ra `build/studio_gumu.mp4` 1600×1200 có tiếng; cách dựng ở `tools/README.md` §studio), rồi thu về bản web: `ffmpeg -i build/studio_gumu.mp4 -vf scale=960:720:flags=lanczos -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart assets/video/co-mo.mp4` (ffmpeg có sẵn trong `build/venv-video` của repo game, `imageio_ffmpeg.get_ffmpeg_exe()`) |
 | Thêm / bớt ảnh trượt | một `<figure class="slide">` trong `#sliderTrack` (chấm vị trí tự sinh theo số ảnh) |
-| Sửa trang hướng dẫn | `huong-dan/index.html`. Nguồn số liệu (repo game): sư môn `godot/data/custom/sect_quests.json`; rèn `forge.json`, `equip_rules.json`; môn phái `sect_skills.json`. Vương Bộ Đầu và Cổ Mộ đang gắn nhãn "Sắp mở": mở thật thì bỏ `gcard--soon` + nhãn, thêm số liệu |
+| Sửa trang hướng dẫn | `huong-dan/index.html`. Nguồn số liệu (repo game): sư môn `godot/data/custom/sect_quests.json`, `sect_sets.json` (`exchange`); rèn `forge.json` (cả khối `charm` Bùa Ma Thuật), `equip_rules.json`; môn phái `sect_skills.json`; Tống Bảo `rare_monster.json`; Cổ Mộ `dungeon_gumu.json`; câu cá `fishing.json` (tài liệu game 54); giá Bảo Khố `treasury.json`. Đọc số từ bản đã phát (worktree nhánh `rel-<bản>`), đừng đọc bản đang sửa dở |
 | Sửa tab Chủ tuyến (`#chu-tuyen`) | `huong-dan/index.html`, mục `#ct-tong-quan`, `#ct-vet-nut`, `#ct-hoi-5` đến `#ct-hoi-10`. Nguồn số liệu (repo game): `godot/data/custom/quests/001.json` + `001-act05.json` đến `001-act10.json` (bỏ `001-archive-*`), luật đọc `godot/logic/quest.gd`; tên món `item_names_vi.json` + `custom_items.json`; NPC đứng map nào: `assets/converted/map/<map>/npcs.json`; bảng luyện cấp: `travel.json` (Tân Thủ Tiên Cô). Số thứ tự nhiệm vụ = số trong sổ nhiệm vụ (73 mỗi người: nhiệm vụ riêng phái hồi 8 mang số 55, 56). Bảng nhiệm vụ dùng `.tbl tbl--quest` (điện thoại: mỗi dòng thành một khối dọc) |
 | Thêm mục hướng dẫn | một `<article class="gcard gpanel sub-panel" id=…>` trong `.guide` của tab lớn + một link `#id` trong `.subtabs` của tab đó. `js/tabs.js` tự nhận, không phải sửa JS |
 | Chụp lại ảnh hướng dẫn | xem mục *Ảnh trang hướng dẫn* dưới |
@@ -126,3 +127,10 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   lật 2 / 3 / 3 thẻ, không lật trả tiền), Phong Yêu Kính (độc đắc thú Hiếm), Tống Bảo; mỗi mục có **bảng tỉ lệ quà** (số thẻ / 16
   và cơ hội có ít nhất một trong cả lượt lật). Số lấy từ repo game `criminal.json`, `dungeon_gumu.json`, `rare_monster.json`
   (tài liệu game 37 §4.28 đến §4.31). Ô chữ dài dùng `td.wrap-cell`.
+- 2026-10-06: theo bản 3.4.2 (số đọc ở worktree `D:\Projects\Debug-rel`, nhánh `rel-3.4.2`, không đọc bản đang sửa dở). Mục mới:
+  Câu cá `#cau-ca` (tab Hằng ngày), Bùa Ma Thuật `#bua-ma-thuat` (tab Trang bị, có icon món), Tiệm đồ `#tiem-do` (tab Tiện ích).
+  Sửa: Tống Bảo giết không giới hạn (5 lần đầu rơi đồ, thêm đồ Xanh 10 %, Tinh Thạch cấp 1 15 %), bảng thẻ Cổ Mộ Địa Ngục (Thần
+  Thú 2/16, Bùa 1/16), Thăng Phẩm 6 điểm sư môn / 30 điểm Cổ Mộ / 300.000 Bảo Khố, truy bắt (sàn đòn, sống lại 10 / 20 / 30 giây),
+  nội tại môn phái, Phi Hành Phù ô phím; trang chủ 3.4 + 2 thẻ. Chưa có ảnh câu cá (cờ chụp ở tài liệu game 54 §6:
+  `--demo-fishing --map=080 --tile=292,165`). Kiểm `tmp/w375-34.html?<rộng>#<id mục>` (một mục mỗi lần chạy: nhiều trang trong
+  một lần thì Edge headless hết `--virtual-time-budget` trước khi xong): 0 phần tử tràn ở 375 / 360 px cho 13 mục + trang chủ.
