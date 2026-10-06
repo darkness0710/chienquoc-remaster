@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chiến Quốc Remaster</title>
-  <meta name="description" content="Chiến Quốc Remaster 3.4: MMORPG Chiến Quốc (2008) hồi sinh, chơi online miễn phí. Đủ 7 môn phái, cấp tối đa 40, tổ đội cùng bằng hữu, Cổ Mộ, câu cá.">
+  <meta name="description" content="Chiến Quốc Remaster: MMORPG Chiến Quốc (2008) hồi sinh, chơi online miễn phí. Đủ 7 môn phái, tổ đội cùng bằng hữu, Cổ Mộ đấu Lữ Bố, câu cá. Bản 4.0 sắp ra mắt: trần cấp 50, phó bản Thành Kiều.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/">
-  <meta property="og:title" content="Chiến Quốc Remaster 3.4, chơi online miễn phí">
-  <meta property="og:description" content="Đủ 7 môn phái, cấp tối đa 40, tổ đội 5 người. Miễn phí, không nạp thẻ. Cố nhân, đã đến lúc trở lại.">
+  <meta property="og:title" content="Chiến Quốc Remaster, chơi online miễn phí">
+  <meta property="og:description" content="Đủ 7 môn phái, tổ đội 5 người, Cổ Mộ đấu Lữ Bố. Miễn phí, không nạp thẻ. Cố nhân, đã đến lúc trở lại.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -18,9 +18,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero-co-mo.jpg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<!-- Trang chủ làm lại 2026-10-06 (chủ repo: "giờ xấu quá chưa thấy cuốn hút"): đầu trang toàn khung ảnh / video trailer
+     (ảnh rõ, chỉ phủ tối phía sau chữ: chủ repo từng chê nền mờ và nền phủ tối cả khung), dải bản 4.0, video, lưới tính năng
+     ảnh thật, bảy môn phái, ảnh trượt cũ + lời hứa, cài đặt, lộ trình. Hiệu ứng CSS thuần (xuất hiện khi cuộn chỉ ở trình
+     duyệt có animation-timeline, nơi khác hiện sẵn). Cấu trúc + nguồn từng mục: README.md. -->
 
 <header class="bar">
   <div class="wrap bar__in">
@@ -38,58 +44,65 @@
 
 <main id="top">
 
-  <!-- Đầu trang: tên game, một câu giới thiệu, hai nút.
-       Link tải launcher có ở HAI chỗ: nút "Tải bản 3.1" ở đây và nút "Tải launcher 3.1" ở #cai-dat. -->
-  <section class="hero">
-    <div class="wrap hero__in">
-      <div class="hero__text">
-        <p class="pill">Bản 3.4 đã ra mắt</p>
-        <h1 class="hero__title">Chiến Quốc <span>Remaster</span></h1>
-        <p class="hero__lead">
-          MMORPG Chiến Quốc (2008) hồi sinh trên nền tảng mới. Vẫn là Tân Thủ Thôn ngày ấy,
-          nay chơi online cùng bằng hữu, miễn phí và không nạp thẻ.
-        </p>
-        <div class="actions">
-          <a class="btn btn--gold btn--lg" href="https://180-93-118-219.sslip.io/packs/ChienQuocRemaster-Launcher-3.1.0.zip">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
-            Tải bản 3.1
-          </a>
-          <a class="btn btn--ghost btn--lg" href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3h-3a4 4 0 0 0-4 4v3H7v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            Nhóm Facebook
-          </a>
-        </div>
-        <p class="hero__meta">Windows 64 bit · file tải 39 MB · tự cập nhật</p>
-        <a class="hero__watch" href="#trailer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Xem video: ba anh hùng đấu Lữ Bố</a>
+  <!-- Đầu trang. Nền: assets/img/hero-co-mo.jpg = khung 72 của ./run.sh studio gumu ở repo game (1600x1200), cắt
+       (500, 315)-(1600, 1100) để bỏ HUD, khung chat, bản đồ góc; 1100x785 hiện gần 1:1 nên rõ nét. Máy tính: ảnh bên trái,
+       chữ bên phải; điện thoại: ảnh trên, chữ dưới. Đã thử video trailer làm nền: 960x720 phóng lên 1440 thì nhoè (chủ repo
+       ghét nền mờ) và nặng thêm 6 MB, nên bỏ. Link tải launcher có ở HAI chỗ: nút "Tải game" ở đây và nút "Tải launcher 3.1"
+       ở #cai-dat. -->
+  <section class="hero2">
+    <div class="hero2__media" aria-hidden="true">
+      <img class="hero2__poster" src="assets/img/hero-co-mo.jpg" alt="" width="1100" height="785">
+    </div>
+    <div class="wrap hero2__in">
+      <div class="hero2__copy">
+      <a class="hero2__news" href="phien-ban/#v4-0">
+        <span class="hero2__new">Sắp ra mắt</span>
+        <span>Bản 4.0: mở trần cấp 50, phó bản Thành Kiều</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+      <h1 class="hero__title hero2__title">Chiến Quốc <span>Remaster</span></h1>
+      <p class="hero2__tag">Cố nhân, đã đến lúc trở lại.</p>
+      <p class="hero__lead">MMORPG Chiến Quốc (2008) hồi sinh trên nền tảng mới. Vẫn là Tân Thủ Thôn ngày ấy, nay chơi online cùng bằng hữu, miễn phí và không nạp thẻ.</p>
+      <div class="actions">
+        <a class="btn btn--gold btn--lg" href="https://180-93-118-219.sslip.io/packs/ChienQuocRemaster-Launcher-3.1.0.zip">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
+          Tải game
+        </a>
+        <a class="btn btn--ghost btn--lg" href="huong-dan/">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 01-3-3z"/><path d="M5 17a3 3 0 013-3h11M9 8h6"/></svg>
+          Xem hướng dẫn
+        </a>
       </div>
+      <p class="hero__meta">Windows 64 bit · file tải 39 MB · tự cập nhật ·
+        <a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook</a></p>
+      <a class="hero__watch" href="#trailer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Xem video: ba anh hùng đấu Lữ Bố</a>
+      <ul class="hero2__stats">
+        <li><b>7</b> môn phái</li>
+        <li><b>5</b> người một tổ đội</li>
+        <li><b>34</b> thú cưỡi</li>
+        <li><b>0</b> đồng nạp thẻ</li>
+      </ul>
+      </div>
+    </div>
+  </section>
 
-      <!-- Ảnh trượt ngang: CSS scroll-snap (vuốt / kéo được cả khi tắt JS); js/main.js thêm chấm vị trí,
-           nút trái phải, tự chuyển 5 s (dừng khi rê chuột, chạm, hoặc người dùng chọn giảm chuyển động). -->
-      <div class="slider" id="slider" role="region" aria-roledescription="carousel" aria-label="Ảnh trong game">
-        <div class="shot">
-          <div class="slider__track" id="sliderTrack" tabindex="0">
-            <figure class="slide">
-              <img src="assets/img/giao-dien.jpg" alt="Nhân vật cưỡi thú giữa Tân Thủ Thôn, thanh máu, bản đồ nhỏ và ô phím tắt" width="1508" height="1131">
-              <figcaption>Tân Thủ Thôn, giao diện HD</figcaption>
-            </figure>
-            <figure class="slide">
-              <img src="assets/img/nhan-vat.jpg" alt="Bảng Nhân vật và bảng Chỉ số: ô trang bị, thuộc tính, khí huyết, ngoại công, né tránh, bạo kích" width="1508" height="1131" loading="lazy">
-              <figcaption>Trang bị và toàn bộ chỉ số trong một bảng</figcaption>
-            </figure>
-            <figure class="slide">
-              <img src="assets/img/lang-ba.jpg" alt="Lướt Lăng Ba Vi Bộ, để lại vệt tàn ảnh tím" width="720" height="540" loading="lazy">
-              <figcaption>Lăng Ba Vi Bộ, khinh công thượng thừa</figcaption>
-            </figure>
-            <figure class="slide">
-              <img src="assets/img/tran-phai.jpg" alt="Thiên Quân Phá Trận: trận pháp vàng dưới chân, kiếm quang giáng xuống" width="960" height="720" loading="lazy">
-              <span class="slide__tag">Xem trước</span>
-              <figcaption>Thiên Quân Phá Trận, trấn phái Cấm Vệ Quân</figcaption>
-            </figure>
-          </div>
-          <button class="slider__nav slider__nav--prev" type="button" data-step="-1" aria-label="Ảnh trước" hidden>&#8249;</button>
-          <button class="slider__nav slider__nav--next" type="button" data-step="1" aria-label="Ảnh sau" hidden>&#8250;</button>
+  <!-- Dải bản 4.0 (chưa phát). Số: tài liệu repo game 53 §3d / §3g, §5a, 39 §8 (cùng nguồn với phien-ban/#v4-0).
+       Khi phát 4.0: đổi nhãn "Sắp ra mắt" ở đây và ở đầu trang. -->
+  <section class="next4-wrap">
+    <div class="wrap">
+      <div class="next4 reveal">
+        <div class="next4__text">
+          <p class="next4__label">Bản 4.0 · sắp ra mắt</p>
+          <h2 class="next4__title">Trần cấp 50 và doanh trại phản quân</h2>
+          <p>Theo dấu Từ Phúc ra Biển Đông, vào nước Tần dẹp loạn Thành Kiều. Bốn tướng phản quân chờ ở doanh trại, hạ đủ cả bốn mới được lật thẻ.</p>
+          <a class="btn btn--gold btn--sm" href="phien-ban/#v4-0">Bản 4.0 có gì</a>
         </div>
-        <div class="slider__dots" id="sliderDots"></div>
+        <ul class="next4__facts">
+          <li><b>Cấp 50</b><span>14 bản đồ mới, quái cấp 41 tới 50</span></li>
+          <li><b>4 boss</b><span>Phó bản Thành Kiều Quân Doanh, ba độ khó</span></li>
+          <li><b>18 nhiệm vụ</b><span>Cốt truyện hồi 11 và 12</span></li>
+          <li><b>Set bậc 2</b><span>Nâng set sư môn bằng Tử Kim Tinh</span></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -101,7 +114,7 @@
       <p class="pill trailer__pill">Quay trong game, có nhạc nền</p>
       <h2 class="title">Ba anh hùng, một Lữ Bố</h2>
       <p class="sub">Đường Tam, Tiêu Viêm và Tiểu Long Nữ cùng vào Cổ Mộ, hạ Lữ Bố rồi lật thẻ chia đồ. Pháp bảo dưới chân, cánh trên lưng, vũ khí 10 sao rực sáng.</p>
-      <div class="trailer__frame" id="trailerFrame">
+      <div class="trailer__frame reveal" id="trailerFrame">
         <video id="trailerVideo" controls preload="metadata" playsinline poster="assets/img/trailer.jpg" width="960" height="720">
           <source src="assets/video/co-mo.mp4" type="video/mp4">
         </video>
@@ -132,135 +145,206 @@
     </div>
   </section>
 
-  <!-- Bản 3.0 có gì: lưới ngắn. Nguồn: documents/tong-quan/00-tong-quan.md của repo game. -->
-  <section class="section" id="ban-3">
+  <!-- Có gì trong game: lưới thẻ ảnh thật (assets/img/huong-dan/, chụp bằng ./run.sh shot ở repo game; co-mo-tran.jpg cắt
+       từ khung 432 của ./run.sh studio gumu, 1080x510).
+       Thành Kiều và câu cá chưa có ảnh chụp: thẻ vẽ bằng CSS (cờ chụp câu cá: tài liệu game 54 §6, README.md).
+       Nguồn số: tong-quan/00 + news.json repo game; câu cá fishing.json (tài liệu 54); Thành Kiều 53 §3d / §3g. -->
+  <section class="section" id="co-gi">
     <div class="wrap">
-      <h2 class="title">Bản 3.4 có gì</h2>
-      <ul class="grid">
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg>
-          <h3>Đủ bảy môn phái</h3>
-          <p>Đào Hoa, Thục Sơn, Cấm Vệ Quân, Đường Môn, Mao Sơn, Côn Luân, Vân Mộng.</p>
+      <h2 class="title">Có gì trong game</h2>
+      <p class="sub">Đánh phó bản cùng bằng hữu, sưu tập thú cưỡi, rèn món đồ 10 sao, hay chỉ ngồi câu cá bên hồ thành Chu.</p>
+      <ul class="feats">
+        <li class="feats__wide feats__lead reveal">
+          <a class="feat" href="huong-dan/#co-mo">
+            <img src="assets/img/huong-dan/co-mo-tran.jpg" alt="Lữ Bố tụ chiêu, vùng đỏ báo trước phủ bậc đá, ba anh hùng đứng né" width="1080" height="510" loading="lazy" style="object-position: center 40%">
+            <span class="feat__body">
+              <span class="feat__tag">Phó bản</span>
+              <strong>Cổ Mộ: đấu Lữ Bố</strong>
+              <span>Đội 1 tới 5 người, ba độ khó Thường, Khó, Địa Ngục. Lữ Bố biết đổi mục tiêu, xung phong, hoá dạng thứ hai. Hạ xong lật thẻ nhận Tinh Thạch, pháp bảo, thú cưỡi.</span>
+            </span>
+          </a>
         </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19L19 5M14 5h5v5M5 14l5 5M4 20l3-3"/></svg>
-          <h3>Cấp tối đa 40</h3>
-          <p>Kĩ năng môn phái hai nhánh, tự chọn lối đánh. Chỉ đánh quái (PvE).</p>
+        <li class="reveal">
+          <a class="feat" href="#mon-phai">
+            <img src="assets/img/huong-dan/mao-son.jpg" alt="Cột sét vàng giáng xuống bầy quái" width="760" height="496" loading="lazy">
+            <span class="feat__body">
+              <span class="feat__tag">Môn phái</span>
+              <strong>Bảy môn phái</strong>
+              <span>Cây kĩ năng hai nhánh, tự chọn lối đánh.</span>
+            </span>
+          </a>
         </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5"/></svg>
-          <h3>Tổ đội 5 người</h3>
-          <p>Chơi online cùng bản đồ, gặp lại bằng hữu ở Tân Thủ Thôn.</p>
+        <li class="reveal">
+          <a class="feat feat--art feat--war" href="phien-ban/#v4-0">
+            <span class="feat__art" aria-hidden="true">
+              <span>Mã Quỷ</span><span>Lương Hưng</span><span>Yến Thập Tam</span><span>Tư Tà</span>
+            </span>
+            <span class="feat__body">
+              <span class="feat__tag feat__tag--new">Bản 4.0</span>
+              <strong>Thành Kiều: 4 boss</strong>
+              <span>Doanh trại phản quân ở nước Tần. Hạ đủ bốn tướng mới mở bảng thẻ cuối, có Tử Kim Tinh.</span>
+            </span>
+          </a>
         </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4M9 15l2 2 4-4"/></svg>
-          <h3>Việc mỗi ngày</h3>
-          <p>Sư môn 10 việc (làm mới 23:00 giờ Việt Nam), điểm danh vòng 7 ngày.</p>
+        <li class="reveal">
+          <a class="feat" href="huong-dan/#thu-cuoi">
+            <img src="assets/img/huong-dan/thu-cuoi.jpg" alt="Tab Thú cưỡi: lưới thú đủ 10 sao và tổng chỉ số" width="760" height="922" loading="lazy" style="object-position: center 30%">
+            <span class="feat__body">
+              <span class="feat__tag">Sưu tập</span>
+              <strong>34 thú cưỡi, 12 thần thú</strong>
+              <span>Mỗi con cộng chỉ số, đủ 10 sao có con đổi hình.</span>
+            </span>
+          </a>
         </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M7 20l2-6h6l2 6M9 14l-3-5 6-5 6 5-3 5"/></svg>
-          <h3>Thợ rèn</h3>
-          <p>Nâng sao, hợp thành Đoạn Thạch, tái tạo, set sư môn.</p>
+        <li class="reveal">
+          <a class="feat feat--art feat--lake" href="huong-dan/#cau-ca">
+            <span class="feat__art" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M8 34c8-10 20-13 31-7l10-8v30l-10-8c-11 6-23 3-31-7z"/><circle cx="20" cy="32" r="2.2"/></svg>
+            </span>
+            <span class="feat__body">
+              <span class="feat__tag feat__tag--new">Bản 4.0</span>
+              <strong>Câu cá bên hồ</strong>
+              <span>Từ cấp 20, ngồi câu ở Ngư Ông, 240 lần mỗi ngày. Ngư Điểm đổi Thăng Phẩm, Thú Hồn, thú cưỡi Cá Voi Đom Đóm.</span>
+            </span>
+          </a>
         </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg>
-          <h3>Bảng Thần Thú</h3>
-          <p>Sưu tập 12 thần thú con giáp (Alt+W, tab Thần Thú): mỗi con cộng chỉ số, chọn một con đi theo.</p>
+        <li class="reveal">
+          <a class="feat" href="huong-dan/#nang-sao">
+            <img src="assets/img/huong-dan/nang-sao.jpg" alt="Cửa sổ thợ rèn, thẻ Nâng sao" width="760" height="836" loading="lazy" style="object-position: center 20%">
+            <img class="feat__icon" src="assets/img/huong-dan/bua-ma-thuat.png" alt="" width="79" height="128" loading="lazy">
+            <span class="feat__body">
+              <span class="feat__tag">Rèn đồ</span>
+              <strong>Nâng sao, Bùa Ma Thuật</strong>
+              <span>Đồ lên 10 sao, khảm Tinh Thạch, tái tạo dòng. Có Bùa thì xịt vẫn giữ sao.</span>
+            </span>
+          </a>
         </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 10h8M8 14h5"/></svg>
-          <h3>Cốt truyện Hổ Phù</h3>
-          <p>Chuỗi nhiệm vụ chính từ cấp 10 tới 40 dẫn đi khắp các bản đồ, quà khoá cho người cày.</p>
+        <li class="feats__wide feats__last reveal">
+          <a class="feat" href="huong-dan/#phong-yeu-kinh">
+            <img src="assets/img/huong-dan/phong-yeu-kinh.jpg" alt="Tổ đội càn quét yêu ma trong Phong Yêu Kính" width="760" height="570" loading="lazy" style="object-position: center 40%">
+            <span class="feat__body">
+              <span class="feat__tag">Online</span>
+              <strong>Chơi cùng bằng hữu</strong>
+              <span>Tổ đội 5 người, chia kinh nghiệm, kênh chat Thế Giới. Cùng nhau truy bắt phản đồ, càn quét Phong Yêu Kính, săn Tống Bảo Tiểu Yêu.</span>
+            </span>
+          </a>
         </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19L19 5M14 5h5v5M5 14l5 5M4 20l3-3"/></svg>
-          <h3>Cổ Mộ, truy bắt, Dịch Trạm</h3>
-          <p>Cổ Mộ ba mức Thường, Khó, Địa Ngục (cấp 20, 30, 40), Lữ Bố có dạng thứ hai. Vương Bộ Đầu truy bắt đơn và nhóm, Dịch Trạm đưa đi các thành và căn cứ môn phái.</p>
-        </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 4v3M12 17v3M4 12h3M17 12h3"/></svg>
-          <h3>Phó bản Phong Yêu Kính</h3>
-          <p>Tả Khâu Minh ở Chu: nộp một món trang bị Xanh, cả đội càn quét yêu ma, hạ Kính Ma rồi lật thẻ nhận Tinh Thạch, pháp bảo, Thẻ Thú Cưỡi.</p>
-        </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16c2-5 6-8 11-8l3-3 1 4c1 2 1 5-1 7H8M7 16v4M16 16v4"/></svg>
-          <h3>34 thú cưỡi</h3>
-          <p>Mở bằng Thẻ Thú Cưỡi, nâng sao bằng Thú Hồn, mỗi con cộng một loại chỉ số, đủ 10 sao có con đổi hình. Nhận Hồng Tông Mã ở cấp 20, bấm C để cưỡi.</p>
-        </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7z"/></svg>
-          <h3>Vô Song Điểm Phiếu</h3>
-          <p>Nhận ở phó bản, đổi phi phong hoặc cánh 10 bậc ở Quân Sư Vô Song Thành, mở ngoại trang (Alt+W), mở thú cưỡi Truyền Thuyết.</p>
-        </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v10H9l-5 4z"/></svg>
-          <h3>Chat Thế Giới, Tu Vị</h3>
-          <p>Kênh Hiện tại, Nhóm, Thế Giới. Online cộng dồn lên bậc Tu Vị, có quà online mỗi ngày.</p>
-        </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 15a4 4 0 1 1 1-7.9A5 5 0 0 1 18 9a3 3 0 0 1 0 6zM8 18l-1 2M12 18l-1 2M16 18l-1 2"/></svg>
-          <h3>Thời tiết</h3>
-          <p>Mỗi tiếng có hoa đào rơi, lá thu, mưa và tuyết, mọi bản đồ cùng lúc. Bật / tắt bằng nút cạnh bản đồ góc.</p>
-        </li>
-        <!-- 3.4.2: fishing.json + tài liệu 54; Bùa Ma Thuật forge.json charm + tài liệu 37 §4.33 (repo game, nhánh rel-3.4.2) -->
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12c3-4 7-5 11-3l4-3v12l-4-3c-4 2-8 1-11-3z"/><circle cx="8" cy="11" r="1"/></svg>
-          <h3><a href="huong-dan/#cau-ca">Câu cá ở Ngư Ông</a></h3>
-          <p>Từ cấp 20, ngồi câu bên hồ thành Chu, mỗi ngày 240 lần. Đổi Ngư Điểm lấy Thăng Phẩm, Tái Tạo, Thú Hồn và thú cưỡi Cá Voi Đom Đóm.</p>
-        </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="1.5"/><path d="M9 8h6M12 8v9M9.5 12.5h5"/></svg>
-          <h3><a href="huong-dan/#bua-ma-thuat">Bùa Ma Thuật</a></h3>
-          <p>Rơi ở bảng thẻ Cổ Mộ Địa Ngục. Tick khi nâng sao: xịt thì giữ nguyên sao, mỗi lần rèn mất một lá.</p>
-        </li>
-        <li class="card card--gift">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="11" rx="1.5"/><path d="M3 13h18M12 9v11M12 9c-2-4-6-4-6-1s6 1 6 1c2-4 6-4 6-1s-6 1-6 1"/></svg>
-          <h3>Quà tân thủ: <code>welcome</code> <code>welcome2</code></h3>
-          <p>Nhập ở Thần Tiên Gia Gia (Tân Thủ Thôn), mỗi mã nhận một lần: 30 thẻ Lăng Ba Vi Bộ và 100.000 ngân lượng.</p>
-        </li>
+      </ul>
+
+      <!-- Tính năng khác: mỗi chip một link sang trang hướng dẫn. -->
+      <ul class="chips reveal" aria-label="Tính năng khác">
+        <li><a href="huong-dan/#su-mon">Sư môn 10 việc mỗi ngày</a></li>
+        <li><a href="huong-dan/#vuong-bo-dau">Truy bắt đơn và nhóm</a></li>
+        <li><a href="huong-dan/#tong-bao">Tống Bảo Tiểu Yêu</a></li>
+        <li><a href="huong-dan/#chu-tuyen">Cốt truyện Hổ Phù</a></li>
+        <li><a href="huong-dan/#bang-than-thu">Bảng Thần Thú</a></li>
+        <li><a href="huong-dan/#tai-tao">Tái tạo, tăng phẩm</a></li>
+        <li><a href="huong-dan/#do-lung">Vô Song Điểm Phiếu</a></li>
+        <li><a href="huong-dan/#dich-tram">Dịch Trạm</a></li>
+        <li><a href="huong-dan/#thoi-tiet">Thời tiết theo giờ</a></li>
+        <li><a href="huong-dan/#bang-huu">Bằng hữu</a></li>
       </ul>
     </div>
   </section>
 
-  <!-- Lời hứa (giữ từ bản đầu 2026-09-30, chủ repo hỏi lại 2026-10-02). -->
-  <section class="section section--alt" id="loi-hua">
+  <!-- Bảy môn phái: ảnh chiêu từ trang hướng dẫn (assets/img/huong-dan/<phái>.jpg), vai trò chép từ .sect__role ở đó.
+       Màu nhấn mỗi phái (--c) chọn theo màu chiêu trong ảnh. Điện thoại: một hàng vuốt ngang. -->
+  <section class="section section--alt" id="mon-phai">
     <div class="wrap">
-      <h2 class="title">Làm vì yêu Chiến Quốc</h2>
-      <p class="sub">Chiến Quốc Remaster được làm bởi cộng đồng những người thực sự yêu thích Chiến Quốc, không phải bởi một công ty.</p>
-      <ul class="grid">
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5"/></svg>
-          <h3>Từ cộng đồng, cho cộng đồng</h3>
-          <p>Mỗi bản sửa, mỗi tính năng đều đến từ những người từng chơi Chiến Quốc và muốn thấy nó sống lại.</p>
-        </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
-          <h3>Miễn phí mãi mãi</h3>
-          <p>Không nạp thẻ, không bán vật phẩm, không có bất cứ hình thức thu tiền nào.</p>
-        </li>
-        <li class="card">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 7h14M5 7l-3 6a3 3 0 0 0 6 0zM19 7l-3 6a3 3 0 0 0 6 0zM8 21h8"/></svg>
-          <h3>Giữ cốt lõi, sửa lỗi, cân bằng</h3>
-          <p>Duy trì mọi giá trị cốt lõi của game cũ, đồng thời sửa các lỗi và cân bằng lại lối chơi.</p>
-        </li>
+      <h2 class="title">Bảy môn phái</h2>
+      <p class="sub">Đủ cấp 10 thì tới căn cứ bái sư. Mỗi phái hai nhánh chiêu, đổi nhánh được ở sư phụ.</p>
+      <ul class="sects pstrip">
+        <li class="reveal" style="--c: #ff8fc8"><a class="sect" href="huong-dan/#dao-hoa">
+          <img src="assets/img/huong-dan/dao-hoa.jpg" alt="Đào Hoa Nguyên: vòng khí vàng hồng" width="760" height="496" loading="lazy">
+          <span class="sect__body"><strong>Đào Hoa Nguyên</strong><span>Cận chiến, ngoại công, đỡ đòn</span></span></a></li>
+        <li class="reveal" style="--c: #ff6a4d"><a class="sect" href="huong-dan/#thuc-son">
+          <img src="assets/img/huong-dan/thuc-son.jpg" alt="Thục Sơn: mưa kiếm đỏ" width="760" height="496" loading="lazy">
+          <span class="sect__body"><strong>Thục Sơn</strong><span>Cận chiến hoặc tầm xa, hỗ trợ</span></span></a></li>
+        <li class="reveal" style="--c: #6fe2e8"><a class="sect" href="huong-dan/#cam-ve-quan">
+          <img src="assets/img/huong-dan/cam-ve-quan.jpg" alt="Cấm Vệ Quân: lốc thương xanh ngọc" width="760" height="496" loading="lazy">
+          <span class="sect__body"><strong>Cấm Vệ Quân</strong><span>Cận chiến, ngoại công</span></span></a></li>
+        <li class="reveal" style="--c: #a78bff"><a class="sect" href="huong-dan/#duong-mon">
+          <img src="assets/img/huong-dan/duong-mon.jpg" alt="Đường Môn: ám khí tím nổ khắp vùng" width="760" height="496" loading="lazy">
+          <span class="sect__body"><strong>Đường Môn</strong><span>Tầm xa hoặc ám sát, ngoại công</span></span></a></li>
+        <li class="reveal" style="--c: #ffd34d"><a class="sect" href="huong-dan/#mao-son">
+          <img src="assets/img/huong-dan/mao-son.jpg" alt="Mao Sơn: cột sét vàng" width="760" height="496" loading="lazy">
+          <span class="sect__body"><strong>Mao Sơn</strong><span>Tầm xa, nội công, triệu hồi</span></span></a></li>
+        <li class="reveal" style="--c: #5aa8ff"><a class="sect" href="huong-dan/#con-luan">
+          <img src="assets/img/huong-dan/con-luan.jpg" alt="Côn Luân: trận băng xanh lam" width="760" height="496" loading="lazy">
+          <span class="sect__body"><strong>Côn Luân</strong><span>Tầm xa, pháp sư tấn công</span></span></a></li>
+        <li class="reveal" style="--c: #c9f08a"><a class="sect" href="huong-dan/#van-mong">
+          <img src="assets/img/huong-dan/van-mong.jpg" alt="Vân Mộng Cốc: trận pháp sáng dưới chân" width="760" height="496" loading="lazy">
+          <span class="sect__body"><strong>Vân Mộng Cốc</strong><span>Tầm xa, nội công, hồi máu</span></span></a></li>
       </ul>
+    </div>
+  </section>
+
+  <!-- Lời hứa (giữ từ bản đầu 2026-09-30, chủ repo hỏi lại 2026-10-02) + ảnh trượt cũ (chủ repo từng hỏi "mấy ảnh cũ đâu").
+       Ảnh trượt: CSS scroll-snap (vuốt / kéo được cả khi tắt JS); js/main.js thêm chấm vị trí, nút trái phải, tự chuyển 5 s. -->
+  <section class="section" id="loi-hua">
+    <div class="wrap promise">
+      <div class="promise__text reveal">
+        <h2 class="title promise__title">Làm vì yêu Chiến Quốc</h2>
+        <p class="promise__lead">Chiến Quốc Remaster được làm bởi cộng đồng những người thực sự yêu thích Chiến Quốc, không phải bởi một công ty.</p>
+        <ul class="promise__list">
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5"/></svg>
+            <div><h3>Từ cộng đồng, cho cộng đồng</h3><p>Mỗi bản sửa, mỗi tính năng đều đến từ những người từng chơi Chiến Quốc và muốn thấy nó sống lại.</p></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+            <div><h3>Miễn phí mãi mãi</h3><p>Không nạp thẻ, không bán vật phẩm, không có bất cứ hình thức thu tiền nào.</p></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 7h14M5 7l-3 6a3 3 0 0 0 6 0zM19 7l-3 6a3 3 0 0 0 6 0zM8 21h8"/></svg>
+            <div><h3>Giữ cốt lõi, sửa lỗi, cân bằng</h3><p>Duy trì mọi giá trị cốt lõi của game cũ, đồng thời sửa các lỗi và cân bằng lại lối chơi.</p></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="slider reveal" id="slider" role="region" aria-roledescription="carousel" aria-label="Ảnh trong game">
+        <div class="shot">
+          <div class="slider__track" id="sliderTrack" tabindex="0">
+            <figure class="slide">
+              <img src="assets/img/giao-dien.jpg" alt="Nhân vật cưỡi thú giữa Tân Thủ Thôn, thanh máu, bản đồ nhỏ và ô phím tắt" width="1508" height="1131" loading="lazy">
+              <figcaption>Tân Thủ Thôn, giao diện HD</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="assets/img/nhan-vat.jpg" alt="Bảng Nhân vật và bảng Chỉ số: ô trang bị, thuộc tính, khí huyết, ngoại công, né tránh, bạo kích" width="1508" height="1131" loading="lazy">
+              <figcaption>Trang bị và toàn bộ chỉ số trong một bảng</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="assets/img/lang-ba.jpg" alt="Lướt Lăng Ba Vi Bộ, để lại vệt tàn ảnh tím" width="720" height="540" loading="lazy">
+              <figcaption>Lăng Ba Vi Bộ, khinh công thượng thừa</figcaption>
+            </figure>
+            <figure class="slide">
+              <img src="assets/img/tran-phai.jpg" alt="Thiên Quân Phá Trận: trận pháp vàng dưới chân, kiếm quang giáng xuống" width="960" height="720" loading="lazy">
+              <span class="slide__tag">Xem trước</span>
+              <figcaption>Thiên Quân Phá Trận, trấn phái Cấm Vệ Quân</figcaption>
+            </figure>
+          </div>
+          <button class="slider__nav slider__nav--prev" type="button" data-step="-1" aria-label="Ảnh trước" hidden>&#8249;</button>
+          <button class="slider__nav slider__nav--next" type="button" data-step="1" aria-label="Ảnh sau" hidden>&#8250;</button>
+        </div>
+        <div class="slider__dots" id="sliderDots"></div>
+      </div>
     </div>
   </section>
 
   <!-- Cài đặt 3 bước + cấu hình. Số (39 MB, 5,6 GB, 8 GB): phiên điều phối 2026-10-02. -->
-  <section class="section" id="cai-dat">
+  <section class="section section--alt" id="cai-dat">
     <div class="wrap">
       <h2 class="title">Cài đặt 3 bước</h2>
       <ol class="steps">
-        <li>
+        <li class="reveal">
           <h3>Tải và giải nén</h3>
           <p>Tải file zip (39 MB), giải nén vào một thư mục bình thường, đừng để trong Program Files.</p>
         </li>
-        <li>
+        <li class="reveal">
           <h3>Chạy launcher</h3>
           <p>Mở thư mục ChienQuocRemaster, chạy ChienQuocRemaster.exe. Lần đầu launcher tự tải gói game khoảng 7 GB, lần sau chỉ tải phần mới. Launcher tự cập nhật cả chính nó.</p>
         </li>
-        <li>
+        <li class="reveal">
           <h3>Tạo tài khoản</h3>
           <p>Đăng kí ngay ở màn đăng nhập, tạo nhân vật rồi vào game.</p>
         </li>
@@ -275,6 +359,16 @@
         <p class="note">Windows báo "Windows protected your PC" thì bấm More info, rồi Run anyway. Launcher chưa có chữ kí số, không phải virus.</p>
       </div>
 
+      <!-- Quà tân thủ: mã đang chạy trên máy chủ 3.x (gift_codes.json repo game). Bản 4.0 đổi quà mã welcome và bỏ welcome2
+           (phien-ban/#v4-0): sửa thẻ này khi phát. -->
+      <div class="gift reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="11" rx="1.5"/><path d="M3 13h18M12 9v11M12 9c-2-4-6-4-6-1s6 1 6 1c2-4 6-4 6-1s-6 1-6 1"/></svg>
+        <div>
+          <h3>Quà tân thủ: <code>welcome</code> <code>welcome2</code></h3>
+          <p>Nhập ở Thần Tiên Gia Gia (Tân Thủ Thôn), mỗi mã nhận một lần: 30 thẻ Lăng Ba Vi Bộ và 100.000 ngân lượng.</p>
+        </div>
+      </div>
+
       <dl class="spec">
         <div><dt>Hệ điều hành</dt><dd>Windows 10 hoặc 11, 64 bit</dd></div>
         <div><dt>Ổ trống</dt><dd>Ít nhất 10 GB</dd></div>
@@ -284,30 +378,31 @@
       </dl>
     </div>
   </section>
-  <!-- Lộ trình. -->
-  <section class="section section--alt" id="lo-trinh">
+
+  <!-- Lộ trình. Chi tiết từng bản: phien-ban/. -->
+  <section class="section" id="lo-trinh">
     <div class="wrap">
       <h2 class="title">Từ kí ức tới máy chủ mới</h2>
       <ol class="timeline">
-        <li>
+        <li class="reveal">
           <time>2008</time>
           <h3>Chiến Quốc ra mắt</h3>
           <p>MMORPG 2.5D isometric, bảy nước, bảy môn phái. Tuổi thơ của cả một thế hệ game thủ Việt.</p>
         </li>
-        <li class="is-done">
+        <li class="is-done reveal">
           <time>Tháng 9/2026</time>
           <h3>Bản demo 2.0, chơi offline</h3>
           <p>Lần đầu người chơi quay lại Tân Thủ Thôn: bốn vùng đất, cốt truyện Vết Nứt, môn phái Cấm Vệ Quân và cuộc gặp gỡ Lữ Bố.</p>
         </li>
-        <li class="is-done">
+        <li class="is-done reveal">
           <time>Tháng 10/2026</time>
           <h3>Bản 3.0, chơi online</h3>
-          <p>Máy chủ mới, chơi cùng bằng hữu. Đủ bảy môn phái, cấp tối đa 40, tổ đội 5 người, nhiệm vụ sư môn, điểm danh và thợ rèn. Launcher tự tải và tự cập nhật game.</p>
+          <p>Máy chủ mới, chơi cùng bằng hữu. Đủ bảy môn phái, cấp tối đa 40, Cổ Mộ, thú cưỡi, thần thú. Launcher tự tải và tự cập nhật game.</p>
         </li>
-        <li class="is-next">
-          <time>Sắp tới</time>
-          <h3>Vá lỗi và mở thêm nội dung</h3>
-          <p>Sửa theo góp ý của người chơi, mở dần kĩ năng trấn phái và vùng đất mới. Tin mới sẽ báo trong nhóm cộng đồng.</p>
+        <li class="is-next reveal">
+          <time>Sắp ra mắt</time>
+          <h3>Bản 4.0, trần cấp 50</h3>
+          <p>Biển Đông, nước Tần, Kênh Trịnh Quốc và phó bản Thành Kiều. <a href="phien-ban/">Xem mọi phiên bản</a>.</p>
         </li>
       </ol>
     </div>

@@ -4,7 +4,9 @@ Trang tĩnh: HTML + CSS + một file JS nhỏ (ảnh trượt), không cần bui
 (chỉ font Google). Chạy trên GitHub Pages: https://darkness0710.github.io/chienquoc-remaster/
 
 ```
-├── index.html          trang chủ: đầu trang (ảnh trượt ngang), video trailer #trailer + 3 thẻ ảnh, "Bản 3.0 có gì", "Lời hứa", "Cài đặt 3 bước", "Lộ trình", chân trang
+├── index.html          trang chủ: đầu trang (ảnh lớn bên trái, chữ bên phải), dải "Bản 4.0" .next4, video trailer #trailer + 3 thẻ ảnh,
+│                       "Có gì trong game" #co-gi (lưới thẻ ảnh .feats + chip), "Bảy môn phái" #mon-phai, "Lời hứa" + ảnh trượt #loi-hua,
+│                       "Cài đặt 3 bước" #cai-dat (kèm thẻ quà tân thủ), "Lộ trình" #lo-trinh, chân trang
 ├── huong-dan/index.html  trang /huong-dan/: 6 tab (Hằng ngày, Chủ tuyến, Thần Thú, Trang bị, Môn phái, Tiện ích), tab con, ảnh trong game
 ├── phien-ban/index.html  trang /phien-ban/: mỗi bản một thẻ (ngày phát hành, tính năng mới / cân bằng / sửa lỗi), mới nhất ở trên, mục lục nhảy nhanh dính dưới thanh trên
 ├── css/style.css       giao diện (màu ở :root: xanh mực + vàng kim như giao diện game)
@@ -15,10 +17,13 @@ Trang tĩnh: HTML + CSS + một file JS nhỏ (ảnh trượt), không cần bui
 │   ├── pattern-cloud.svg   hoạ tiết mây lành ở nền đầu trang
 │   ├── video/co-mo.mp4    trailer Cổ Mộ (960×720, H.264 + AAC, faststart, ~6 MB)
 │   └── img/
-│       ├── giao-dien.jpg, nhan-vat.jpg, lang-ba.jpg, tran-phai.jpg   ảnh trượt ở đầu trang
+│       ├── hero-co-mo.jpg  nền đầu trang (1100×785): khung 72 của `./run.sh studio gumu` (repo game, `build/studio_gumu/f0072.jpg`,
+│       │                   1600×1200) cắt (500, 315)-(1600, 1100) để bỏ HUD, khung chat, bản đồ góc
+│       ├── giao-dien.jpg, nhan-vat.jpg, lang-ba.jpg, tran-phai.jpg   ảnh trượt ở mục #loi-hua
 │       ├── og.jpg          ảnh hiện khi chia sẻ link (1200×630, cắt từ giao-dien.jpg)
 │       ├── trailer.jpg     ảnh bìa video (khung 330 của bản quay)
-│       └── huong-dan/      ảnh minh hoạ trang hướng dẫn (rộng 760 px, JPEG 80) + bua-ma-thuat.png (icon món 79×128,
+│       └── huong-dan/      ảnh minh hoạ trang hướng dẫn (rộng 760 px, JPEG 80), co-mo-tran.jpg (1080×510, khung 432 của
+│                           studio gumu cắt (250, 290)-(1330, 800), thẻ Cổ Mộ ở trang chủ) + bua-ma-thuat.png (icon món 79×128,
 │                           chép từ repo game godot/assets/custom/icon/item/, hiện 32 px cạnh tên mục, class .gicon)
 ├── .nojekyll           báo GitHub Pages đừng chạy Jekyll
 └── tmp/                nháp cục bộ (bài Facebook, ảnh chụp kiểm), bỏ qua trong .gitignore
@@ -39,8 +44,9 @@ Mở thẳng `index.html` bằng trình duyệt cũng chạy (mọi đường d�
 |---|---|
 | Đổi link tải launcher | `index.html`: **hai** nút có link `ChienQuocRemaster-Launcher-…zip` (đầu trang và mục `#cai-dat`) |
 | Đổi cỡ file / dung lượng | `index.html`: dòng `hero__meta`, bước 1 và 2 của `#cai-dat`, bảng `.spec` |
-| Đổi tính năng bản hiện hành | lưới `#ban-3` (nguồn: `documents/tong-quan/00-tong-quan.md` của repo game) |
-| Đổi link nhóm cộng đồng | nút "Nhóm Facebook" đầu trang **và** link ở chân trang (nguồn gốc: `godot/data/custom/about.json` của repo game) |
+| Đổi tính năng nổi bật ở trang chủ | lưới `.feats` + hàng chip `.chips` của `#co-gi` (thẻ `feats__wide` chiếm hai cột; nguồn: `documents/tong-quan/00-tong-quan.md`, `news.json` của repo game). Thẻ chưa có ảnh (Thành Kiều, câu cá) vẽ bằng CSS (`feat--art`); có ảnh thì đổi sang `<img>` như thẻ khác |
+| Khi phát 4.0 | trang chủ: nhãn "Sắp ra mắt" ở `.hero2__news`, `.next4__label`, mốc cuối `#lo-trinh`, nhãn "Bản 4.0" trên thẻ `.feats`, thẻ quà tân thủ (mã `welcome` đổi quà, bỏ `welcome2`); trang Phiên bản: xem comment trên thẻ `#v4-0` |
+| Đổi link nhóm cộng đồng | link "Nhóm Facebook" ở dòng `hero__meta` đầu trang **và** link ở chân trang (nguồn gốc: `godot/data/custom/about.json` của repo game) |
 | Bản demo 2.0 offline (Google Drive) | link "Bản cũ" ở chân trang; không còn cập nhật |
 | Làm lại video trailer | repo game: `./run.sh studio gumu` (≈3 phút, ra `build/studio_gumu.mp4` 1600×1200 có tiếng; cách dựng ở `tools/README.md` §studio), rồi thu về bản web: `ffmpeg -i build/studio_gumu.mp4 -vf scale=960:720:flags=lanczos -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart assets/video/co-mo.mp4` (ffmpeg có sẵn trong `build/venv-video` của repo game, `imageio_ffmpeg.get_ffmpeg_exe()`) |
 | Thêm / bớt ảnh trượt | một `<figure class="slide">` trong `#sliderTrack` (chấm vị trí tự sinh theo số ảnh) |
@@ -131,6 +137,18 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   lật 2 / 3 / 3 thẻ, không lật trả tiền), Phong Yêu Kính (độc đắc thú Hiếm), Tống Bảo; mỗi mục có **bảng tỉ lệ quà** (số thẻ / 16
   và cơ hội có ít nhất một trong cả lượt lật). Số lấy từ repo game `criminal.json`, `dungeon_gumu.json`, `rare_monster.json`
   (tài liệu game 37 §4.28 đến §4.31). Ô chữ dài dùng `td.wrap-cell`.
+- 2026-10-06: **trang chủ làm lại** (chủ repo: "giờ xấu quá chưa thấy cuốn hút"). Đầu trang: ảnh trận Lữ Bố cắt từ bản quay studio
+  (rõ nét, hiện gần 1:1) bên trái, mờ dần sang phải, chữ bên phải; điện thoại ảnh trên chữ dưới (phóng 1,45 vào góc có nhân vật).
+  Lớp tối chỉ sau chữ, không phủ cả khung (chủ repo từng chê nền mờ, nền phủ tối "xỉn"). **Đã thử, bỏ:** video trailer làm nền
+  (960×720 phóng lên 1440 nhoè, thêm 6 MB); ảnh trailer.jpg phủ toàn khung (lộ chữ HUD "Cổ Mộ (thường) 44:46" và khung chat).
+  Thêm dải "Bản 4.0 sắp ra mắt" đè mép dưới đầu trang, lưới 7 thẻ ảnh "Có gì trong game" (thay 16 thẻ biểu tượng của "Bản 3.4 có
+  gì"), dải 7 môn phái màu riêng (điện thoại vuốt ngang), lời hứa gộp với ảnh trượt cũ. Hai nút đầu trang: Tải game, Xem hướng
+  dẫn (nút Nhóm Facebook thành link ở dòng nhỏ). Hiệu ứng: rê chuột nổi thẻ + phóng ảnh, xuất hiện khi cuộn bằng
+  `animation-timeline: view()` trong `@supports` (Firefox / Safari cũ hiện sẵn, không ẩn gì), tôn trọng giảm chuyển động. Kiểm:
+  0 phần tử tràn ở 375 / 360 / 1440 px (ảnh đầu trang phóng 1,45 ở điện thoại nằm trong khung `overflow: hidden`, `scrollWidth`
+  vẫn bằng bề rộng; `tmp/pv/w.html` bỏ qua `.hero2__media`). Ảnh chụp trước / sau: `tmp/pv/home-before-1440.png`, `home-after-*.png`.
+  Ảnh còn thiếu (cần chụp ở repo game): câu cá (`./run.sh shot tmp/cau-ca.png --ui --demo-fishing --map=080 --tile=292,165`,
+  tài liệu game 54 §6), Thành Kiều (khi phó bản xong).
 - 2026-10-06: trang **Phiên bản** `/phien-ban/` (chủ repo: "ghi rõ từng phiên bản có thay đổi gì, kèm ngày phát hành"): link "Phiên bản" ở thanh trên
   mọi trang (màn dưới 560 px ẩn chữ tên cạnh logo để logo + 3 mục vừa 360 px). 15 thẻ: 4.0 (sắp ra mắt), 3.4.1 tới 3.0.0, 2.0.0, Demo 1.0. 3.4.2 không
   phát (gộp vào 4.0). 3.0.0 và 3.0.3 không có tag git: ngày lấy ở nhật ký repo game ((127), (140)); 3.0.3 không có tin launcher, chữ viết lại từ nhật ký.
