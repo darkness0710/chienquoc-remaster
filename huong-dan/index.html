@@ -78,6 +78,7 @@
         <a href="#co-mo">Cổ Mộ</a>
         <a href="#phong-yeu-kinh">Phong Yêu Kính</a>
         <a href="#tong-bao">Tống Bảo Tiểu Yêu</a>
+        <a href="#trom-bao">Trộm Bảo Phi Tặc</a>
         <a href="#cau-ca">Câu cá</a>
       </nav>
 
@@ -365,6 +366,45 @@
               </table>
             </div>
             <p class="tip">Cao hơn quái quá 10 cấp thì không có thưởng.</p>
+          </div>
+        </article>
+
+        <!-- Trộm Bảo Phi Tặc (bản 4.1): repo game data/custom/treasure_thief.json, logic/treasure_thief.gd, tài liệu 37 §4.40;
+             số do phiên làm tính năng gửi 2026-10-06 (đã chốt với chủ repo). -->
+        <article class="gcard sub-panel" id="trom-bao">
+          <h3>Trộm Bảo Phi Tặc</h3>
+          <ul class="facts">
+            <li>Mới ở bản 4.1</li>
+            <li>Mỗi đầu giờ, 5 con</li>
+            <li>10 con mỗi ngày</li>
+          </ul>
+          <ul>
+            <li>Mỗi đầu giờ có <strong>5 Trộm Bảo Phi Tặc</strong> hiện ở 5 bản đồ khác nhau, chọn ngẫu nhiên trong các bản đồ có Tống Bảo Tiểu Yêu (bãi luyện cấp 10 tới 40). Phút 55 kênh hệ thống báo trước. Hết giờ cả đợt bay đi, kể cả con đang bị đánh.</li>
+            <li>Con trộm đứng yên, không đánh được cho tới khi có người <strong>Khiêu chiến</strong>: đứng gần (3 ô) bấm vào nó, chọn Khiêu chiến. Nó hoá đúng cấp người bấm, máu gấp 20 quái cùng cấp.</li>
+            <li>Người khác đánh phụ được. Ai ra <strong>đòn cuối</strong> thì người đó và cả đội đứng cùng bản đồ nhận thưởng.</li>
+            <li>Mỗi nhân vật nhận thưởng <strong>10 con mỗi ngày</strong> (làm mới 23:00). Chênh cấp con trộm quá 10 thì không nhận, không mất lượt.</li>
+            <li>Cả đội chết, rời bản đồ, hoặc 2 phút không ai đánh: con trộm hồi đầy máu và về trạng thái không đánh được.</li>
+            <li><strong>Bảo Điển</strong> có tab Trộm Bảo: 5 bản đồ của giờ này, con nào còn, đang giao đấu hay đã bị bắt, đếm ngược tới đợt sau, lượt còn. Bảng Hoạt động có dòng Trộm Bảo Phi Tặc.</li>
+          </ul>
+          <h4>Thưởng mỗi con</h4>
+          <p>Mỗi người một đống đồ riêng dưới đất, chỉ mình thấy, bấm Space để nhặt. Kinh nghiệm bằng 10 con quái cùng cấp.</p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Phần thưởng</th><th>Số lượng / tỉ lệ</th></tr></thead>
+              <tbody>
+                <tr><td>Túi tiền</td><td>5 túi, tổng cấp con trộm × 600 (cấp 40: 24.000)</td></tr>
+                <tr><td>Thuốc hồi đúng cấp</td><td>3</td></tr>
+                <tr><td>Thuốc tăng chỉ số 1 giờ</td><td>1</td></tr>
+                <tr><td colspan="2"><strong>Một món quý (khoá):</strong></td></tr>
+                <tr><td>Tinh Thạch cấp 1</td><td>35 %</td></tr>
+                <tr><td>Sơ Cấp Đoạn Thạch</td><td>25 %</td></tr>
+                <tr><td>Đồ Xanh đúng cấp (phong ấn)</td><td>20 %</td></tr>
+                <tr><td>Tử Sâm Đơn</td><td>10 %</td></tr>
+                <tr><td>Thăng Phẩm Thạch</td><td>5 %</td></tr>
+                <tr><td>Pháp bảo 0 sao</td><td>3 %</td></tr>
+                <tr><td>Trung Cấp Đoạn Thạch</td><td>2 %</td></tr>
+              </tbody>
+            </table>
           </div>
         </article>
 
@@ -905,22 +945,24 @@
           </div>
           <figure class="gshot">
             <img src="../assets/img/huong-dan/nang-sao.jpg" width="760" height="836" loading="lazy" alt="Cửa sổ Nâng sao: áo 3 sao cộng Trung Cấp Đoạn Thạch, tỉ lệ 45 %, giá và bảng đá cần cho từng sao">
-            <figcaption>Áo 3 sao lên 4 sao: 45 %</figcaption>
+            <figcaption>Áo 3 sao lên 4 sao (ảnh chụp bảng tỉ lệ cũ 45 %; từ bản 4.1 là 70 %)</figcaption>
           </figure>
           <div class="gtext">
             <p>Mỗi sao tăng chỉ số chính của món: vũ khí và hạng liên tăng công, áo nón yêu đới tăng kháng, giày tăng thân thủ và ngoại kháng. Đồ cấp càng cao, mỗi sao cộng càng nhiều.</p>
+            <!-- Bản 4.1 (repo game forge.json rates, nhật ký (278)): 100/90/80/.../10, trước 100/80/60/45/30/20/12/8/4/2. -->
             <div class="tbl">
               <table>
-                <thead><tr><th>Lên sao</th><th>Cần đá</th><th>Tỉ lệ</th></tr></thead>
+                <thead><tr><th>Lên sao</th><th>Cần đá</th><th>Tỉ lệ (từ bản 4.1)</th></tr></thead>
                 <tbody>
-                  <tr><td>1, 2</td><td>Sơ Cấp Đoạn Thạch</td><td>100 %, 80 %</td></tr>
-                  <tr><td>3, 4</td><td>Trung Cấp Đoạn Thạch</td><td>60 %, 45 %</td></tr>
-                  <tr><td>5, 6</td><td>Cao Cấp Đoạn Thạch</td><td>30 %, 20 %</td></tr>
-                  <tr><td>7, 8</td><td>Đỉnh Cấp Đoạn Thạch</td><td>12 %, 8 %</td></tr>
-                  <tr><td>9, 10</td><td>Chí Tôn Cấp Đoạn Thạch</td><td>4 %, 2 %</td></tr>
+                  <tr><td>1, 2</td><td>Sơ Cấp Đoạn Thạch</td><td>100 %, 90 %</td></tr>
+                  <tr><td>3, 4</td><td>Trung Cấp Đoạn Thạch</td><td>80 %, 70 %</td></tr>
+                  <tr><td>5, 6</td><td>Cao Cấp Đoạn Thạch</td><td>60 %, 50 %</td></tr>
+                  <tr><td>7, 8</td><td>Đỉnh Cấp Đoạn Thạch</td><td>40 %, 30 %</td></tr>
+                  <tr><td>9, 10</td><td>Chí Tôn Cấp Đoạn Thạch</td><td>20 %, 10 %</td></tr>
                 </tbody>
               </table>
             </div>
+            <p>Bản 4.0 trở về trước: 100 / 80 / 60 / 45 / 30 / 20 / 12 / 8 / 4 / 2 %.</p>
             <ul>
               <li><strong>Thất bại:</strong> mất đá, tụt 1 sao. Đồ không bao giờ vỡ. Tick <a href="#bua-ma-thuat">Bùa Ma Thuật</a> thì thất bại vẫn giữ sao.</li>
               <li>Tiền mất dù thành hay bại: đồ cấp 40 lên 5 sao 160.000, lên 10 sao 320.000.</li>
@@ -929,7 +971,7 @@
           </div>
         </article>
 
-        <!-- Bùa Ma Thuật (mới ở 3.4.2): forge.json charm {item remaster/bua_ma_thuat, n 1, fail keep}, rates 100..2 %;
+        <!-- Bùa Ma Thuật (mới ở 3.4.2): forge.json charm {item remaster/bua_ma_thuat, n 1, fail keep}, rates 100..10 % (4.1; trước 100..2 %);
              custom_items.json (value 8.000, chỉ thẻ Cổ Mộ Địa Ngục); gameplay/24 §Bùa; số lần rèn kì vọng: 37 §4.33
              (không bùa E_k = (1 + (1 - p) E_{k-1}) / p, tính cả lần lên lại sao đã tụt; có bùa 1 / p, mỗi lần mất 1 lá). -->
         <article class="gcard sub-panel" id="bua-ma-thuat">
@@ -952,16 +994,33 @@
             <table>
               <thead><tr><th>Lên sao</th><th>Tỉ lệ</th><th>Không bùa</th><th>Có bùa</th></tr></thead>
               <tbody>
-                <tr><td>4 lên 5</td><td>30 %</td><td>16 lần</td><td>3,3</td></tr>
-                <tr><td>5 lên 6</td><td>20 %</td><td>70 lần</td><td>5</td></tr>
-                <tr><td>6 lên 7</td><td>12 %</td><td>518 lần</td><td>8,3</td></tr>
-                <tr><td>7 lên 8</td><td>8 %</td><td>khoảng 6.000</td><td>12,5</td></tr>
-                <tr><td>8 lên 9</td><td>4 %</td><td>khoảng 143.000</td><td>25</td></tr>
-                <tr><td>9 lên 10</td><td>2 %</td><td>khoảng 7 triệu</td><td>50</td></tr>
+                <tr><td>4 lên 5</td><td>60 %</td><td>3,1 lần</td><td>1,7</td></tr>
+                <tr><td>5 lên 6</td><td>50 %</td><td>5,1 lần</td><td>2</td></tr>
+                <tr><td>6 lên 7</td><td>40 %</td><td>10 lần</td><td>2,5</td></tr>
+                <tr><td>7 lên 8</td><td>30 %</td><td>27 lần</td><td>3,3</td></tr>
+                <tr><td>8 lên 9</td><td>20 %</td><td>113 lần</td><td>5</td></tr>
+                <tr><td>9 lên 10</td><td>10 %</td><td>khoảng 1.000 lần</td><td>10</td></tr>
               </tbody>
             </table>
           </div>
-          <p class="tip">Không bùa thì thực tế chỉ lên được khoảng 7 sao. Tới 5 sao rèn không bùa vẫn được, để dành bùa cho bậc 5 lên 6 trở đi. Cả 0 lên 10 sao một món tốn khoảng 100 lá.</p>
+          <p class="tip">Theo tỉ lệ bản 4.1. Tới 7 sao rèn không bùa vẫn nhẹ; bùa đáng nhất ở 8 lên 9 và 9 lên 10. Cả 0 lên 10 sao một món tốn khoảng 30 lá (bản 4.0 khoảng 100).</p>
+        </article>
+
+        <!-- Bùa May Mắn (bản 4.1): repo game forge.json luck {item remaster/bua_may_man, n 1, pct 10}, Forge.luck_rate
+             (r + r x 10 / 100 làm tròn xuống, trần 100), nhật ký 2026-10-06b (279). -->
+        <article class="gcard sub-panel" id="bua-may-man">
+          <h3>Bùa May Mắn</h3>
+          <ul class="facts">
+            <li>Mới ở bản 4.1</li>
+            <li>Tỉ lệ thêm 10 % của chính nó</li>
+            <li>Chỉ có ở Cổ Mộ Địa Ngục</li>
+          </ul>
+          <ul>
+            <li>Tick ở thẻ <strong>Nâng sao</strong> hoặc <strong>Hợp thành</strong> (Đoạn Thạch, Tinh Thạch) của thợ rèn. Tỉ lệ nhân 1,1 rồi làm tròn xuống: lên 10 sao 10 % thành 11 %, lên 2 sao 90 % thành 99 %, ghép Sơ lên Trung Cấp 85 % thành 93 %.</li>
+            <li>Mỗi lần mất 1 lá, thành hay xịt. Bậc đã 100 % thì bùa không được dùng, không mất lá.</li>
+            <li>Tick cùng <a href="#bua-ma-thuat">Bùa Ma Thuật</a> được: tăng tỉ lệ và xịt vẫn giữ sao, mỗi loại mất 1 lá.</li>
+            <li><strong>Nguồn:</strong> một thẻ trong bảng thẻ Cổ Mộ Địa Ngục.</li>
+          </ul>
         </article>
 
         <article class="gcard gpanel sub-panel" id="quang-vu-khi">
@@ -1676,10 +1735,32 @@
             <li>Chơi trực tuyến</li>
             <li>Tối đa 50 bạn</li>
           </ul>
+          <!-- Tab Giang Hồ: bản 4.1 (repo game documents/gameplay/40-ban-be.md §Hai tab, friends.json list_page 50, list_gap_sec 2). -->
           <ul>
-            <li>Chuột phải vào người chơi khác, chọn <strong>Thêm bạn bè</strong>. Người kia đồng ý (bấm Enter cũng được) là xong.</li>
-            <li>Nút <strong>Bằng Hữu</strong> ở góc dưới phải, cạnh nút Cài Đặt: xem ai đang trực tuyến, cấp, môn phái; bấm Tin tức để xem bạn dù khác bản đồ.</li>
+            <li>Giữ <strong>Ctrl</strong>, chuột phải vào người chơi khác, chọn <strong>Thêm bạn bè</strong>. Người kia đồng ý (bấm Enter cũng được) là xong.</li>
+            <li>Nút <strong>Bằng Hữu</strong> ở góc dưới phải, cạnh nút Cài Đặt, có hai tab:
+              <ul>
+                <li><strong>Hiện tại</strong>: danh sách bạn, ai đang trực tuyến, cấp, môn phái; bấm Tin tức để xem bạn dù khác bản đồ.</li>
+                <li><strong>Giang Hồ</strong> (từ bản 4.1): mọi người đang chơi, người cùng cấp với bạn xếp trước, kèm bản đồ họ đang đứng. Gõ tên vào ô tìm rồi Enter. Bấm <strong>Kết bạn</strong> để mời, <strong>không cần đứng cùng bản đồ</strong>. Nút đổi thành Đang chờ khi đã mời, Đồng ý khi người đó đang mời bạn. Danh sách không tự cập nhật, bấm Làm mới để xem lại.</li>
+              </ul>
+            </li>
             <li>Xoá bạn thì mất ở cả hai phía.</li>
+          </ul>
+        </article>
+
+        <!-- Tặng quà Alt+G (bản 4.1): repo game logic/exchange.gd GIVE_MAX_CASH 500.000.000, server/exchange.gd give,
+             theo lệnh "Cho" gốc cmd/std/give.c; nhật ký 2026-10-06b (280), (281 Alt+G con trỏ). -->
+        <article class="gcard sub-panel" id="tang-qua">
+          <h3>Tặng quà (Alt+G)</h3>
+          <ul class="facts">
+            <li>Mới ở bản 4.1</li>
+            <li>Cả hai từ cấp 20</li>
+            <li>6 món + ngân lượng</li>
+          </ul>
+          <ul>
+            <li>Bấm <strong>Alt+G</strong>, con trỏ thành bàn tay, bấm vào người chơi đứng gần để mở cửa sổ tặng. Hoặc chuột phải lên người đó, chọn <strong>Tặng</strong>.</li>
+            <li>Kéo tối đa 6 món từ hành trang vào, ghi thêm ngân lượng (tối đa 500 triệu mỗi lần), bấm tặng. Người nhận không cần xác nhận.</li>
+            <li>Đồ khoá, đồ phong ấn không tặng được, như giao dịch.</li>
           </ul>
         </article>
 

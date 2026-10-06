@@ -54,6 +54,7 @@
 
   <div class="vtoc-bar">
     <nav class="wrap vtoc" aria-label="Nhảy tới phiên bản">
+      <a class="is-next" href="#v4-1">4.1</a>
       <a href="#v4-0">4.0</a>
       <a href="#v3-4-1">3.4.1</a>
       <a href="#v3-4-0">3.4.0</a>
@@ -74,6 +75,42 @@
 
   <div class="wrap">
     <div class="vlist">
+
+      <!-- ================= 4.1 (CHƯA PHÁT) =================
+           Nguồn: cây làm việc repo game sau tag 4.0.0 (chưa commit lúc viết, 2026-10-06 tối), nhật ký 2026-10-06b:
+           (278) tỉ lệ ép sao forge.json, (279) Bùa May Mắn forge.json luck, (280) + (281 Alt+G) tặng quà give.c,
+           (282) Bằng Hữu tab Giang Hồ (documents/gameplay/40-ban-be.md), launcher nút Trang chủ (about.json homepage).
+           Trộm Bảo Phi Tặc: treasure_thief.json, tài liệu 37 §4.40, số phiên làm tính năng gửi (chốt với chủ repo).
+           KHI PHÁT: thay khối "vcard__date" bằng <time class="vcard__date" datetime="YYYY-MM-DD">D/M/YYYY</time>, bỏ nhãn
+           "Sắp ra mắt", bỏ class vcard--next (thẻ và link .vtoc is-next), bỏ "(từ bản 4.1)" ở trang hướng dẫn nếu muốn. -->
+      <article class="vcard vcard--next" id="v4-1">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">4.1</h2>
+          <span class="vcard__tag vcard__tag--gold">Sắp ra mắt</span>
+          <span class="vcard__date" data-release-date>Ngày phát hành: sẽ báo trong nhóm cộng đồng</span>
+        </header>
+        <p class="vcard__sum">Trộm Bảo Phi Tặc mỗi đầu giờ, nâng sao dễ hơn hẳn, Bùa May Mắn, tặng quà Alt+G, tìm bạn khắp Giang Hồ.</p>
+
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li><a href="../huong-dan/#trom-bao">Trộm Bảo Phi Tặc</a>: mỗi đầu giờ 5 con hiện ở 5 bãi luyện cấp 10 tới 40, phút 55 có báo. Khiêu chiến thì nó hoá đúng cấp bạn; ai ra đòn cuối thì người đó và cả đội cùng bản đồ nhận thưởng: tiền, thuốc, kinh nghiệm bằng 10 con quái và một món quý (Tinh Thạch, Đoạn Thạch, đồ Xanh, Tử Sâm Đơn, Thăng Phẩm, pháp bảo). 10 con mỗi ngày. Bảo Điển có tab Trộm Bảo xem con nào còn.</li>
+          <li><a href="../huong-dan/#bang-huu">Bằng Hữu thêm tab Giang Hồ</a>: xem mọi người đang chơi (người cùng cấp xếp trước, kèm bản đồ họ đang đứng), tìm theo tên, bấm Kết bạn ngay trong danh sách. Mời kết bạn <strong>không cần đứng cùng bản đồ</strong> nữa.</li>
+          <li><a href="../huong-dan/#tang-qua">Tặng quà (Alt+G)</a> như lệnh "Cho" của bản gốc: bấm Alt+G ra con trỏ bàn tay, bấm vào người chơi để mở cửa sổ tặng, đặt tối đa 6 món và ngân lượng (tối đa 500 triệu mỗi lần). Người nhận không cần xác nhận. Cả hai từ cấp 20, đứng gần nhau. Menu chuột phải lên người chơi cũng có mục Tặng.</li>
+          <li><a href="../huong-dan/#bua-may-man">Bùa May Mắn</a>: tick ở thẻ Nâng sao hoặc Hợp thành của thợ rèn, tỉ lệ thành công tăng thêm 10 % của chính nó (lên 10 sao 10 % thành 11 %, lên 2 sao 90 % thành 99 %, ghép Đoạn Thạch 85 % thành 93 %). Mỗi lần mất 1 lá, thành hay xịt. Dùng chung với Bùa Ma Thuật được. Rơi ở bảng thẻ Cổ Mộ Địa Ngục.</li>
+        </ul>
+
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li><a href="../huong-dan/#nang-sao">Nâng sao trang bị</a> dễ hơn: lên 1 sao 100 %, mỗi sao sau bớt 10 % (lên 2 sao 90 %, lên 5 sao 60 %, lên 10 sao 10 %). Trước đây 100 / 80 / 60 / 45 / 30 / 20 / 12 / 8 / 4 / 2 %. Xịt vẫn tụt 1 sao, đá và ngân lượng vẫn mất như cũ. Trung bình cả 0 lên 10 sao khoảng 1.200 lần rèn, trước là hàng triệu lần.</li>
+          <li>Bảng thẻ Cổ Mộ Địa Ngục: thêm 1 thẻ Bùa May Mắn, Thẻ Thần Thú còn 1 thẻ.</li>
+          <li>Launcher có nút <strong>Trang chủ</strong> cạnh nút cộng đồng, mở thẳng trang này.</li>
+        </ul>
+
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Bấm Alt+G không còn làm mất nền bản đồ.</li>
+        </ul>
+      </article>
 
       <!-- ================= 4.0 (CHƯA PHÁT) =================
            Nguồn: git log 3.4.1..origin/master (922618cd, af9f694b, cd4add01, f2831c1b, 3bdc625c, 26ae5165, 5e77783d, d39c8601,
