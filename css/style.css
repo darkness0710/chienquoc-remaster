@@ -642,22 +642,16 @@ html.vpage { scroll-padding-top: 122px; }
 /* ---------- đầu trang (lần 3: ảnh Đào Hoa phủ toàn khung) ----------
    Lớp màu: tối dần về bên trái (khối chữ nằm trên sông) và mép dưới (dải số liệu), giữ hoa đào bên phải rõ.
    Điện thoại: ảnh dọc riêng, tối dần từ dưới lên, chữ căn giữa. */
-/* Không phóng ảnh quá cỡ gốc (chủ repo: "ảnh nền to quá bị mờ"): ảnh chụp game chỉ 1508x1131, phóng lên là nhoè.
-   Khung đầu trang cao vừa phải (560 tới 660 px) và khung ảnh rộng tối đa 1508 px giữa màn, nên `cover` luôn <= 1:1
-   (1440 px: 0,955; 1024 px: 0,68). Màn rộng hơn 1508 px: hai bên tô bằng chính ảnh đó (bản nhỏ) làm mờ + tối,
-   mép ảnh chính mờ dần vào cho liền. Bỏ hiệu ứng phóng chậm (scale 1,08 cũng là phóng quá cỡ). */
+/* Không phóng ảnh quá cỡ gốc (chủ repo: "ảnh nền to quá bị mờ") và KHÔNG làm mờ hai bên (chủ repo 2026-10-06): hai ảnh
+   chụp từ game (`./run.sh shot --demo-hero`, tools/README "Ảnh nền nhân vật"): màn <= 1508 px dùng bản 1508x1131 (nhân vật to,
+   1440 px hiện 0,955 lần), màn rộng hơn dùng bản rộng 2880x1200 zoom 1 (1920 px: 0,67 lần; 2560 px: 0,89 lần), luôn <= 1:1.
+   Màn rộng hơn 2880 px (hiếm): khung ảnh dừng ở 2880, hai bên nền tối trơn. */
 .hero3 { position: relative; overflow: hidden; isolation: isolate; display: flex; flex-direction: column;
   min-height: clamp(560px, 74vh, 660px); background: var(--ink-900); border-bottom: 1px solid var(--line); }
-.hero3__fill { position: absolute; inset: -40px; z-index: -3; background: var(--ink-900) url("../assets/img/hero-bg.jpg") center / cover;
-  filter: blur(22px) brightness(.42) saturate(1.1); }
-.hero3__bg { position: absolute; top: 0; bottom: 0; left: 50%; width: 100%; max-width: 1508px; transform: translateX(-50%); z-index: -2; }
+.hero3__bg { position: absolute; top: 0; bottom: 0; left: 50%; width: 100%; max-width: 2880px; transform: translateX(-50%); z-index: -2; }
+.hero3__bg picture { display: block; width: 100%; height: 100%; }
 .hero3__bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
-/* Dưới 1509 px khung ảnh đã phủ hết bề ngang: không cần lớp mờ (đỡ tốn bộ lọc blur). */
-@media (max-width: 1508px) { .hero3__fill { display: none; } }
-@media (min-width: 1509px) {
-  .hero3__bg { -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
-    mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
-}
+@media (min-width: 1509px) { .hero3__bg img { object-position: 60% 45%; } }
 .hero3::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background:
     linear-gradient(90deg, rgba(7, 13, 34, .84) 0%, rgba(7, 13, 34, .66) 32%, rgba(7, 13, 34, .22) 56%, rgba(7, 13, 34, 0) 74%),

@@ -48,13 +48,15 @@
        chưa đẹp, làm lại", "ảnh nền to quá bị mờ"). Nền: MỘT file assets/img/hero-bg.jpg (ảnh chụp game 1508x1131, không giao
        diện). Thay ảnh = ghi đè đúng file đó (cùng cỡ); nhân vật nên đứng ở nửa phải ảnh vì khối chữ nằm bên trái (điện thoại:
        giữa, chỉnh object-position ở .hero3__bg img trong style.css). Ảnh không bao giờ hiện quá 1:1 (xem comment .hero3 ở CSS);
-       hai bên màn rộng là chính file đó làm mờ (.hero3__fill). Ảnh tạm hiện tại: Đào Nguyên Thôn (map 289), hồ và hàng đào.
+       hai ảnh (picture): hero-bg.jpg 1508x1131 cho màn <= 1508 px, hero-bg-wide.jpg 2880x1200 cho màn rộng hơn; không làm mờ hai bên. Ảnh: một nhân vật cưỡi Hỏa Hồ Ly trên cầu gỗ Đào Nguyên Thôn (map 289), chụp bằng ./run.sh shot --demo-hero (tools/README repo game).
        Cánh hoa bay: 14 thẻ <i> trong .petals, CSS thuần, ẩn khi người xem chọn giảm chuyển động.
        Bản trước (ảnh trận Lữ Bố nửa trái, chữ nửa phải) chủ repo chê: ảnh đó chuyển xuống thẻ Cổ Mộ ở #co-gi.
        Link tải launcher có ở HAI chỗ: nút "Tải game" ở đây và nút "Tải launcher 3.1" ở #cai-dat. -->
   <section class="hero3">
-    <div class="hero3__fill" aria-hidden="true"></div>
-    <div class="hero3__bg" aria-hidden="true"><img src="assets/img/hero-bg.jpg" alt="" width="1508" height="1131" fetchpriority="high"></div>
+    <div class="hero3__bg" aria-hidden="true"><picture>
+      <source media="(min-width: 1509px)" srcset="assets/img/hero-bg-wide.jpg" width="2880" height="1200">
+      <img src="assets/img/hero-bg.jpg" alt="" width="1508" height="1131" fetchpriority="high">
+    </picture></div>
     <div class="petals" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="wrap hero3__in">
       <div class="hero3__copy">
