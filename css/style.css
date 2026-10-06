@@ -739,7 +739,7 @@ html.vpage { scroll-padding-top: 122px; }
 }
 @media (max-width: 719px) {
   .hero3 { min-height: 0; }
-  .hero3__bg img { object-position: 52% 20%; }
+  .hero3__bg img { object-position: 78% 50%; } /* nhân vật cưỡi Hỏa Hồ Ly ở nửa phải ảnh (cầu gỗ) */
   .hero3::before { background:
       linear-gradient(0deg, rgba(7, 13, 34, .96) 0%, rgba(7, 13, 34, .74) 48%, rgba(7, 13, 34, .1) 74%, rgba(7, 13, 34, .25) 100%); }
   .hero3__in { padding-top: 230px; padding-bottom: 28px; text-align: center; }
