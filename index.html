@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/img/hero-co-mo.jpg">
+  <link rel="preload" as="image" href="assets/img/hero-bg.jpg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -44,45 +44,51 @@
 
 <main id="top">
 
-  <!-- Đầu trang. Nền: assets/img/hero-co-mo.jpg = khung 72 của ./run.sh studio gumu ở repo game (1600x1200), cắt
-       (500, 315)-(1600, 1100) để bỏ HUD, khung chat, bản đồ góc; 1100x785 hiện gần 1:1 nên rõ nét. Máy tính: ảnh bên trái,
-       chữ bên phải; điện thoại: ảnh trên, chữ dưới. Đã thử video trailer làm nền: 960x720 phóng lên 1440 thì nhoè (chủ repo
-       ghét nền mờ) và nặng thêm 6 MB, nên bỏ. Link tải launcher có ở HAI chỗ: nút "Tải game" ở đây và nút "Tải launcher 3.1"
-       ở #cai-dat. -->
-  <section class="hero2">
-    <div class="hero2__media" aria-hidden="true">
-      <img class="hero2__poster" src="assets/img/hero-co-mo.jpg" alt="" width="1100" height="785">
+  <!-- Đầu trang (lần 3, 2026-10-06, chủ repo: "cho ảnh nền chụp ở Đào Hoa Nguyên hoa đào rơi còn đẹp hơn", "bố trí đoạn đầu
+       chưa đẹp, làm lại", "ảnh nền to quá bị mờ"). Nền: MỘT file assets/img/hero-bg.jpg (ảnh chụp game 1508x1131, không giao
+       diện). Thay ảnh = ghi đè đúng file đó (cùng cỡ); nhân vật nên đứng ở nửa phải ảnh vì khối chữ nằm bên trái (điện thoại:
+       giữa, chỉnh object-position ở .hero3__bg img trong style.css). Ảnh không bao giờ hiện quá 1:1 (xem comment .hero3 ở CSS);
+       hai bên màn rộng là chính file đó làm mờ (.hero3__fill). Ảnh tạm hiện tại: Đào Nguyên Thôn (map 289), hồ và hàng đào.
+       Cánh hoa bay: 14 thẻ <i> trong .petals, CSS thuần, ẩn khi người xem chọn giảm chuyển động.
+       Bản trước (ảnh trận Lữ Bố nửa trái, chữ nửa phải) chủ repo chê: ảnh đó chuyển xuống thẻ Cổ Mộ ở #co-gi.
+       Link tải launcher có ở HAI chỗ: nút "Tải game" ở đây và nút "Tải launcher 3.1" ở #cai-dat. -->
+  <section class="hero3">
+    <div class="hero3__fill" aria-hidden="true"></div>
+    <div class="hero3__bg" aria-hidden="true"><img src="assets/img/hero-bg.jpg" alt="" width="1508" height="1131" fetchpriority="high"></div>
+    <div class="petals" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap hero3__in">
+      <div class="hero3__copy">
+        <a class="hero2__news" href="phien-ban/#v4-0">
+          <span class="hero2__new">Sắp ra mắt</span>
+          <span>Bản 4.0: mở trần cấp 50, phó bản Thành Kiều</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+        <p class="hero3__kicker">MMORPG Chiến Quốc 2008, hồi sinh</p>
+        <h1 class="hero3__title">Chiến Quốc <span>Remaster</span></h1>
+        <p class="hero3__tag">Cố nhân, đã đến lúc trở lại.</p>
+        <p class="hero3__lead">Vẫn là Tân Thủ Thôn ngày ấy, vẫn hoa đào bên bờ sông Đào Nguyên. Nay chơi online cùng bằng hữu, miễn phí và không nạp thẻ.</p>
+        <div class="hero3__actions">
+          <a class="btn btn--gold btn--lg" href="https://180-93-118-219.sslip.io/packs/ChienQuocRemaster-Launcher-3.1.0.zip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
+            Tải game
+          </a>
+          <a class="btn btn--ghost btn--lg" href="huong-dan/">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 01-3-3z"/><path d="M5 17a3 3 0 013-3h11M9 8h6"/></svg>
+            Xem hướng dẫn
+          </a>
+        </div>
+        <p class="hero3__meta">Windows 64 bit · file tải 39 MB · tự cập nhật ·
+          <a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook</a></p>
+        <a class="hero__watch" href="#trailer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Xem video: ba anh hùng đấu Lữ Bố</a>
+      </div>
     </div>
-    <div class="wrap hero2__in">
-      <div class="hero2__copy">
-      <a class="hero2__news" href="phien-ban/#v4-0">
-        <span class="hero2__new">Sắp ra mắt</span>
-        <span>Bản 4.0: mở trần cấp 50, phó bản Thành Kiều</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
-      <h1 class="hero__title hero2__title">Chiến Quốc <span>Remaster</span></h1>
-      <p class="hero2__tag">Cố nhân, đã đến lúc trở lại.</p>
-      <p class="hero__lead">MMORPG Chiến Quốc (2008) hồi sinh trên nền tảng mới. Vẫn là Tân Thủ Thôn ngày ấy, nay chơi online cùng bằng hữu, miễn phí và không nạp thẻ.</p>
-      <div class="actions">
-        <a class="btn btn--gold btn--lg" href="https://180-93-118-219.sslip.io/packs/ChienQuocRemaster-Launcher-3.1.0.zip">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
-          Tải game
-        </a>
-        <a class="btn btn--ghost btn--lg" href="huong-dan/">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 01-3-3z"/><path d="M5 17a3 3 0 013-3h11M9 8h6"/></svg>
-          Xem hướng dẫn
-        </a>
-      </div>
-      <p class="hero__meta">Windows 64 bit · file tải 39 MB · tự cập nhật ·
-        <a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook</a></p>
-      <a class="hero__watch" href="#trailer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Xem video: ba anh hùng đấu Lữ Bố</a>
-      <ul class="hero2__stats">
-        <li><b>7</b> môn phái</li>
-        <li><b>5</b> người một tổ đội</li>
-        <li><b>34</b> thú cưỡi</li>
-        <li><b>0</b> đồng nạp thẻ</li>
+    <div class="hero3__band">
+      <ul class="wrap hero3__stats">
+        <li><b>7</b><span>môn phái, mỗi phái hai nhánh</span></li>
+        <li><b>5</b><span>người một tổ đội</span></li>
+        <li><b>34</b><span>thú cưỡi để sưu tập</span></li>
+        <li><b>0</b><span>đồng nạp thẻ</span></li>
       </ul>
-      </div>
     </div>
   </section>
 
@@ -145,8 +151,8 @@
     </div>
   </section>
 
-  <!-- Có gì trong game: lưới thẻ ảnh thật (assets/img/huong-dan/, chụp bằng ./run.sh shot ở repo game; co-mo-tran.jpg cắt
-       từ khung 432 của ./run.sh studio gumu, 1080x510).
+  <!-- Có gì trong game: lưới thẻ ảnh thật (assets/img/huong-dan/, chụp bằng ./run.sh shot ở repo game; thẻ Cổ Mộ dùng
+       assets/img/hero-co-mo.jpg = khung 72 của ./run.sh studio gumu, cắt (500, 315)-(1600, 1100), từng là nền đầu trang).
        Thành Kiều và câu cá chưa có ảnh chụp: thẻ vẽ bằng CSS (cờ chụp câu cá: tài liệu game 54 §6, README.md).
        Nguồn số: tong-quan/00 + news.json repo game; câu cá fishing.json (tài liệu 54); Thành Kiều 53 §3d / §3g. -->
   <section class="section" id="co-gi">
@@ -156,7 +162,7 @@
       <ul class="feats">
         <li class="feats__wide feats__lead reveal">
           <a class="feat" href="huong-dan/#co-mo">
-            <img src="assets/img/huong-dan/co-mo-tran.jpg" alt="Lữ Bố tụ chiêu, vùng đỏ báo trước phủ bậc đá, ba anh hùng đứng né" width="1080" height="510" loading="lazy" style="object-position: center 40%">
+            <img src="assets/img/hero-co-mo.jpg" alt="Ba anh hùng trong trận pháp vàng vây đánh Lữ Bố giữa sân mộ đá" width="1100" height="785" loading="lazy" style="object-position: center 22%">
             <span class="feat__body">
               <span class="feat__tag">Phó bản</span>
               <strong>Cổ Mộ: đấu Lữ Bố</strong>

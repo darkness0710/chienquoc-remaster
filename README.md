@@ -4,7 +4,7 @@ Trang tĩnh: HTML + CSS + một file JS nhỏ (ảnh trượt), không cần bui
 (chỉ font Google). Chạy trên GitHub Pages: https://darkness0710.github.io/chienquoc-remaster/
 
 ```
-├── index.html          trang chủ: đầu trang (ảnh lớn bên trái, chữ bên phải), dải "Bản 4.0" .next4, video trailer #trailer + 3 thẻ ảnh,
+├── index.html          trang chủ: đầu trang .hero3 (ảnh Đào Hoa phủ toàn khung, cánh hoa bay, dải số liệu), dải "Bản 4.0" .next4, video trailer #trailer + 3 thẻ ảnh,
 │                       "Có gì trong game" #co-gi (lưới thẻ ảnh .feats + chip), "Bảy môn phái" #mon-phai, "Lời hứa" + ảnh trượt #loi-hua,
 │                       "Cài đặt 3 bước" #cai-dat (kèm thẻ quà tân thủ), "Lộ trình" #lo-trinh, chân trang
 ├── huong-dan/index.html  trang /huong-dan/: 6 tab (Hằng ngày, Chủ tuyến, Thần Thú, Trang bị, Môn phái, Tiện ích), tab con, ảnh trong game
@@ -17,13 +17,15 @@ Trang tĩnh: HTML + CSS + một file JS nhỏ (ảnh trượt), không cần bui
 │   ├── pattern-cloud.svg   hoạ tiết mây lành ở nền đầu trang
 │   ├── video/co-mo.mp4    trailer Cổ Mộ (960×720, H.264 + AAC, faststart, ~6 MB)
 │   └── img/
-│       ├── hero-co-mo.jpg  nền đầu trang (1100×785): khung 72 của `./run.sh studio gumu` (repo game, `build/studio_gumu/f0072.jpg`,
+│       ├── hero-bg.jpg     nền đầu trang, MỘT file cho mọi màn (1508×1131, JPEG 80). Thay ảnh = ghi đè file này bằng ảnh cùng
+│       │                   cỡ (nhân vật ở nửa phải, khối chữ nằm bên trái). Ảnh tạm: Đào Nguyên Thôn (map 289), hồ và hàng đào, hoa
+│       │                   rơi, chụp không giao diện (phiên chính 2026-10-06, file nháp dhz_90_70.png)
+│       ├── hero-co-mo.jpg  thẻ Cổ Mộ ở #co-gi (1100×785): khung 72 của `./run.sh studio gumu` (repo game, `build/studio_gumu/f0072.jpg`,
 │       │                   1600×1200) cắt (500, 315)-(1600, 1100) để bỏ HUD, khung chat, bản đồ góc
 │       ├── giao-dien.jpg, nhan-vat.jpg, lang-ba.jpg, tran-phai.jpg   ảnh trượt ở mục #loi-hua
 │       ├── og.jpg          ảnh hiện khi chia sẻ link (1200×630, cắt từ giao-dien.jpg)
 │       ├── trailer.jpg     ảnh bìa video (khung 330 của bản quay)
-│       └── huong-dan/      ảnh minh hoạ trang hướng dẫn (rộng 760 px, JPEG 80), co-mo-tran.jpg (1080×510, khung 432 của
-│                           studio gumu cắt (250, 290)-(1330, 800), thẻ Cổ Mộ ở trang chủ) + bua-ma-thuat.png (icon món 79×128,
+│       └── huong-dan/      ảnh minh hoạ trang hướng dẫn (rộng 760 px, JPEG 80) + bua-ma-thuat.png (icon món 79×128,
 │                           chép từ repo game godot/assets/custom/icon/item/, hiện 32 px cạnh tên mục, class .gicon)
 ├── .nojekyll           báo GitHub Pages đừng chạy Jekyll
 └── tmp/                nháp cục bộ (bài Facebook, ảnh chụp kiểm), bỏ qua trong .gitignore
@@ -137,6 +139,20 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   lật 2 / 3 / 3 thẻ, không lật trả tiền), Phong Yêu Kính (độc đắc thú Hiếm), Tống Bảo; mỗi mục có **bảng tỉ lệ quà** (số thẻ / 16
   và cơ hội có ít nhất một trong cả lượt lật). Số lấy từ repo game `criminal.json`, `dungeon_gumu.json`, `rare_monster.json`
   (tài liệu game 37 §4.28 đến §4.31). Ô chữ dài dùng `td.wrap-cell`.
+- 2026-10-06 (lần 3b): chủ repo "ảnh nền to quá bị mờ": ảnh chụp game chỉ 1508×1131, nên **không bao giờ hiện quá 1:1**. Khối
+  đầu trang cao 560 tới 660 px (thêm phần chữ thì ~770 px gồm dải số), khung ảnh rộng tối đa 1508 px giữa màn; màn rộng hơn: hai bên
+  là chính file đó làm mờ + tối (`.hero3__fill`), mép ảnh mờ dần vào. Bỏ hiệu ứng phóng chậm (scale 1,08 cũng là phóng quá cỡ).
+  Đo bằng `tmp/pv/scale.html?<rộng>` (cỡ hiện / cỡ thật của `object-fit: cover`): 1920 px 1,000 (ảnh 1508 giữa màn), 1440 px 0,955,
+  1024 px 0,679, 375 px 0,859, 360 px 0,881. Gộp về một file `hero-bg.jpg` (trước: bản máy tính + bản điện thoại WebP / JPEG) để
+  thay ảnh chỉ đổi một file. Ảnh tạm đổi từ dhz_100_80 sang dhz_90_70: ảnh cũ có nhân vật bị cây che (chủ repo chê). Chụp kiểm:
+  `tmp/pv/hero4-1920.png`, `hero4-1440.png`, `hero4-1024.png`, `hero4-375.png`, `hero4-360.png`.
+- 2026-10-06 (lần 3, cùng ngày): chủ repo xem bản dưới: "ảnh nền vào chưa đẹp, cho ảnh nền chụp ở Đào Hoa Nguyên hoa đào rơi",
+  "cách bố trí đoạn đầu chưa đẹp, làm lại". Đầu trang `.hero3`: ảnh Đào Nguyên Thôn phủ **toàn khung** (sau đổi ở lần 3b), lớp màu tối dần về bên trái (khối chữ lệch trái nằm
+  trên mặt sông) và mép dưới, hoa đào bên phải để rõ. Tiêu đề hai màu (Chiến Quốc vàng kim, Remaster hồng đào), dòng nhỏ
+  "MMORPG Chiến Quốc 2008, hồi sinh", câu "Cố nhân, đã đến lúc trở lại.", hai nút. Số liệu thành dải kính mờ ở chân đầu trang
+  (4 cột, điện thoại 2 × 2); số dùng chữ thân bài vì Playfair có số kiểu cổ thòng xuống dòng. 14 cánh hoa CSS bay chéo, ẩn khi
+  giảm chuyển động. Ảnh trận Lữ Bố chuyển xuống thẻ Cổ Mộ; `co-mo-tran.jpg` bỏ. Chụp kiểm: `tmp/pv/hero3-1440.png`, `hero3-1024.png`,
+  `hero3-375.png`, `hero3-360.png`, `home3-1440-full.png`, `home3-375-full.png`. 0 phần tử tràn ở 375 / 360 / 1024 / 1440 px.
 - 2026-10-06: **trang chủ làm lại** (chủ repo: "giờ xấu quá chưa thấy cuốn hút"). Đầu trang: ảnh trận Lữ Bố cắt từ bản quay studio
   (rõ nét, hiện gần 1:1) bên trái, mờ dần sang phải, chữ bên phải; điện thoại ảnh trên chữ dưới (phóng 1,45 vào góc có nhân vật).
   Lớp tối chỉ sau chữ, không phủ cả khung (chủ repo từng chê nền mờ, nền phủ tối "xỉn"). **Đã thử, bỏ:** video trailer làm nền
