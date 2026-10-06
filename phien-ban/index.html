@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="vi" class="vpage">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phiên bản · Chiến Quốc Remaster</title>
+  <meta name="description" content="Chiến Quốc Remaster qua từng phiên bản: ngày phát hành và thay đổi của mỗi bản, từ bản demo offline tới bản online 3.4 và bản 4.0 sắp ra mắt.">
+  <meta name="theme-color" content="#0a1330">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/phien-ban/">
+  <meta property="og:title" content="Các phiên bản Chiến Quốc Remaster">
+  <meta property="og:description" content="Mỗi bản có gì mới, cân bằng gì, sửa lỗi gì, kèm ngày phát hành. Bản 4.0 sắp ra mắt: mở trần cấp 50, phó bản Thành Kiều.">
+  <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Trang phiên bản (2026-10-06). Nguồn: repo game D:\Projects\Debug.
+     Ngày: git tag --sort=creatordate (bỏ tag assets-*). 3.0.0 và 3.0.3 không có tag: ngày lấy ở nhật ký.
+     Chữ từng bản: godot/data/custom/news.json (tin launcher, viết cho người chơi), bổ sung bằng git log <tag trước>..<tag>,
+     documents/tong-quan/00-tong-quan.md (mục Bản online đang chạy), documents/nhat-ky/README.md (dòng "phát x.y.z").
+     3.4.2 không phát (chủ repo bỏ, nội dung gộp vào 4.0).
+     Thêm bản mới: chép một <article class="vcard"> lên đầu .vlist + một link ở .vtoc (xem README.md). -->
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="brand" href="../" aria-label="Chiến Quốc Remaster, về trang chủ">
+      <img src="../assets/favicon.svg" alt="" width="32" height="32">
+      <span>Chiến Quốc <em>Remaster</em></span>
+    </a>
+    <nav class="bar__nav">
+      <a class="bar__link" href="../huong-dan/">Hướng dẫn</a>
+      <a class="bar__link" href="./" aria-current="page">Phiên bản</a>
+      <a class="btn btn--gold btn--sm" href="../#cai-dat">Tải game</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="guide-hero">
+    <div class="wrap">
+      <h1 class="hero__title">Phiên bản</h1>
+      <p class="hero__lead">Mỗi bản có gì mới, cân bằng gì, sửa lỗi gì, kèm ngày phát hành. Mới nhất ở trên. Tin từng bản cũng hiện ở màn launcher.</p>
+    </div>
+  </section>
+
+  <div class="vtoc-bar">
+    <nav class="wrap vtoc" aria-label="Nhảy tới phiên bản">
+      <a class="is-next" href="#v4-0">4.0 sắp ra mắt</a>
+      <a href="#v3-4-1">3.4.1</a>
+      <a href="#v3-4-0">3.4.0</a>
+      <a href="#v3-3-0">3.3.0</a>
+      <a href="#v3-2-0">3.2.0</a>
+      <a href="#v3-1-1">3.1.1</a>
+      <a href="#v3-1-0">3.1.0</a>
+      <a href="#v3-0-5">3.0.5</a>
+      <a href="#v3-0-4">3.0.4</a>
+      <a href="#v3-0-3">3.0.3</a>
+      <a href="#v3-0-2">3.0.2</a>
+      <a href="#v3-0-1">3.0.1</a>
+      <a href="#v3-0-0">3.0.0</a>
+      <a class="is-old" href="#v2-0-0">2.0.0</a>
+      <a class="is-old" href="#demo-1-0">Demo 1.0</a>
+    </nav>
+  </div>
+
+  <div class="wrap">
+    <div class="vlist">
+
+      <!-- ================= 4.0 (CHƯA PHÁT) =================
+           Nguồn: git log 3.4.1..origin/master (922618cd, af9f694b, cd4add01, f2831c1b, 3bdc625c, 26ae5165, 5e77783d, d39c8601,
+           0b3672b1, fee277c3, 89d14761, bc90e099, 821da880, bf408f24, 6c0347cb, ebe1aa28, 486dd545, a6b004cb, 67c6a04a);
+           tài liệu tong-quan/53 §3d, §3g, §5a (Thành Kiều, nâng set, map đợt A), 39 §8 (hồi 11, 12), 37 §4.35 (kinh nghiệm 41 đến 50),
+           §4.37 (chiêu 7 phái), §4.39 CA3 (Khí Vận, mới có thiết kế, chưa có code), §4.33 (Bùa), 54 (câu cá); data dungeon_thanhkieu.json
+           (cây làm việc, nhánh wip/thanh-kieu). Số câu cá / Bùa / Tống Bảo / tiệm khớp trang hướng dẫn (commit web 8b942f3).
+           KHI PHÁT: thay khối "vcard__date" bằng <time class="vcard__date" datetime="YYYY-MM-DD">D/M/YYYY</time>, bỏ nhãn
+           "Sắp ra mắt", bỏ class vcard--next (thẻ và link .vtoc), bỏ nhãn "đang làm" ở mục đã xong. -->
+      <article class="vcard vcard--next" id="v4-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">4.0</h2>
+          <span class="vcard__tag vcard__tag--gold">Sắp ra mắt</span>
+          <span class="vcard__date" data-release-date>Ngày phát hành: sẽ báo trong nhóm cộng đồng</span>
+        </header>
+        <p class="vcard__sum">Mở trần cấp 50, cốt truyện hồi 11 và 12, phó bản Thành Kiều Quân Doanh.</p>
+
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li><strong>Trần cấp 50.</strong> 14 bản đồ mới quanh Thái Sơn, nước Tề, Đông Hải, Thúy Hoa Sơn, Hàm Cốc Quan, nước Tần và Kênh Trịnh Quốc, quái cấp 41 tới 50. Kinh thành Tề và Tần mở đủ NPC.</li>
+          <li><strong>Cốt truyện hồi 11 (Biển Đông) và hồi 12 (Kênh Trịnh Quốc):</strong> 18 nhiệm vụ từ cấp 40 tới 50 theo dấu Từ Phúc, hé một nửa bí mật mười năm trước. Cả hai hồi thưởng 293.000 kinh nghiệm, 560.000 lượng, Cao Cấp Đoạn Thạch, Thăng Phẩm, Tái Tạo, thuốc và một Thẻ Thần Thú chọn con ở cấp 50. Xong hồi 10 thì nhận tiếp ở Thần Tiên Gia Gia.</li>
+          <li><strong>Phó bản Thành Kiều Quân Doanh</strong> <span class="badge">đang hoàn thiện</span>: gặp Thảo Nghịch Tướng Quân ở thành Tần, đội 1 tới 5 người, đánh 4 tướng phản quân Mã Quỷ, Lương Hưng, Yến Thập Tam, Tư Tà. Ba độ khó Thường, Khó, Địa Ngục, vé mỗi người mỗi lượt 1 / 1,5 / 2 triệu lượng (không hoàn), vào không giới hạn lượt. Phải hạ đủ 4 boss mới mở bảng thẻ cuối (mỗi người một bảng riêng): Tử Kim Tinh, Tái Tạo, Thăng Phẩm và nhiều đồ khác. Phó bản không rơi tiền. Thường từ cấp 40, Khó từ cấp 50, Địa Ngục dành cho cấp 60. Cách đánh từng boss sẽ có ở trang Hướng dẫn.</li>
+          <li><strong>Nâng set sư môn lên bậc 2</strong> bằng Tử Kim Tinh: gặp sư phụ chọn "Nâng bậc set sư môn" hoặc mở tab Nâng bậc của bảng set. Mỗi lần thử 1 Tử Kim Tinh và 10 điểm sư môn, thành công 25 %. Trượt thì mất Tinh và điểm, món giữ nguyên. Thành công thì món lên bậc 2, giữ nguyên sao và ngọc khảm. Món bậc 2 cần cấp 50.</li>
+          <li><strong>Khí Vận</strong> <span class="badge">đang làm</span>: người cấp thấp hơn mặt bằng máy chủ được thêm kinh nghiệm khi đánh quái và làm sư môn. Mặt bằng là cấp ở giữa của 10 nhân vật cao nhất trong số người vào game 7 ngày qua. Thấp hơn mặt bằng 5 cấp thì thêm 5 %, mỗi cấp thấp hơn thêm 5 %, tối đa 50 %; đuổi kịp thì tự tắt. Có biểu tượng ở hàng trạng thái, rê chuột xem đang được bao nhiêu.</li>
+          <li><a href="../huong-dan/#cau-ca">Câu cá ở Ngư Ông</a> (thành Chu): từ cấp 20, ngồi câu 60 giây một lần, 240 lần mỗi ngày. Ngư Điểm đổi Thăng Phẩm, Tái Tạo, Thú Hồn, món cá hồi máu và thú cưỡi Cá Voi Đom Đóm.</li>
+          <li><a href="../huong-dan/#bua-ma-thuat">Bùa Ma Thuật</a>: tick khi nâng sao, xịt thì giữ nguyên sao, mỗi lần rèn mất một lá. Rơi ở bảng thẻ Cổ Mộ Địa Ngục.</li>
+          <li><a href="../huong-dan/#tiem-do">Tiệm Vũ Khí, Trang Phục, Trang Sức</a> mở ở Chu và Sở, bán đồ trắng như bản gốc.</li>
+          <li>Nội tại môn phái hiện ở bảng chỉ số nhân vật (Alt+W). Phi Hành Phù kéo vào ô phím được.</li>
+          <li>Mã quà <code>welcome</code> đổi quà: 50 Thẻ Lăng Ba Vi Bộ, 2 Sơ Cấp Đoạn Thạch, 20 Hành Quân Tán, 30 Phi Hành Phù và 10.000 lượng, mỗi nhân vật một lần (ai đã nhận mã cũ thì không nhận lại). Mã <code>welcome2</code> ngừng.</li>
+        </ul>
+
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li>Kinh nghiệm cấp 41 tới 50: một con quái cấp 50 cho 522 kinh nghiệm, cả chặng 40 lên 50 cần khoảng 7.600 con quái cùng cấp. Kho kinh nghiệm dồn ở cấp 40 được dùng ngay khi mở trần: kho đầy đủ lên thẳng khoảng cấp 47.</li>
+          <li>Chiêu 7 phái: Ám Ma Nhập Thể (Mao Sơn) đánh mạnh gần gấp đôi; mọi đòn Thực Giáp trúng đều rút 1 giây hồi chiêu Lôi Động Cửu Thiên, ô phím hiện chữ báo. Nhánh thứ hai của Đào Hoa Nguyên, Thục Sơn, Cấm Vệ Quân, Côn Luân đánh mạnh hơn 30 tới 50 %. Quái bản đồ có Nội Kháng không dưới 0,7 lần Ngoại Kháng: phái nội công không còn hạ quái nhanh gấp đôi phái ngoại công.</li>
+          <li>Tống Bảo Tiểu Yêu giết không giới hạn, 5 lần đầu mỗi ngày có rơi đồ; thêm đồ Xanh phong ấn 10 %, Tinh Thạch cấp 1 còn 15 %.</li>
+          <li>Thăng Phẩm Thạch rẻ hơn: Bảo Khố 300.000 lượng (trước 500.000), tiệm sư môn 6 điểm (trước 10), tiệm Cổ Mộ 30 điểm (trước 50).</li>
+          <li>Bảng thẻ Cổ Mộ Địa Ngục: Thẻ Thần Thú còn 2 thẻ, thêm 1 thẻ Bùa Ma Thuật. Lữ Bố dạng thứ hai đánh mạnh hơn ở Khó và Địa Ngục.</li>
+          <li>Truy bắt: phản đồ có đòn sàn (2 / 3 / 4 % máu theo độ khó), lướt tới người đứng ngoài tầm. Truy bắt nhóm cả đội ngã cùng lúc thì phản đồ về chỗ cũ, đầy máu; thời gian sống lại 10 / 20 / 30 giây theo độ khó.</li>
+          <li>Bỏ hoàn thành nhanh sư môn và truy bắt đơn: việc nào cũng phải làm thật.</li>
+        </ul>
+
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Phản đồ truy bắt (đơn và nhóm) không còn "đánh không mất máu": tính đúng hồi máu, hút máu và đòn trúng của phản đồ.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 3.4.1 =================
+           Nguồn: tag 3.4.1 (2770df9a, 2026-10-05), news.json "Bản 3.4.1", git log 3.4.0..3.4.1, nhật ký (241). -->
+      <article class="vcard" id="v3-4-1">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">3.4.1</h2>
+          <time class="vcard__date" datetime="2026-10-05">5/10/2026</time>
+        </header>
+        <p class="vcard__sum">Kinh nghiệm thừa ở cấp 40 thành tiềm năng, sửa hình thú Mao Sơn.</p>
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li>Ở cấp 40, kinh nghiệm vượt quá kho tự đổi thành tiềm năng, miễn phí: cứ lượng kinh nghiệm bằng một con quái cùng cấp thì được 1 tiềm năng. Tiềm năng tối đa bằng cấp nhân 1.000.</li>
+        </ul>
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Cương Thi và Ma Vương (thú triệu hồi Mao Sơn) hiện đúng hình, trước đây máy người chơi thiếu hình nên hiện quả bí ngô.</li>
+          <li>Thú cưỡi đổi tên cho khớp với hình: Tê Giác Chiến Binh, Thần Tê Giác, Độc Giác.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 3.4.0 =================
+           Nguồn: tag 3.4.0 (3b5b72ea, 2026-10-05), news.json "Bản 3.4.0", git log 3.3.0..3.4.0 (truy bắt ba độ khó 37 §4.28 / §4.31,
+           Mao Sơn §4.24 / §4.27 / §4.29, Cổ Mộ §4.30, pháp bảo §4.25, mượt 52 §7, 3 lỗi chủ tuyến), nhật ký (238). -->
+      <article class="vcard" id="v3-4-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">3.4.0</h2>
+          <time class="vcard__date" datetime="2026-10-05">5/10/2026</time>
+        </header>
+        <p class="vcard__sum">Truy bắt và Cổ Mộ chia độ khó, Mao Sơn mới.</p>
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li>Truy bắt đơn và truy bắt nhóm chọn được Thường, Khó, Địa Ngục: Khó và Địa Ngục có lộ phí, phản đồ ra chiêu dày và đánh đau hơn, thưởng thêm Trung Cấp, Cao Cấp Đoạn Thạch. Ải cuối truy bắt nhóm lật 2 / 3 / 3 thẻ.</li>
+          <li>Chiêu của phản đồ đậm hơn đòn thường, có vòng báo trước để né.</li>
+          <li>Vương Bộ Đầu và Cổ Mộ Xa Phu gọn lời thoại.</li>
+        </ul>
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li>Cổ Mộ Khó và Địa Ngục lật 3 thẻ, bỏ lật thêm bằng ngân lượng. Địa Ngục có Tinh Thạch cấp 3; thú cưỡi Quý chỉ còn ở Cổ Mộ Địa Ngục.</li>
+          <li>Mao Sơn: Huyết Ma Chú hồi máu thú, Cương Thi chuyên đỡ đòn, Quỷ Tốt đánh mạnh hơn. Thực Giáp trúng kẻ đang dính nguyền rút 1 giây hồi chiêu Lôi Động Cửu Thiên.</li>
+          <li>Pháp bảo Chiêu Hồn dùng được trong Cổ Mộ, Truyền Thế hồi pháp lực gấp đôi.</li>
+        </ul>
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Đánh và chạy mượt hơn, đi bộ không còn bị kéo lùi.</li>
+          <li>Chủ tuyến: trùm nhiệm vụ Oa Yêu không còn bị người ngoài hạ mất; sửa chữ chỉ hướng sai ở vài nhiệm vụ; Tả Khâu Minh không còn nuốt dòng nhiệm vụ 28.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 3.3.0 =================
+           Nguồn: tag 3.3.0 (46a4604d, 2026-10-05), news.json "Bản 3.3.0", git log 3.2.0..3.3.0 (37 §4.20, §4.21, §4.22,
+           hết bí ngô 31 map, ngoại trang + cưỡi thú), nhật ký (222). -->
+      <article class="vcard" id="v3-3-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">3.3.0</h2>
+          <time class="vcard__date" datetime="2026-10-05">5/10/2026</time>
+        </header>
+        <p class="vcard__sum">Thưởng Hoạt động, tab Hàng tuần, điểm danh đổi quà.</p>
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li>Bảng Hoạt động có hai tab: Hôm nay (làm được nửa số việc đã mở thì nhận 2 Sơ Cấp Đoạn Thạch) và Hàng tuần (6 việc, 3 mốc quà: Trung Cấp, Thẻ Thần Thú chọn con, Thăng Phẩm, Cao Cấp, Vô Song Điểm Phiếu).</li>
+          <li>Điểm danh mỗi ngày nhận 1 Sơ Cấp Đoạn Thạch và 1 lượt Bảo Điển, ngày 7 nhận gấp ba.</li>
+          <li>Khung máu thú triệu hồi Mao Sơn, chấm đồng đội trên bản đồ góc và Alt+D, Ctrl và chuột phải vào người khác để chọn Theo sau.</li>
+          <li>Tiệm Cổ Mộ chia tab Tạp Hoá và Tinh Thạch.</li>
+        </ul>
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li>Cổ Mộ Địa Ngục còn 700.000 lượng, bảng thẻ Thường có thêm Trung Cấp và Tinh Thạch, Tiệm Cổ Mộ bán Sơ Cấp 100 điểm.</li>
+          <li>Tống Bảo Tiểu Yêu có thể rơi Sơ Cấp. Bảo Điển thẻ Tống Yêu hiện quái từ thấp hơn bạn 10 cấp tới cao hơn 5 cấp.</li>
+          <li>Phong Yêu Kính: yêu ma theo cấp của đội, xong nhanh hơn.</li>
+          <li>Ra chiêu mượt hơn cho cả 7 phái, bấm chiêu lúc đang chạy thì khựng ngắn rồi đi tiếp.</li>
+        </ul>
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Lật thẻ Cổ Mộ sát 23:00 không còn mất lượt; đi qua cổng dịch chuyển trong Phong Yêu Kính không còn mất lượt.</li>
+          <li>Quái gục vì mất máu không còn đứng lại.</li>
+          <li>Hết NPC hiện quả bí ngô ở các bản đồ đang mở; mặc ngoại trang khi cưỡi thú không còn mất hình nhân vật.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 3.2.0 =================
+           Nguồn: tag 3.2.0 (faeae925, 2026-10-04), news.json "Bản 3.2.0", git log 3.1.1..3.2.0 (thú cưỡi 47, Phong Yêu Kính 46,
+           đồ lưng, ngoại trang 48, chat 49, Tu Vị 50, Cổ Mộ bản 3, pháp bảo đợt 1, thời tiết), nhật ký (198). -->
+      <article class="vcard" id="v3-2-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">3.2.0</h2>
+          <time class="vcard__date" datetime="2026-10-04">4/10/2026</time>
+        </header>
+        <p class="vcard__sum">Thú cưỡi, Phong Yêu Kính, Cổ Mộ đổi mới.</p>
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li>Sưu tập 34 thú cưỡi trong tab Thú cưỡi (Alt+W): mở bằng Thẻ Thú Cưỡi, nâng sao bằng Thú Hồn ở Bảo Thú Đại Phu, mỗi con cộng một loại chỉ số, đủ 10 sao có con đổi hình. Nhận Hồng Tông Mã khi lên cấp 20, bấm C để cưỡi, người khác cũng thấy.</li>
+          <li>Phó bản mới Phong Yêu Kính (Tả Khâu Minh ở Chu): nộp một món trang bị Xanh, càn quét yêu ma rồi hạ Kính Ma, lật thẻ nhận quà.</li>
+          <li>Vô Song Điểm Phiếu đổi phi phong, cánh 10 bậc ở Quân Sư Vô Song Thành, mở ngoại trang (Alt+W).</li>
+          <li>Tab Kĩ năng cơ bản (Alt+R), kênh chat Hiện tại, Nhóm, Thế Giới, Tu Vị và quà online.</li>
+          <li>Đeo pháp bảo hiện vòng sáng dưới chân. Thời tiết đổi theo giờ trên mọi bản đồ: hoa đào, lá thu, mưa, tuyết.</li>
+          <li>Hoàn thành nhanh sư môn và truy bắt (đã bỏ ở bản 4.0).</li>
+        </ul>
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li>Cổ Mộ còn ba mức Thường, Khó, Địa Ngục (cấp 20, 30, 40), Lữ Bố có dạng thứ hai.</li>
+          <li>Năm loại pháp bảo cân lại cho cấp 40. Nâng sao thần thú ở Bảo Thú Đại Phu (Chu, Sở).</li>
+          <li>Ải 7 truy bắt nhóm có thẻ độc đắc Thăng Phẩm Thạch. Bảo Điển thêm ô Tinh Thạch cấp 1.</li>
+        </ul>
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Hành trang đầy thì quà phó bản vào túi chờ, không còn mất.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 3.1.1 =================
+           Nguồn: tag 3.1.1 (ed07a20a, 2026-10-04), news.json "Bản 3.1.1", git log 3.1.0..3.1.1 (khảm 37 §4.14, Lữ Bố §4.15,
+           phản đồ §4.13, chia kinh nghiệm nhóm), nhật ký (170). -->
+      <article class="vcard" id="v3-1-1">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">3.1.1</h2>
+          <time class="vcard__date" datetime="2026-10-04">4/10/2026</time>
+        </header>
+        <p class="vcard__sum">Khảm Tinh Thạch, chia kinh nghiệm nhóm, Lữ Bố mới.</p>
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li>Mở khảm ở thợ rèn: 10 loại Tinh Thạch (Kim, Mộc, Thủy, Hỏa, Thổ, Nhật, Nguyệt, Phong, Ảnh, Ám) cấp 1 tới 10, mỗi loại khảm vào đúng ô như bản gốc, ghép 2 viên cùng cấp được 1 viên cấp sau. Tinh Thạch có ở bảng thẻ Cổ Mộ, Tiệm Cổ Mộ và Tống Bảo Tiểu Yêu.</li>
+          <li>Đánh quái theo nhóm chia kinh nghiệm và tính nhiệm vụ cho cả đội ở gần.</li>
+        </ul>
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li>Tái tạo chỉ ra dòng hợp ô như bản gốc, bỏ dòng phần trăm và Thân Thủ; đồ cũ có dòng không hợp tự đổi sang dòng hợp ô.</li>
+          <li>Lữ Bố biết đổi mục tiêu, xung phong và nổi giận khi đánh quá lâu. Phản đồ truy bắt đánh mạnh hơn.</li>
+        </ul>
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Chọn được Tống Bảo Tiểu Yêu bằng chuột, gọi thần thú hiện hình, ghép đá khoá ra đá khoá, chỉ đường tới Động Đình Hồ, bảng set sư môn đổi được.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 3.1.0 =================
+           Nguồn: tag 3.1.0 (1b1dc5fe, 2026-10-03), news.json hai tin "Bản 3.1.0", git log 3.0.5..3.1.0 (Bảng Thần Thú, Cổ Mộ bản 2,
+           truy bắt 5 vòng, bạn bè, Tống Bảo, cốt truyện 10 tới 40, giao diện tong-quan/41, cân bằng kinh tế, giải phong ấn), nhật ký (158). -->
+      <article class="vcard" id="v3-1-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">3.1.0</h2>
+          <time class="vcard__date" datetime="2026-10-03">3/10/2026</time>
+          <span class="vcard__tag">Tải lại launcher một lần</span>
+        </header>
+        <p class="vcard__sum">Bảng Thần Thú, cốt truyện Hổ Phù, launcher tự cập nhật.</p>
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li>Sưu tập 12 thần thú con giáp trong tab Thần Thú (Alt+W): mỗi con cộng chỉ số, chọn một con đi theo.</li>
+          <li>Cốt truyện Hổ Phù từ cấp 10 tới 40 dẫn đi khắp các bản đồ.</li>
+          <li>Cổ Mộ có thêm Địa Ngục, bảng thẻ lật có độc đắc, túi tiền và thẻ thần thú.</li>
+          <li>Bằng hữu, Tống Bảo Tiểu Yêu ở các bản đồ hoang, thuốc tăng chỉ số 1 giờ, Dịch Trạm. Sứ Giả Môn Phái ở Tân Thủ Thôn đưa lên đủ 7 căn cứ.</li>
+          <li>Giao diện làm mới: chữ tiêu đề, Điểm danh, Hoạt động, Thành tựu, kĩ năng, thợ rèn.</li>
+          <li>Launcher tự cập nhật, không cần tải tay nữa.</li>
+        </ul>
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li>Truy bắt đơn còn 5 vòng mỗi ngày. Quà thành tựu đổi mới: mọi người nhận lại được.</li>
+          <li>Giao dịch từ cấp 20. Giải phong ấn tính theo cấp món (100.000 nhân cấp), trước đây 5 triệu mọi món.</li>
+          <li>Đồ ăn, rượu hồi dần như bản gốc; thuốc vẫn uống được khi đầy.</li>
+        </ul>
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Nam Đào Hoa Nguyên đi đúng dáng (trước dùng nhầm khung đứng).</li>
+        </ul>
+        <p class="note">Launcher 3.0 không chạy được bản này: tải launcher mới ở trang chủ, giải nén đè lên thư mục game cũ (giữ nguyên thư mục packs thì không phải tải lại dữ liệu đã có).</p>
+      </article>
+
+      <!-- ================= 3.0.5 =================
+           Nguồn: tag 3.0.5 (aa76f5d0, 2026-10-03), news.json "Bản 3.0.5", git log 3.0.4..3.0.5. -->
+      <article class="vcard" id="v3-0-5">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">3.0.5</h2>
+          <time class="vcard__date" datetime="2026-10-03">3/10/2026</time>
+        </header>
+        <p class="vcard__sum">Chat, giao dịch, cập nhật nhẹ hơn.</p>
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li>Mở chat: bấm Enter để nói với mọi người cùng bản đồ, gõ /d đầu câu để nói với tổ đội.</li>
+          <li>Mở lại giao dịch giữa người chơi. Bảo Khố bán Tẩy Điểm Hoàn để hoàn lại điểm thuộc tính đã cộng.</li>
+          <li>Bấm Enter để xác nhận ở các hộp hỏi lại.</li>
+          <li>Từ bản này, mỗi lần cập nhật chỉ tải phần thay đổi.</li>
+        </ul>
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Sư môn và truy bắt không còn giao bản đồ chưa đủ cấp tới, không đòi mua đồ tiệm không bán.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 3.0.4 =================
+           Nguồn: tag 3.0.4 (c8ffae3c, 2026-10-03), news.json "Bản 3.0.4", nhật ký (142), (144) (tiệm Cổ Mộ có từ sau 3.0.3, phát cùng 3.0.4). -->
+      <article class="vcard" id="v3-0-4">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">3.0.4</h2>
+          <time class="vcard__date" datetime="2026-10-03">3/10/2026</time>
+        </header>
+        <p class="vcard__sum">Truy bắt nhóm, Lữ Bố ra chiêu.</p>
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li>Vương Bộ Đầu (Chu Quốc) giao thêm việc truy bắt nhóm: đội 2 tới 5 người qua 7 ải, mỗi ải một môn phái, hạ hết thì mỗi người lật một thẻ ngân lượng.</li>
+          <li>Lữ Bố trong Cổ Mộ biết dùng Thiên Quân Phá Trận và Thiên Lý Tất Sát, có vòng đỏ báo trước dưới đất để né.</li>
+          <li>Tiệm Cổ Mộ đổi điểm Cổ Mộ lấy đồ.</li>
+        </ul>
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li>Thẻ lật ở Cổ Mộ bán, vứt, giao dịch được.</li>
+        </ul>
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Phản đồ đánh xa đúng tầm môn phái.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 3.0.3 (không tag, không tin launcher) =================
+           Nguồn: nhật ký 2026-10-03 (140) "phát 3.0.3" (release.sh, version.json 3.0.3); code không commit riêng, nằm trong commit
+           3.0.4 c8ffae3c (nhật ký (144)). Chữ viết lại từ mô tả ở nhật ký. -->
+      <article class="vcard" id="v3-0-3">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">3.0.3</h2>
+          <time class="vcard__date" datetime="2026-10-03">3/10/2026</time>
+        </header>
+        <p class="vcard__sum">Truy bắt Vương Bộ Đầu, phó bản Cổ Mộ.</p>
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li>Vương Bộ Đầu ở Chu Quốc giao việc truy bắt phản đồ, 10 vòng mỗi ngày. Phản đồ mang dáng nhân vật môn phái, ra chiêu có báo trước: bước ra khỏi vùng là né.</li>
+          <li>Phó bản Cổ Mộ: đội 1 tới 5 người đấu Lữ Bố, mỗi ngày một lượt thưởng, hạ xong lật thẻ nhận quà.</li>
+          <li>Phi Hành Phù: dịch chuyển tới chỗ ngẫu nhiên trong vùng.</li>
+          <li>Thợ rèn mở Tăng phẩm và Giải phong ấn. Bảng Hoạt động hôm nay thêm dòng phó bản và truy bắt.</li>
+        </ul>
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li>Dùng tín vật, phù phải đứng yên lúc niệm.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 3.0.2 =================
+           Nguồn: tag 3.0.2 (c2f58055, 2026-10-02), news.json "Bản 3.0.2", nhật ký (130). -->
+      <article class="vcard" id="v3-0-2">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">3.0.2</h2>
+          <time class="vcard__date" datetime="2026-10-02">2/10/2026</time>
+        </header>
+        <p class="vcard__sum">Giữ kết nối.</p>
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li>Mất mạng giữa chừng, game tự nối lại và đưa bạn về đúng nhân vật, đúng chỗ đang đứng.</li>
+          <li>Trước khi máy chủ cập nhật, đầu màn hình hiện đếm ngược để bạn kịp dừng tay, dữ liệu được lưu tự động.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 3.0.1 =================
+           Nguồn: tag 3.0.1 (88b08347, 2026-10-02), news.json "Bản 3.0.1", nhật ký (128) (bản sửa tín vật phát trước tag, gộp vào đây), (129). -->
+      <article class="vcard" id="v3-0-1">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">3.0.1</h2>
+          <time class="vcard__date" datetime="2026-10-02">2/10/2026</time>
+        </header>
+        <p class="vcard__sum">Bản sửa lỗi đầu tiên.</p>
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li>Bái sư được sư phụ tẩy điểm thuộc tính, trả lại toàn bộ điểm đã cộng để cộng lại theo môn phái (Alt+W).</li>
+          <li>Cửa hàng: ô số lượng gõ thẳng được, không phải bấm cộng trừ từng cái, Enter để mua.</li>
+        </ul>
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Nhiệm vụ 2 dùng được tín vật khi chơi online.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 3.0.0 (không tag) =================
+           Nguồn: news.json "Ra mắt bản 3.0 online" (2026-10-02), nhật ký 2026-10-02 (127) (lên VPS, launcher 3.0.0),
+           tong-quan/00 bảng "3.x: đã có gì (bảng chụp 2026-10-02)". -->
+      <article class="vcard" id="v3-0-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">3.0.0</h2>
+          <time class="vcard__date" datetime="2026-10-02">2/10/2026</time>
+          <span class="vcard__tag">Ra mắt bản online</span>
+        </header>
+        <p class="vcard__sum">Chơi online cùng bằng hữu trên máy chủ mới.</p>
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li>Mở đủ 7 môn phái: Đào Hoa, Thục Sơn, Cấm Vệ Quân, Đường Môn, Mao Sơn, Côn Luân, Vân Mộng. Cấp tối đa 40, cây kĩ năng hai nhánh mỗi phái.</li>
+          <li>Tạo tài khoản, chơi chung bản đồ, tổ đội 5 người, xem trang bị người khác.</li>
+          <li>Nhiệm vụ sư môn 10 việc mỗi ngày (làm mới 23:00 giờ Việt Nam), điểm danh vòng 7 ngày.</li>
+          <li>Thợ rèn ở mọi Chủ Tiệm Sửa Chữa: nâng sao tới 10, hợp thành Đoạn Thạch, tái tạo; set sư môn, trang bị năm màu phẩm.</li>
+          <li>Launcher tự tải gói game.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 2.0.0 (offline) =================
+           Nguồn: tag 2.0.0 (aff2e302, 2026-09-30), git log demo-1.0..2.0.0, tong-quan/00 (dòng sửa lỗi 1.x), nhật ký 2026-09-29b (39)-(42),
+           2026-09-30 (46)-(49). -->
+      <article class="vcard vcard--old" id="v2-0-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">2.0.0</h2>
+          <time class="vcard__date" datetime="2026-09-30">30/9/2026</time>
+          <span class="vcard__tag vcard__tag--muted">Bản offline cuối</span>
+        </header>
+        <p class="vcard__sum">Bản demo offline sửa lỗi theo góp ý người chơi.</p>
+        <ul>
+          <li>Nhân vật đi theo ô như bản gốc (hết "bay trên map"), vòng chọn và khung mục tiêu, Tab đổi mục tiêu, tiếng quái.</li>
+          <li>Alt+D bản đồ khu vực (la bàn, chủ tiệm, toạ độ, tên cổng), Alt+M bản đồ thế giới.</li>
+          <li>Chiêu trấn phái Thiên Quân Phá Trận; sau trận Lữ Bố có nút Chiến đấu tới cùng; vũ khí sao cao toả quầng sáng như bản gốc.</li>
+          <li>Sửa nhiệm vụ 18 không vào trận Lữ Bố khi đóng thoại bằng ESC.</li>
+        </ul>
+        <p class="note">Bản offline không còn cập nhật. Link tải ở chân trang chủ.</p>
+      </article>
+
+      <!-- ================= Demo 1.0 (offline) =================
+           Nguồn: tag demo-1.0 (57c13696, 2026-09-29), tong-quan/00 mục "Bản Demo 1.0 đã phát hành" + "Bản Demo 1.0 có gì". -->
+      <article class="vcard vcard--old" id="demo-1-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">Demo 1.0</h2>
+          <time class="vcard__date" datetime="2026-09-29">29/9/2026</time>
+          <span class="vcard__tag vcard__tag--muted">Bản offline đầu tiên</span>
+        </header>
+        <p class="vcard__sum">Lần đầu quay lại Tân Thủ Thôn.</p>
+        <ul>
+          <li>Chơi một mình, môn phái Cấm Vệ Quân, cấp 1 tới 10, 4 bản đồ khởi đầu.</li>
+          <li>18 nhiệm vụ chủ tuyến, 20 chiêu Cấm Vệ Quân, rèn sao tới 3 sao, Chiến Quốc Bảo Điển.</li>
+          <li>Bái nhập môn phái xong thì gặp Lữ Bố.</li>
+        </ul>
+      </article>
+
+      <p class="vend">Chiến Quốc ra mắt năm 2008. Chiến Quốc Remaster bắt đầu từ bản Demo 1.0.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="brand" href="../"><img src="../assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
+      <p class="foot__small">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+    </div>
+    <ul class="foot__links">
+      <li><a href="../">Trang chủ: tải game</a></li>
+      <li><a href="../huong-dan/">Hướng dẫn: nhiệm vụ hằng ngày, rèn trang bị, môn phái</a></li>
+      <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook: góp ý, báo lỗi</a></li>
+    </ul>
+    <p class="foot__small foot__legal">
+      Dự án phục dựng phi thương mại của người hâm mộ, làm để học tập và lưu giữ kí ức.
+      Tên gọi, hình ảnh và tài nguyên gốc của Chiến Quốc thuộc bản quyền của chủ sở hữu.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

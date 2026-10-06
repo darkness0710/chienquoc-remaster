@@ -6,6 +6,7 @@ Trang tĩnh: HTML + CSS + một file JS nhỏ (ảnh trượt), không cần bui
 ```
 ├── index.html          trang chủ: đầu trang (ảnh trượt ngang), video trailer #trailer + 3 thẻ ảnh, "Bản 3.0 có gì", "Lời hứa", "Cài đặt 3 bước", "Lộ trình", chân trang
 ├── huong-dan/index.html  trang /huong-dan/: 6 tab (Hằng ngày, Chủ tuyến, Thần Thú, Trang bị, Môn phái, Tiện ích), tab con, ảnh trong game
+├── phien-ban/index.html  trang /phien-ban/: mỗi bản một thẻ (ngày phát hành, tính năng mới / cân bằng / sửa lỗi), mới nhất ở trên, mục lục nhảy nhanh dính dưới thanh trên
 ├── css/style.css       giao diện (màu ở :root: xanh mực + vàng kim như giao diện game)
 ├── js/main.js          ảnh trượt: chấm vị trí, nút trái phải, phím mũi tên, tự chuyển 5 s; nút phát lớn của video
 ├── js/tabs.js          tab trang hướng dẫn (không JS thì mọi mục hiện liền nhau)
@@ -45,6 +46,7 @@ Mở thẳng `index.html` bằng trình duyệt cũng chạy (mọi đường d�
 | Thêm / bớt ảnh trượt | một `<figure class="slide">` trong `#sliderTrack` (chấm vị trí tự sinh theo số ảnh) |
 | Sửa trang hướng dẫn | `huong-dan/index.html`. Nguồn số liệu (repo game): sư môn `godot/data/custom/sect_quests.json`, `sect_sets.json` (`exchange`); rèn `forge.json` (cả khối `charm` Bùa Ma Thuật), `equip_rules.json`; môn phái `sect_skills.json`; Tống Bảo `rare_monster.json`; Cổ Mộ `dungeon_gumu.json`; câu cá `fishing.json` (tài liệu game 54); giá Bảo Khố `treasury.json`. Đọc số từ bản đã phát (worktree nhánh `rel-<bản>`), đừng đọc bản đang sửa dở |
 | Sửa tab Chủ tuyến (`#chu-tuyen`) | `huong-dan/index.html`, mục `#ct-tong-quan`, `#ct-vet-nut`, `#ct-hoi-5` đến `#ct-hoi-10`. Nguồn số liệu (repo game): `godot/data/custom/quests/001.json` + `001-act05.json` đến `001-act10.json` (bỏ `001-archive-*`), luật đọc `godot/logic/quest.gd`; tên món `item_names_vi.json` + `custom_items.json`; NPC đứng map nào: `assets/converted/map/<map>/npcs.json`; bảng luyện cấp: `travel.json` (Tân Thủ Tiên Cô). Số thứ tự nhiệm vụ = số trong sổ nhiệm vụ (73 mỗi người: nhiệm vụ riêng phái hồi 8 mang số 55, 56). Bảng nhiệm vụ dùng `.tbl tbl--quest` (điện thoại: mỗi dòng thành một khối dọc) |
+| Thêm bản mới vào trang Phiên bản | mỗi lần phát: chép một `<article class="vcard" id="v<số bản, chấm thành gạch>">` lên **đầu** `.vlist` của `phien-ban/index.html` + một link `#id` ở đầu `.vtoc`. Chữ lấy từ tin launcher `godot/data/custom/news.json` của repo game (mỗi bản một tin, đã viết cho người chơi), chia vào ba nhóm `h3.g-new` (Tính năng mới), `h3.g-bal` (Cân bằng), `h3.g-fix` (Sửa lỗi), bổ sung bằng `git log <tag trước>..<tag> --oneline`; ngày = ngày tag (`git tag --sort=creatordate --format='%(refname:short) %(creatordate:short)'`, bỏ tag `assets-*`). Ghi nguồn (tag, commit, file) trong comment HTML trên thẻ. Bản chưa phát (4.0 lúc viết): class `vcard--next`, nhãn "Sắp ra mắt", khối ngày `data-release-date`; khi phát thay bằng `<time datetime>` (hướng dẫn ngay trong comment trên thẻ) |
 | Thêm mục hướng dẫn | một `<article class="gcard gpanel sub-panel" id=…>` trong `.guide` của tab lớn + một link `#id` trong `.subtabs` của tab đó. `js/tabs.js` tự nhận, không phải sửa JS |
 | Chụp lại ảnh hướng dẫn | xem mục *Ảnh trang hướng dẫn* dưới |
 | Đổi màu | biến `--gold-*`, `--ink-*`, `--jade-*` trong `:root` của `style.css` |
@@ -89,6 +91,8 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   đặt trang trong `<iframe>` rộng 375 px rồi liệt kê phần tử có `getBoundingClientRect().right > 375`
   (Edge headless không thu cửa sổ dưới ~500 px nên chụp thẳng `--window-size=375` sẽ sai).
 - Ảnh chụp kiểm để trong `tmp/`, không commit.
+- 2026-10-06: kiểm bằng `tmp/pv/w.html?<rộng>&<trang>` (iframe, liệt kê phần tử tràn, id trùng, neo `#` không đích) chạy Edge headless có
+  **`--hide-scrollbars`**: thiếu cờ này thì thanh cuộn dọc của iframe ăn 15 px, "375" thực ra đo ở 360.
 
 ## Lịch sử thiết kế
 
@@ -127,6 +131,10 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   lật 2 / 3 / 3 thẻ, không lật trả tiền), Phong Yêu Kính (độc đắc thú Hiếm), Tống Bảo; mỗi mục có **bảng tỉ lệ quà** (số thẻ / 16
   và cơ hội có ít nhất một trong cả lượt lật). Số lấy từ repo game `criminal.json`, `dungeon_gumu.json`, `rare_monster.json`
   (tài liệu game 37 §4.28 đến §4.31). Ô chữ dài dùng `td.wrap-cell`.
+- 2026-10-06: trang **Phiên bản** `/phien-ban/` (chủ repo: "ghi rõ từng phiên bản có thay đổi gì, kèm ngày phát hành"): link "Phiên bản" ở thanh trên
+  mọi trang (màn dưới 560 px ẩn chữ tên cạnh logo để logo + 3 mục vừa 360 px). 15 thẻ: 4.0 (sắp ra mắt), 3.4.1 tới 3.0.0, 2.0.0, Demo 1.0. 3.4.2 không
+  phát (gộp vào 4.0). 3.0.0 và 3.0.3 không có tag git: ngày lấy ở nhật ký repo game ((127), (140)); 3.0.3 không có tin launcher, chữ viết lại từ nhật ký.
+  Kiểm 375 / 360 px: 0 phần tử tràn ở trang mới, trang chủ, trang hướng dẫn.
 - 2026-10-06: theo bản 3.4.2 (số đọc ở worktree `D:\Projects\Debug-rel`, nhánh `rel-3.4.2`, không đọc bản đang sửa dở). Mục mới:
   Câu cá `#cau-ca` (tab Hằng ngày), Bùa Ma Thuật `#bua-ma-thuat` (tab Trang bị, có icon món), Tiệm đồ `#tiem-do` (tab Tiện ích).
   Sửa: Tống Bảo giết không giới hạn (5 lần đầu rơi đồ, thêm đồ Xanh 10 %, Tinh Thạch cấp 1 15 %), bảng thẻ Cổ Mộ Địa Ngục (Thần
