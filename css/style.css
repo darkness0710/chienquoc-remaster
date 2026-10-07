@@ -446,6 +446,10 @@ html.tabs-on .tab-panel + .tab-panel { border-top: 0; }
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .5)); }
 .tip { margin-top: 14px !important; padding: 10px 14px; border-radius: 10px; font-size: .92rem !important;
   border-left: 3px solid var(--gold-500); background: rgba(232, 195, 106, .08); }
+/* Luật bản đang chạy khi trang đã ghi luật bản kế tiếp (2026-10-07): gập lại, bấm để xem. Phát bản mới thì xoá khối. */
+.was { margin-top: 14px; padding: 8px 14px; border-radius: 10px; border: 1px dashed var(--line); }
+.was summary { cursor: pointer; font-size: .9rem; color: var(--muted); }
+.was[open] summary { margin-bottom: 6px; }
 
 /* Danh sách bước: nhãn vàng bên trái (10 việc sư môn...). */
 .steps-mini { list-style: none; padding: 0 !important; gap: 8px !important; }
@@ -459,6 +463,8 @@ html.tabs-on .tab-panel + .tab-panel { border-top: 0; }
 .tbl th, .tbl td { padding: 7px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
 .tbl th { color: var(--gold-500); font-weight: 600; background: rgba(7, 13, 34, .5); }
 .tbl tr:last-child td { border-bottom: 0; }
+/* Bảng thẻ lật theo nhịp (2026-10-07): ô nhiều chữ, cho xuống dòng thay vì cuộn ngang. */
+.tbl--cards td { white-space: normal; }
 
 /* Môn phái: hai nhánh cạnh nhau. */
 .sect__role { display: block; margin-top: 2px; font-size: .92rem; color: var(--jade-400); font-weight: 600; }
