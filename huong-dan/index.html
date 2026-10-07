@@ -31,9 +31,9 @@
      Bùa Ma Thuật: forge.json (charm, rates), custom_items.json + gameplay/24, tài liệu 37 §4.33 · Bảo Khố: treasury.json ·
      Tiệm đồ Chu / Sở: gameplay/12 §1.10zh, gameplay/npc/080, 060 · Dịch Trạm: sect_bases.json (relay) ·
      Hổ Phù: tài liệu 39 §7 · Bằng hữu: gameplay/40 · Thuốc: gameplay/42.
-     Đợt cân bằng 2026-10-07 (chưa phát, ghi "Bản kế tiếp"): repo game master ce88e40b, nhật ký 2026-10-07 (291)-(295),
-     gameplay/12 mục "Đợt cân bằng 2026-10-07", 37 §4.41-§4.46, 41 GD36. Nội dung bản 4.1 đang chạy giữ trong <details class="was">;
-     khi phát: bỏ nhãn "Bản kế tiếp", xoá các khối details.was và cụm "4.1 / bản kế tiếp".
+     Đợt cân bằng 2026-10-07 (đã phát ở bản 4.2, 2026-10-08, tag 4.2.0): repo game master ce88e40b, nhật ký 2026-10-07 (291)-(295),
+     gameplay/12 mục "Đợt cân bằng 2026-10-07", 37 §4.41-§4.46, 41 GD36. Luật 4.1 cũ (các khối details.was) đã xoá khi phát 4.2;
+     Đã làm khi phát 4.2: bỏ nhãn "Bản kế tiếp", xoá các khối details.was, ô thông tin ghi "Từ bản 4.2".
      Ảnh assets/img/huong-dan/: chụp từ game bằng ./run.sh shot --ui (cờ chụp từng ảnh: README.md). -->
 
 <header class="bar">
@@ -168,7 +168,7 @@
               <li>Quá giờ hoặc bỏ: hôm đó dừng, tiền các vòng đã xong vẫn giữ.</li>
               <!-- criminal.json tiers.kho / dia_nguc: max_falls 5 / 3, potion_cap_pm 250 / 200, no_pet_aggro, pet_dmg_pm 500
                    (37 §4.46 SL1 + SL3 + SL4, nhật ký game (293)); nhóm: cả đội ngã, đếm theo chuyến. -->
-              <li><span class="badge">Bản kế tiếp</span> Khó và Địa Ngục: ngã <strong>5 lần</strong> trong một vòng (Địa Ngục <strong>3 lần</strong>) là thua vòng đó, không hoàn lộ phí. Khi đang truy bắt, mỗi viên thuốc máu (cả Tái Tạo Hoàn) hồi tối đa 25 % Khí Huyết tối đa (Địa Ngục 20 %). Phản đồ không bị thú khiêu khích, đòn của thú vào phản đồ chỉ còn một nửa.</li>
+              <li>Khó và Địa Ngục: ngã <strong>5 lần</strong> trong một vòng (Địa Ngục <strong>3 lần</strong>) là thua vòng đó, không hoàn lộ phí. Khi đang truy bắt, mỗi viên thuốc máu (cả Tái Tạo Hoàn) hồi tối đa 25 % Khí Huyết tối đa (Địa Ngục 20 %). Phản đồ không bị thú khiêu khích, đòn của thú vào phản đồ chỉ còn một nửa.</li>
               <!-- criminal.json: stats.min_hit_pm 20, tiers.kho/dia_nguc.stats.min_hit_pm 30 / 40; skills.dash after_sec 3, cd_sec 10 (37 §4.36) -->
               <li>Bản 3.4.2 sửa lỗi phản đồ "đánh không mất máu": mỗi đòn trúng ít nhất 2 % máu của người bị đánh (Khó 3 %, Địa Ngục 4 %), đứng ngoài tầm quá 3 giây thì phản đồ lướt tới, chỉ số phản đồ tính lại lúc bấm Truy bắt (đơn và nhóm đều vậy).</li>
             </ul>
@@ -178,7 +178,7 @@
               <li>30 phút qua <strong>7 ải</strong>, mỗi ải phản đồ một phái. Đội càng đông, phản đồ càng đông và mạnh.</li>
               <li>Hạ hết một ải: kinh nghiệm bằng 5 quái, mỗi người lật <strong>1 thẻ ngân lượng</strong>. Ải cuối lật nhiều thẻ hơn và có thêm đồ.</li>
               <li>Thẻ ngân lượng: ải 1 từ 100.000 đến 140.000, mỗi ải sau thêm 40.000. Cấp 40 nhận 38 % giá thẻ (cấp thấp hơn nhận ít hơn theo cấp), Khó nhân 1,4, Địa Ngục nhân 1,92. Trừ vé, cả chuyến cấp 40 còn khoảng 258.000 ở cả ba độ khó.</li>
-              <li><span class="badge">Bản kế tiếp</span> Khó và Địa Ngục: cả đội cùng ngã <strong>5 lần</strong> trong cả chuyến (Địa Ngục <strong>3 lần</strong>) là thua, không hoàn vé. Trần thuốc máu 25 % / 20 % và luật thú như truy bắt một mình.</li>
+              <li>Khó và Địa Ngục: cả đội cùng ngã <strong>5 lần</strong> trong cả chuyến (Địa Ngục <strong>3 lần</strong>) là thua, không hoàn vé. Trần thuốc máu 25 % / 20 % và luật thú như truy bắt một mình.</li>
             </ul>
             <div class="tbl">
               <table>
@@ -243,13 +243,13 @@
               <li>Thấy <strong>vòng đỏ</strong> dưới chân thì chạy ra ngay. Kéo Lữ Bố xa quá 15 ô thì hắn về chỗ, hồi đầy máu.</li>
               <li>Chết: hồi sinh ở cửa mộ sau 10 giây, không mất gì. Trang bị bị khoá, thuốc vẫn dùng được. Pháp bảo Chiêu Hồn kéo dậy được một lần mỗi lượt.</li>
               <!-- dungeon_gumu.json difficulties[].potion_cap_pm 250 / 200 (37 §4.46 SL1, nhật ký game (293)) -->
-              <li><span class="badge">Bản kế tiếp</span> Khó và Địa Ngục: trong mộ mỗi viên thuốc máu (cả Tái Tạo Hoàn) hồi tối đa <strong>25 %</strong> Khí Huyết tối đa (Địa Ngục <strong>20 %</strong>). Đồ ăn và chiêu hồi máu của phái không bị giới hạn.</li>
+              <li>Khó và Địa Ngục: trong mộ mỗi viên thuốc máu (cả Tái Tạo Hoàn) hồi tối đa <strong>25 %</strong> Khí Huyết tối đa (Địa Ngục <strong>20 %</strong>). Đồ ăn và chiêu hồi máu của phái không bị giới hạn.</li>
             </ul>
             <!-- Lật theo nhịp (bản kế tiếp, repo game master ce88e40b): dungeon_gumu.json flip_rounds {round_sec 15, reveal_sec 3},
                  difficulties[].rounds 1 / 2 / 3, cards_mix {mã: số thẻ} hoặc {mã: {count, n}} (n = lượng mỗi thẻ) + jackpot;
                  tài liệu 33 §7, 37 §4.44, nhật ký (292). Cơ hội cả lượt: 1 - (1 - k / 16) ^ số nhịp (mỗi nhịp một bảng mới).
                  Túi ngân lượng = phí x cash_cards small_pm 500 / big_pm 2000 phần nghìn x n. -->
-            <h4>Lật thẻ <span class="badge">Bản kế tiếp</span></h4>
+            <h4>Lật thẻ</h4>
             <ul>
               <li>Lữ Bố chết: mỗi người nhận điểm phó bản và Vô Song Điểm Phiếu (khoá), rồi lật thẻ theo <strong>nhịp</strong>. Thường <strong>1 nhịp</strong>, Khó <strong>2</strong>, Địa Ngục <strong>3</strong>.</li>
               <li>Mỗi nhịp chia một bảng <strong>16 thẻ mới</strong>, chung cả đội. Mỗi người lật <strong>1 thẻ</strong> trong <strong>15 giây</strong>, ai chưa lật thì được lật hộ. Lật xong cả bảng ngửa ra 3 giây rồi sang nhịp sau.</li>
@@ -280,30 +280,6 @@
             <p>Ít thẻ hơn nhưng mỗi thẻ nhiều đồ hơn: tính trung bình mỗi người, lượng đồ gần như bản 4.1 (Khó bớt chút Trung Cấp, Thẻ Thần Thú và pháp bảo).</p>
             <!-- Bảng bản 4.1 (tag 4.1.0 repo game, dungeon_gumu.json): Địa Ngục beast 1 + bua_may_man 1 (từ 4.1, trước beast 2).
                  Cơ hội: 1 - C(16 - k, lượt) / C(16, lượt). -->
-            <details class="was">
-              <summary>Bản 4.1 đang chạy: một bảng chung, Thường lật 2 thẻ, Khó và Địa Ngục 3 thẻ</summary>
-            <p>Lữ Bố chết: cả đội chung một bảng 16 thẻ. Thường lật 2 thẻ, Khó và Địa Ngục lật 3 thẻ, không có lượt mua thêm. Mỗi ô ghi số thẻ trên 16 và cơ hội lật trúng ít nhất một thẻ đó trong các lượt của mình.</p>
-            <div class="tbl">
-              <table>
-                <thead><tr><th>Thẻ</th><th>Thường (2 lượt)</th><th>Khó (3 lượt)</th><th>Địa Ngục (3 lượt)</th></tr></thead>
-                <tbody>
-                  <tr><td>Sơ Cấp Đoạn Thạch</td><td>4/16 · 45 %</td><td></td><td></td></tr>
-                  <tr><td>Trung Cấp Đoạn Thạch</td><td>3/16 · 35 %</td><td>3/16 · 49 %</td><td></td></tr>
-                  <tr><td>Cao Cấp Đoạn Thạch</td><td></td><td>2/16 · 35 %</td><td>4/16 · 61 %</td></tr>
-                  <tr><td>Thăng Phẩm Thạch</td><td>1/16 · 12 %</td><td>2/16 · 35 %</td><td>2/16 · 35 %</td></tr>
-                  <tr><td>Thẻ Thần Thú (ngẫu nhiên)</td><td>2/16 · 24 %</td><td>3/16 · 49 %</td><td>1/16 · 19 %</td></tr>
-                  <tr><td><a href="#bua-ma-thuat">Bùa Ma Thuật</a></td><td></td><td></td><td>1/16 · 19 %</td></tr>
-                  <tr><td><a href="#bua-may-man">Bùa May Mắn</a></td><td></td><td></td><td>1/16 · 19 %</td></tr>
-                  <tr><td>Pháp bảo 0 sao (ngẫu nhiên)</td><td>1/16 · 12 %</td><td>2/16 · 35 %</td><td>2/16 · 35 %</td></tr>
-                  <tr><td>Tinh Thạch</td><td>cấp 1 · 1/16 · 12 %</td><td></td><td>cấp 3 · 1/16 · 19 %</td></tr>
-                  <tr><td>Túi ngân lượng</td><td>100.000 · 1/16 · 12 %</td><td>1.000.000 · 1/16 · 19 %</td><td>1.400.000 · 1/16 · 19 %</td></tr>
-                  <tr><td>Vô Song Điểm Phiếu</td><td>2 phiếu · 1/16 · 12 %</td><td>3 phiếu · 1/16 · 19 %</td><td>5 phiếu · 1/16 · 19 %</td></tr>
-                  <tr><td>Thẻ Thú Cưỡi</td><td>Thường · 1/16 · 12 %</td><td>Hiếm · 1/16 · 19 %</td><td>Quý · 1/16 · 19 %</td></tr>
-                  <tr><td>Độc đắc</td><td>Cao Cấp Đoạn Thạch · 12,5 %</td><td>2 Thẻ Thần Thú chọn con · 18,8 %</td><td>Đỉnh Cấp Đoạn Thạch · 18,8 %</td></tr>
-                </tbody>
-              </table>
-            </div>
-            </details>
             <!-- Tiệm: dungeon_gumu.json shop (thang_pham 30 điểm từ 3.4.2, trước 50) -->
             <p class="tip">Bùa Ma Thuật, thú cưỡi Quý, Đỉnh Cấp Đoạn Thạch và Tinh Thạch cấp 3 chỉ Địa Ngục mới ra. Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt. Điểm phó bản đổi ở Tiệm Cổ Mộ của Xa Phu: Thẻ Thần Thú chọn con 300, pháp bảo 0 sao chọn loại 100, Sơ Cấp Đoạn Thạch (khoá) 100, Thăng Phẩm Thạch 30, Tinh Thạch cấp 1 chọn loại 25, Tái Tạo Thạch 10, Thú Hồn 10.</p>
           </div>
@@ -349,7 +325,7 @@
               <li>Khó và Địa Ngục: mỗi tướng thêm chiêu, ra chiêu dày hơn. Thấy vòng báo dưới chân thì chạy ra.</li>
               <li>Chết: sống lại ở cửa doanh trại sau 10 giây. Trang bị bị khoá suốt lượt.</li>
               <!-- dungeon_thanhkieu.json difficulties[].potion_cap_pm 250 / 200 (37 §4.46 SL1) -->
-              <li><span class="badge">Bản kế tiếp</span> Khó và Địa Ngục: mỗi viên thuốc máu (cả Tái Tạo Hoàn) hồi tối đa <strong>25 %</strong> Khí Huyết tối đa (Địa Ngục <strong>20 %</strong>). Đồ ăn và chiêu hồi máu của phái không bị giới hạn.</li>
+              <li>Khó và Địa Ngục: mỗi viên thuốc máu (cả Tái Tạo Hoàn) hồi tối đa <strong>25 %</strong> Khí Huyết tối đa (Địa Ngục <strong>20 %</strong>). Đồ ăn và chiêu hồi máu của phái không bị giới hạn.</li>
             </ul>
             <div class="tbl">
               <table>
@@ -367,7 +343,7 @@
                  dungeon_gumu.json flip_rounds (15 / 3). Tài liệu 53 §3g, 37 §4.44, nhật ký (292).
                  Cơ hội cả lượt: 1 - (1 - k / 16) ^ số nhịp. Trung bình Tử Kim Tinh mỗi người: (4 x 3 + 9) / 16 = 1,31;
                  2 x (4 x 2 + 4 + 6) / 16 = 2,25; 3 x (5 x 2 + 3 + 5) / 16 = 3,38. -->
-            <h4>Lật thẻ <span class="badge">Bản kế tiếp</span></h4>
+            <h4>Lật thẻ</h4>
             <ul>
               <li>Chỉ khi hạ <strong>Tư Tà</strong> mới có thưởng. Thua hoặc hết giờ trước đó thì không nhận gì.</li>
               <li>Lật theo <strong>nhịp</strong>: Thường 1 nhịp, Khó 2, Địa Ngục 3. Mỗi nhịp một bảng <strong>16 thẻ mới chung cả đội</strong>, mỗi người lật <strong>1 thẻ</strong> trong 15 giây, ai chưa lật thì được lật hộ. Cả bảng ngửa 3 giây rồi sang nhịp sau; xong nhịp cuối thì cả đội về Tần.</li>
@@ -393,37 +369,11 @@
               </table>
             </div>
             <p>Ít lần trúng hơn bản 4.1 nhưng mỗi lần được nhiều hơn: lượng đồ trung bình mỗi người gần như cũ.</p>
-            <details class="was">
-              <summary>Bản 4.1 đang chạy: mỗi người một bảng riêng, lật 3 / 4 / 5 thẻ</summary>
-            <ul>
-              <li>Mỗi người có mặt được một bảng riêng <strong>16 thẻ</strong>, lật 3 / 4 / 5 thẻ theo độ khó. 60 giây chưa lật hết thì được lật hộ, rồi cả đội về Tần.</li>
-              <li>Mỗi bảng có 1 thẻ độc đắc viền vàng (3 Tử Kim Tinh).</li>
-            </ul>
-            <p>Mỗi ô ghi số thẻ trên 16 và cơ hội lật trúng ít nhất một thẻ đó trong các lượt của mình.</p>
-            <div class="tbl">
-              <table>
-                <thead><tr><th>Thẻ</th><th>Thường (3 lượt)</th><th>Khó (4 lượt)</th><th>Địa Ngục (5 lượt)</th></tr></thead>
-                <tbody>
-                  <tr><td>1 Tử Kim Tinh</td><td>4/16 · 61 %</td><td>4/16 · 73 %</td><td>4/16 · 82 %</td></tr>
-                  <tr><td>2 Tử Kim Tinh</td><td></td><td>1/16 · 25 %</td><td>2/16 · 54 %</td></tr>
-                  <tr><td>Tái Tạo Thạch</td><td>5 viên · 3/16 · 49 %</td><td>8 viên · 2/16 · 45 %<br>5 viên · 1/16 · 25 %</td><td>10 viên · 2/16 · 54 %</td></tr>
-                  <tr><td>Thăng Phẩm Thạch</td><td>1 viên · 3/16 · 49 %<br>2 viên · 1/16 · 19 %</td><td>2 viên · 2/16 · 45 %<br>1 viên · 1/16 · 25 %</td><td>3 viên · 2/16 · 54 %</td></tr>
-                  <tr><td>Trung Cấp Đoạn Thạch</td><td>1/16 · 19 %</td><td>1/16 · 25 %</td><td></td></tr>
-                  <tr><td>Cao Cấp Đoạn Thạch</td><td></td><td>1/16 · 25 %</td><td>2/16 · 54 %</td></tr>
-                  <tr><td>Thú Hồn</td><td>3 viên · 2/16 · 35 %</td><td>4 viên · 1/16 · 25 %</td><td>5 viên · 1/16 · 31 %</td></tr>
-                  <tr><td><a href="#bua-ma-thuat">Bùa Ma Thuật</a></td><td></td><td></td><td>1/16 · 31 %</td></tr>
-                  <tr><td>Tinh Thạch</td><td>cấp 1 · 1/16 · 19 %</td><td>cấp 2 · 1/16 · 25 %</td><td>cấp 2 · 1/16 · 31 %</td></tr>
-                  <tr><td>Độc đắc: 3 Tử Kim Tinh</td><td>19 %</td><td>25 %</td><td>31 %</td></tr>
-                  <tr><td>Có ít nhất 1 Tử Kim Tinh</td><td>71 %</td><td>89 %</td><td>97 %</td></tr>
-                </tbody>
-              </table>
-            </div>
-            </details>
             <!-- sect_sets.json rules.upgrade.steps[0] {item tu_kim_tinh, n 1, points 10, cash 200000, rate 25}; rules.quality_mult 1,5
                  (trước 1,6; equip_rules.json qualities[3].mult). Tài liệu 37 §4.42, nhật ký (291). -->
             <h4 id="nang-set">Tử Kim Tinh dùng làm gì</h4>
             <p>Tử Kim Tinh chỉ có ở bảng thẻ Thành Kiều, dùng để nâng set sư môn lên <strong>bậc 2</strong>. Nói với sư phụ, chọn <strong>Mua &amp; Nâng cấp đồ sư môn</strong>, tab <strong>Nâng cấp</strong>, kéo món set vào ô. Mỗi lần thử tốn 1 Tử Kim Tinh và 10 điểm sư môn, thành công 25 %. Trượt thì mất cả hai nhưng giữ món. Thành công: món lên bậc 2 (cần cấp 50), giữ sao và ngọc khảm. Tử Kim Tinh khoá được dùng trước.</p>
-            <p><span class="badge">Bản kế tiếp</span> Mỗi lần thử tốn thêm <strong>200.000 lượng</strong> (trượt cũng mất), tab Nâng cấp có dòng Ngân Lượng, đỏ khi thiếu. Chỉ số gốc của set sư môn ở mọi bậc giảm khoảng 6 % (hệ số phẩm Tím 1,6 xuống 1,5), cả set đang mặc.</p>
+            <p>Mỗi lần thử tốn thêm <strong>200.000 lượng</strong> (trượt cũng mất), tab Nâng cấp có dòng Ngân Lượng, đỏ khi thiếu. Chỉ số gốc của set sư môn ở mọi bậc giảm khoảng 6 % (hệ số phẩm Tím 1,6 xuống 1,5), cả set đang mặc.</p>
             <p class="tip">Thường hợp đội cấp 40 làm quen. Khó đi một mình gần như thua, nên đi đủ đội. Đứng tản ra khi đánh Mã Quỷ và Lương Hưng để Vạn Mã và lửa không trúng cả đội. Người chịu đòn nên giữ máu cao: tướng hạ được ai là hồi máu. Mặc đồ tốt nhất và mang đủ thuốc trước khi vào vì trang bị bị khoá suốt lượt.</p>
           </div>
         </article>
@@ -1272,7 +1222,7 @@
               <li><strong>Thành công:</strong> lên một phẩm, thêm 1 dòng phụ ngẫu nhiên, giữ nguyên sao và dòng cũ.</li>
               <li><strong>Thất bại:</strong> mất đá và tiền, đồ giữ nguyên.</li>
               <!-- equip_rules.json qualities[].sockets: Xanh 1, Vàng 3 (4.1: 2), Tím 3 (37 §4.42 SV2) -->
-              <li><strong>Lỗ khảm:</strong> Xanh 1, Vàng 2, Tím 3. <span class="badge">Bản kế tiếp</span> Vàng <strong>3 lỗ</strong>, đồ Vàng đang có cũng tự thêm lỗ.</li>
+              <li><strong>Lỗ khảm:</strong> Xanh 1, Vàng 2, Tím 3. Vàng <strong>3 lỗ</strong>, đồ Vàng đang có cũng tự thêm lỗ.</li>
             </ul>
             <!-- treasury.json general remaster/thang_pham 300.000 (3.4.2, trước 500.000); sect_sets.json exchange 6 điểm; dungeon_gumu.json shop 30; fishing.json shop 300 -->
             <p class="tip">Thăng Phẩm Thạch: mua ở Bảo Khố 300.000 ngân lượng, Chiến Quốc Bảo Điển, bảng thẻ Cổ Mộ, đổi 6 điểm sư môn ở sư phụ, 30 điểm phó bản ở Tiệm Cổ Mộ hoặc 300 Ngư Điểm ở Ngư Ông.</p>
@@ -1319,7 +1269,7 @@
         <article class="gcard sub-panel" id="phan-giai">
           <h3>Phân giải</h3>
           <ul class="facts">
-            <li>Bản kế tiếp</li>
+            <li>Từ bản 4.2</li>
             <li>Đồ Xanh, Vàng</li>
             <li>1.000 × cấp đồ</li>
           </ul>
@@ -1446,7 +1396,7 @@
             </ul>
             <!-- Chiêu nhánh cấp 40 (bản kế tiếp): repo game sect_skills.json master 29821792 (text.cd), so với tag 4.1.0;
                  tài liệu 37 §4.45, 28, nhật ký (295). -->
-            <h4>Chiêu cấp 40 <span class="badge">Bản kế tiếp</span></h4>
+            <h4>Chiêu cấp 40</h4>
             <ul>
               <li>Chiêu nhánh cấp 40 của bảy phái hồi nhanh hơn nhiều: <strong>10 giây</strong> với chiêu đánh một mục tiêu, <strong>12 giây</strong> với chiêu đánh vùng, Cam Lộ Trì <strong>15 giây</strong> (trước 20 tới 30 giây).</li>
               <li>Bù lại mỗi lần tung còn 0,9 lần sát thương cũ, tốn một nửa nguyên khí hoặc pháp lực, khống chế mỗi đợt ngắn một nửa, Cam Lộ Trì hồi một nửa. Tế Ma Vương và Bí Sát giữ nguyên.</li>
@@ -1463,7 +1413,7 @@
           <div class="ghead">
             <h3>Kĩ năng giang hồ</h3>
             <ul class="facts">
-              <li>Bản kế tiếp</li>
+              <li>Từ bản 4.2</li>
               <li>Vương Bộ Đầu, Chu Quốc (313, 140)</li>
               <li>8 chiêu bị động, 10 cấp</li>
             </ul>
@@ -1904,7 +1854,7 @@
           <div class="ghead">
             <h3>Đồng hồ máy chủ</h3>
             <ul class="facts">
-              <li>Bản kế tiếp</li>
+              <li>Từ bản 4.2</li>
               <li>Dưới bản đồ nhỏ</li>
               <li>Qua ngày lúc 23:00</li>
             </ul>

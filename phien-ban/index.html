@@ -54,7 +54,7 @@
 
   <div class="vtoc-bar">
     <nav class="wrap vtoc" aria-label="Nhảy tới phiên bản">
-      <a class="is-next" href="#v-ke-tiep">Kế tiếp</a>
+      <a href="#v4-2">4.2</a>
       <a href="#v4-1">4.1</a>
       <a href="#v4-0">4.0</a>
       <a href="#v3-4-1">3.4.1</a>
@@ -77,30 +77,29 @@
   <div class="wrap">
     <div class="vlist">
 
-      <!-- ================= BẢN KẾ TIẾP (CHƯA PHÁT) =================
-           Đợt cân bằng 2026-10-07. Số bản chưa đặt (godot/data/custom/version.json repo game còn 4.1.0 lúc viết): khi phát đổi
-           id "v-ke-tiep" thành v<số bản> (cả link .vtoc), chữ "Bản kế tiếp" thành số bản.
-           Nguồn: repo game master ce88e40b; nhật ký documents/nhat-ky/2026-10-07.md (287) câu cá, (291) trang bị (fe651358),
-           (292) lật theo nhịp (6f158cd5, ad846e04), (293) chống đi một mình (e05ce58a), (294) kĩ năng giang hồ (b7790972),
-           (295) chiêu cấp 40 (29821792); documents/gameplay/12-khac-biet-remaster.md mục "Đợt cân bằng 2026-10-07";
-           tong-quan/37 §4.41-§4.46, 41 GD36 (đồng hồ, ce88e40b). Số: dungeon_gumu.json, dungeon_thanhkieu.json, criminal.json,
-           equip_rules.json (salvage, qualities), sect_sets.json (rules.upgrade), jianghu_skills.json, sect_skills.json.
-           KHI PHÁT: thay khối "vcard__date" bằng <time class="vcard__date" datetime="YYYY-MM-DD">D/M/YYYY</time>, bỏ nhãn
-           "Sắp ra mắt", bỏ class vcard--next (thẻ và link .vtoc is-next); trang hướng dẫn: bỏ nhãn "Bản kế tiếp", xoá khối
-           details.was (luật 4.1). -->
-      <article class="vcard vcard--next" id="v-ke-tiep">
+            <!-- ================= 4.2 =================
+           Nguồn: repo game commit df940b3d (nhật ký 2026-10-07 (302)-(308), 2026-10-08 (309)-(313), tong-quan/37 §4.47 nhịp chung,
+           gameplay/56 tỉ thí, gameplay/12 mục "Ô phím 30 ô và hàng nút góc theo bản gốc"). Gộp thẻ "Bản kế tiếp" (đợt cân bằng 2026-10-07: (291)-(295) lật thẻ theo nhịp, kĩ năng giang hồ, phân giải,
+           chiêu cấp 40, 41 GD36 đồng hồ) vào thẻ này. Phát 2026-10-08 (tag 4.2.0 repo game). -->
+      <article class="vcard" id="v4-2">
         <header class="vcard__head">
-          <h2 class="vcard__ver">Bản kế tiếp</h2>
-          <span class="vcard__tag vcard__tag--gold">Sắp ra mắt</span>
-          <span class="vcard__date" data-release-date>Ngày phát hành: sẽ báo trong nhóm cộng đồng</span>
+          <h2 class="vcard__ver">4.2</h2>
+          <time class="vcard__date" datetime="2026-10-08">8/10/2026</time>
         </header>
-        <p class="vcard__sum">Lật thẻ theo nhịp ở Cổ Mộ và Thành Kiều, kĩ năng giang hồ, phân giải đồ, chiêu cấp 40 hồi nhanh, đồng hồ máy chủ.</p>
+        <p class="vcard__sum">Ô phím và hàng nút chức năng như bản gốc, ra chiêu nhanh gấp đôi, tỉ thí một chọi một, nhắn tin bằng hữu, kĩ năng giang hồ, lật thẻ theo nhịp ở Cổ Mộ và Thành Kiều, phân giải đồ, đồng hồ máy chủ.</p>
 
         <h3 class="g-new">Tính năng mới</h3>
         <ul>
+          <li><strong>30 ô phím như bản gốc</strong>: hàng F1 tới F10 ở góc dưới trái, hàng 1 tới 0 nằm trên hàng nút chức năng, cột Q W E R A S D F Z X dọc mép phải. Mọi phím chữ nằm quanh tay trái. Ô đã gán ở bản cũ tự chuyển sang (ô <code>`</code> thành 7, ô B thành A).</li>
+          <li><strong>Hàng nút chức năng xếp đúng thứ tự bản gốc</strong>: Bảo Khố, Nhân Vật, Hành Trang, Kĩ Năng, Thần Thú, Nhiệm Vụ, Tổ Đội, Bằng Hữu, Giao Dịch, Cài Đặt. Hình nút vẽ lại theo hình cũ (bàn tính, mặt nhân vật, rương, chồng sách, dấu chân, cuộn giấy...).</li>
+          <li><strong>Tổ Đội (Alt+T) và Giao Dịch (Alt+X)</strong> như bản gốc: bấm nút, con trỏ đổi hình, bấm vào người chơi là mời vào nhóm hay xin giao dịch. Chuột phải hoặc ESC để thôi.</li>
+          <li><strong>Tỉ thí một chọi một</strong> ở Võ Sư Chu Quốc, <strong>nhắn tin riêng</strong> với bằng hữu ngay cạnh bảng Bằng Hữu.</li>
+          <li>Thần Tiên Gia Gia ở Chu mở: nhận thời gian nhân đôi kinh nghiệm và <strong>nhập mã quà tặng</strong> ngay tại kinh thành.</li>
+        
           <li><a href="../huong-dan/#ki-nang-giang-ho">Kĩ năng giang hồ</a>: 8 chiêu bị động học ở Vương Bộ Đầu (Chu), mọi phái, từ cấp 10. Mở ở <strong>Alt+R</strong>, tab Kĩ năng giang hồ. Mỗi chiêu 10 cấp, cộng Khí Huyết, Pháp Lực, Ngoại Công, Nội Công, Ngoại Kháng, Nội Kháng, Bạo Kích hoặc Né Tránh. Cấp chiêu tối đa bằng cấp nhân vật chia 5; học cấp n tốn 1.500 × n tiềm năng và 50.000 × n lượng, không tẩy. Lăng Ba Vi Bộ sẽ mở ở bản sau.</li>
           <li><a href="../huong-dan/#phan-giai">Phân giải</a> ở thợ rèn: đồ Vàng ra 5 Thăng Phẩm Thạch (đồ dưới cấp 40 ra 3), đồ Xanh 30 % ra 1 Tái Tạo Thạch, đá ra đều khoá. Ngọc khảm về hành trang (khoá), sao đã rèn mất, phí 1.000 × cấp đồ. Không nhận set sư môn, đồ khoá giữ, đồ nhiệm vụ, đồ Trắng, đồ đang mặc.</li>
           <li><a href="../huong-dan/#dong-ho">Đồng hồ máy chủ</a> ngay dưới bản đồ nhỏ: giờ máy chủ và thời gian còn lại tới lúc qua ngày (23:00), ví dụ "22:41 · qua ngày sau 19 phút". Rê chuột xem việc sẽ làm mới, việc tuần làm mới 23:00 Chủ nhật. Khung tin nhắc lúc 22:30 và 22:55 kèm việc hôm nay chưa xong.</li>
+        
         </ul>
 
         <h3 class="g-bal">Cân bằng</h3>
@@ -110,11 +109,20 @@
           <li><a href="../huong-dan/#cach-hoc">Chiêu nhánh cấp 40</a> bảy phái hồi 10 giây (đánh một mục tiêu) hoặc 12 giây (đánh vùng), Cam Lộ Trì 15 giây, trước 20 tới 30 giây. Mỗi lần tung còn 0,9 lần sát thương cũ, tốn một nửa. Tế Ma Vương, Bí Sát giữ nguyên. Lôi Động Cửu Thiên không tốn Bùa Giấy; Thực Giáp trúng rút 0,5 giây hồi chiêu Lôi Động, tối đa 4 giây mỗi lần hồi chiêu (trước 1 giây, không giới hạn).</li>
           <li><a href="../huong-dan/#nang-set">Nâng set sư môn lên bậc 2</a> tốn thêm 200.000 lượng mỗi lần thử, trượt cũng mất. Chỉ số gốc của set sư môn mọi bậc giảm khoảng 6 % (hệ số phẩm Tím 1,6 xuống 1,5).</li>
           <li>Đồ Vàng có <strong>3 lỗ khảm</strong> (trước 2), đồ Vàng đang có cũng tự thêm lỗ.</li>
+        
+          <li><strong>Nhịp ra chiêu nhanh gấp đôi</strong> (0,5 giây thay 1 giây), sát thương mỗi chiêu giảm nhẹ để tổng sát thương giữ nguyên.</li>
+          <li>Bảng phím tắt chuyển sang <strong>Alt+H</strong> (F1 nay là ô phím).</li>
+        
         </ul>
 
         <h3 class="g-fix">Sửa lỗi</h3>
         <ul>
+          <li>Vào Chu Quốc không còn đứng hình vài giây sau khi màn chờ đã 100 %.</li>
+          <li>Ngư Ông ngồi sát bờ, quay mặt ra hồ; chữ "Đang câu" hiện dưới chân thay vì chen giữa tên và thanh máu.</li>
+          <li>Hàng nút, thanh máu và các nút tròn canh thẳng hàng, màu icon dịu hơn.</li>
+        
           <li><a href="../huong-dan/#cau-ca">Câu cá</a>: trên máy chủ mỗi bản đồ chỉ một người câu được cá, người khác ngồi mãi không giật cần. Nay ai ngồi câu cũng được.</li>
+        
         </ul>
       </article>
 
