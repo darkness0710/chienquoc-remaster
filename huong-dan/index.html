@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hướng dẫn · Chiến Quốc Remaster</title>
-  <meta name="description" content="Hướng dẫn nhanh Chiến Quốc Remaster 3.4: việc hằng ngày, Cổ Mộ, câu cá, Bảng Thần Thú, pháp bảo, cánh, rèn trang bị, kĩ năng 7 môn phái, kèm ảnh trong game.">
+  <meta name="description" content="Hướng dẫn nhanh Chiến Quốc Remaster 4.1: việc hằng ngày, Cổ Mộ, Doanh Trại Thành Kiều, câu cá, Bảng Thần Thú, pháp bảo, cánh, rèn trang bị, kĩ năng 7 môn phái, kèm ảnh trong game.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/">
-  <meta property="og:title" content="Hướng dẫn Chiến Quốc Remaster 3.4">
-  <meta property="og:description" content="Việc hằng ngày, Cổ Mộ, câu cá, Bảng Thần Thú, pháp bảo, cánh, rèn trang bị và kĩ năng 7 môn phái.">
+  <meta property="og:title" content="Hướng dẫn Chiến Quốc Remaster 4.1">
+  <meta property="og:description" content="Việc hằng ngày, Cổ Mộ, Doanh Trại Thành Kiều, câu cá, Bảng Thần Thú, pháp bảo, cánh, rèn trang bị và kĩ năng 7 môn phái.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -76,6 +76,7 @@
         <a href="#su-mon">Sư môn</a>
         <a href="#vuong-bo-dau">Truy bắt</a>
         <a href="#co-mo">Cổ Mộ</a>
+        <a href="#thanh-kieu">Thành Kiều</a>
         <a href="#phong-yeu-kinh">Phong Yêu Kính</a>
         <a href="#tong-bao">Tống Bảo Tiểu Yêu</a>
         <a href="#trom-bao">Trộm Bảo Phi Tặc</a>
@@ -266,6 +267,88 @@
             </div>
             <!-- Tiệm: dungeon_gumu.json shop (thang_pham 30 điểm từ 3.4.2, trước 50) -->
             <p class="tip">Bùa Ma Thuật, thú cưỡi Quý, Đỉnh Cấp Đoạn Thạch và Tinh Thạch cấp 3 chỉ Địa Ngục mới ra. Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt. Điểm phó bản đổi ở Tiệm Cổ Mộ của Xa Phu: Thẻ Thần Thú chọn con 300, pháp bảo 0 sao chọn loại 100, Sơ Cấp Đoạn Thạch (khoá) 100, Thăng Phẩm Thạch 30, Tinh Thạch cấp 1 chọn loại 25, Tái Tạo Thạch 10, Thú Hồn 10.</p>
+          </div>
+        </article>
+
+        <!-- Thành Kiều Quân Doanh (ra ở 4.0). Nguồn (repo game, master 02b6db3c = bản 4.1.0): godot/data/custom/dungeon_thanhkieu.json
+             (npc_map 050, npc_tile (219, 67), max_members 5, level_gap 10, revive_sec 10, difficulties[] min_level / fee / minutes / flips / cards / jackpot,
+             board_sec 60, bosses[] skills / low / summon / van_ma, boss_ai blink_sec 15 / leash 20 / kill_heal_pm 20);
+             luật vào: godot/logic/thanh_kieu.gd + gateway/thanh_kieu_service.gd (vào không giới hạn, khoá trang bị, hồi sinh ở cửa);
+             nâng set: sect_sets.json rules.upgrade (1 Tử Kim Tinh + 10 điểm, 25 %, cấp món bậc 2 là 50); tài liệu 53 §3d / §3g, nhật ký (266).
+             Cơ hội: 1 - C(16 - k, lượt) / C(16, lượt). Ảnh: ./run.sh shot ... --ui --map=050 --tile=222,66 --bang=dbg:level_max,npc/copy/0003,
+             cắt (172, 302)-(1338, 1015), thu về rộng 760. -->
+        <article class="gcard gpanel sub-panel" id="thanh-kieu">
+          <div class="ghead">
+            <h3>Doanh Trại Thành Kiều</h3>
+            <ul class="facts">
+              <li>1 đến 5 người, từ cấp 40</li>
+              <li>Thảo Nghịch Tướng Quân, Tần Quốc (219, 67)</li>
+              <li>Vào không giới hạn, mỗi lượt một vé</li>
+            </ul>
+          </div>
+          <figure class="gshot">
+            <img src="../assets/img/huong-dan/thanh-kieu.jpg" width="760" height="465" loading="lazy" alt="Thảo Nghịch Tướng Quân ở Tần Quốc, khung thoại với dòng Đánh doanh trại Thành Kiều và Hỏi về doanh trại Thành Kiều">
+            <figcaption>Thảo Nghịch Tướng Quân trước doanh trại ở Tần Quốc</figcaption>
+          </figure>
+          <div class="gtext">
+            <p>Phó bản Thành Kiều Quân Doanh, có từ bản 4.0. Đội trưởng nói với Thảo Nghịch Tướng Quân, chọn <strong>Đánh doanh trại Thành Kiều</strong> rồi chọn độ khó. Cả đội đứng gần NPC, ai cũng đủ cấp của độ khó, cấp lệch không quá 10. Mỗi người nộp quân phí, một người thiếu tiền thì cả đội chưa đi được. Đi một mình cũng được.</p>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Độ khó</th><th>Từ cấp</th><th>Quân phí mỗi người</th><th>Thời gian</th><th>Lật thẻ</th></tr></thead>
+                <tbody>
+                  <tr><td>Thường</td><td>40</td><td>1.000.000</td><td>45 phút</td><td>3</td></tr>
+                  <tr><td>Khó</td><td>50</td><td>1.500.000</td><td>60 phút</td><td>4</td></tr>
+                  <tr><td>Địa Ngục</td><td>60</td><td>2.000.000</td><td>75 phút</td><td>5</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Quân phí nộp mỗi lượt và không hoàn, kể cả khi thua hay hết giờ. Đánh bao nhiêu lượt một ngày cũng được. Địa Ngục cần cấp 60 nên ở trần cấp 50 hiện tại chưa vào được.</p>
+            <h4>Trong doanh trại</h4>
+            <ul>
+              <li>Doanh trại đầy phản quân và oán linh, không rơi đồ, không rơi tiền, chỉ cho kinh nghiệm. Ba tướng <strong>Mã Quỷ</strong>, <strong>Lương Hưng</strong>, <strong>Yến Thập Tam</strong> đứng chờ sẵn, đánh thứ tự nào cũng được. Hạ đủ ba con thì <strong>Tư Tà</strong> hiện ra ở hậu doanh phía tây.</li>
+              <li>Cả bốn tướng cứ 15 giây lại dịch chuyển tới cạnh người đang bị nhắm, hạ được ai thì hồi một ít máu, không bị choáng hay trói. Như Lữ Bố: đánh người gây nhiều sát thương nhất, lướt tới người đứng xa, đánh lâu quá thì nổi giận. Kéo xa quá 20 ô hoặc cả đội ngã thì tướng về chỗ, hồi đầy máu.</li>
+              <li>Khó và Địa Ngục: mỗi tướng thêm chiêu, ra chiêu dày hơn. Thấy vòng báo dưới chân thì chạy ra.</li>
+              <li>Chết: sống lại ở cửa doanh trại sau 10 giây. Trang bị bị khoá suốt lượt.</li>
+            </ul>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Tướng</th><th>Cách đánh</th></tr></thead>
+                <tbody>
+                  <tr><td>Mã Quỷ</td><td>Ngựa đá làm choáng người đang bị nhắm (dưới 30 % máu ra chiêu gấp đôi). <strong>Vạn Mã</strong> mỗi phút: ai đứng trong 10 ô mất 10 % Khí Huyết đang có, khi Mã Quỷ dưới 30 % máu thì mất nửa Nội Lực. Dưới 30 % máu gọi 4 Phản Quân Mã Phu tới giúp.</td></tr>
+                  <tr><td>Lương Hưng</td><td>Đánh từ xa. Mỗi 30 giây phun lửa vào mọi người trong 10 ô. Xen giữa: chú vào một người ngẫu nhiên, Hàn Băng Pháp Trận trói người đang bị nhắm 3 giây.</td></tr>
+                  <tr><td>Yến Thập Tam</td><td>Quyền liên hoàn hai đòn, Hàn Băng trói, Khiêu Trận làm chậm người đứng gần mỗi 10 giây. Dưới 30 % máu thì nổi điên: đòn nặng hơn, thêm tiếng gầm làm choáng.</td></tr>
+                  <tr><td>Tư Tà</td><td>Tướng cuối, mạnh nhất. Chém liên hoàn hai đòn mỗi 10 giây vào người đang bị nhắm, Ôn Dịch, lôi chú rất nặng vào một người ngẫu nhiên.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Lật thẻ</h4>
+            <ul>
+              <li>Chỉ khi hạ <strong>Tư Tà</strong> mới có thưởng. Thua hoặc hết giờ trước đó thì không nhận gì.</li>
+              <li>Mỗi người có mặt được một bảng riêng <strong>16 thẻ</strong>, lật 3 / 4 / 5 thẻ theo độ khó. 60 giây chưa lật hết thì được lật hộ, rồi cả đội về Tần.</li>
+              <li>Mỗi bảng có 1 thẻ độc đắc viền vàng (3 Tử Kim Tinh), lật trúng thì cả server được báo. Đồ lật được bán, giao dịch được. Hành trang đầy thì quà vào túi chờ.</li>
+            </ul>
+            <p>Mỗi ô ghi số thẻ trên 16 và cơ hội lật trúng ít nhất một thẻ đó trong các lượt của mình.</p>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Thẻ</th><th>Thường (3 lượt)</th><th>Khó (4 lượt)</th><th>Địa Ngục (5 lượt)</th></tr></thead>
+                <tbody>
+                  <tr><td>1 Tử Kim Tinh</td><td>4/16 · 61 %</td><td>4/16 · 73 %</td><td>4/16 · 82 %</td></tr>
+                  <tr><td>2 Tử Kim Tinh</td><td></td><td>1/16 · 25 %</td><td>2/16 · 54 %</td></tr>
+                  <tr><td>Tái Tạo Thạch</td><td>5 viên · 3/16 · 49 %</td><td>8 viên · 2/16 · 45 %<br>5 viên · 1/16 · 25 %</td><td>10 viên · 2/16 · 54 %</td></tr>
+                  <tr><td>Thăng Phẩm Thạch</td><td>1 viên · 3/16 · 49 %<br>2 viên · 1/16 · 19 %</td><td>2 viên · 2/16 · 45 %<br>1 viên · 1/16 · 25 %</td><td>3 viên · 2/16 · 54 %</td></tr>
+                  <tr><td>Trung Cấp Đoạn Thạch</td><td>1/16 · 19 %</td><td>1/16 · 25 %</td><td></td></tr>
+                  <tr><td>Cao Cấp Đoạn Thạch</td><td></td><td>1/16 · 25 %</td><td>2/16 · 54 %</td></tr>
+                  <tr><td>Thú Hồn</td><td>3 viên · 2/16 · 35 %</td><td>4 viên · 1/16 · 25 %</td><td>5 viên · 1/16 · 31 %</td></tr>
+                  <tr><td><a href="#bua-ma-thuat">Bùa Ma Thuật</a></td><td></td><td></td><td>1/16 · 31 %</td></tr>
+                  <tr><td>Tinh Thạch</td><td>cấp 1 · 1/16 · 19 %</td><td>cấp 2 · 1/16 · 25 %</td><td>cấp 2 · 1/16 · 31 %</td></tr>
+                  <tr><td>Độc đắc: 3 Tử Kim Tinh</td><td>19 %</td><td>25 %</td><td>31 %</td></tr>
+                  <tr><td>Có ít nhất 1 Tử Kim Tinh</td><td>71 %</td><td>89 %</td><td>97 %</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Tử Kim Tinh dùng làm gì</h4>
+            <p>Tử Kim Tinh chỉ có ở bảng thẻ Thành Kiều, dùng để nâng set sư môn lên <strong>bậc 2</strong>. Nói với sư phụ, chọn <strong>Mua &amp; Nâng cấp đồ sư môn</strong>, tab <strong>Nâng cấp</strong>, kéo món set vào ô. Mỗi lần thử tốn 1 Tử Kim Tinh và 10 điểm sư môn, thành công 25 %. Trượt thì mất cả hai nhưng giữ món. Thành công: món lên bậc 2 (cần cấp 50), giữ sao và ngọc khảm. Tử Kim Tinh khoá được dùng trước.</p>
+            <p class="tip">Thường hợp đội cấp 40 làm quen. Khó đi một mình gần như thua, nên đi đủ đội. Đứng tản ra khi đánh Mã Quỷ và Lương Hưng để Vạn Mã và lửa không trúng cả đội. Người chịu đòn nên giữ máu cao: tướng hạ được ai là hồi máu. Mặc đồ tốt nhất và mang đủ thuốc trước khi vào vì trang bị bị khoá suốt lượt.</p>
           </div>
         </article>
 
