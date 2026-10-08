@@ -50,7 +50,7 @@
           <p class="ghero__lead">Năm nghề: hái thuốc, đào khoáng, chế thuốc, nấu ăn, chế túi và chìa khoá mở Bảo Rương. Làm là lên cấp, không tốn thể lực.</p>
         </div>
       </div>
-      <div class="v5note v5note--page"><p><span class="v5tag">Bản 5.0</span> Tính năng của bản 5.0, <strong>sắp ra mắt</strong> (máy chủ đang chạy bản 4.2). Ảnh chụp từ bản thử, số liệu có thể còn chỉnh trước khi phát.</p></div>
+      <div class="v5note v5note--page"><p><span class="v5tag">Bản 5.0</span> Tính năng mới của bản 5.0, đã phát <time data-rel="5.0" datetime="2026-10-09">9/10/2026</time>. Ảnh chụp từ bản thử trước khi phát, giao diện trong game có thể khác đôi chút.</p></div>
     </div>
   </section>
 
@@ -178,7 +178,8 @@
   </div>
 </article>
 
-<!-- Cơ Quan: 59 §5 (29 công thức, 4 chìa), 37 §4.59 bản merge-5.0 (túi hành trang 7 ngày, tạc đạn, cấu kiện giảm 25 % phí rèn). -->
+<!-- Cơ Quan: 59 §5 (29 công thức, 4 chìa), 37 §4.59 / §4.60 bản int-5.0 (túi hành trang 7 ngày, tạc đạn dmg 100 / 120 / 140 trong
+     item_overrides.json final/16/1602 / 1613 / 1617, cấu kiện giảm 25 % phí rèn), §4.58 NK6 (value chìa 200 / 500 / 600 / 800). -->
 <article class="gcard" id="co-quan">
   <h3>Cơ Quan: túi hành trang, tạc đạn, chìa khoá</h3>
   <ul class="facts">
@@ -205,11 +206,11 @@
   <h4>Tạc đạn</h4>
   <ul>
     <li>Thổ Chế Tạc Đạn (cấp 15), Đại Tạc Đạn (cấp 30), Cao Bạo Tạc Đạn (cấp 45). Ai cũng ném được, từ hành trang hoặc ô phím.</li>
-    <li>Ném vào mục tiêu đang chọn trong 6 ô, nổ trúng mọi quái quanh đó (1, 2, 2 ô); Cao Bạo Tạc Đạn làm choáng 1 giây. Hồi 30 giây. Chỉ trúng quái.</li>
+    <li>Ném vào mục tiêu đang chọn trong 6 ô, nổ trúng mọi quái quanh đó (1, 2, 2 ô), sát thương 100, 120, 140; Cao Bạo Tạc Đạn làm choáng 1 giây. Hồi 30 giây. Chỉ trúng quái.</li>
   </ul>
   <h4>Chìa khoá và cấu kiện</h4>
   <ul>
-    <li>4 chìa mở <a href="#bao-ruong">Bảo Rương</a>: Chìa Khoá Đồng (cấp 11), Ngân (37), Tinh Thiết (43), Vàng (48).</li>
+    <li>4 chìa mở <a href="#bao-ruong">Bảo Rương</a>: Chìa Khoá Đồng (cấp 11), Ngân (37), Tinh Thiết (43), Vàng (48). Giá chìa (bán cho tiệm được một nửa): Đồng 200, Ngân 500, Tinh Thiết 600, Vàng 800; giá trị thật nằm ở rương.</li>
     <li>Ở thợ rèn, khi <a href="../trang-bi/#tai-tao">Tái tạo</a> hay <a href="../trang-bi/#tang-pham">Tăng phẩm</a>, đánh dấu nộp 1 cấu kiện đúng bậc thì <strong>phí giảm 25 %</strong>: dưới cấp 20 Đồng Chế Cấu Kiện, dưới 30 Thanh Đồng Cơ Quan Cấu Kiện, dưới 40 Thiết Chế Cơ Quan Cấu Kiện, tới 50 Tinh Thiết Cơ Quan Cấu Kiện.</li>
   </ul>
 </article>
@@ -252,7 +253,7 @@
   <ul>
     <li>Rương nằm ngẫu nhiên ở bản đồ ngoài (bản đồ rộng có 2), ai mở trước người đó được; 30 phút sau mọc ở chỗ khác. Thành Kiều có 1 rương, Cổ Mộ 2 rương mỗi lượt.</li>
     <li>Mở cần đúng loại chìa (Cơ Quan chế, hoặc mua lại của người chơi khác), giữ thanh mở 2 giây.</li>
-    <li>Mỗi rương bốc 1 tới 3 lần. Ngoài bảng dưới còn có quặng, thảo dược hiếm, Cá, thuốc; rương Phiêu Lượng và Tinh Xảo có Thiết Luân (nguyên liệu Túi Càn Khôn).</li>
+    <li>Mỗi rương bốc 1 tới 3 lần. Ngoài bảng dưới còn có quặng, thảo dược hiếm, Cá, thuốc; rương Phiêu Lượng và Tinh Xảo có Thiết Luân (nguyên liệu Túi Càn Khôn) và Linh Chi Thảo (nguyên liệu Cứu Tâm Đơn).</li>
   </ul>
   <div class="tbl">
     <table>
@@ -273,7 +274,7 @@
   <div class="ghead">
     <h3>Sổ tay nguyên liệu</h3>
     <ul class="facts">
-      <li>Tab Kĩ năng nghề, mục Sổ tay</li>
+      <li><kbd>Alt+N</kbd> hoặc <kbd>Alt+R</kbd>, tab Kĩ năng nghề, mục Sổ tay</li>
       <li>Bấm tên bản đồ là tự đi</li>
     </ul>
   </div>
@@ -321,5 +322,6 @@
 </footer>
 
 <script src="../../js/guide.js" defer></script>
+<script src="../../js/release.js" defer></script>
 </body>
 </html>

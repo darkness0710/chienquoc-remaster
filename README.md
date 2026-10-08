@@ -5,7 +5,7 @@ Trang tĩnh: HTML + CSS + hai file JS nhỏ (ảnh trượt, trang hướng dẫ
 
 ```
 ├── index.html          trang chủ: đầu trang .hero3 (ảnh Đào Hoa, cánh hoa bay, hàng nút cộng đồng .hero3__comm, dải số liệu),
-│                       "Bản 5.0 sắp ra mắt" #ban-5 (dấu triện .seal, lưới .bento ảnh bản thử, chip), video #trailer + 3 thẻ ảnh,
+│                       "Bản 5.0 đã phát <ngày>" #ban-5 (dấu triện .seal, lưới .bento ảnh bản thử, chip), video #trailer + 3 thẻ ảnh,
 │                       "Có gì trong game" #co-gi (lưới .feats + chip), "Bảy môn phái" #mon-phai, "Lời hứa" + ảnh trượt #loi-hua,
 │                       "Tham gia cộng đồng" #cong-dong (.comm: Facebook, Zalo, Discord), "Cài đặt 3 bước" #cai-dat, "Lộ trình" #lo-trinh
 ├── huong-dan/
@@ -17,6 +17,7 @@ Trang tĩnh: HTML + CSS + hai file JS nhỏ (ảnh trượt, trang hướng dẫ
 ├── css/style.css       giao diện (màu ở :root: xanh mực + vàng kim + ngọc như giao diện game; phần 5.0 ở cuối file)
 ├── js/main.js          ảnh trượt: chấm vị trí, nút trái phải, phím mũi tên, tự chuyển 5 s; nút phát lớn của video
 ├── js/guide.js         trang hướng dẫn: ô tìm nhanh ở mục lục (bỏ dấu, khớp cả cụm), tô mục đang đọc trên hàng .ptoc
+├── js/release.js       ngày phát các bản (bảng RELEASES), điền vào mọi <time data-rel="<bản>">: MỘT chỗ sửa ngày
 ├── assets/
 │   ├── favicon.svg
 │   ├── pattern-cloud.svg   hoạ tiết mây lành ở nền đầu trang
@@ -50,7 +51,7 @@ mục cũ có thay đổi ở 5.0 có khối `.v5note` cuối phần chữ và c
 | `nhiem-vu` | `ct-tong-quan`, `ct-vet-nut`, `ct-hoi-5` tới `ct-hoi-10`, `ho-phu` |
 | `mon-phai` | `dao-hoa`, `thuc-son`, `cam-ve-quan`, `duong-mon`, `mao-son`, `con-luan`, `van-mong` |
 | `ky-nang` | `cach-hoc`, `chieu-45-50` (5.0), `ki-nang-giang-ho`, `tu-vi` |
-| `trang-bi` | `phap-bao`, `nang-sao`, `bua-ma-thuat`, `bua-may-man`, `quang-vu-khi`, `hop-thanh`, `tang-pham`, `tai-tao`, `phan-giai`, `giai-phong-an`, `do-lung` |
+| `trang-bi` | `khoa-phai` (5.0), `phap-bao`, `nang-sao`, `bua-ma-thuat`, `bua-may-man`, `quang-vu-khi`, `hop-thanh`, `tang-pham`, `tai-tao`, `phan-giai`, `giai-phong-an`, `do-lung` |
 | `than-thu` | `bang-than-thu`, `thu-cuoi` |
 | `bao-thu` (5.0) | `bat-thu`, `bao-thu-luc`, `thu-xuat-chien` |
 | `nghe` (5.0) | `hoc-nghe`, `thu-thap`, `luyen-don`, `co-quan`, `dau-bep`, `bao-ruong`, `so-tay` |
@@ -88,13 +89,14 @@ Mở thẳng `index.html` bằng trình duyệt cũng chạy (mọi đường d�
 | Đổi link tải launcher | `index.html`: **hai** nút có link `ChienQuocRemaster-Launcher-…zip` (đầu trang và mục `#cai-dat`) |
 | Đổi cỡ file / dung lượng | `index.html`: dòng `hero__meta`, bước 1 và 2 của `#cai-dat`, bảng `.spec` |
 | Đổi tính năng nổi bật ở trang chủ | lưới `.feats` + hàng chip `.chips` của `#co-gi` (thẻ `feats__wide` chiếm hai cột; nguồn: `documents/tong-quan/00-tong-quan.md`, `news.json` của repo game). Thẻ chưa có ảnh (Thành Kiều, câu cá) vẽ bằng CSS (`feat--art`); có ảnh thì đổi sang `<img>` như thẻ khác |
-| Khi phát 5.0 (chưa phát lúc viết) | trang chủ: nhãn "Sắp ra mắt" ở `.hero2__news` và `.v5sec__kicker`, câu "máy chủ đang chạy bản 4.2" ở `.hero3__meta`, mốc cuối `#lo-trinh` (bỏ `is-next`, ghi ngày); hướng dẫn: câu "sắp ra mắt" trong khối `.v5note--page` của các trang 5.0, dải `.v5strip` ở mục lục, rồi gộp luật 5.0 vào chữ chính và bỏ luật 4.2 cũ trong các khối `.v5note`; trang Phiên bản: xem comment trên thẻ `#v5-0`. Đối chiếu số với tag 5.0.0 trước khi bỏ nhãn |
+| **Đổi ngày phát 5.0** | sửa `"5.0": "2026-10-09"` trong bảng `RELEASES` của `js/release.js` (yyyy-mm-dd): mọi chỗ hiện ngày (nhãn đầu trang chủ, `.v5sec__kicker`, mốc 5.0 ở `#lo-trinh`, thẻ `#v5-0` trang Phiên bản, dải `.v5strip` mục lục hướng dẫn, khối `.v5note--page` của các trang 5.0 và trang Trang bị) là `<time data-rel="5.0">` và lấy ngày ở đó. Chữ ngày viết sẵn trong HTML chỉ hiện khi tắt JS (và cho máy đọc trang); đồng bộ cùng lúc bằng một lệnh, vd sang 10/10/2026: `grep -rl 'data-rel="5.0"' --include=*.html . \| xargs sed -i 's#"2026-10-09"#"2026-10-10"#; s#9/10/2026#10/10/2026#'` (chuỗi `9/10/2026` chỉ có ở các thẻ đó), kiểm lại bằng `grep -rn 'data-rel="5.0"' --include=*.html .`. Trang nào có `<time data-rel>` phải nạp `js/release.js` (cuối `<body>`) |
+| Khi phát 5.0 (đã làm 2026-10-08 trên nhánh `web-5.0-phat`, chờ máy chủ lên 5.0 rồi gộp `main`) | trang chủ: nhãn "Sắp ra mắt" ở `.hero2__news` và `.v5sec__kicker`, câu "máy chủ đang chạy bản 4.2" ở `.hero3__meta`, mốc cuối `#lo-trinh` (bỏ `is-next`, ghi ngày); hướng dẫn: câu "sắp ra mắt" trong khối `.v5note--page` của các trang 5.0, dải `.v5strip` ở mục lục, rồi gộp luật 5.0 vào chữ chính và bỏ luật 4.2 cũ trong các khối `.v5note`; trang Phiên bản: xem comment trên thẻ `#v5-0`. Đối chiếu số với tag 5.0.0 trước khi bỏ nhãn |
 | Khi phát bản mới (4.0 đã làm 2026-10-06) | trang chủ: nhãn "Sắp ra mắt" ở `.hero2__news`, `.next4__label`, mốc cuối `#lo-trinh`, nhãn "Bản 4.0" trên thẻ `.feats`, thẻ quà tân thủ (mã `welcome` đổi quà, bỏ `welcome2`); trang Phiên bản: xem comment trên thẻ `#v4-0` |
 | Đổi link nhóm cộng đồng | trang chủ: hàng `.hero3__comm`, mục `#cong-dong`, chân trang `.foot__soc` và dòng "Nhóm Facebook"; hướng dẫn: chân trang mọi trang, mục `#cong-dong` ở `huong-dan/giao-dich-cong-dong/` (nguồn: `godot/data/custom/about.json` repo game, khoá `community.url`, `zalo.url`, `discord.url`) |
 | Bản demo 2.0 offline (Google Drive) | link "Bản cũ" ở chân trang; không còn cập nhật |
 | Làm lại video trailer | repo game: `./run.sh studio gumu` (≈3 phút, ra `build/studio_gumu.mp4` 1600×1200 có tiếng; cách dựng ở `tools/README.md` §studio), rồi thu về bản web: `ffmpeg -i build/studio_gumu.mp4 -vf scale=960:720:flags=lanczos -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p -c:a aac -b:a 128k -movflags +faststart assets/video/co-mo.mp4` (ffmpeg có sẵn trong `build/venv-video` của repo game, `imageio_ffmpeg.get_ffmpeg_exe()`) |
 | Thêm / bớt ảnh trượt | một `<figure class="slide">` trong `#sliderTrack` (chấm vị trí tự sinh theo số ảnh) |
-| Sửa trang hướng dẫn | trang con `huong-dan/<chủ đề>/index.html` (bảng ở §Hướng dẫn). Nguồn 5.0 (chưa phát): worktree nhánh `int-5.0` / `merge-5.0` của repo game, tài liệu `tong-quan/59` (nghề), `60` (bang), `61` (28 chiêu), `62` (tình trạng), `63` (bày bán), `65` (bảo thú), `37` §4.47-§4.59. Nguồn số liệu bản đã phát (repo game): sư môn `godot/data/custom/sect_quests.json`, `sect_sets.json` (`exchange`); rèn `forge.json` (cả khối `charm` Bùa Ma Thuật), `equip_rules.json`; môn phái `sect_skills.json`; Tống Bảo `rare_monster.json`; Cổ Mộ `dungeon_gumu.json`; Thành Kiều `dungeon_thanhkieu.json` (nâng set bậc 2: `sect_sets.json` `rules.upgrade`); câu cá `fishing.json` (tài liệu game 54); giá Bảo Khố `treasury.json`. Đọc số từ bản đã phát (worktree nhánh `rel-<bản>`), đừng đọc bản đang sửa dở |
+| Sửa trang hướng dẫn | trang con `huong-dan/<chủ đề>/index.html` (bảng ở §Hướng dẫn). Nguồn 5.0: worktree nhánh `int-5.0` của repo game (khoá phái: nhánh `feat/khoa-phai`), tài liệu `tong-quan/59` (nghề), `60` (bang), `61` (28 chiêu), `62` (tình trạng), `63` (bày bán), `65` (bảo thú), `37` §4.47-§4.60, `gameplay/12` §1.10zi (khoá phái); khi có tag 5.0.0 thì đọc ở tag. Nguồn số liệu bản đã phát (repo game): sư môn `godot/data/custom/sect_quests.json`, `sect_sets.json` (`exchange`); rèn `forge.json` (cả khối `charm` Bùa Ma Thuật), `equip_rules.json`; môn phái `sect_skills.json`; Tống Bảo `rare_monster.json`; Cổ Mộ `dungeon_gumu.json`; Thành Kiều `dungeon_thanhkieu.json` (nâng set bậc 2: `sect_sets.json` `rules.upgrade`); câu cá `fishing.json` (tài liệu game 54); giá Bảo Khố `treasury.json`. Đọc số từ bản đã phát (worktree nhánh `rel-<bản>`), đừng đọc bản đang sửa dở |
 | Sửa chủ tuyến | `huong-dan/nhiem-vu/index.html`, mục `#ct-tong-quan`, `#ct-vet-nut`, `#ct-hoi-5` đến `#ct-hoi-10`. Nguồn số liệu (repo game): `godot/data/custom/quests/001.json` + `001-act05.json` đến `001-act10.json` (bỏ `001-archive-*`), luật đọc `godot/logic/quest.gd`; tên món `item_names_vi.json` + `custom_items.json`; NPC đứng map nào: `assets/converted/map/<map>/npcs.json`; bảng luyện cấp: `travel.json` (Tân Thủ Tiên Cô). Số thứ tự nhiệm vụ = số trong sổ nhiệm vụ (73 mỗi người: nhiệm vụ riêng phái hồi 8 mang số 55, 56). Bảng nhiệm vụ dùng `.tbl tbl--quest` (điện thoại: mỗi dòng thành một khối dọc) |
 | Thêm bản mới vào trang Phiên bản | mỗi lần phát: chép một `<article class="vcard" id="v<số bản, chấm thành gạch>">` lên **đầu** `.vlist` của `phien-ban/index.html` + một link `#id` ở đầu `.vtoc`. Chữ lấy từ tin launcher `godot/data/custom/news.json` của repo game (mỗi bản một tin, đã viết cho người chơi), chia vào ba nhóm `h3.g-new` (Tính năng mới), `h3.g-bal` (Cân bằng), `h3.g-fix` (Sửa lỗi), bổ sung bằng `git log <tag trước>..<tag> --oneline`; ngày = ngày tag (`git tag --sort=creatordate --format='%(refname:short) %(creatordate:short)'`, bỏ tag `assets-*`). Ghi nguồn (tag, commit, file) trong comment HTML trên thẻ. Bản chưa phát (4.0 lúc viết): class `vcard--next`, nhãn "Sắp ra mắt", khối ngày `data-release-date`; khi phát thay bằng `<time datetime>` (hướng dẫn ngay trong comment trên thẻ) |
 | Thêm mục / trang hướng dẫn | xem §Hướng dẫn: các trang con |
@@ -232,3 +234,15 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   thẻ `#v5-0` "Sắp ra mắt". Kiểm: 0 link nội bộ gãy, 0 id trùng, 0 phần tử làm tràn trang ở 375 / 360 px (`tmp/pv/w.html`, cả 18
   trang; phần tử báo "tràn" chỉ là chip trong hàng `.ptoc` cuộn ngang). Ảnh chụp kiểm: `tmp/pv5/home-1440-*.jpg`, `home-375-a.jpg`,
   `home-375-b.jpg`, `guide-index-1440.jpg`, `guide-nghe-1440.jpg`, `guide-375.jpg` (khung 375 px: `tmp/pv5/m.html?<rộng>&<cao>&<trang>`).
+- 2026-10-08 (nhánh `web-5.0-phat`, chuẩn bị sẵn, chỉ gộp `main` khi máy chủ đã lên 5.0): bản "5.0 đã phát". Ngày phát (9/10/2026)
+  ở **một chỗ**, `js/release.js`, điền vào mọi `<time data-rel="5.0">` (cách đổi: §Sửa thường gặp, dòng "Đổi ngày phát 5.0").
+  Trang chủ, mục lục hướng dẫn, 4 trang 5.0, Phiên bản (`#v5-0` thành bản đang chạy, bỏ câu "chưa phát"), lộ trình (mốc 5.0 đã đạt),
+  meta ghi bản 5.0. Gộp luật 5.0 vào chữ chính (tăng phẩm, tái tạo, phân giải, bảng thẻ truy bắt / Cổ Mộ / Thành Kiều, tiệm sư
+  môn / Cổ Mộ / Ngư Ông / Bảo Khố, Trộm Bảo), khối `.v5note` còn lại ghi luật trước 5.0. Theo chốt cuối `int-5.0` (5263320e) +
+  `feat/khoa-phai` (7838b184): chợ bot 3 sạp (Khoáng Thạch, Thảo Dược x30; Hoàng Kim đồ Vàng cấp 40 / 50 ~5,8 / 6,7 triệu, không
+  khoá), mục mới `trang-bi/#khoa-phai` (mũ / áo / giày / hạng liên / yêu đới khoá phái, chữ đỏ đúng dòng, đồ đang mặc đổi sang
+  phái mình), Thành tựu cấp 20 / 40 ra Đoạn Thạch, Cá Nấu Gừng / Gỏi Cá 10 Ngư Điểm, Tu Vị tính cả treo máy, giá chìa, tạc đạn,
+  Linh Chi trong rương. Ảnh chợ 3 sạp chưa có (`build/stall/` repo game chưa có ảnh mới sau 22:00): giữ ảnh cũ, chú thích "hàng
+  trong ảnh chỉ là ví dụ". Kiểm: 0 link / neo gãy, 0 id trùng (18 trang), 0 tràn trang ở 375 / 360 px (`tmp/pv/w.html`, phần tử
+  báo chỉ là chip hàng `.ptoc` cuộn ngang), JS điền ngày thử bằng `tmp/pv/rel.html` (chữ dự phòng "SAI" thành 9/10/2026).
+  Ảnh kiểm: `tmp/pv5p/`.

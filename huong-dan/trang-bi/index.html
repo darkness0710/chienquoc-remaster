@@ -50,11 +50,12 @@
           <p class="ghero__lead">Rèn đồ và pháp bảo ở <strong>Chủ Tiệm Sửa Chữa</strong> (Tân Thủ Thôn, Sở, Chu), chọn "Rèn luyện trang bị". Kéo đồ vào ô trái, đá vào ô phải, bấm Tiến hành. Rèn được cả đồ đang mặc; kết quả lưu ngay, không hoàn tác.</p>
         </div>
       </div>
-      <div class="v5note v5note--page"><p><span class="v5tag">Bản 5.0</span> Xoá Tái Tạo Thạch và Thăng Phẩm Thạch: tăng phẩm, tái tạo chỉ tốn ngân lượng, tỉ lệ tăng phẩm cao hơn, phân giải ra Sơ Cấp Đoạn Thạch. Đá đang giữ tự đổi ra ngân lượng lúc vào game (30.000 mỗi Tái Tạo, 90.000 mỗi Thăng Phẩm). Từng mục dưới có ghi chú riêng.</p></div>
+      <div class="v5note v5note--page"><p><span class="v5tag">Bản 5.0</span> Đổi từ bản 5.0 (phát <time data-rel="5.0" datetime="2026-10-09">9/10/2026</time>): mũ, áo, giày, hạng liên, yêu đới <a href="#khoa-phai">khoá theo phái</a> như bản gốc. Xoá Tái Tạo Thạch và Thăng Phẩm Thạch: tăng phẩm, tái tạo chỉ tốn ngân lượng, tỉ lệ tăng phẩm cao hơn, phân giải ra Sơ Cấp Đoạn Thạch. Đá còn giữ tự đổi ra ngân lượng lúc vào game (30.000 mỗi Tái Tạo, 90.000 mỗi Thăng Phẩm).</p></div>
     </div>
   </section>
 
   <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
+      <a class="is-v5" href="#khoa-phai">Ai mặc được</a>
       <a href="#phap-bao">Pháp bảo</a>
       <a href="#nang-sao">Nâng sao</a>
       <a href="#bua-ma-thuat">Bùa Ma Thuật</a>
@@ -70,6 +71,26 @@
 
   <div class="wrap gbody">
     <div class="guide">
+
+<!-- Khoá phái (bản 5.0): repo game nhánh feat/khoa-phai 7838b184 (gộp vào 5.0), gameplay/12 §1.10zi, 37 §4.60 (luật gốc
+     sys/user/equip.c:32-90, logic/inventory.gd equip_problem; tiệm NPC giữ hàng gốc nên 4 phái thiếu tiệm giáp cấp 20 trở lên).
+     Tooltip đỏ đúng dòng: item_slot.gd (int-5.0 35ef7b2d). Đồ đang mặc: tools/migrate/sect_armor_fix.py chạy một lần trên máy chủ
+     lúc phát (đồ trong túi / kho không đụng). -->
+<article class="gcard" id="khoa-phai">
+  <h3>Ai mặc được đồ gì</h3>
+  <ul class="facts">
+    <li class="v5">Bản 5.0</li>
+    <li>Khoá theo phái như bản gốc</li>
+    <li>Cấp, giới, phái</li>
+  </ul>
+  <ul>
+    <li>Từ bản 5.0, <strong>mũ, áo, giày, hạng liên, yêu đới</strong> khoá theo phái như bản gốc, giống vũ khí và pháp bảo. Trước đó chỉ vũ khí và pháp bảo khoá phái.</li>
+    <li>Có món ghi chung cho nhiều phái, có món phái nào cũng mặc được. Chưa vào phái thì chỉ mặc được đồ không ghi phái.</li>
+    <li>Rê chuột lên món (hành trang, tiệm, sạp, giao dịch): dòng nào không đạt hiện <strong>chữ đỏ</strong>, đúng dòng đó: <strong>Cấp yêu cầu</strong>, <strong>Trang bị</strong> (nam, nữ) hay <strong>Môn phái</strong>.</li>
+    <li>Đồ <strong>đang mặc</strong> khác phái lúc lên bản 5.0 đã được đổi sang món cùng ô, cùng cấp, cùng giới của phái mình, giữ nguyên phẩm, dòng phụ, sao, ngọc khảm. Đồ trong hành trang, kho giữ nguyên: không mặc được thì bán, <a href="#phan-giai">phân giải</a> hay <a href="../bay-ban/">bày sạp</a>.</li>
+    <li>Tiệm NPC vẫn bày hàng như bản gốc, nên vài phái chưa có tiệm bán áo từ cấp 20: tìm ở quái rơi, sạp người chơi hoặc <a href="../bay-ban/#mua-hang">Sạp Hoàng Kim</a>.</li>
+  </ul>
+</article>
 
 <article class="gcard gpanel" id="phap-bao">
           <div class="ghead">
@@ -253,7 +274,7 @@
               </table>
             </div>
             <p>Mỗi viên Đoạn Thạch chiếm một ô hành trang, nhớ chừa chỗ.</p>
-            <p class="tip">Sơ Cấp: Chiến Quốc Bảo Điển (thêm lượt quay mỗi lần lên cấp và mỗi ngày điểm danh), quà Thành tựu, bảng thẻ Cổ Mộ. Trung, Cao Cấp: bảng thẻ Cổ Mộ, quà Thành tựu, cốt truyện Hổ Phù. Đỉnh Cấp: thẻ độc đắc Cổ Mộ Địa Ngục. Còn lại thì hợp thành.</p>
+            <p class="tip">Sơ Cấp: Chiến Quốc Bảo Điển (thêm lượt quay mỗi lần lên cấp và mỗi ngày điểm danh), bảng thẻ Cổ Mộ, <a href="#phan-giai">phân giải</a> đồ, nghề <a href="../nghe/#thu-thap">Thái Dã</a>. Trung, Cao Cấp: bảng thẻ Cổ Mộ, cốt truyện Hổ Phù, quà Thành tựu (cấp 20: 1 Trung Cấp, cấp 40: 2 Cao Cấp, đều khoá). Đỉnh Cấp: thẻ độc đắc Cổ Mộ Địa Ngục. Còn lại thì hợp thành.</p>
           </div>
         </article>
 
@@ -261,13 +282,13 @@
           <div class="ghead">
             <h3>Tăng phẩm</h3>
             <ul class="facts">
-              <li>1 Thăng Phẩm Thạch</li>
-              <li>4.000 × cấp đồ</li>
+              <li>Chỉ tốn ngân lượng</li>
+              <li>4.000 × cấp đồ + 90.000</li>
             </ul>
           </div>
           <figure class="gshot">
             <img src="../../assets/img/huong-dan/tang-pham.jpg" width="760" height="836" loading="lazy" alt="Cửa sổ Tăng phẩm: áo Xanh cộng Thăng Phẩm Thạch, tỉ lệ 5 % lên Vàng, giá 40.000 ngân lượng">
-            <figcaption>Xanh lên Vàng: 5 %</figcaption>
+            <figcaption>Ảnh bản 4.2, khi còn ô Thăng Phẩm Thạch</figcaption>
           </figure>
           <div class="gtext">
             <p>Phẩm càng cao, chỉ số gốc càng lớn và càng nhiều dòng phụ.</p>
@@ -276,21 +297,21 @@
                 <thead><tr><th>Phẩm</th><th>Chỉ số gốc</th><th>Dòng phụ</th><th>Cách có</th></tr></thead>
                 <tbody>
                   <tr><td>Trắng</td><td>× 1,0</td><td>0</td><td>quái rơi</td></tr>
-                  <tr><td>Xanh</td><td>× 1,2</td><td>2</td><td>tăng từ Trắng, 25 %; quái từ cấp 30 rơi 8 %</td></tr>
-                  <tr><td>Vàng</td><td>× 1,4</td><td>3</td><td>tăng từ Xanh, 5 %</td></tr>
+                  <tr><td>Xanh</td><td>× 1,2</td><td>2</td><td>tăng từ Trắng, 35 %; quái từ cấp 30 rơi 8 %</td></tr>
+                  <tr><td>Vàng</td><td>× 1,4</td><td>3</td><td>tăng từ Xanh, 8 %; <a href="../bay-ban/#mua-hang">Sạp Hoàng Kim</a></td></tr>
                   <tr><td>Tím</td><td>× 1,5</td><td>4</td><td>set sư môn</td></tr>
                 </tbody>
               </table>
             </div>
             <ul>
               <li><strong>Thành công:</strong> lên một phẩm, thêm 1 dòng phụ ngẫu nhiên, giữ nguyên sao và dòng cũ.</li>
-              <li><strong>Thất bại:</strong> mất đá và tiền, đồ giữ nguyên.</li>
+              <li><strong>Thất bại:</strong> mất tiền, đồ giữ nguyên.</li>
               <!-- equip_rules.json qualities[].sockets: Xanh 1, Vàng 3 (4.1: 2), Tím 3 (37 §4.42 SV2) -->
-              <li><strong>Lỗ khảm:</strong> Xanh 1, Vàng 2, Tím 3. Vàng <strong>3 lỗ</strong>, đồ Vàng đang có cũng tự thêm lỗ.</li>
+              <li><strong>Lỗ khảm:</strong> Xanh 1, Vàng 3, Tím 3.</li>
             </ul>
-            <!-- treasury.json general remaster/thang_pham 300.000 (3.4.2, trước 500.000); sect_sets.json exchange 6 điểm; dungeon_gumu.json shop 30; fishing.json shop 300 -->
-            <p class="tip">Thăng Phẩm Thạch: mua ở Bảo Khố 300.000 ngân lượng, Chiến Quốc Bảo Điển, bảng thẻ Cổ Mộ, đổi 6 điểm sư môn ở sư phụ, 30 điểm phó bản ở Tiệm Cổ Mộ hoặc 300 Ngư Điểm ở Ngư Ông.</p>
-          <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Bỏ Thăng Phẩm Thạch, chỉ tốn ngân lượng: <strong>4.000 × cấp đồ + 90.000</strong> mỗi lần (đồ cấp 50: 290.000). Tỉ lệ tăng: Trắng lên Xanh <strong>35 %</strong>, Xanh lên Vàng <strong>8 %</strong>. Nộp 1 <a href="../nghe/#co-quan">cấu kiện Cơ Quan</a> đúng bậc thì phí giảm 25 %.</p></div>
+            <!-- Bản 5.0: equip_rules.json upgrade {cash_per_level 4000, cash_base 90000, steps 35 / 8 %}, craft_part pct 25 (int-5.0). -->
+            <p>Mỗi lần thử tốn <strong>4.000 × cấp đồ + 90.000</strong> lượng (đồ cấp 40: 250.000, cấp 50: 290.000). Nộp 1 <a href="../nghe/#co-quan">cấu kiện Cơ Quan</a> đúng bậc thì phí giảm 25 %.</p>
+          <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Bỏ Thăng Phẩm Thạch, chỉ tốn ngân lượng; tỉ lệ tăng cao hơn (trước: Trắng lên Xanh 25 %, Xanh lên Vàng 5 %, mỗi lần 1 Thăng Phẩm Thạch + 4.000 × cấp đồ).</p></div>
 </div>
         </article>
 
@@ -299,8 +320,7 @@
             <h3>Tái tạo</h3>
             <ul class="facts">
               <li>Đồ Xanh, Vàng</li>
-              <li>1 Tái Tạo Thạch</li>
-              <li>1.000 × cấp đồ</li>
+              <li>1.000 × cấp đồ + 30.000</li>
               <li>Luôn thành công</li>
             </ul>
           </div>
@@ -324,40 +344,40 @@
                 </tbody>
               </table>
             </div>
-            <p class="tip">Tái Tạo Thạch: quà điểm danh mỗi ngày (ngày thứ 7 gấp đôi), Chiến Quốc Bảo Điển, bảng thẻ Cổ Mộ, mua ở Bảo Khố 100.000, đổi 2 điểm sư môn, 10 điểm phó bản hoặc 100 Ngư Điểm.</p>
-          <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Bỏ Tái Tạo Thạch, chỉ tốn ngân lượng: <strong>1.000 × cấp đồ + 30.000</strong> mỗi lần (đồ cấp 50: 80.000). Nộp 1 <a href="../nghe/#co-quan">cấu kiện Cơ Quan</a> đúng bậc thì phí giảm 25 %.</p></div>
+            <!-- Bản 5.0: equip_rules.json reroll {cash_per_level 1000, cash_base 30000} (int-5.0). -->
+            <p>Mỗi lần tốn <strong>1.000 × cấp đồ + 30.000</strong> lượng (đồ cấp 50: 80.000), khoá dòng không tốn thêm. Nộp 1 <a href="../nghe/#co-quan">cấu kiện Cơ Quan</a> đúng bậc thì phí giảm 25 %.</p>
+          <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Bỏ Tái Tạo Thạch, chỉ tốn ngân lượng (trước: 1 Tái Tạo Thạch + 1.000 × cấp đồ).</p></div>
 </div>
         </article>
 
-<!-- Phân giải (bản kế tiếp): repo game equip_rules.json salvage {cash_per_level 1000, by_quality 1: sell/6032 n 1 rate 30,
-             2: remaster/thang_pham n 5, n_low 3, low_level 40}; logic/salvage.gd (không nhận set sư môn, ô giữ, đồ nhiệm vụ, đồ đang mặc;
+<!-- Phân giải (từ 4.2; bản 5.0: equip_rules.json salvage {cash_per_level 200, by_quality 1: sell/0032 n 1 rate 5, 2: sell/0032 n 1
+             rate 10}, int-5.0; 4.2: cash 1000, Xanh 30 % Tái Tạo, Vàng 5 / 3 Thăng Phẩm); logic/salvage.gd (không nhận set sư môn, ô giữ, đồ nhiệm vụ, đồ đang mặc;
              phẩm khác Xanh / Vàng từ chối); gameplay/24 §Phân giải, 37 §4.43, nhật ký (291). -->
 <article class="gcard" id="phan-giai">
           <h3>Phân giải</h3>
           <ul class="facts">
             <li>Từ bản 4.2</li>
             <li>Đồ Xanh, Vàng</li>
-            <li>1.000 × cấp đồ</li>
+            <li>200 × cấp đồ</li>
           </ul>
-          <p>Việc mới cuối danh sách "Rèn luyện trang bị" của thợ rèn: bỏ món đồ không dùng để lấy đá. Kéo đồ từ hành trang vào ô, xem trước sẽ nhận gì, bấm Tiến hành rồi xác nhận.</p>
+          <p>Việc cuối danh sách "Rèn luyện trang bị" của thợ rèn: bỏ món đồ không dùng để lấy đá. Kéo đồ từ hành trang vào ô, xem trước sẽ nhận gì, bấm Tiến hành rồi xác nhận.</p>
           <div class="tbl">
             <table>
               <thead><tr><th>Phẩm đồ</th><th>Nhận được (khoá)</th></tr></thead>
               <tbody>
-                <tr><td>Vàng, cấp 40 trở lên</td><td>5 Thăng Phẩm Thạch</td></tr>
-                <tr><td>Vàng, dưới cấp 40</td><td>3 Thăng Phẩm Thạch</td></tr>
-                <tr><td>Xanh</td><td>30 %: 1 Tái Tạo Thạch, còn lại không ra gì</td></tr>
+                <tr><td>Vàng</td><td>10 %: 1 Sơ Cấp Đoạn Thạch, còn lại không ra gì</td></tr>
+                <tr><td>Xanh</td><td>5 %: 1 Sơ Cấp Đoạn Thạch, còn lại không ra gì</td></tr>
               </tbody>
             </table>
           </div>
           <ul>
-            <li>Món đồ luôn mất. Phí 1.000 × cấp đồ (đồ cấp 40: 40.000).</li>
+            <li>Món đồ luôn mất. Phí 200 × cấp đồ (đồ cấp 50: 10.000).</li>
             <li>Ngọc đã khảm tự về hành trang, bị khoá như khi gỡ thường. Hành trang không đủ chỗ thì không phân giải được.</li>
             <li>Sao đã rèn mất hẳn, không trả lại Đoạn Thạch. Hộp xác nhận báo trước mất bao nhiêu sao.</li>
             <li>Không nhận: đồ Trắng, set sư môn, đồ đã khoá giữ, đồ nhiệm vụ, đồ đang mặc.</li>
           </ul>
-          <p class="tip">Thăng Phẩm Thạch ra từ phân giải bị khoá, chỉ để tự dùng ở <a href="#tang-pham">Tăng phẩm</a>.</p>
-        <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Phân giải ra <strong>Sơ Cấp Đoạn Thạch</strong> (khoá) thay cho đá: đồ Vàng <strong>10 %</strong>, đồ Xanh <strong>5 %</strong> ra 1 viên, còn lại không ra gì. Phí <strong>200 × cấp đồ</strong> (đồ cấp 50: 10.000).</p></div>
+          <p class="tip">Sơ Cấp Đoạn Thạch ra từ phân giải bị khoá, dùng để <a href="#nang-sao">nâng sao</a> hay <a href="#hop-thanh">hợp thành</a>.</p>
+        <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Phân giải ra Sơ Cấp Đoạn Thạch thay cho Thăng Phẩm, Tái Tạo Thạch; phí giảm từ 1.000 xuống 200 × cấp đồ.</p></div>
 </article>
 
 <article class="gcard gpanel" id="giai-phong-an">
@@ -446,5 +466,6 @@
 </footer>
 
 <script src="../../js/guide.js" defer></script>
+<script src="../../js/release.js" defer></script>
 </body>
 </html>

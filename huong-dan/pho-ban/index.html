@@ -115,7 +115,7 @@
                   <tr><td>Sơ Cấp Đoạn Thạch</td><td>4&nbsp;viên · 2/16&nbsp;· 12&nbsp;%</td><td></td><td></td></tr>
                   <tr><td>Trung Cấp Đoạn Thạch</td><td>3&nbsp;viên · 2/16&nbsp;· 12&nbsp;%</td><td>4/16&nbsp;· 44&nbsp;%</td><td></td></tr>
                   <tr><td>Cao Cấp Đoạn Thạch</td><td></td><td>3&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>4/16&nbsp;· 58&nbsp;%</td></tr>
-                  <tr><td>Thăng Phẩm Thạch</td><td>2&nbsp;viên · 1/16&nbsp;· 6&nbsp;%</td><td>3&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>2/16&nbsp;· 33&nbsp;%</td></tr>
+                  <tr><td>Ngân lượng (thay Thăng Phẩm Thạch)</td><td>180.000 · 1/16&nbsp;· 6&nbsp;%</td><td>270.000 · 1/16&nbsp;· 12&nbsp;%</td><td>90.000 · 2/16&nbsp;· 33&nbsp;%</td></tr>
                   <tr><td>Thẻ Thần Thú (ngẫu nhiên)</td><td>4/16&nbsp;· 25&nbsp;%</td><td>4/16&nbsp;· 44&nbsp;%</td><td>1/16&nbsp;· 18&nbsp;%</td></tr>
                   <tr><td><a href="../trang-bi/#bua-ma-thuat">Bùa Ma Thuật</a></td><td></td><td></td><td>1/16&nbsp;· 18&nbsp;%</td></tr>
                   <tr><td><a href="../trang-bi/#bua-may-man">Bùa May Mắn</a></td><td></td><td></td><td>1/16&nbsp;· 18&nbsp;%</td></tr>
@@ -131,9 +131,9 @@
             <p>Ít thẻ hơn nhưng mỗi thẻ nhiều đồ hơn: tính trung bình mỗi người, lượng đồ gần như bản 4.1 (Khó bớt chút Trung Cấp, Thẻ Thần Thú và pháp bảo).</p>
             <!-- Bảng bản 4.1 (tag 4.1.0 repo game, dungeon_gumu.json): Địa Ngục beast 1 + bua_may_man 1 (từ 4.1, trước beast 2).
                  Cơ hội: 1 - C(16 - k, lượt) / C(16, lượt). -->
-            <!-- Tiệm: dungeon_gumu.json shop (thang_pham 30 điểm từ 3.4.2, trước 50) -->
-            <p class="tip">Bùa Ma Thuật, thú cưỡi Quý, Đỉnh Cấp Đoạn Thạch và Tinh Thạch cấp 3 chỉ Địa Ngục mới ra. Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt. Điểm phó bản đổi ở Tiệm Cổ Mộ của Xa Phu: Thẻ Thần Thú chọn con 300, pháp bảo 0 sao chọn loại 100, Sơ Cấp Đoạn Thạch (khoá) 100, Thăng Phẩm Thạch 30, Tinh Thạch cấp 1 chọn loại 25, Tái Tạo Thạch 10, Thú Hồn 10.</p>
-          <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Thẻ Tái Tạo Thạch, Thăng Phẩm Thạch thành thẻ ngân lượng (30.000 / 90.000 lượng mỗi viên); Tiệm Cổ Mộ bỏ hai loại đá. Mỗi lượt có 2 <a href="../nghe/#bao-ruong">Bảo Rương</a> Tinh Xảo, mở bằng Chìa Khoá Vàng.</p></div>
+            <!-- Tiệm: dungeon_gumu.json shop (bản 5.0, int-5.0: bỏ thang_pham / tai_tao; thẻ đá thành cash90000 / cash30000 = n x 90.000 / 30.000) -->
+            <p class="tip">Bùa Ma Thuật, thú cưỡi Quý, Đỉnh Cấp Đoạn Thạch và Tinh Thạch cấp 3 chỉ Địa Ngục mới ra. Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt. Điểm phó bản đổi ở Tiệm Cổ Mộ của Xa Phu: Thẻ Thần Thú chọn con 300, pháp bảo 0 sao chọn loại 100, Sơ Cấp Đoạn Thạch (khoá) 100, Tinh Thạch cấp 1 chọn loại 25, Thú Hồn 10.</p>
+          <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Thẻ Thăng Phẩm Thạch thành thẻ ngân lượng (90.000 lượng mỗi viên); Tiệm Cổ Mộ bỏ Thăng Phẩm, Tái Tạo Thạch. Mỗi lượt có 2 <a href="../nghe/#bao-ruong">Bảo Rương</a> Tinh Xảo, mở bằng Chìa Khoá Vàng.</p></div>
 </div>
         </article>
 
@@ -207,8 +207,8 @@
                 <thead><tr><th>Thẻ</th><th>Thường (1 nhịp)</th><th>Khó (2 nhịp)</th><th>Địa Ngục (3 nhịp)</th></tr></thead>
                 <tbody>
                   <tr><td>Tử Kim Tinh</td><td>3&nbsp;viên · 4/16&nbsp;· 25&nbsp;%</td><td>2&nbsp;viên · 4/16&nbsp;· 44&nbsp;%<br>4&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>2&nbsp;viên · 5/16&nbsp;· 68&nbsp;%<br>3&nbsp;viên · 1/16&nbsp;· 18&nbsp;%</td></tr>
-                  <tr><td>Tái Tạo Thạch</td><td>15&nbsp;viên · 3/16&nbsp;· 19&nbsp;%</td><td>16&nbsp;viên · 2/16&nbsp;· 23&nbsp;%<br>10&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>17&nbsp;viên · 2/16&nbsp;· 33&nbsp;%</td></tr>
-                  <tr><td>Thăng Phẩm Thạch</td><td>3&nbsp;viên · 3/16&nbsp;· 19&nbsp;%<br>6&nbsp;viên · 1/16&nbsp;· 6&nbsp;%</td><td>4&nbsp;viên · 2/16&nbsp;· 23&nbsp;%<br>2&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>5&nbsp;viên · 2/16&nbsp;· 33&nbsp;%</td></tr>
+                  <tr><td>Ngân lượng (thay Tái Tạo Thạch)</td><td>450.000 · 3/16&nbsp;· 19&nbsp;%</td><td>480.000 · 2/16&nbsp;· 23&nbsp;%<br>300.000 · 1/16&nbsp;· 12&nbsp;%</td><td>510.000 · 2/16&nbsp;· 33&nbsp;%</td></tr>
+                  <tr><td>Ngân lượng (thay Thăng Phẩm Thạch)</td><td>270.000 · 3/16&nbsp;· 19&nbsp;%<br>540.000 · 1/16&nbsp;· 6&nbsp;%</td><td>360.000 · 2/16&nbsp;· 23&nbsp;%<br>180.000 · 1/16&nbsp;· 12&nbsp;%</td><td>450.000 · 2/16&nbsp;· 33&nbsp;%</td></tr>
                   <tr><td>Trung Cấp Đoạn Thạch</td><td>3&nbsp;viên · 1/16&nbsp;· 6&nbsp;%</td><td>2&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td></td></tr>
                   <tr><td>Cao Cấp Đoạn Thạch</td><td></td><td>2&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>2&nbsp;viên · 1/16&nbsp;· 18&nbsp;%<br>1&nbsp;viên · 1/16&nbsp;· 18&nbsp;%</td></tr>
                   <tr><td>Thú Hồn</td><td>9&nbsp;viên · 2/16&nbsp;· 12&nbsp;%</td><td>8&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>8&nbsp;viên · 1/16&nbsp;· 18&nbsp;%</td></tr>
@@ -227,7 +227,7 @@
             <p>Tử Kim Tinh chỉ có ở bảng thẻ Thành Kiều, dùng để nâng set sư môn lên <strong>bậc 2</strong>. Nói với sư phụ, chọn <strong>Mua &amp; Nâng cấp đồ sư môn</strong>, tab <strong>Nâng cấp</strong>, kéo món set vào ô. Mỗi lần thử tốn 1 Tử Kim Tinh và 10 điểm sư môn, thành công 25 %. Trượt thì mất cả hai nhưng giữ món. Thành công: món lên bậc 2 (cần cấp 50), giữ sao và ngọc khảm. Tử Kim Tinh khoá được dùng trước.</p>
             <p>Mỗi lần thử tốn thêm <strong>200.000 lượng</strong> (trượt cũng mất), tab Nâng cấp có dòng Ngân Lượng, đỏ khi thiếu. Chỉ số gốc của set sư môn ở mọi bậc giảm khoảng 6 % (hệ số phẩm Tím 1,6 xuống 1,5), cả set đang mặc.</p>
             <p class="tip">Thường hợp đội cấp 40 làm quen. Khó đi một mình gần như thua, nên đi đủ đội. Đứng tản ra khi đánh Mã Quỷ và Lương Hưng để Vạn Mã và lửa không trúng cả đội. Người chịu đòn nên giữ máu cao: tướng hạ được ai là hồi máu. Mặc đồ tốt nhất và mang đủ thuốc trước khi vào vì trang bị bị khoá suốt lượt.</p>
-          <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Thẻ Tái Tạo Thạch, Thăng Phẩm Thạch thành thẻ ngân lượng (30.000 / 90.000 lượng mỗi viên). Mỗi lượt có 1 <a href="../nghe/#bao-ruong">Bảo Rương</a> Phiêu Lượng, mở bằng Chìa Khoá Tinh Thiết.</p></div>
+          <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Thẻ Tái Tạo Thạch, Thăng Phẩm Thạch thành thẻ ngân lượng (30.000 / 90.000 lượng mỗi viên đá cũ). Mỗi lượt có 1 <a href="../nghe/#bao-ruong">Bảo Rương</a> Phiêu Lượng, mở bằng Chìa Khoá Tinh Thiết.</p></div>
 </div>
         </article>
 

@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Phiên bản · Chiến Quốc Remaster</title>
-  <meta name="description" content="Chiến Quốc Remaster qua từng phiên bản: ngày phát hành và thay đổi của mỗi bản, từ bản demo offline tới bản 4.2 đang chạy, và bản 5.0 sắp ra mắt.">
+  <meta name="description" content="Chiến Quốc Remaster qua từng phiên bản: ngày phát hành và thay đổi của mỗi bản, từ bản demo offline tới bản 5.0 đang chạy.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/phien-ban/">
   <meta property="og:title" content="Các phiên bản Chiến Quốc Remaster">
-  <meta property="og:description" content="Mỗi bản có gì mới, cân bằng gì, sửa lỗi gì, kèm ngày phát hành. Bản 5.0 sắp ra mắt: kĩ năng nghề, Bảo Thú Lục, bang hội, bày bán.">
+  <meta property="og:description" content="Mỗi bản có gì mới, cân bằng gì, sửa lỗi gì, kèm ngày phát hành. Bản 5.0 mới phát: kĩ năng nghề, Bảo Thú Lục, bang hội, bày bán.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -54,7 +54,7 @@
 
   <div class="vtoc-bar">
     <nav class="wrap vtoc" aria-label="Nhảy tới phiên bản">
-      <a class="is-next" href="#v5-0">5.0</a>
+      <a href="#v5-0">5.0</a>
       <a href="#v4-2">4.2</a>
       <a href="#v4-1">4.1</a>
       <a href="#v4-0">4.0</a>
@@ -78,15 +78,17 @@
   <div class="wrap">
     <div class="vlist">
 
-            <!-- ================= 5.0 (SẮP RA MẮT, chưa phát) =================
+            <!-- ================= 5.0 =================
+           Đã phát; ngày ở js/release.js (RELEASES["5.0"]), thẻ <time data-rel="5.0"> lấy ngày từ đó (README §Sửa thường gặp).
            Nguồn: repo game, worktree D:/Projects/Debug-int nhánh int-5.0 (336eba8a) và Debug-merge nhánh merge-5.0: documents/tong-quan/62
            (tình trạng 5.0), 37 §4.47-§4.59, 59 (nghề), 60 (bang hội), 61 (28 chiêu), 63 (bày bán), 65 (Bảo Thú Lục); about.json (nút launcher).
-           Khi phát: bỏ class vcard--next và nhãn "Sắp ra mắt", thay khối data-release-date bằng <time datetime="yyyy-mm-dd">, đối chiếu
-           lại số với tag 5.0.0 + tin launcher news.json (số trong thẻ này là số lúc viết, có thể đã chỉnh). -->
-      <article class="vcard vcard--next" id="v5-0">
+           Cập nhật theo chốt cuối int-5.0 (5263320e, 2026-10-08): chợ bot 3 sạp (71f76436, 63 §8, 37 §4.56), đồ khoá phái (feat/khoa-phai
+           7838b184, gameplay/12 §1.10zi, 37 §4.60), thành tựu cấp 20 / 40 (35ef7b2d), tiệm Ngư Điểm (d1b44594). Chưa có tag 5.0.0 và tin
+           launcher 5.0 lúc viết: khi có thì đối chiếu lại. -->
+      <article class="vcard" id="v5-0">
         <header class="vcard__head">
           <h2 class="vcard__ver">5.0</h2>
-          <span class="vcard__tag vcard__tag--gold" data-release-date="">Sắp ra mắt</span>
+          <time class="vcard__date" data-rel="5.0" datetime="2026-10-09">9/10/2026</time>
         </header>
         <p class="vcard__sum">Kĩ năng nghề, Bảo Thú Lục, bang hội, bày bán, 28 chiêu cấp 45 và 50, rèn đồ chỉ cần ngân lượng.</p>
 
@@ -96,7 +98,7 @@
           <li><strong>Bảo Rương</strong> ở mọi bản đồ ngoài, trong Thành Kiều và Cổ Mộ, mở bằng chìa khoá Cơ Quan. Cơ Quan còn chế <strong>túi hành trang</strong> (6, 12, 24 ô, dùng 7 ngày), <strong>tạc đạn</strong> và cấu kiện giảm 25 % phí rèn.</li>
           <li><a href="../huong-dan/bao-thu/">Bảo Thú Lục</a>: mua Dây Càn Khôn ở Tiệm Tạp Hóa, đánh quái gần chết rồi ném dây để bắt. 61 loài ở trần cấp 50, 1 % ra Bảo Bảo, đủ vùng, đủ hệ có quà. Chọn một thú <strong>xuất chiến đánh cùng chủ</strong>, cấp bằng chủ.</li>
           <li><a href="../huong-dan/bang-hoi/">Bang hội</a>: lập bang ở Tổng Quản Bang Hội (Chu Quốc) khi đủ 3 người cùng tổ đội, Bang Chủ cấp 30, 500.000 lượng. Bảng <code>Alt+B</code>, kênh chat Bang, nhiệm vụ bang 10 việc mỗi ngày, quỹ và cống hiến, kĩ năng bang (Tiện ích, Cường Hoá).</li>
-          <li><a href="../huong-dan/bay-ban/">Bày bán</a>: mở sạp ở khu chợ Chu Quốc như bản gốc (từ cấp 20, 12 ô, thuế 5 %), kênh chat <strong>Giao Dịch</strong>. Chợ bot luôn có vài sạp bán nguyên liệu, thuốc, trang bị.</li>
+          <li><a href="../huong-dan/bay-ban/">Bày bán</a>: mở sạp ở khu chợ Chu Quốc như bản gốc (từ cấp 20, 12 ô, thuế 5 %), kênh chat <strong>Giao Dịch</strong>. Chợ bot ba sạp gần Quản Khố ở Chu: Sạp Khoáng Thạch, Sạp Thảo Dược và <strong>Sạp Hoàng Kim</strong> bán đồ Vàng cấp 40, 50 (không khoá, bán lại được), làm mới mỗi 30 tới 60 phút.</li>
           <li><a href="../huong-dan/ky-nang/#chieu-45-50">28 chiêu mới</a>: mỗi nhánh của bảy phái thêm hàng chiêu cấp 45 và cấp 50, phần lớn là chiêu bản gốc.</li>
           <li><a href="../huong-dan/tien-ich/#bao-kho">Kim Nguyên Bảo</a>: tiền mới, chỉ rơi từ Trộm Bảo Phi Tặc theo cấp con trộm. Bảo Khố thêm tab Kim Nguyên Bảo (chưa bán gì).</li>
           <li><a href="../huong-dan/bat-dau/#tan-thu">Bỏ qua Tân Thủ</a>: đủ cấp bái sư thì nói với Môn Phái Chiêu Sinh ở Tân Thủ Thôn để đi bái sư ngay, vẫn nhận đủ quà các nhiệm vụ Tân Thủ.</li>
@@ -107,10 +109,12 @@
         <ul>
           <li><strong>Xoá Tái Tạo Thạch và Thăng Phẩm Thạch.</strong> Rèn chỉ tốn ngân lượng: <a href="../huong-dan/trang-bi/#tai-tao">Tái tạo</a> 1.000 × cấp đồ + 30.000, <a href="../huong-dan/trang-bi/#tang-pham">Tăng phẩm</a> 4.000 × cấp đồ + 90.000 với tỉ lệ cao hơn (Trắng lên Xanh 35 %, Xanh lên Vàng 8 %). Mọi phần thưởng đá đổi thành ngân lượng (30.000 mỗi Tái Tạo, 90.000 mỗi Thăng Phẩm); đá đang giữ tự đổi ra ngân lượng lúc vào game.</li>
           <li><a href="../huong-dan/trang-bi/#phan-giai">Phân giải</a> ra Sơ Cấp Đoạn Thạch (khoá): đồ Vàng 10 %, đồ Xanh 5 %, phí 200 × cấp đồ.</li>
-          <li><a href="../huong-dan/ky-nang/#tu-vi">Tu Vị</a> bỏ giới hạn 4 giờ mỗi ngày, tính mọi giây đã vào nhân vật.</li>
+          <li><a href="../huong-dan/ky-nang/#tu-vi">Tu Vị</a> bỏ giới hạn 4 giờ mỗi ngày, tính mọi giây đã vào nhân vật, kể cả lúc treo máy.</li>
+          <li><a href="../huong-dan/trang-bi/#khoa-phai">Mũ, áo, giày, hạng liên, yêu đới khoá theo phái</a> như bản gốc (trước chỉ vũ khí). Rê chuột lên món thì dòng không đạt (cấp, giới, phái) hiện chữ đỏ. Đồ đang mặc khác phái được đổi sang món cùng ô, cùng cấp, cùng giới của phái mình, giữ phẩm, dòng, sao, ngọc; đồ trong hành trang, kho giữ nguyên.</li>
+          <li>Quà Thành tựu cấp 20 thành 1 Trung Cấp Đoạn Thạch, cấp 40 thành 2 Cao Cấp Đoạn Thạch (khoá), thay bộ đồ và Thẻ Thần Thú.</li>
+          <li>Tiệm Ngư Ông: Cá Nấu Gừng, Gỏi Cá Hảo Hạng 10 Ngư Điểm (trước 5), thêm Cá 2 Ngư Điểm cho Đầu Bếp.</li>
           <li>Quái ngoài bản đồ từ cấp 25 trâu hơn, kinh nghiệm diệt quái từ cấp 30 tăng 1,3 lần (đã tính phần thú đánh cùng). Các nhánh dọn bầy quái chậm được thêm sát thương lan.</li>
         </ul>
-        <p class="note">Bản 5.0 chưa phát, máy chủ đang chạy bản 4.2. Nội dung và số liệu trong thẻ này là bản đang thử, có thể còn đổi trước khi phát.</p>
       </article>
 
       <!-- ================= 4.2 =================
@@ -598,5 +602,6 @@
   </div>
 </footer>
 
+<script src="../js/release.js" defer></script>
 </body>
 </html>

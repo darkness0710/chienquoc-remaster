@@ -50,7 +50,7 @@
           <p class="ghero__lead">Mở sạp ở khu chợ Chu Quốc như bản gốc để bán đồ cho người chơi khác; chợ bot lúc nào cũng có hàng.</p>
         </div>
       </div>
-      <div class="v5note v5note--page"><p><span class="v5tag">Bản 5.0</span> Tính năng của bản 5.0, <strong>sắp ra mắt</strong> (máy chủ đang chạy bản 4.2). Ảnh chụp từ bản thử, số liệu có thể còn chỉnh trước khi phát.</p></div>
+      <div class="v5note v5note--page"><p><span class="v5tag">Bản 5.0</span> Tính năng mới của bản 5.0, đã phát <time data-rel="5.0" datetime="2026-10-09">9/10/2026</time>. Ảnh chụp từ bản thử trước khi phát, giao diện trong game có thể khác đôi chút.</p></div>
     </div>
   </section>
 
@@ -86,14 +86,17 @@
       <li>Kéo đồ từ hành trang vào ô sạp (hoặc Ctrl + chuột phải ô hành trang), đặt giá mỗi cái từ 1 tới 50.000.000 lượng. Đồ chồng thì người mua mua lẻ được. Chuột phải ô sạp để thu về.</li>
       <li>Tên sạp mặc định "Tiệm tạp hóa", đổi được, tối đa 20 kí tự. Biển tên hiện trên đầu bạn, người khác bấm vào là xem sạp.</li>
       <li>Không bày được: đồ khoá, đồ phong ấn, set sư môn, đồ không cho giao dịch. Chưa bán được bảo thú.</li>
-      <li>Đang bày thì đứng yên: không đi, không đánh, không dùng đồ, không giao dịch. Sạp tự đóng khi bấm Thu sạp, đổi bản đồ, bị dịch chuyển, trọng thương, thoát game hay mất mạng. Không bán khi rời mạng.</li>
+      <li>Đang bày thì đứng yên: không đi, không đánh, không dùng đồ, không giao dịch. Sạp tự đóng khi bấm Thu sạp, đổi bản đồ, bị dịch chuyển, trọng thương, thoát game hay mất mạng: không bán hộ khi bạn đã thoát game.</li>
       <li>Mỗi lần có người mua: dòng báo "X mua N món, nhận Y lượng, thuế Z". Sổ bán giữ 30 dòng gần nhất. Thuế 5 % trừ vào tiền bán.</li>
     </ul>
   </div>
 </article>
 
-<!-- Mua + chợ bot: 63 §1 (người mua cùng map, trong tầm nhìn, so giá đã xem), §8 (3-5 sạp, 4-8 món, làm mới 30-60 phút, giá x10,
-     đồ Xanh x2, mua của bot không cần cấp). Ảnh: build/stall/buyer.png repo game (--demo-stall=buyer). -->
+<!-- Mua + chợ bot: repo game nhánh int-5.0 (71f76436 chợ bot chốt cuối, 35ef7b2d bảng mua theo người xem), 63 §1 (người mua cùng map,
+     trong tầm nhìn, so giá đã xem, cấp 20), §8 + 37 §4.56 (3 sạp cố định một hàng dưới Quản Khố, Khoáng Thạch / Thảo Dược 4-6 loại
+     x 5-10 cái giá x30 value, Hoàng Kim 6 món Vàng cấp 40 / 50 giá 1,5 x chi phí tự rèn Trắng -> Vàng: 5.759.000 / 6.680.000,
+     không khoá, không trùng món tiệm NPC, làm mới 30-60 phút, mua của bot không cần cấp), stall_bots.json.
+     Ảnh: build/stall/buyer.png repo game (--demo-stall=buyer, chụp trước bản chợ 3 sạp: hàng trong ảnh chỉ là ví dụ). -->
 <article class="gcard gpanel" id="mua-hang">
   <div class="ghead">
     <h3>Mua hàng, chợ bot</h3>
@@ -104,18 +107,32 @@
   </div>
   <figure class="gshot">
     <img src="../../assets/img/huong-dan/bay-ban-mua.jpg" width="760" height="493" loading="lazy" alt="Bảng mua ở sạp của MinhTam: Khoai Lang Nướng, Kim Ngân Hoa, Chính Khí Tán, Trái Táo kèm giá và nút Mua">
-    <figcaption>Bấm biển tên sạp để xem hàng (ảnh bản thử 5.0)</figcaption>
+    <figcaption>Bấm biển tên sạp để xem hàng (ảnh bản thử 5.0, hàng trong ảnh chỉ là ví dụ)</figcaption>
   </figure>
   <div class="gtext">
     <ul>
       <li>Bấm biển tên sạp (hoặc Ctrl + chuột phải người bán, chọn Xem sạp) khi cùng bản đồ và trong tầm nhìn. Hành trang phải đủ chỗ cho số món mua.</li>
+      <li>Mua của người chơi cần <strong>cấp 20</strong>, như người bán. Mua của chợ bot không cần cấp.</li>
+      <li>Mỗi dòng hàng ghi sẵn tên, cấp, phái (món chỉ một số phái mặc được), Nam / Nữ. Món bạn không mặc được hiện chữ mờ kèm lý do; rê chuột lên món thì dòng không đạt hiện chữ đỏ.</li>
       <li>Máy chủ giữ đúng giá bạn đã xem: người bán đổi giá hay đổi món thì lệnh mua bị từ chối, không mất tiền oan.</li>
     </ul>
     <h4>Chợ bot</h4>
+    <p>Ba sạp của người bán ảo xếp một hàng gần <strong>Quản Khố</strong> ở Chu Quốc, lượt nào cũng đủ cả ba:</p>
+    <div class="tbl tbl--wrap">
+      <table>
+        <thead><tr><th>Sạp</th><th>Bán gì</th><th>Giá</th></tr></thead>
+        <tbody>
+          <tr><td>Sạp Khoáng Thạch</td><td>Quặng và thỏi (Đồng tới Tinh Thiết), 4 tới 6 loại, mỗi loại 5 tới 10 cái</td><td>gấp 30 lần giá trị món</td></tr>
+          <tr><td>Sạp Thảo Dược</td><td>Thảo dược của Dược Sư, 4 tới 6 loại, mỗi loại 5 tới 10 cái</td><td>gấp 30 lần giá trị món</td></tr>
+          <tr><td>Sạp Hoàng Kim</td><td>6 món đồ <strong>Vàng</strong> (đủ dòng phụ): vũ khí, mũ, áo, giày, hạng liên, yêu đới; mỗi món cấp 40 hoặc 50, phái và giới ngẫu nhiên</td><td>khoảng 5,8 triệu (cấp 40), 6,7 triệu (cấp 50) mỗi món</td></tr>
+        </tbody>
+      </table>
+    </div>
     <ul>
-      <li>Khu sạp Chu luôn có 3 tới 5 sạp của người bán ảo, mỗi sạp 4 tới 8 món: nguyên liệu (quặng, thỏi, thảo dược), thuốc và đồ ăn, trang bị môn phái cấp 10 tới 50 (Trắng, Xanh).</li>
-      <li>Hàng có hạn, bán hết thì chờ lượt sau; cả chợ làm mới mỗi 30 tới 60 phút.</li>
-      <li>Giá gấp 10 lần giá tiệm, đồ Xanh gấp đôi nữa: tiện khi cần gấp, không phải chỗ mua rẻ.</li>
+      <li>Giá đồ Vàng bằng 1,5 lần chi phí trung bình tự tăng phẩm một món Trắng lên Vàng cùng cấp ở thợ rèn: mua là đỡ công, không phải rẻ hơn.</li>
+      <li>Đồ mua của bot <strong>không khoá</strong>: mặc, giao dịch hay bày bán lại được. Xem phái, giới trên dòng hàng trước khi mua (<a href="../trang-bi/#khoa-phai">đồ khoá theo phái</a>).</li>
+      <li>Bot không bán món mà tiệm NPC đã bán.</li>
+      <li>Hàng có hạn, bán hết thì chờ lượt sau; cả chợ làm mới mỗi 30 tới 60 phút (đổi người bán và hàng, chỗ giữ nguyên).</li>
     </ul>
   </div>
 </article>
@@ -164,5 +181,6 @@
 </footer>
 
 <script src="../../js/guide.js" defer></script>
+<script src="../../js/release.js" defer></script>
 </body>
 </html>
