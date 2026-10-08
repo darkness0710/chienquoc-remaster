@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Phiên bản · Chiến Quốc Remaster</title>
-  <meta name="description" content="Chiến Quốc Remaster qua từng phiên bản: ngày phát hành và thay đổi của mỗi bản, từ bản demo offline tới bản online 4.0 mở trần cấp 50.">
+  <meta name="description" content="Chiến Quốc Remaster qua từng phiên bản: ngày phát hành và thay đổi của mỗi bản, từ bản demo offline tới bản 4.2 đang chạy, và bản 5.0 sắp ra mắt.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/phien-ban/">
   <meta property="og:title" content="Các phiên bản Chiến Quốc Remaster">
-  <meta property="og:description" content="Mỗi bản có gì mới, cân bằng gì, sửa lỗi gì, kèm ngày phát hành. Bản 4.0: mở trần cấp 50, phó bản Thành Kiều.">
+  <meta property="og:description" content="Mỗi bản có gì mới, cân bằng gì, sửa lỗi gì, kèm ngày phát hành. Bản 5.0 sắp ra mắt: kĩ năng nghề, Bảo Thú Lục, bang hội, bày bán.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -54,6 +54,7 @@
 
   <div class="vtoc-bar">
     <nav class="wrap vtoc" aria-label="Nhảy tới phiên bản">
+      <a class="is-next" href="#v5-0">5.0</a>
       <a href="#v4-2">4.2</a>
       <a href="#v4-1">4.1</a>
       <a href="#v4-0">4.0</a>
@@ -77,7 +78,42 @@
   <div class="wrap">
     <div class="vlist">
 
-            <!-- ================= 4.2 =================
+            <!-- ================= 5.0 (SẮP RA MẮT, chưa phát) =================
+           Nguồn: repo game, worktree D:/Projects/Debug-int nhánh int-5.0 (336eba8a) và Debug-merge nhánh merge-5.0: documents/tong-quan/62
+           (tình trạng 5.0), 37 §4.47-§4.59, 59 (nghề), 60 (bang hội), 61 (28 chiêu), 63 (bày bán), 65 (Bảo Thú Lục); about.json (nút launcher).
+           Khi phát: bỏ class vcard--next và nhãn "Sắp ra mắt", thay khối data-release-date bằng <time datetime="yyyy-mm-dd">, đối chiếu
+           lại số với tag 5.0.0 + tin launcher news.json (số trong thẻ này là số lúc viết, có thể đã chỉnh). -->
+      <article class="vcard vcard--next" id="v5-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">5.0</h2>
+          <span class="vcard__tag vcard__tag--gold" data-release-date="">Sắp ra mắt</span>
+        </header>
+        <p class="vcard__sum">Kĩ năng nghề, Bảo Thú Lục, bang hội, bày bán, 28 chiêu cấp 45 và 50, rèn đồ chỉ cần ngân lượng.</p>
+
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li><a href="../huong-dan/nghe/">Kĩ năng nghề</a>: Dược Sư, Luyện Đơn, Thái Dã, Cơ Quan (2 nghề chính) và Đầu Bếp. Hái thuốc, đào khoáng ngoài bản đồ, chế thuốc có hồi chiêu riêng, món ăn tăng chỉ số 30 phút. Làm là lên cấp, không tốn thể lực, không giới hạn mỗi ngày. Tab <strong>Kĩ năng nghề</strong> trong <code>Alt+R</code> (hoặc <code>Alt+N</code>) có <strong>Sổ tay</strong> chỉ nguồn từng nguyên liệu, bấm tên bản đồ là tự đi tới.</li>
+          <li><strong>Bảo Rương</strong> ở mọi bản đồ ngoài, trong Thành Kiều và Cổ Mộ, mở bằng chìa khoá Cơ Quan. Cơ Quan còn chế <strong>túi hành trang</strong> (6, 12, 24 ô, dùng 7 ngày), <strong>tạc đạn</strong> và cấu kiện giảm 25 % phí rèn.</li>
+          <li><a href="../huong-dan/bao-thu/">Bảo Thú Lục</a>: mua Dây Càn Khôn ở Tiệm Tạp Hóa, đánh quái gần chết rồi ném dây để bắt. 61 loài ở trần cấp 50, 1 % ra Bảo Bảo, đủ vùng, đủ hệ có quà. Chọn một thú <strong>xuất chiến đánh cùng chủ</strong>, cấp bằng chủ.</li>
+          <li><a href="../huong-dan/bang-hoi/">Bang hội</a>: lập bang ở Tổng Quản Bang Hội (Chu Quốc) khi đủ 3 người cùng tổ đội, Bang Chủ cấp 30, 500.000 lượng. Bảng <code>Alt+B</code>, kênh chat Bang, nhiệm vụ bang 10 việc mỗi ngày, quỹ và cống hiến, kĩ năng bang (Tiện ích, Cường Hoá).</li>
+          <li><a href="../huong-dan/bay-ban/">Bày bán</a>: mở sạp ở khu chợ Chu Quốc như bản gốc (từ cấp 20, 12 ô, thuế 5 %), kênh chat <strong>Giao Dịch</strong>. Chợ bot luôn có vài sạp bán nguyên liệu, thuốc, trang bị.</li>
+          <li><a href="../huong-dan/ky-nang/#chieu-45-50">28 chiêu mới</a>: mỗi nhánh của bảy phái thêm hàng chiêu cấp 45 và cấp 50, phần lớn là chiêu bản gốc.</li>
+          <li><a href="../huong-dan/tien-ich/#bao-kho">Kim Nguyên Bảo</a>: tiền mới, chỉ rơi từ Trộm Bảo Phi Tặc theo cấp con trộm. Bảo Khố thêm tab Kim Nguyên Bảo (chưa bán gì).</li>
+          <li><a href="../huong-dan/bat-dau/#tan-thu">Bỏ qua Tân Thủ</a>: đủ cấp bái sư thì nói với Môn Phái Chiêu Sinh ở Tân Thủ Thôn để đi bái sư ngay, vẫn nhận đủ quà các nhiệm vụ Tân Thủ.</li>
+          <li>Launcher có thêm nút <strong>Zalo</strong> và <strong>Discord</strong> cạnh nút Group Fb.</li>
+        </ul>
+
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li><strong>Xoá Tái Tạo Thạch và Thăng Phẩm Thạch.</strong> Rèn chỉ tốn ngân lượng: <a href="../huong-dan/trang-bi/#tai-tao">Tái tạo</a> 1.000 × cấp đồ + 30.000, <a href="../huong-dan/trang-bi/#tang-pham">Tăng phẩm</a> 4.000 × cấp đồ + 90.000 với tỉ lệ cao hơn (Trắng lên Xanh 35 %, Xanh lên Vàng 8 %). Mọi phần thưởng đá đổi thành ngân lượng (30.000 mỗi Tái Tạo, 90.000 mỗi Thăng Phẩm); đá đang giữ tự đổi ra ngân lượng lúc vào game.</li>
+          <li><a href="../huong-dan/trang-bi/#phan-giai">Phân giải</a> ra Sơ Cấp Đoạn Thạch (khoá): đồ Vàng 10 %, đồ Xanh 5 %, phí 200 × cấp đồ.</li>
+          <li><a href="../huong-dan/ky-nang/#tu-vi">Tu Vị</a> bỏ giới hạn 4 giờ mỗi ngày, tính mọi giây đã vào nhân vật.</li>
+          <li>Quái ngoài bản đồ từ cấp 25 trâu hơn, kinh nghiệm diệt quái từ cấp 30 tăng 1,3 lần (đã tính phần thú đánh cùng). Các nhánh dọn bầy quái chậm được thêm sát thương lan.</li>
+        </ul>
+        <p class="note">Bản 5.0 chưa phát, máy chủ đang chạy bản 4.2. Nội dung và số liệu trong thẻ này là bản đang thử, có thể còn đổi trước khi phát.</p>
+      </article>
+
+      <!-- ================= 4.2 =================
            Nguồn: repo game commit df940b3d (nhật ký 2026-10-07 (302)-(308), 2026-10-08 (309)-(313), tong-quan/37 §4.47 nhịp chung,
            gameplay/56 tỉ thí, gameplay/12 mục "Ô phím 30 ô và hàng nút góc theo bản gốc"). Gộp thẻ "Bản kế tiếp" (đợt cân bằng 2026-10-07: (291)-(295) lật thẻ theo nhịp, kĩ năng giang hồ, phân giải,
            chiêu cấp 40, 41 GD36 đồng hồ) vào thẻ này. Phát 2026-10-08 (tag 4.2.0 repo game). -->
@@ -96,18 +132,18 @@
           <li><strong>Tỉ thí một chọi một</strong> ở Võ Sư Chu Quốc, <strong>nhắn tin riêng</strong> với bằng hữu ngay cạnh bảng Bằng Hữu.</li>
           <li>Thần Tiên Gia Gia ở Chu mở: nhận thời gian nhân đôi kinh nghiệm và <strong>nhập mã quà tặng</strong> ngay tại kinh thành.</li>
         
-          <li><a href="../huong-dan/#ki-nang-giang-ho">Kĩ năng giang hồ</a>: 8 chiêu bị động học ở Vương Bộ Đầu (Chu), mọi phái, từ cấp 10. Mở ở <strong>Alt+R</strong>, tab Kĩ năng giang hồ. Mỗi chiêu 10 cấp, cộng Khí Huyết, Pháp Lực, Ngoại Công, Nội Công, Ngoại Kháng, Nội Kháng, Bạo Kích hoặc Né Tránh. Cấp chiêu tối đa bằng cấp nhân vật chia 5; học cấp n tốn 1.500 × n tiềm năng và 50.000 × n lượng, không tẩy. Lăng Ba Vi Bộ sẽ mở ở bản sau.</li>
-          <li><a href="../huong-dan/#phan-giai">Phân giải</a> ở thợ rèn: đồ Vàng ra 5 Thăng Phẩm Thạch (đồ dưới cấp 40 ra 3), đồ Xanh 30 % ra 1 Tái Tạo Thạch, đá ra đều khoá. Ngọc khảm về hành trang (khoá), sao đã rèn mất, phí 1.000 × cấp đồ. Không nhận set sư môn, đồ khoá giữ, đồ nhiệm vụ, đồ Trắng, đồ đang mặc.</li>
-          <li><a href="../huong-dan/#dong-ho">Đồng hồ máy chủ</a> ngay dưới bản đồ nhỏ: giờ máy chủ và thời gian còn lại tới lúc qua ngày (23:00), ví dụ "22:41 · qua ngày sau 19 phút". Rê chuột xem việc sẽ làm mới, việc tuần làm mới 23:00 Chủ nhật. Khung tin nhắc lúc 22:30 và 22:55 kèm việc hôm nay chưa xong.</li>
+          <li><a href="../huong-dan/ky-nang/#ki-nang-giang-ho">Kĩ năng giang hồ</a>: 8 chiêu bị động học ở Vương Bộ Đầu (Chu), mọi phái, từ cấp 10. Mở ở <strong>Alt+R</strong>, tab Kĩ năng giang hồ. Mỗi chiêu 10 cấp, cộng Khí Huyết, Pháp Lực, Ngoại Công, Nội Công, Ngoại Kháng, Nội Kháng, Bạo Kích hoặc Né Tránh. Cấp chiêu tối đa bằng cấp nhân vật chia 5; học cấp n tốn 1.500 × n tiềm năng và 50.000 × n lượng, không tẩy. Lăng Ba Vi Bộ sẽ mở ở bản sau.</li>
+          <li><a href="../huong-dan/trang-bi/#phan-giai">Phân giải</a> ở thợ rèn: đồ Vàng ra 5 Thăng Phẩm Thạch (đồ dưới cấp 40 ra 3), đồ Xanh 30 % ra 1 Tái Tạo Thạch, đá ra đều khoá. Ngọc khảm về hành trang (khoá), sao đã rèn mất, phí 1.000 × cấp đồ. Không nhận set sư môn, đồ khoá giữ, đồ nhiệm vụ, đồ Trắng, đồ đang mặc.</li>
+          <li><a href="../huong-dan/tien-ich/#dong-ho">Đồng hồ máy chủ</a> ngay dưới bản đồ nhỏ: giờ máy chủ và thời gian còn lại tới lúc qua ngày (23:00), ví dụ "22:41 · qua ngày sau 19 phút". Rê chuột xem việc sẽ làm mới, việc tuần làm mới 23:00 Chủ nhật. Khung tin nhắc lúc 22:30 và 22:55 kèm việc hôm nay chưa xong.</li>
         
         </ul>
 
         <h3 class="g-bal">Cân bằng</h3>
         <ul>
-          <li><strong>Lật thẻ theo nhịp</strong> ở <a href="../huong-dan/#co-mo">Cổ Mộ</a> và <a href="../huong-dan/#thanh-kieu">Thành Kiều</a>: mỗi nhịp một bảng 16 thẻ mới chung cả đội, mỗi người lật 1 thẻ trong 15 giây (ai chưa lật thì được lật hộ), ngửa bảng 3 giây rồi sang nhịp sau. Thường 1 nhịp, Khó 2, Địa Ngục 3. Thẻ được nhiều đồ hơn để trung bình mỗi người nhận gần như cũ. Thành Kiều thôi chia mỗi người một bảng riêng. Bỏ hẳn lật trả tiền.</li>
-          <li>Khó và Địa Ngục (Cổ Mộ, Thành Kiều, truy bắt): mỗi viên thuốc máu (cả Tái Tạo Hoàn) hồi tối đa 25 % / 20 % Khí Huyết tối đa. <a href="../huong-dan/#vuong-bo-dau">Truy bắt</a> ngã 5 / 3 lần thì thua vòng, không hoàn vé (nhóm: cả đội cùng ngã, tính cả chuyến). Phản đồ không bị thú khiêu khích, đòn thú vào phản đồ còn một nửa.</li>
-          <li><a href="../huong-dan/#cach-hoc">Chiêu nhánh cấp 40</a> bảy phái hồi 10 giây (đánh một mục tiêu) hoặc 12 giây (đánh vùng), Cam Lộ Trì 15 giây, trước 20 tới 30 giây. Mỗi lần tung còn 0,9 lần sát thương cũ, tốn một nửa. Tế Ma Vương, Bí Sát giữ nguyên. Lôi Động Cửu Thiên không tốn Bùa Giấy; Thực Giáp trúng rút 0,5 giây hồi chiêu Lôi Động, tối đa 4 giây mỗi lần hồi chiêu (trước 1 giây, không giới hạn).</li>
-          <li><a href="../huong-dan/#nang-set">Nâng set sư môn lên bậc 2</a> tốn thêm 200.000 lượng mỗi lần thử, trượt cũng mất. Chỉ số gốc của set sư môn mọi bậc giảm khoảng 6 % (hệ số phẩm Tím 1,6 xuống 1,5).</li>
+          <li><strong>Lật thẻ theo nhịp</strong> ở <a href="../huong-dan/pho-ban/#co-mo">Cổ Mộ</a> và <a href="../huong-dan/pho-ban/#thanh-kieu">Thành Kiều</a>: mỗi nhịp một bảng 16 thẻ mới chung cả đội, mỗi người lật 1 thẻ trong 15 giây (ai chưa lật thì được lật hộ), ngửa bảng 3 giây rồi sang nhịp sau. Thường 1 nhịp, Khó 2, Địa Ngục 3. Thẻ được nhiều đồ hơn để trung bình mỗi người nhận gần như cũ. Thành Kiều thôi chia mỗi người một bảng riêng. Bỏ hẳn lật trả tiền.</li>
+          <li>Khó và Địa Ngục (Cổ Mộ, Thành Kiều, truy bắt): mỗi viên thuốc máu (cả Tái Tạo Hoàn) hồi tối đa 25 % / 20 % Khí Huyết tối đa. <a href="../huong-dan/hang-ngay/#vuong-bo-dau">Truy bắt</a> ngã 5 / 3 lần thì thua vòng, không hoàn vé (nhóm: cả đội cùng ngã, tính cả chuyến). Phản đồ không bị thú khiêu khích, đòn thú vào phản đồ còn một nửa.</li>
+          <li><a href="../huong-dan/ky-nang/#cach-hoc">Chiêu nhánh cấp 40</a> bảy phái hồi 10 giây (đánh một mục tiêu) hoặc 12 giây (đánh vùng), Cam Lộ Trì 15 giây, trước 20 tới 30 giây. Mỗi lần tung còn 0,9 lần sát thương cũ, tốn một nửa. Tế Ma Vương, Bí Sát giữ nguyên. Lôi Động Cửu Thiên không tốn Bùa Giấy; Thực Giáp trúng rút 0,5 giây hồi chiêu Lôi Động, tối đa 4 giây mỗi lần hồi chiêu (trước 1 giây, không giới hạn).</li>
+          <li><a href="../huong-dan/pho-ban/#nang-set">Nâng set sư môn lên bậc 2</a> tốn thêm 200.000 lượng mỗi lần thử, trượt cũng mất. Chỉ số gốc của set sư môn mọi bậc giảm khoảng 6 % (hệ số phẩm Tím 1,6 xuống 1,5).</li>
           <li>Đồ Vàng có <strong>3 lỗ khảm</strong> (trước 2), đồ Vàng đang có cũng tự thêm lỗ.</li>
         
           <li><strong>Nhịp ra chiêu nhanh gấp đôi</strong> (0,5 giây thay 1 giây), sát thương mỗi chiêu giảm nhẹ để tổng sát thương giữ nguyên.</li>
@@ -121,7 +157,7 @@
           <li>Ngư Ông ngồi sát bờ, quay mặt ra hồ; chữ "Đang câu" hiện dưới chân thay vì chen giữa tên và thanh máu.</li>
           <li>Hàng nút, thanh máu và các nút tròn canh thẳng hàng, màu icon dịu hơn.</li>
         
-          <li><a href="../huong-dan/#cau-ca">Câu cá</a>: trên máy chủ mỗi bản đồ chỉ một người câu được cá, người khác ngồi mãi không giật cần. Nay ai ngồi câu cũng được.</li>
+          <li><a href="../huong-dan/hang-ngay/#cau-ca">Câu cá</a>: trên máy chủ mỗi bản đồ chỉ một người câu được cá, người khác ngồi mãi không giật cần. Nay ai ngồi câu cũng được.</li>
         
         </ul>
       </article>
@@ -143,15 +179,15 @@
 
         <h3 class="g-new">Tính năng mới</h3>
         <ul>
-          <li><a href="../huong-dan/#trom-bao">Trộm Bảo Phi Tặc</a>: mỗi đầu giờ 5 con hiện ở 5 bãi luyện cấp 10 tới 40, phút 55 có báo. Khiêu chiến thì nó hoá đúng cấp bạn; ai ra đòn cuối thì người đó và cả đội cùng bản đồ nhận thưởng: tiền, thuốc, kinh nghiệm bằng 10 con quái và một món quý (Tinh Thạch, Đoạn Thạch, đồ Xanh, Tử Sâm Đơn, Thăng Phẩm, pháp bảo). 10 con mỗi ngày. Bảo Điển có tab Trộm Bảo xem con nào còn.</li>
-          <li><a href="../huong-dan/#bang-huu">Bằng Hữu thêm tab Giang Hồ</a>: xem mọi người đang chơi (người cùng cấp xếp trước, kèm bản đồ họ đang đứng), tìm theo tên, bấm Kết bạn ngay trong danh sách. Mời kết bạn <strong>không cần đứng cùng bản đồ</strong> nữa. Tab Hiện tại có nút <strong>Mời nhóm</strong>: bằng hữu mời nhau vào nhóm dù đang ở bản đồ khác (trừ khi một bên đang trong phó bản).</li>
-          <li><a href="../huong-dan/#tang-qua">Tặng quà (Alt+G)</a> như lệnh "Cho" của bản gốc: bấm Alt+G ra con trỏ bàn tay, bấm vào người chơi để mở cửa sổ tặng, đặt tối đa 6 món và ngân lượng (tối đa 500 triệu mỗi lần). Người nhận không cần xác nhận. Cả hai từ cấp 20, đứng gần nhau. Menu chuột phải lên người chơi cũng có mục Tặng.</li>
-          <li><a href="../huong-dan/#bua-may-man">Bùa May Mắn</a>: tick ở thẻ Nâng sao hoặc Hợp thành của thợ rèn, tỉ lệ thành công tăng thêm 10 % của chính nó (lên 10 sao 10 % thành 11 %, lên 2 sao 90 % thành 99 %, ghép Đoạn Thạch 85 % thành 93 %). Mỗi lần mất 1 lá, thành hay xịt. Dùng chung với Bùa Ma Thuật được. Rơi ở bảng thẻ Cổ Mộ Địa Ngục.</li>
+          <li><a href="../huong-dan/hang-ngay/#trom-bao">Trộm Bảo Phi Tặc</a>: mỗi đầu giờ 5 con hiện ở 5 bãi luyện cấp 10 tới 40, phút 55 có báo. Khiêu chiến thì nó hoá đúng cấp bạn; ai ra đòn cuối thì người đó và cả đội cùng bản đồ nhận thưởng: tiền, thuốc, kinh nghiệm bằng 10 con quái và một món quý (Tinh Thạch, Đoạn Thạch, đồ Xanh, Tử Sâm Đơn, Thăng Phẩm, pháp bảo). 10 con mỗi ngày. Bảo Điển có tab Trộm Bảo xem con nào còn.</li>
+          <li><a href="../huong-dan/giao-dich-cong-dong/#bang-huu">Bằng Hữu thêm tab Giang Hồ</a>: xem mọi người đang chơi (người cùng cấp xếp trước, kèm bản đồ họ đang đứng), tìm theo tên, bấm Kết bạn ngay trong danh sách. Mời kết bạn <strong>không cần đứng cùng bản đồ</strong> nữa. Tab Hiện tại có nút <strong>Mời nhóm</strong>: bằng hữu mời nhau vào nhóm dù đang ở bản đồ khác (trừ khi một bên đang trong phó bản).</li>
+          <li><a href="../huong-dan/giao-dich-cong-dong/#tang-qua">Tặng quà (Alt+G)</a> như lệnh "Cho" của bản gốc: bấm Alt+G ra con trỏ bàn tay, bấm vào người chơi để mở cửa sổ tặng, đặt tối đa 6 món và ngân lượng (tối đa 500 triệu mỗi lần). Người nhận không cần xác nhận. Cả hai từ cấp 20, đứng gần nhau. Menu chuột phải lên người chơi cũng có mục Tặng.</li>
+          <li><a href="../huong-dan/trang-bi/#bua-may-man">Bùa May Mắn</a>: tick ở thẻ Nâng sao hoặc Hợp thành của thợ rèn, tỉ lệ thành công tăng thêm 10 % của chính nó (lên 10 sao 10 % thành 11 %, lên 2 sao 90 % thành 99 %, ghép Đoạn Thạch 85 % thành 93 %). Mỗi lần mất 1 lá, thành hay xịt. Dùng chung với Bùa Ma Thuật được. Rơi ở bảng thẻ Cổ Mộ Địa Ngục.</li>
         </ul>
 
         <h3 class="g-bal">Cân bằng</h3>
         <ul>
-          <li><a href="../huong-dan/#nang-sao">Nâng sao trang bị</a> dễ hơn: lên 1 sao 100 %, mỗi sao sau bớt 10 % (lên 2 sao 90 %, lên 5 sao 60 %, lên 10 sao 10 %). Trước đây 100 / 80 / 60 / 45 / 30 / 20 / 12 / 8 / 4 / 2 %. Xịt vẫn tụt 1 sao, đá và ngân lượng vẫn mất như cũ. Trung bình cả 0 lên 10 sao khoảng 1.200 lần rèn, trước là hàng triệu lần.</li>
+          <li><a href="../huong-dan/trang-bi/#nang-sao">Nâng sao trang bị</a> dễ hơn: lên 1 sao 100 %, mỗi sao sau bớt 10 % (lên 2 sao 90 %, lên 5 sao 60 %, lên 10 sao 10 %). Trước đây 100 / 80 / 60 / 45 / 30 / 20 / 12 / 8 / 4 / 2 %. Xịt vẫn tụt 1 sao, đá và ngân lượng vẫn mất như cũ. Trung bình cả 0 lên 10 sao khoảng 1.200 lần rèn, trước là hàng triệu lần.</li>
           <li>Bảng thẻ Cổ Mộ Địa Ngục: thêm 1 thẻ Bùa May Mắn, Thẻ Thần Thú còn 1 thẻ.</li>
           <li>Launcher có nút <strong>Trang chủ</strong> cạnh nút cộng đồng, mở thẳng trang này.</li>
         </ul>
@@ -191,9 +227,9 @@
           <li><strong>Chiến Quốc Lệnh</strong>: dùng thì nhân đôi kinh nghiệm đánh quái thêm 60 phút, chỉ tính lúc đang đánh, tối đa 25 lần mỗi tuần. Có ở quà điểm danh và ở Thần Tiên Gia Gia (mỗi ngày vắng một cái).</li>
           <li><strong>Điểm danh bù, quà hồi quy</strong>: bù ngày lỡ (tối đa 2 lần mỗi vòng 7 ngày). Vắng từ 7 ngày quay lại có quà hồi quy (Phi Hành Phù, Sơ Cấp Đoạn Thạch, thuốc) và bảng "Có gì mới".</li>
           <li><strong>Kêu gọi viện trợ</strong>: ở Vương Bộ Đầu, Cổ Mộ Xa Phu, Tả Khâu Minh có dòng gửi lời gọi đồng đội lên kênh Thế Giới, miễn phí. Bảng Hoạt động ghi số phút ước cho từng việc.</li>
-          <li><a href="../huong-dan/#cau-ca">Câu cá ở Ngư Ông</a> (thành Chu): từ cấp 20, ngồi câu 60 giây một lần, 240 lần mỗi ngày. Ngư Điểm đổi Thăng Phẩm, Tái Tạo, Thú Hồn, món cá hồi máu và thú cưỡi Cá Voi Đom Đóm.</li>
-          <li><a href="../huong-dan/#bua-ma-thuat">Bùa Ma Thuật</a>: tick khi nâng sao, xịt thì giữ nguyên sao, mỗi lần rèn mất một lá. Rơi ở bảng thẻ Cổ Mộ Địa Ngục.</li>
-          <li><a href="../huong-dan/#tiem-do">Tiệm Vũ Khí, Trang Phục, Trang Sức</a> mở ở Chu và Sở, bán đồ trắng như bản gốc.</li>
+          <li><a href="../huong-dan/hang-ngay/#cau-ca">Câu cá ở Ngư Ông</a> (thành Chu): từ cấp 20, ngồi câu 60 giây một lần, 240 lần mỗi ngày. Ngư Điểm đổi Thăng Phẩm, Tái Tạo, Thú Hồn, món cá hồi máu và thú cưỡi Cá Voi Đom Đóm.</li>
+          <li><a href="../huong-dan/trang-bi/#bua-ma-thuat">Bùa Ma Thuật</a>: tick khi nâng sao, xịt thì giữ nguyên sao, mỗi lần rèn mất một lá. Rơi ở bảng thẻ Cổ Mộ Địa Ngục.</li>
+          <li><a href="../huong-dan/tien-ich/#tiem-do">Tiệm Vũ Khí, Trang Phục, Trang Sức</a> mở ở Chu và Sở, bán đồ trắng như bản gốc.</li>
           <li>Nội tại môn phái hiện ở bảng chỉ số nhân vật (Alt+W). Phi Hành Phù kéo vào ô phím được.</li>
           <li>Mã quà <code>welcome</code> đổi quà: 50 Thẻ Lăng Ba Vi Bộ, 2 Sơ Cấp Đoạn Thạch, 20 Hành Quân Tán, 30 Phi Hành Phù và 10.000 lượng, mỗi nhân vật một lần (ai đã nhận mã cũ thì không nhận lại). Mã <code>welcome2</code> ngừng.</li>
         </ul>

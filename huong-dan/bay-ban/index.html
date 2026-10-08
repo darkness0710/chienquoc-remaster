@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bày bán · Hướng dẫn Chiến Quốc Remaster</title>
+  <meta name="description" content="Mở sạp ở khu chợ Chu Quốc, mua hàng, chợ bot, kênh chat Giao Dịch.">
+  <meta name="theme-color" content="#0a1330">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/bay-ban/">
+  <meta property="og:title" content="Bày bán · Hướng dẫn Chiến Quốc Remaster">
+  <meta property="og:description" content="Mở sạp ở khu chợ Chu Quốc, mua hàng, chợ bot, kênh chat Giao Dịch.">
+  <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- Trang con hướng dẫn "Bày bán" (tách từ huong-dan/index.html cũ ngày 2026-10-08, nhánh web-5.0). Nguồn số liệu ghi trong
+     comment trên từng mục. Thêm / sửa mục: README.md §Hướng dẫn. -->
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="brand" href="../../" aria-label="Chiến Quốc Remaster, về trang chủ">
+      <img src="../../assets/favicon.svg" alt="" width="32" height="32">
+      <span>Chiến Quốc <em>Remaster</em></span>
+    </a>
+    <nav class="bar__nav">
+      <a class="bar__link" href="../" aria-current="page">Hướng dẫn</a>
+      <a class="bar__link" href="../../phien-ban/">Phiên bản</a>
+      <a class="btn btn--gold btn--sm" href="../../#cai-dat">Tải game</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="ghero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Đường dẫn"><a href="../">Hướng dẫn</a><span aria-hidden="true">/</span><span>Bày bán</span></nav>
+      <div class="ghero__row">
+        <span class="ghero__icon"><svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l2-5h14l2 5M3 9h18v1.5a3 3 0 01-6 0 3 3 0 01-6 0 3 3 0 01-6 0zM5 13v8h14v-8M10 21v-4h4v4"/></svg></span>
+        <div>
+          <h1 class="ghero__title">Bày bán <span class="v5tag v5tag--lg">Bản 5.0</span></h1>
+          <p class="ghero__lead">Mở sạp ở khu chợ Chu Quốc như bản gốc để bán đồ cho người chơi khác; chợ bot lúc nào cũng có hàng.</p>
+        </div>
+      </div>
+      <div class="v5note v5note--page"><p><span class="v5tag">Bản 5.0</span> Tính năng của bản 5.0, <strong>sắp ra mắt</strong> (máy chủ đang chạy bản 4.2). Ảnh chụp từ bản thử, số liệu có thể còn chỉnh trước khi phát.</p></div>
+    </div>
+  </section>
+
+  <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
+      <a class="is-v5" href="#bay-sap">Bày sạp</a>
+      <a class="is-v5" href="#mua-hang">Mua hàng, chợ bot</a>
+      <a class="is-v5" href="#kenh-giao-dich">Kênh Giao Dịch</a>
+    </nav></div>
+
+  <div class="wrap gbody">
+    <div class="guide">
+
+<!-- Bày bán: repo game documents/tong-quan/63-ke-hoach-bay-ban.md §1 (cấp 20, 12 dòng, giá 1 tới 50.000.000, thuế 5 %, tên 20 kí tự,
+     đóng sạp khi dời ô / đổi map / trọng thương / thoát), 37 §4.56. Ảnh: build/stall/seller.png repo game (--demo-stall=seller),
+     cắt (25, 130)-(1000, 1062). -->
+<article class="gcard gpanel" id="bay-sap">
+  <div class="ghead">
+    <h3>Bày sạp ở Chu Quốc</h3>
+    <ul class="facts">
+      <li class="v5">Bản 5.0</li>
+      <li>Từ cấp 20</li>
+      <li>12 ô hàng</li>
+      <li>Thuế 5 %</li>
+    </ul>
+  </div>
+  <figure class="gshot">
+    <img src="../../assets/img/huong-dan/bay-ban.jpg" width="760" height="726" loading="lazy" alt="Bảng Bày Bán: tên sạp, 4 món đang bày kèm giá, sổ bán ghi người mua, nút Thu sạp; bên cạnh biển tên sạp trên đầu nhân vật và sạp của người khác">
+    <figcaption>Bảng sạp của mình và biển tên trên đầu (ảnh bản thử 5.0)</figcaption>
+  </figure>
+  <div class="gtext">
+    <ul>
+      <li>Mở sạp bằng kĩ năng cơ bản <strong>Bày Bán</strong> (<kbd>Alt+R</kbd>, tab Kĩ năng cơ bản, kéo ra ô phím được). Chỉ bày được ở <strong>khu sạp trong thành Chu</strong>, như bản gốc, cách sạp khác hơn 2 ô.</li>
+      <li>Kéo đồ từ hành trang vào ô sạp (hoặc Ctrl + chuột phải ô hành trang), đặt giá mỗi cái từ 1 tới 50.000.000 lượng. Đồ chồng thì người mua mua lẻ được. Chuột phải ô sạp để thu về.</li>
+      <li>Tên sạp mặc định "Tiệm tạp hóa", đổi được, tối đa 20 kí tự. Biển tên hiện trên đầu bạn, người khác bấm vào là xem sạp.</li>
+      <li>Không bày được: đồ khoá, đồ phong ấn, set sư môn, đồ không cho giao dịch. Chưa bán được bảo thú.</li>
+      <li>Đang bày thì đứng yên: không đi, không đánh, không dùng đồ, không giao dịch. Sạp tự đóng khi bấm Thu sạp, đổi bản đồ, bị dịch chuyển, trọng thương, thoát game hay mất mạng. Không bán khi rời mạng.</li>
+      <li>Mỗi lần có người mua: dòng báo "X mua N món, nhận Y lượng, thuế Z". Sổ bán giữ 30 dòng gần nhất. Thuế 5 % trừ vào tiền bán.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- Mua + chợ bot: 63 §1 (người mua cùng map, trong tầm nhìn, so giá đã xem), §8 (3-5 sạp, 4-8 món, làm mới 30-60 phút, giá x10,
+     đồ Xanh x2, mua của bot không cần cấp). Ảnh: build/stall/buyer.png repo game (--demo-stall=buyer). -->
+<article class="gcard gpanel" id="mua-hang">
+  <div class="ghead">
+    <h3>Mua hàng, chợ bot</h3>
+    <ul class="facts">
+      <li>Người mua từ cấp 20</li>
+      <li>Chợ bot không cần cấp</li>
+    </ul>
+  </div>
+  <figure class="gshot">
+    <img src="../../assets/img/huong-dan/bay-ban-mua.jpg" width="760" height="493" loading="lazy" alt="Bảng mua ở sạp của MinhTam: Khoai Lang Nướng, Kim Ngân Hoa, Chính Khí Tán, Trái Táo kèm giá và nút Mua">
+    <figcaption>Bấm biển tên sạp để xem hàng (ảnh bản thử 5.0)</figcaption>
+  </figure>
+  <div class="gtext">
+    <ul>
+      <li>Bấm biển tên sạp (hoặc Ctrl + chuột phải người bán, chọn Xem sạp) khi cùng bản đồ và trong tầm nhìn. Hành trang phải đủ chỗ cho số món mua.</li>
+      <li>Máy chủ giữ đúng giá bạn đã xem: người bán đổi giá hay đổi món thì lệnh mua bị từ chối, không mất tiền oan.</li>
+    </ul>
+    <h4>Chợ bot</h4>
+    <ul>
+      <li>Khu sạp Chu luôn có 3 tới 5 sạp của người bán ảo, mỗi sạp 4 tới 8 món: nguyên liệu (quặng, thỏi, thảo dược), thuốc và đồ ăn, trang bị môn phái cấp 10 tới 50 (Trắng, Xanh).</li>
+      <li>Hàng có hạn, bán hết thì chờ lượt sau; cả chợ làm mới mỗi 30 tới 60 phút.</li>
+      <li>Giá gấp 10 lần giá tiệm, đồ Xanh gấp đôi nữa: tiện khi cần gấp, không phải chỗ mua rẻ.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- Kênh Giao Dịch: 63 §1 (/g, chỉ khi đang mở sạp, cấp 15, 200 lượng mỗi câu, cách 3 s, offline từ chối). -->
+<article class="gcard" id="kenh-giao-dich">
+  <h3>Kênh chat Giao Dịch</h3>
+  <ul class="facts">
+    <li>Chỉ khi đang mở sạp</li>
+    <li>Từ cấp 15</li>
+    <li>200 lượng mỗi câu</li>
+  </ul>
+  <ul>
+    <li>Gõ <code>/g</code> trước câu hoặc chọn kênh Giao Dịch. Mọi người đang chơi đều nghe, như kênh Thế Giới.</li>
+    <li>Hai câu cách nhau ít nhất 3 giây. Chỉ có khi chơi online.</li>
+  </ul>
+</article>
+
+    </div>
+    <nav class="pnav" aria-label="Chủ đề khác"><a class="pnav__prev" href="../bang-hoi/"><span>Trước</span><strong>Bang hội</strong></a><a class="pnav__all" href="../">Mục lục hướng dẫn</a><a class="pnav__next" href="../giao-dich-cong-dong/"><span>Tiếp</span><strong>Giao lưu và cộng đồng</strong></a></nav>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="brand" href="../../"><img src="../../assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
+      <p class="foot__small">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+      <ul class="foot__soc" aria-label="Cộng đồng">
+        <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener" aria-label="Nhóm Facebook"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v7h4v-7h3l1-4h-4V8.6c0-.4.3-.6 1-.6z"/></svg></a></li>
+        <li><a href="https://zalo.me/g/myanfowt9xdyzkwyo1mq" target="_blank" rel="noopener" aria-label="Nhóm Zalo"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5L5 21l3.6-1.8c1.1.3 2.2.4 3.4.4 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/><path class="soc__cut" d="M8.5 9h6.5l-6.5 6h6.5"/></svg></a></li>
+        <li><a href="https://discord.gg/RQDAqRUQ5X" target="_blank" rel="noopener" aria-label="Discord"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 5.6A16 16 0 0015.4 4.4l-.5 1a14.6 14.6 0 00-5.8 0l-.5-1a16 16 0 00-3.9 1.2C2.2 9.3 1.5 13 1.8 16.6a16 16 0 004.8 2.4l1-1.6c-.6-.2-1.1-.5-1.6-.8l.4-.3a11.3 11.3 0 009.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 004.8-2.4c.4-4.2-.6-7.9-2.9-11zM8.7 14.4c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9zm6.6 0c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9z"/></svg></a></li>
+      </ul>
+    </div>
+    <ul class="foot__links">
+      <li><a href="../../">Trang chủ: tải game</a></li>
+      <li><a href="../../huong-dan/">Hướng dẫn: mục lục mọi chủ đề</a></li>
+      <li><a href="../../phien-ban/">Phiên bản: mỗi bản có gì mới</a></li>
+      <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook: góp ý, báo lỗi</a></li>
+    </ul>
+    <p class="foot__small foot__legal">
+      Dự án phục dựng phi thương mại của người hâm mộ, làm để học tập và lưu giữ kí ức.
+      Tên gọi, hình ảnh và tài nguyên gốc của Chiến Quốc thuộc bản quyền của chủ sở hữu.
+    </p>
+  </div>
+</footer>
+
+<script src="../../js/guide.js" defer></script>
+</body>
+</html>

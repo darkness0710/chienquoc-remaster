@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kĩ năng · Hướng dẫn Chiến Quốc Remaster</title>
+  <meta name="description" content="Cách học chiêu, chiêu mới cấp 45 và 50, kĩ năng giang hồ, Tu Vị.">
+  <meta name="theme-color" content="#0a1330">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/ky-nang/">
+  <meta property="og:title" content="Kĩ năng · Hướng dẫn Chiến Quốc Remaster">
+  <meta property="og:description" content="Cách học chiêu, chiêu mới cấp 45 và 50, kĩ năng giang hồ, Tu Vị.">
+  <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- Trang con hướng dẫn "Kĩ năng" (tách từ huong-dan/index.html cũ ngày 2026-10-08, nhánh web-5.0). Nguồn số liệu ghi trong
+     comment trên từng mục. Thêm / sửa mục: README.md §Hướng dẫn. -->
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="brand" href="../../" aria-label="Chiến Quốc Remaster, về trang chủ">
+      <img src="../../assets/favicon.svg" alt="" width="32" height="32">
+      <span>Chiến Quốc <em>Remaster</em></span>
+    </a>
+    <nav class="bar__nav">
+      <a class="bar__link" href="../" aria-current="page">Hướng dẫn</a>
+      <a class="bar__link" href="../../phien-ban/">Phiên bản</a>
+      <a class="btn btn--gold btn--sm" href="../../#cai-dat">Tải game</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="ghero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Đường dẫn"><a href="../">Hướng dẫn</a><span aria-hidden="true">/</span><span>Kĩ năng</span></nav>
+      <div class="ghero__row">
+        <span class="ghero__icon"><svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.5 5.5L20 11l-5.5 2.5L12 19l-2.5-5.5L4 11l5.5-2.5z"/></svg></span>
+        <div>
+          <h1 class="ghero__title">Kĩ năng</h1>
+          <p class="ghero__lead">Cây kĩ năng môn phái, chiêu mới cấp 45 và 50, kĩ năng giang hồ cho mọi phái và Tu Vị cộng dồn theo giờ chơi.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
+      <a class="is-v5" href="#cach-hoc">Cách học</a>
+      <a class="is-v5" href="#chieu-45-50">Chiêu cấp 45, 50</a>
+      <a href="#ki-nang-giang-ho">Giang hồ</a>
+      <a href="#tu-vi">Tu Vị</a>
+    </nav></div>
+
+  <div class="wrap gbody">
+    <div class="guide">
+
+<article class="gcard gpanel" id="cach-hoc">
+          <div class="ghead">
+            <h3>Cách học kĩ năng</h3>
+            <ul class="facts">
+              <li><kbd>Alt+R</kbd> xem cây kĩ năng</li>
+              <li>Học ở sư phụ</li>
+              <li>1 điểm mỗi cấp</li>
+            </ul>
+          </div>
+          <figure class="gshot">
+            <img src="../../assets/img/huong-dan/ki-nang.jpg" width="760" height="492" loading="lazy" alt="Cây kĩ năng Cấm Vệ Quân: hai nhánh Thương và Côn, mỗi hàng chọn một chiêu, chiêu chung ở dưới, khung chi tiết chiêu bên phải">
+            <figcaption>Mỗi hàng chọn một trong hai chiêu; bấm chiêu để xem chi tiết</figcaption>
+          </figure>
+          <div class="gtext">
+            <ul>
+              <li>Cây có <strong>5 hàng</strong>, mỗi hàng chọn chiêu nhánh trái hoặc nhánh phải, trộn hai nhánh được. Học hàng sau cần có chiêu ở hàng trước.</li>
+              <li>Thêm <strong>3 chiêu chung</strong> (mở ở cấp 12, 25, 35) và <strong>2 nội tại</strong> tự mạnh lên theo tổng cấp chiêu của nhánh.</li>
+              <li>Cấp 1 của mọi chiêu chỉ tốn ngân lượng, không tốn điểm. Cấp chiêu tối đa tăng theo cấp nhân vật.</li>
+              <li>Kéo chiêu xuống ô phím để dùng.</li>
+              <!-- stat_defs.json sect_mods, StatCard.passive_rows (nhật ký game 2026-10-05 (257)) -->
+              <li>Bảng nhân vật (<kbd>Alt+W</kbd>) có nhóm <strong>Nội tại môn phái</strong> cuối thẻ chỉ số: xem nội tại đang cộng bao nhiêu. Nhiều nội tại chỉ tính lúc đánh (vd tăng sát thương theo %) nên các dòng chỉ số khác không đổi số, đừng lo.</li>
+              <li><strong>Tẩy điểm</strong> ở sư phụ: lần đầu miễn phí, sau đó 100.000 mỗi lần.</li>
+            </ul>
+            <!-- Chiêu nhánh cấp 40 (bản kế tiếp): repo game sect_skills.json master 29821792 (text.cd), so với tag 4.1.0;
+                 tài liệu 37 §4.45, 28, nhật ký (295). -->
+            <h4>Chiêu cấp 40</h4>
+            <ul>
+              <li>Chiêu nhánh cấp 40 của bảy phái hồi nhanh hơn nhiều: <strong>10 giây</strong> với chiêu đánh một mục tiêu, <strong>12 giây</strong> với chiêu đánh vùng, Cam Lộ Trì <strong>15 giây</strong> (trước 20 tới 30 giây).</li>
+              <li>Bù lại mỗi lần tung còn 0,9 lần sát thương cũ, tốn một nửa nguyên khí hoặc pháp lực, khống chế mỗi đợt ngắn một nửa, Cam Lộ Trì hồi một nửa. Tế Ma Vương và Bí Sát giữ nguyên.</li>
+            </ul>
+            <p class="tip">Chiêu trấn phái đã hiện trong cây nhưng chưa mở ở bản này.</p>
+          <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Cây kĩ năng thêm hàng 6 (cấp 45) và hàng 7 (cấp 50): xem <a href="#chieu-45-50">Chiêu cấp 45 và 50</a>.</p></div>
+</div>
+        </article>
+
+<!-- 28 chiêu cấp 45 / 50: repo game documents/tong-quan/61-chieu-cap-45-50.md §2b (tên cuối khi code), 37 §4.54, 62 (hàng 6 / 7 cần
+     25 / 35 điểm nhánh, trần nhánh 110). Số từng chiêu chưa ghi vì còn có thể chỉnh trước khi phát. -->
+<article class="gcard" id="chieu-45-50">
+  <h3>Chiêu cấp 45 và 50</h3>
+  <ul class="facts">
+    <li class="v5">Bản 5.0</li>
+    <li>28 chiêu mới</li>
+    <li>Mỗi nhánh thêm 2 hàng</li>
+  </ul>
+  <ul>
+    <li>Mỗi nhánh của bảy phái thêm <strong>hàng 6 mở ở cấp 45</strong> và <strong>hàng 7 mở ở cấp 50</strong>. Mỗi phái 4 chiêu, cả game 28 chiêu, phần lớn là chiêu bản gốc (tên, hình chiêu quen thuộc).</li>
+    <li>Mỗi chiêu tối đa 5 cấp, 1 điểm mỗi cấp. Tổng điểm vẫn 150, mỗi nhánh vẫn tối đa 110 điểm <strong>tính cả hai hàng mới</strong>: nhánh đã gần đầy thì phải bớt điểm chiêu cũ để lên chiêu mới.</li>
+    <li>Mở chiêu cần đủ cấp nhân vật và đã dồn đủ điểm vào nhánh: hàng 6 cần <strong>25 điểm</strong>, hàng 7 cần <strong>35 điểm</strong> trong nhánh đó. Trộn đều hai nhánh thì khó mở hàng 7.</li>
+  </ul>
+  <div class="tbl tbl--wrap">
+    <table>
+      <thead><tr><th>Phái</th><th>Nhánh</th><th>Cấp 45</th><th>Cấp 50</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="2">Đào Hoa Nguyên</td><td>Thái Cổ Quyền</td><td>Ba Động Quyền</td><td>Không Thủ Nhập Bạch Nhẫn</td></tr>
+        <tr><td>Đào Hoa Hộ Thể</td><td>Trấn Cổ Thần Uy</td><td>Hộ Thể Kim Cang</td></tr>
+        <tr><td rowspan="2">Thục Sơn</td><td>Đao</td><td>Vân Vũ Tiêu Diêu</td><td>Phá Không Kích</td></tr>
+        <tr><td>Kiếm</td><td>Ngự Kiếm Thuật</td><td>Vạn Kiếm Quy Tông</td></tr>
+        <tr><td rowspan="2">Cấm Vệ Quân</td><td>Thương</td><td>Phi Long Tầm Châu</td><td>Ngũ Lôi Áp Đỉnh</td></tr>
+        <tr><td>Côn</td><td>Trường Giang Nộ Thủy</td><td>Kim Sư Bộ Giáp</td></tr>
+        <tr><td rowspan="2">Đường Môn</td><td>Ám Khí</td><td>Song Long Đoạt Châu</td><td>Hỗn Ma Độc</td></tr>
+        <tr><td>Ám Sát</td><td>Ôn Dịch Tán</td><td>Tích Độc</td></tr>
+        <tr><td rowspan="2">Mao Sơn</td><td>Thuận Thiên</td><td>Cương Thi Phù Pháp</td><td>Âm Binh Quá Cảnh</td></tr>
+        <tr><td>Nghịch Thiên</td><td>Mệnh Tế</td><td>Biến Thân Thuật</td></tr>
+        <tr><td rowspan="2">Côn Luân</td><td>Phù Chú</td><td>Hàn Băng Thuật</td><td>Phong Vũ Phá Địch</td></tr>
+        <tr><td>Trận Pháp</td><td>Khốn Ma Thuật</td><td>Vân Vũ Đao Chú</td></tr>
+        <tr><td rowspan="2">Vân Mộng Cốc</td><td>Y Tiên</td><td>Khiết Vân Quyết</td><td>Vô Đình Lưu Thuỷ</td></tr>
+        <tr><td>Phong Trận</td><td>Kỳ Môn Trận</td><td>Huyền Quang Thiểm Ảnh</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tip">Sát thương, hồi chiêu từng chiêu xem ngay trong game (<kbd>Alt+R</kbd>, bấm vào chiêu). Số liệu bản 5.0 còn có thể chỉnh trước khi phát.</p>
+</article>
+
+<!-- Kĩ năng giang hồ (bản kế tiếp): repo game godot/data/custom/jianghu_skills.json (rules per_char_level 5, min_char_level 10,
+             pot_per_level 1.500, cash_per_level 50.000, npc Vương Bộ Đầu 080, npc_range 6; skills[].per_level, max 10; active Lăng Ba Vi Bộ
+             locked_text "Sẽ mở ở bản sau"), gateway/jianghu_service.gd (dòng thoại "Học kĩ năng giang hồ" mở Alt+R tab giang hồ);
+             tài liệu 37 §4.41, 12 (Đợt cân bằng 2026-10-07), nhật ký (294). Ảnh: build/jianghu/learn.png repo game, cắt (110, 118)-(912, 1000). -->
+<article class="gcard gpanel" id="ki-nang-giang-ho">
+          <div class="ghead">
+            <h3>Kĩ năng giang hồ</h3>
+            <ul class="facts">
+              <li>Từ bản 4.2</li>
+              <li>Vương Bộ Đầu, Chu Quốc (313, 140)</li>
+              <li>8 chiêu bị động, 10 cấp</li>
+            </ul>
+          </div>
+          <figure class="gshot">
+            <img src="../../assets/img/huong-dan/giang-ho.jpg" width="760" height="836" loading="lazy" alt="Bảng kĩ năng, tab Kĩ năng giang hồ, mục Bị động: 8 chiêu, Cường Công cấp 8 trên 10, chi tiết chiêu kèm tiềm năng, ngân lượng cần và nút Học">
+            <figcaption><kbd>Alt+R</kbd>, tab Kĩ năng giang hồ, đứng cạnh Vương Bộ Đầu</figcaption>
+          </figure>
+          <div class="gtext">
+            <ul>
+              <li>Mọi phái đều học được, từ cấp 10. Nói với <strong>Vương Bộ Đầu</strong> chọn "Học kĩ năng giang hồ", hoặc đứng gần ông rồi mở <kbd>Alt+R</kbd>, tab <strong>Kĩ năng giang hồ</strong>, bấm chiêu, bấm <strong>Học</strong>.</li>
+              <li>Chiêu bị động, học xong là cộng thẳng vào chỉ số, không cần kéo ra ô phím.</li>
+              <li>Cấp chiêu tối đa bằng <strong>cấp nhân vật chia 5</strong>: cấp 10 học tới cấp 2, cấp 50 học đủ cấp 10.</li>
+              <li>Học cấp n tốn <strong>1.500 × n tiềm năng</strong> và <strong>50.000 × n lượng</strong>. Không tẩy, không hoàn lại.</li>
+            </ul>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Chiêu</th><th>Mỗi cấp</th><th>Cấp 10</th></tr></thead>
+                <tbody>
+                  <tr><td>Dưỡng Sinh Quyết</td><td>Khí Huyết tối đa +15</td><td>+150</td></tr>
+                  <tr><td>Hộ Tâm Quyết</td><td>Nội Kháng +7</td><td>+70</td></tr>
+                  <tr><td>Hộ Thể Công</td><td>Ngoại Kháng +7</td><td>+70</td></tr>
+                  <tr><td>Tụ Khí Quyết</td><td>Pháp Lực tối đa +20</td><td>+200</td></tr>
+                  <tr><td>Cường Công Quyết</td><td>Ngoại Công +4</td><td>+40</td></tr>
+                  <tr><td>Nội Kình Quyết</td><td>Nội Công +4</td><td>+40</td></tr>
+                  <tr><td>Phá Quân Quyết</td><td>Bạo Kích +0,4 %</td><td>+4 %</td></tr>
+                  <tr><td>Thân Pháp Quyết</td><td>Né Tránh đòn thường ngoại công +0,4 %</td><td>+4 %</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Cấp chiêu</th><th>Cần cấp</th><th>Tiềm năng</th><th>Ngân lượng</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>10</td><td>1.500</td><td>50.000</td></tr>
+                  <tr><td>2</td><td>10</td><td>3.000</td><td>100.000</td></tr>
+                  <tr><td>3</td><td>15</td><td>4.500</td><td>150.000</td></tr>
+                  <tr><td>4</td><td>20</td><td>6.000</td><td>200.000</td></tr>
+                  <tr><td>5</td><td>25</td><td>7.500</td><td>250.000</td></tr>
+                  <tr><td>6</td><td>30</td><td>9.000</td><td>300.000</td></tr>
+                  <tr><td>7</td><td>35</td><td>10.500</td><td>350.000</td></tr>
+                  <tr><td>8</td><td>40</td><td>12.000</td><td>400.000</td></tr>
+                  <tr><td>9</td><td>45</td><td>13.500</td><td>450.000</td></tr>
+                  <tr><td>10</td><td>50</td><td>15.000</td><td>500.000</td></tr>
+                  <tr><td>Cả 10 cấp</td><td></td><td>82.500</td><td>2.750.000</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="tip">Đủ cả 8 chiêu cấp 10 tốn 660.000 tiềm năng và 22 triệu lượng, nên dồn chiêu hợp lối đánh trước. Mục Chủ động có <strong>Lăng Ba Vi Bộ</strong> (chạy nhanh trong chốc lát), sẽ mở ở bản sau.</p>
+          </div>
+        </article>
+
+<!-- Tu Vị: repo game godot/data/custom/tu_vi.json (max_level 27, hours_step 1, spins_per_level 1, per_level hp 10 / ap 5 / cp 5),
+     tài liệu 50 §2. Bản 4.2: active_window_sec 300, daily_cap_sec 14400 (37 §4.39 CA4). Bản 5.0: cả hai = 0 (commit fcf1ac88). -->
+<article class="gcard" id="tu-vi">
+  <h3>Tu Vị</h3>
+  <ul class="facts">
+    <li>Cộng dồn giờ chơi</li>
+    <li>Tối đa bậc 27</li>
+    <li>Mỗi bậc thêm 1 lượt Bảo Điển</li>
+  </ul>
+  <ul>
+    <li>Thời gian đã vào nhân vật được cộng dồn mãi mãi, đủ giờ thì tự lên bậc Tu Vị, cả máy chủ cùng thấy thông báo.</li>
+    <li>Bậc L cần thêm L giờ: bậc 1 sau 1 giờ, bậc 3 sau 6 giờ, bậc 9 sau 45 giờ, bậc 27 sau 378 giờ.</li>
+    <li>Mỗi bậc cộng thẳng <strong>+10 Khí Huyết tối đa, +5 Ngoại Công, +5 Nội Công</strong> và <strong>1 lượt quay Chiến Quốc Bảo Điển</strong>.</li>
+    <li>Bản 4.2 chỉ đếm khi đang chơi thật (có thao tác trong 5 phút gần nhất), tối đa 4 giờ mỗi ngày.</li>
+  </ul>
+  <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Bỏ giới hạn 4 giờ mỗi ngày: mọi giây đã vào nhân vật đều được tính, kể cả lúc treo máy.</p></div>
+</article>
+
+    </div>
+    <nav class="pnav" aria-label="Chủ đề khác"><a class="pnav__prev" href="../mon-phai/"><span>Trước</span><strong>Bảy môn phái</strong></a><a class="pnav__all" href="../">Mục lục hướng dẫn</a><a class="pnav__next" href="../trang-bi/"><span>Tiếp</span><strong>Trang bị và rèn</strong></a></nav>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="brand" href="../../"><img src="../../assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
+      <p class="foot__small">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+      <ul class="foot__soc" aria-label="Cộng đồng">
+        <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener" aria-label="Nhóm Facebook"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v7h4v-7h3l1-4h-4V8.6c0-.4.3-.6 1-.6z"/></svg></a></li>
+        <li><a href="https://zalo.me/g/myanfowt9xdyzkwyo1mq" target="_blank" rel="noopener" aria-label="Nhóm Zalo"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5L5 21l3.6-1.8c1.1.3 2.2.4 3.4.4 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/><path class="soc__cut" d="M8.5 9h6.5l-6.5 6h6.5"/></svg></a></li>
+        <li><a href="https://discord.gg/RQDAqRUQ5X" target="_blank" rel="noopener" aria-label="Discord"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 5.6A16 16 0 0015.4 4.4l-.5 1a14.6 14.6 0 00-5.8 0l-.5-1a16 16 0 00-3.9 1.2C2.2 9.3 1.5 13 1.8 16.6a16 16 0 004.8 2.4l1-1.6c-.6-.2-1.1-.5-1.6-.8l.4-.3a11.3 11.3 0 009.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 004.8-2.4c.4-4.2-.6-7.9-2.9-11zM8.7 14.4c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9zm6.6 0c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9z"/></svg></a></li>
+      </ul>
+    </div>
+    <ul class="foot__links">
+      <li><a href="../../">Trang chủ: tải game</a></li>
+      <li><a href="../../huong-dan/">Hướng dẫn: mục lục mọi chủ đề</a></li>
+      <li><a href="../../phien-ban/">Phiên bản: mỗi bản có gì mới</a></li>
+      <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook: góp ý, báo lỗi</a></li>
+    </ul>
+    <p class="foot__small foot__legal">
+      Dự án phục dựng phi thương mại của người hâm mộ, làm để học tập và lưu giữ kí ức.
+      Tên gọi, hình ảnh và tài nguyên gốc của Chiến Quốc thuộc bản quyền của chủ sở hữu.
+    </p>
+  </div>
+</footer>
+
+<script src="../../js/guide.js" defer></script>
+</body>
+</html>

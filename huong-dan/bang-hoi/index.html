@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bang hội · Hướng dẫn Chiến Quốc Remaster</title>
+  <meta name="description" content="Lập bang, chức vụ, quỹ và cống hiến, nhiệm vụ bang, kĩ năng bang Tiện ích và Cường Hoá.">
+  <meta name="theme-color" content="#0a1330">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/bang-hoi/">
+  <meta property="og:title" content="Bang hội · Hướng dẫn Chiến Quốc Remaster">
+  <meta property="og:description" content="Lập bang, chức vụ, quỹ và cống hiến, nhiệm vụ bang, kĩ năng bang Tiện ích và Cường Hoá.">
+  <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- Trang con hướng dẫn "Bang hội" (tách từ huong-dan/index.html cũ ngày 2026-10-08, nhánh web-5.0). Nguồn số liệu ghi trong
+     comment trên từng mục. Thêm / sửa mục: README.md §Hướng dẫn. -->
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="brand" href="../../" aria-label="Chiến Quốc Remaster, về trang chủ">
+      <img src="../../assets/favicon.svg" alt="" width="32" height="32">
+      <span>Chiến Quốc <em>Remaster</em></span>
+    </a>
+    <nav class="bar__nav">
+      <a class="bar__link" href="../" aria-current="page">Hướng dẫn</a>
+      <a class="bar__link" href="../../phien-ban/">Phiên bản</a>
+      <a class="btn btn--gold btn--sm" href="../../#cai-dat">Tải game</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="ghero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Đường dẫn"><a href="../">Hướng dẫn</a><span aria-hidden="true">/</span><span>Bang hội</span></nav>
+      <div class="ghero__row">
+        <span class="ghero__icon"><svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.6 8-8 9-4.4-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <div>
+          <h1 class="ghero__title">Bang hội <span class="v5tag v5tag--lg">Bản 5.0</span></h1>
+          <p class="ghero__lead">Lập bang cùng bằng hữu, làm nhiệm vụ bang mỗi ngày, góp quỹ và học kĩ năng bang.</p>
+        </div>
+      </div>
+      <div class="v5note v5note--page"><p><span class="v5tag">Bản 5.0</span> Tính năng của bản 5.0, <strong>sắp ra mắt</strong> (máy chủ đang chạy bản 4.2). Ảnh chụp từ bản thử, số liệu có thể còn chỉnh trước khi phát.</p></div>
+    </div>
+  </section>
+
+  <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
+      <a class="is-v5" href="#lap-bang">Lập bang</a>
+      <a class="is-v5" href="#nhiem-vu-bang">Nhiệm vụ bang</a>
+      <a class="is-v5" href="#ki-nang-bang">Kĩ năng bang</a>
+    </nav></div>
+
+  <div class="wrap gbody">
+    <div class="guide">
+
+<!-- Bang hội: repo game documents/tong-quan/60-ke-hoach-bang-hoi.md §2 (BG1), guild.json (found min_level 30, cost 500.000, founders 3,
+     name 2..12, join_min_level 10, max_members 200, vice 1, elder 4, invite 60 s), 37 §4.49. Tổng Quản ở Chu 080 (272, 160). -->
+<article class="gcard" id="lap-bang">
+  <h3>Lập bang, vào bang</h3>
+  <ul class="facts">
+    <li class="v5">Bản 5.0</li>
+    <li>Tổng Quản Bang Hội, Chu Quốc (272, 160)</li>
+    <li>Bảng bang hội <kbd>Alt+B</kbd></li>
+  </ul>
+  <h4>Lập bang</h4>
+  <ul>
+    <li>Bang Chủ từ <strong>cấp 30</strong>, nộp <strong>500.000 lượng</strong>.</li>
+    <li>Đi cùng tổ đội <strong>đủ 3 người</strong>, cùng đứng gần Tổng Quản. Cả ba chưa có bang, từ cấp 10.</li>
+    <li>Nói với Tổng Quản, chọn "Lập bang hội", đặt tên 2 tới 12 chữ (có dấu được), không trùng bang khác.</li>
+  </ul>
+  <h4>Vào bang, chức vụ</h4>
+  <ul>
+    <li>Chưa có bang thì <kbd>Alt+B</kbd> hiện danh sách bang để xin vào. Hoặc được người trong bang mời (chuột phải, Mời vào bang); lời mời hết hạn sau 60 giây. Mỗi bang tối đa 200 người.</li>
+    <li>Tên bang hiện dưới tên nhân vật. Kênh chat <strong>Bang</strong>: gõ <code>/b</code> trước câu hoặc chọn kênh Bang.</li>
+    <li>Rời bang lúc nào cũng được. Bang Chủ phải nhường chức trước; còn một mình thì rời là giải tán bang.</li>
+  </ul>
+  <div class="tbl tbl--wrap">
+    <table>
+      <thead><tr><th>Việc</th><th>Ai làm được</th></tr></thead>
+      <tbody>
+        <tr><td>Mời người, duyệt đơn xin vào</td><td>Trưởng Lão trở lên</td></tr>
+        <tr><td>Mời ra khỏi bang</td><td>Người có chức cao hơn</td></tr>
+        <tr><td>Đổi chức (1 Phó Bang Chủ, 4 Trưởng Lão)</td><td>Phó Bang Chủ trở lên, chỉ đặt chức thấp hơn mình</td></tr>
+        <tr><td>Nhường chức Bang Chủ</td><td>Bang Chủ</td></tr>
+        <tr><td>Mở hạng Cường Hoá</td><td>Bang Chủ, Phó Bang Chủ</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tip">Bản 5.0 chưa có lãnh địa bang, kho bang, boss bang, bang chiến.</p>
+</article>
+
+<!-- Quỹ + nhiệm vụ bang: 60 §3 (BG2), guild.json donate 10.000 = 1, quest daily limit 10, bank 10 / ngày, cap 30, đổi việc 60 s;
+     cống hiến 1 + o x 2 / 9 (18 / ngày); ngân lượng x10 (cấp 40 ~79.000 / ngày). Ảnh: build/bang/guild_quest.png repo game. -->
+<article class="gcard gpanel" id="nhiem-vu-bang">
+  <div class="ghead">
+    <h3>Quỹ bang, nhiệm vụ bang</h3>
+    <ul class="facts">
+      <li>10 việc mỗi ngày</li>
+      <li>Nhận, trả ở Tổng Quản</li>
+    </ul>
+  </div>
+  <figure class="gshot">
+    <img src="../../assets/img/huong-dan/bang-nhiem-vu.jpg" width="760" height="307" loading="lazy" alt="Bảng Bang Hội, tab Nhiệm vụ: việc bang 3 trên 10, trừ hại ở Xích Bích, hạ 15 Thuỷ Tặc, thưởng kinh nghiệm, ngân lượng, 1 cống hiến">
+    <figcaption><kbd>Alt+B</kbd>, tab Nhiệm vụ (ảnh bản thử 5.0)</figcaption>
+  </figure>
+  <div class="gtext">
+    <ul>
+      <li><strong>Quyên tiền</strong> ở tab Quỹ, đứng đâu cũng được: mỗi 10.000 lượng được 1 cống hiến, cả số tiền vào quỹ bang.</li>
+      <li>Cống hiến có hai số: phần <strong>tiêu được</strong> (của riêng bạn, dùng học kĩ năng bang, rời bang vẫn giữ) và <strong>tổng đã góp</strong> cho bang (hiện ở danh sách thành viên).</li>
+      <li><strong>Nhiệm vụ bang</strong> giống sư môn: đưa thư, nộp vật phẩm, hạ quái theo cấp. Mỗi ngày lúc 23:00 túi lượt thêm 10 việc, để dành tối đa 30. Đổi việc khác phải chờ 60 giây.</li>
+      <li>Mỗi việc thưởng kinh nghiệm, ngân lượng và cống hiến; việc càng về sau thưởng càng to. Làm đủ 10 việc được 18 cống hiến, cấp 40 thêm khoảng 79.000 lượng. Ngân lượng của việc cũng được cộng vào quỹ bang.</li>
+    </ul>
+  </div>
+</article>
+
+<!-- Kĩ năng bang: 60 §4 (BG3), guild.json skills (util_max 5, 20 cống hiến + 100.000; enhance_max 150, 10.000 x n + 1 + n / 10
+     cống hiến, rank_open_fund 5.000.000; Ưu Đãi Nghề +1 % chế, giảm 6 % giá học; Vật Liệu +2 %). Ảnh: build/bang/guild_skills.png. -->
+<article class="gcard gpanel" id="ki-nang-bang">
+  <div class="ghead">
+    <h3>Kĩ năng bang</h3>
+    <ul class="facts">
+      <li>Học ở Tổng Quản</li>
+      <li>Trả bằng cống hiến và ngân lượng</li>
+    </ul>
+  </div>
+  <figure class="gshot">
+    <img src="../../assets/img/huong-dan/bang-ki-nang.jpg" width="760" height="570" loading="lazy" alt="Bảng Bang Hội, tab Kĩ năng: nhóm Tiện ích (Ưu Đãi Nghề, Vật Liệu) và nhóm Cường Hoá (Ngoại Công, Nội Công, Ngoại Kháng, Nội Kháng, Thể Chất, Bạo Kích) với nút Học và Mở hạng">
+    <figcaption><kbd>Alt+B</kbd>, tab Kĩ năng (ảnh bản thử 5.0)</figcaption>
+  </figure>
+  <div class="gtext">
+    <h4>Tiện ích (5 cấp, mỗi cấp 20 cống hiến + 100.000 lượng)</h4>
+    <ul>
+      <li><strong>Ưu Đãi Nghề:</strong> mỗi cấp tỉ lệ chế thành công +1 %, giá học mốc nghề giảm 6 %.</li>
+      <li><strong>Vật Liệu:</strong> mỗi cấp thuốc hồi thêm 2 %.</li>
+    </ul>
+    <h4>Cường Hoá (cấp không quá cấp nhân vật, tối đa 150)</h4>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Hạng</th><th>Mỗi cấp</th><th>Cấp 50</th></tr></thead>
+        <tbody>
+          <tr><td>Ngoại Công, Nội Công</td><td>sát thương +0,1 %</td><td>+5 %</td></tr>
+          <tr><td>Ngoại Kháng, Nội Kháng</td><td>sát thương nhận giảm 0,1 %</td><td>giảm 5 %</td></tr>
+          <tr><td>Thể Chất</td><td>Khí Huyết tối đa +0,1 %</td><td>+5 %</td></tr>
+          <tr><td>Bạo Kích, Thân Thủ</td><td>+0,02 %</td><td>+1 %</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li>Học cấp n tốn 10.000 × n lượng và 1 + n / 10 cống hiến (bỏ phần lẻ).</li>
+      <li>Mỗi hạng Cường Hoá phải được Bang Chủ hoặc Phó Bang Chủ <strong>mở hạng</strong> một lần bằng 5.000.000 lượng quỹ bang.</li>
+      <li>Rời bang: kĩ năng tạm khoá, cấp vẫn giữ. Vào bang khác là dùng lại; muốn học tiếp thì bang mới phải mở hạng đó.</li>
+    </ul>
+  </div>
+</article>
+
+    </div>
+    <nav class="pnav" aria-label="Chủ đề khác"><a class="pnav__prev" href="../nghe/"><span>Trước</span><strong>Kĩ năng nghề</strong></a><a class="pnav__all" href="../">Mục lục hướng dẫn</a><a class="pnav__next" href="../bay-ban/"><span>Tiếp</span><strong>Bày bán</strong></a></nav>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="brand" href="../../"><img src="../../assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
+      <p class="foot__small">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+      <ul class="foot__soc" aria-label="Cộng đồng">
+        <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener" aria-label="Nhóm Facebook"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v7h4v-7h3l1-4h-4V8.6c0-.4.3-.6 1-.6z"/></svg></a></li>
+        <li><a href="https://zalo.me/g/myanfowt9xdyzkwyo1mq" target="_blank" rel="noopener" aria-label="Nhóm Zalo"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5L5 21l3.6-1.8c1.1.3 2.2.4 3.4.4 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/><path class="soc__cut" d="M8.5 9h6.5l-6.5 6h6.5"/></svg></a></li>
+        <li><a href="https://discord.gg/RQDAqRUQ5X" target="_blank" rel="noopener" aria-label="Discord"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 5.6A16 16 0 0015.4 4.4l-.5 1a14.6 14.6 0 00-5.8 0l-.5-1a16 16 0 00-3.9 1.2C2.2 9.3 1.5 13 1.8 16.6a16 16 0 004.8 2.4l1-1.6c-.6-.2-1.1-.5-1.6-.8l.4-.3a11.3 11.3 0 009.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 004.8-2.4c.4-4.2-.6-7.9-2.9-11zM8.7 14.4c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9zm6.6 0c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9z"/></svg></a></li>
+      </ul>
+    </div>
+    <ul class="foot__links">
+      <li><a href="../../">Trang chủ: tải game</a></li>
+      <li><a href="../../huong-dan/">Hướng dẫn: mục lục mọi chủ đề</a></li>
+      <li><a href="../../phien-ban/">Phiên bản: mỗi bản có gì mới</a></li>
+      <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook: góp ý, báo lỗi</a></li>
+    </ul>
+    <p class="foot__small foot__legal">
+      Dự án phục dựng phi thương mại của người hâm mộ, làm để học tập và lưu giữ kí ức.
+      Tên gọi, hình ảnh và tài nguyên gốc của Chiến Quốc thuộc bản quyền của chủ sở hữu.
+    </p>
+  </div>
+</footer>
+
+<script src="../../js/guide.js" defer></script>
+</body>
+</html>

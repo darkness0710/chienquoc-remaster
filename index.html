@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chiến Quốc Remaster</title>
-  <meta name="description" content="Chiến Quốc Remaster: MMORPG Chiến Quốc (2008) hồi sinh, chơi online miễn phí. Đủ 7 môn phái, tổ đội cùng bằng hữu, Cổ Mộ đấu Lữ Bố, câu cá. Bản 4.0 mới ra: trần cấp 50, phó bản Thành Kiều.">
+  <meta name="description" content="Chiến Quốc Remaster: MMORPG Chiến Quốc (2008) hồi sinh, chơi online miễn phí. Đủ 7 môn phái, trần cấp 50, Cổ Mộ đấu Lữ Bố, Thành Kiều. Bản 5.0 sắp ra mắt: kĩ năng nghề, Bảo Thú Lục, bang hội, bày bán.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/">
   <meta property="og:title" content="Chiến Quốc Remaster, chơi online miễn phí">
-  <meta property="og:description" content="Đủ 7 môn phái, tổ đội 5 người, Cổ Mộ đấu Lữ Bố. Miễn phí, không nạp thẻ. Cố nhân, đã đến lúc trở lại.">
+  <meta property="og:description" content="Đủ 7 môn phái, tổ đội 5 người, Cổ Mộ đấu Lữ Bố. Bản 5.0 sắp ra mắt: nghề, bảo thú, bang hội, bày bán. Miễn phí, không nạp thẻ.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -23,10 +23,10 @@
 </head>
 <body>
 
-<!-- Trang chủ làm lại 2026-10-06 (chủ repo: "giờ xấu quá chưa thấy cuốn hút"): đầu trang toàn khung ảnh / video trailer
-     (ảnh rõ, chỉ phủ tối phía sau chữ: chủ repo từng chê nền mờ và nền phủ tối cả khung), dải bản 4.0, video, lưới tính năng
-     ảnh thật, bảy môn phái, ảnh trượt cũ + lời hứa, cài đặt, lộ trình. Hiệu ứng CSS thuần (xuất hiện khi cuộn chỉ ở trình
-     duyệt có animation-timeline, nơi khác hiện sẵn). Cấu trúc + nguồn từng mục: README.md. -->
+<!-- Trang chủ. Lần làm lại 2026-10-08 (nhánh web-5.0, chủ repo: "làm lại trang chủ và hướng dẫn theo bản mới, trang chủ làm đẹp
+     hơn"): giữ đầu trang Đào Hoa (chủ repo đã duyệt qua nhiều lần, xem README §Lịch sử), thêm hàng nút cộng đồng (Facebook, Zalo,
+     Discord: about.json repo game), khối "Bản 5.0 sắp ra mắt" #ban-5 (ảnh bản thử 5.0), mục Cộng đồng #cong-dong, hoa văn dưới
+     tiêu đề, dấu triện đỏ. Bản 5.0 CHƯA phát (máy chủ chạy 4.2): khi phát xem README §Khi phát bản mới. -->
 
 <header class="bar">
   <div class="wrap bar__in">
@@ -44,14 +44,9 @@
 
 <main id="top">
 
-  <!-- Đầu trang (lần 3, 2026-10-06, chủ repo: "cho ảnh nền chụp ở Đào Hoa Nguyên hoa đào rơi còn đẹp hơn", "bố trí đoạn đầu
-       chưa đẹp, làm lại", "ảnh nền to quá bị mờ"). Nền: MỘT file assets/img/hero-bg.jpg (ảnh chụp game 1508x1131, không giao
-       diện). Thay ảnh = ghi đè đúng file đó (cùng cỡ); nhân vật nên đứng ở nửa phải ảnh vì khối chữ nằm bên trái (điện thoại:
-       giữa, chỉnh object-position ở .hero3__bg img trong style.css). Ảnh không bao giờ hiện quá 1:1 (xem comment .hero3 ở CSS);
-       hai ảnh (picture): hero-bg.jpg 1508x1131 cho màn <= 1508 px, hero-bg-wide.jpg 2880x1200 cho màn rộng hơn; không làm mờ hai bên. Ảnh: một nhân vật cưỡi Hỏa Hồ Ly trên cầu gỗ Đào Nguyên Thôn (map 289), chụp bằng ./run.sh shot --demo-hero (tools/README repo game).
-       Cánh hoa bay: 14 thẻ <i> trong .petals, CSS thuần, ẩn khi người xem chọn giảm chuyển động.
-       Bản trước (ảnh trận Lữ Bố nửa trái, chữ nửa phải) chủ repo chê: ảnh đó chuyển xuống thẻ Cổ Mộ ở #co-gi.
-       Link tải launcher có ở HAI chỗ: nút "Tải game" ở đây và nút "Tải launcher 3.1" ở #cai-dat. -->
+  <!-- Đầu trang (lần 3, 2026-10-06). Nền: assets/img/hero-bg.jpg (1508x1131) cho màn <= 1508 px, hero-bg-wide.jpg (2880x1200) cho
+       màn rộng hơn; ảnh không bao giờ hiện quá 1:1 (comment .hero3 ở CSS). Cánh hoa: 14 thẻ <i>, CSS thuần.
+       Link tải launcher có ở HAI chỗ: nút "Tải game" ở đây và nút ở #cai-dat. Link cộng đồng có ở đây, #cong-dong và chân trang. -->
   <section class="hero3">
     <div class="hero3__bg" aria-hidden="true"><picture>
       <source media="(min-width: 1509px)" srcset="assets/img/hero-bg-wide.jpg" width="2880" height="1200">
@@ -60,9 +55,9 @@
     <div class="petals" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     <div class="wrap hero3__in">
       <div class="hero3__copy">
-        <a class="hero2__news" href="phien-ban/#v4-0">
-          <span class="hero2__new">Mới ra</span>
-          <span>Bản 4.0: mở trần cấp 50, phó bản Thành Kiều</span>
+        <a class="hero2__news" href="#ban-5">
+          <span class="hero2__new hero2__new--v5">Sắp ra mắt</span>
+          <span>Bản 5.0: nghề, bảo thú, bang hội, bày bán</span>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
         </a>
         <p class="hero3__kicker">MMORPG Chiến Quốc 2008, hồi sinh</p>
@@ -79,38 +74,125 @@
             Xem hướng dẫn
           </a>
         </div>
-        <p class="hero3__meta">Windows 64 bit · file tải 39 MB · tự cập nhật ·
-          <a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook</a></p>
+        <div class="hero3__comm" aria-label="Nhóm cộng đồng">
+          <a class="fb" href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v7h4v-7h3l1-4h-4V8.6c0-.4.3-.6 1-.6z"/></svg>Facebook</a>
+          <a class="zalo" href="https://zalo.me/g/myanfowt9xdyzkwyo1mq" target="_blank" rel="noopener"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5L5 21l3.6-1.8c1.1.3 2.2.4 3.4.4 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/><path class="soc__cut" d="M8.5 9h6.5l-6.5 6h6.5"/></svg>Zalo</a>
+          <a class="dc" href="https://discord.gg/RQDAqRUQ5X" target="_blank" rel="noopener"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 5.6A16 16 0 0015.4 4.4l-.5 1a14.6 14.6 0 00-5.8 0l-.5-1a16 16 0 00-3.9 1.2C2.2 9.3 1.5 13 1.8 16.6a16 16 0 004.8 2.4l1-1.6c-.6-.2-1.1-.5-1.6-.8l.4-.3a11.3 11.3 0 009.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 004.8-2.4c.4-4.2-.6-7.9-2.9-11zM8.7 14.4c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9zm6.6 0c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9z"/></svg>Discord</a>
+        </div>
+        <p class="hero3__meta">Windows 64 bit · file tải 39 MB · tự cập nhật · máy chủ đang chạy bản 4.2</p>
         <a class="hero__watch" href="#trailer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Xem video: ba anh hùng đấu Lữ Bố</a>
       </div>
     </div>
     <div class="hero3__band">
       <ul class="wrap hero3__stats">
         <li><b>7</b><span>môn phái, mỗi phái hai nhánh</span></li>
-        <li><b>5</b><span>người một tổ đội</span></li>
+        <li><b>50</b><span>cấp tối đa, 14 bản đồ mới ở 4.0</span></li>
         <li><b>34</b><span>thú cưỡi để sưu tập</span></li>
         <li><b>0</b><span>đồng nạp thẻ</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- Dải bản 4.0 (phát 2026-10-06). Số: tài liệu repo game 53 §3d / §3g, §5a, 39 §8 (cùng nguồn với phien-ban/#v4-0).
-       Bản sau: thay nội dung dải này, nhãn ở đầu trang và mốc cuối #lo-trinh. -->
-  <section class="next4-wrap">
+  <!-- Bản 5.0 sắp ra mắt (chưa phát, 2026-10-08). Nguồn: repo game documents/tong-quan/62 (tình trạng), 37 §4.47-§4.59, 59 (nghề),
+       60 (bang), 61 (28 chiêu), 63 (bày bán), 65 (bảo thú). Ảnh: build/pet_book, build/nghe, build/bang, build/stall của repo game
+       (ảnh bản thử, cắt về assets/img/huong-dan/). Khi phát: đổi nhãn "Sắp ra mắt" thành ngày phát (README §Khi phát bản mới). -->
+  <section class="v5sec" id="ban-5">
     <div class="wrap">
-      <div class="next4 reveal">
-        <div class="next4__text">
-          <p class="next4__label">Bản 4.0 · ra mắt 6/10/2026</p>
-          <h2 class="next4__title">Trần cấp 50 và doanh trại phản quân</h2>
-          <p>Theo dấu Từ Phúc ra Biển Đông, vào nước Tần dẹp loạn Thành Kiều. Bốn tướng phản quân chờ ở doanh trại, hạ đủ cả bốn mới được lật thẻ.</p>
-          <a class="btn btn--gold btn--sm" href="phien-ban/#v4-0">Bản 4.0 có gì</a>
-        </div>
-        <ul class="next4__facts">
-          <li><b>Cấp 50</b><span>14 bản đồ mới, quái cấp 41 tới 50</span></li>
-          <li><b>4 boss</b><span>Phó bản Thành Kiều Quân Doanh, ba độ khó</span></li>
-          <li><b>18 nhiệm vụ</b><span>Cốt truyện hồi 11 và 12</span></li>
-          <li><b>Set bậc 2</b><span>Nâng set sư môn bằng Tử Kim Tinh</span></li>
-        </ul>
+      <div class="v5sec__head">
+        <p class="v5sec__kicker"><span class="seal" aria-hidden="true">5.0</span>Sắp ra mắt</p>
+        <h2 class="title">Bản 5.0: giang hồ rộng hơn</h2>
+        <p>Học nghề hái thuốc, đào khoáng, mở Bảo Rương. Ném Dây Càn Khôn bắt thú cùng xuất chiến. Lập bang với bằng hữu, bày sạp ở chợ Chu Quốc. Thêm 28 chiêu cấp 45 và 50, rèn đồ chỉ cần ngân lượng.</p>
+      </div>
+      <ul class="bento">
+        <li class="bento__big reveal">
+          <a class="feat" href="huong-dan/bao-thu/">
+            <img src="assets/img/huong-dan/bao-thu.jpg" alt="Tab Bảo Thú Lục: lưới thú đã bắt theo vùng, khung thú đang chọn với nút Xuất chiến" width="712" height="890" loading="lazy" style="object-position: center 12%">
+            <span class="feat__body">
+              <span class="feat__tag feat__tag--v5">Bảo Thú Lục</span>
+              <strong>Bắt thú, cùng xuất chiến</strong>
+              <span>Đánh quái gần chết rồi ném Dây Càn Khôn. 61 loài để sưu tập, 1 % ra Bảo Bảo. Chọn một con xuất chiến đánh cùng bạn, lên cấp theo bạn.</span>
+            </span>
+          </a>
+        </li>
+        <li class="bento__wide reveal">
+          <a class="feat" href="huong-dan/nghe/">
+            <img src="assets/img/huong-dan/nghe-diem.jpg" alt="Cây thuốc Rễ Bản Lam, Điền Thất, mỏ Tích Khoáng, Đồng Khoáng và Thanh Đồng Bảo Rương ngoài bản đồ" width="760" height="338" loading="lazy" style="object-position: center 40%">
+            <span class="feat__body">
+              <span class="feat__tag feat__tag--v5">Kĩ năng nghề</span>
+              <strong>Năm nghề, Bảo Rương</strong>
+              <span>Dược Sư, Luyện Đơn, Thái Dã, Cơ Quan, Đầu Bếp. Làm là lên cấp, không tốn thể lực.</span>
+            </span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="feat" href="huong-dan/bang-hoi/">
+            <img src="assets/img/huong-dan/bang-ki-nang.jpg" alt="Bảng Bang Hội, tab Kĩ năng: Tiện ích và Cường Hoá" width="760" height="570" loading="lazy" style="object-position: center 30%">
+            <span class="feat__body">
+              <span class="feat__tag feat__tag--v5">Bang hội</span>
+              <strong>Lập bang</strong>
+              <span>Nhiệm vụ bang, quỹ, kĩ năng bang.</span>
+            </span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="feat" href="huong-dan/bay-ban/">
+            <img src="assets/img/huong-dan/bay-ban.jpg" alt="Bảng Bày Bán: món đang bày kèm giá và biển tên sạp" width="760" height="726" loading="lazy" style="object-position: center 10%">
+            <span class="feat__body">
+              <span class="feat__tag feat__tag--v5">Bày bán</span>
+              <strong>Sạp chợ Chu</strong>
+              <span>Bán đồ cho người chơi, kênh Giao Dịch.</span>
+            </span>
+          </a>
+        </li>
+        <li class="bento__wide reveal">
+          <a class="feat feat--art feat--skills" href="huong-dan/ky-nang/#chieu-45-50">
+            <span class="feat__art" aria-hidden="true">
+              <span>Vạn Kiếm Quy Tông</span><span>Ngũ Lôi Áp Đỉnh</span><span>Âm Binh Quá Cảnh</span><span>Huyền Quang Thiểm Ảnh</span>
+            </span>
+            <span class="feat__body">
+              <span class="feat__tag feat__tag--v5">Kĩ năng</span>
+              <strong>28 chiêu cấp 45 và 50</strong>
+              <span>Mỗi nhánh của bảy phái thêm hai hàng chiêu, phần lớn là chiêu bản gốc.</span>
+            </span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="feat feat--art feat--forge" href="huong-dan/trang-bi/#tang-pham">
+            <span class="feat__art" aria-hidden="true">
+              <svg class="art" viewBox="0 0 64 64"><path d="M8 28h38c6 0 10-3 12-6v8c-2 3-6 6-12 6h-6v6h6v8H18v-8h6v-6H16c-5 0-8-3-8-8z"/><path d="M30 6l-4 10M38 8l-2 9M22 10l2 7"/></svg>
+            </span>
+            <span class="feat__body">
+              <span class="feat__tag feat__tag--v5">Rèn đồ</span>
+              <strong>Rèn bằng ngân lượng</strong>
+              <span>Bỏ đá Tái Tạo, Thăng Phẩm. Tăng phẩm dễ hơn.</span>
+            </span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="feat feat--art feat--coin" href="huong-dan/tien-ich/#bao-kho">
+            <span class="feat__art" aria-hidden="true">
+              <svg class="art" viewBox="0 0 64 64"><path d="M4 30c6 0 9 7 28 7s22-7 28-7c-2 12-12 20-28 20S6 42 4 30z"/><path d="M20 35c0-9 5-15 12-15s12 6 12 15"/><path d="M27 27c2-2 8-2 10 0"/></svg>
+            </span>
+            <span class="feat__body">
+              <span class="feat__tag feat__tag--v5">Tiền mới</span>
+              <strong>Kim Nguyên Bảo</strong>
+              <span>Rơi từ Trộm Bảo Phi Tặc theo cấp con trộm.</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <ul class="chips reveal" aria-label="Thêm ở bản 5.0">
+        <li><a href="huong-dan/bat-dau/#tan-thu">Đủ cấp 10 bỏ qua Tân Thủ</a></li>
+        <li><a href="huong-dan/nghe/#co-quan">Túi hành trang 7 ngày, tạc đạn</a></li>
+        <li><a href="huong-dan/nghe/#so-tay">Sổ tay nguồn nguyên liệu</a></li>
+        <li><a href="huong-dan/bay-ban/#kenh-giao-dich">Kênh chat Giao Dịch</a></li>
+        <li><a href="huong-dan/ky-nang/#tu-vi">Tu Vị không giới hạn giờ</a></li>
+        <li><a href="huong-dan/trang-bi/#phan-giai">Phân giải ra Đoạn Thạch</a></li>
+        <li><a href="#cong-dong">Launcher có nút Zalo, Discord</a></li>
+      </ul>
+      <div class="v5sec__cta">
+        <a class="btn btn--gold btn--lg" href="phien-ban/#v5-0">Bản 5.0 có gì</a>
+        <a class="btn btn--ghost btn--lg" href="huong-dan/">Hướng dẫn tính năng mới</a>
       </div>
     </div>
   </section>
@@ -132,19 +214,19 @@
       </div>
       <ul class="showcase">
         <li>
-          <a class="showcase__item" href="huong-dan/#phap-bao">
+          <a class="showcase__item" href="huong-dan/trang-bi/#phap-bao">
             <img src="assets/img/huong-dan/phap-bao.jpg" alt="Ba vòng pháp bảo dưới chân ba nhân vật" width="760" height="380" loading="lazy">
             <span class="showcase__body"><strong>Pháp bảo</strong> Năm loại, 10 sao: khiên, choáng, hồi sinh, hồi máu.</span>
           </a>
         </li>
         <li>
-          <a class="showcase__item" href="huong-dan/#do-lung">
+          <a class="showcase__item" href="huong-dan/trang-bi/#do-lung">
             <img src="assets/img/huong-dan/canh.jpg" alt="Cánh xanh lam và cánh dơi đỏ giữa trận" width="760" height="470" loading="lazy">
             <span class="showcase__body"><strong>Cánh và phi phong</strong> Đồ lưng 10 bậc, bậc 5 đổi dáng.</span>
           </a>
         </li>
         <li>
-          <a class="showcase__item" href="huong-dan/#quang-vu-khi">
+          <a class="showcase__item" href="huong-dan/trang-bi/#quang-vu-khi">
             <img src="assets/img/huong-dan/quang-vu-khi.jpg" alt="Kiếm 10 sao toả quầng đỏ" width="600" height="620" loading="lazy" style="object-position: center 75%">
             <span class="showcase__body"><strong>Quầng vũ khí</strong> Năm màu theo sao, 10 sao rực đỏ.</span>
           </a>
@@ -153,17 +235,15 @@
     </div>
   </section>
 
-  <!-- Có gì trong game: lưới thẻ ảnh thật (assets/img/huong-dan/, chụp bằng ./run.sh shot ở repo game; thẻ Cổ Mộ dùng
-       assets/img/hero-co-mo.jpg = khung 72 của ./run.sh studio gumu, cắt (500, 315)-(1600, 1100), từng là nền đầu trang).
-       Thành Kiều và câu cá chưa có ảnh chụp: thẻ vẽ bằng CSS (cờ chụp câu cá: tài liệu game 54 §6, README.md).
-       Nguồn số: tong-quan/00 + news.json repo game; câu cá fishing.json (tài liệu 54); Thành Kiều 53 §3d / §3g. -->
+  <!-- Có gì trong game (bản đang chạy 4.2): lưới thẻ ảnh thật (assets/img/huong-dan/; thẻ Cổ Mộ dùng assets/img/hero-co-mo.jpg).
+       Thành Kiều và câu cá chưa có ảnh chụp: thẻ vẽ bằng CSS (cờ chụp câu cá: tài liệu game 54 §6, README.md). -->
   <section class="section" id="co-gi">
     <div class="wrap">
       <h2 class="title">Có gì trong game</h2>
       <p class="sub">Đánh phó bản cùng bằng hữu, sưu tập thú cưỡi, rèn món đồ 10 sao, hay chỉ ngồi câu cá bên hồ thành Chu.</p>
       <ul class="feats">
         <li class="feats__wide feats__lead reveal">
-          <a class="feat" href="huong-dan/#co-mo">
+          <a class="feat" href="huong-dan/pho-ban/#co-mo">
             <img src="assets/img/hero-co-mo.jpg" alt="Ba anh hùng trong trận pháp vàng vây đánh Lữ Bố giữa sân mộ đá" width="1100" height="785" loading="lazy" style="object-position: center 22%">
             <span class="feat__body">
               <span class="feat__tag">Phó bản</span>
@@ -183,19 +263,19 @@
           </a>
         </li>
         <li class="reveal">
-          <a class="feat feat--art feat--war" href="phien-ban/#v4-0">
+          <a class="feat feat--art feat--war" href="huong-dan/pho-ban/#thanh-kieu">
             <span class="feat__art" aria-hidden="true">
               <span>Mã Quỷ</span><span>Lương Hưng</span><span>Yến Thập Tam</span><span>Tư Tà</span>
             </span>
             <span class="feat__body">
-              <span class="feat__tag feat__tag--new">Bản 4.0</span>
+              <span class="feat__tag">Phó bản cấp 40</span>
               <strong>Thành Kiều: 4 boss</strong>
               <span>Doanh trại phản quân ở nước Tần. Hạ đủ bốn tướng mới mở bảng thẻ cuối, có Tử Kim Tinh.</span>
             </span>
           </a>
         </li>
         <li class="reveal">
-          <a class="feat" href="huong-dan/#thu-cuoi">
+          <a class="feat" href="huong-dan/than-thu/#thu-cuoi">
             <img src="assets/img/huong-dan/thu-cuoi.jpg" alt="Tab Thú cưỡi: lưới thú đủ 10 sao và tổng chỉ số" width="760" height="922" loading="lazy" style="object-position: center 30%">
             <span class="feat__body">
               <span class="feat__tag">Sưu tập</span>
@@ -205,19 +285,19 @@
           </a>
         </li>
         <li class="reveal">
-          <a class="feat feat--art feat--lake" href="huong-dan/#cau-ca">
+          <a class="feat feat--art feat--lake" href="huong-dan/hang-ngay/#cau-ca">
             <span class="feat__art" aria-hidden="true">
               <svg viewBox="0 0 64 64"><path d="M8 34c8-10 20-13 31-7l10-8v30l-10-8c-11 6-23 3-31-7z"/><circle cx="20" cy="32" r="2.2"/></svg>
             </span>
             <span class="feat__body">
-              <span class="feat__tag feat__tag--new">Bản 4.0</span>
+              <span class="feat__tag">Thư giãn</span>
               <strong>Câu cá bên hồ</strong>
-              <span>Từ cấp 20, ngồi câu ở Ngư Ông, 240 lần mỗi ngày. Ngư Điểm đổi Thăng Phẩm, Thú Hồn, thú cưỡi Cá Voi Đom Đóm.</span>
+              <span>Từ cấp 20, ngồi câu ở Ngư Ông, 240 lần mỗi ngày. Ngư Điểm đổi Thú Hồn, thú cưỡi Cá Voi Đom Đóm.</span>
             </span>
           </a>
         </li>
         <li class="reveal">
-          <a class="feat" href="huong-dan/#nang-sao">
+          <a class="feat" href="huong-dan/trang-bi/#nang-sao">
             <img src="assets/img/huong-dan/nang-sao.jpg" alt="Cửa sổ thợ rèn, thẻ Nâng sao" width="760" height="836" loading="lazy" style="object-position: center 20%">
             <img class="feat__icon" src="assets/img/huong-dan/bua-ma-thuat.png" alt="" width="79" height="128" loading="lazy">
             <span class="feat__body">
@@ -228,7 +308,7 @@
           </a>
         </li>
         <li class="feats__wide feats__last reveal">
-          <a class="feat" href="huong-dan/#phong-yeu-kinh">
+          <a class="feat" href="huong-dan/hang-ngay/#phong-yeu-kinh">
             <img src="assets/img/huong-dan/phong-yeu-kinh.jpg" alt="Tổ đội càn quét yêu ma trong Phong Yêu Kính" width="760" height="570" loading="lazy" style="object-position: center 40%">
             <span class="feat__body">
               <span class="feat__tag">Online</span>
@@ -241,54 +321,55 @@
 
       <!-- Tính năng khác: mỗi chip một link sang trang hướng dẫn. -->
       <ul class="chips reveal" aria-label="Tính năng khác">
-        <li><a href="huong-dan/#su-mon">Sư môn 10 việc mỗi ngày</a></li>
-        <li><a href="huong-dan/#vuong-bo-dau">Truy bắt đơn và nhóm</a></li>
-        <li><a href="huong-dan/#tong-bao">Tống Bảo Tiểu Yêu</a></li>
-        <li><a href="huong-dan/#chu-tuyen">Cốt truyện Hổ Phù</a></li>
-        <li><a href="huong-dan/#bang-than-thu">Bảng Thần Thú</a></li>
-        <li><a href="huong-dan/#tai-tao">Tái tạo, tăng phẩm</a></li>
-        <li><a href="huong-dan/#do-lung">Vô Song Điểm Phiếu</a></li>
-        <li><a href="huong-dan/#dich-tram">Dịch Trạm</a></li>
-        <li><a href="huong-dan/#thoi-tiet">Thời tiết theo giờ</a></li>
-        <li><a href="huong-dan/#bang-huu">Bằng hữu</a></li>
+        <li><a href="huong-dan/hang-ngay/#su-mon">Sư môn 10 việc mỗi ngày</a></li>
+        <li><a href="huong-dan/hang-ngay/#vuong-bo-dau">Truy bắt đơn và nhóm</a></li>
+        <li><a href="huong-dan/hang-ngay/#trom-bao">Trộm Bảo Phi Tặc</a></li>
+        <li><a href="huong-dan/hang-ngay/#tong-bao">Tống Bảo Tiểu Yêu</a></li>
+        <li><a href="huong-dan/nhiem-vu/">Cốt truyện Hổ Phù</a></li>
+        <li><a href="huong-dan/than-thu/#bang-than-thu">Bảng Thần Thú</a></li>
+        <li><a href="huong-dan/ky-nang/#ki-nang-giang-ho">Kĩ năng giang hồ</a></li>
+        <li><a href="huong-dan/trang-bi/#do-lung">Vô Song Điểm Phiếu</a></li>
+        <li><a href="huong-dan/tien-ich/#dich-tram">Dịch Trạm</a></li>
+        <li><a href="huong-dan/tien-ich/#thoi-tiet">Thời tiết theo giờ</a></li>
+        <li><a href="huong-dan/giao-dich-cong-dong/#bang-huu">Bằng hữu</a></li>
+        <li><a href="huong-dan/phim-tat/">Phím tắt</a></li>
       </ul>
     </div>
   </section>
 
-  <!-- Bảy môn phái: ảnh chiêu từ trang hướng dẫn (assets/img/huong-dan/<phái>.jpg), vai trò chép từ .sect__role ở đó.
-       Màu nhấn mỗi phái (--c) chọn theo màu chiêu trong ảnh. Điện thoại: một hàng vuốt ngang. -->
+  <!-- Bảy môn phái: ảnh chiêu từ trang hướng dẫn (assets/img/huong-dan/<phái>.jpg). Màu nhấn mỗi phái (--c) theo màu chiêu trong ảnh.
+       Điện thoại: một hàng vuốt ngang. -->
   <section class="section section--alt" id="mon-phai">
     <div class="wrap">
       <h2 class="title">Bảy môn phái</h2>
       <p class="sub">Đủ cấp 10 thì tới căn cứ bái sư. Mỗi phái hai nhánh chiêu, đổi nhánh được ở sư phụ.</p>
       <ul class="sects pstrip">
-        <li class="reveal" style="--c: #ff8fc8"><a class="sect" href="huong-dan/#dao-hoa">
+        <li class="reveal" style="--c: #ff8fc8"><a class="sect" href="huong-dan/mon-phai/#dao-hoa">
           <img src="assets/img/huong-dan/dao-hoa.jpg" alt="Đào Hoa Nguyên: vòng khí vàng hồng" width="760" height="496" loading="lazy">
           <span class="sect__body"><strong>Đào Hoa Nguyên</strong><span>Cận chiến, ngoại công, đỡ đòn</span></span></a></li>
-        <li class="reveal" style="--c: #ff6a4d"><a class="sect" href="huong-dan/#thuc-son">
+        <li class="reveal" style="--c: #ff6a4d"><a class="sect" href="huong-dan/mon-phai/#thuc-son">
           <img src="assets/img/huong-dan/thuc-son.jpg" alt="Thục Sơn: mưa kiếm đỏ" width="760" height="496" loading="lazy">
           <span class="sect__body"><strong>Thục Sơn</strong><span>Cận chiến hoặc tầm xa, hỗ trợ</span></span></a></li>
-        <li class="reveal" style="--c: #6fe2e8"><a class="sect" href="huong-dan/#cam-ve-quan">
+        <li class="reveal" style="--c: #6fe2e8"><a class="sect" href="huong-dan/mon-phai/#cam-ve-quan">
           <img src="assets/img/huong-dan/cam-ve-quan.jpg" alt="Cấm Vệ Quân: lốc thương xanh ngọc" width="760" height="496" loading="lazy">
           <span class="sect__body"><strong>Cấm Vệ Quân</strong><span>Cận chiến, ngoại công</span></span></a></li>
-        <li class="reveal" style="--c: #a78bff"><a class="sect" href="huong-dan/#duong-mon">
+        <li class="reveal" style="--c: #a78bff"><a class="sect" href="huong-dan/mon-phai/#duong-mon">
           <img src="assets/img/huong-dan/duong-mon.jpg" alt="Đường Môn: ám khí tím nổ khắp vùng" width="760" height="496" loading="lazy">
           <span class="sect__body"><strong>Đường Môn</strong><span>Tầm xa hoặc ám sát, ngoại công</span></span></a></li>
-        <li class="reveal" style="--c: #ffd34d"><a class="sect" href="huong-dan/#mao-son">
+        <li class="reveal" style="--c: #ffd34d"><a class="sect" href="huong-dan/mon-phai/#mao-son">
           <img src="assets/img/huong-dan/mao-son.jpg" alt="Mao Sơn: cột sét vàng" width="760" height="496" loading="lazy">
           <span class="sect__body"><strong>Mao Sơn</strong><span>Tầm xa, nội công, triệu hồi</span></span></a></li>
-        <li class="reveal" style="--c: #5aa8ff"><a class="sect" href="huong-dan/#con-luan">
+        <li class="reveal" style="--c: #5aa8ff"><a class="sect" href="huong-dan/mon-phai/#con-luan">
           <img src="assets/img/huong-dan/con-luan.jpg" alt="Côn Luân: trận băng xanh lam" width="760" height="496" loading="lazy">
           <span class="sect__body"><strong>Côn Luân</strong><span>Tầm xa, pháp sư tấn công</span></span></a></li>
-        <li class="reveal" style="--c: #c9f08a"><a class="sect" href="huong-dan/#van-mong">
+        <li class="reveal" style="--c: #c9f08a"><a class="sect" href="huong-dan/mon-phai/#van-mong">
           <img src="assets/img/huong-dan/van-mong.jpg" alt="Vân Mộng Cốc: trận pháp sáng dưới chân" width="760" height="496" loading="lazy">
           <span class="sect__body"><strong>Vân Mộng Cốc</strong><span>Tầm xa, nội công, hồi máu</span></span></a></li>
       </ul>
     </div>
   </section>
 
-  <!-- Lời hứa (giữ từ bản đầu 2026-09-30, chủ repo hỏi lại 2026-10-02) + ảnh trượt cũ (chủ repo từng hỏi "mấy ảnh cũ đâu").
-       Ảnh trượt: CSS scroll-snap (vuốt / kéo được cả khi tắt JS); js/main.js thêm chấm vị trí, nút trái phải, tự chuyển 5 s. -->
+  <!-- Lời hứa (giữ từ bản đầu 2026-09-30) + ảnh trượt cũ. Ảnh trượt: CSS scroll-snap; js/main.js thêm chấm vị trí, nút, tự chuyển 5 s. -->
   <section class="section" id="loi-hua">
     <div class="wrap promise">
       <div class="promise__text reveal">
@@ -339,8 +420,28 @@
     </div>
   </section>
 
-  <!-- Cài đặt 3 bước + cấu hình. Số (39 MB, 5,6 GB, 8 GB): phiên điều phối 2026-10-02. -->
-  <section class="section section--alt" id="cai-dat">
+  <!-- Cộng đồng: link một nguồn ở repo game godot/data/custom/about.json (community.url, zalo.url, discord.url). Đổi link thì đổi cả
+       hàng nút đầu trang (.hero3__comm), chân trang (.foot__soc) và trang hướng dẫn giao-dich-cong-dong (#cong-dong, chân trang). -->
+  <section class="section section--alt" id="cong-dong">
+    <div class="wrap">
+      <h2 class="title">Tham gia cộng đồng</h2>
+      <p class="sub">Góp ý, báo lỗi, rủ nhau đi phó bản. Tin mới về bản 5.0 cũng báo ở đây trước.</p>
+      <ul class="comm">
+        <li class="reveal"><a class="comm__card comm__card--fb" href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">
+          <svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v7h4v-7h3l1-4h-4V8.6c0-.4.3-.6 1-.6z"/></svg>
+          <span><strong>Nhóm Facebook</strong><span>Tin mới, góp ý, báo lỗi</span></span></a></li>
+        <li class="reveal"><a class="comm__card comm__card--zalo" href="https://zalo.me/g/myanfowt9xdyzkwyo1mq" target="_blank" rel="noopener">
+          <svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5L5 21l3.6-1.8c1.1.3 2.2.4 3.4.4 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/><path class="soc__cut" d="M8.5 9h6.5l-6.5 6h6.5"/></svg>
+          <span><strong>Nhóm Zalo</strong><span>Hỏi nhanh, rủ nhau đi phó bản</span></span></a></li>
+        <li class="reveal"><a class="comm__card comm__card--dc" href="https://discord.gg/RQDAqRUQ5X" target="_blank" rel="noopener">
+          <svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 5.6A16 16 0 0015.4 4.4l-.5 1a14.6 14.6 0 00-5.8 0l-.5-1a16 16 0 00-3.9 1.2C2.2 9.3 1.5 13 1.8 16.6a16 16 0 004.8 2.4l1-1.6c-.6-.2-1.1-.5-1.6-.8l.4-.3a11.3 11.3 0 009.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 004.8-2.4c.4-4.2-.6-7.9-2.9-11zM8.7 14.4c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9zm6.6 0c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9z"/></svg>
+          <span><strong>Discord</strong><span>Trò chuyện, tìm tổ đội</span></span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Cài đặt 3 bước + cấu hình. Số (39 MB, 7 GB, 8 GB): phiên điều phối 2026-10-02. -->
+  <section class="section" id="cai-dat">
     <div class="wrap">
       <h2 class="title">Cài đặt 3 bước</h2>
       <ol class="steps">
@@ -354,7 +455,7 @@
         </li>
         <li class="reveal">
           <h3>Tạo tài khoản</h3>
-          <p>Đăng kí ngay ở màn đăng nhập, tạo nhân vật rồi vào game.</p>
+          <p>Đăng kí ngay ở màn đăng nhập, tạo nhân vật rồi vào game. Mới chơi thì đọc <a href="huong-dan/bat-dau/">Bắt đầu</a>.</p>
         </li>
       </ol>
 
@@ -386,8 +487,8 @@
     </div>
   </section>
 
-  <!-- Lộ trình. Chi tiết từng bản: phien-ban/. -->
-  <section class="section" id="lo-trinh">
+  <!-- Lộ trình. Chi tiết từng bản: phien-ban/. Mốc cuối là bản sắp ra mắt (class is-next). -->
+  <section class="section section--alt" id="lo-trinh">
     <div class="wrap">
       <h2 class="title">Từ kí ức tới máy chủ mới</h2>
       <ol class="timeline">
@@ -407,9 +508,14 @@
           <p>Máy chủ mới, chơi cùng bằng hữu. Đủ bảy môn phái, cấp tối đa 40, Cổ Mộ, thú cưỡi, thần thú. Launcher tự tải và tự cập nhật game.</p>
         </li>
         <li class="is-done reveal">
-          <time>6/10/2026</time>
-          <h3>Bản 4.0, trần cấp 50</h3>
-          <p>Biển Đông, nước Tần, Kênh Trịnh Quốc và phó bản Thành Kiều. <a href="phien-ban/">Xem mọi phiên bản</a>.</p>
+          <time>6/10 tới 8/10/2026</time>
+          <h3>Bản 4.0 tới 4.2, trần cấp 50</h3>
+          <p>Biển Đông, nước Tần và phó bản Thành Kiều; Trộm Bảo Phi Tặc, kĩ năng giang hồ; 30 ô phím như bản gốc, tỉ thí, nhắn tin bằng hữu.</p>
+        </li>
+        <li class="is-next reveal">
+          <time>Sắp ra mắt</time>
+          <h3>Bản 5.0</h3>
+          <p>Kĩ năng nghề, Bảo Thú Lục, bang hội, bày bán, 28 chiêu cấp 45 và 50. <a href="phien-ban/">Xem mọi phiên bản</a>.</p>
         </li>
       </ol>
     </div>
@@ -421,9 +527,14 @@
     <div>
       <a class="brand" href="#top"><img src="assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
       <p class="foot__small">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+      <ul class="foot__soc" aria-label="Cộng đồng">
+        <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener" aria-label="Nhóm Facebook"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v7h4v-7h3l1-4h-4V8.6c0-.4.3-.6 1-.6z"/></svg></a></li>
+        <li><a href="https://zalo.me/g/myanfowt9xdyzkwyo1mq" target="_blank" rel="noopener" aria-label="Nhóm Zalo"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5L5 21l3.6-1.8c1.1.3 2.2.4 3.4.4 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/><path class="soc__cut" d="M8.5 9h6.5l-6.5 6h6.5"/></svg></a></li>
+        <li><a href="https://discord.gg/RQDAqRUQ5X" target="_blank" rel="noopener" aria-label="Discord"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 5.6A16 16 0 0015.4 4.4l-.5 1a14.6 14.6 0 00-5.8 0l-.5-1a16 16 0 00-3.9 1.2C2.2 9.3 1.5 13 1.8 16.6a16 16 0 004.8 2.4l1-1.6c-.6-.2-1.1-.5-1.6-.8l.4-.3a11.3 11.3 0 009.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 004.8-2.4c.4-4.2-.6-7.9-2.9-11zM8.7 14.4c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9zm6.6 0c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9z"/></svg></a></li>
+      </ul>
     </div>
     <ul class="foot__links">
-      <li><a href="huong-dan/">Hướng dẫn: nhiệm vụ hằng ngày, rèn trang bị, môn phái</a></li>
+      <li><a href="huong-dan/">Hướng dẫn: bắt đầu, hằng ngày, phó bản, môn phái, rèn đồ, nghề</a></li>
       <li><a href="phien-ban/">Phiên bản: mỗi bản có gì mới, ngày phát hành</a></li>
       <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook: góp ý, báo lỗi</a></li>
       <li><a href="https://drive.google.com/drive/folders/1uryoIZk5M8_CemebYR23FHE8yvL3dEbW" target="_blank" rel="noopener">Bản cũ: demo 2.0 offline</a> (không còn cập nhật)</li>

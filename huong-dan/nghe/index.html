@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kĩ năng nghề · Hướng dẫn Chiến Quốc Remaster</title>
+  <meta name="description" content="Dược Sư, Luyện Đơn, Thái Dã, Cơ Quan, Đầu Bếp, Bảo Rương, túi hành trang 7 ngày, tạc đạn, sổ tay nguyên liệu.">
+  <meta name="theme-color" content="#0a1330">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/nghe/">
+  <meta property="og:title" content="Kĩ năng nghề · Hướng dẫn Chiến Quốc Remaster">
+  <meta property="og:description" content="Dược Sư, Luyện Đơn, Thái Dã, Cơ Quan, Đầu Bếp, Bảo Rương, túi hành trang 7 ngày, tạc đạn, sổ tay nguyên liệu.">
+  <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- Trang con hướng dẫn "Kĩ năng nghề" (tách từ huong-dan/index.html cũ ngày 2026-10-08, nhánh web-5.0). Nguồn số liệu ghi trong
+     comment trên từng mục. Thêm / sửa mục: README.md §Hướng dẫn. -->
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="brand" href="../../" aria-label="Chiến Quốc Remaster, về trang chủ">
+      <img src="../../assets/favicon.svg" alt="" width="32" height="32">
+      <span>Chiến Quốc <em>Remaster</em></span>
+    </a>
+    <nav class="bar__nav">
+      <a class="bar__link" href="../" aria-current="page">Hướng dẫn</a>
+      <a class="bar__link" href="../../phien-ban/">Phiên bản</a>
+      <a class="btn btn--gold btn--sm" href="../../#cai-dat">Tải game</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="ghero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Đường dẫn"><a href="../">Hướng dẫn</a><span aria-hidden="true">/</span><span>Kĩ năng nghề</span></nav>
+      <div class="ghero__row">
+        <span class="ghero__icon"><svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3M7.5 14h9"/></svg></span>
+        <div>
+          <h1 class="ghero__title">Kĩ năng nghề <span class="v5tag v5tag--lg">Bản 5.0</span></h1>
+          <p class="ghero__lead">Năm nghề: hái thuốc, đào khoáng, chế thuốc, nấu ăn, chế túi và chìa khoá mở Bảo Rương. Làm là lên cấp, không tốn thể lực.</p>
+        </div>
+      </div>
+      <div class="v5note v5note--page"><p><span class="v5tag">Bản 5.0</span> Tính năng của bản 5.0, <strong>sắp ra mắt</strong> (máy chủ đang chạy bản 4.2). Ảnh chụp từ bản thử, số liệu có thể còn chỉnh trước khi phát.</p></div>
+    </div>
+  </section>
+
+  <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
+      <a class="is-v5" href="#hoc-nghe">Học nghề</a>
+      <a class="is-v5" href="#thu-thap">Hái, đào</a>
+      <a class="is-v5" href="#luyen-don">Luyện Đơn</a>
+      <a class="is-v5" href="#co-quan">Cơ Quan</a>
+      <a class="is-v5" href="#dau-bep">Đầu Bếp</a>
+      <a class="is-v5" href="#bao-ruong">Bảo Rương</a>
+      <a class="is-v5" href="#so-tay">Sổ tay</a>
+    </nav></div>
+
+  <div class="wrap gbody">
+    <div class="guide">
+
+<!-- Nghề: repo game documents/tong-quan/59-ke-hoach-nghe.md §2 (NG-a..NG-j), §4 Công Tượng, §9 tab Kĩ năng nghề; 37 §4.52,
+     §4.58 (giá công thức, 100 lần mỗi lệnh). Ảnh: build/nghe/tab_nghe.png repo game, cắt (112, 112)-(958, 1182). -->
+<article class="gcard gpanel" id="hoc-nghe">
+  <div class="ghead">
+    <h3>Học nghề</h3>
+    <ul class="facts">
+      <li class="v5">Bản 5.0</li>
+      <li><kbd>Alt+N</kbd> hoặc <kbd>Alt+R</kbd>, tab Kĩ năng nghề</li>
+      <li>2 nghề chính, Đầu Bếp không tính</li>
+    </ul>
+  </div>
+  <figure class="gshot">
+    <img src="../../assets/img/huong-dan/nghe.jpg" width="760" height="961" loading="lazy" alt="Bảng Kĩ năng, tab Kĩ năng nghề: hàng 5 nghề Dược Sư, Luyện Đơn, Thái Dã, Cơ Quan, Đầu Bếp; Luyện Đơn cấp 30, thuần thục, nút Học mốc kế, danh sách công thức với nút Chế">
+    <figcaption>Tab Kĩ năng nghề, mục Nghề (ảnh bản thử 5.0)</figcaption>
+  </figure>
+  <div class="gtext">
+    <div class="tbl tbl--wrap">
+      <table>
+        <thead><tr><th>Nghề</th><th>Làm gì</th></tr></thead>
+        <tbody>
+          <tr><td>Dược Sư</td><td>Hái thảo dược, chế thành phấn cho Luyện Đơn</td></tr>
+          <tr><td>Luyện Đơn</td><td>Chế thuốc hồi máu, giải độc, tăng kháng</td></tr>
+          <tr><td>Thái Dã</td><td>Đào khoáng, luyện thành thỏi</td></tr>
+          <tr><td>Cơ Quan</td><td>Chế cấu kiện, chìa khoá Bảo Rương, túi hành trang, tạc đạn</td></tr>
+          <tr><td>Đầu Bếp</td><td>Nấu món hồi dần và món tăng chỉ số 30 phút</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul>
+      <li>Mỗi nhân vật học tối đa <strong>2 nghề chính</strong>, Đầu Bếp ai cũng học thêm được. Hai cặp hợp nhau: <strong>Dược Sư + Luyện Đơn</strong>, <strong>Thái Dã + Cơ Quan</strong>.</li>
+      <li>Học ở Chu Quốc: Dược Sư Chu Quốc, Luyện Đơn Sư Chu Quốc, Công Tượng Mỏ Chu Quốc (Thái Dã), Cơ Quan Sư Chu Quốc (Tề Quốc cũng có), Đầu Bếp Chu Quốc. Chọn "Học nghề ..." để mở bảng nghề, "Mua công thức, nguyên liệu" để mở tiệm.</li>
+      <li><strong>Làm là lên:</strong> mỗi lần hái, đào, chế đều cộng thuần thục, đủ thì lên cấp. Việc sát cấp nghề của bạn cộng nhiều hơn việc quá dễ.</li>
+      <li>Cấp nghề không vượt cấp nhân vật, tối đa 150. Mỗi 10 cấp học một mốc ở Công Tượng: mốc thứ n tốn 200 × n tiềm năng và 10.000 × n lượng (lên cấp 50 tốn tổng 3.000 tiềm năng, 150.000 lượng).</li>
+      <li>Không tốn thể lực, không giới hạn mỗi ngày. Hái, đào 3 giây; chế 2 giây; một lệnh chế tối đa 100 lần.</li>
+      <li>Công thức đầu tiên của mỗi nghề biết sẵn. Công thức khác mua ở Công Tượng (1.000 × cấp yêu cầu, ít nhất 2.000 lượng) hoặc rơi từ <a href="#bao-ruong">Bảo Rương</a>.</li>
+    </ul>
+    <p class="tip">Trong bang, kĩ năng <a href="../bang-hoi/#ki-nang-bang">Ưu Đãi Nghề</a> giảm giá học mốc và tăng tỉ lệ chế thành công.</p>
+  </div>
+</article>
+
+<!-- Hái / đào: 59 §2 NG-e, NG-f, §3 (mỏ 5.0 x 0,75), 37 §4.59 (int-5.0: TD1 đá hiếm, LC1 Linh Chi). Ảnh: build/nghe/hinh_goc_crop.png
+     repo game (hình gốc mỏ / cây thuốc / rương, nhánh feat/nghe-hinh). -->
+<article class="gcard gpanel" id="thu-thap">
+  <div class="ghead">
+    <h3>Hái thuốc, đào khoáng</h3>
+    <ul class="facts">
+      <li>Dược Sư, Thái Dã</li>
+      <li>3 giây mỗi lần</li>
+      <li>Mọc lại sau 5 phút</li>
+    </ul>
+  </div>
+  <figure class="gshot">
+    <img src="../../assets/img/huong-dan/nghe-diem.jpg" width="760" height="338" loading="lazy" alt="Ngoài bản đồ: cây Rễ Bản Lam, Thanh Đồng Bảo Rương, cây Điền Thất, mỏ Tích Khoáng và Đồng Khoáng quanh nhân vật">
+    <figcaption>Cây thuốc, mỏ và Bảo Rương ngoài bản đồ (ảnh bản thử 5.0)</figcaption>
+  </figure>
+  <div class="gtext">
+    <ul>
+      <li>Cây thuốc và mỏ mọc ở bản đồ ngoài thành. Bấm vào để hái, đào; xong một lần là tự làm tiếp tới hết điểm.</li>
+      <li>Mỗi điểm hái được 3 lần rồi 5 phút sau mọc lại ở chỗ khác cùng bản đồ. Mọi người thấy cùng một điểm, ai tới trước được trước.</li>
+      <li>Mỏ mở ở trần cấp 50 (cấp Thái Dã cần): Đồng 0, Tích 15, Ngân 22, Thiết 30, Kim 37, Tinh Thiết 45. Đào có 20 % được thêm Tiêu Thạch. Huyền Thiết, Hàn Thiết chờ trần cấp cao hơn.</li>
+      <li>Thảo dược có 16 loại. Linh Chi Thảo (Dược Sư 45) mọc thêm ở các bản đồ quái cấp 41 tới 50.</li>
+      <li>Dược Sư chế thảo dược thành phấn, Thái Dã luyện quặng thành thỏi (Đồng Đĩnh tới Tinh Thiết Đĩnh): đó là nguyên liệu của Luyện Đơn và Cơ Quan.</li>
+    </ul>
+    <h4>Đá hiếm khi đào (khoá)</h4>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Đá</th><th>Mỏ thường</th><th>Kim</th><th>Tinh Thiết</th><th>Mỗi ngày</th></tr></thead>
+        <tbody>
+          <tr><td>Sơ Cấp Đoạn Thạch</td><td>1 %</td><td>1,5 %</td><td>2 %</td><td>5</td></tr>
+          <tr><td>Tinh Thạch cấp 1</td><td>0,5 %</td><td>0,75 %</td><td>1 %</td><td>3</td></tr>
+          <tr><td>Trung Cấp Đoạn Thạch</td><td></td><td></td><td>0,2 %</td><td>1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tip">Giới hạn đá hiếm làm mới lúc 23:00 như việc hằng ngày.</p>
+  </div>
+</article>
+
+<!-- Luyện Đơn: 59 §5 bảng Luyện Đơn, NG-g (hồi chiêu dan 20 s, tách thuốc tiệm 15 s). -->
+<article class="gcard" id="luyen-don">
+  <h3>Luyện Đơn: thuốc tự chế</h3>
+  <ul class="facts">
+    <li>Hồi chiêu riêng 20 giây</li>
+    <li>Uống xen với thuốc tiệm</li>
+  </ul>
+  <p>Thuốc Luyện Đơn có thời gian chờ riêng, không chung với thuốc mua ở tiệm, nên uống xen được. Ở Khó và Địa Ngục, mỗi viên vẫn theo trần hồi máu của trận đó.</p>
+  <div class="tbl tbl--wrap">
+    <table>
+      <thead><tr><th>Thuốc</th><th>Cấp nghề</th><th>Tác dụng</th><th>Công thức</th></tr></thead>
+      <tbody>
+        <tr><td>Hành Quân Tán, Chính Khí Tán, Hạt Lạc Hoàn, An Thần Hoàn</td><td>0 tới 8</td><td>như thuốc tiệm</td><td>biết sẵn món đầu, còn lại Công Tượng</td></tr>
+        <tr><td>Ngọc Dung Cao</td><td>15</td><td>hồi 20 % Khí Huyết trong 10 giây</td><td>Công Tượng</td></tr>
+        <tr><td>Thiên Tiên Ngọc Lộ</td><td>18</td><td>hồi ngay 500 Khí Huyết, 300 Pháp Lực</td><td>Công Tượng</td></tr>
+        <tr><td>Ngọc Dung Lộ</td><td>20</td><td>hồi 30 % trong 10 giây</td><td>Công Tượng</td></tr>
+        <tr><td>Ngân Hạnh Tử</td><td>23</td><td>giải độc</td><td>Công Tượng</td></tr>
+        <tr><td>Hắc Ngọc Đoạn Tục Cao</td><td>26</td><td>gỡ 1 hiệu ứng xấu</td><td>Công Tượng</td></tr>
+        <tr><td>Phong Vương Tương</td><td>27</td><td>800 Khí Huyết, 500 Pháp Lực</td><td>Công Tượng</td></tr>
+        <tr><td>Phong Vương Cao</td><td>29</td><td>40 % trong 10 giây</td><td>Công Tượng</td></tr>
+        <tr><td>Xá Lợi Tử</td><td>30</td><td>1.200 Khí Huyết, 800 Pháp Lực</td><td>Công Tượng</td></tr>
+        <tr><td>Tiên Sơn Linh Chi</td><td>32</td><td>50 % trong 10 giây</td><td>Bảo Rương</td></tr>
+        <tr><td>Khổng Tước Đàm</td><td>34</td><td>gỡ mọi hiệu ứng xấu</td><td>Bảo Rương</td></tr>
+        <tr><td>Ngọc Bồ Đề</td><td>36</td><td>Ngoại Kháng +10 % trong 60 giây</td><td>Bảo Rương</td></tr>
+        <tr><td>Bồ Đề Đơn</td><td>39</td><td>55 % trong 10 giây</td><td>Bảo Rương</td></tr>
+        <tr><td>Thất Thải Linh Chi Hoàn</td><td>41</td><td>1.600 Khí Huyết, 1.000 Pháp Lực</td><td>Bảo Rương</td></tr>
+        <tr><td>Tử Thiến Đơn</td><td>42</td><td>Ngoại Kháng +15 % trong 60 giây</td><td>Bảo Rương</td></tr>
+        <tr><td>Cứu Tâm Đơn</td><td>48</td><td>60 % trong 10 giây</td><td>Bảo Rương</td></tr>
+      </tbody>
+    </table>
+  </div>
+</article>
+
+<!-- Cơ Quan: 59 §5 (29 công thức, 4 chìa), 37 §4.59 bản merge-5.0 (túi hành trang 7 ngày, tạc đạn, cấu kiện giảm 25 % phí rèn). -->
+<article class="gcard" id="co-quan">
+  <h3>Cơ Quan: túi hành trang, tạc đạn, chìa khoá</h3>
+  <ul class="facts">
+    <li>29 công thức</li>
+    <li>Đồ chế ra giao dịch được</li>
+  </ul>
+  <p>Cơ Quan chế phiến, quản, cấu kiện từ thỏi của Thái Dã, rồi làm ra những thứ tiền không mua được ở tiệm:</p>
+  <h4>Túi hành trang</h4>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Túi</th><th>Số ô</th><th>Cấp Cơ Quan</th></tr></thead>
+      <tbody>
+        <tr><td>Tay Nải</td><td>6</td><td>20</td></tr>
+        <tr><td>Túi Bách Bảo</td><td>12</td><td>35</td></tr>
+        <tr><td>Túi Càn Khôn</td><td>24</td><td>48</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Hành trang trang 1 có 24 ô; gắn túi để mở trang 2 tới 4, tối đa 96 ô.</li>
+    <li>Túi dùng <strong>7 ngày</strong> kể từ lúc gắn. Hết hạn thì đồ trong trang đó vẫn còn, lấy ra được nhưng không bỏ thêm vào; gắn túi mới là dùng tiếp.</li>
+    <li>Chỉ Cơ Quan chế được, NPC không bán. Túi giao dịch và bày bán được.</li>
+  </ul>
+  <h4>Tạc đạn</h4>
+  <ul>
+    <li>Thổ Chế Tạc Đạn (cấp 15), Đại Tạc Đạn (cấp 30), Cao Bạo Tạc Đạn (cấp 45). Ai cũng ném được, từ hành trang hoặc ô phím.</li>
+    <li>Ném vào mục tiêu đang chọn trong 6 ô, nổ trúng mọi quái quanh đó (1, 2, 2 ô); Cao Bạo Tạc Đạn làm choáng 1 giây. Hồi 30 giây. Chỉ trúng quái.</li>
+  </ul>
+  <h4>Chìa khoá và cấu kiện</h4>
+  <ul>
+    <li>4 chìa mở <a href="#bao-ruong">Bảo Rương</a>: Chìa Khoá Đồng (cấp 11), Ngân (37), Tinh Thiết (43), Vàng (48).</li>
+    <li>Ở thợ rèn, khi <a href="../trang-bi/#tai-tao">Tái tạo</a> hay <a href="../trang-bi/#tang-pham">Tăng phẩm</a>, đánh dấu nộp 1 cấu kiện đúng bậc thì <strong>phí giảm 25 %</strong>: dưới cấp 20 Đồng Chế Cấu Kiện, dưới 30 Thanh Đồng Cơ Quan Cấu Kiện, dưới 40 Thiết Chế Cơ Quan Cấu Kiện, tới 50 Tinh Thiết Cơ Quan Cấu Kiện.</li>
+  </ul>
+</article>
+
+<!-- Đầu Bếp: 59 §5 (món hồi dần + 3 món buff), 37 §4.59 bản int-5.0 (ĐB2: thêm Đỗ Khang Tửu, Bò Sốt Lê, Bò Sốt Quýt). -->
+<article class="gcard" id="dau-bep">
+  <h3>Đầu Bếp</h3>
+  <ul class="facts">
+    <li>Ai cũng học thêm được</li>
+    <li>Món tăng chỉ số 30 phút</li>
+  </ul>
+  <ul>
+    <li>Món hồi dần: Khoai Lang Nướng (biết sẵn), Khoai Lang Nóng (cấp 7), Khoai Lang Chiên (15), Cây Ngô Lớn (22), Cây Ngô Canh (26).</li>
+    <li>Món tăng chỉ số giữ <strong>30 phút</strong>, mỗi lúc một món (ăn món sau thay món trước), chết không mất, thoát game vẫn giữ.</li>
+  </ul>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Món</th><th>Cấp nghề</th><th>Tác dụng 30 phút</th></tr></thead>
+      <tbody>
+        <tr><td>Nồi Lẩu Hảo Hạng</td><td>20</td><td>Ngoại Kháng +8 %</td></tr>
+        <tr><td>Ngũ Thập Niên Đỗ Khang Tửu</td><td>25</td><td>Nội Công +3 %</td></tr>
+        <tr><td>Thịt Heo Nướng Kèm Trứng</td><td>30</td><td>Ngoại Công +3 %</td></tr>
+        <tr><td>Chiến Quốc Toàn Tịch</td><td>35</td><td>kinh nghiệm diệt quái +5 %</td></tr>
+        <tr><td>Thịt Bò Sốt Lê</td><td>40</td><td>Khí Huyết tối đa +5 %</td></tr>
+        <tr><td>Thịt Bò Sốt Quýt</td><td>45</td><td>tốc chạy +5 %</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tip">Nguyên liệu: <strong>Cá</strong> đổi 2 Ngư Điểm ở <a href="../hang-ngay/#cau-ca">Ngư Ông</a> (cá khoá thì món nấu ra cũng khoá), thảo dược của Dược Sư, hàng Đầu Bếp Chu Quốc bán (Khoai Lang, Nước Trong, Cái đĩa, Bắp, Trứng gà).</p>
+</article>
+
+<!-- Bảo Rương: 59 §2 NG-i, §6 (bảng loại / chìa / tiền / đá / công thức), chests.json; 37 §4.59 bản int-5.0 RB1 (Thiết Luân). -->
+<article class="gcard" id="bao-ruong">
+  <h3>Bảo Rương</h3>
+  <ul class="facts">
+    <li>1 tới 2 rương mỗi bản đồ</li>
+    <li>Mọc lại sau 30 phút</li>
+    <li>Cần chìa khoá Cơ Quan</li>
+  </ul>
+  <ul>
+    <li>Rương nằm ngẫu nhiên ở bản đồ ngoài (bản đồ rộng có 2), ai mở trước người đó được; 30 phút sau mọc ở chỗ khác. Thành Kiều có 1 rương, Cổ Mộ 2 rương mỗi lượt.</li>
+    <li>Mở cần đúng loại chìa (Cơ Quan chế, hoặc mua lại của người chơi khác), giữ thanh mở 2 giây.</li>
+    <li>Mỗi rương bốc 1 tới 3 lần. Ngoài bảng dưới còn có quặng, thảo dược hiếm, Cá, thuốc; rương Phiêu Lượng và Tinh Xảo có Thiết Luân (nguyên liệu Túi Càn Khôn).</li>
+  </ul>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Rương</th><th>Chìa</th><th>Ở đâu</th><th>Tiền</th><th>Đoạn Thạch</th><th>Tinh Thạch cấp 1</th><th>Công thức</th></tr></thead>
+      <tbody>
+        <tr><td>Thanh Đồng</td><td>Đồng</td><td>quái dưới cấp 16</td><td>2.000 tới 2.500</td><td>Sơ 6 %</td><td>2 %</td><td>2 %</td></tr>
+        <tr><td>Thiết</td><td>Ngân</td><td>quái cấp 16 tới 30</td><td>2.500 tới 3.500</td><td>Sơ 9 %, Trung 1 %</td><td>3 %</td><td>3 %</td></tr>
+        <tr><td>Phiêu Lượng</td><td>Tinh Thiết</td><td>quái cấp 31 tới 40, Thành Kiều</td><td>3.000 tới 4.500</td><td>Sơ 10 %, Trung 3 %</td><td>5 %</td><td>4 %</td></tr>
+        <tr><td>Tinh Xảo</td><td>Vàng</td><td>quái từ cấp 41, Cổ Mộ</td><td>4.000 tới 6.000</td><td>Sơ 8 %, Trung 6 %</td><td>7 %</td><td>5 %</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tip">Tỉ lệ trên tính cho mỗi lần bốc. Đá ra từ rương bị khoá; công thức rơi từ rương không khoá, giao dịch và bày bán được.</p>
+</article>
+
+<!-- Sổ tay: 59 §9 (bản int-5.0, nhánh feat/nghe-sotay). Ảnh: build/nghe/so_tay.png repo game, cắt (112, 112)-(958, 1182). -->
+<article class="gcard gpanel" id="so-tay">
+  <div class="ghead">
+    <h3>Sổ tay nguyên liệu</h3>
+    <ul class="facts">
+      <li>Tab Kĩ năng nghề, mục Sổ tay</li>
+      <li>Bấm tên bản đồ là tự đi</li>
+    </ul>
+  </div>
+  <figure class="gshot">
+    <img src="../../assets/img/huong-dan/nghe-so-tay.jpg" width="760" height="961" loading="lazy" alt="Mục Sổ tay của nghề Dược Sư: danh sách nguyên liệu Rễ Bản Lam, Kim Ngân Hoa, Quả Anh Túc, Điền Thất, Dã Cúc kèm cấp và số nguồn; khung Rễ Bản Lam liệt kê các bản đồ hái được và món chế ra">
+    <figcaption>Mỗi nguyên liệu: hái ở đâu, mua ở đâu, dùng chế gì (ảnh bản thử 5.0)</figcaption>
+  </figure>
+  <div class="gtext">
+    <ul>
+      <li>Chọn nghề, bấm <strong>Sổ tay</strong>: danh sách nguyên liệu của nghề đó, kèm cấp và số nguồn.</li>
+      <li>Bấm một món để xem mọi nguồn: hái, đào ở bản đồ nào; tiệm nào bán; rơi từ Bảo Rương; đổi ở Ngư Ông. Bên dưới là các món dùng nó để chế.</li>
+      <li>Tên bản đồ, tên NPC là link: bấm là nhân vật tự chạy tới, như chỉ đường trong sổ nhiệm vụ.</li>
+      <li>Rê chuột lên nguyên liệu ở hành trang, kho hay tiệm cũng thấy dòng "Nguồn:".</li>
+    </ul>
+  </div>
+</article>
+
+    </div>
+    <nav class="pnav" aria-label="Chủ đề khác"><a class="pnav__prev" href="../bao-thu/"><span>Trước</span><strong>Bảo Thú Lục</strong></a><a class="pnav__all" href="../">Mục lục hướng dẫn</a><a class="pnav__next" href="../bang-hoi/"><span>Tiếp</span><strong>Bang hội</strong></a></nav>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="brand" href="../../"><img src="../../assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
+      <p class="foot__small">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+      <ul class="foot__soc" aria-label="Cộng đồng">
+        <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener" aria-label="Nhóm Facebook"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v7h4v-7h3l1-4h-4V8.6c0-.4.3-.6 1-.6z"/></svg></a></li>
+        <li><a href="https://zalo.me/g/myanfowt9xdyzkwyo1mq" target="_blank" rel="noopener" aria-label="Nhóm Zalo"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5L5 21l3.6-1.8c1.1.3 2.2.4 3.4.4 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/><path class="soc__cut" d="M8.5 9h6.5l-6.5 6h6.5"/></svg></a></li>
+        <li><a href="https://discord.gg/RQDAqRUQ5X" target="_blank" rel="noopener" aria-label="Discord"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 5.6A16 16 0 0015.4 4.4l-.5 1a14.6 14.6 0 00-5.8 0l-.5-1a16 16 0 00-3.9 1.2C2.2 9.3 1.5 13 1.8 16.6a16 16 0 004.8 2.4l1-1.6c-.6-.2-1.1-.5-1.6-.8l.4-.3a11.3 11.3 0 009.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 004.8-2.4c.4-4.2-.6-7.9-2.9-11zM8.7 14.4c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9zm6.6 0c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9z"/></svg></a></li>
+      </ul>
+    </div>
+    <ul class="foot__links">
+      <li><a href="../../">Trang chủ: tải game</a></li>
+      <li><a href="../../huong-dan/">Hướng dẫn: mục lục mọi chủ đề</a></li>
+      <li><a href="../../phien-ban/">Phiên bản: mỗi bản có gì mới</a></li>
+      <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook: góp ý, báo lỗi</a></li>
+    </ul>
+    <p class="foot__small foot__legal">
+      Dự án phục dựng phi thương mại của người hâm mộ, làm để học tập và lưu giữ kí ức.
+      Tên gọi, hình ảnh và tài nguyên gốc của Chiến Quốc thuộc bản quyền của chủ sở hữu.
+    </p>
+  </div>
+</footer>
+
+<script src="../../js/guide.js" defer></script>
+</body>
+</html>

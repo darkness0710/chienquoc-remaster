@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bắt đầu · Hướng dẫn Chiến Quốc Remaster</title>
+  <meta name="description" content="Tải game, tạo nhân vật, những ngày đầu ở Tân Thủ Thôn, bái sư ở cấp 10.">
+  <meta name="theme-color" content="#0a1330">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/bat-dau/">
+  <meta property="og:title" content="Bắt đầu · Hướng dẫn Chiến Quốc Remaster">
+  <meta property="og:description" content="Tải game, tạo nhân vật, những ngày đầu ở Tân Thủ Thôn, bái sư ở cấp 10.">
+  <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- Trang con hướng dẫn "Bắt đầu" (tách từ huong-dan/index.html cũ ngày 2026-10-08, nhánh web-5.0). Nguồn số liệu ghi trong
+     comment trên từng mục. Thêm / sửa mục: README.md §Hướng dẫn. -->
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="brand" href="../../" aria-label="Chiến Quốc Remaster, về trang chủ">
+      <img src="../../assets/favicon.svg" alt="" width="32" height="32">
+      <span>Chiến Quốc <em>Remaster</em></span>
+    </a>
+    <nav class="bar__nav">
+      <a class="bar__link" href="../" aria-current="page">Hướng dẫn</a>
+      <a class="bar__link" href="../../phien-ban/">Phiên bản</a>
+      <a class="btn btn--gold btn--sm" href="../../#cai-dat">Tải game</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="ghero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Đường dẫn"><a href="../">Hướng dẫn</a><span aria-hidden="true">/</span><span>Bắt đầu</span></nav>
+      <div class="ghero__row">
+        <span class="ghero__icon"><svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg></span>
+        <div>
+          <h1 class="ghero__title">Bắt đầu</h1>
+          <p class="ghero__lead">Từ lúc tải game tới khi bái sư: những việc cần làm trong giờ chơi đầu tiên.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
+      <a href="#cai-dat-game">Tải và cài đặt</a>
+      <a href="#tan-thu">Tân Thủ Thôn</a>
+    </nav></div>
+
+  <div class="wrap gbody">
+    <div class="guide">
+
+<!-- Cài đặt: chép từ trang chủ #cai-dat (39 MB, gói ~7 GB, phiên điều phối 2026-10-02). Nút cộng đồng ở launcher: repo game
+     godot/data/custom/about.json (community / zalo / discord, chủ repo 2026-10-08, bản 5.0). -->
+<article class="gcard" id="cai-dat-game">
+  <h3>Tải và cài đặt</h3>
+  <ul class="facts">
+    <li>Windows 10 hoặc 11, 64 bit</li>
+    <li>File tải 39 MB</li>
+    <li>Miễn phí, không nạp thẻ</li>
+  </ul>
+  <ul class="steps-mini">
+    <li><b>Bước 1</b><span>Tải launcher ở <a href="../../#cai-dat">trang chủ</a>, giải nén vào một thư mục bình thường (đừng để trong Program Files).</span></li>
+    <li><b>Bước 2</b><span>Mở thư mục ChienQuocRemaster, chạy ChienQuocRemaster.exe. Lần đầu launcher tự tải gói game khoảng 7 GB, lần sau chỉ tải phần mới. Launcher tự cập nhật cả chính nó.</span></li>
+    <li><b>Bước 3</b><span>Đăng kí tài khoản ngay ở màn đăng nhập, tạo nhân vật rồi vào game.</span></li>
+  </ul>
+  <p>Màn launcher có nút <strong>Trang chủ</strong> (trang này) và nút nhóm cộng đồng. <span class="v5tag">Bản 5.0</span> thêm nút <strong>Zalo</strong> và <strong>Discord</strong> cạnh nút Group Fb.</p>
+  <p class="tip">Windows báo "Windows protected your PC" thì bấm More info, rồi Run anyway. Launcher chưa có chữ kí số, không phải virus.</p>
+</article>
+
+<!-- Tân Thủ: quà welcome theo trang chủ (gift_codes.json repo game). Bỏ qua Tân Thủ: repo game commit 3ca482e4 (nhánh feat/skip-tanthu,
+     gộp int-5.0), gameplay/12 mục 1.10p1. -->
+<article class="gcard" id="tan-thu">
+  <h3>Những ngày đầu ở Tân Thủ Thôn</h3>
+  <ul class="facts">
+    <li>Cấp 1 tới 10</li>
+    <li>Sổ nhiệm vụ <kbd>Alt+Q</kbd></li>
+    <li>Bái sư từ cấp 10</li>
+  </ul>
+  <ul>
+    <li>Vào game là đứng ở Tân Thủ Thôn. Làm theo chuỗi nhiệm vụ trong sổ nhiệm vụ: bấm tên NPC hay tên bản đồ là nhân vật tự chạy tới.</li>
+    <li>Quà tân thủ: nhập mã <code>welcome</code> ở Thần Tiên Gia Gia, mỗi nhân vật nhận một lần (cần vài ô hành trang trống).</li>
+    <li>Đủ <strong>cấp 10</strong> thì tới căn cứ một trong <a href="../mon-phai/">bảy môn phái</a> bái sư. Chưa biết đường thì nhờ Sứ Giả Môn Phái đưa đi.</li>
+    <li>Sau khi bái sư: làm <a href="../hang-ngay/#su-mon">sư môn</a> mỗi ngày, đi tiếp <a href="../nhiem-vu/">cốt truyện chủ tuyến</a>, học <a href="../ky-nang/#cach-hoc">kĩ năng</a>.</li>
+  </ul>
+  <div class="v5note">
+    <p><span class="v5tag">Bản 5.0</span> <strong>Bỏ qua Tân Thủ, đi bái sư ngay.</strong> Đủ cấp bái sư mà chưa có phái, nói với một trong 7 người <strong>Môn Phái Chiêu Sinh</strong> ở Tân Thủ Thôn, chọn dòng "Bỏ qua Tân Thủ, đi bái sư ngay" rồi xác nhận. Các nhiệm vụ Tân Thủ còn lại được tính là xong và vẫn nhận đủ quà (kinh nghiệm, ngân lượng, đồ). Hành trang đầy thì đồ vào túi chờ.</p>
+  </div>
+</article>
+
+    </div>
+    <nav class="pnav" aria-label="Chủ đề khác"><span></span><a class="pnav__all" href="../">Mục lục hướng dẫn</a><a class="pnav__next" href="../hang-ngay/"><span>Tiếp</span><strong>Việc hằng ngày</strong></a></nav>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="brand" href="../../"><img src="../../assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
+      <p class="foot__small">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+      <ul class="foot__soc" aria-label="Cộng đồng">
+        <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener" aria-label="Nhóm Facebook"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v7h4v-7h3l1-4h-4V8.6c0-.4.3-.6 1-.6z"/></svg></a></li>
+        <li><a href="https://zalo.me/g/myanfowt9xdyzkwyo1mq" target="_blank" rel="noopener" aria-label="Nhóm Zalo"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5L5 21l3.6-1.8c1.1.3 2.2.4 3.4.4 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/><path class="soc__cut" d="M8.5 9h6.5l-6.5 6h6.5"/></svg></a></li>
+        <li><a href="https://discord.gg/RQDAqRUQ5X" target="_blank" rel="noopener" aria-label="Discord"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 5.6A16 16 0 0015.4 4.4l-.5 1a14.6 14.6 0 00-5.8 0l-.5-1a16 16 0 00-3.9 1.2C2.2 9.3 1.5 13 1.8 16.6a16 16 0 004.8 2.4l1-1.6c-.6-.2-1.1-.5-1.6-.8l.4-.3a11.3 11.3 0 009.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 004.8-2.4c.4-4.2-.6-7.9-2.9-11zM8.7 14.4c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9zm6.6 0c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9z"/></svg></a></li>
+      </ul>
+    </div>
+    <ul class="foot__links">
+      <li><a href="../../">Trang chủ: tải game</a></li>
+      <li><a href="../../huong-dan/">Hướng dẫn: mục lục mọi chủ đề</a></li>
+      <li><a href="../../phien-ban/">Phiên bản: mỗi bản có gì mới</a></li>
+      <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook: góp ý, báo lỗi</a></li>
+    </ul>
+    <p class="foot__small foot__legal">
+      Dự án phục dựng phi thương mại của người hâm mộ, làm để học tập và lưu giữ kí ức.
+      Tên gọi, hình ảnh và tài nguyên gốc của Chiến Quốc thuộc bản quyền của chủ sở hữu.
+    </p>
+  </div>
+</footer>
+
+<script src="../../js/guide.js" defer></script>
+</body>
+</html>

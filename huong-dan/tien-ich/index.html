@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiện ích · Hướng dẫn Chiến Quốc Remaster</title>
+  <meta name="description" content="Đồng hồ máy chủ, Dịch Trạm, tiệm đồ, Bảo Khố và Kim Nguyên Bảo, thuốc 1 giờ, thời tiết.">
+  <meta name="theme-color" content="#0a1330">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/tien-ich/">
+  <meta property="og:title" content="Tiện ích · Hướng dẫn Chiến Quốc Remaster">
+  <meta property="og:description" content="Đồng hồ máy chủ, Dịch Trạm, tiệm đồ, Bảo Khố và Kim Nguyên Bảo, thuốc 1 giờ, thời tiết.">
+  <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- Trang con hướng dẫn "Tiện ích" (tách từ huong-dan/index.html cũ ngày 2026-10-08, nhánh web-5.0). Nguồn số liệu ghi trong
+     comment trên từng mục. Thêm / sửa mục: README.md §Hướng dẫn. -->
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="brand" href="../../" aria-label="Chiến Quốc Remaster, về trang chủ">
+      <img src="../../assets/favicon.svg" alt="" width="32" height="32">
+      <span>Chiến Quốc <em>Remaster</em></span>
+    </a>
+    <nav class="bar__nav">
+      <a class="bar__link" href="../" aria-current="page">Hướng dẫn</a>
+      <a class="bar__link" href="../../phien-ban/">Phiên bản</a>
+      <a class="btn btn--gold btn--sm" href="../../#cai-dat">Tải game</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="ghero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Đường dẫn"><a href="../">Hướng dẫn</a><span aria-hidden="true">/</span><span>Tiện ích</span></nav>
+      <div class="ghero__row">
+        <span class="ghero__icon"><svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
+        <div>
+          <h1 class="ghero__title">Tiện ích</h1>
+          <p class="ghero__lead">Những thứ nhỏ giúp chơi nhàn hơn: đồng hồ máy chủ, Dịch Trạm, tiệm đồ, Bảo Khố, thuốc, thời tiết.</p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
+      <a href="#dong-ho">Đồng hồ máy chủ</a>
+      <a href="#dich-tram">Dịch Trạm</a>
+      <a class="is-v5" href="#tiem-do">Tiệm đồ</a>
+      <a class="is-v5" href="#bao-kho">Bảo Khố</a>
+      <a class="is-v5" href="#thuoc">Thuốc 1 giờ</a>
+      <a href="#thoi-tiet">Thời tiết</a>
+    </nav></div>
+
+  <div class="wrap gbody">
+    <div class="guide">
+
+<!-- Đồng hồ máy chủ (bản kế tiếp): repo game commit ce88e40b, tài liệu 41 GD36; logic/server_clock.gd, client/ui/server_clock_label.gd;
+             mốc qua ngày sect_quests.json daily.reset (23:00), làm mới tuần weekly.start_day; nhắc 22:30 / 22:55 / 23:00.
+             Ảnh: build/server_clock/clock_2241_crop.png repo game (--demo-clock=22:41), nén JPEG 85. -->
+<article class="gcard gpanel" id="dong-ho">
+          <div class="ghead">
+            <h3>Đồng hồ máy chủ</h3>
+            <ul class="facts">
+              <li>Từ bản 4.2</li>
+              <li>Dưới bản đồ nhỏ</li>
+              <li>Qua ngày lúc 23:00</li>
+            </ul>
+          </div>
+          <figure class="gshot">
+            <img src="../../assets/img/huong-dan/dong-ho.jpg" width="566" height="490" loading="lazy" alt="Bản đồ nhỏ góc phải, ngay dưới khung tròn có dòng 22:41 · qua ngày sau 19 phút">
+            <figcaption>22:41, còn 19 phút nữa là qua ngày</figcaption>
+          </figure>
+          <div class="gtext">
+            <ul>
+              <li>Ngay dưới khung tròn bản đồ nhỏ có dòng giờ máy chủ (giờ Việt Nam) kèm thời gian còn lại tới lúc qua ngày, ví dụ "22:41 · qua ngày sau 19 phút". Giờ lấy theo máy chủ, máy bạn để sai giờ cũng không lệch.</li>
+              <li>Qua ngày lúc <strong>23:00</strong>: sư môn, truy bắt, Cổ Mộ, Hoạt động hôm nay và các việc hằng ngày khác làm mới. Còn dưới 30 phút thì chữ chuyển vàng.</li>
+              <li>Rê chuột lên dòng giờ để xem những việc sẽ làm mới. Việc tuần làm mới lúc <strong>23:00 Chủ nhật</strong>.</li>
+              <li>Khung tin nhắc lúc <strong>22:30</strong> và <strong>22:55</strong>, kèm việc hôm nay chưa xong (số việc sư môn đã làm, thưởng Hoạt động chưa nhận). Đúng 23:00 báo "Ngày mới, việc hằng ngày đã làm mới."</li>
+            </ul>
+          </div>
+        </article>
+
+<article class="gcard gpanel" id="dich-tram">
+          <div class="ghead">
+            <h3>Chủ Dịch Trạm</h3>
+            <ul class="facts">
+              <li>Từ cấp 10</li>
+              <li>Tân Thủ Thôn, Chu Quốc, Sở Quốc</li>
+              <li>1 đến 1.700 ngân lượng</li>
+            </ul>
+          </div>
+          <figure class="gshot">
+            <img src="../../assets/img/huong-dan/dich-tram.jpg" width="760" height="575" loading="lazy" alt="Hộp thoại Chủ Dịch Trạm ở Tân Thủ Thôn: Sở Quốc, Chu Quốc và căn cứ sáu môn phái">
+            <figcaption>Chủ Dịch Trạm ở Tân Thủ Thôn</figcaption>
+          </figure>
+          <div class="gtext">
+            <ul>
+              <li>Nói chuyện với Chủ Dịch Trạm, chọn nơi đến, đồng ý giá là tới ngay.</li>
+              <li>Đi được hai thành còn lại (Tân Thủ Thôn, Chu Quốc, Sở Quốc) và căn cứ sáu phái: Đào Hoa Nguyên, Thục Sơn, Đường Môn, Côn Luân, Mao Sơn, Vân Mộng Cốc. Cấm Vệ Quân ở ngay thành Chu.</li>
+              <li>Phí theo quãng đường: Tân Thủ Thôn và Chu Quốc đi lại 1 ngân lượng, xa nhất Tân Thủ Thôn tới Côn Luân 1.700.</li>
+            </ul>
+            <p class="tip">Nước khác sẽ hiện thêm trong danh sách khi bản đồ nước đó mở.</p>
+            <!-- ItemDb.hotbar_ok nhận Phi Hành Phù (FlyCharm.is_charm), mô tả std/0409 item_names_vi.json -->
+            <p>Trong cùng bản đồ thì dùng <strong>Phi Hành Phù</strong> (Tạp Hóa bán): niệm 2 giây rồi bay tới một chỗ ngẫu nhiên. Phù kéo được xuống ô phím, bấm phím là dùng.</p>
+          </div>
+        </article>
+
+<!-- Tiệm đồ (mở ở 3.4.2): gameplay/12 §1.10zh; ô NPC gameplay/npc/080-hoi-thoai.md (8004 / 8005 / 8006), 060-hoi-thoai.md (6004 / 6005);
+             Bảo Khố: treasury.json general (Thăng Phẩm 300.000, Tái Tạo 100.000). -->
+<article class="gcard" id="tiem-do">
+          <h3>Tiệm đồ trong thành</h3>
+          <ul class="facts">
+            <li>Chu Quốc, Sở Quốc</li>
+            <li>Đồ trắng tới cấp 40</li>
+          </ul>
+          <p>Tiệm Vũ Khí, Trang Phục, Trang Sức đã mở. Hàng là đồ trắng như bản gốc, món cao hơn cấp 40 chưa bày. Bán lại cho tiệm được nửa giá.</p>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Tiệm</th><th>Chu Quốc</th><th>Sở Quốc</th></tr></thead>
+              <tbody>
+                <tr><td>Vũ Khí</td><td>(216, 202)</td><td>(203, 210)</td></tr>
+                <tr><td>Trang Phục</td><td>(178, 180)</td><td>(217, 201)</td></tr>
+                <tr><td>Trang Sức</td><td>(175, 178)</td><td>không có</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tip">Sở bán đồ cho người mới, Chu có hàng cấp cao hơn (vũ khí từ cấp 20 tới 40). Đồ trắng mua về tăng phẩm lên Xanh ở thợ rèn được. Bảo Khố bán Thăng Phẩm Thạch 300.000, Tái Tạo Thạch 100.000.</p>
+        <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Bảo Khố thôi bán Thăng Phẩm Thạch và Tái Tạo Thạch, có thêm tab Kim Nguyên Bảo (xem <a href="#bao-kho">Bảo Khố</a>).</p></div>
+</article>
+
+<!-- Bảo Khố + Kim Nguyên Bảo: treasury.json (open_tabs general + kim_nguyen_bao, kim_nguyen_bao_goods rỗng), treasure_thief.json
+     (kim_nguyen_bao_per_level 1 = cấp / 10, món quý 5 % túi 5), 37 §4.47, §4.48. -->
+<article class="gcard" id="bao-kho">
+  <h3>Bảo Khố, Kim Nguyên Bảo</h3>
+  <ul class="facts">
+    <li>Nút đầu hàng nút chức năng</li>
+    <li>Mua ở đâu cũng được</li>
+  </ul>
+  <p>Bảo Khố là cửa hàng bán bằng ngân lượng, mở ở bất cứ đâu, không cần tới NPC.</p>
+  <div class="v5note">
+    <p><span class="v5tag">Bản 5.0</span> Bảo Khố có hai tab:</p>
+    <ul>
+      <li><strong>Ngân Lượng:</strong> hàng như cũ, bỏ Tái Tạo Thạch và Thăng Phẩm Thạch (hai loại đá này xoá khỏi game, xem <a href="../trang-bi/#tang-pham">rèn đồ</a>).</li>
+      <li><strong>Kim Nguyên Bảo:</strong> tiền mới, chưa bán gì, hàng sẽ thêm sau.</li>
+    </ul>
+    <p><strong>Kim Nguyên Bảo</strong> chỉ có từ <a href="../hang-ngay/#trom-bao">Trộm Bảo Phi Tặc</a>: mỗi con bắt được cho cấp con trộm chia 10 (cấp 10 ra 1, cấp 15 ra 1,5, cấp 50 ra 5), và món quý có 5 % là túi 5 Kim Nguyên Bảo. Kim Nguyên Bảo khoá, không giao dịch; số đang có hiện ở hành trang.</p>
+  </div>
+</article>
+
+<article class="gcard" id="thuoc">
+          <h3>Thuốc tăng chỉ số 1 giờ</h3>
+          <ul class="facts">
+            <li>Rơi từ Tống Bảo Tiểu Yêu</li>
+            <li>Uống chung cả năm loại</li>
+          </ul>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Thuốc</th><th>Tác dụng</th></tr></thead>
+              <tbody>
+                <tr><td>Khí Mạch Đan</td><td>Khí Huyết tối đa +18 %</td></tr>
+                <tr><td>Chu Thiên Đơn</td><td>Pháp Lực tối đa +20 %</td></tr>
+                <tr><td>Tiêu Dao Tán</td><td>Ngoại Công +10 %</td></tr>
+                <tr><td>Kim Cang Tán</td><td>Ngoại Kháng +12 %</td></tr>
+                <tr><td>Tử Tâm Đơn</td><td>Nội Công +10 %</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul>
+            <li>Uống lại cùng loại thì đặt lại 1 giờ, không cộng dồn (Kim Cang Tán còn hạn thì không uống thêm được).</li>
+            <li>Chết không mất; giờ chỉ trôi khi đang trong game. Rê chuột lên biểu tượng trên thanh trạng thái để xem còn bao lâu.</li>
+            <li>Cùng nguồn: <strong>Tái Tạo Hoàn</strong> (hồi đầy Khí Huyết, Pháp Lực, chung thời gian chờ 30 giây với thuốc máu), <strong>Tử Sâm Đơn</strong> (thêm 2.000 tiềm năng).</li>
+          </ul>
+        <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Nghề <a href="../nghe/#luyen-don">Luyện Đơn</a> chế được thuốc hồi máu theo %, giải độc, tăng kháng, dùng xen với thuốc tiệm.</p></div>
+</article>
+
+<article class="gcard gpanel" id="thoi-tiet">
+          <div class="ghead">
+            <h3>Thời tiết</h3>
+            <ul class="facts">
+              <li>Mọi bản đồ, cùng lúc</li>
+              <li>Vòng 1 tiếng</li>
+              <li>Bật / tắt ở nút cạnh bản đồ góc</li>
+            </ul>
+          </div>
+          <figure class="gshot">
+            <img src="../../assets/img/huong-dan/thoi-tiet.jpg" width="760" height="570" loading="lazy" alt="Hoa đào rơi ở Đào Hoa Nguyên, cạnh cây đào nở hồng">
+            <figcaption>Hoa đào rơi ở Đào Hoa Nguyên</figcaption>
+          </figure>
+          <div class="gtext">
+            <ul>
+              <li>Mỗi tiếng: 45 phút trời quang, 5 phút hoa đào rơi, 5 phút lá thu, 2,5 phút mưa, 2,5 phút tuyết. Thứ tự đổi theo từng tiếng, mỗi tiếng đủ cả năm kiểu.</li>
+              <li>Mọi người chơi thấy cùng một thời tiết vào cùng một lúc, ở mọi bản đồ.</li>
+              <li>Thời tiết chỉ để ngắm, không đổi chỉ số hay tốc chạy.</li>
+            </ul>
+          </div>
+        </article>
+
+    </div>
+    <nav class="pnav" aria-label="Chủ đề khác"><a class="pnav__prev" href="../giao-dich-cong-dong/"><span>Trước</span><strong>Giao lưu và cộng đồng</strong></a><a class="pnav__all" href="../">Mục lục hướng dẫn</a><a class="pnav__next" href="../phim-tat/"><span>Tiếp</span><strong>Phím tắt</strong></a></nav>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="brand" href="../../"><img src="../../assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
+      <p class="foot__small">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+      <ul class="foot__soc" aria-label="Cộng đồng">
+        <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener" aria-label="Nhóm Facebook"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v7h4v-7h3l1-4h-4V8.6c0-.4.3-.6 1-.6z"/></svg></a></li>
+        <li><a href="https://zalo.me/g/myanfowt9xdyzkwyo1mq" target="_blank" rel="noopener" aria-label="Nhóm Zalo"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5L5 21l3.6-1.8c1.1.3 2.2.4 3.4.4 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/><path class="soc__cut" d="M8.5 9h6.5l-6.5 6h6.5"/></svg></a></li>
+        <li><a href="https://discord.gg/RQDAqRUQ5X" target="_blank" rel="noopener" aria-label="Discord"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 5.6A16 16 0 0015.4 4.4l-.5 1a14.6 14.6 0 00-5.8 0l-.5-1a16 16 0 00-3.9 1.2C2.2 9.3 1.5 13 1.8 16.6a16 16 0 004.8 2.4l1-1.6c-.6-.2-1.1-.5-1.6-.8l.4-.3a11.3 11.3 0 009.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 004.8-2.4c.4-4.2-.6-7.9-2.9-11zM8.7 14.4c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9zm6.6 0c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9z"/></svg></a></li>
+      </ul>
+    </div>
+    <ul class="foot__links">
+      <li><a href="../../">Trang chủ: tải game</a></li>
+      <li><a href="../../huong-dan/">Hướng dẫn: mục lục mọi chủ đề</a></li>
+      <li><a href="../../phien-ban/">Phiên bản: mỗi bản có gì mới</a></li>
+      <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook: góp ý, báo lỗi</a></li>
+    </ul>
+    <p class="foot__small foot__legal">
+      Dự án phục dựng phi thương mại của người hâm mộ, làm để học tập và lưu giữ kí ức.
+      Tên gọi, hình ảnh và tài nguyên gốc của Chiến Quốc thuộc bản quyền của chủ sở hữu.
+    </p>
+  </div>
+</footer>
+
+<script src="../../js/guide.js" defer></script>
+</body>
+</html>
