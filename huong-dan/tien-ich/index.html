@@ -141,7 +141,9 @@
 </article>
 
 <!-- Bảo Khố + Kim Nguyên Bảo: treasury.json (open_tabs general + kim_nguyen_bao, kim_nguyen_bao_goods rỗng), treasure_thief.json
-     (kim_nguyen_bao_per_level 1 = cấp / 10, món quý 5 % túi 5), 37 §4.47, §4.48. -->
+     (kim_nguyen_bao_per_level 1 = cấp / 10, món quý 5 % túi 5), 37 §4.47, §4.48.
+     Bản 5.1 (repo game 83166fb8): kim_nguyen_bao_goods ngan_luong_bao 25, the_tu_danh 4, the_tu_danh_5 18 (không khoá);
+     custom_items.json remaster/ngan_luong_bao silver_bag {cash_per_level 2000, bands 66 % 60-100, 28 % 100-150, 6 % 150-300}, 37 §4.66, 58 §5. -->
 <article class="gcard" id="bao-kho">
   <h3>Bảo Khố, Kim Nguyên Bảo</h3>
   <ul class="facts">
@@ -153,10 +155,25 @@
     <p><span class="v5tag">Bản 5.0</span> Bảo Khố có hai tab:</p>
     <ul>
       <li><strong>Ngân Lượng:</strong> hàng như cũ, bỏ Tái Tạo Thạch và Thăng Phẩm Thạch (hai loại đá này xoá khỏi game, xem <a href="../trang-bi/#tang-pham">rèn đồ</a>).</li>
-      <li><strong>Kim Nguyên Bảo:</strong> tiền mới, chưa bán gì, hàng sẽ thêm sau.</li>
+      <li><strong>Kim Nguyên Bảo:</strong> hàng trả bằng Kim Nguyên Bảo (bảng dưới, từ bản 5.1).</li>
     </ul>
     <p><strong>Kim Nguyên Bảo</strong> chỉ có từ <a href="../hang-ngay/#trom-bao">Trộm Bảo Phi Tặc</a>: mỗi con bắt được cho cấp con trộm chia 10 (cấp 10 ra 1, cấp 15 ra 1,5, cấp 50 ra 5), và món quý có 5 % là túi 5 Kim Nguyên Bảo. Kim Nguyên Bảo khoá, không giao dịch; số đang có hiện ở hành trang.</p>
   </div>
+  <h4>Tab Kim Nguyên Bảo <span class="v5tag">Bản 5.1</span></h4>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Hàng</th><th>Giá</th><th>Dùng</th></tr></thead>
+      <tbody>
+        <tr><td>Ngân Lượng Bao</td><td>25</td><td class="wrap-cell">Mở ra ngân lượng theo cấp lúc mua</td></tr>
+        <tr><td>Thẻ Tự Đánh (1 giờ)</td><td>4</td><td class="wrap-cell">Cộng 1 giờ vào quỹ <a href="../tu-danh/">Tự Đánh</a></td></tr>
+        <tr><td>Thẻ Tự Đánh (5 giờ)</td><td>18</td><td class="wrap-cell">Cộng 5 giờ vào quỹ Tự Đánh</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Hàng tab này <strong>không khoá</strong>: giao dịch, tặng, bày bán được.</li>
+    <li><strong>Ngân Lượng Bao</strong>: tiền khi mở bằng cấp của người mua lúc mua × 2.000 (trung bình), nhân hệ số may rủi: 66 % ra 60 tới 100 %, 28 % ra 100 tới 150 %, 6 % ra 150 tới 300 %. Cấp 50: 60.000 tới 300.000 lượng, trung bình khoảng 100.000. Túi tính theo cấp lúc mua, không theo cấp người mở; rê chuột lên túi để xem khoảng tiền. Mỗi túi một ô, không cộng chồng. Tiệm điểm sư môn cũng bán túi này giá 5 điểm (bản khoá).</li>
+  </ul>
 </article>
 
 <article class="gcard" id="thuoc">
@@ -208,7 +225,7 @@
         </article>
 
     </div>
-    <nav class="pnav" aria-label="Chủ đề khác"><a class="pnav__prev" href="../giao-dich-cong-dong/"><span>Trước</span><strong>Giao lưu và cộng đồng</strong></a><a class="pnav__all" href="../">Mục lục hướng dẫn</a><a class="pnav__next" href="../phim-tat/"><span>Tiếp</span><strong>Phím tắt</strong></a></nav>
+    <nav class="pnav" aria-label="Chủ đề khác"><a class="pnav__prev" href="../giao-dich-cong-dong/"><span>Trước</span><strong>Giao lưu và cộng đồng</strong></a><a class="pnav__all" href="../">Mục lục hướng dẫn</a><a class="pnav__next" href="../tu-danh/"><span>Tiếp</span><strong>Tự Đánh</strong></a></nav>
   </div>
 </main>
 

@@ -5,11 +5,11 @@ Trang tĩnh: HTML + CSS + hai file JS nhỏ (ảnh trượt, trang hướng dẫ
 
 ```
 ├── index.html          trang chủ: đầu trang .hero3 (ảnh Đào Hoa, cánh hoa bay, hàng nút cộng đồng .hero3__comm, dải số liệu),
-│                       "Bản 5.0 đã phát <ngày>" #ban-5 (dấu triện .seal, lưới .bento ảnh bản thử, chip), video #trailer + 3 thẻ ảnh,
+│                       "Bản 5.0 đã phát <ngày>" #ban-5 (dấu triện .seal, dòng .v5sec__more bản 5.1, lưới .bento ảnh bản thử, chip 5.1 + 5.0), video #trailer + 3 thẻ ảnh,
 │                       "Có gì trong game" #co-gi (lưới .feats + chip), "Bảy môn phái" #mon-phai, "Lời hứa" + ảnh trượt #loi-hua,
 │                       "Tham gia cộng đồng" #cong-dong (.comm: Facebook, Zalo, Discord), "Cài đặt 3 bước" #cai-dat, "Lộ trình" #lo-trinh
 ├── huong-dan/
-│   ├── index.html        mục lục: ô tìm nhanh, dải "Bản 5.0 có gì mới" .v5strip, 15 thẻ chủ đề .topics; script trong <head> chuyển
+│   ├── index.html        mục lục: ô tìm nhanh, dải "Bản 5.1 / 5.0 có gì mới" .v5strip, 16 thẻ chủ đề .topics; script trong <head> chuyển
 │   │                     link cũ kiểu huong-dan/#tai-tao sang trang con chứa mục đó (bảng M: id mục -> trang; T: id tab cũ -> trang)
 │   └── <chủ đề>/index.html   mỗi chủ đề một trang con (bảng ở §Hướng dẫn): đầu trang .ghero, hàng mục dính .ptoc, các mục .gcard,
 │                         chuyển trang trước / sau .pnav
@@ -40,14 +40,14 @@ Trang tĩnh: HTML + CSS + hai file JS nhỏ (ảnh trượt, trang hướng dẫ
 ## Hướng dẫn: các trang con
 
 Tách từ trang một tab cũ ngày 2026-10-08 (nhánh `web-5.0`). Nội dung mục cũ giữ nguyên, chỉ đổi đường dẫn (`../../assets/`),
-link chéo trang và chữ "bản kế tiếp" của 4.2 (đã phát). Chỗ chỉ áp dụng từ 5.0 ghi nhãn `.v5tag` "Bản 5.0" hoặc khối `.v5note`;
+link chéo trang và chữ "bản kế tiếp" của 4.2 (đã phát). Chỗ chỉ áp dụng từ 5.0 ghi nhãn `.v5tag` "Bản 5.0" hoặc khối `.v5note` (bản 5.1 dùng cùng lớp, chữ "Bản 5.1");
 mục cũ có thay đổi ở 5.0 có khối `.v5note` cuối phần chữ và chấm xanh trên chip `.ptoc` / `.topic__links` (class `is-v5`).
 
 | Trang `huong-dan/…/` | Mục (id) |
 |---|---|
 | `bat-dau` | `cai-dat-game`, `tan-thu` (bỏ qua Tân Thủ, 5.0) |
-| `hang-ngay` | `su-mon`, `vuong-bo-dau`, `phong-yeu-kinh`, `tong-bao`, `trom-bao`, `cau-ca` |
-| `pho-ban` | `co-mo`, `thanh-kieu` (+ `nang-set`) |
+| `hang-ngay` | `su-mon`, `vuong-bo-dau`, `phong-yeu-kinh`, `tong-bao`, `trom-bao`, `cau-ca`, `diem-danh` (5.1) |
+| `pho-ban` | `co-mo`, `thanh-kieu` (+ `nang-set`, `tai-tao-set` và `tiem-tu-kim` 5.1) |
 | `nhiem-vu` | `ct-tong-quan`, `ct-vet-nut`, `ct-hoi-5` tới `ct-hoi-10`, `ho-phu` |
 | `mon-phai` | `dao-hoa`, `thuc-son`, `cam-ve-quan`, `duong-mon`, `mao-son`, `con-luan`, `van-mong` |
 | `ky-nang` | `cach-hoc`, `chieu-45-50` (5.0), `ki-nang-giang-ho`, `tu-vi` |
@@ -59,6 +59,7 @@ mục cũ có thay đổi ở 5.0 có khối `.v5note` cuối phần chữ và c
 | `bay-ban` (5.0) | `bay-sap`, `mua-hang`, `kenh-giao-dich` |
 | `giao-dich-cong-dong` | `to-doi`, `giao-dich`, `tang-qua`, `bang-huu`, `kenh-chat`, `cong-dong` |
 | `tien-ich` | `dong-ho`, `dich-tram`, `tiem-do`, `bao-kho` (Kim Nguyên Bảo, 5.0), `thuoc`, `thoi-tiet` |
+| `tu-danh` (5.1) | `tu-danh-bat`, `tu-danh-gio`, `tu-danh-thiet-lap`, `tu-danh-luat` (nguồn: `auto_hunt.json`, `client/ui/auto_hunt_panel.gd` repo game) |
 | `phim-tat` | `ds-phim` (nguồn: `godot/client/ui/shortcuts_panel.gd` repo game) |
 
 **Thêm mục** vào trang có sẵn: chép một `<article class="gcard" id="…">` (chỉ chữ) hoặc `gcard gpanel` (chữ trái, ảnh phải:
@@ -89,7 +90,7 @@ Mở thẳng `index.html` bằng trình duyệt cũng chạy (mọi đường d�
 | Đổi link tải launcher | `index.html`: **hai** nút có link `ChienQuocRemaster-Launcher-…zip` (đầu trang và mục `#cai-dat`) |
 | Đổi cỡ file / dung lượng | `index.html`: dòng `hero__meta`, bước 1 và 2 của `#cai-dat`, bảng `.spec` |
 | Đổi tính năng nổi bật ở trang chủ | lưới `.feats` + hàng chip `.chips` của `#co-gi` (thẻ `feats__wide` chiếm hai cột; nguồn: `documents/tong-quan/00-tong-quan.md`, `news.json` của repo game). Thẻ chưa có ảnh (Thành Kiều, câu cá) vẽ bằng CSS (`feat--art`); có ảnh thì đổi sang `<img>` như thẻ khác |
-| **Đổi ngày phát 5.0** | sửa `"5.0": "2026-10-09"` trong bảng `RELEASES` của `js/release.js` (yyyy-mm-dd): mọi chỗ hiện ngày (nhãn đầu trang chủ, `.v5sec__kicker`, mốc 5.0 ở `#lo-trinh`, thẻ `#v5-0` trang Phiên bản, dải `.v5strip` mục lục hướng dẫn, khối `.v5note--page` của các trang 5.0 và trang Trang bị) là `<time data-rel="5.0">` và lấy ngày ở đó. Chữ ngày viết sẵn trong HTML chỉ hiện khi tắt JS (và cho máy đọc trang); đồng bộ cùng lúc bằng một lệnh, vd sang 10/10/2026: `grep -rl 'data-rel="5.0"' --include=*.html . \| xargs sed -i 's#"2026-10-09"#"2026-10-10"#; s#9/10/2026#10/10/2026#'` (chuỗi `9/10/2026` chỉ có ở các thẻ đó), kiểm lại bằng `grep -rn 'data-rel="5.0"' --include=*.html .`. Trang nào có `<time data-rel>` phải nạp `js/release.js` (cuối `<body>`) |
+| **Đổi ngày phát 5.0** (5.1 tương tự, khoá `"5.1"`, thẻ `<time data-rel="5.1">`: nhãn đầu trang chủ, `.v5sec__more`, thẻ `#v5-1`, dải 5.1 mục lục, trang `tu-danh`) | sửa `"5.0": "2026-10-09"` trong bảng `RELEASES` của `js/release.js` (yyyy-mm-dd): mọi chỗ hiện ngày (nhãn đầu trang chủ, `.v5sec__kicker`, mốc 5.0 ở `#lo-trinh`, thẻ `#v5-0` trang Phiên bản, dải `.v5strip` mục lục hướng dẫn, khối `.v5note--page` của các trang 5.0 và trang Trang bị) là `<time data-rel="5.0">` và lấy ngày ở đó. Chữ ngày viết sẵn trong HTML chỉ hiện khi tắt JS (và cho máy đọc trang); đồng bộ cùng lúc bằng một lệnh, vd sang 10/10/2026: `grep -rl 'data-rel="5.0"' --include=*.html . \| xargs sed -i 's#"2026-10-09"#"2026-10-10"#; s#9/10/2026#10/10/2026#'` (chuỗi `9/10/2026` chỉ có ở các thẻ đó, gồm cả thẻ `data-rel="5.1"` cùng ngày: đổi riêng một bản thì lọc theo `data-rel`), kiểm lại bằng `grep -rn 'data-rel="5.0"' --include=*.html .`. Trang nào có `<time data-rel>` phải nạp `js/release.js` (cuối `<body>`) |
 | Khi phát 5.0 (đã làm 2026-10-08 trên nhánh `web-5.0-phat`, chờ máy chủ lên 5.0 rồi gộp `main`) | trang chủ: nhãn "Sắp ra mắt" ở `.hero2__news` và `.v5sec__kicker`, câu "máy chủ đang chạy bản 4.2" ở `.hero3__meta`, mốc cuối `#lo-trinh` (bỏ `is-next`, ghi ngày); hướng dẫn: câu "sắp ra mắt" trong khối `.v5note--page` của các trang 5.0, dải `.v5strip` ở mục lục, rồi gộp luật 5.0 vào chữ chính và bỏ luật 4.2 cũ trong các khối `.v5note`; trang Phiên bản: xem comment trên thẻ `#v5-0`. Đối chiếu số với tag 5.0.0 trước khi bỏ nhãn |
 | Khi phát bản mới (4.0 đã làm 2026-10-06) | trang chủ: nhãn "Sắp ra mắt" ở `.hero2__news`, `.next4__label`, mốc cuối `#lo-trinh`, nhãn "Bản 4.0" trên thẻ `.feats`, thẻ quà tân thủ (mã `welcome` đổi quà, bỏ `welcome2`); trang Phiên bản: xem comment trên thẻ `#v4-0` |
 | Đổi link nhóm cộng đồng | trang chủ: hàng `.hero3__comm`, mục `#cong-dong`, chân trang `.foot__soc` và dòng "Nhóm Facebook"; hướng dẫn: chân trang mọi trang, mục `#cong-dong` ở `huong-dan/giao-dich-cong-dong/` (nguồn: `godot/data/custom/about.json` repo game, khoá `community.url`, `zalo.url`, `discord.url`) |
@@ -246,3 +247,11 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   trong ảnh chỉ là ví dụ". Kiểm: 0 link / neo gãy, 0 id trùng (18 trang), 0 tràn trang ở 375 / 360 px (`tmp/pv/w.html`, phần tử
   báo chỉ là chip hàng `.ptoc` cuộn ngang), JS điền ngày thử bằng `tmp/pv/rel.html` (chữ dự phòng "SAI" thành 9/10/2026).
   Ảnh kiểm: `tmp/pv5p/`.
+- 2026-10-09: bản 5.1 đã phát (máy chủ lên 5.1.0 cùng ngày 5.0). Số đọc ở repo game commit `83166fb8` ("Phát 5.1.0"), tài liệu game
+  62 §Sau 5.0.0, 37 §4.62-§4.66, 58 §5, nhật ký (321)-(330). `RELEASES["5.1"]`; thẻ `#v5-1` ở Phiên bản; trang chủ: nhãn đầu trang, "đang
+  chạy bản 5.1", dòng `.v5sec__more` + chip 5.1 trong `#ban-5`, mốc cuối lộ trình "Bản 5.0 và 5.1". Hướng dẫn: trang mới `tu-danh` (giữa
+  Tiện ích và Phím tắt, chưa có ảnh), mục mới `hang-ngay/#diem-danh` (điểm danh, bảng vòng quay), `pho-ban/#tai-tao-set`, `#tiem-tu-kim`;
+  sửa số: bảng thẻ Thành Kiều (trần Tinh mỗi thẻ 1 / 2 / 3, độc đắc Thường túi 540.000, Trung thành Cao), Cổ Mộ (Sơ x2 ở Thường, Cao x2 hai
+  thẻ + 3 Bùa May Mắn ở Địa Ngục, tiệm 600 / 200 / 150 / 40 / 15), nâng set 20 %, truy bắt 5 lượt không dồn, Cao Địa Ngục 30 / 18 %,
+  Trộm Bảo Sơ 10 % / Tinh Thạch 50 %, Thái Dã Sơ 2 / ngày, tiệm sư môn (Sơ 10, Ngân Lượng Bao 5), Bảo Khố tab Kim Nguyên Bảo, Alt+A, ghi
+  chú Thục Sơn / Vân Mộng / bảo thú. Kiểm: 0 link / neo gãy, 0 id trùng (19 trang). Chưa kiểm khổ 375 px trên trình duyệt.

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tự Đánh · Hướng dẫn Chiến Quốc Remaster</title>
+  <meta name="description" content="Tự Đánh (Alt+A): nhân vật tự đánh quái thường quanh chỗ bật, tự uống thuốc, nhặt đồ. Miễn phí 30 phút mỗi ngày, thêm giờ bằng Thẻ Tự Đánh, tối đa 8 giờ mỗi ngày.">
+  <meta name="theme-color" content="#0a1330">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/tu-danh/">
+  <meta property="og:title" content="Tự Đánh · Hướng dẫn Chiến Quốc Remaster">
+  <meta property="og:description" content="Tự Đánh (Alt+A): nhân vật tự đánh quái thường quanh chỗ bật, tự uống thuốc, nhặt đồ. Miễn phí 30 phút mỗi ngày, thêm giờ bằng Thẻ Tự Đánh, tối đa 8 giờ mỗi ngày.">
+  <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- Trang con hướng dẫn "Tự Đánh" (bản 5.1, viết 2026-10-09). Nguồn (repo game, commit 83166fb8 "Phát 5.1.0"):
+     godot/data/custom/auto_hunt.json (free_min 30, daily_cap_min 480, cards 60 / 300 phút, radius 8 / 4-15, potion hp 50 mp 30
+     min 10 max 90 step 5, low_hp_pct 20), treasury.json kim_nguyen_bao_goods (thẻ 4 / 18, không khoá), client/ui/auto_hunt_panel.gd
+     (chữ trên bảng), client/ui/auto_hunt.gd (vòng nghĩ, lý do dừng), gateway/auto_hunt_service.gd (cấm map, quái đặc biệt,
+     không x2), shortcuts_panel.gd KEYS (Alt+A); tài liệu 58 §5, nhật ký 2026-10-09 (330). Chưa có ảnh chụp trong game. -->
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="brand" href="../../" aria-label="Chiến Quốc Remaster, về trang chủ">
+      <img src="../../assets/favicon.svg" alt="" width="32" height="32">
+      <span>Chiến Quốc <em>Remaster</em></span>
+    </a>
+    <nav class="bar__nav">
+      <a class="bar__link" href="../" aria-current="page">Hướng dẫn</a>
+      <a class="bar__link" href="../../phien-ban/">Phiên bản</a>
+      <a class="btn btn--gold btn--sm" href="../../#cai-dat">Tải game</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="ghero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Đường dẫn"><a href="../">Hướng dẫn</a><span aria-hidden="true">/</span><span>Tự Đánh</span></nav>
+      <div class="ghero__row">
+        <span class="ghero__icon"><svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v3M12 17v3M4 12h3M17 12h3"/><circle cx="12" cy="12" r="2"/></svg></span>
+        <div>
+          <h1 class="ghero__title">Tự Đánh <span class="v5tag v5tag--lg">Bản 5.1</span></h1>
+          <p class="ghero__lead">Đứng ở bãi quái, bấm <kbd>Alt+A</kbd>: nhân vật tự đánh quái thường quanh đó, tự uống thuốc, nhặt đồ. Mỗi ngày miễn phí 30 phút.</p>
+        </div>
+      </div>
+      <div class="v5note v5note--page"><p><span class="v5tag">Bản 5.1</span> Tính năng mới của bản 5.1, đã phát <time data-rel="5.1" datetime="2026-10-09">9/10/2026</time>.</p></div>
+    </div>
+  </section>
+
+  <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
+      <a class="is-v5" href="#tu-danh-bat">Bật, dừng</a>
+      <a class="is-v5" href="#tu-danh-gio">Giờ và Thẻ Tự Đánh</a>
+      <a class="is-v5" href="#tu-danh-thiet-lap">Thiết lập</a>
+      <a class="is-v5" href="#tu-danh-luat">Ở đâu, đánh gì</a>
+    </nav></div>
+
+  <div class="wrap gbody">
+    <div class="guide">
+
+<article class="gcard" id="tu-danh-bat">
+  <h3>Bật và dừng</h3>
+  <ul class="facts">
+    <li class="v5">Bản 5.1</li>
+    <li><kbd>Alt+A</kbd> hoặc nút Tự Đánh</li>
+    <li>Mọi phái</li>
+  </ul>
+  <ul>
+    <li>Bấm <kbd>Alt+A</kbd> hoặc nút <strong>Tự Đánh</strong> trên hàng nút chức năng (ngay trước Cài Đặt) để mở bảng thiết lập.</li>
+    <li>Đứng giữa bãi quái, chỉnh thiết lập rồi bấm <strong>Bắt đầu tại đây</strong>. Chỗ đang đứng là <strong>điểm bật</strong>: nhân vật chỉ tìm quái trong bán kính quanh điểm này, hết quái thì đi về đây chờ. Vòng bán kính hiện mờ trên mặt đất.</li>
+    <li>Đang chạy, ngay trên hàng ô F1 tới F10 có dải chữ: giờ còn chạy được, số con đã diệt, kinh nghiệm và ngân lượng kiếm được từ lúc bật.</li>
+    <li>Muốn dừng: bấm <kbd>Alt+A</kbd> lần nữa hoặc nút <strong>Dừng</strong> trên bảng.</li>
+    <li>Tự dừng khi: nhân vật tử trận (không tự hồi sinh), sang bản đồ khác, mất kết nối, hết giờ, đạt trần giờ trong ngày. Dừng vì lý do gì cũng có dòng báo.</li>
+  </ul>
+  <p class="tip">Thiết lập được nhớ riêng cho từng nhân vật trên máy bạn, lần sau mở bảng là có sẵn.</p>
+</article>
+
+<article class="gcard" id="tu-danh-gio">
+  <h3>Giờ miễn phí và Thẻ Tự Đánh</h3>
+  <ul class="facts">
+    <li class="v5">Bản 5.1</li>
+    <li>30 phút miễn phí mỗi ngày</li>
+    <li>Tối đa 8 giờ mỗi ngày</li>
+  </ul>
+  <ul>
+    <li>Mỗi ngày có <strong>30 phút miễn phí</strong>, làm mới lúc 23:00 như việc hằng ngày. Phút miễn phí không dùng hết thì mất, không để dành.</li>
+    <li>Thêm giờ bằng <strong>Thẻ Tự Đánh</strong>: dùng thẻ trong hành trang (hoặc nút <strong>Dùng Thẻ Tự Đánh</strong> trên bảng) là cộng giờ vào <strong>quỹ giờ</strong>. Quỹ giờ không mất khi qua ngày.</li>
+    <li>Mỗi ngày tự đánh tối đa <strong>8 giờ</strong>, tính cả 30 phút miễn phí. Đạt trần thì dừng, quỹ giờ còn lại để hôm sau.</li>
+    <li>Giờ chỉ trôi khi đang tự đánh và đang online, trừ theo từng phút: miễn phí trước, hết miễn phí mới trừ quỹ. Tắt giữa chừng thì phần lẻ của phút đó vẫn giữ, bật lại trong lần chơi đó dùng tiếp.</li>
+  </ul>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Thẻ</th><th>Cộng vào quỹ</th><th>Giá</th></tr></thead>
+      <tbody>
+        <tr><td>Thẻ Tự Đánh (1 giờ)</td><td>60 phút</td><td>4 Kim Nguyên Bảo</td></tr>
+        <tr><td>Thẻ Tự Đánh (5 giờ)</td><td>300 phút</td><td>18 Kim Nguyên Bảo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Thẻ chỉ bán ở <a href="../tien-ich/#bao-kho">Bảo Khố</a>, tab Kim Nguyên Bảo (nút <strong>Mua...</strong> trên bảng Tự Đánh mở thẳng Bảo Khố). Thẻ <strong>không khoá</strong>: giao dịch, tặng, bày bán được. Kim Nguyên Bảo rơi từ <a href="../hang-ngay/#trom-bao">Trộm Bảo Phi Tặc</a>.</p>
+</article>
+
+<article class="gcard" id="tu-danh-thiet-lap">
+  <h3>Bảng thiết lập</h3>
+  <ul class="facts">
+    <li class="v5">Bản 5.1</li>
+    <li>Đầu bảng: giờ miễn phí, đã dùng, trần</li>
+  </ul>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Dòng</th><th>Chỉnh được</th></tr></thead>
+      <tbody>
+        <tr><td>Bán kính quanh điểm bật</td><td class="wrap-cell">8 ô, chỉnh từ 4 tới 15 ô</td></tr>
+        <tr><td>Chiêu dùng (theo ô)</td><td class="wrap-cell">Đánh dấu các ô phím có chiêu muốn dùng, nhân vật ra lần lượt theo thứ tự hàng phím, chiêu nào hồi xong thì dùng. Chưa gán chiêu nào thì chỉ đánh thường. Chiêu phải chọn chỗ trên đất không tự dùng.</td></tr>
+        <tr><td>Uống thuốc máu dưới</td><td class="wrap-cell">50 %, chỉnh từ 10 tới 90 % (bước 5)</td></tr>
+        <tr><td>Uống thuốc pháp lực dưới</td><td class="wrap-cell">30 %, chỉnh từ 10 tới 90 % (bước 5)</td></tr>
+        <tr><td>Nhặt đồ</td><td class="wrap-cell">Ngân lượng, Thuốc, Khác (bật tắt từng loại); Trang bị: Trắng trở lên, Xanh trở lên hoặc Không nhặt</td></tr>
+        <tr><td>Túi đầy</td><td class="wrap-cell">Thôi nhặt, đánh tiếp; hoặc Về thành rồi dừng</td></tr>
+        <tr><td>Hết thuốc, máu dưới 20 %</td><td class="wrap-cell">Về thành bằng Tín Vật rồi dừng (không chỉnh)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tip">Thuốc lấy trong hành trang, không cần kéo vào ô phím. Mang đủ thuốc máu: hết thuốc mà máu xuống dưới 20 % thì nhân vật niệm Tín Vật về thành rồi dừng.</p>
+</article>
+
+<article class="gcard" id="tu-danh-luat">
+  <h3>Bật được ở đâu, đánh con nào</h3>
+  <ul class="facts">
+    <li class="v5">Bản 5.1</li>
+    <li>Bản đồ dã ngoại có quái thường</li>
+  </ul>
+  <ul>
+    <li>Bật được ở mọi bản đồ dã ngoại đang mở có quái thường, kể cả Tân Thủ Thôn.</li>
+    <li>Không bật được: trong thành, ở căn cứ môn phái, trong phó bản (Cổ Mộ, Thành Kiều), bản đồ sự kiện, Phong Yêu Kính, lúc đang truy bắt, đang tỉ thí hoặc đang tử trận.</li>
+    <li>Chỉ đánh quái thường. Không đánh boss, Trộm Bảo Phi Tặc, Tống Bảo Tiểu Yêu, Bảo Bảo, Lữ Bố, và bỏ qua quái người khác đang đánh.</li>
+    <li>Kinh nghiệm, ngân lượng và đồ rơi như đánh tay. Riêng giờ nhân đôi kinh nghiệm của Chiến Quốc Lệnh không áp khi đang tự đánh (giờ nhân đôi cũng không trôi lúc đó); Khí Vận vẫn áp.</li>
+  </ul>
+</article>
+
+    </div>
+    <nav class="pnav" aria-label="Chủ đề khác"><a class="pnav__prev" href="../tien-ich/"><span>Trước</span><strong>Tiện ích</strong></a><a class="pnav__all" href="../">Mục lục hướng dẫn</a><a class="pnav__next" href="../phim-tat/"><span>Tiếp</span><strong>Phím tắt</strong></a></nav>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="brand" href="../../"><img src="../../assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
+      <p class="foot__small">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+      <ul class="foot__soc" aria-label="Cộng đồng">
+        <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener" aria-label="Nhóm Facebook"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v7h4v-7h3l1-4h-4V8.6c0-.4.3-.6 1-.6z"/></svg></a></li>
+        <li><a href="https://zalo.me/g/myanfowt9xdyzkwyo1mq" target="_blank" rel="noopener" aria-label="Nhóm Zalo"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5L5 21l3.6-1.8c1.1.3 2.2.4 3.4.4 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/><path class="soc__cut" d="M8.5 9h6.5l-6.5 6h6.5"/></svg></a></li>
+        <li><a href="https://discord.gg/RQDAqRUQ5X" target="_blank" rel="noopener" aria-label="Discord"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 5.6A16 16 0 0015.4 4.4l-.5 1a14.6 14.6 0 00-5.8 0l-.5-1a16 16 0 00-3.9 1.2C2.2 9.3 1.5 13 1.8 16.6a16 16 0 004.8 2.4l1-1.6c-.6-.2-1.1-.5-1.6-.8l.4-.3a11.3 11.3 0 009.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 004.8-2.4c.4-4.2-.6-7.9-2.9-11zM8.7 14.4c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9zm6.6 0c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9z"/></svg></a></li>
+      </ul>
+    </div>
+    <ul class="foot__links">
+      <li><a href="../../">Trang chủ: tải game</a></li>
+      <li><a href="../../huong-dan/">Hướng dẫn: mục lục mọi chủ đề</a></li>
+      <li><a href="../../phien-ban/">Phiên bản: mỗi bản có gì mới</a></li>
+      <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook: góp ý, báo lỗi</a></li>
+    </ul>
+    <p class="foot__small foot__legal">
+      Dự án phục dựng phi thương mại của người hâm mộ, làm để học tập và lưu giữ kí ức.
+      Tên gọi, hình ảnh và tài nguyên gốc của Chiến Quốc thuộc bản quyền của chủ sở hữu.
+    </p>
+  </div>
+</footer>
+
+<script src="../../js/guide.js" defer></script>
+<script src="../../js/release.js" defer></script>
+</body>
+</html>

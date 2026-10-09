@@ -57,6 +57,7 @@
   <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
       <a class="is-v5" href="#co-mo">Cổ Mộ</a>
       <a class="is-v5" href="#thanh-kieu">Thành Kiều</a>
+      <a class="is-v5" href="#nang-set">Tử Kim Tinh</a>
     </nav></div>
 
   <div class="wrap gbody">
@@ -112,13 +113,13 @@
               <table>
                 <thead><tr><th>Thẻ</th><th>Thường (1 nhịp)</th><th>Khó (2 nhịp)</th><th>Địa Ngục (3 nhịp)</th></tr></thead>
                 <tbody>
-                  <tr><td>Sơ Cấp Đoạn Thạch</td><td>4&nbsp;viên · 2/16&nbsp;· 12&nbsp;%</td><td></td><td></td></tr>
+                  <tr><td>Sơ Cấp Đoạn Thạch</td><td>2&nbsp;viên · 2/16&nbsp;· 12&nbsp;%</td><td></td><td></td></tr>
                   <tr><td>Trung Cấp Đoạn Thạch</td><td>3&nbsp;viên · 2/16&nbsp;· 12&nbsp;%</td><td>4/16&nbsp;· 44&nbsp;%</td><td></td></tr>
-                  <tr><td>Cao Cấp Đoạn Thạch</td><td></td><td>3&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>4/16&nbsp;· 58&nbsp;%</td></tr>
+                  <tr><td>Cao Cấp Đoạn Thạch</td><td></td><td>3&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>2&nbsp;viên · 2/16&nbsp;· 33&nbsp;%</td></tr>
                   <tr><td>Ngân lượng (thay Thăng Phẩm Thạch)</td><td>180.000 · 1/16&nbsp;· 6&nbsp;%</td><td>270.000 · 1/16&nbsp;· 12&nbsp;%</td><td>90.000 · 2/16&nbsp;· 33&nbsp;%</td></tr>
                   <tr><td>Thẻ Thần Thú (ngẫu nhiên)</td><td>4/16&nbsp;· 25&nbsp;%</td><td>4/16&nbsp;· 44&nbsp;%</td><td>1/16&nbsp;· 18&nbsp;%</td></tr>
                   <tr><td><a href="../trang-bi/#bua-ma-thuat">Bùa Ma Thuật</a></td><td></td><td></td><td>1/16&nbsp;· 18&nbsp;%</td></tr>
-                  <tr><td><a href="../trang-bi/#bua-may-man">Bùa May Mắn</a></td><td></td><td></td><td>1/16&nbsp;· 18&nbsp;%</td></tr>
+                  <tr><td><a href="../trang-bi/#bua-may-man">Bùa May Mắn</a></td><td></td><td></td><td>3/16&nbsp;· 46&nbsp;%</td></tr>
                   <tr><td>Pháp bảo 0 sao (ngẫu nhiên)</td><td>2/16&nbsp;· 12&nbsp;%</td><td>2/16&nbsp;· 23&nbsp;%</td><td>2/16&nbsp;· 33&nbsp;%</td></tr>
                   <tr><td>Tinh Thạch</td><td>2&nbsp;viên cấp 1 · 1/16&nbsp;· 6&nbsp;%</td><td></td><td>cấp 3 · 1/16&nbsp;· 18&nbsp;%</td></tr>
                   <tr><td>Túi ngân lượng</td><td>200.000 · 1/16&nbsp;· 6&nbsp;%</td><td>1.500.000 · 1/16&nbsp;· 12&nbsp;%</td><td>1.400.000 · 1/16&nbsp;· 18&nbsp;%</td></tr>
@@ -131,9 +132,12 @@
             <p>Ít thẻ hơn nhưng mỗi thẻ nhiều đồ hơn: tính trung bình mỗi người, lượng đồ gần như bản 4.1 (Khó bớt chút Trung Cấp, Thẻ Thần Thú và pháp bảo).</p>
             <!-- Bảng bản 4.1 (tag 4.1.0 repo game, dungeon_gumu.json): Địa Ngục beast 1 + bua_may_man 1 (từ 4.1, trước beast 2).
                  Cơ hội: 1 - C(16 - k, lượt) / C(16, lượt). -->
-            <!-- Tiệm: dungeon_gumu.json shop (bản 5.0, int-5.0: bỏ thang_pham / tai_tao; thẻ đá thành cash90000 / cash30000 = n x 90.000 / 30.000) -->
-            <p class="tip">Bùa Ma Thuật, thú cưỡi Quý, Đỉnh Cấp Đoạn Thạch và Tinh Thạch cấp 3 chỉ Địa Ngục mới ra. Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt. Điểm phó bản đổi ở Tiệm Cổ Mộ của Xa Phu: Thẻ Thần Thú chọn con 300, pháp bảo 0 sao chọn loại 100, Sơ Cấp Đoạn Thạch (khoá) 100, Tinh Thạch cấp 1 chọn loại 25, Thú Hồn 10.</p>
+            <!-- Tiệm: dungeon_gumu.json shop (bản 5.0, int-5.0: bỏ thang_pham / tai_tao; thẻ đá thành cash90000 / cash30000 = n x 90.000 / 30.000).
+                 Bản 5.1 (repo game 83166fb8, 37 §4.64 DS3a / DS6 / DS7): shop 600 / 200 / 150 / 40 / 15; Thường sell/0032 count 2 n 2;
+                 Địa Ngục sell/2032 count 2 n 2, bua_may_man 3. Cơ hội 3 nhịp: 1 - (1 - k / 16) ^ 3 (2/16: 33 %, 3/16: 46 %). -->
+            <p class="tip">Bùa Ma Thuật, thú cưỡi Quý, Đỉnh Cấp Đoạn Thạch và Tinh Thạch cấp 3 chỉ Địa Ngục mới ra. Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt. Điểm phó bản đổi ở Tiệm Cổ Mộ của Xa Phu: Thẻ Thần Thú chọn con 600, pháp bảo 0 sao chọn loại 150, Sơ Cấp Đoạn Thạch (khoá) 200, Tinh Thạch cấp 1 chọn loại 40, Thú Hồn 15.</p>
           <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Thẻ Thăng Phẩm Thạch thành thẻ ngân lượng (90.000 lượng mỗi viên); Tiệm Cổ Mộ bỏ Thăng Phẩm, Tái Tạo Thạch. Mỗi lượt có 2 <a href="../nghe/#bao-ruong">Bảo Rương</a> Tinh Xảo, mở bằng Chìa Khoá Vàng.</p></div>
+          <div class="v5note"><p><span class="v5tag">Bản 5.1</span> Tiệm Cổ Mộ đắt hơn (trước: Thẻ Thần Thú chọn con 300, pháp bảo 100, Sơ Cấp 100, Tinh Thạch 25, Thú Hồn 10). Thường: thẻ Sơ Cấp 2 viên (trước 4). Địa Ngục: 2 thẻ Cao Cấp mỗi thẻ 2 viên (trước 4 thẻ 1 viên), Bùa May Mắn 3 thẻ (trước 1).</p></div>
 </div>
         </article>
 
@@ -142,6 +146,8 @@
              board_sec 60, bosses[] skills / low / summon / van_ma, boss_ai blink_sec 15 / leash 20 / kill_heal_pm 20);
              luật vào: godot/logic/thanh_kieu.gd + gateway/thanh_kieu_service.gd (vào không giới hạn, khoá trang bị, hồi sinh ở cửa);
              nâng set: sect_sets.json rules.upgrade (1 Tử Kim Tinh + 10 điểm, 25 %, cấp món bậc 2 là 50); tài liệu 53 §3d / §3g, nhật ký (266).
+             Bản 5.1 (repo game 83166fb8): bảng thẻ theo dungeon_thanhkieu.json difficulties[].cards + jackpot (_tinh_cap, 37 §4.62, §4.64 DS3b / DS3c),
+             nâng set rate 20; tái tạo dòng set sect_sets.json rules.reroll_line (1 Tinh + 50.000), tiệm rules.tkt_shop (37 §4.63).
              Cơ hội: 1 - C(16 - k, lượt) / C(16, lượt). Ảnh: ./run.sh shot ... --ui --map=050 --tile=222,66 --bang=dbg:level_max,npc/copy/0003,
              cắt (172, 302)-(1338, 1015), thu về rộng 760. -->
 <article class="gcard gpanel" id="thanh-kieu">
@@ -193,39 +199,59 @@
             <!-- Lật theo nhịp (bản kế tiếp, repo game master ce88e40b): dungeon_thanhkieu.json difficulties[].rounds 1 / 2 / 3,
                  cards {item, n, count} + jackpot, reveal_sec 12 (ngửa nhịp cuối rồi về Tần); giây mỗi nhịp dùng chung
                  dungeon_gumu.json flip_rounds (15 / 3). Tài liệu 53 §3g, 37 §4.44, nhật ký (292).
-                 Cơ hội cả lượt: 1 - (1 - k / 16) ^ số nhịp. Trung bình Tử Kim Tinh mỗi người: (4 x 3 + 9) / 16 = 1,31;
-                 2 x (4 x 2 + 4 + 6) / 16 = 2,25; 3 x (5 x 2 + 3 + 5) / 16 = 3,38. -->
+                 Cơ hội cả lượt: 1 - (1 - k / 16) ^ số nhịp. Trung bình Tử Kim Tinh mỗi người (bản 5.1): 7 x 1 / 16 = 0,44;
+                 2 x (5 x 2 + 2) / 16 = 1,5; 3 x (5 x 2 + 3 + 3) / 16 = 3. Bản 5.0: 1,31 / 2,25 / 3,38. -->
             <h4>Lật thẻ</h4>
             <ul>
               <li>Chỉ khi hạ <strong>Tư Tà</strong> mới có thưởng. Thua hoặc hết giờ trước đó thì không nhận gì.</li>
               <li>Lật theo <strong>nhịp</strong>: Thường 1 nhịp, Khó 2, Địa Ngục 3. Mỗi nhịp một bảng <strong>16 thẻ mới chung cả đội</strong>, mỗi người lật <strong>1 thẻ</strong> trong 15 giây, ai chưa lật thì được lật hộ. Cả bảng ngửa 3 giây rồi sang nhịp sau; xong nhịp cuối thì cả đội về Tần.</li>
-              <li>Mỗi bảng có 1 thẻ độc đắc viền vàng (nhiều Tử Kim Tinh), lật trúng thì cả server được báo. Đồ lật được bán, giao dịch được. Hành trang đầy thì quà vào túi chờ.</li>
+              <li>Mỗi bảng có 1 thẻ độc đắc viền vàng (Thường: túi 540.000 lượng; Khó, Địa Ngục: Tử Kim Tinh), lật trúng thì cả server được báo. Đồ lật được bán, giao dịch được. Hành trang đầy thì quà vào túi chờ.</li>
             </ul>
             <p>Mỗi ô ghi lượng mỗi thẻ, số thẻ trên 16 và cơ hội lật trúng ít nhất một lần trong cả lượt.</p>
             <div class="tbl tbl--cards">
               <table>
                 <thead><tr><th>Thẻ</th><th>Thường (1 nhịp)</th><th>Khó (2 nhịp)</th><th>Địa Ngục (3 nhịp)</th></tr></thead>
                 <tbody>
-                  <tr><td>Tử Kim Tinh</td><td>3&nbsp;viên · 4/16&nbsp;· 25&nbsp;%</td><td>2&nbsp;viên · 4/16&nbsp;· 44&nbsp;%<br>4&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>2&nbsp;viên · 5/16&nbsp;· 68&nbsp;%<br>3&nbsp;viên · 1/16&nbsp;· 18&nbsp;%</td></tr>
-                  <tr><td>Ngân lượng (thay Tái Tạo Thạch)</td><td>450.000 · 3/16&nbsp;· 19&nbsp;%</td><td>480.000 · 2/16&nbsp;· 23&nbsp;%<br>300.000 · 1/16&nbsp;· 12&nbsp;%</td><td>510.000 · 2/16&nbsp;· 33&nbsp;%</td></tr>
+                  <tr><td>Tử Kim Tinh</td><td>1&nbsp;viên · 7/16&nbsp;· 44&nbsp;%</td><td>2&nbsp;viên · 5/16&nbsp;· 53&nbsp;%</td><td>2&nbsp;viên · 5/16&nbsp;· 68&nbsp;%<br>3&nbsp;viên · 1/16&nbsp;· 18&nbsp;%</td></tr>
+                  <tr><td>Ngân lượng (thay Tái Tạo Thạch)</td><td></td><td>480.000 · 2/16&nbsp;· 23&nbsp;%<br>300.000 · 1/16&nbsp;· 12&nbsp;%</td><td>510.000 · 2/16&nbsp;· 33&nbsp;%</td></tr>
                   <tr><td>Ngân lượng (thay Thăng Phẩm Thạch)</td><td>270.000 · 3/16&nbsp;· 19&nbsp;%<br>540.000 · 1/16&nbsp;· 6&nbsp;%</td><td>360.000 · 2/16&nbsp;· 23&nbsp;%<br>180.000 · 1/16&nbsp;· 12&nbsp;%</td><td>450.000 · 2/16&nbsp;· 33&nbsp;%</td></tr>
-                  <tr><td>Trung Cấp Đoạn Thạch</td><td>3&nbsp;viên · 1/16&nbsp;· 6&nbsp;%</td><td>2&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td></td></tr>
-                  <tr><td>Cao Cấp Đoạn Thạch</td><td></td><td>2&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>2&nbsp;viên · 1/16&nbsp;· 18&nbsp;%<br>1&nbsp;viên · 1/16&nbsp;· 18&nbsp;%</td></tr>
+                  <tr><td>Cao Cấp Đoạn Thạch</td><td>1&nbsp;viên · 1/16&nbsp;· 6&nbsp;%</td><td>2&nbsp;viên · 1/16&nbsp;· 12&nbsp;%<br>1&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>2&nbsp;viên · 1/16&nbsp;· 18&nbsp;%<br>1&nbsp;viên · 1/16&nbsp;· 18&nbsp;%</td></tr>
                   <tr><td>Thú Hồn</td><td>9&nbsp;viên · 2/16&nbsp;· 12&nbsp;%</td><td>8&nbsp;viên · 1/16&nbsp;· 12&nbsp;%</td><td>8&nbsp;viên · 1/16&nbsp;· 18&nbsp;%</td></tr>
                   <tr><td><a href="../trang-bi/#bua-ma-thuat">Bùa Ma Thuật</a></td><td></td><td></td><td>2&nbsp;lá · 1/16&nbsp;· 18&nbsp;%</td></tr>
                   <tr><td>Tinh Thạch</td><td>3&nbsp;viên cấp 1 · 1/16&nbsp;· 6&nbsp;%</td><td>2&nbsp;viên cấp 2 · 1/16&nbsp;· 12&nbsp;%</td><td>2&nbsp;viên cấp 2 · 1/16&nbsp;· 18&nbsp;%</td></tr>
-                  <tr><td>Độc đắc (1 thẻ)</td><td>9 Tử Kim Tinh · 6&nbsp;%</td><td>6 Tử Kim Tinh · 12&nbsp;%</td><td>5 Tử Kim Tinh · 18&nbsp;%</td></tr>
-                  <tr><td>Có ít nhất 1 Tử Kim Tinh</td><td>31&nbsp;%</td><td>61&nbsp;%</td><td>82&nbsp;%</td></tr>
-                  <tr><td>Tử Kim Tinh trung bình mỗi người</td><td>1,3</td><td>2,25</td><td>3,4</td></tr>
+                  <tr><td>Độc đắc (1 thẻ)</td><td>Túi 540.000 lượng · 6&nbsp;%</td><td>2 Tử Kim Tinh · 12&nbsp;%</td><td>3 Tử Kim Tinh · 18&nbsp;%</td></tr>
+                  <tr><td>Có ít nhất 1 Tử Kim Tinh</td><td>44&nbsp;%</td><td>61&nbsp;%</td><td>82&nbsp;%</td></tr>
+                  <tr><td>Tử Kim Tinh trung bình mỗi người</td><td>0,44</td><td>1,5</td><td>3</td></tr>
                 </tbody>
               </table>
             </div>
-            <p>Ít lần trúng hơn bản 4.1 nhưng mỗi lần được nhiều hơn: lượng đồ trung bình mỗi người gần như cũ.</p>
+            <p>Mỗi thẻ Tử Kim Tinh ra tối đa 1 viên ở Thường, 2 ở Khó, 3 ở Địa Ngục. Thường hợp làm quen và kiếm tiền; muốn nhiều Tử Kim Tinh thì đi Khó, Địa Ngục.</p>
+            <div class="v5note"><p><span class="v5tag">Bản 5.1</span> Trước bản 5.1: Thường 4 thẻ 3 viên và độc đắc 9 viên (trung bình 1,3 viên mỗi người), Khó có thẻ 4 viên và độc đắc 6 viên (2,25), Địa Ngục độc đắc 5 viên (3,4). Thẻ Trung Cấp Đoạn Thạch ở Thường (3 viên), Khó (2 viên) đổi thành 1 Cao Cấp.</p></div>
             <!-- sect_sets.json rules.upgrade.steps[0] {item tu_kim_tinh, n 1, points 10, cash 200000, rate 25}; rules.quality_mult 1,5
                  (trước 1,6; equip_rules.json qualities[3].mult). Tài liệu 37 §4.42, nhật ký (291). -->
             <h4 id="nang-set">Tử Kim Tinh dùng làm gì</h4>
-            <p>Tử Kim Tinh chỉ có ở bảng thẻ Thành Kiều, dùng để nâng set sư môn lên <strong>bậc 2</strong>. Nói với sư phụ, chọn <strong>Mua &amp; Nâng cấp đồ sư môn</strong>, tab <strong>Nâng cấp</strong>, kéo món set vào ô. Mỗi lần thử tốn 1 Tử Kim Tinh và 10 điểm sư môn, thành công 25 %. Trượt thì mất cả hai nhưng giữ món. Thành công: món lên bậc 2 (cần cấp 50), giữ sao và ngọc khảm. Tử Kim Tinh khoá được dùng trước.</p>
+            <p>Tử Kim Tinh chỉ có ở bảng thẻ Thành Kiều, dùng để nâng set sư môn lên <strong>bậc 2</strong>. Nói với sư phụ, chọn <strong>Mua &amp; Nâng cấp đồ sư môn</strong>, tab <strong>Nâng cấp</strong>, kéo món set vào ô. Mỗi lần thử tốn 1 Tử Kim Tinh và 10 điểm sư môn, thành công <strong>20 %</strong> (trước bản 5.1: 25 %). Trượt thì mất cả hai nhưng giữ món. Thành công: món lên bậc 2 (cần cấp 50), giữ sao và ngọc khảm. Tử Kim Tinh khoá được dùng trước.</p>
             <p>Mỗi lần thử tốn thêm <strong>200.000 lượng</strong> (trượt cũng mất), tab Nâng cấp có dòng Ngân Lượng, đỏ khi thiếu. Chỉ số gốc của set sư môn ở mọi bậc giảm khoảng 6 % (hệ số phẩm Tím 1,6 xuống 1,5), cả set đang mặc.</p>
+            <p>Trung bình mỗi món cần 5 lần thử: 5 Tử Kim Tinh, 50 điểm sư môn, 1 triệu lượng (cả bộ 6 món gấp sáu).</p>
+            <h4 id="tai-tao-set">Tái tạo dòng set ở sư phụ <span class="v5tag">Bản 5.1</span></h4>
+            <ul>
+              <li>Nói với sư phụ phái mình, chọn <strong>Tái tạo dòng set sư môn (Tử Kim Tinh)</strong>, chọn món set của phái (đang mặc hoặc trong hành trang, bậc nào cũng được), chọn 1 dòng rồi xác nhận.</li>
+              <li>Mỗi lần <strong>1 Tử Kim Tinh + 50.000 lượng</strong> (Tinh khoá dùng trước). Chỉ đổi được 3 dòng đầu; dòng cuối (dòng % riêng của set như Hấp Thụ, Phản Đòn, Né Tránh) giữ nguyên.</li>
+              <li>Dòng mới theo luật <a href="../trang-bi/#tai-tao">tái tạo ở thợ rèn</a>: bậc Thường, Tốt, Hiếm ra 6, 3, 1 lần trên 10, mức 60, 80, 100 % mức trần; không trùng loại với hai dòng đổi được kia. Kết quả hiện ngay, không hoàn tác. Nâng bậc sau đó vẫn giữ dòng mới.</li>
+              <li>Dòng gốc của set đã bằng mức Hiếm, nên tái tạo trung bình ra khoảng 70 % số cũ: dùng để <strong>đổi loại dòng</strong> (ví dụ Ngoại Kháng thành Khí Huyết), không phải để tăng số.</li>
+            </ul>
+            <h4 id="tiem-tu-kim">Đổi Tử Kim Tinh lấy đồ rèn <span class="v5tag">Bản 5.1</span></h4>
+            <p>Cũng ở sư phụ, dòng <strong>Đổi Tử Kim Tinh lấy đồ rèn</strong>. Đồ đổi ra đều khoá (không giao dịch, không bán).</p>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Hàng</th><th>Giá</th></tr></thead>
+                <tbody>
+                  <tr><td>Cao Cấp Đoạn Thạch</td><td>3 Tử Kim Tinh</td></tr>
+                  <tr><td>Trung Cấp Đoạn Thạch</td><td>1 Tử Kim Tinh</td></tr>
+                  <tr><td>10 Thú Hồn</td><td>1 Tử Kim Tinh</td></tr>
+                </tbody>
+              </table>
+            </div>
             <p class="tip">Thường hợp đội cấp 40 làm quen. Khó đi một mình gần như thua, nên đi đủ đội. Đứng tản ra khi đánh Mã Quỷ và Lương Hưng để Vạn Mã và lửa không trúng cả đội. Người chịu đòn nên giữ máu cao: tướng hạ được ai là hồi máu. Mặc đồ tốt nhất và mang đủ thuốc trước khi vào vì trang bị bị khoá suốt lượt.</p>
           <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Thẻ Tái Tạo Thạch, Thăng Phẩm Thạch thành thẻ ngân lượng (30.000 / 90.000 lượng mỗi viên đá cũ). Mỗi lượt có 1 <a href="../nghe/#bao-ruong">Bảo Rương</a> Phiêu Lượng, mở bằng Chìa Khoá Tinh Thiết.</p></div>
 </div>

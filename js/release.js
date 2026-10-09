@@ -5,7 +5,8 @@
   "use strict";
 
   var RELEASES = {
-    "5.0": "2026-10-09"
+    "5.0": "2026-10-09",
+    "5.1": "2026-10-09"
   };
 
   var list = document.querySelectorAll("time[data-rel]");
