@@ -7,7 +7,7 @@
   var RELEASES = {
     "5.0": "2026-10-09",
     "5.1": "2026-10-09",
-    // 5.2: ngày TẠM (soạn trước trên nhánh web-5.2, 2026-10-10). Phiên phát sửa thành ngày phát thật, đồng bộ chữ dự phòng
+    // 5.2: ngày phát thật 2026-10-10 (tag 5.2.0 lên VPS 19:21). Đổi ngày thì đồng bộ chữ dự phòng
     // "10/10/2026" trong các thẻ <time data-rel="5.2"> (README §Sửa thường gặp).
     "5.2": "2026-10-10"
   };
