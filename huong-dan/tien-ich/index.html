@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tiện ích · Hướng dẫn Chiến Quốc Remaster</title>
-  <meta name="description" content="Đồng hồ máy chủ, Dịch Trạm, tiệm đồ, Bảo Khố và Kim Nguyên Bảo, thuốc 1 giờ, thời tiết.">
+  <meta name="description" content="Đồng hồ máy chủ, Dịch Trạm, tiệm đồ, Bảo Khố và Kim Nguyên Bảo, thuốc 1 giờ, chế độ máy yếu, thời tiết.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/tien-ich/">
   <meta property="og:title" content="Tiện ích · Hướng dẫn Chiến Quốc Remaster">
-  <meta property="og:description" content="Đồng hồ máy chủ, Dịch Trạm, tiệm đồ, Bảo Khố và Kim Nguyên Bảo, thuốc 1 giờ, thời tiết.">
+  <meta property="og:description" content="Đồng hồ máy chủ, Dịch Trạm, tiệm đồ, Bảo Khố và Kim Nguyên Bảo, thuốc 1 giờ, chế độ máy yếu, thời tiết.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -60,6 +60,7 @@
       <a class="is-v5" href="#tiem-do">Tiệm đồ</a>
       <a class="is-v5" href="#bao-kho">Bảo Khố</a>
       <a class="is-v5" href="#thuoc">Thuốc 1 giờ</a>
+      <a class="is-v5" href="#may-yeu">Máy yếu</a>
       <a href="#thoi-tiet">Thời tiết</a>
     </nav></div>
 
@@ -200,6 +201,23 @@
             <li>Cùng nguồn: <strong>Tái Tạo Hoàn</strong> (hồi đầy Khí Huyết, Pháp Lực, chung thời gian chờ 30 giây với thuốc máu), <strong>Tử Sâm Đơn</strong> (thêm 2.000 tiềm năng).</li>
           </ul>
         <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Nghề <a href="../nghe/#luyen-don">Luyện Đơn</a> chế được thuốc hồi máu theo %, giải độc, tăng kháng, dùng xen với thuốc tiệm.</p></div>
+</article>
+
+<!-- Chế độ máy yếu (bản 5.2): repo game commit db011719, client/ui/low_spec.gd (ba công tắc hide_walkers / lite_peers / less_fx, lưu
+     user://window.cfg [graphics], áp ngay), client/ui/pause_menu.gd GRAPHICS_ROWS (nhóm "Hình ảnh" của bảng Cài Đặt); tài liệu game 52 §9. -->
+<article class="gcard" id="may-yeu">
+  <h3>Chế độ máy yếu <span class="v5tag">Bản 5.2</span></h3>
+  <ul class="facts">
+    <li>Bảng Cài Đặt, nhóm Hình ảnh</li>
+    <li>Áp ngay, không cần vào lại</li>
+  </ul>
+  <p>Máy ít RAM hay giật ở Chu Quốc thì mở <strong>Cài Đặt</strong> (nút ở góc dưới phải), nhóm <strong>Hình ảnh</strong>, bật <strong>Chế độ máy yếu</strong>. Ô này bật cùng lúc ba ô con, muốn thì bật riêng từng ô:</p>
+  <ul>
+    <li><strong>Ẩn khách dạo phố:</strong> bỏ các nhân vật ảo đi dạo ở căn cứ phái.</li>
+    <li><strong>Người khác hiện gọn:</strong> người chơi khác hiện không cánh, phi phong, quầng vũ khí, vòng pháp bảo, thú cưỡi, ngoại trang.</li>
+    <li><strong>Bớt hiệu ứng người khác:</strong> không vẽ hình chiêu của người chơi khác, trừ chiêu trúng hay hồi máu cho mình. Quái vẫn đủ hình.</li>
+  </ul>
+  <p class="tip">Chỉ đổi hình trên máy bạn, không ảnh hưởng trận đánh hay người khác. Cài đặt lưu lại cho lần sau.</p>
 </article>
 
 <article class="gcard gpanel" id="thoi-tiet">

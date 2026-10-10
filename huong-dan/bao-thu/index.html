@@ -80,9 +80,12 @@
   <div class="gtext">
     <ul>
       <li>Mua <strong>Dây Càn Khôn</strong> ở Tiệm Tạp Hóa (Tân Thủ Thôn, Tề, Tần, Sở, Chu), 2.000 lượng một sợi, chồng 999.</li>
-      <li>Ném dây: dùng kĩ năng cơ bản <strong>Bắt Bảo Thú</strong> (<kbd>Alt+R</kbd>, tab Kĩ năng cơ bản, kéo xuống ô phím được) hoặc dùng Dây trong hành trang. Con trỏ thành bàn tay, bấm trái vào quái. Chuột phải hoặc ESC để thôi.</li>
+      <!-- Bản 5.2 (commit ca3ed228): ném ngay vào quái đang chọn, Dây kéo vào ô phím (item_overrides.json hotbar_ok), chuột phải khi cầm
+           dây là ném, câu báo trúng / trượt; tài liệu game 65 §1, §1a. Tỉ lệ không đổi: 30 + (100 - % máu) / 2. -->
+      <li>Ném dây: dùng kĩ năng cơ bản <strong>Bắt Bảo Thú</strong> (<kbd>Alt+R</kbd>, tab Kĩ năng cơ bản), hoặc dùng Dây trong hành trang; từ bản 5.2 kéo cả Dây xuống ô phím được.</li>
+      <li><span class="v5tag">Bản 5.2</span> Đang <strong>chọn sẵn một quái</strong> thì bấm ô là ném ngay vào con đó. Chưa chọn thì con trỏ thành bàn tay: bấm trái hoặc chuột phải vào quái để ném; bấm ra đất, ESC hay bấm lại ô thì thôi, không mất dây.</li>
       <li>Chỉ bắt được <strong>quái thường</strong> ngoài bản đồ: không boss, không quái phó bản, Phong Yêu Kính, Trộm Bảo, Tống Bảo, phản đồ. Cấp quái không quá cấp bạn cộng 5, đứng trong 7 ô.</li>
-      <li>Mỗi lần ném mất 1 dây, trúng hay trượt đều mất.</li>
+      <li>Mỗi lần ném mất 1 dây, trúng hay trượt đều mất. Khung chat báo mọi lần ném: trúng, trượt (kèm tỉ lệ bắt lúc đó và số dây còn) hay vì sao không ném được (hết dây, quá xa, quái cao quá 5 cấp).</li>
     </ul>
     <h4>Tỉ lệ bắt</h4>
     <p>30 % cộng một nửa phần máu quái đã mất. Đánh quái gần chết rồi hãy ném.</p>
@@ -99,7 +102,7 @@
     </div>
     <ul>
       <li><strong>Trúng:</strong> quái biến mất và vào sổ. Không có kinh nghiệm, không rơi đồ, không tính nhiệm vụ.</li>
-      <li><strong>Trượt:</strong> quái nổi giận đánh bạn.</li>
+      <li><strong>Trượt:</strong> mất 1 dây, quái nổi giận đánh bạn.</li>
     </ul>
     <h4>Bảo Bảo</h4>
     <ul>

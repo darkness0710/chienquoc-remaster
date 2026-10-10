@@ -54,6 +54,7 @@
 
   <div class="vtoc-bar">
     <nav class="wrap vtoc" aria-label="Nhảy tới phiên bản">
+      <a href="#v5-2">5.2</a>
       <a href="#v5-1">5.1</a>
       <a href="#v5-0">5.0</a>
       <a href="#v4-2">4.2</a>
@@ -78,6 +79,52 @@
 
   <div class="wrap">
     <div class="vlist">
+
+      <!-- ================= 5.2 =================
+           SOẠN TRƯỚC 2026-10-10 trên nhánh web-5.2 (máy chủ còn 5.1.0); ngày TẠM ở js/release.js (RELEASES["5.2"]), phiên phát sửa ngày
+           thật và đối chiếu số với tag 5.2.0. Nguồn: repo game master c439a62b, git log 5.1.0..c439a62b, BAN-GIAO-2026-10-10.md mục 1,
+           tài liệu 37 §4.39 CA1 (sư môn 20), §4.46 (thuốc), §4.65 (Vân Mộng), §4.67 (phục hồi độ bền), §4.68 (truy bắt gộp, Bách Gia
+           Lệnh), §4.69 (đặc trưng phái), 52 §8-§9 (RAM, máy yếu), 63 §8 (Sạp Hoàng Kim), 65 §1a (Dây Càn Khôn), 45 PB27 (Nhiếp Hồn).
+           Số: criminal.json, bach_gia.json, sect_quests.json, equip_rules.json restore, stall_bots.json, sect_skills.json.
+           Chưa có tin launcher 5.2 trong news.json lúc viết: khi có thì đối chiếu chữ.
+           TODO phiên phát: Phi Long Tầm Châu quét vùng (chưa có số trên master), giá tẩy điểm cấp x 1.000 (chưa có trên master). -->
+      <article class="vcard" id="v5-2">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">5.2</h2>
+          <time class="vcard__date" data-rel="5.2" datetime="2026-10-10">10/10/2026</time>
+        </header>
+        <p class="vcard__sum">Truy bắt gộp thành một chuyến mỗi ngày, Bách Gia Lệnh đổi quà, sư môn 20 việc, thợ rèn phục hồi độ bền; thuốc yếu đi ở Khó, Địa Ngục; cân lại Mao Sơn, Cấm Vệ Quân, Đào Hoa, Vân Mộng.</p>
+
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li><a href="../huong-dan/hang-ngay/#bach-gia-lenh">Bách Gia Lệnh</a>: xong chuỗi 10 việc sư môn được <strong>Nho Gia Lệnh</strong>, qua đủ 7 ải truy bắt được <strong>Binh Gia Lệnh</strong>, hạ Lữ Bố (còn lượt thưởng) được <strong>Âm Dương Gia Lệnh</strong>, mỗi lượt Thành Kiều qua 4 tướng được <strong>Mặc Gia Lệnh</strong>. Lệnh không khoá, giao dịch, bày bán được. Đem tới <strong>Thiên Sứ Trao Đổi</strong> ở Chu Quốc (243, 261): Nho + Binh đổi một phần quà (Ngân Lượng Bao, Sơ Cấp Đoạn Thạch, Tinh Thạch, Thú Hồn, 5 % Trung Cấp), đủ 4 Lệnh đổi quà lớn (50 % Trung Cấp, 30 % Tử Kim Tinh, 12 % Thẻ Thần Thú, 6 % Cao Cấp, 2 % một món Vàng của phái mình).</li>
+          <li><a href="../huong-dan/trang-bi/#phuc-hoi-do-ben">Phục hồi độ bền</a> ở mọi thợ rèn: đưa độ bền tối đa đã bị sửa mòn về số gốc. Giá cấp món × hệ số phẩm (Xanh 4.000, Vàng 16.000, Tím 30.000) × phần đã mất, ít nhất 10 %.</li>
+          <li>Chiến Quốc Bảo Điển, tab <a href="../huong-dan/hang-ngay/#tong-bao">Tống Yêu</a> và <a href="../huong-dan/hang-ngay/#trom-bao">Trộm Bảo</a>: mỗi dòng có nút <strong>Bay tới</strong> (5 Phi Hành Phù), đáp ở cổng vào bản đồ đó.</li>
+          <li><a href="../huong-dan/tien-ich/#may-yeu">Chế độ máy yếu</a> trong Cài Đặt, nhóm Hình ảnh: ẩn khách dạo phố, người khác hiện gọn, bớt hiệu ứng chiêu của người khác. Áp ngay, chỉ đổi hình trên máy mình.</li>
+          <li><a href="../huong-dan/bay-ban/#mua-hang">Sạp Hoàng Kim</a> ở chợ bot Chu Quốc bán thêm 1 <strong>Tử Kim Tinh</strong> mỗi lượt chợ, giá 5.000.000 lượng. Tiệm đổi Tử Kim Tinh ở sư phụ thành bảng như tiệm Cổ Mộ, nhập số lần đổi một lần.</li>
+        </ul>
+
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li><a href="../huong-dan/hang-ngay/#vuong-bo-dau">Truy bắt</a> gộp hai loại cũ thành <strong>1 chuyến 7 ải mỗi ngày</strong>, đi một mình hay đội tới 5 người. Vé Thường miễn phí, Khó 23.000 × cấp, Địa Ngục 33.500 × cấp; thẻ ngân lượng tăng để cả chuyến ăn bằng đơn và nhóm cũ cộng lại (cấp 40 còn khoảng 500.000 ở Thường, 550.000 ở Khó, Địa Ngục), quà vòng 5 cũ thành quà qua đủ 7 ải. Cấp 50 nhận thẻ nhiều hơn cấp 40; dưới cấp 40 nhận ít hẳn.</li>
+          <li><a href="../huong-dan/hang-ngay/#su-mon">Sư môn</a>: mỗi ngày <strong>20 việc</strong> (hai chuỗi, thưởng gấp đôi), việc chưa làm không để dành; Hoạt động hôm nay tính đủ ở 10 việc.</li>
+          <li>Phó bản và truy bắt Khó, Địa Ngục: thuốc máu chỉ còn <strong>75 %, 50 %</strong> tác dụng (viên 1.000 máu còn 750, 500), thay cho trần 25 %, 20 % Khí Huyết tối đa. Hút máu giảm như vậy.</li>
+          <li><a href="../huong-dan/mon-phai/#mao-son">Mao Sơn</a> làm lại bốn chiêu cấp 45, 50: <strong>Cương Thi Phù Pháp</strong> hoá Thi Vương lì đòn, chém vùng, kéo quái; <strong>Âm Binh Quá Cảnh</strong> bắn xa 6 ô, không tốn Bùa Giấy; <strong>Mệnh Tế</strong> kích mọi kẻ dính nguyền, hồi máu cả đội theo số kẻ bị kích, không hiến Quỷ Tốt; <strong>Biến Thân Thuật</strong> hoá thú mục tiêu, nhận thêm 15 % sát thương từ mình và thú.</li>
+          <li><a href="../huong-dan/mon-phai/#cam-ve-quan">Cấm Vệ Quân</a> nhánh Thương: nội tại thêm <strong>Huyết Chiến</strong> (hút 1 tới 3 % sát thương, gấp đôi khi máu dưới 50 %, tối đa 1,5 % máu tối đa mỗi giây); Phi Long Tầm Châu đổi cách đánh để dọn bầy tốt hơn.</li>
+          <li><a href="../huong-dan/mon-phai/#dao-hoa">Đào Hoa</a> nhánh Hộ Thể: bị từ 2 quái trở lên vây thì mỗi con giảm 3 % sát thương nhận (tối đa 15 %) và hồi Nguyên Khí nhanh hơn.</li>
+          <li><a href="../huong-dan/mon-phai/#van-mong">Vân Mộng</a> Phong Trận hạ chiêu vùng: Kỳ Môn Trận mỗi giây 27 % Công lực + 7 (trước 47 % + 12), Bá Khí Phi Yến 57 % + 14 (trước 65 % + 16); bù lại đợt cứa Phong Vũ Kinh Thiên 55 % (trước 29 %).</li>
+          <li>Mọi nhân vật được thêm <a href="../huong-dan/ky-nang/#cach-hoc">một lần tẩy điểm kĩ năng miễn phí</a> để xếp lại sau đợt cân chiêu.</li>
+        </ul>
+
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li><a href="../huong-dan/bao-thu/#bat-thu">Dây Càn Khôn</a> dùng bằng ô phím nhiều khi không ném, không báo gì: nay đang chọn quái thì ném ngay vào con đó, Dây kéo xuống ô phím được, mọi lần ném đều báo trúng, trượt (kèm tỉ lệ) hay vì sao không ném được.</li>
+          <li>Pháp bảo <a href="../huong-dan/trang-bi/#phap-bao">Nhiếp Hồn</a> làm choáng mà không thấy gì: nay kẻ bị choáng có vòng sao trên đầu, nổi chữ "Choáng", đòn trúng kẻ đang miễn choáng nổi chữ "Miễn".</li>
+          <li>Ngoại trang chỉ để làm đẹp: rê chuột không còn hiện chỉ số (trước hiện chỉ số nhưng không cộng).</li>
+          <li>Nút <a href="../huong-dan/tu-danh/">Tự Đánh</a> đè lên ô F10: dời sang hàng nút việc hằng ngày, sau nút Thành tựu. Mũi tên trái, phải trong bảng không còn méo.</li>
+          <li>Đỡ giật, đỡ tốn RAM: Bảo Thú Lục mở lần đầu gần như ngay (trước đứng hình 7 tới 9 giây); Chu Quốc bỏ khách dạo phố (chỉ còn chợ bot), mỗi căn cứ phái còn 1; đổi bản đồ nhả bớt hình đã nạp.</li>
+        </ul>
+      </article>
 
       <!-- ================= 5.1 =================
            Phát 2026-10-09 (repo game 83166fb8 "Phát 5.1.0", version.json 5.1.0); ngày ở js/release.js (RELEASES["5.1"]).

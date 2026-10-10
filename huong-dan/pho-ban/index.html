@@ -94,8 +94,9 @@
               <li>Lữ Bố đánh người gây nhiều sát thương nhất, lướt tới người đứng xa, đánh lâu quá thì nổi giận.</li>
               <li>Thấy <strong>vòng đỏ</strong> dưới chân thì chạy ra ngay. Kéo Lữ Bố xa quá 15 ô thì hắn về chỗ, hồi đầy máu.</li>
               <li>Chết: hồi sinh ở cửa mộ sau 10 giây, không mất gì. Trang bị bị khoá, thuốc vẫn dùng được. Pháp bảo Chiêu Hồn kéo dậy được một lần mỗi lượt.</li>
-              <!-- dungeon_gumu.json difficulties[].potion_cap_pm 250 / 200 (37 §4.46 SL1, nhật ký game (293)) -->
-              <li>Khó và Địa Ngục: trong mộ mỗi viên thuốc máu (cả Tái Tạo Hoàn) hồi tối đa <strong>25 %</strong> Khí Huyết tối đa (Địa Ngục <strong>20 %</strong>). Đồ ăn và chiêu hồi máu của phái không bị giới hạn.</li>
+              <!-- dungeon_gumu.json difficulties[].potion_pm 750 / 500 (bản 5.2, commit 53999f71, logic/potion_scale.gd; trước potion_cap_pm 250 / 200,
+                   37 §4.46 SL1); hút máu cùng hệ số (37 §4.69 mục 7). Âm Dương Gia Lệnh: bach_gia.json source gumu_boss. -->
+              <li><span class="v5tag">Bản 5.2</span> Khó và Địa Ngục, trong mộ: thuốc máu (cả phần Khí Huyết của Tái Tạo Hoàn) chỉ còn <strong>75 %</strong> tác dụng, Địa Ngục <strong>50 %</strong>: viên hồi 1.000 máu còn 750, 500. Hút máu (dòng Hấp Thụ Khí Huyết, nội tại Huyết Chiến của Cấm Vệ) giảm như vậy. Đồ ăn và chiêu hồi máu của phái không bị giảm. Trước 5.2: mỗi viên hồi tối đa 25 % Khí Huyết tối đa (Địa Ngục 20 %).</li>
             </ul>
             <!-- Lật theo nhịp (bản kế tiếp, repo game master ce88e40b): dungeon_gumu.json flip_rounds {round_sec 15, reveal_sec 3},
                  difficulties[].rounds 1 / 2 / 3, cards_mix {mã: số thẻ} hoặc {mã: {count, n}} (n = lượng mỗi thẻ) + jackpot;
@@ -103,7 +104,7 @@
                  Túi ngân lượng = phí x cash_cards small_pm 500 / big_pm 2000 phần nghìn x n. -->
             <h4>Lật thẻ</h4>
             <ul>
-              <li>Lữ Bố chết: mỗi người nhận điểm phó bản và Vô Song Điểm Phiếu (khoá), rồi lật thẻ theo <strong>nhịp</strong>. Thường <strong>1 nhịp</strong>, Khó <strong>2</strong>, Địa Ngục <strong>3</strong>.</li>
+              <li>Lữ Bố chết: mỗi người nhận điểm phó bản và Vô Song Điểm Phiếu (khoá), rồi lật thẻ theo <strong>nhịp</strong>. Thường <strong>1 nhịp</strong>, Khó <strong>2</strong>, Địa Ngục <strong>3</strong>. Từ bản 5.2 còn được 1 <a href="../hang-ngay/#bach-gia-lenh">Âm Dương Gia Lệnh</a> (không khoá) nếu hôm nay còn lượt thưởng.</li>
               <li>Mỗi nhịp chia một bảng <strong>16 thẻ mới</strong>, chung cả đội. Mỗi người lật <strong>1 thẻ</strong> trong <strong>15 giây</strong>, ai chưa lật thì được lật hộ. Lật xong cả bảng ngửa ra 3 giây rồi sang nhịp sau.</li>
               <li>Không còn lật trả tiền. Mỗi bảng có <strong>1 thẻ độc đắc</strong>, lật trúng thì cả server được báo. Hành trang đầy thì quà vào túi chờ, có chỗ là tự nhận. Rời mộ giữa chừng thì mất các nhịp còn lại.</li>
               <li>Đồ lật được bán, vứt, giao dịch được.</li>
@@ -178,12 +179,12 @@
             <p>Quân phí nộp mỗi lượt và không hoàn, kể cả khi thua hay hết giờ. Đánh bao nhiêu lượt một ngày cũng được. Địa Ngục cần cấp 60 nên ở trần cấp 50 hiện tại chưa vào được.</p>
             <h4>Trong doanh trại</h4>
             <ul>
-              <li>Doanh trại đầy phản quân và oán linh, không rơi đồ, không rơi tiền, chỉ cho kinh nghiệm. Ba tướng <strong>Mã Quỷ</strong>, <strong>Lương Hưng</strong>, <strong>Yến Thập Tam</strong> đứng chờ sẵn, đánh thứ tự nào cũng được. Hạ đủ ba con thì <strong>Tư Tà</strong> hiện ra ở hậu doanh phía tây.</li>
+              <li>Doanh trại đầy phản quân và oán linh, không rơi đồ, không rơi tiền, chỉ cho kinh nghiệm. Ba tướng <strong>Mã Quỷ</strong>, <strong>Lương Hưng</strong>, <strong>Yến Thập Tam</strong> đứng chờ sẵn, đánh thứ tự nào cũng được. Hạ đủ ba con thì <strong>Tư Tà</strong> hiện ra ở hậu doanh phía tây. Từ bản 5.2 mỗi lượt hạ đủ 4 tướng, mỗi người nhận 1 <a href="../hang-ngay/#bach-gia-lenh">Mặc Gia Lệnh</a> (không khoá).</li>
               <li>Cả bốn tướng cứ 15 giây lại dịch chuyển tới cạnh người đang bị nhắm, hạ được ai thì hồi một ít máu, không bị choáng hay trói. Như Lữ Bố: đánh người gây nhiều sát thương nhất, lướt tới người đứng xa, đánh lâu quá thì nổi giận. Kéo xa quá 20 ô hoặc cả đội ngã thì tướng về chỗ, hồi đầy máu.</li>
               <li>Khó và Địa Ngục: mỗi tướng thêm chiêu, ra chiêu dày hơn. Thấy vòng báo dưới chân thì chạy ra.</li>
               <li>Chết: sống lại ở cửa doanh trại sau 10 giây. Trang bị bị khoá suốt lượt.</li>
-              <!-- dungeon_thanhkieu.json difficulties[].potion_cap_pm 250 / 200 (37 §4.46 SL1) -->
-              <li>Khó và Địa Ngục: mỗi viên thuốc máu (cả Tái Tạo Hoàn) hồi tối đa <strong>25 %</strong> Khí Huyết tối đa (Địa Ngục <strong>20 %</strong>). Đồ ăn và chiêu hồi máu của phái không bị giới hạn.</li>
+              <!-- dungeon_thanhkieu.json difficulties[].potion_pm 750 / 500 (bản 5.2, như Cổ Mộ). Mặc Gia Lệnh: bach_gia.json source thanhkieu. -->
+              <li><span class="v5tag">Bản 5.2</span> Khó và Địa Ngục: thuốc máu (cả phần Khí Huyết của Tái Tạo Hoàn) chỉ còn <strong>75 %</strong> tác dụng, Địa Ngục <strong>50 %</strong>: viên hồi 1.000 máu còn 750, 500. Hút máu (dòng Hấp Thụ Khí Huyết, nội tại Huyết Chiến của Cấm Vệ) giảm như vậy. Đồ ăn và chiêu hồi máu của phái không bị giảm. Trước 5.2: mỗi viên hồi tối đa 25 % Khí Huyết tối đa (Địa Ngục 20 %).</li>
             </ul>
             <div class="tbl">
               <table>
@@ -230,7 +231,8 @@
             <!-- sect_sets.json rules.upgrade.steps[0] {item tu_kim_tinh, n 1, points 10, cash 200000, rate 25}; rules.quality_mult 1,5
                  (trước 1,6; equip_rules.json qualities[3].mult). Tài liệu 37 §4.42, nhật ký (291). -->
             <h4 id="nang-set">Tử Kim Tinh dùng làm gì</h4>
-            <p>Tử Kim Tinh chỉ có ở bảng thẻ Thành Kiều, dùng để nâng set sư môn lên <strong>bậc 2</strong>. Nói với sư phụ, chọn <strong>Mua &amp; Nâng cấp đồ sư môn</strong>, tab <strong>Nâng cấp</strong>, kéo món set vào ô. Mỗi lần thử tốn 1 Tử Kim Tinh và 10 điểm sư môn, thành công <strong>20 %</strong> (trước bản 5.1: 25 %). Trượt thì mất cả hai nhưng giữ món. Thành công: món lên bậc 2 (cần cấp 50), giữ sao và ngọc khảm. Tử Kim Tinh khoá được dùng trước.</p>
+            <!-- Nguồn Tử Kim Tinh bản 5.2: stall_bots.json sạp gold fixed (1 cái, 5.000.000, commit 326cfce5), bach_gia.json c4 30 %. -->
+            <p>Tử Kim Tinh có ở bảng thẻ Thành Kiều; từ bản 5.2 còn ở <a href="../bay-ban/#mua-hang">Sạp Hoàng Kim</a> chợ bot (5.000.000 lượng, không khoá) và quà đổi đủ 4 <a href="../hang-ngay/#bach-gia-lenh">Bách Gia Lệnh</a> (30 %). Tử Kim Tinh dùng để nâng set sư môn lên <strong>bậc 2</strong>. Nói với sư phụ, chọn <strong>Mua &amp; Nâng cấp đồ sư môn</strong>, tab <strong>Nâng cấp</strong>, kéo món set vào ô. Mỗi lần thử tốn 1 Tử Kim Tinh và 10 điểm sư môn, thành công <strong>20 %</strong> (trước bản 5.1: 25 %). Trượt thì mất cả hai nhưng giữ món. Thành công: món lên bậc 2 (cần cấp 50), giữ sao và ngọc khảm. Tử Kim Tinh khoá được dùng trước.</p>
             <p>Mỗi lần thử tốn thêm <strong>200.000 lượng</strong> (trượt cũng mất), tab Nâng cấp có dòng Ngân Lượng, đỏ khi thiếu. Chỉ số gốc của set sư môn ở mọi bậc giảm khoảng 6 % (hệ số phẩm Tím 1,6 xuống 1,5), cả set đang mặc.</p>
             <p>Trung bình mỗi món cần 5 lần thử: 5 Tử Kim Tinh, 50 điểm sư môn, 1 triệu lượng (cả bộ 6 món gấp sáu).</p>
             <h4 id="tai-tao-set">Tái tạo dòng set ở sư phụ <span class="v5tag">Bản 5.1</span></h4>

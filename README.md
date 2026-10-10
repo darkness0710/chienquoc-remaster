@@ -255,3 +255,14 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   thẻ + 3 Bùa May Mắn ở Địa Ngục, tiệm 600 / 200 / 150 / 40 / 15), nâng set 20 %, truy bắt 5 lượt không dồn, Cao Địa Ngục 30 / 18 %,
   Trộm Bảo Sơ 10 % / Tinh Thạch 50 %, Thái Dã Sơ 2 / ngày, tiệm sư môn (Sơ 10, Ngân Lượng Bao 5), Bảo Khố tab Kim Nguyên Bảo, Alt+A, ghi
   chú Thục Sơn / Vân Mộng / bảo thú. Kiểm: 0 link / neo gãy, 0 id trùng (19 trang). Chưa kiểm khổ 375 px trên trình duyệt.
+- 2026-10-10 (nhánh `web-5.2`, soạn trước, chỉ gộp `main` khi máy chủ đã lên 5.2): chủ repo "làm xong update web + vps (web phần hướng
+  dẫn tái tạo cần bổ sung mỗi loại trang bị tái tạo ra dòng gì nữa)". Số đọc ở repo game master `c439a62b` (sau 5.1.0, chưa có tag
+  5.2.0). `RELEASES["5.2"]` ngày TẠM 2026-10-10 (phiên phát sửa ngày thật + chữ dự phòng `10/10/2026` của các thẻ `data-rel="5.2"`:
+  trang chủ, mục lục hướng dẫn, Phiên bản); thẻ `#v5-2`; trang chủ: nhãn đầu trang, "đang chạy bản 5.2", dòng `.v5sec__more` + chip 5.2,
+  mốc lộ trình 5.2. Hướng dẫn: `trang-bi/#dong-tai-tao` (bể dòng mỗi ô + giá trị Thường / Tốt / Hiếm theo cấp 20 / 30 / 40 / 50, từ
+  `equip_rules.json` pools / r / tiers, kiểm chéo với set sư môn), `#dong-set` (dòng % cố định của set theo phái, bậc 1 / 2),
+  `#phuc-hoi-do-ben` (mới); `hang-ngay`: truy bắt gộp một chuyến (vé 0 / 23.000 / 33.500 × cấp, thẻ × 0,66 / 1,89 / 2,63, quà qua ải),
+  `#bach-gia-lenh` (mới), sư môn 20 việc, nút Bay tới; thuốc 75 / 50 % ở `pho-ban` + truy bắt; `bao-thu` Dây Càn Khôn; `bay-ban` Tử Kim
+  Tinh 5.000.000; `tien-ich/#may-yeu` (mới); `mon-phai` ghi chú Mao Sơn / Cấm Vệ / Đào Hoa / Vân Mộng; `ky-nang` tẩy miễn phí;
+  `tu-danh` chỗ nút. Còn TODO (comment HTML, tìm `TODO phiên phát`): Phi Long Tầm Châu quét vùng (`mon-phai`), giá tẩy điểm cấp × 1.000
+  (`ky-nang`). Kiểm: 0 link / neo gãy, 0 id trùng (19 trang), không gạch dài; chưa kiểm khổ 375 px trên trình duyệt.

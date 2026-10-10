@@ -85,7 +85,11 @@
               <li>Kéo chiêu xuống ô phím để dùng.</li>
               <!-- stat_defs.json sect_mods, StatCard.passive_rows (nhật ký game 2026-10-05 (257)) -->
               <li>Bảng nhân vật (<kbd>Alt+W</kbd>) có nhóm <strong>Nội tại môn phái</strong> cuối thẻ chỉ số: xem nội tại đang cộng bao nhiêu. Nhiều nội tại chỉ tính lúc đánh (vd tăng sát thương theo %) nên các dòng chỉ số khác không đổi số, đừng lo.</li>
-              <li><strong>Tẩy điểm</strong> ở sư phụ: lần đầu miễn phí, sau đó 100.000 mỗi lần.</li>
+              <!-- Tẩy điểm: repo game master c439a62b sect_skills.json respec_cash 100000, rebalance_epoch 2 (đợt đặc trưng phái 2026-10-10:
+                   mọi nhân vật thêm một lần tẩy miễn phí), logic/sect_skill.gd respec_cost.
+                   TODO phiên phát 5.2: chủ repo chốt tẩy từ lần hai = cấp x 1.000 ngân lượng (đang sửa, chưa có trên master lúc viết);
+                   có trên bản phát thì đổi câu dưới thành "từ lần hai cấp × 1.000 lượng (cấp 50: 50.000)" và kiểm lại số. -->
+              <li><strong>Tẩy điểm</strong> ở sư phụ: lần đầu miễn phí, sau đó 100.000 mỗi lần. <span class="v5tag">Bản 5.2</span> Mọi nhân vật được thêm <strong>một lần tẩy miễn phí</strong> vì bốn phái được cân lại chiêu (Mao Sơn, Cấm Vệ Quân, Đào Hoa, Vân Mộng).</li>
             </ul>
             <!-- Chiêu nhánh cấp 40 (bản kế tiếp): repo game sect_skills.json master 29821792 (text.cd), so với tag 4.1.0;
                  tài liệu 37 §4.45, 28, nhật ký (295). -->
@@ -134,7 +138,7 @@
       </tbody>
     </table>
   </div>
-  <p class="tip">Sát thương, hồi chiêu từng chiêu xem ngay trong game (<kbd>Alt+R</kbd>, bấm vào chiêu). Số liệu bản 5.0 còn có thể chỉnh trước khi phát.</p>
+  <p class="tip">Sát thương, hồi chiêu từng chiêu xem ngay trong game (<kbd>Alt+R</kbd>, bấm vào chiêu). Bản 5.2 làm lại bốn chiêu Mao Sơn và đổi Kỳ Môn Trận, Phi Long Tầm Châu: xem <a href="../mon-phai/#mao-son">Môn phái</a>.</p>
 </article>
 
 <!-- Kĩ năng giang hồ (bản kế tiếp): repo game godot/data/custom/jianghu_skills.json (rules per_char_level 5, min_char_level 10,

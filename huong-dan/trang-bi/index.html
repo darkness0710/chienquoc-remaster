@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trang bị và rèn · Hướng dẫn Chiến Quốc Remaster</title>
-  <meta name="description" content="Pháp bảo, nâng sao, Bùa Ma Thuật, khảm ngọc, tăng phẩm, tái tạo, phân giải, đồ lưng.">
+  <meta name="description" content="Pháp bảo, nâng sao, Bùa Ma Thuật, khảm ngọc, tăng phẩm, tái tạo và bảng dòng từng ô, phân giải, phục hồi độ bền, đồ lưng.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/trang-bi/">
   <meta property="og:title" content="Trang bị và rèn · Hướng dẫn Chiến Quốc Remaster">
-  <meta property="og:description" content="Pháp bảo, nâng sao, Bùa Ma Thuật, khảm ngọc, tăng phẩm, tái tạo, phân giải, đồ lưng.">
+  <meta property="og:description" content="Pháp bảo, nâng sao, Bùa Ma Thuật, khảm ngọc, tăng phẩm, tái tạo và bảng dòng từng ô, phân giải, phục hồi độ bền, đồ lưng.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -63,8 +63,9 @@
       <a href="#quang-vu-khi">Quầng vũ khí</a>
       <a href="#hop-thanh">Hợp thành đá</a>
       <a class="is-v5" href="#tang-pham">Tăng phẩm</a>
-      <a class="is-v5" href="#tai-tao">Tái tạo</a>
+      <a class="is-v5" href="#tai-tao">Tái tạo, bảng dòng</a>
       <a class="is-v5" href="#phan-giai">Phân giải</a>
+      <a class="is-v5" href="#phuc-hoi-do-ben">Phục hồi độ bền</a>
       <a href="#giai-phong-an">Phong ấn</a>
       <a href="#do-lung">Cánh, phi phong</a>
     </nav></div>
@@ -120,7 +121,7 @@
               </table>
             </div>
             <ul>
-              <li><strong>Cửu Long:</strong> khiên hồi 10 % mỗi 10 s. <strong>Nhiếp Hồn:</strong> trùm chỉ choáng 1 s, sau đó miễn choáng một lúc. <strong>Chiêu Hồn:</strong> không chạy trong Cổ Mộ.</li>
+              <li><strong>Cửu Long:</strong> khiên hồi 10 % mỗi 10 s. <strong>Nhiếp Hồn:</strong> trùm chỉ choáng 1 s, sau đó miễn choáng một lúc. Từ bản 5.2 kẻ bị choáng hiện vòng sao trên đầu, nổi chữ "Choáng"; đòn trúng kẻ đang miễn choáng nổi chữ "Miễn". <strong>Chiêu Hồn:</strong> không chạy trong Cổ Mộ.</li>
               <li><strong>Nguồn:</strong> thẻ lật Cổ Mộ và Phong Yêu Kính, tiệm Cổ Mộ (150 điểm, khoá), Tống Bảo Tiểu Yêu (5 %).</li>
               <li><strong>Nâng sao</strong> (Chủ Tiệm Sửa Chữa, mục Pháp bảo): ăn một món cùng loại 0 sao, 20.000 lượng nhân số sao muốn lên. Lên 1 sao 100 %, mỗi sao sau kém 10 %, lên 10 sao 10 %. Trượt thì mất nguyên liệu và tiền nhưng giữ sao.</li>
               <li><strong>Linh Khí:</strong> thu hồi món 0 sao thừa ra Linh Khí (phí 5.000), 30 Linh Khí đổi một món 0 sao loại tuỳ chọn. Pháp bảo chỉ mòn khi ngã, sửa bằng Linh Khí.</li>
@@ -346,6 +347,75 @@
             </div>
             <!-- Bản 5.0: equip_rules.json reroll {cash_per_level 1000, cash_base 30000} (int-5.0). -->
             <p>Mỗi lần tốn <strong>1.000 × cấp đồ + 30.000</strong> lượng (đồ cấp 50: 80.000), khoá dòng không tốn thêm. Nộp 1 <a href="../nghe/#co-quan">cấu kiện Cơ Quan</a> đúng bậc thì phí giảm 25 %.</p>
+<!-- Bảng dòng tái tạo theo ô (bản 5.2, chủ repo 2026-10-10 "bổ sung mỗi loại trang bị tái tạo ra dòng gì"). Nguồn: repo game master
+     c439a62b, godot/data/custom/equip_rules.json: pools (bể dòng mỗi ô, hệ số x R), r + r_levels (R theo ô, nội suy thẳng giữa cấp
+     10 / 20 / 40 / 80 / 150), tiers (Thường 60 % ra 60 lần, Tốt 80 % ra 30, Hiếm 100 % ra 10), qualities[].lines (0 / 2 / 3 / 4 / 5);
+     logic/equip_rules.gd line_cap = round(hệ số x R), line_value = max(1, round(trần x % bậc)), roll_lines (rút đều loại chưa có,
+     bể ít loại hơn số dòng thì cho trùng); tên chỉ số: stat_defs.json. Số in bằng script nháp lines_table.py (đọc thẳng JSON).
+     Kiểm chéo: set sư môn bậc 1 (cấp 25) / bậc 2 (cấp 50) trong sect_sets.json khớp mức Hiếm (vd mũ cấp 25 Khí Huyết 37, Ngoại
+     Kháng 7). Đỏ: tài liệu game 29 "Đỏ chưa làm". -->
+            <h4 id="dong-tai-tao">Mỗi ô ra dòng gì</h4>
+            <p>Mỗi dòng phụ rút ngẫu nhiên một loại trong bể của ô (các loại ngang nhau), rồi rút bậc Thường, Tốt, Hiếm như bảng trên. Số dòng theo phẩm: <strong>Xanh 2, Vàng 3</strong> (tái tạo được); Tím là set sư môn, 4 dòng đặt sẵn; Đỏ 5 dòng, chưa có món nào.</p>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Ô</th><th>Dòng có thể ra</th></tr></thead>
+                <tbody>
+                  <tr><td>Vũ khí (mọi loại)</td><td>Ngoại Công, Nội Công</td></tr>
+                  <tr><td>Áo</td><td>Khí Huyết, Pháp Lực, Ngoại Kháng, Nội Kháng</td></tr>
+                  <tr><td>Mũ</td><td>Khí Huyết, Pháp Lực, Ngoại Kháng, Nội Kháng</td></tr>
+                  <tr><td>Giày</td><td>Khí Huyết, Pháp Lực, Ngoại Kháng, Nội Kháng</td></tr>
+                  <tr><td>Yêu đới (đai)</td><td>Khí Huyết, Pháp Lực, Ngoại Kháng, Nội Kháng</td></tr>
+                  <tr><td>Hạng liên (dây chuyền)</td><td>Ngoại Công, Nội Công, Khí Huyết, Pháp Lực, Ngoại Kháng, Nội Kháng</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Giá trị mỗi dòng theo <strong>cấp món</strong>, ghi theo bậc <strong>Thường / Tốt / Hiếm</strong>. Món Xanh và Vàng cùng cấp ra số như nhau (phẩm chỉ đổi số dòng). Món cấp lẻ (25, 35, 45) nằm giữa hai cột.</p>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Ô</th><th>Dòng</th><th>Cấp 20</th><th>Cấp 30</th><th>Cấp 40</th><th>Cấp 50</th></tr></thead>
+                <tbody>
+                  <tr><td>Vũ khí</td><td>Ngoại Công hoặc Nội Công</td><td>10 / 13 / 16</td><td>13 / 18 / 22</td><td>17 / 23 / 29</td><td>21 / 28 / 35</td></tr>
+                  <tr><td rowspan="2">Áo</td><td>Khí Huyết hoặc Pháp Lực</td><td>39 / 52 / 65</td><td>56 / 74 / 93</td><td>73 / 98 / 122</td><td>90 / 120 / 150</td></tr>
+                  <tr><td>Ngoại Kháng hoặc Nội Kháng</td><td>7 / 9 / 11</td><td>10 / 13 / 16</td><td>12 / 16 / 20</td><td>15 / 20 / 25</td></tr>
+                  <tr><td rowspan="2">Mũ</td><td>Khí Huyết hoặc Pháp Lực</td><td>18 / 24 / 30</td><td>26 / 35 / 44</td><td>35 / 47 / 59</td><td>44 / 58 / 73</td></tr>
+                  <tr><td>Ngoại Kháng hoặc Nội Kháng</td><td>4 / 5 / 6</td><td>5 / 7 / 9</td><td>7 / 10 / 12</td><td>9 / 12 / 15</td></tr>
+                  <tr><td rowspan="2">Giày</td><td>Khí Huyết hoặc Pháp Lực</td><td>20 / 26 / 33</td><td>28 / 38 / 47</td><td>36 / 48 / 60</td><td>44 / 59 / 74</td></tr>
+                  <tr><td>Ngoại Kháng hoặc Nội Kháng</td><td>2 / 2 / 3</td><td>3 / 4 / 5</td><td>4 / 5 / 6</td><td>4 / 6 / 7</td></tr>
+                  <tr><td rowspan="2">Yêu đới</td><td>Khí Huyết hoặc Pháp Lực</td><td>34 / 46 / 57</td><td>50 / 67 / 84</td><td>67 / 89 / 111</td><td>83 / 110 / 138</td></tr>
+                  <tr><td>Ngoại Kháng hoặc Nội Kháng</td><td>4 / 5 / 6</td><td>5 / 6 / 8</td><td>7 / 9 / 11</td><td>8 / 11 / 14</td></tr>
+                  <tr><td rowspan="2">Hạng liên</td><td>Khí Huyết hoặc Pháp Lực</td><td>17 / 22 / 28</td><td>25 / 34 / 42</td><td>34 / 45 / 56</td><td>42 / 56 / 70</td></tr>
+                  <tr><td class="wrap-cell">Ngoại Công, Nội Công, Ngoại Kháng hoặc Nội Kháng</td><td>4 / 6 / 7</td><td>7 / 9 / 11</td><td>8 / 11 / 14</td><td>11 / 14 / 18</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul>
+              <li>Hai dòng của một món không trùng loại. Riêng vũ khí chỉ có 2 loại nên món Vàng (3 dòng) luôn có 2 dòng cùng loại, hai dòng đó cộng dồn.</li>
+              <li>Vũ khí ngoại công vẫn có thể ra dòng Nội Công và ngược lại: khoá dòng đúng loại rồi quay tiếp.</li>
+              <li>Không ô nào ra Thân Thủ hay dòng phần trăm (Chính Xác, Né Tránh, Bạo Kích, Hấp Thụ). Các chỉ số đó có ở ngọc khảm (Tinh Thạch) và dòng cuối của set sư môn.</li>
+              <li>Pháp bảo, cánh, phi phong không có dòng phụ, không tái tạo.</li>
+            </ul>
+            <!-- Set sư môn: sect_sets.json items[*].lines (4 dòng, 3 dòng phẳng = mức Hiếm bể của ô ở cấp món 25 / 50), rules.pct_line
+                 (common weapon / waist / boots 0,5 + 0,25 mỗi bậc; sect head / armor / neck 1 + 0,5; Phản Đòn kèm reflect_rand 20 + 10),
+                 rules.reroll_line (1 Tử Kim Tinh + 50.000, dòng cuối không đổi), tài liệu game 37 §4.63. Bạo Kích ghi phần vạn (100 = 1 %). -->
+            <h4 id="dong-set">Dòng của set sư môn</h4>
+            <p>Set sư môn (phẩm Tím) có 4 dòng: 3 dòng đầu là dòng phẳng của bể ô đó, đủ mức Hiếm theo cấp món (bậc 1 tính như cấp 25, bậc 2 như cấp 50); dòng cuối là dòng phần trăm riêng của set, cố định.</p>
+            <div class="tbl">
+              <table>
+                <thead><tr><th>Ô</th><th>Dòng cuối (cố định)</th><th>Bậc 1</th><th>Bậc 2</th></tr></thead>
+                <tbody>
+                  <tr><td>Vũ khí</td><td>Hấp Thụ Khí Huyết (mọi phái)</td><td>0,5 %</td><td>0,75 %</td></tr>
+                  <tr><td>Yêu đới</td><td>Hồi Phục (mọi phái)</td><td>0,5 %</td><td>0,75 %</td></tr>
+                  <tr><td>Giày</td><td>Né Tránh (mọi phái)</td><td>0,5 %</td><td>0,75 %</td></tr>
+                  <tr><td>Mũ</td><td class="wrap-cell">Đào Hoa: Phản Đòn (xác suất phản 20 %, bậc 2 30 %) · Thục Sơn: Bạo Kích · Cấm Vệ: Chính Xác · Đường Môn: Trúng Ám Khí · Mao Sơn, Vân Mộng: Hấp Thụ Pháp Lực · Côn Luân: Trúng Pháp Thuật</td><td>1 %</td><td>1,5 %</td></tr>
+                  <tr><td>Áo</td><td class="wrap-cell">Đào Hoa, Cấm Vệ, Đường Môn: Giảm Sát Thương Ngoại % · Thục Sơn, Mao Sơn, Côn Luân, Vân Mộng: Giảm Sát Thương Nội %</td><td>1 %</td><td>1,5 %</td></tr>
+                  <tr><td>Hạng liên</td><td class="wrap-cell">Đào Hoa, Thục Sơn: Chính Xác · Cấm Vệ, Đường Môn, Côn Luân: Bạo Kích · Mao Sơn, Vân Mộng: Trúng Pháp Thuật</td><td>1 %</td><td>1,5 %</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul>
+              <li>Thợ rèn không tái tạo set sư môn. <a href="../pho-ban/#tai-tao-set">Tái tạo dòng set</a> ở sư phụ: mỗi lần 1 Tử Kim Tinh + 50.000 lượng, đổi một trong 3 dòng đầu; dòng cuối giữ nguyên.</li>
+              <li>Dòng mới rút từ bể của ô như bảng trên, theo cấp món (ví dụ Khí Huyết ở mũ: bậc 1 ra 22 / 30 / 37, bậc 2 ra 44 / 58 / 73). Dòng gốc đã ở mức Hiếm nên tái tạo dùng để đổi loại dòng, không để tăng số.</li>
+            </ul>
           <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Bỏ Tái Tạo Thạch, chỉ tốn ngân lượng (trước: 1 Tái Tạo Thạch + 1.000 × cấp đồ).</p></div>
           <div class="v5note"><p><span class="v5tag">Bản 5.1</span> Set sư môn tái tạo ở sư phụ, mỗi lần một dòng, giá 1 Tử Kim Tinh + 50.000 lượng: xem <a href="../pho-ban/#tai-tao-set">Tái tạo dòng set</a>.</p></div>
 </div>
@@ -379,6 +449,37 @@
           </ul>
           <p class="tip">Sơ Cấp Đoạn Thạch ra từ phân giải bị khoá, dùng để <a href="#nang-sao">nâng sao</a> hay <a href="#hop-thanh">hợp thành</a>.</p>
         <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Phân giải ra Sơ Cấp Đoạn Thạch thay cho Thăng Phẩm, Tái Tạo Thạch; phí giảm từ 1.000 xuống 200 × cấp đồ.</p></div>
+</article>
+
+<!-- Phục hồi độ bền (bản 5.2): repo game master c439a62b (commit 550c437b), equip_rules.json restore {cash_x [0, 4000, 16000,
+     30000, 60000], min_pct 10}, logic/durability_restore.gd, gateway/forge_service.gd MENU việc 8 "Phục hồi độ bền"; tài liệu game
+     37 §4.67 (bảng giá). Cấp món = cost_level (set sư môn bậc 1 cấp 25, bậc 2 cấp 50). -->
+<article class="gcard" id="phuc-hoi-do-ben">
+          <h3>Phục hồi độ bền <span class="v5tag">Bản 5.2</span></h3>
+          <ul class="facts">
+            <li>Mọi thợ rèn</li>
+            <li>Đồ Xanh, Vàng, Tím</li>
+            <li>Chỉ tốn ngân lượng</li>
+          </ul>
+          <p>Mỗi lần sửa đồ thường, độ bền tối đa của món giảm một ít, giảm mãi không hồi. Việc cuối danh sách "Rèn luyện trang bị" của thợ rèn, <strong>Phục hồi độ bền</strong>, đưa độ bền tối đa về đúng số gốc của món và sửa đầy luôn. Kéo món từ hành trang hoặc ô đang mặc vào ô, xem giá, bấm Tiến hành.</p>
+          <ul>
+            <li>Giá = <strong>cấp món × hệ số phẩm × phần độ bền tối đa đã mất</strong>, ít nhất bằng 10 % giá đầy. Hệ số: Xanh 4.000, Vàng 16.000, Tím (set sư môn) 30.000.</li>
+            <li>Đồ Trắng không phục hồi được: mua món mới rẻ hơn.</li>
+            <li>Rê chuột lên món: đã giảm thì có thêm dòng "Độ bền tối đa: còn / gốc".</li>
+          </ul>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Giá (lượng)</th><th>Xanh</th><th>Vàng</th><th>Tím</th></tr></thead>
+              <tbody>
+                <tr><td>Cấp 40, mất 20 %</td><td>32.000</td><td>128.000</td><td>240.000</td></tr>
+                <tr><td>Cấp 40, mất 50 %</td><td>80.000</td><td>320.000</td><td>600.000</td></tr>
+                <tr><td>Cấp 50, mất 20 %</td><td>40.000</td><td>160.000</td><td>300.000</td></tr>
+                <tr><td>Cấp 50, mất 50 %</td><td>100.000</td><td>400.000</td><td>750.000</td></tr>
+                <tr><td>Ít nhất (cấp 40 / 50)</td><td>16.000 / 20.000</td><td>64.000 / 80.000</td><td>120.000 / 150.000</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="tip">Phục hồi sớm hay muộn thì tổng tiền như nhau, vì giá tính theo phần đã mất.</p>
 </article>
 
 <article class="gcard gpanel" id="giai-phong-an">
