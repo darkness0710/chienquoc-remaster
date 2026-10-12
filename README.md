@@ -291,3 +291,7 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   `#thanh-kieu-bien-co`, `hang-ngay/#truy-bat-bien-co`, `bat-dau/#tran-cap-60`, `tien-ich/#kho-trang-2`; bảng thẻ Cổ Mộ, Thành Kiều,
   Phong Yêu Kính sinh bằng script đọc JSON (nháp, ngoài repo); thẻ `#v6-0`, dải 6.0 mục lục, trang chủ (nhãn, meta, dải số cấp 60,
   dòng 6.0 trong `#ban-5`, chip, nút, mốc lộ trình). Kiểm: 0 link / neo gãy, 0 id trùng (20 trang), thẻ đóng mở đủ, không gạch dài.
+- 2026-10-12 (phiên phát, tag game 6.0.0 = 41c04b9c lên VPS 23:58): `RELEASES["6.0"]` = 2026-10-12; bỏ mọi chữ "sắp ra mắt" của 6.0
+  (thẻ `#v6-0` thành `<time data-rel="6.0">`, bỏ `vcard--next` và `is-next`); trang chủ: nhãn đầu trang, "đang chạy bản 6.0", meta, dải
+  số 60 cấp, nút "Bản 6.0 có gì", mốc lộ trình `is-done`. Đối chiếu tag 6.0.0: bảng thẻ, phí, Quân Công khớp; tiệm đổi Tử Kim Tinh ở sư
+  phụ 7 Thú Hồn / Tinh (trước 10, `sect_sets.json`).
