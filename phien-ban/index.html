@@ -54,6 +54,7 @@
 
   <div class="vtoc-bar">
     <nav class="wrap vtoc" aria-label="Nhảy tới phiên bản">
+      <a class="is-next" href="#v5-3">5.3</a>
       <a href="#v5-2">5.2</a>
       <a href="#v5-1">5.1</a>
       <a href="#v5-0">5.0</a>
@@ -79,6 +80,48 @@
 
   <div class="wrap">
     <div class="vlist">
+
+      <!-- ================= 5.3 (CHƯA PHÁT) =================
+           Soạn 2026-10-12, máy chủ còn 5.2.0. Nguồn: repo game master sau ebb935b3 (commit cd8da855, ebb935b3 và các commit
+           2026-10-12), nhật ký 2026-10-11 (357) (358), 2026-10-12 (359) (360); tài liệu 66 §6-§7 (chiêu 7 phái), 37 §4.70-§4.71,
+           gameplay/12 (phạt chết phó bản, vùng an toàn, sao choáng, Tích Độc, làm lại chiêu). Số: sect_skills.json (so với tag 5.2.0),
+           daily_activities.json server_bar, stall_bots.json (gold_price_forge_mult 1,5 -> 1,875, Tử Kim Tinh 6.250.000).
+           KHI PHÁT: thay khối "vcard__date" bằng <time class="vcard__date" data-rel="5.3" datetime="YYYY-MM-DD">D/M/YYYY</time> + khoá
+           "5.3" trong js/release.js, bỏ nhãn "Sắp ra mắt", bỏ class vcard--next (thẻ và link .vtoc is-next); hướng dẫn: bỏ chữ
+           "sắp ra mắt" cạnh nhãn Bản 5.3 (tìm "Sắp ra mắt" / "sắp ra mắt" trong huong-dan/), đối chiếu số với tag 5.3.0. -->
+      <article class="vcard vcard--next" id="v5-3">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">5.3</h2>
+          <span class="vcard__tag vcard__tag--gold">Sắp ra mắt</span>
+          <span class="vcard__date" data-release-date>Ngày phát hành: sẽ báo trong nhóm cộng đồng</span>
+        </header>
+        <p class="vcard__sum">Làm lại chiêu cả 7 phái (tên nhánh theo võ công gốc, chiêu tủ riêng, hồi chiêu nhanh hơn), thanh tiến độ cả server, chết trong phó bản phạt nhẹ, Bảo Điển bay tới tận chỗ, sửa 5 lỗi.</p>
+
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li><a href="../huong-dan/hang-ngay/#thanh-server">Thanh tiến độ cả server</a> trong bảng Hoạt động, tab Hôm nay: mỗi tài khoản có nhân vật cấp 20 trở lên đạt thưởng Hoạt động (5 / 9 việc) góp 1 điểm mỗi ngày. Mốc <strong>3 / 6 / 9 / 12 / 15</strong> người, quà cộng dồn (khoá): 2 lượt Bảo Điển, 1 Sơ Cấp Đoạn Thạch, 2 Sơ Cấp, 1 Trung Cấp, 2 Trung Cấp. Chỉ người đã góp mới nhận, hạn 23:00; qua mốc nào cả server được báo.</li>
+          <li><strong>Mỗi phái một chiêu tủ, một cơ chế riêng</strong>: Thục Sơn <strong>Khắc Ấn</strong> dùng ở cả hai nhánh và chiêu cấp 50 <strong>Thiên Địa Kiếm Khí</strong>; Cấm Vệ Quân <strong>Sát Khí</strong> (chiêu trúng kẻ đang choáng hoặc kết liễu thì thêm Nguyên Khí) và <strong>Tất Sát</strong> (Thiên Lý Tất Sát kết liễu thì hồi chiêu ngay); Đường Môn <strong>Thân Pháp</strong> (né thêm 0,24 % mỗi cấp, cấp 50 thêm 12 %, né được nửa phần trước đòn phép của quái, né xong đòn kế tính sau lưng) và <strong>Bí Sát</strong> dùng không cần Ẩn Thân; Đào Hoa có <strong>Sư Tử Gầm</strong> (thay Trấn Cổ Thần Uy); Côn Luân, Vân Mộng chiêu nối nhau (Thiêu Đốt, Chậm, ngủ, choáng làm chiêu sau mạnh thêm). Chi tiết: <a href="../huong-dan/mon-phai/">Bảy môn phái</a>.</li>
+          <li>Tên nhánh theo võ công bản gốc: Thái Cổ Thần Quyền, Đào Hoa Tâm Pháp, Thiên La Đao Pháp, Phi Tiên Kiếm Pháp, Bá Vương Thương Pháp, Phong Ma Côn Pháp, Mãn Thiên Hoa Vũ, Cực Tà Sát Pháp, Thuận Thiên Pháp Chú, Nghịch Thiên Pháp Chú, Kim Tiên Phù Chú, Kim Cang Pháp Chú, Y Thuật, Kỳ Môn Độn Giáp.</li>
+          <li>Chiến Quốc Bảo Điển, nút <strong>Bay tới</strong> ở tab <a href="../huong-dan/hang-ngay/#tong-bao">Tống Yêu</a> và <a href="../huong-dan/hang-ngay/#trom-bao">Trộm Bảo</a>: đáp ngay cạnh con quái (trước: cổng vào bản đồ). Con chưa hiện thì đáp ở cổng, nó hiện là được đưa tới cạnh nó.</li>
+        </ul>
+
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li><a href="../huong-dan/ky-nang/#lam-lai-chieu">Làm lại chiêu 7 phái</a>: <strong>43 chiêu hồi nhanh hơn</strong> (trung vị 12 giây xuống 10 giây), sát thương mỗi lần giảm theo để sát thương mỗi giây gần như giữ: xả chiêu sớm và nhiều hơn. Trong mỗi nhánh chiêu hàng cao không yếu hơn hàng thấp (cấp 50 mạnh nhất). Nâng các chiêu yếu: Khí Tráng Sơn Hà, Nhất Quyền Bạt Sơn, Lưu Tinh Truy Mạng, Lăng Không Chỉ Huyệt, Băng Tâm Thức, Đại Hải Cuồng Đào, Thương Long Quyết, Mệnh Tế, Biến Thân Thuật, Vô Đình Lưu Thuỷ; Cấm Vệ Quân nhánh Côn dọn bầy bớt nhanh.</li>
+          <li>Hàng 6, 7 (cấp 45, 50) cần <strong>20 / 30 điểm</strong> trong nhánh (trước 25 / 35). Mọi nhân vật được thêm <strong>một lần tẩy điểm miễn phí</strong>.</li>
+          <li>Chết trong <a href="../huong-dan/pho-ban/#co-mo">Cổ Mộ</a>, <a href="../huong-dan/hang-ngay/#phong-yeu-kinh">Phong Yêu Kính</a>, <a href="../huong-dan/pho-ban/#thanh-kieu">Thành Kiều</a>: <strong>không mất kinh nghiệm</strong>, không mất Ngân Lượng, trang bị mòn 5 % độ bền (trước 10 %).</li>
+          <li><a href="../huong-dan/bay-ban/#mua-hang">Sạp Hoàng Kim</a> ở chợ bot đắt hơn 25 %: đồ Vàng cấp 40 khoảng 7.199.000 (trước 5.759.000), cấp 50 khoảng 8.350.000 (trước 6.680.000); Tử Kim Tinh 6.250.000 (trước 5.000.000).</li>
+        </ul>
+
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Nhiệm vụ <strong>"Lá thư gửi về tây"</strong> (chủ tuyến) bảo đưa thư mà không có thư: nay nhận nhiệm vụ là được Mật Thư; ai đang kẹt thì vào game được phát bù.</li>
+          <li>Chết bất ngờ trong vùng an toàn: quái đứng sát mép vùng không còn đánh được người bên trong; phím <kbd>K</kbd> (chết thử, chỉ để làm game) không còn làm nhân vật chết ở bản phát hành khi lỡ gõ "k" lúc khung chat chưa nhận phím.</li>
+          <li>Bảo thú gây sát thương rất to lúc mới bắt rồi giảm dần: nay sát thương đều từ đầu.</li>
+          <li>Lữ Bố ở Cổ Mộ đánh cả bản đồ (lướt tới người vừa hồi sinh ở cửa mộ, nhất là Địa Ngục): nay chỉ nhắm người trong 15 ô quanh chỗ đánh.</li>
+          <li>Bị choáng không thấy gì trên đầu: nay hiện vòng sao.</li>
+        </ul>
+      </article>
 
       <!-- ================= 5.2 =================
            SOẠN TRƯỚC 2026-10-10 trên nhánh web-5.2 (máy chủ còn 5.1.0); ngày TẠM ở js/release.js (RELEASES["5.2"]), phiên phát sửa ngày

@@ -10,6 +10,8 @@
     // 5.2: ngày phát thật 2026-10-10 (tag 5.2.0 lên VPS 19:21). Đổi ngày thì đồng bộ chữ dự phòng
     // "10/10/2026" trong các thẻ <time data-rel="5.2"> (README §Sửa thường gặp).
     "5.2": "2026-10-10"
+    // 5.3: CHƯA PHÁT (soạn 2026-10-12). Thẻ #v5-3 dùng khối data-release-date, chưa có <time data-rel="5.3">;
+    // khi phát thêm "5.3": "yyyy-mm-dd" (dấu phẩy sau dòng 5.2) và đổi các chỗ ghi "Sắp ra mắt".
   };
 
   var list = document.querySelectorAll("time[data-rel]");

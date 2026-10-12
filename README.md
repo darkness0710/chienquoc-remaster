@@ -46,11 +46,11 @@ mục cũ có thay đổi ở 5.0 có khối `.v5note` cuối phần chữ và c
 | Trang `huong-dan/…/` | Mục (id) |
 |---|---|
 | `bat-dau` | `cai-dat-game`, `tan-thu` (bỏ qua Tân Thủ, 5.0) |
-| `hang-ngay` | `su-mon`, `vuong-bo-dau`, `phong-yeu-kinh`, `tong-bao`, `trom-bao`, `cau-ca`, `diem-danh` (5.1) |
+| `hang-ngay` | `su-mon`, `vuong-bo-dau`, `phong-yeu-kinh`, `tong-bao`, `trom-bao`, `cau-ca`, `diem-danh` (5.1), `thanh-server` (5.3) |
 | `pho-ban` | `co-mo`, `thanh-kieu` (+ `nang-set`, `tai-tao-set` và `tiem-tu-kim` 5.1) |
 | `nhiem-vu` | `ct-tong-quan`, `ct-vet-nut`, `ct-hoi-5` tới `ct-hoi-10`, `ho-phu` |
 | `mon-phai` | `dao-hoa`, `thuc-son`, `cam-ve-quan`, `duong-mon`, `mao-son`, `con-luan`, `van-mong` |
-| `ky-nang` | `cach-hoc`, `chieu-45-50` (5.0), `ki-nang-giang-ho`, `tu-vi` |
+| `ky-nang` | `cach-hoc`, `chieu-45-50` (5.0), `lam-lai-chieu` (5.3), `ki-nang-giang-ho`, `tu-vi` |
 | `trang-bi` | `khoa-phai` (5.0), `phap-bao`, `nang-sao`, `bua-ma-thuat`, `bua-may-man`, `quang-vu-khi`, `hop-thanh`, `tang-pham`, `tai-tao`, `phan-giai`, `giai-phong-an`, `do-lung` |
 | `than-thu` | `bang-than-thu`, `thu-cuoi` |
 | `bao-thu` (5.0) | `bat-thu`, `bao-thu-luc`, `thu-xuat-chien` |
@@ -266,3 +266,10 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   Tinh 5.000.000; `tien-ich/#may-yeu` (mới); `mon-phai` ghi chú Mao Sơn / Cấm Vệ / Đào Hoa / Vân Mộng; `ky-nang` tẩy miễn phí;
   `tu-danh` chỗ nút. Còn TODO (comment HTML, tìm `TODO phiên phát`): Phi Long Tầm Châu quét vùng (`mon-phai`), giá tẩy điểm cấp × 1.000
   (`ky-nang`). Kiểm: 0 link / neo gãy, 0 id trùng (19 trang), không gạch dài; chưa kiểm khổ 375 px trên trình duyệt.
+- 2026-10-12: bản 5.3 CHƯA PHÁT (máy chủ chạy 5.2), đẩy thẳng `main` theo yêu cầu chủ repo ("update web + push"): mọi chỗ ghi
+  "Sắp ra mắt", không đổi câu "máy chủ đang chạy bản 5.2", chưa có khoá `"5.3"` trong `js/release.js` (thẻ `#v5-3` dùng khối
+  `data-release-date`, cách phát ghi trong comment trên thẻ). Số theo repo game master sau ebb935b3 (nhật ký (357)-(360), tài liệu 66
+  §6-§7, 37 §4.70-§4.71), so `sect_skills.json` với tag 5.2.0. Mới: `ky-nang/#lam-lai-chieu` (tên nhánh mới, bảng hồi chiêu và % cấp 1
+  từng chiêu có đổi, sinh bằng script), `hang-ngay/#thanh-server`; khối `.v5note` "Bản 5.3" ở 7 phái `mon-phai`, nhãn 5.3 cạnh số đang
+  chạy (hàng 6 / 7 cần điểm, Bay tới, phạt chết phó bản, Lữ Bố 15 ô, giá Sạp Hoàng Kim +25 %, Tử Kim Tinh 6.250.000); dải 5.3 ở mục
+  lục hướng dẫn, dòng 5.3 trong `#ban-5` và mốc `is-next` ở `#lo-trinh` trang chủ.

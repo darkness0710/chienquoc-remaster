@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kĩ năng · Hướng dẫn Chiến Quốc Remaster</title>
-  <meta name="description" content="Cách học chiêu, chiêu mới cấp 45 và 50, kĩ năng giang hồ, Tu Vị.">
+  <meta name="description" content="Cách học chiêu, chiêu mới cấp 45 và 50, làm lại chiêu 7 phái ở bản 5.3, kĩ năng giang hồ, Tu Vị.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
@@ -57,6 +57,7 @@
   <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
       <a class="is-v5" href="#cach-hoc">Cách học</a>
       <a class="is-v5" href="#chieu-45-50">Chiêu cấp 45, 50</a>
+      <a class="is-v5" href="#lam-lai-chieu">Làm lại chiêu (5.3)</a>
       <a href="#ki-nang-giang-ho">Giang hồ</a>
       <a href="#tu-vi">Tu Vị</a>
     </nav></div>
@@ -98,6 +99,7 @@
             </ul>
             <p class="tip">Chiêu trấn phái đã hiện trong cây nhưng chưa mở ở bản này.</p>
           <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Cây kĩ năng thêm hàng 6 (cấp 45) và hàng 7 (cấp 50): xem <a href="#chieu-45-50">Chiêu cấp 45 và 50</a>.</p></div>
+          <div class="v5note"><p><span class="v5tag">Bản 5.3</span> Sắp ra mắt: chiêu cấp 40 không còn chung mức hồi 10 / 12 / 15 giây mà mỗi chiêu một mức (nhanh nhất 6 giây); mọi nhân vật được thêm một lần tẩy điểm miễn phí. Xem <a href="#lam-lai-chieu">Làm lại chiêu 7 phái</a>.</p></div>
 </div>
         </article>
 
@@ -113,7 +115,7 @@
   <ul>
     <li>Mỗi nhánh của bảy phái thêm <strong>hàng 6 mở ở cấp 45</strong> và <strong>hàng 7 mở ở cấp 50</strong>. Mỗi phái 4 chiêu, cả game 28 chiêu, phần lớn là chiêu bản gốc (tên, hình chiêu quen thuộc).</li>
     <li>Mỗi chiêu tối đa 5 cấp, 1 điểm mỗi cấp. Tổng điểm vẫn 150, mỗi nhánh vẫn tối đa 110 điểm <strong>tính cả hai hàng mới</strong>: nhánh đã gần đầy thì phải bớt điểm chiêu cũ để lên chiêu mới.</li>
-    <li>Mở chiêu cần đủ cấp nhân vật và đã dồn đủ điểm vào nhánh: hàng 6 cần <strong>25 điểm</strong>, hàng 7 cần <strong>35 điểm</strong> trong nhánh đó. Trộn đều hai nhánh thì khó mở hàng 7.</li>
+    <li>Mở chiêu cần đủ cấp nhân vật và đã dồn đủ điểm vào nhánh: hàng 6 cần <strong>25 điểm</strong>, hàng 7 cần <strong>35 điểm</strong> trong nhánh đó. Trộn đều hai nhánh thì khó mở hàng 7. <span class="v5tag">Bản 5.3</span> Sắp ra mắt: còn <strong>20 điểm</strong> và <strong>30 điểm</strong>.</li>
   </ul>
   <div class="tbl tbl--wrap">
     <table>
@@ -137,6 +139,117 @@
     </table>
   </div>
   <p class="tip">Sát thương, hồi chiêu từng chiêu xem ngay trong game (<kbd>Alt+R</kbd>, bấm vào chiêu). Bản 5.2 làm lại bốn chiêu Mao Sơn và đổi Kỳ Môn Trận, Phi Long Tầm Châu: xem <a href="../mon-phai/#mao-son">Môn phái</a>.</p>
+  <div class="v5note"><p><span class="v5tag">Bản 5.3</span> Sắp ra mắt: Đào Hoa Hộ Thể hàng 6 đổi <strong>Trấn Cổ Thần Uy</strong> thành <strong>Sư Tử Gầm</strong> (gầm choáng và khiêu khích quanh mình); Thục Sơn Kiếm hàng 7 <strong>Vạn Kiếm Quy Tông</strong> đổi tên <strong>Thiên Địa Kiếm Khí</strong> (bốn đợt kiếm khí, đợt cuối choáng). Bản gốc phải học hai chiêu này bằng sách cấp 150. Tên nhánh mới và hồi chiêu mới: <a href="#lam-lai-chieu">Làm lại chiêu 7 phái</a>.</p></div>
+</article>
+
+<!-- Làm lại chiêu 7 phái (bản 5.3, CHƯA PHÁT lúc viết 2026-10-12; máy chủ còn 5.2.0). Nguồn: repo game master sau ebb935b3
+     (nhật ký (357)-(359), tài liệu 66 §6-§7, gameplay/12 "Làm lại chiêu 7 phái"). Bảng sinh bằng script so sect_skills.json
+     ở tag 5.2.0 với master (numbers.cd, numbers.pct cấp 1; chỉ dòng có đổi). KHI PHÁT: bỏ chữ "sắp ra mắt", đối chiếu số với tag 5.3.0. -->
+<article class="gcard" id="lam-lai-chieu">
+  <h3>Làm lại chiêu 7 phái</h3>
+  <ul class="facts">
+    <li class="v5">Bản 5.3, sắp ra mắt</li>
+    <li>43 chiêu hồi nhanh hơn</li>
+    <li>Tẩy điểm miễn phí thêm một lần</li>
+  </ul>
+  <p>Bản 5.3 chưa lên máy chủ: mọi số dưới đây áp dụng từ bản 5.3, máy chủ bây giờ vẫn chạy số của bản 5.2.</p>
+  <ul>
+    <li><strong>Hồi chiêu ngắn hơn, mỗi lần nhẹ hơn</strong>: 43 chiêu đánh hồi nhanh hơn (trung vị 12 giây xuống 10 giây), sát thương mỗi lần giảm theo nên sát thương mỗi giây gần như giữ. Xả chiêu sớm và nhiều hơn.</li>
+    <li><strong>Hàng cao luôn mạnh hơn hàng thấp</strong>: trong mỗi nhánh, chiêu cấp 50 không yếu hơn chiêu cấp 45, cấp 45 không yếu hơn cấp 40 (so sát thương mỗi giây lên một mục tiêu).</li>
+    <li><strong>Hàng 6, 7 dễ mở hơn</strong>: cần <strong>20 điểm</strong> và <strong>30 điểm</strong> trong nhánh (bản 5.2: 25 và 35). Lai một hàng của nhánh kia vẫn lên được hàng 7.</li>
+    <li><strong>Tên nhánh theo võ công bản gốc</strong>: Đào Hoa (Thái Cổ Thần Quyền, Đào Hoa Tâm Pháp), Thục Sơn (Thiên La Đao Pháp, Phi Tiên Kiếm Pháp), Cấm Vệ Quân (Bá Vương Thương Pháp, Phong Ma Côn Pháp), Đường Môn (Mãn Thiên Hoa Vũ, Cực Tà Sát Pháp), Mao Sơn (Thuận Thiên Pháp Chú, Nghịch Thiên Pháp Chú), Côn Luân (Kim Tiên Phù Chú, Kim Cang Pháp Chú), Vân Mộng (Y Thuật, Kỳ Môn Độn Giáp).</li>
+    <li><strong>Mỗi phái một chiêu tủ, một cơ chế riêng</strong>, chiêu trong nhánh nối với nhau (chiêu trước làm choáng, làm chậm thì chiêu sau mạnh thêm): xem từng phái ở <a href="../mon-phai/">Bảy môn phái</a>.</li>
+    <li>Mọi nhân vật được <strong>thêm một lần tẩy điểm miễn phí</strong> để xếp lại.</li>
+  </ul>
+  <h4>Hồi chiêu và sát thương từng chiêu</h4>
+  <p>Chỉ ghi chiêu có đổi. "Mỗi lần, cấp 1" là % Công lực của chiêu ở cấp 1 (chiêu nhiều đòn, nhiều đợt: mỗi đòn, mỗi đợt; chiêu trận: mỗi giây). Chiêu yếu được nâng nên có chiêu hồi nhanh hơn mà mỗi lần vẫn mạnh hơn.</p>
+  <h4>Đào Hoa Nguyên</h4>
+  <div class="tbl">
+    <table><thead><tr><th>Chiêu</th><th>Nhánh</th><th>Mở</th><th>Hồi chiêu</th><th>Mỗi lần, cấp 1</th></tr></thead><tbody>
+  <tr><td>Thốn Kình</td><td>Thái Cổ Thần Quyền</td><td>15</td><td>8 → 6 giây</td><td>110 → 69 %</td></tr>
+  <tr><td>Khí Tráng Sơn Hà</td><td>Thái Cổ Thần Quyền</td><td>30</td><td>12 → 8 giây</td><td>64 → 39 %</td></tr>
+  <tr><td>Nhất Quyền Bạt Sơn</td><td>Thái Cổ Thần Quyền</td><td>40</td><td>10 → 6 giây</td><td>183 → 92 %</td></tr>
+  <tr><td>Ba Động Quyền</td><td>Thái Cổ Thần Quyền</td><td>45</td><td>10 → 8 giây</td><td>147 → 130 %</td></tr>
+  <tr><td>Không Thủ Nhập Bạch Nhẫn</td><td>Thái Cổ Thần Quyền</td><td>50</td><td>15 → 12 giây</td><td>212 → 217 %</td></tr>
+  <tr><td>Khiêu Trận</td><td>Đào Hoa Tâm Pháp</td><td>15</td><td>8 → 6 giây</td><td>92 → 74 %</td></tr>
+  <tr><td>Đại Hải Vô Lượng</td><td>Đào Hoa Tâm Pháp</td><td>40</td><td>12 → 8 giây</td><td>84 → 45 %</td></tr>
+  <tr><td>Sư Tử Gầm (mới)</td><td>Đào Hoa Tâm Pháp</td><td>45</td><td>mới, 12 giây</td><td>219 %</td></tr>
+  </tbody></table></div>
+  <h4>Thục Sơn</h4>
+  <div class="tbl">
+    <table><thead><tr><th>Chiêu</th><th>Nhánh</th><th>Mở</th><th>Hồi chiêu</th><th>Mỗi lần, cấp 1</th></tr></thead><tbody>
+  <tr><td>Đơn Đao Trực Nhập</td><td>Thiên La Đao Pháp</td><td>10</td><td>1,5 giây</td><td>94 → 105 %</td></tr>
+  <tr><td>Nghênh Phong Trảm</td><td>Thiên La Đao Pháp</td><td>15</td><td>8 → 6 giây</td><td>138 → 104 %</td></tr>
+  <tr><td>Lưu Tinh Truy Mạng</td><td>Thiên La Đao Pháp</td><td>30</td><td>20 giây</td><td>194 → 271 %</td></tr>
+  <tr><td>Khai Thiên Tịch Địa</td><td>Thiên La Đao Pháp</td><td>40</td><td>10 → 6 giây</td><td>306 → 145 %</td></tr>
+  <tr><td>Vân Vũ Tiêu Diêu</td><td>Thiên La Đao Pháp</td><td>45</td><td>12 → 8 giây</td><td>105 → 201 %</td></tr>
+  <tr><td>Phá Không Kích</td><td>Thiên La Đao Pháp</td><td>50</td><td>15 → 12 giây</td><td>148 → 317 %</td></tr>
+  <tr><td>Tiên Nhân Chỉ Lộ</td><td>Phi Tiên Kiếm Pháp</td><td>10</td><td>1,5 giây</td><td>94 → 105 %</td></tr>
+  <tr><td>Vạn Kiếm Xuyên Tâm</td><td>Phi Tiên Kiếm Pháp</td><td>15</td><td>8 → 6 giây</td><td>180 → 135 %</td></tr>
+  <tr><td>Băng Tâm Thức</td><td>Phi Tiên Kiếm Pháp</td><td>20</td><td>18 → 15 giây</td><td>75 → 76 %</td></tr>
+  <tr><td>Lăng Không Chỉ Huyệt</td><td>Phi Tiên Kiếm Pháp</td><td>30</td><td>20 giây</td><td>237 → 285 %</td></tr>
+  <tr><td>Ngự Kiếm Phi Tiên</td><td>Phi Tiên Kiếm Pháp</td><td>40</td><td>12 → 8 giây</td><td>101 → 53 %</td></tr>
+  <tr><td>Ngự Kiếm Thuật</td><td>Phi Tiên Kiếm Pháp</td><td>45</td><td>10 → 8 giây</td><td>60 → 59 %</td></tr>
+  <tr><td>Thiên Địa Kiếm Khí (trước: Vạn Kiếm Quy Tông)</td><td>Phi Tiên Kiếm Pháp</td><td>50</td><td>18 → 12 giây</td><td>68 → 73 %</td></tr>
+  </tbody></table></div>
+  <h4>Cấm Vệ Quân</h4>
+  <div class="tbl">
+    <table><thead><tr><th>Chiêu</th><th>Nhánh</th><th>Mở</th><th>Hồi chiêu</th><th>Mỗi lần, cấp 1</th></tr></thead><tbody>
+  <tr><td>Trực Đảo Hoàng Long</td><td>Bá Vương Thương Pháp</td><td>15</td><td>8 → 6 giây</td><td>112 → 67 %</td></tr>
+  <tr><td>Thiên Lý Tất Sát</td><td>Bá Vương Thương Pháp</td><td>30</td><td>20 giây</td><td>129 → 133 %</td></tr>
+  <tr><td>Lôi Đình Kích</td><td>Bá Vương Thương Pháp</td><td>40</td><td>10 giây</td><td>70 → 38 %</td></tr>
+  <tr><td>Phi Long Tầm Châu</td><td>Bá Vương Thương Pháp</td><td>45</td><td>12 → 10 giây</td><td>150 → 159 %</td></tr>
+  <tr><td>Ngũ Lôi Áp Đỉnh</td><td>Bá Vương Thương Pháp</td><td>50</td><td>15 → 12 giây</td><td>145 → 212 %</td></tr>
+  <tr><td>Hoành Tảo Thiên Quân</td><td>Phong Ma Côn Pháp</td><td>15</td><td>6 giây</td><td>111 → 75 %</td></tr>
+  <tr><td>Đại Hải Cuồng Đào</td><td>Phong Ma Côn Pháp</td><td>30</td><td>12 giây</td><td>85 → 105 %</td></tr>
+  <tr><td>Ba Đào Nộ Lãng</td><td>Phong Ma Côn Pháp</td><td>40</td><td>12 giây</td><td>89 → 67 %</td></tr>
+  <tr><td>Trường Giang Nộ Thủy</td><td>Phong Ma Côn Pháp</td><td>45</td><td>10 → 8 giây</td><td>283 → 117 %</td></tr>
+  </tbody></table></div>
+  <h4>Đường Môn</h4>
+  <div class="tbl">
+    <table><thead><tr><th>Chiêu</th><th>Nhánh</th><th>Mở</th><th>Hồi chiêu</th><th>Mỗi lần, cấp 1</th></tr></thead><tbody>
+  <tr><td>Thấu Cốt Đinh</td><td>Mãn Thiên Hoa Vũ</td><td>15</td><td>8 → 6 giây</td><td>121 → 91 %</td></tr>
+  <tr><td>Bách Bộ Xuyên Dương</td><td>Mãn Thiên Hoa Vũ</td><td>30</td><td>18 → 12 giây</td><td>139 → 93 %</td></tr>
+  <tr><td>Mãn Thiên Hoa Vũ</td><td>Mãn Thiên Hoa Vũ</td><td>40</td><td>12 → 8 giây</td><td>67 → 50 %</td></tr>
+  <tr><td>Song Long Đoạt Châu</td><td>Mãn Thiên Hoa Vũ</td><td>45</td><td>12 giây</td><td>81 → 128 %</td></tr>
+  <tr><td>Hỗn Ma Độc</td><td>Mãn Thiên Hoa Vũ</td><td>50</td><td>18 → 12 giây</td><td>81 → 131 %</td></tr>
+  <tr><td>Ám Kích</td><td>Cực Tà Sát Pháp</td><td>15</td><td>8 → 6 giây</td><td>106 → 80 %</td></tr>
+  <tr><td>Bí Sát</td><td>Cực Tà Sát Pháp</td><td>40</td><td>30 → 20 giây</td><td>66 → 93 %</td></tr>
+  <tr><td>Ôn Dịch Tán</td><td>Cực Tà Sát Pháp</td><td>45</td><td>14 → 10 giây</td><td>120 → 126 %</td></tr>
+  </tbody></table></div>
+  <h4>Mao Sơn</h4>
+  <div class="tbl">
+    <table><thead><tr><th>Chiêu</th><th>Nhánh</th><th>Mở</th><th>Hồi chiêu</th><th>Mỗi lần, cấp 1</th></tr></thead><tbody>
+  <tr><td>Phục Ma Quyết</td><td>Thuận Thiên Pháp Chú</td><td>15</td><td>8 → 6 giây</td><td>200 → 128 %</td></tr>
+  <tr><td>Tế Ma Vương</td><td>Thuận Thiên Pháp Chú</td><td>40</td><td>25 giây</td><td>46 → 36 %</td></tr>
+  <tr><td>Âm Binh Quá Cảnh</td><td>Thuận Thiên Pháp Chú</td><td>50</td><td>25 giây</td><td>30 → 45 %</td></tr>
+  <tr><td>Thực Tâm</td><td>Nghịch Thiên Pháp Chú</td><td>15</td><td>10 → 8 giây</td><td>37 %</td></tr>
+  <tr><td>Lôi Động Cửu Thiên</td><td>Nghịch Thiên Pháp Chú</td><td>40</td><td>12 → 10 giây</td><td>84 → 61 %</td></tr>
+  <tr><td>Mệnh Tế</td><td>Nghịch Thiên Pháp Chú</td><td>45</td><td>15 → 10 giây</td><td>114 → 191 %</td></tr>
+  <tr><td>Biến Thân Thuật</td><td>Nghịch Thiên Pháp Chú</td><td>50</td><td>18 → 12 giây</td><td>104 → 249 %</td></tr>
+  </tbody></table></div>
+  <h4>Côn Luân</h4>
+  <div class="tbl">
+    <table><thead><tr><th>Chiêu</th><th>Nhánh</th><th>Mở</th><th>Hồi chiêu</th><th>Mỗi lần, cấp 1</th></tr></thead><tbody>
+  <tr><td>Thương Long Quyết</td><td>Kim Tiên Phù Chú</td><td>30</td><td>12 giây</td><td>143 → 206 %</td></tr>
+  <tr><td>Huyền Long Chân Khí</td><td>Kim Tiên Phù Chú</td><td>40</td><td>10 → 6 giây</td><td>80 → 35 %</td></tr>
+  <tr><td>Hàn Băng Thuật</td><td>Kim Tiên Phù Chú</td><td>45</td><td>12 → 8 giây</td><td>116 → 189 %</td></tr>
+  <tr><td>Phong Vũ Phá Địch</td><td>Kim Tiên Phù Chú</td><td>50</td><td>15 → 10 giây</td><td>158 → 265 %</td></tr>
+  <tr><td>Hàn Băng Trận</td><td>Kim Cang Pháp Chú</td><td>30</td><td>20 → 14 giây</td><td>35 → 25 %</td></tr>
+  <tr><td>Lôi Long Quyết</td><td>Kim Cang Pháp Chú</td><td>40</td><td>12 → 10 giây</td><td>85 → 71 %</td></tr>
+  <tr><td>Khốn Ma Thuật</td><td>Kim Cang Pháp Chú</td><td>45</td><td>16 → 12 giây</td><td>235 → 278 %</td></tr>
+  <tr><td>Vân Vũ Đao Chú</td><td>Kim Cang Pháp Chú</td><td>50</td><td>15 → 10 giây</td><td>157 → 105 %</td></tr>
+  </tbody></table></div>
+  <h4>Vân Mộng Cốc</h4>
+  <div class="tbl">
+    <table><thead><tr><th>Chiêu</th><th>Nhánh</th><th>Mở</th><th>Hồi chiêu</th><th>Mỗi lần, cấp 1</th></tr></thead><tbody>
+  <tr><td>Toàn Phong Quyết</td><td>Y Thuật</td><td>30</td><td>12 → 10 giây</td><td>118 → 104 %</td></tr>
+  <tr><td>Vô Đình Lưu Thuỷ</td><td>Y Thuật</td><td>50</td><td>18 → 12 giây</td><td>420 → 471 %</td></tr>
+  <tr><td>Độn Giáp Trận</td><td>Kỳ Môn Độn Giáp</td><td>30</td><td>15 → 12 giây</td><td>18 → 14 %</td></tr>
+  <tr><td>Kỳ Môn Trận</td><td>Kỳ Môn Độn Giáp</td><td>45</td><td>15 → 12 giây</td><td>27 → 39 %</td></tr>
+  <tr><td>Huyền Quang Thiểm Ảnh</td><td>Kỳ Môn Độn Giáp</td><td>50</td><td>15 → 12 giây</td><td>247 → 224 %</td></tr>
+  </tbody></table></div>
+  <p class="tip">Chiêu không có trong bảng giữ nguyên hồi chiêu và sát thương. Số đầy đủ từng cấp xem trong game (<kbd>Alt+R</kbd>, bấm vào chiêu) khi bản 5.3 lên máy chủ.</p>
 </article>
 
 <!-- Kĩ năng giang hồ (bản kế tiếp): repo game godot/data/custom/jianghu_skills.json (rules per_char_level 5, min_char_level 10,
