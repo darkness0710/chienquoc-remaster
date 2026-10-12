@@ -185,6 +185,9 @@
             <p class="tip">Trang bị bị khoá suốt lượt: mặc đồ tốt nhất trước khi đi. Chết thì sống lại ở đầu ải sau 10 giây (Khó 20 giây, Địa Ngục 30 giây). Cả đội cùng ngã thì phản đồ còn sống về chỗ cũ, hồi đầy máu. Lật cùng một bảng với cả đội: thẻ người khác đã lật thì không lật lại được.</p>
           <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Thẻ Thăng Phẩm Thạch thành túi 90.000 lượng; độc đắc mức Thường thành Trung Cấp Đoạn Thạch.</p></div>
           <div class="v5note"><p><span class="v5tag">Bản 5.2</span> Truy bắt một mình gộp vào truy bắt nhóm: một chuyến 7 ải mỗi ngày, đi một mình hay cả đội, ăn bằng cả hai loại cũ trong khoảng nửa thời gian. Trước 5.2: mỗi ngày 5 vòng một mình (lộ phí Khó 3.000 × cấp, Địa Ngục 6.000 × cấp, quà vòng 5 nay thành quà qua đủ 7 ải) và 1 chuyến nhóm 2 đến 5 người (vé Thường 12.500, Khó 20.000, Địa Ngục 27.500 × cấp, thẻ Thường × 1, Khó × 1,4, Địa Ngục × 1,92). Thuốc máu trước 5.2 hồi tối đa 25 % Khí Huyết tối đa (Địa Ngục 20 %).</p></div>
+          <!-- Bản 5.3: tài liệu game 37 §4.72 A3 (truy bắt tính là phó bản khi chết, offline_gateway.gd _in_instance), A4b (quà ải chỉ người
+               có mặt: criminal_team_service.gd _present); nhật ký 2026-10-12 (362). -->
+          <div class="v5note"><p><span class="v5tag">Bản 5.3</span> Chết trong lúc truy bắt tính như chết trong phó bản: <strong>không mất kinh nghiệm</strong>, không mất Ngân Lượng, trang bị chỉ mòn <strong>5 %</strong> độ bền (bản 5.2: mất 5 % kinh nghiệm, mòn 10 %). Quà qua ải (kinh nghiệm ải, phiếu, đồ ải cuối, Binh Gia Lệnh) chỉ trao cho người <strong>đang ở bản đồ ải</strong> lúc hạ xong: đồng đội đứng chỗ khác không nhận. Xem <a href="../pho-ban/#mot-minh-nhom">Đi một mình hay đi nhóm</a>.</p></div>
 </div>
         </article>
 
@@ -207,7 +210,7 @@
         <tr><td>Nho Gia Lệnh</td><td class="wrap-cell">xong một chuỗi 10 việc <a href="#su-mon">sư môn</a> (mỗi ngày tối đa 2 chuỗi)</td></tr>
         <tr><td>Binh Gia Lệnh</td><td class="wrap-cell">qua đủ 7 ải <a href="#vuong-bo-dau">truy bắt</a>, độ khó nào cũng được</td></tr>
         <tr><td>Âm Dương Gia Lệnh</td><td class="wrap-cell">hạ Lữ Bố ở <a href="../pho-ban/#co-mo">Cổ Mộ</a> khi hôm nay còn lượt thưởng</td></tr>
-        <tr><td>Mặc Gia Lệnh</td><td class="wrap-cell">mỗi lượt hạ đủ 4 tướng ở <a href="../pho-ban/#thanh-kieu">Thành Kiều</a></td></tr>
+        <tr><td>Mặc Gia Lệnh</td><td class="wrap-cell">mỗi lượt hạ đủ 4 tướng ở <a href="../pho-ban/#thanh-kieu">Thành Kiều</a>, tối đa 3 lệnh mỗi ngày (từ bản 5.3)</td></tr>
       </tbody>
     </table>
   </div>
@@ -231,6 +234,7 @@
               <li>1 đến 5 người, từ cấp 20</li>
               <li>Tả Khâu Minh, Chu Quốc (251, 161)</li>
               <li>Vào 1 lần mỗi ngày</li>
+              <li>Mỗi người một vé</li>
             </ul>
           </div>
           <figure class="gshot">
@@ -238,12 +242,16 @@
             <figcaption>Trong kính: ba dạng yêu ma, đồng hồ 15 phút và số đã diệt</figcaption>
           </figure>
           <div class="gtext">
-            <p>Đội trưởng nói với Tả Khâu Minh, chọn một món trang bị phẩm Xanh trở lên trong hành trang làm vé (món bị đốt). Cả đội đứng gần, cấp lệch không quá 10. Vào là tính lượt trong ngày.</p>
+            <!-- Bản 5.3: tài liệu game 37 §4.72 A1 (khoá trang bị), B1 (80 yêu ma cố định, mỗi người một vé); dungeon_gumu.json khối _mirror
+                 mobs_base 80, mobs_per_member 0 (tag 5.3.0); kinh nghiệm mỗi người = mỗi con x (9 + n) / 10: một mình 80, đội 5 là 112
+                 đơn vị (bản 5.2: 224); nhật ký 2026-10-12 (362). -->
+            <p>Đội trưởng nói với Tả Khâu Minh, chọn một món trang bị phẩm Xanh trở lên trong hành trang làm vé (món bị đốt). <span class="v5tag">Bản 5.3</span> <strong>Mỗi người tốn một vé</strong>: đồng đội tự nộp món Xanh trở lên rẻ nhất trong hành trang của mình (món đang mặc không tính); ai thiếu thì cả đội chưa vào được, Tả Khâu Minh nêu tên người thiếu. Bản 5.2: một vé cho cả đội. Cả đội đứng gần, cấp lệch không quá 10. Vào là tính lượt trong ngày.</p>
             <h4>Trong kính</h4>
             <ul>
-              <li>Bản đồ là một vùng luyện cấp hợp cấp cả đội. Có <strong>60 yêu ma</strong>, mỗi người thêm 20: Kính Yêu đánh gần, Kính Ma ném ám khí, Kính Quỷ đánh phép từ xa.</li>
+              <li>Bản đồ là một vùng luyện cấp hợp cấp cả đội. Có <strong>80 yêu ma</strong> dù đi một mình hay cả đội (bản 5.2: 60, mỗi người thêm 20): Kính Yêu đánh gần, Kính Ma ném ám khí, Kính Quỷ đánh phép từ xa.</li>
               <li>Diệt đủ thì <strong>Kính Ma</strong> hiện ra (Long Nha, Hổ Cảnh hoặc Khuyển Thần), mỗi con có chiêu riêng, Long Nha gọi bầy. Kính Ma đánh như Lữ Bố: đổi mục tiêu, lướt tới, nổi giận.</li>
-              <li>15 phút. Chết: hồi sinh ở cổng vào sau 10 giây. Kinh nghiệm mỗi con bằng nửa quái thường.</li>
+              <li>15 phút. Chết: hồi sinh ở cổng vào sau 10 giây. Kinh nghiệm mỗi con bằng nửa quái thường; đi đội thì mỗi người nhận kinh nghiệm mọi con cả đội diệt, thêm 10 % mỗi người cùng đi (đội 5: mỗi người gấp 1,4 lần đi một mình; bản 5.2 gấp 2,8 lần).</li>
+              <li><span class="v5tag">Bản 5.3</span> <strong>Trang bị bị khoá</strong> suốt lượt như Cổ Mộ: mặc đồ tốt nhất trước khi vào. Kính Ma trâu theo số người còn trong lượt và mạnh theo người mạnh nhất đội lúc nó hiện ra. Chết <strong>không mất kinh nghiệm</strong>, không mất Ngân Lượng, trang bị chỉ mòn 5 % độ bền. Rời lượt thì không vào lại được; rớt mạng được giữ chỗ 120 giây: xem <a href="../pho-ban/#mot-minh-nhom">Đi một mình hay đi nhóm</a>.</li>
             </ul>
             <h4>Lật thẻ</h4>
             <ul>
@@ -287,7 +295,7 @@
           <div class="gtext">
             <ul>
               <li>Mỗi bản đồ hoang có một con quái hiếm tên xanh. Bị hạ thì 60 phút sau hiện lại ở chỗ ngẫu nhiên.</li>
-              <li>Mở <strong>Chiến Quốc Bảo Điển</strong>, thẻ <strong>Tống Yêu</strong> để xem map đang có con (quái từ thấp hơn bạn 10 cấp tới cao hơn 5 cấp), rồi tự đi tìm. Từ bản 5.2 mỗi dòng có nút <strong>Bay tới</strong>: tốn 5 Phi Hành Phù (phù khoá dùng trước), niệm 2 giây rồi đáp ở cổng vào bản đồ đó, không đáp ngay chỗ con quái. <span class="v5tag">Bản 5.3</span> Sắp ra mắt: đáp ngay cạnh con quái (cách 1 tới 3 ô); con chưa hiện thì đáp ở cổng vào, nó vừa hiện là được đưa tới cạnh nó.</li>
+              <li>Mở <strong>Chiến Quốc Bảo Điển</strong>, thẻ <strong>Tống Yêu</strong> để xem map đang có con (quái từ thấp hơn bạn 10 cấp tới cao hơn 5 cấp), rồi tự đi tìm. Từ bản 5.2 mỗi dòng có nút <strong>Bay tới</strong>: tốn 5 Phi Hành Phù (phù khoá dùng trước), niệm 2 giây rồi bay đi. <span class="v5tag">Bản 5.3</span> Đáp ngay cạnh con quái (cách 1 tới 3 ô); con chưa hiện thì đáp ở cổng vào, nó vừa hiện là được đưa tới cạnh nó. Bản 5.2 chỉ đáp ở cổng vào bản đồ.</li>
               <li>Giết bao nhiêu con cũng được. Con nào cũng cho kinh nghiệm bằng 40 quái cùng cấp và ngân lượng bằng cấp quái × 750.</li>
               <li><strong>5 lần đầu mỗi ngày</strong> (làm mới 23:00) có thêm một phần thuốc và có thể rơi đồ (bảng dưới). Từ lần thứ 6 vẫn đủ kinh nghiệm và ngân lượng, chỉ không rơi đồ. Bảo Điển ghi "Hôm nay còn N / 5 lần nhận đồ".</li>
               <li>Đội gây nhiều sát thương nhất được tính, không cần ra đòn cuối. Mỗi người trong đội nhận thưởng và tung đồ riêng.</li>
@@ -339,7 +347,7 @@
             <li>Người khác đánh phụ được. Ai ra <strong>đòn cuối</strong> thì người đó và cả đội đứng cùng bản đồ nhận thưởng.</li>
             <li>Mỗi nhân vật nhận thưởng <strong>10 con mỗi ngày</strong> (làm mới 23:00). Chênh cấp con trộm quá 10 thì không nhận, không mất lượt.</li>
             <li>Cả đội chết, rời bản đồ, hoặc 2 phút không ai đánh: con trộm hồi đầy máu và về trạng thái không đánh được.</li>
-            <li><strong>Bảo Điển</strong> có tab Trộm Bảo: 5 bản đồ của giờ này, con nào còn, đang giao đấu hay đã bị bắt, đếm ngược tới đợt sau, lượt còn. Từ bản 5.2 có nút <strong>Bay tới</strong> (5 Phi Hành Phù, đáp ở cổng vào bản đồ); con đã bị bắt thì nút mờ. <span class="v5tag">Bản 5.3</span> Sắp ra mắt: đáp ngay cạnh Trộm Bảo; con chưa hiện thì được đưa tới cạnh nó lúc nó hiện. Bảng Hoạt động có dòng Trộm Bảo Phi Tặc.</li>
+            <li><strong>Bảo Điển</strong> có tab Trộm Bảo: 5 bản đồ của giờ này, con nào còn, đang giao đấu hay đã bị bắt, đếm ngược tới đợt sau, lượt còn. Từ bản 5.2 có nút <strong>Bay tới</strong> (5 Phi Hành Phù); con đã bị bắt thì nút mờ. <span class="v5tag">Bản 5.3</span> Đáp ngay cạnh Trộm Bảo (bản 5.2: ở cổng vào bản đồ); con chưa hiện thì được đưa tới cạnh nó lúc nó hiện. Bảng Hoạt động có dòng Trộm Bảo Phi Tặc.</li>
           </ul>
           <h4>Thưởng mỗi con</h4>
           <p>Mỗi người một đống đồ riêng dưới đất, chỉ mình thấy, bấm Space để nhặt. Kinh nghiệm bằng 10 con quái cùng cấp.</p>
@@ -448,14 +456,14 @@
 </article>
 
 
-<!-- Thanh tiến độ cả server (bản 5.3, CHƯA PHÁT lúc viết 2026-10-12). Nguồn: repo game master, godot/data/custom/daily_activities.json
+<!-- Thanh tiến độ cả server (bản 5.3, phát 2026-10-12). Nguồn: repo game tag 5.3.0, godot/data/custom/daily_activities.json
      khoá server_bar {min_level 20, per_machine 2, marks 3 / 6 / 9 / 12 / 15: spins 2, sell/0032 x1, sell/0032 x2, sell/1032 x1,
      sell/1032 x2}, luật godot/logic/server_bar.gd, tài liệu game 37 §4.71, nhật ký (360). Ảnh chưa có (cờ chụp --ui --demo-activity-bar).
-     KHI PHÁT: bỏ chữ "sắp ra mắt", đối chiếu số với tag 5.3.0. -->
+     Đã đối chiếu với tag 5.3.0: khớp. -->
 <article class="gcard" id="thanh-server">
   <h3>Thanh tiến độ cả server</h3>
   <ul class="facts">
-    <li class="v5">Bản 5.3, sắp ra mắt</li>
+    <li class="v5">Bản 5.3</li>
     <li>Bảng Hoạt động, tab Hôm nay</li>
     <li>Làm mới 23:00</li>
   </ul>

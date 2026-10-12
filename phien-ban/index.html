@@ -54,7 +54,7 @@
 
   <div class="vtoc-bar">
     <nav class="wrap vtoc" aria-label="Nhảy tới phiên bản">
-      <a class="is-next" href="#v5-3">5.3</a>
+      <a href="#v5-3">5.3</a>
       <a href="#v5-2">5.2</a>
       <a href="#v5-1">5.1</a>
       <a href="#v5-0">5.0</a>
@@ -81,21 +81,20 @@
   <div class="wrap">
     <div class="vlist">
 
-      <!-- ================= 5.3 (CHƯA PHÁT) =================
-           Soạn 2026-10-12, máy chủ còn 5.2.0. Nguồn: repo game master sau ebb935b3 (commit cd8da855, ebb935b3 và các commit
+      <!-- ================= 5.3 =================
+           Soạn 2026-10-12 trước khi phát; phát lên VPS 2026-10-12 14:06 (tag game 5.3.0). Nguồn: repo game master sau ebb935b3 (commit cd8da855, ebb935b3 và các commit
            2026-10-12), nhật ký 2026-10-11 (357) (358), 2026-10-12 (359) (360); tài liệu 66 §6-§7 (chiêu 7 phái), 37 §4.70-§4.71,
            gameplay/12 (phạt chết phó bản, vùng an toàn, sao choáng, Tích Độc, làm lại chiêu). Số: sect_skills.json (so với tag 5.2.0),
            daily_activities.json server_bar, stall_bots.json (gold_price_forge_mult 1,5 -> 1,875, Tử Kim Tinh 6.250.000).
-           KHI PHÁT: thay khối "vcard__date" bằng <time class="vcard__date" data-rel="5.3" datetime="YYYY-MM-DD">D/M/YYYY</time> + khoá
-           "5.3" trong js/release.js, bỏ nhãn "Sắp ra mắt", bỏ class vcard--next (thẻ và link .vtoc is-next); hướng dẫn: bỏ chữ
-           "sắp ra mắt" cạnh nhãn Bản 5.3 (tìm "Sắp ra mắt" / "sắp ra mắt" trong huong-dan/), đối chiếu số với tag 5.3.0. -->
-      <article class="vcard vcard--next" id="v5-3">
+           Phiên phát (tag 5.3.0): số trên khớp; thêm phó bản một mình / nhóm (nhật ký (362), 37 §4.72: Phong Yêu Kính 80 yêu ma,
+           mỗi người một vé, khoá trang bị; Thành Kiều 45 + 5 x người, Mặc Gia Lệnh 3 / ngày; giữ chỗ 120 s, run_hold.gd HOLD_SEC;
+           truy bắt phạt chết nhẹ, quà ải chỉ người có mặt), Quỷ Tốt 60 -> 50 %; tin launcher news.json bản 5.3. -->
+      <article class="vcard" id="v5-3">
         <header class="vcard__head">
           <h2 class="vcard__ver">5.3</h2>
-          <span class="vcard__tag vcard__tag--gold">Sắp ra mắt</span>
-          <span class="vcard__date" data-release-date>Ngày phát hành: sẽ báo trong nhóm cộng đồng</span>
+          <time class="vcard__date" data-rel="5.3" datetime="2026-10-12">12/10/2026</time>
         </header>
-        <p class="vcard__sum">Làm lại chiêu cả 7 phái (tên nhánh theo võ công gốc, chiêu tủ riêng, hồi chiêu nhanh hơn), thanh tiến độ cả server, chết trong phó bản phạt nhẹ, Bảo Điển bay tới tận chỗ, sửa 5 lỗi.</p>
+        <p class="vcard__sum">Làm lại chiêu cả 7 phái (tên nhánh theo võ công gốc, chiêu tủ riêng, hồi chiêu nhanh hơn), thanh tiến độ cả server, phó bản cân lại cho người đi một mình hay đi nhóm (rớt mạng giữ chỗ 120 giây), chết trong phó bản phạt nhẹ, Bảo Điển bay tới tận chỗ, sửa lỗi.</p>
 
         <h3 class="g-new">Tính năng mới</h3>
         <ul>
@@ -103,13 +102,17 @@
           <li><strong>Mỗi phái một chiêu tủ, một cơ chế riêng</strong>: Thục Sơn <strong>Khắc Ấn</strong> dùng ở cả hai nhánh và chiêu cấp 50 <strong>Thiên Địa Kiếm Khí</strong>; Cấm Vệ Quân <strong>Sát Khí</strong> (chiêu trúng kẻ đang choáng hoặc kết liễu thì thêm Nguyên Khí) và <strong>Tất Sát</strong> (Thiên Lý Tất Sát kết liễu thì hồi chiêu ngay); Đường Môn <strong>Thân Pháp</strong> (né thêm 0,24 % mỗi cấp, cấp 50 thêm 12 %, né được nửa phần trước đòn phép của quái, né xong đòn kế tính sau lưng) và <strong>Bí Sát</strong> dùng không cần Ẩn Thân; Đào Hoa có <strong>Sư Tử Gầm</strong> (thay Trấn Cổ Thần Uy); Côn Luân, Vân Mộng chiêu nối nhau (Thiêu Đốt, Chậm, ngủ, choáng làm chiêu sau mạnh thêm). Chi tiết: <a href="../huong-dan/mon-phai/">Bảy môn phái</a>.</li>
           <li>Tên nhánh theo võ công bản gốc: Thái Cổ Thần Quyền, Đào Hoa Tâm Pháp, Thiên La Đao Pháp, Phi Tiên Kiếm Pháp, Bá Vương Thương Pháp, Phong Ma Côn Pháp, Mãn Thiên Hoa Vũ, Cực Tà Sát Pháp, Thuận Thiên Pháp Chú, Nghịch Thiên Pháp Chú, Kim Tiên Phù Chú, Kim Cang Pháp Chú, Y Thuật, Kỳ Môn Độn Giáp.</li>
           <li>Chiến Quốc Bảo Điển, nút <strong>Bay tới</strong> ở tab <a href="../huong-dan/hang-ngay/#tong-bao">Tống Yêu</a> và <a href="../huong-dan/hang-ngay/#trom-bao">Trộm Bảo</a>: đáp ngay cạnh con quái (trước: cổng vào bản đồ). Con chưa hiện thì đáp ở cổng, nó hiện là được đưa tới cạnh nó.</li>
+          <li><a href="../huong-dan/pho-ban/#mot-minh-nhom">Rớt mạng được giữ chỗ 120 giây</a> ở Cổ Mộ, Phong Yêu Kính, Thành Kiều khi trong lượt còn đồng đội: vào lại đúng nhân vật kịp giờ thì về cổng vào của lượt. Đi một mình mà rớt mạng thì lượt đóng như trước.</li>
         </ul>
 
         <h3 class="g-bal">Cân bằng</h3>
         <ul>
           <li><a href="../huong-dan/ky-nang/#lam-lai-chieu">Làm lại chiêu 7 phái</a>: <strong>43 chiêu hồi nhanh hơn</strong> (trung vị 12 giây xuống 10 giây), sát thương mỗi lần giảm theo để sát thương mỗi giây gần như giữ: xả chiêu sớm và nhiều hơn. Trong mỗi nhánh chiêu hàng cao không yếu hơn hàng thấp (cấp 50 mạnh nhất). Nâng các chiêu yếu: Khí Tráng Sơn Hà, Nhất Quyền Bạt Sơn, Lưu Tinh Truy Mạng, Lăng Không Chỉ Huyệt, Băng Tâm Thức, Đại Hải Cuồng Đào, Thương Long Quyết, Mệnh Tế, Biến Thân Thuật, Vô Đình Lưu Thuỷ; Cấm Vệ Quân nhánh Côn dọn bầy bớt nhanh.</li>
           <li>Hàng 6, 7 (cấp 45, 50) cần <strong>20 / 30 điểm</strong> trong nhánh (trước 25 / 35). Mọi nhân vật được thêm <strong>một lần tẩy điểm miễn phí</strong>.</li>
-          <li>Chết trong <a href="../huong-dan/pho-ban/#co-mo">Cổ Mộ</a>, <a href="../huong-dan/hang-ngay/#phong-yeu-kinh">Phong Yêu Kính</a>, <a href="../huong-dan/pho-ban/#thanh-kieu">Thành Kiều</a>: <strong>không mất kinh nghiệm</strong>, không mất Ngân Lượng, trang bị mòn 5 % độ bền (trước 10 %).</li>
+          <li>Chết trong <a href="../huong-dan/pho-ban/#co-mo">Cổ Mộ</a>, <a href="../huong-dan/hang-ngay/#phong-yeu-kinh">Phong Yêu Kính</a>, <a href="../huong-dan/pho-ban/#thanh-kieu">Thành Kiều</a> và <a href="../huong-dan/hang-ngay/#vuong-bo-dau">truy bắt</a>: <strong>không mất kinh nghiệm</strong>, không mất Ngân Lượng, trang bị mòn 5 % độ bền (trước 10 %).</li>
+          <li><a href="../huong-dan/hang-ngay/#phong-yeu-kinh">Phong Yêu Kính</a>: <strong>80 yêu ma</strong> dù đi một mình hay cả đội (trước 60, mỗi người thêm 20), <strong>mỗi người tốn một vé</strong> (trước một vé cho cả đội; ai thiếu thì cả đội chưa vào được). Đội 5 mỗi người nhận kinh nghiệm gấp 1,4 lần đi một mình (trước gấp 2,8 lần). Trang bị bị khoá suốt lượt.</li>
+          <li><a href="../huong-dan/pho-ban/#thanh-kieu">Thành Kiều</a>: quái thường <strong>45 + 5 × số người</strong> (một mình 50, đội 5 là 70; trước 69 dù đông hay ít). Mặc Gia Lệnh nhận tối đa <strong>3 lần mỗi ngày</strong>; từ lượt thứ 4 vẫn lật thẻ.</li>
+          <li><a href="../huong-dan/pho-ban/#mot-minh-nhom">Cỡ đội chỉ giảm</a>: phó bản cân theo số người còn trong lượt. Ai rời đội, nói NPC để ra, sang bản đồ khác hay rớt mạng quá 120 giây thì mất chỗ: không vào lại, không nhận quà, không hoàn phí hay vé. Đợt quái và trùm chưa ai đánh tới bớt theo số người còn lại.</li>
           <li><a href="../huong-dan/bay-ban/#mua-hang">Sạp Hoàng Kim</a> ở chợ bot đắt hơn 25 %: đồ Vàng cấp 40 khoảng 7.199.000 (trước 5.759.000), cấp 50 khoảng 8.350.000 (trước 6.680.000); Tử Kim Tinh 6.250.000 (trước 5.000.000).</li>
         </ul>
 
@@ -120,6 +123,8 @@
           <li>Bảo thú gây sát thương rất to lúc mới bắt rồi giảm dần: nay sát thương đều từ đầu.</li>
           <li>Lữ Bố ở Cổ Mộ đánh cả bản đồ (lướt tới người vừa hồi sinh ở cửa mộ, nhất là Địa Ngục): nay chỉ nhắm người trong 15 ô quanh chỗ đánh.</li>
           <li>Bị choáng không thấy gì trên đầu: nay hiện vòng sao.</li>
+          <li>Phong Yêu Kính: cởi đồ trước khi vào cho Kính Ma yếu rồi vào trong mặc lại. Nay khoá trang bị suốt lượt, Kính Ma tính theo người mạnh nhất lúc nó hiện ra.</li>
+          <li>Truy bắt: quà qua ải trao cả cho đồng đội đứng bản đồ khác. Nay chỉ người đang ở bản đồ ải lúc hạ xong mới nhận.</li>
         </ul>
       </article>
 

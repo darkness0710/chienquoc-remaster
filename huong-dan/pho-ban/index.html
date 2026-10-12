@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Phó bản · Hướng dẫn Chiến Quốc Remaster</title>
-  <meta name="description" content="Cổ Mộ đấu Lữ Bố, Doanh Trại Thành Kiều: độ khó, phí, cách đánh, bảng thẻ lật.">
+  <meta name="description" content="Cổ Mộ đấu Lữ Bố, Doanh Trại Thành Kiều: độ khó, phí, cách đánh, bảng thẻ lật; đi một mình hay đi nhóm, rớt mạng giữ chỗ.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
@@ -58,6 +58,7 @@
       <a class="is-v5" href="#co-mo">Cổ Mộ</a>
       <a class="is-v5" href="#thanh-kieu">Thành Kiều</a>
       <a class="is-v5" href="#nang-set">Tử Kim Tinh</a>
+      <a class="is-v5" href="#mot-minh-nhom">Một mình hay nhóm (5.3)</a>
     </nav></div>
 
   <div class="wrap gbody">
@@ -92,8 +93,8 @@
             <ul>
               <li>3 đợt Thạch Dũng, rồi Thủ Mộ Thạch Tướng, cuối cùng là <strong>Lữ Bố</strong>. Ở Khó và Địa Ngục, Lữ Bố hết máu lần đầu sẽ hiện lại ở dạng thứ hai, mạnh hơn.</li>
               <li>Lữ Bố đánh người gây nhiều sát thương nhất, lướt tới người đứng xa, đánh lâu quá thì nổi giận.</li>
-              <li>Thấy <strong>vòng đỏ</strong> dưới chân thì chạy ra ngay. Kéo Lữ Bố xa quá 15 ô thì hắn về chỗ, hồi đầy máu. <span class="v5tag">Bản 5.3</span> Sắp ra mắt: Lữ Bố chỉ nhắm người trong vùng 15 ô quanh chỗ đánh, không còn lướt đánh người vừa hồi sinh ở cửa mộ.</li>
-              <li>Chết: hồi sinh ở cửa mộ sau 10 giây, không mất gì. Trang bị bị khoá, thuốc vẫn dùng được. Pháp bảo Chiêu Hồn kéo dậy được một lần mỗi lượt. <span class="v5tag">Bản 5.3</span> Sắp ra mắt: chết trong Cổ Mộ, Phong Yêu Kính, Thành Kiều <strong>không mất kinh nghiệm</strong>, không mất Ngân Lượng, trang bị chỉ mòn <strong>5 %</strong> độ bền (bản 5.2: mất kinh nghiệm như chết ngoài bản đồ, đồ mòn 10 %).</li>
+              <li>Thấy <strong>vòng đỏ</strong> dưới chân thì chạy ra ngay. Kéo Lữ Bố xa quá 15 ô thì hắn về chỗ, hồi đầy máu. <span class="v5tag">Bản 5.3</span> Lữ Bố chỉ nhắm người trong vùng 15 ô quanh chỗ đánh, không còn lướt đánh người vừa hồi sinh ở cửa mộ.</li>
+              <li>Chết: hồi sinh ở cửa mộ sau 10 giây, không mất gì. Trang bị bị khoá, thuốc vẫn dùng được. Pháp bảo Chiêu Hồn kéo dậy được một lần mỗi lượt. <span class="v5tag">Bản 5.3</span> Chết trong Cổ Mộ, Phong Yêu Kính, Thành Kiều và truy bắt <strong>không mất kinh nghiệm</strong>, không mất Ngân Lượng, trang bị chỉ mòn <strong>5 %</strong> độ bền (bản 5.2: mất kinh nghiệm như chết ngoài bản đồ, đồ mòn 10 %).</li>
               <!-- dungeon_gumu.json difficulties[].potion_pm 750 / 500 (bản 5.2, commit 53999f71, logic/potion_scale.gd; trước potion_cap_pm 250 / 200,
                    37 §4.46 SL1); hút máu cùng hệ số (37 §4.69 mục 7). Âm Dương Gia Lệnh: bach_gia.json source gumu_boss. -->
               <li><span class="v5tag">Bản 5.2</span> Khó và Địa Ngục, trong mộ: thuốc máu (cả phần Khí Huyết của Tái Tạo Hoàn) chỉ còn <strong>75 %</strong> tác dụng, Địa Ngục <strong>50 %</strong>: viên hồi 1.000 máu còn 750, 500. Hút máu (dòng Hấp Thụ Khí Huyết, nội tại Huyết Chiến của Cấm Vệ) giảm như vậy. Đồ ăn và chiêu hồi máu của phái không bị giảm. Trước 5.2: mỗi viên hồi tối đa 25 % Khí Huyết tối đa (Địa Ngục 20 %).</li>
@@ -179,10 +180,13 @@
             <p>Quân phí nộp mỗi lượt và không hoàn, kể cả khi thua hay hết giờ. Đánh bao nhiêu lượt một ngày cũng được. Địa Ngục cần cấp 60 nên ở trần cấp 50 hiện tại chưa vào được.</p>
             <h4>Trong doanh trại</h4>
             <ul>
-              <li>Doanh trại đầy phản quân và oán linh, không rơi đồ, không rơi tiền, chỉ cho kinh nghiệm. Ba tướng <strong>Mã Quỷ</strong>, <strong>Lương Hưng</strong>, <strong>Yến Thập Tam</strong> đứng chờ sẵn, đánh thứ tự nào cũng được. Hạ đủ ba con thì <strong>Tư Tà</strong> hiện ra ở hậu doanh phía tây. Từ bản 5.2 mỗi lượt hạ đủ 4 tướng, mỗi người nhận 1 <a href="../hang-ngay/#bach-gia-lenh">Mặc Gia Lệnh</a> (không khoá).</li>
+              <li>Doanh trại đầy phản quân và oán linh, không rơi đồ, không rơi tiền, chỉ cho kinh nghiệm. Ba tướng <strong>Mã Quỷ</strong>, <strong>Lương Hưng</strong>, <strong>Yến Thập Tam</strong> đứng chờ sẵn, đánh thứ tự nào cũng được. Hạ đủ ba con thì <strong>Tư Tà</strong> hiện ra ở hậu doanh phía tây. Từ bản 5.2 mỗi lượt hạ đủ 4 tướng, mỗi người nhận 1 <a href="../hang-ngay/#bach-gia-lenh">Mặc Gia Lệnh</a> (không khoá). <span class="v5tag">Bản 5.3</span> Mỗi người nhận Mặc Gia Lệnh tối đa <strong>3 lần mỗi ngày</strong>; từ lượt thứ 4 vẫn lật thẻ, chỉ không có lệnh.</li>
+              <!-- dungeon_thanhkieu.json mobs_base 45, mobs_per_member 5 (tag 5.3.0; trước 69 cố định = 65 điểm barrack.c + 4 tuần tra);
+                   bach_gia.json tokens.mac per_day 3; tài liệu game 37 §4.72 B2, A2. -->
+              <li><span class="v5tag">Bản 5.3</span> Số quái thường theo cỡ đội: <strong>45 + 5 × số người</strong> (một mình 50, đội 5 là 70; bản 5.2: 69 con dù đông hay ít). Mỗi người rời lượt thì bớt 5 quái chưa ai đánh tới.</li>
               <li>Cả bốn tướng cứ 15 giây lại dịch chuyển tới cạnh người đang bị nhắm, hạ được ai thì hồi một ít máu, không bị choáng hay trói. Như Lữ Bố: đánh người gây nhiều sát thương nhất, lướt tới người đứng xa, đánh lâu quá thì nổi giận. Kéo xa quá 20 ô hoặc cả đội ngã thì tướng về chỗ, hồi đầy máu.</li>
               <li>Khó và Địa Ngục: mỗi tướng thêm chiêu, ra chiêu dày hơn. Thấy vòng báo dưới chân thì chạy ra.</li>
-              <li>Chết: sống lại ở cửa doanh trại sau 10 giây. Trang bị bị khoá suốt lượt.</li>
+              <li>Chết: sống lại ở cửa doanh trại sau 10 giây. Trang bị bị khoá suốt lượt. <span class="v5tag">Bản 5.3</span> Chết không mất kinh nghiệm, không mất Ngân Lượng, trang bị chỉ mòn 5 % độ bền (bản 5.2: mất kinh nghiệm, mòn 10 %).</li>
               <!-- dungeon_thanhkieu.json difficulties[].potion_pm 750 / 500 (bản 5.2, như Cổ Mộ). Mặc Gia Lệnh: bach_gia.json source thanhkieu. -->
               <li><span class="v5tag">Bản 5.2</span> Khó và Địa Ngục: thuốc máu (cả phần Khí Huyết của Tái Tạo Hoàn) chỉ còn <strong>75 %</strong> tác dụng, Địa Ngục <strong>50 %</strong>: viên hồi 1.000 máu còn 750, 500. Hút máu (dòng Hấp Thụ Khí Huyết, nội tại Huyết Chiến của Cấm Vệ) giảm như vậy. Đồ ăn và chiêu hồi máu của phái không bị giảm. Trước 5.2: mỗi viên hồi tối đa 25 % Khí Huyết tối đa (Địa Ngục 20 %).</li>
             </ul>
@@ -231,8 +235,9 @@
             <!-- sect_sets.json rules.upgrade.steps[0] {item tu_kim_tinh, n 1, points 10, cash 200000, rate 25}; rules.quality_mult 1,5
                  (trước 1,6; equip_rules.json qualities[3].mult). Tài liệu 37 §4.42, nhật ký (291). -->
             <h4 id="nang-set">Tử Kim Tinh dùng làm gì</h4>
-            <!-- Nguồn Tử Kim Tinh bản 5.2: stall_bots.json sạp gold fixed (1 cái, 5.000.000, commit 326cfce5), bach_gia.json c4 30 %. -->
-            <p>Tử Kim Tinh có ở bảng thẻ Thành Kiều; từ bản 5.2 còn ở <a href="../bay-ban/#mua-hang">Sạp Hoàng Kim</a> chợ bot (5.000.000 lượng, không khoá; từ bản 5.3, sắp ra mắt: 6.250.000) và quà đổi đủ 4 <a href="../hang-ngay/#bach-gia-lenh">Bách Gia Lệnh</a> (30 %). Tử Kim Tinh dùng để nâng set sư môn lên <strong>bậc 2</strong>. Nói với sư phụ, chọn <strong>Mua &amp; Nâng cấp đồ sư môn</strong>, tab <strong>Nâng cấp</strong>, kéo món set vào ô. Mỗi lần thử tốn 1 Tử Kim Tinh và 10 điểm sư môn, thành công <strong>20 %</strong> (trước bản 5.1: 25 %). Trượt thì mất cả hai nhưng giữ món. Thành công: món lên bậc 2 (cần cấp 50), giữ sao và ngọc khảm. Tử Kim Tinh khoá được dùng trước.</p>
+            <!-- Nguồn Tử Kim Tinh bản 5.2: stall_bots.json sạp gold fixed (1 cái, 5.000.000, commit 326cfce5), bach_gia.json c4 30 %.
+                 Bản 5.3 (tag 5.3.0): fixed price 6250000. -->
+            <p>Tử Kim Tinh có ở bảng thẻ Thành Kiều; từ bản 5.2 còn ở <a href="../bay-ban/#mua-hang">Sạp Hoàng Kim</a> chợ bot (6.250.000 lượng từ bản 5.3, bản 5.2: 5.000.000; không khoá) và quà đổi đủ 4 <a href="../hang-ngay/#bach-gia-lenh">Bách Gia Lệnh</a> (30 %). Tử Kim Tinh dùng để nâng set sư môn lên <strong>bậc 2</strong>. Nói với sư phụ, chọn <strong>Mua &amp; Nâng cấp đồ sư môn</strong>, tab <strong>Nâng cấp</strong>, kéo món set vào ô. Mỗi lần thử tốn 1 Tử Kim Tinh và 10 điểm sư môn, thành công <strong>20 %</strong> (trước bản 5.1: 25 %). Trượt thì mất cả hai nhưng giữ món. Thành công: món lên bậc 2 (cần cấp 50), giữ sao và ngọc khảm. Tử Kim Tinh khoá được dùng trước.</p>
             <p>Mỗi lần thử tốn thêm <strong>200.000 lượng</strong> (trượt cũng mất), tab Nâng cấp có dòng Ngân Lượng, đỏ khi thiếu. Chỉ số gốc của set sư môn ở mọi bậc giảm khoảng 6 % (hệ số phẩm Tím 1,6 xuống 1,5), cả set đang mặc.</p>
             <p>Trung bình mỗi món cần 5 lần thử: 5 Tử Kim Tinh, 50 điểm sư môn, 1 triệu lượng (cả bộ 6 món gấp sáu).</p>
             <h4 id="tai-tao-set">Tái tạo dòng set ở sư phụ <span class="v5tag">Bản 5.1</span></h4>
@@ -258,6 +263,36 @@
           <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Thẻ Tái Tạo Thạch, Thăng Phẩm Thạch thành thẻ ngân lượng (30.000 / 90.000 lượng mỗi viên đá cũ). Mỗi lượt có 1 <a href="../nghe/#bao-ruong">Bảo Rương</a> Phiêu Lượng, mở bằng Chìa Khoá Tinh Thiết.</p></div>
 </div>
         </article>
+
+<!-- Phó bản một mình / nhóm (bản 5.3, phát 2026-10-12 14:06). Nguồn: repo game tag 5.3.0, tài liệu game 37 §4.72 (A1-A4, B1-B2, luật
+     chống lợi dụng), gameplay/12 "Phó bản một mình / nhóm", nhật ký 2026-10-12 (362); số: godot/gateway/run_hold.gd HOLD_SEC 120
+     (gameplay/12 còn ghi 60 s là cũ, 37 §4.72 và code là 120), dungeon_gumu.json khối _mirror mobs_base 80 / mobs_per_member 0,
+     dungeon_thanhkieu.json mobs_base 45 / mobs_per_member 5, bach_gia.json mac per_day 3. Phạt chết phó bản: nhật ký (357), 37 §4.72 A3. -->
+<article class="gcard" id="mot-minh-nhom">
+  <h3>Đi một mình hay đi nhóm</h3>
+  <ul class="facts">
+    <li class="v5">Bản 5.3</li>
+    <li>Cổ Mộ, Phong Yêu Kính, Thành Kiều, truy bắt</li>
+    <li>Rớt mạng giữ chỗ 120 giây</li>
+  </ul>
+  <p>Phó bản cân theo số người <strong>còn trong lượt</strong>, không theo số người lúc vào. Năm người vào rồi bốn người thoát để một người đánh cho dễ thì không lợi gì: người thoát mất vé, phí và lượt, không nhận quà; người ở lại gặp phần còn lại như tự vào một mình.</p>
+  <ul>
+    <li><strong>Rời lượt là mất chỗ</strong>: rời đội, nói với NPC để ra, sang bản đồ khác, đổi nhân vật, hay rớt mạng quá 120 giây thì không vào lại lượt đó được, không nhận quà của lượt, không hoàn phí hay vé.</li>
+    <li><strong>Rớt mạng được giữ chỗ 120 giây</strong> ở Cổ Mộ, Phong Yêu Kính, Thành Kiều khi trong lượt còn đồng đội: vào lại đúng nhân vật đó kịp giờ thì về cổng vào của lượt, vẫn trong đội. Đi một mình mà rớt mạng thì lượt đóng như trước. Truy bắt chưa vào lại được.</li>
+    <li><strong>Cỡ đội chỉ giảm</strong> trong một lượt; phần đã đánh không cân lại. Cổ Mộ: đợt Thạch Dũng và Thủ Mộ Thạch Tướng chưa ai đánh tới thì bớt theo số người còn lại. Thành Kiều: mỗi người rời bớt 5 quái thường chưa ai đánh tới. Kính Ma, bốn tướng Thành Kiều và Lữ Bố tính theo số người lúc chúng hiện ra.</li>
+    <li><strong>Chết</strong> trong Cổ Mộ, Phong Yêu Kính, Thành Kiều và truy bắt: không mất kinh nghiệm, không mất Ngân Lượng, trang bị chỉ mòn 5 % độ bền (bản 5.2: mất kinh nghiệm như chết ngoài bản đồ, mòn 10 %).</li>
+  </ul>
+  <div class="tbl tbl--wrap">
+    <table>
+      <thead><tr><th>Phó bản</th><th>Một mình</th><th>Đội 5 người</th><th>Bản 5.2</th></tr></thead>
+      <tbody>
+        <tr><td><a href="../hang-ngay/#phong-yeu-kinh">Phong Yêu Kính</a></td><td>80 yêu ma, 1 vé</td><td>80 yêu ma, 5 vé (mỗi người một); mỗi người nhận kinh nghiệm gấp 1,4 lần đi một mình. Trang bị bị khoá</td><td>60 yêu ma, mỗi người thêm 20; một vé cho cả đội; đội 5 mỗi người nhận gấp 2,8 lần</td></tr>
+        <tr><td><a href="#thanh-kieu">Thành Kiều</a></td><td>50 quái thường</td><td>70 quái thường</td><td>69 quái dù đông hay ít; Mặc Gia Lệnh không giới hạn mỗi ngày (nay 3)</td></tr>
+        <tr><td><a href="../hang-ngay/#vuong-bo-dau">Truy bắt</a></td><td colspan="2">Quà qua ải chỉ cho người đang ở bản đồ ải lúc hạ xong</td><td>Cả đội nhận, kể cả người đứng bản đồ khác</td></tr>
+      </tbody>
+    </table>
+  </div>
+</article>
 
     </div>
     <nav class="pnav" aria-label="Chủ đề khác"><a class="pnav__prev" href="../hang-ngay/"><span>Trước</span><strong>Việc hằng ngày</strong></a><a class="pnav__all" href="../">Mục lục hướng dẫn</a><a class="pnav__next" href="../nhiem-vu/"><span>Tiếp</span><strong>Nhiệm vụ chủ tuyến</strong></a></nav>

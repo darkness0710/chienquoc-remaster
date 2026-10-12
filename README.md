@@ -47,7 +47,7 @@ mục cũ có thay đổi ở 5.0 có khối `.v5note` cuối phần chữ và c
 |---|---|
 | `bat-dau` | `cai-dat-game`, `tan-thu` (bỏ qua Tân Thủ, 5.0) |
 | `hang-ngay` | `su-mon`, `vuong-bo-dau`, `phong-yeu-kinh`, `tong-bao`, `trom-bao`, `cau-ca`, `diem-danh` (5.1), `thanh-server` (5.3) |
-| `pho-ban` | `co-mo`, `thanh-kieu` (+ `nang-set`, `tai-tao-set` và `tiem-tu-kim` 5.1) |
+| `pho-ban` | `co-mo`, `thanh-kieu` (+ `nang-set`, `tai-tao-set` và `tiem-tu-kim` 5.1), `mot-minh-nhom` (5.3) |
 | `nhiem-vu` | `ct-tong-quan`, `ct-vet-nut`, `ct-hoi-5` tới `ct-hoi-10`, `ho-phu` |
 | `mon-phai` | `dao-hoa`, `thuc-son`, `cam-ve-quan`, `duong-mon`, `mao-son`, `con-luan`, `van-mong` |
 | `ky-nang` | `cach-hoc`, `chieu-45-50` (5.0), `lam-lai-chieu` (5.3), `ki-nang-giang-ho`, `tu-vi` |
@@ -273,3 +273,11 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   từng chiêu có đổi, sinh bằng script), `hang-ngay/#thanh-server`; khối `.v5note` "Bản 5.3" ở 7 phái `mon-phai`, nhãn 5.3 cạnh số đang
   chạy (hàng 6 / 7 cần điểm, Bay tới, phạt chết phó bản, Lữ Bố 15 ô, giá Sạp Hoàng Kim +25 %, Tử Kim Tinh 6.250.000); dải 5.3 ở mục
   lục hướng dẫn, dòng 5.3 trong `#ban-5` và mốc `is-next` ở `#lo-trinh` trang chủ.
+- 2026-10-12 (phiên phát, tag game 5.3.0 lên VPS 14:06): `RELEASES["5.3"]` = 2026-10-12; bỏ mọi chữ "Sắp ra mắt" / "chưa phát" của
+  5.3 (thẻ `#v5-3` thành `<time data-rel="5.3">`, bỏ `vcard--next` và `is-next`); trang chủ: nhãn đầu trang, "đang chạy bản 5.3",
+  meta, chip 5.3, nút "Bản 5.3 có gì", mốc lộ trình 5.3 `is-done`. Đối chiếu số với tag 5.3.0: `stall_bots.json` (1,875; 6.250.000),
+  `daily_activities.json` server_bar, `sect_skills.json` (bảng `ky-nang/#lam-lai-chieu` khớp mọi dòng, `points_req` 20 / 30); thêm
+  dòng Triệu Hồi Quỷ Tốt 60 -> 50 % (sót ở bản soạn). Mới: `pho-ban/#mot-minh-nhom` (nhật ký game (362), 37 §4.72: Phong Yêu Kính
+  80 yêu ma, mỗi người một vé, khoá trang bị; Thành Kiều 45 + 5 x người, Mặc Gia Lệnh 3 / ngày; rớt mạng giữ chỗ 120 s; rời lượt
+  mất chỗ; truy bắt phạt chết nhẹ, quà ải chỉ người có mặt); ghi chú ở `hang-ngay` (#phong-yeu-kinh, #vuong-bo-dau, #bach-gia-lenh)
+  và `pho-ban` (#thanh-kieu). Ghi chú: gameplay/12 của repo game còn ghi giữ chỗ 60 s (cũ), code và 37 §4.72 là 120 s.
