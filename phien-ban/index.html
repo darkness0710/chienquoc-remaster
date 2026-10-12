@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Phiên bản · Chiến Quốc Remaster</title>
-  <meta name="description" content="Chiến Quốc Remaster qua từng phiên bản: ngày phát hành và thay đổi của mỗi bản, từ bản demo offline tới bản 5.1 đang chạy.">
+  <meta name="description" content="Chiến Quốc Remaster qua từng phiên bản: ngày phát hành và thay đổi của mỗi bản, từ bản demo offline tới bản 5.3 đang chạy; bản 6.0 sắp ra mắt.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/phien-ban/">
   <meta property="og:title" content="Các phiên bản Chiến Quốc Remaster">
-  <meta property="og:description" content="Mỗi bản có gì mới, cân bằng gì, sửa lỗi gì, kèm ngày phát hành. Bản 5.1 mới phát: Tự Đánh, Ngân Lượng Bao, điểm danh thành lượt quay.">
+  <meta property="og:description" content="Mỗi bản có gì mới, cân bằng gì, sửa lỗi gì, kèm ngày phát hành. Bản 6.0 sắp ra mắt: Thiên Mệnh và biến cố ở bốn phó bản, Danh Nhân Đường, trần cấp 60.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -54,6 +54,7 @@
 
   <div class="vtoc-bar">
     <nav class="wrap vtoc" aria-label="Nhảy tới phiên bản">
+      <a class="is-next" href="#v6-0">6.0</a>
       <a href="#v5-3">5.3</a>
       <a href="#v5-2">5.2</a>
       <a href="#v5-1">5.1</a>
@@ -80,6 +81,57 @@
 
   <div class="wrap">
     <div class="vlist">
+
+      <!-- ================= 6.0 (CHƯA PHÁT) =================
+           Soạn 2026-10-12, máy chủ còn 5.3.0. KHI PHÁT: thay khối "vcard__date" bằng <time class="vcard__date" data-rel="6.0"
+           datetime="YYYY-MM-DD">D/M/YYYY</time> + khoá "6.0" trong js/release.js, bỏ nhãn "Sắp ra mắt", bỏ class vcard--next (thẻ và
+           link .vtoc is-next), bỏ câu "Bản 6.0 chưa phát"; hướng dẫn: bỏ chữ sắp ra mắt cạnh nhãn Bản 6.0; trang chủ: xem comment đầu index.html.
+           Nguồn: repo game master 44e0e50e (= nhánh merge-m: gộp Cổ Mộ lớp 2, Phong Yêu Kính, Thành Kiều + truy bắt, Bảo Điển, Quân Công,
+           kho trang 2, bảng thẻ chủ repo chỉnh tay ffbc6ffc) + nhánh mở trần 60 (8582714e, chưa gộp lúc soạn). Tài liệu 68 §4, §7
+           (Cổ Mộ), 70 (Phong Yêu Kính, Thành Kiều, truy bắt, luật ngày §8), 71 (Quân Công, QP1-QP4), 69 (Danh Nhân Đường), 72 (Tống Bảo),
+           73 (trần 60), 74 (kho trang 2), nhật ký 2026-10-12-map60. Số: dungeon_gumu.json (difficulties, mirror, quan_cong, shop,
+           side_board, variety, gumu_events, hulao, ally), dungeon_thanhkieu.json, criminal.json team, run_mods.json, rare_monster.json,
+           treasury.json, version.json (nhánh trần 60). Chưa có tin launcher 6.0 trong news.json lúc soạn: khi có thì đối chiếu chữ. -->
+      <article class="vcard vcard--next" id="v6-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">6.0</h2>
+          <span class="vcard__tag vcard__tag--gold">Sắp ra mắt</span>
+          <span class="vcard__date" data-release-date>Ngày phát hành: sẽ báo trong nhóm cộng đồng</span>
+        </header>
+        <p class="vcard__sum">Bốn phó bản mỗi lượt một khác: Thiên Mệnh, biến cố, gặp trùm hiếm, Khiêu Chiến và một cơ chế riêng cho Địa Ngục. Phong Yêu Kính có ba độ khó, điểm Quân Công dùng chung, Danh Nhân Đường xếp hạng cả server, trần cấp lên 60 với 9 bản đồ mới, kho thêm trang 2. Máy chủ đang chạy bản 5.3; số liệu có thể còn chỉnh tới ngày phát.</p>
+
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li><a href="../huong-dan/pho-ban/#thien-menh">Thiên Mệnh</a> ở Cổ Mộ, Phong Yêu Kính, Thành Kiều và truy bắt: mỗi lượt bốc <strong>1 / 2 / 3 điều xấu</strong> theo Thường / Khó / Địa Ngục và <strong>1 điều tốt</strong> trong 11 điều (Huyết Nguyệt, Thiết Giáp, Tự Bạo, Cuồng Nộ, Hộ Vệ, Khan Thuốc, Âm Khí; Chiến Ý, Hồi Xuân, Tham Lam, Linh Khí). Bảng thông báo đầu lượt, biểu tượng dưới đồng hồ phó bản.</li>
+          <li><strong>Khiêu Chiến</strong>: đội trưởng bật ở bảng chọn độ khó, thêm 1 điều xấu, đổi lại mỗi người +1 lượt lật. <strong>Gặp hiếm</strong> khoảng 10 % số lượt (báo kênh Thế Giới, hạ được +1 lượt lật): Đổng Trác oán hồn, Kính Long, Phàn Ô Kỳ, Phi Tặc Vương.</li>
+          <li><a href="../huong-dan/pho-ban/#co-mo-bien-co">Cổ Mộ</a>: mỗi lượt chắc một biến cố (Địa Ngục hai) đổi trận Lữ Bố: Xích Thố Hồn Mã, Phương Thiên Họa Kích, Điêu Thuyền Hiến Kế, Âm Binh Mượn Đường, Mộ Tặc Cầu Cứu, Mộ Đạo Sụp Đổ. Địa Ngục có <strong>Hổ Lao Quan</strong>: Lữ Bố dưới 30 % máu dựng Vô Song Khí, cả đội đứng đủ Ấn Hổ Lao 5 giây để phá, vòng lửa thu dần. Người đi một mình ở mức Thường mời được <strong>viện binh Triệu Vân</strong> (phí vào thêm 50 %).</li>
+          <li><a href="../huong-dan/hang-ngay/#phong-yeu-kinh">Phong Yêu Kính</a> có <strong>ba độ khó</strong>: Thường (cấp 20, vé như cũ), Khó (cấp 30, vé + 300.000), Địa Ngục (cấp 40, vé + 600.000), mỗi mức một bảng thẻ, lật 1 / 2 / 3 thẻ. Biến cố Kính Ảnh, Gương Nứt, Yêu Triều, Linh Hồ Lạc Lối; Kính Ma bốc 1 trong 7 con (thêm Ngưu Ma Vương, Thú Nhân Kiếm Sĩ, Sa Khắc Nữ Vương, Khuyển Thái Lang); Địa Ngục có <strong>Vạn Kính Trận</strong> (ba bóng gương, một bóng thật). Thiếu món Xanh làm vé thì nộp 50.000 lượng.</li>
+          <li><a href="../huong-dan/pho-ban/#thanh-kieu-bien-co">Thành Kiều</a>: tướng Chỉ Huy Doanh mỗi lượt, biến cố Đốt Kho Lương, Mật Thám Bị Lộ, Cờ Hàng, Tù Và Gọi Viện; Địa Ngục có <strong>Tam Tướng Liên Hoàn</strong> (hạ ba tướng đầu trong 60 giây). Thành Kiều Địa Ngục (cấp 60) nay vào được.</li>
+          <li><a href="../huong-dan/hang-ngay/#truy-bat-bien-co">Truy bắt</a>: mỗi ải phản đồ một tật (Độn Thổ, Thế Thân, Liều Mạng, Đồng Bọn, Độc Thủ), <strong>Bắt Sống</strong> phản đồ đang quỳ (+1 lượt lật ở bảng ải cuối), biến cố Tẩu Thoát hoặc Mật Báo; Địa Ngục ải cuối là cặp <strong>Song Sát</strong>.</li>
+          <li><a href="../huong-dan/pho-ban/#quan-cong">Quân Công</a>: điểm chung bốn phó bản thay điểm Cổ Mộ (Cổ Mộ 100 / 200 / 300, Phong Yêu Kính 50 / 100 / 150, Thành Kiều 150 / 250 / 400, truy bắt 80 / 150 / 250). Tiệm <strong>Quân Công Phủ</strong> ở cả bốn NPC phó bản; điểm Cổ Mộ cũ đổi sang gấp 1,8 một lần.</li>
+          <li><a href="../huong-dan/xep-hang/">Danh Nhân Đường</a> (<kbd>Alt+L</kbd>, chỉ online): 6 bảng Lực Chiến, Cấp Độ, Đại Đệ Tử, Phó Bản (Cổ Mộ Địa Ngục nhanh nhất tuần), Chuyên Cần, Thành Tựu. Lực chiến xem ở bảng nhân vật; danh hiệu Thiên Hạ Đệ Nhất, Đại Đệ Tử, Phá Vô Song hiện trên tên, không cộng chỉ số.</li>
+          <li><a href="../huong-dan/bat-dau/#tran-cap-60">Trần cấp 60</a>: 9 bản đồ mới (Yên Quốc 46 NPC, Trác Lộc, Trường Bạch Sơn, Ngọc Trụ Phong, Bạch Vân Phong, Trường Bạch Thiên Trì quái cấp 51 tới 55, Yên Trường Thành 1 tới 3 quái cấp 56 tới 60), Tân Thủ Tiên Cô thêm bậc Cấp 51-60.</li>
+          <li><a href="../huong-dan/hang-ngay/#tong-bao">Tống Bảo Tiểu Yêu</a> cấp 45, 50, 55 (Kênh Trịnh Quốc, Trường Bạch, Yên Trường Thành); mỗi lần hạ thêm <strong>tiềm năng bằng cấp quái × 5</strong>.</li>
+          <li><a href="../huong-dan/tien-ich/#kho-trang-2">Kho trang 2</a>: thêm 64 ô, mở vĩnh viễn theo nhân vật ở Bảo Khố, 350 Kim Nguyên Bảo hoặc 5.000.000 lượng.</li>
+        </ul>
+
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li><a href="../huong-dan/pho-ban/#luat-ngay">Một lượt quà mỗi ngày</a> cho cả bốn phó bản, tính lúc nhận quà: thua thì vào lại được trong ngày, tự rời giữa chừng thì mất lượt hôm nay. Phong Yêu Kính tính lúc hạ Kính Ma (trước: lúc vào). Thành Kiều <strong>1 lần mỗi ngày</strong> (trước không giới hạn), Mặc Gia Lệnh theo lượt đó.</li>
+          <li><a href="../huong-dan/pho-ban/#co-mo">Cổ Mộ</a> phí <strong>300.000 / 600.000 / 900.000</strong> (trước 200.000 / 500.000 / 700.000), bảng thẻ ba mức làm lại; lượt lật thêm lật ở bảng phụ. Lữ Bố Địa Ngục bớt 15 % máu.</li>
+          <li><a href="../huong-dan/pho-ban/#thanh-kieu">Thành Kiều</a> Thường quân phí <strong>600.000</strong> (trước 1.000.000), bảng thẻ ba mức làm lại.</li>
+          <li><a href="../huong-dan/hang-ngay/#vuong-bo-dau">Truy bắt</a> bảng ải cuối: độc đắc Khó, Địa Ngục thành 1 Cao Cấp Đoạn Thạch (trước Thẻ Thần Thú chọn con), thẻ Thần Thú ở Địa Ngục thành túi 90.000.</li>
+          <li>Trần cấp 60: kinh nghiệm lên cấp 50 tới 59 nhân 2,2 tới 5,4 (cấp 50 cần 1.270.000, cấp 59 cần 6.470.000). Nhân vật đang ở cấp 50 với kho kinh nghiệm đầy chỉ giữ vừa đủ lên 51, phần thừa đổi ra tiềm năng (tối đa 5.000, kho đầy được khoảng 4.313).</li>
+          <li><a href="../huong-dan/bao-thu/#bao-thu-luc">Bảo Thú Lục</a> chỉ liệt kê loài ở bản đồ đang mở (trần 60: 51 loài).</li>
+        </ul>
+
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Bảo Điển, tab Trộm Bảo: bấm Bay tới mà con trộm chưa hiện thì bị đưa tới cạnh Tống Bảo Tiểu Yêu cùng bản đồ. Người bay tới bản đồ đã có người khác thì không được đưa tới cạnh con quái.</li>
+          <li>Phong Yêu Kính: thoát game giữa lượt nay về đúng chỗ cũ như ba phó bản kia; lật thẻ bị từ chối nay có câu báo.</li>
+          <li>Truy bắt: bảng phó bản ghi sai "trang bị không khoá" dù đang khoá.</li>
+        </ul>
+      </article>
 
       <!-- ================= 5.3 =================
            Soạn 2026-10-12 trước khi phát; phát lên VPS 2026-10-12 14:06 (tag game 5.3.0). Nguồn: repo game master sau ebb935b3 (commit cd8da855, ebb935b3 và các commit

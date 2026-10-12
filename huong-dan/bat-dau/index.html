@@ -57,6 +57,7 @@
   <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
       <a href="#cai-dat-game">Tải và cài đặt</a>
       <a href="#tan-thu">Tân Thủ Thôn</a>
+      <a class="is-v5" href="#tran-cap-60">Trần cấp 60 (6.0)</a>
     </nav></div>
 
   <div class="wrap gbody">
@@ -98,6 +99,54 @@
   <div class="v5note">
     <p><span class="v5tag">Bản 5.0</span> <strong>Bỏ qua Tân Thủ, đi bái sư ngay.</strong> Đủ cấp bái sư mà chưa có phái, nói với một trong 7 người <strong>Môn Phái Chiêu Sinh</strong> ở Tân Thủ Thôn, chọn dòng "Bỏ qua Tân Thủ, đi bái sư ngay" rồi xác nhận. Các nhiệm vụ Tân Thủ còn lại được tính là xong và vẫn nhận đủ quà (kinh nghiệm, ngân lượng, đồ). Hành trang đầy thì đồ vào túi chờ.</p>
   </div>
+</article>
+
+<!-- Bản 6.0, trần cấp 60. Nguồn: tài liệu game 73 (§2 đường kinh nghiệm, §3 cắt kho, §4 map, §5 Bảo Thú Lục), 53 §5c, nhật ký
+     2026-10-12-map60; số: version.json (nhánh mở trần 60, commit 8582714e) max_level 60, level_need_mul [[49, 1.0], [50, 2.2], [59, 5.4]],
+     cap_raise_trim {level 50, potential_pm 500, potential_max 5000}; travel.json bậc "Cấp 51-60"; monster_tuning.json spawn_levels
+     0510-0514 [51, 5], 0560-0562 [56, 5]; npc_overrides.json unlock_at_level_cap.60.070 (46 NPC). Tên map theo gốc map/map/17x.c. -->
+<article class="gcard" id="tran-cap-60">
+  <h3>Trần cấp 60, luyện cấp 51 tới 60 <span class="v5tag">Bản 6.0, sắp ra mắt</span></h3>
+  <ul class="facts">
+    <li class="v5">Bản 6.0, sắp ra mắt</li>
+    <li>Trần cấp 50 lên 60</li>
+    <li>9 bản đồ mới</li>
+  </ul>
+  <p>Bản 6.0 (sắp ra mắt) mở trần cấp <strong>60</strong>; máy chủ đang chạy bản 5.3 vẫn trần 50. Đường lên 51 tới 60 tính để người chơi đều tay khoảng <strong>3 tới 4 tuần</strong>: chỉ làm việc hằng ngày và cày thêm 1 giờ mỗi ngày khoảng 4 tuần, cày 3 giờ khoảng 3 tuần, cày nặng khoảng 2 tuần.</p>
+  <h4>Bản đồ mới</h4>
+  <ul>
+    <li><strong>Yên Quốc</strong>: thành mới với 46 NPC (tiệm, kho, sửa đồ, Dịch Trạm như Tề Quốc). Đi bộ từ Dị Thủy qua <strong>Trác Lộc</strong> rồi tới Yên; Tân Thủ Tiên Cô đưa thẳng tới Trác Lộc.</li>
+    <li><strong>Trường Bạch Sơn, Ngọc Trụ Phong, Bạch Vân Phong, Trường Bạch Thiên Trì</strong>: quái cấp 51 tới 55 (Lục Xác Tri Chu, Sài Lang, Đại Bổn Hùng, Võng Lượng, Hoa Báo Tinh), trùm Võng Lượng Quỷ.</li>
+    <li><strong>Yên Trường Thành 1 tới 3</strong>: quái cấp 56 tới 60 (lính Yên Quốc cầm đao khiên, kiếm khiên, thương), trùm Yên Quốc Tinh Vệ.</li>
+    <li>Tân Thủ Tiên Cô có thêm bậc đưa đi <strong>Cấp 51-60</strong> tới các bản đồ trên. Tống Bảo Tiểu Yêu và Trộm Bảo Phi Tặc cũng ra ở đây (<a href="../hang-ngay/#tong-bao">Tống Bảo</a>).</li>
+    <li><a href="../pho-ban/#thanh-kieu">Thành Kiều Địa Ngục</a> (cần cấp 60) vào được.</li>
+  </ul>
+  <h4>Kinh nghiệm lên cấp</h4>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Cấp</th><th>Kinh nghiệm lên cấp kế</th><th>Bản 5.3</th></tr></thead>
+      <tbody>
+        <tr><td>49</td><td>528.296</td><td>528.296</td></tr>
+        <tr><td>50</td><td>1.270.000</td><td>577.312 (trần)</td></tr>
+        <tr><td>51</td><td>1.610.000</td><td></td></tr>
+        <tr><td>52</td><td>1.997.000</td><td></td></tr>
+        <tr><td>53</td><td>2.437.000</td><td></td></tr>
+        <tr><td>54</td><td>2.934.000</td><td></td></tr>
+        <tr><td>55</td><td>3.494.000</td><td></td></tr>
+        <tr><td>56</td><td>4.122.000</td><td></td></tr>
+        <tr><td>57</td><td>4.823.000</td><td></td></tr>
+        <tr><td>58</td><td>5.603.000</td><td></td></tr>
+        <tr><td>59</td><td>6.470.000</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Cấp 1 tới 49 giữ nguyên số bản gốc. Kho kinh nghiệm tối đa và phạt chết vẫn theo bảng gốc.</p>
+  <h4>Đang đứng ở cấp 50 khi mở trần</h4>
+  <ul>
+    <li>Nhân vật đứng đúng cấp 50 mà kho kinh nghiệm đã tích quá giá lên 51 (1.270.000) thì lần đầu vào game ở bản 6.0, kho chỉ giữ <strong>vừa đủ lên cấp 51</strong>: bấm Thăng cấp một lần là cấp 51, kho về 0.</li>
+    <li>Phần thừa đổi một phần ra <strong>tiềm năng</strong>, tối đa <strong>5.000</strong> mỗi nhân vật (kho đầy 5.773.120 ra khoảng 4.313 tiềm năng), trong trần tiềm năng cấp × 1.000. Có một câu báo trong kênh hệ thống. Chỉ xét một lần; ai lên cấp 50 sau đó không bị cắt.</li>
+    <li><a href="../bao-thu/#bao-thu-luc">Bảo Thú Lục</a> chỉ liệt kê loài sống ở bản đồ đang mở (trần 60: 51 loài), không còn loài ở map chưa mở hay map PVP.</li>
+  </ul>
 </article>
 
     </div>

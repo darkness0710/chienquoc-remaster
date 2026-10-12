@@ -9,7 +9,7 @@ Trang tĩnh: HTML + CSS + hai file JS nhỏ (ảnh trượt, trang hướng dẫ
 │                       "Có gì trong game" #co-gi (lưới .feats + chip), "Bảy môn phái" #mon-phai, "Lời hứa" + ảnh trượt #loi-hua,
 │                       "Tham gia cộng đồng" #cong-dong (.comm: Facebook, Zalo, Discord), "Cài đặt 3 bước" #cai-dat, "Lộ trình" #lo-trinh
 ├── huong-dan/
-│   ├── index.html        mục lục: ô tìm nhanh, dải "Bản 5.1 / 5.0 có gì mới" .v5strip, 16 thẻ chủ đề .topics; script trong <head> chuyển
+│   ├── index.html        mục lục: ô tìm nhanh, dải "Bản 5.1 / 5.0 có gì mới" .v5strip, 17 thẻ chủ đề .topics; script trong <head> chuyển
 │   │                     link cũ kiểu huong-dan/#tai-tao sang trang con chứa mục đó (bảng M: id mục -> trang; T: id tab cũ -> trang)
 │   └── <chủ đề>/index.html   mỗi chủ đề một trang con (bảng ở §Hướng dẫn): đầu trang .ghero, hàng mục dính .ptoc, các mục .gcard,
 │                         chuyển trang trước / sau .pnav
@@ -45,9 +45,9 @@ mục cũ có thay đổi ở 5.0 có khối `.v5note` cuối phần chữ và c
 
 | Trang `huong-dan/…/` | Mục (id) |
 |---|---|
-| `bat-dau` | `cai-dat-game`, `tan-thu` (bỏ qua Tân Thủ, 5.0) |
-| `hang-ngay` | `su-mon`, `vuong-bo-dau`, `phong-yeu-kinh`, `tong-bao`, `trom-bao`, `cau-ca`, `diem-danh` (5.1), `thanh-server` (5.3) |
-| `pho-ban` | `co-mo`, `thanh-kieu` (+ `nang-set`, `tai-tao-set` và `tiem-tu-kim` 5.1), `mot-minh-nhom` (5.3) |
+| `bat-dau` | `cai-dat-game`, `tan-thu` (bỏ qua Tân Thủ, 5.0), `tran-cap-60` (6.0) |
+| `hang-ngay` | `su-mon`, `vuong-bo-dau`, `phong-yeu-kinh`, `tong-bao`, `trom-bao`, `cau-ca`, `diem-danh` (5.1), `thanh-server` (5.3), `truy-bat-bien-co` (6.0, trong `vuong-bo-dau`) |
+| `pho-ban` | `co-mo` (+ `co-mo-bien-co` 6.0), `thanh-kieu` (+ `thanh-kieu-bien-co` 6.0, `nang-set`, `tai-tao-set` và `tiem-tu-kim` 5.1), `mot-minh-nhom` (5.3), `thien-menh` (+ `luat-ngay`) và `quan-cong` (6.0) |
 | `nhiem-vu` | `ct-tong-quan`, `ct-vet-nut`, `ct-hoi-5` tới `ct-hoi-10`, `ho-phu` |
 | `mon-phai` | `dao-hoa`, `thuc-son`, `cam-ve-quan`, `duong-mon`, `mao-son`, `con-luan`, `van-mong` |
 | `ky-nang` | `cach-hoc`, `chieu-45-50` (5.0), `lam-lai-chieu` (5.3), `ki-nang-giang-ho`, `tu-vi` |
@@ -58,8 +58,9 @@ mục cũ có thay đổi ở 5.0 có khối `.v5note` cuối phần chữ và c
 | `bang-hoi` (5.0) | `lap-bang`, `nhiem-vu-bang`, `ki-nang-bang` |
 | `bay-ban` (5.0) | `bay-sap`, `mua-hang`, `kenh-giao-dich` |
 | `giao-dich-cong-dong` | `to-doi`, `giao-dich`, `tang-qua`, `bang-huu`, `kenh-chat`, `cong-dong` |
-| `tien-ich` | `dong-ho`, `dich-tram`, `tiem-do`, `bao-kho` (Kim Nguyên Bảo, 5.0), `thuoc`, `thoi-tiet` |
+| `tien-ich` | `dong-ho`, `dich-tram`, `tiem-do`, `bao-kho` (Kim Nguyên Bảo, 5.0; + `kho-trang-2` 6.0), `thuoc`, `thoi-tiet` |
 | `tu-danh` (5.1) | `tu-danh-bat`, `tu-danh-gio`, `tu-danh-thiet-lap`, `tu-danh-luat` (nguồn: `auto_hunt.json`, `client/ui/auto_hunt_panel.gd` repo game) |
+| `xep-hang` (6.0) | `danh-nhan-duong`, `luc-chien`, `danh-hieu` (nguồn: tài liệu game 69, `logic/rank.gd`, `client/ui/rank_panel.gd`) |
 | `phim-tat` | `ds-phim` (nguồn: `godot/client/ui/shortcuts_panel.gd` repo game) |
 
 **Thêm mục** vào trang có sẵn: chép một `<article class="gcard" id="…">` (chỉ chữ) hoặc `gcard gpanel` (chữ trái, ảnh phải:
@@ -281,3 +282,12 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   80 yêu ma, mỗi người một vé, khoá trang bị; Thành Kiều 45 + 5 x người, Mặc Gia Lệnh 3 / ngày; rớt mạng giữ chỗ 120 s; rời lượt
   mất chỗ; truy bắt phạt chết nhẹ, quà ải chỉ người có mặt); ghi chú ở `hang-ngay` (#phong-yeu-kinh, #vuong-bo-dau, #bach-gia-lenh)
   và `pho-ban` (#thanh-kieu). Ghi chú: gameplay/12 của repo game còn ghi giữ chỗ 60 s (cũ), code và 37 §4.72 là 120 s.
+- 2026-10-12: bản 6.0 SẮP RA MẮT (máy chủ chạy 5.3), đẩy `main` theo yêu cầu chủ repo, cách như 1092164: thẻ `#v6-0`
+  `vcard--next` + khối `data-release-date`, chưa có khoá `"6.0"` trong `js/release.js`, nhãn "Bản 6.0, sắp ra mắt" ở hướng dẫn, dòng
+  6.0 "Sắp ra mắt" trong `#ban-5`, chip, mốc `is-next` ở `#lo-trinh`; trang chủ vẫn ghi đang chạy 5.3. Chỗ phải đổi khi phát: comment
+  "KHI PHÁT" (index.html đầu trang, phien-ban `#v6-0`, huong-dan/index.html, pho-ban, xep-hang, js/release.js). Số theo repo game
+  master bf87f091 (bảng thẻ chủ repo chỉnh tay ffbc6ffc, trần 60 gộp ở cf2fd192). Mới: trang `huong-dan/xep-hang/`
+  (Danh Nhân Đường, giữa `tu-danh` và `phim-tat`), mục `pho-ban/#thien-menh` (+ `#luat-ngay`), `#quan-cong`, `#co-mo-bien-co`,
+  `#thanh-kieu-bien-co`, `hang-ngay/#truy-bat-bien-co`, `bat-dau/#tran-cap-60`, `tien-ich/#kho-trang-2`; bảng thẻ Cổ Mộ, Thành Kiều,
+  Phong Yêu Kính sinh bằng script đọc JSON (nháp, ngoài repo); thẻ `#v6-0`, dải 6.0 mục lục, trang chủ (nhãn, meta, dải số cấp 60,
+  dòng 6.0 trong `#ban-5`, chip, nút, mốc lộ trình). Kiểm: 0 link / neo gãy, 0 id trùng (20 trang), thẻ đóng mở đủ, không gạch dài.

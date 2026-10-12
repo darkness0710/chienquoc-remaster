@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Danh Nhân Đường · Hướng dẫn Chiến Quốc Remaster</title>
+  <meta name="description" content="Danh Nhân Đường (Alt+L): bảng xếp hạng Lực Chiến, Cấp Độ, Đại Đệ Tử, Phó Bản, Chuyên Cần, Thành Tựu; lực chiến, danh hiệu Thiên Hạ Đệ Nhất, Đại Đệ Tử, Phá Vô Song.">
+  <meta name="theme-color" content="#0a1330">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/huong-dan/xep-hang/">
+  <meta property="og:title" content="Danh Nhân Đường · Hướng dẫn Chiến Quốc Remaster">
+  <meta property="og:description" content="Danh Nhân Đường (Alt+L): bảng xếp hạng Lực Chiến, Cấp Độ, Đại Đệ Tử, Phó Bản, Chuyên Cần, Thành Tựu; lực chiến, danh hiệu Thiên Hạ Đệ Nhất, Đại Đệ Tử, Phá Vô Song.">
+  <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<!-- Trang con hướng dẫn "Danh Nhân Đường" (bản 6.0, viết 2026-10-12). Nguồn (repo game master 44e0e50e): tài liệu 69 (§2, §3.1, §4),
+     godot/logic/rank.gd (TABS 6 bảng, TOP_N 50, REFRESH_SEC 600, BOARDS chỉ Cổ Mộ Địa Ngục, danh hiệu Thiên Hạ Đệ Nhất / Phá Vô Song,
+     chốt 0:00, làm mới thứ Hai), client/ui/rank_panel.gd (chữ mô tả từng bảng), shortcuts_panel.gd KEYS (Alt+L, chỉ online). -->
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="brand" href="../../" aria-label="Chiến Quốc Remaster, về trang chủ">
+      <img src="../../assets/favicon.svg" alt="" width="32" height="32">
+      <span>Chiến Quốc <em>Remaster</em></span>
+    </a>
+    <nav class="bar__nav">
+      <a class="bar__link" href="../" aria-current="page">Hướng dẫn</a>
+      <a class="bar__link" href="../../phien-ban/">Phiên bản</a>
+      <a class="btn btn--gold btn--sm" href="../../#cai-dat">Tải game</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="ghero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Đường dẫn"><a href="../">Hướng dẫn</a><span aria-hidden="true">/</span><span>Danh Nhân Đường</span></nav>
+      <div class="ghero__row">
+        <span class="ghero__icon"><svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3"/></svg></span>
+        <div>
+          <h1 class="ghero__title">Danh Nhân Đường <span class="v5tag v5tag--lg">Bản 6.0, sắp ra mắt</span></h1>
+          <p class="ghero__lead">Bảng xếp hạng của cả server: lực chiến, cấp, đại đệ tử mỗi phái, kỷ lục phó bản, chuyên cần, thành tựu. Bấm <kbd>Alt+L</kbd> hoặc nút Danh Nhân Đường trên hàng nút hằng ngày.</p>
+        </div>
+      </div>
+      <!-- KHI PHÁT: đổi câu dưới thành "Tính năng mới của bản 6.0, đã phát <time data-rel=6.0 ...>" và bỏ chữ sắp ra mắt ở nhãn. -->
+      <div class="v5note v5note--page"><p><span class="v5tag">Bản 6.0, sắp ra mắt</span> Tính năng của bản 6.0, sắp ra mắt: máy chủ đang chạy bản 5.3, ngày phát sẽ báo trong nhóm cộng đồng.</p></div>
+    </div>
+  </section>
+
+  <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
+      <a class="is-v5" href="#danh-nhan-duong">Sáu bảng</a>
+      <a class="is-v5" href="#luc-chien">Lực chiến</a>
+      <a class="is-v5" href="#danh-hieu">Danh hiệu</a>
+    </nav></div>
+
+  <div class="wrap gbody">
+    <div class="guide">
+
+<article class="gcard" id="danh-nhan-duong">
+  <h3>Sáu bảng xếp hạng</h3>
+  <ul class="facts">
+    <li class="v5">Bản 6.0, sắp ra mắt</li>
+    <li><kbd>Alt+L</kbd>, chỉ khi chơi online</li>
+    <li>Làm mới mỗi 10 phút</li>
+  </ul>
+  <p>Theo Danh Nhân Đường của bản gốc. Nút nằm cuối hàng nút hằng ngày (góc trên trái, cạnh thanh máu). Mỗi bảng hiện <strong>top 50</strong>; dòng của chính ngươi luôn hiện cuối bảng, kể cả khi ngoài top. Lọc được theo môn phái.</p>
+  <div class="tbl tbl--wrap">
+    <table>
+      <thead><tr><th>Bảng</th><th>Xếp theo</th></tr></thead>
+      <tbody>
+        <tr><td>Lực Chiến</td><td>Điểm <a href="#luc-chien">lực chiến</a>.</td></tr>
+        <tr><td>Cấp Độ</td><td>Cấp; bằng cấp thì theo kinh nghiệm, rồi ai đạt trước.</td></tr>
+        <tr><td>Đại Đệ Tử</td><td>Người lực chiến cao nhất mỗi phái (7 dòng), chốt 0:00 hằng ngày.</td></tr>
+        <tr><td>Phó Bản</td><td>Đội qua <a href="../pho-ban/#co-mo">Cổ Mộ Địa Ngục</a> nhanh nhất tuần (tính từ lúc vào tới lúc hạ Lữ Bố), làm mới thứ Hai. Đội lập kỷ lục mới được báo kênh Thế Giới.</td></tr>
+        <tr><td>Chuyên Cần</td><td>Mỗi việc Hoạt động xong trong ngày được 1 điểm, cộng dồn cả tuần, làm mới thứ Hai.</td></tr>
+        <tr><td>Thành Tựu</td><td>Số thành tựu đã nhận quà.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tip">Không có bảng xếp theo ngân lượng: tránh lộ tài sản và gạ giao dịch. Lượt phó bản có dùng lệnh thử của người làm game không được ghi.</p>
+</article>
+
+<article class="gcard" id="luc-chien">
+  <h3>Lực chiến</h3>
+  <ul class="facts">
+    <li>Bảng nhân vật <kbd>Alt+W</kbd>, tab Tin tức</li>
+    <li>Tách Công và Thủ</li>
+  </ul>
+  <ul>
+    <li>Lực chiến là con số ước lượng "mạnh tới đâu", tính từ thứ thật sự đánh nhau: <strong>Công</strong> (sát thương mỗi giây, gồm chiêu hàng 1 thật của phái) và <strong>Thủ</strong> (Khí Huyết, kháng, phòng, né). Lực chiến bằng căn bậc hai của Công nhân Thủ, nên phái đánh và phái chịu đòn đều lên bảng được.</li>
+    <li>Đo bằng cách đánh một hình nhân chuẩn cấp 40, nên cấp, đồ, sao, ngọc khảm đều đẩy số lên. Một nhân vật cấp 40 mặc đồ Tím vào khoảng 10.000.</li>
+    <li>Xem ở bảng nhân vật (<kbd>Alt+W</kbd>), tab Tin tức: Lực Chiến kèm Công và Thủ, để biết đổi món đồ có lợi không. Không tính kinh nghiệm.</li>
+  </ul>
+</article>
+
+<article class="gcard" id="danh-hieu">
+  <h3>Danh hiệu</h3>
+  <ul class="facts">
+    <li>Hiện trên tên và trong khung chat</li>
+    <li>Không cộng chỉ số</li>
+  </ul>
+  <div class="tbl tbl--wrap">
+    <table>
+      <thead><tr><th>Danh hiệu</th><th>Ai nhận</th><th>Giữ tới</th></tr></thead>
+      <tbody>
+        <tr><td>Thiên Hạ Đệ Nhất</td><td>Hạng 1 bảng Lực Chiến</td><td>Lần chốt kế (0:00 hằng ngày)</td></tr>
+        <tr><td>&lt;Phái&gt; Đại Đệ Tử</td><td>Hạng 1 mỗi phái (ví dụ Thục Sơn Đại Đệ Tử)</td><td>Lần chốt kế (0:00 hằng ngày)</td></tr>
+        <tr><td>Phá Vô Song</td><td>Cả đội đang giữ kỷ lục Cổ Mộ Địa Ngục tuần</td><td>Hết tuần</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Danh hiệu hiện thành dòng nhỏ trên tên nhân vật và trong khung chat. Có nhiều danh hiệu thì chọn cái muốn đeo ở ô Danh Hiệu trong bảng nhân vật (<kbd>Alt+W</kbd>). Danh hiệu chỉ để khoe, không cộng chỉ số.</p>
+</article>
+
+    </div>
+    <nav class="pnav" aria-label="Chủ đề khác"><a class="pnav__prev" href="../tu-danh/"><span>Trước</span><strong>Tự Đánh</strong></a><a class="pnav__all" href="../">Mục lục hướng dẫn</a><a class="pnav__next" href="../phim-tat/"><span>Tiếp</span><strong>Phím tắt</strong></a></nav>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="brand" href="../../"><img src="../../assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
+      <p class="foot__small">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+      <ul class="foot__soc" aria-label="Cộng đồng">
+        <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener" aria-label="Nhóm Facebook"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v7h4v-7h3l1-4h-4V8.6c0-.4.3-.6 1-.6z"/></svg></a></li>
+        <li><a href="https://zalo.me/g/myanfowt9xdyzkwyo1mq" target="_blank" rel="noopener" aria-label="Nhóm Zalo"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5L5 21l3.6-1.8c1.1.3 2.2.4 3.4.4 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/><path class="soc__cut" d="M8.5 9h6.5l-6.5 6h6.5"/></svg></a></li>
+        <li><a href="https://discord.gg/RQDAqRUQ5X" target="_blank" rel="noopener" aria-label="Discord"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 5.6A16 16 0 0015.4 4.4l-.5 1a14.6 14.6 0 00-5.8 0l-.5-1a16 16 0 00-3.9 1.2C2.2 9.3 1.5 13 1.8 16.6a16 16 0 004.8 2.4l1-1.6c-.6-.2-1.1-.5-1.6-.8l.4-.3a11.3 11.3 0 009.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 004.8-2.4c.4-4.2-.6-7.9-2.9-11zM8.7 14.4c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9zm6.6 0c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9z"/></svg></a></li>
+      </ul>
+    </div>
+    <ul class="foot__links">
+      <li><a href="../../">Trang chủ: tải game</a></li>
+      <li><a href="../../huong-dan/">Hướng dẫn: mục lục mọi chủ đề</a></li>
+      <li><a href="../../phien-ban/">Phiên bản: mỗi bản có gì mới</a></li>
+      <li><a href="https://www.facebook.com/groups/1795609961479061" target="_blank" rel="noopener">Nhóm Facebook: góp ý, báo lỗi</a></li>
+    </ul>
+    <p class="foot__small foot__legal">
+      Dự án phục dựng phi thương mại của người hâm mộ, làm để học tập và lưu giữ kí ức.
+      Tên gọi, hình ảnh và tài nguyên gốc của Chiến Quốc thuộc bản quyền của chủ sở hữu.
+    </p>
+  </div>
+</footer>
+
+<script src="../../js/guide.js" defer></script>
+<script src="../../js/release.js" defer></script>
+</body>
+</html>

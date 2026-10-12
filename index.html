@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chiến Quốc Remaster</title>
-  <meta name="description" content="Chiến Quốc Remaster: MMORPG Chiến Quốc (2008) hồi sinh, chơi online miễn phí. Đủ 7 môn phái, trần cấp 50, Cổ Mộ đấu Lữ Bố, Thành Kiều. Đang chạy bản 5.3: làm lại chiêu 7 phái, thanh Hoạt động cả server, truy bắt một chuyến mỗi ngày, Bách Gia Lệnh, Tự Đánh, kĩ năng nghề, Bảo Thú Lục, bang hội, bày bán.">
+  <meta name="description" content="Chiến Quốc Remaster: MMORPG Chiến Quốc (2008) hồi sinh, chơi online miễn phí. Đủ 7 môn phái, trần cấp 50, Cổ Mộ đấu Lữ Bố, Thành Kiều. Đang chạy bản 5.3 (sắp có 6.0: phó bản mỗi lượt một khác, trần cấp 60): làm lại chiêu 7 phái, truy bắt một chuyến mỗi ngày, Bách Gia Lệnh, Tự Đánh, kĩ năng nghề, Bảo Thú Lục, bang hội, bày bán.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://darkness0710.github.io/chienquoc-remaster/">
   <meta property="og:title" content="Chiến Quốc Remaster, chơi online miễn phí">
-  <meta property="og:description" content="Đủ 7 môn phái, tổ đội 5 người, Cổ Mộ đấu Lữ Bố. Đang chạy bản 5.3: làm lại chiêu 7 phái, Bách Gia Lệnh, Tự Đánh, nghề, bảo thú, bang hội, bày bán. Miễn phí, không nạp thẻ.">
+  <meta property="og:description" content="Đủ 7 môn phái, tổ đội 5 người, Cổ Mộ đấu Lữ Bố. Đang chạy bản 5.3, sắp có 6.0: phó bản mỗi lượt một khác, trần cấp 60. Tự Đánh, nghề, bảo thú, bang hội, bày bán. Miễn phí, không nạp thẻ.">
   <meta property="og:image" content="https://darkness0710.github.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -31,7 +31,11 @@
      Bản 5.2 (nhánh web-5.2, soạn trước 2026-10-10, gộp main khi máy chủ lên 5.2): ngày TẠM 10/10/2026 ở js/release.js RELEASES["5.2"],
      phiên phát sửa ngày thật; chỗ hiện: nhãn đầu trang, .v5sec__more 5.2, mốc cuối #lo-trinh.
      Bản 5.3 (phát 2026-10-12 14:06, tag game 5.3.0): RELEASES["5.3"]; nhãn đầu trang, "đang chạy bản 5.3", .v5sec__more 5.3,
-     chip 5.3, nút "Bản 5.3 có gì", mốc cuối #lo-trinh. -->
+     chip 5.3, nút "Bản 5.3 có gì", mốc cuối #lo-trinh.
+     Bản 6.0 CHƯA PHÁT (soạn 2026-10-12): dòng .v5sec__more 6.0 "Sắp ra mắt", chip 6.0, mốc is-next ở #lo-trinh.
+     KHI PHÁT 6.0: thêm RELEASES["6.0"]; nhãn đầu trang .hero2__news thành <time data-rel="6.0" data-prefix="Đã phát "> + "Bản 6.0: phó bản
+     mỗi lượt một khác, trần cấp 60"; "đang chạy bản 6.0"; meta (trần cấp 60, đang chạy 6.0); dải số "60 cấp tối đa, 9 bản đồ mới ở 6.0";
+     .v5sec__more 6.0 "Đã phát <time data-rel=6.0>"; nút "Bản 6.0 có gì" (phien-ban/#v6-0); mốc #lo-trinh is-done + <time data-rel="6.0">. -->
 
 <header class="bar">
   <div class="wrap bar__in">
@@ -107,6 +111,7 @@
         <p class="v5sec__kicker"><span class="seal" aria-hidden="true">5.0</span><span>Đã phát <time data-rel="5.0" datetime="2026-10-09">9/10/2026</time></span></p>
         <h2 class="title">Bản 5.0: giang hồ rộng hơn</h2>
         <p>Học nghề hái thuốc, đào khoáng, mở Bảo Rương. Ném Dây Càn Khôn bắt thú cùng xuất chiến. Lập bang với bằng hữu, bày sạp ở chợ Chu Quốc. Thêm 28 chiêu cấp 45 và 50, rèn đồ chỉ cần ngân lượng.</p>
+        <p class="v5sec__more"><span class="v5tag">Bản 6.0</span> Sắp ra mắt: Cổ Mộ, Phong Yêu Kính, Thành Kiều và truy bắt <a href="huong-dan/pho-ban/#thien-menh">mỗi lượt một khác</a> (Thiên Mệnh, biến cố, gặp trùm hiếm, Khiêu Chiến, Hổ Lao Quan ở Địa Ngục), <a href="huong-dan/hang-ngay/#phong-yeu-kinh">Phong Yêu Kính ba độ khó</a>, điểm <a href="huong-dan/pho-ban/#quan-cong">Quân Công</a> chung, <a href="huong-dan/xep-hang/">Danh Nhân Đường</a>, <a href="huong-dan/bat-dau/#tran-cap-60">trần cấp 60</a> với 9 bản đồ mới, <a href="huong-dan/tien-ich/#kho-trang-2">kho trang 2</a>. <a href="phien-ban/#v6-0">Xem bản 6.0</a>.</p>
         <p class="v5sec__more"><span class="v5tag">Bản 5.3</span> Đã phát <time data-rel="5.3" datetime="2026-10-12">12/10/2026</time>: <a href="huong-dan/ky-nang/#lam-lai-chieu">làm lại chiêu cả 7 phái</a> (chiêu tủ riêng, hồi chiêu nhanh hơn), <a href="huong-dan/hang-ngay/#thanh-server">thanh tiến độ cả server</a>, chết trong phó bản không mất kinh nghiệm, <a href="huong-dan/hang-ngay/#phong-yeu-kinh">Phong Yêu Kính</a> và <a href="huong-dan/pho-ban/#thanh-kieu">Thành Kiều</a> cân lại cho người đi một mình. <a href="phien-ban/#v5-3">Xem bản 5.3</a>.</p>
         <p class="v5sec__more"><span class="v5tag">Bản 5.2</span> Đã phát <time data-rel="5.2" datetime="2026-10-10">10/10/2026</time>: <a href="huong-dan/hang-ngay/#vuong-bo-dau">truy bắt</a> một chuyến mỗi ngày, đi một mình hay cả đội; <a href="huong-dan/hang-ngay/#bach-gia-lenh">Bách Gia Lệnh</a> đổi quà ở Thiên Sứ Trao Đổi; sư môn 20 việc; thợ rèn phục hồi độ bền; Mao Sơn làm lại bốn chiêu. <a href="phien-ban/#v5-2">Xem bản 5.2</a>.</p>
         <p class="v5sec__more"><span class="v5tag">Bản 5.1</span> Đã phát <time data-rel="5.1" datetime="2026-10-09">9/10/2026</time>: <a href="huong-dan/tu-danh/">Tự Đánh</a> (Alt+A, miễn phí 30 phút mỗi ngày), Ngân Lượng Bao, sư phụ tái tạo dòng set và đổi Tử Kim Tinh lấy đồ rèn. <a href="phien-ban/#v5-1">Xem bản 5.1</a>.</p>
@@ -189,6 +194,12 @@
           </a>
         </li>
       </ul>
+      <ul class="chips reveal" aria-label="Sắp có ở bản 6.0">
+        <li><a href="huong-dan/pho-ban/#thien-menh">Thiên Mệnh, biến cố mỗi lượt</a></li>
+        <li><a href="huong-dan/pho-ban/#co-mo-bien-co">Hổ Lao Quan, viện binh Triệu Vân</a></li>
+        <li><a href="huong-dan/xep-hang/">Danh Nhân Đường</a></li>
+        <li><a href="huong-dan/bat-dau/#tran-cap-60">Trần cấp 60</a></li>
+      </ul>
       <ul class="chips reveal" aria-label="Thêm ở bản 5.3">
         <li><a href="huong-dan/ky-nang/#lam-lai-chieu">Làm lại chiêu 7 phái</a></li>
         <li><a href="huong-dan/hang-ngay/#thanh-server">Thanh tiến độ cả server</a></li>
@@ -218,7 +229,7 @@
         <li><a href="#cong-dong">Launcher có nút Zalo, Discord</a></li>
       </ul>
       <div class="v5sec__cta">
-        <a class="btn btn--gold btn--lg" href="phien-ban/#v5-3">Bản 5.3 có gì</a>
+        <a class="btn btn--gold btn--lg" href="phien-ban/#v6-0">Bản 6.0 sắp ra mắt</a>
         <a class="btn btn--ghost btn--lg" href="phien-ban/#v5-0">Bản 5.0 có gì</a>
         <a class="btn btn--ghost btn--lg" href="huong-dan/">Hướng dẫn tính năng mới</a>
       </div>
@@ -515,7 +526,7 @@
     </div>
   </section>
 
-  <!-- Lộ trình. Chi tiết từng bản: phien-ban/. Mốc cuối là bản 5.3 (đã phát 2026-10-12), trước đó 5.2; 5.0 và 5.1 phát cùng ngày (bản chưa phát dùng class is-next, chữ "Sắp ra mắt"). -->
+  <!-- Lộ trình. Chi tiết từng bản: phien-ban/. Mốc cuối là bản 6.0 (chưa phát, is-next), trước đó 5.3 (2026-10-12), 5.2; 5.0 và 5.1 phát cùng ngày (bản chưa phát dùng class is-next, chữ "Sắp ra mắt"). -->
   <section class="section section--alt" id="lo-trinh">
     <div class="wrap">
       <h2 class="title">Từ kí ức tới máy chủ mới</h2>
@@ -553,7 +564,12 @@
         <li class="is-done reveal">
           <time data-rel="5.3" datetime="2026-10-12">12/10/2026</time>
           <h3>Bản 5.3</h3>
-          <p>Làm lại chiêu cả 7 phái, thanh tiến độ cả server, chết trong phó bản phạt nhẹ, phó bản cân lại cho người đi một mình. <a href="phien-ban/">Xem mọi phiên bản</a>.</p>
+          <p>Làm lại chiêu cả 7 phái, thanh tiến độ cả server, chết trong phó bản phạt nhẹ, phó bản cân lại cho người đi một mình.</p>
+        </li>
+        <li class="is-next reveal">
+          <time>Sắp ra mắt</time>
+          <h3>Bản 6.0, trần cấp 60</h3>
+          <p>Thiên Mệnh, biến cố và trùm hiếm ở bốn phó bản, Phong Yêu Kính ba độ khó, Quân Công, Danh Nhân Đường, 9 bản đồ cấp 51 tới 60, kho trang 2. <a href="phien-ban/">Xem mọi phiên bản</a>.</p>
         </li>
       </ol>
     </div>
