@@ -1,7 +1,7 @@
 # Chiến Quốc Remaster · trang tải game
 
 Trang tĩnh: HTML + CSS + hai file JS nhỏ (ảnh trượt, trang hướng dẫn), không cần build, không thư viện ngoài
-(chỉ font Google). Chạy trên GitHub Pages: https://darkness0710.github.io/chienquoc-remaster/
+(chỉ font Google). Chạy trên VPS (Caddy): https://180-93-118-219.sslip.io/chienquoc-remaster/
 
 ```
 ├── index.html          trang chủ: đầu trang .hero3 (ảnh Đào Hoa, cánh hoa bay, hàng nút cộng đồng .hero3__comm, dải số liệu),
