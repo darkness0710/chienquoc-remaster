@@ -295,3 +295,8 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   (thẻ `#v6-0` thành `<time data-rel="6.0">`, bỏ `vcard--next` và `is-next`); trang chủ: nhãn đầu trang, "đang chạy bản 6.0", meta, dải
   số 60 cấp, nút "Bản 6.0 có gì", mốc lộ trình `is-done`. Đối chiếu tag 6.0.0: bảng thẻ, phí, Quân Công khớp; tiệm đổi Tử Kim Tinh ở sư
   phụ 7 Thú Hồn / Tinh (trước 10, `sect_sets.json`).
+- 2026-10-13: bản vá 6.0.1 SẮP RA MẮT (máy chủ chạy 6.0.0), như 1092164 / 5a09146: thẻ `#v6-0-1` `vcard--next` + `data-release-date`,
+  chưa có khoá `"6.0.1"` trong `js/release.js`, nhãn "Bản 6.0.1, sắp ra mắt", dải 6.0.1 mục lục, dòng 6.0.1 trong `#ban-5`, mốc `is-next`.
+  Mới: `pho-ban/#vong-thuong` (bảng thưởng 4 phó bản, tài liệu game 71). Ghi chú ở `mon-phai` (Mao Sơn, Thục Sơn), `bang-hoi`
+  (Bay tới), `hang-ngay` (Bắt Sống, Kính Long), `xep-hang`. Chỗ đổi khi phát: comment "KHI PHÁT". Số theo repo game master f4bb5a05 +
+  nhánh merge-m 9d760af5.

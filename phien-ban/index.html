@@ -54,6 +54,7 @@
 
   <div class="vtoc-bar">
     <nav class="wrap vtoc" aria-label="Nhảy tới phiên bản">
+      <a class="is-next" href="#v6-0-1">6.0.1</a>
       <a href="#v6-0">6.0</a>
       <a href="#v5-3">5.3</a>
       <a href="#v5-2">5.2</a>
@@ -81,6 +82,47 @@
 
   <div class="wrap">
     <div class="vlist">
+
+      <!-- ================= 6.0.1 (CHƯA PHÁT) =================
+           Soạn 2026-10-13, máy chủ chạy 6.0.0. Nguồn: repo game master (6.0.0..f4bb5a05) + nhánh merge-m (Debug-mergeM, 9d760af5): commit
+           9a947f37 / b41d6284 (Vòng Thưởng, tài liệu 71 mục "Vòng Thưởng"; side_board trong dungeon_gumu.json (Cổ Mộ + mirror),
+           dungeon_thanhkieu.json, criminal.json team), a9de2b63 (menu vào hai tầng), 1e825e04 (Hộ Thân, monster_ai.json teleport_guard_sec 3),
+           9ab4e505 + b9662e6a (Mao Sơn, 37 §4.79; sect_skills.json ms_thuc_tam, ms_cuong_thi_phu_phap, ms_huyet_te so với tag 6.0.0),
+           66df6ae7 (Thục Sơn, 37 §4.78; ts_ngu_kiem_phi_tien clones), 3011f0d1 (số hồi máu), a252c8fb (Bay tới nhiệm vụ bang),
+           f4bb5a05 (Kính Long model 20007), 560ed7c7 (lực chiến từ bản lưu), e6be251b (Âm Khí 2 s).
+           KHI PHÁT: thay khối "vcard__date" bằng <time class="vcard__date" data-rel="6.0.1" datetime="YYYY-MM-DD">D/M/YYYY</time> + khoá
+           "6.0.1" trong js/release.js, bỏ nhãn "Sắp ra mắt", bỏ class vcard--next (thẻ và link .vtoc is-next); hướng dẫn: đổi nhãn
+           "Bản 6.0.1, sắp ra mắt" thành "Bản 6.0.1"; trang chủ: xem comment đầu index.html; đối chiếu số với tag 6.0.1. -->
+      <article class="vcard vcard--next" id="v6-0-1">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">6.0.1</h2>
+          <span class="vcard__tag vcard__tag--gold">Sắp ra mắt</span>
+          <span class="vcard__date" data-release-date>Ngày phát hành: sẽ báo trong nhóm cộng đồng</span>
+        </header>
+        <p class="vcard__sum">Bản vá sau 6.0: lượt lật thêm ở phó bản lật ở Vòng Thưởng riêng, menu vào phó bản gọn hơn, 3 giây Hộ Thân sau khi dịch chuyển, Mao Sơn và Thục Sơn chỉnh chiêu, Bay tới cho nhiệm vụ bang, Kính Long thành rồng thật, sửa lỗi.</p>
+
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li><a href="../huong-dan/pho-ban/#vong-thuong">Vòng Thưởng</a>: lượt lật thêm (Khiêu Chiến, biến cố, trùm hiếm, Bắt Sống) ở cả bốn phó bản lật ở một nhịp riêng sau nhịp cuối, trên bảng thưởng 16 thẻ của từng phó bản, không rút bảng chính. Mỗi lượt thêm đáng khoảng: Cổ Mộ 0,67 Sơ Cấp Đoạn Thạch, Thành Kiều 1,02, Phong Yêu Kính 0,57, truy bắt 0,64.</li>
+          <li>Menu vào phó bản hai tầng ở Cổ Mộ, Phong Yêu Kính, Thành Kiều, truy bắt: chọn <strong>Vào (thường)</strong> hay <strong>Vào (Khiêu Chiến: thêm 1 Thiên Mệnh xấu, thêm 1 lượt lật thưởng)</strong>, rồi một dòng ngắn mỗi độ khó: tên, cấp, phí, số phút.</li>
+          <li><strong>Hộ Thân</strong>: 3 giây sau khi qua cổng, đi xa phu, Bay tới hay sống lại ở cổng, quái không nhắm vào ngươi. Ra đòn hay dùng chiêu thì hết.</li>
+          <li><a href="../huong-dan/bang-hoi/#nhiem-vu-bang">Nhiệm vụ bang</a> có nút <strong>Bay tới</strong> như sư môn (1 Phi Hành Phù, niệm 2 giây), ở tab Nhiệm vụ của bảng Bang Hội.</li>
+          <li>Chiêu hồi máu của các phái (Mệnh Tế và các chiêu khác) hiện số <strong>+N</strong> màu xanh trên người được hồi.</li>
+          <li>Kính Long (trùm hiếm ở <a href="../huong-dan/hang-ngay/#phong-yeu-kinh">Phong Yêu Kính</a>) có hình rồng thật.</li>
+          <li><a href="../huong-dan/xep-hang/#luc-chien">Danh Nhân Đường</a>: tab Lực Chiến có cả nhân vật chưa vào game từ bản 6.0.</li>
+        </ul>
+
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li><a href="../huong-dan/mon-phai/#mao-son">Mao Sơn</a>: <strong>Thực Tâm</strong> thêm chậm 20 % suốt 8 giây lời nguyền (trùm 10 %). <strong>Cương Thi Phù Pháp</strong> thành chiêu chịu đòn: Thi Vương nhận ít hơn 40 % sát thương (cấp 5: 50 %, trước 30 %), kéo quái trong 4 ô (trước 3), không còn đánh mạnh thêm 100 %. <strong>Huyết Tế</strong> lên Thi Vương: nổ mạnh hơn 30 % (trước 50 %), Thi Vương không chết mà mất nửa máu đang có.</li>
+          <li><a href="../huong-dan/mon-phai/#thuc-son">Thục Sơn</a>: <strong>Ngự Kiếm Phi Tiên</strong> tự bắt tối đa 9 kẻ địch trong 8 ô quanh mình, mỗi kẻ một phân thân (bóng của chính mình) lao tới chém một đòn, rồi vạn kiếm rơi quanh mình như cũ. Mô tả nhánh Phi Tiên Kiếm Pháp giải thích võ công gốc.</li>
+        </ul>
+
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Thiên Mệnh Âm Khí: độc có thể dính tới 120 phút ở truy bắt nhóm. Nay độc chỉ kéo 2 giây mỗi lần, ra khỏi phó bản là gỡ hết.</li>
+        </ul>
+      </article>
 
       <!-- ================= 6.0 =================
            Soạn 2026-10-12 trước khi phát; phát lên VPS 2026-10-12 23:58 (tag game 6.0.0 = 41c04b9c). Phiên phát: số đối chiếu tag 6.0.0 khớp;
