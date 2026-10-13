@@ -300,3 +300,6 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   Mới: `pho-ban/#vong-thuong` (bảng thưởng 4 phó bản, tài liệu game 71). Ghi chú ở `mon-phai` (Mao Sơn, Thục Sơn), `bang-hoi`
   (Bay tới), `hang-ngay` (Bắt Sống, Kính Long), `xep-hang`. Chỗ đổi khi phát: comment "KHI PHÁT". Số theo repo game master f4bb5a05 +
   nhánh merge-m 9d760af5.
+- 2026-10-13 (phiên phát, tag game 6.0.1 = 4b652401 lên VPS 10:33): `RELEASES["6.0.1"]` = 2026-10-13; bỏ "sắp ra mắt" của 6.0.1 (thẻ
+  `#v6-0-1` thành `<time data-rel="6.0.1">`, bỏ `vcard--next` / `is-next`), trang chủ "đang chạy bản 6.0.1", mốc lộ trình `is-done`. Đối
+  chiếu tag 6.0.1: Mao Sơn MS-B, side_board, Hộ Thân 3 s khớp; tin launcher news.json bản 6.0.1 khớp nội dung.

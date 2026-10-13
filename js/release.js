@@ -15,9 +15,10 @@
     "5.3": "2026-10-12",
     // 6.0: ngày phát thật 2026-10-12 (tag 6.0.0 lên VPS 23:58 giờ Việt Nam). Đổi ngày thì đồng bộ chữ dự phòng
     // "12/10/2026" trong các thẻ <time data-rel="6.0"> (README §Sửa thường gặp).
-    "6.0": "2026-10-12"
-    // 6.0.1: CHƯA PHÁT (soạn 2026-10-13). Thẻ #v6-0-1 dùng khối data-release-date, chưa có <time data-rel="6.0.1">;
-    // KHI PHÁT thêm "6.0.1": "yyyy-mm-dd" (dấu phẩy sau dòng 6.0) và đổi các chỗ ghi "Sắp ra mắt".
+    "6.0": "2026-10-12",
+    // 6.0.1: ngày phát thật 2026-10-13 (tag 6.0.1 lên VPS 10:33). Đổi ngày thì đồng bộ chữ dự phòng
+    // "13/10/2026" trong các thẻ <time data-rel="6.0.1"> (README §Sửa thường gặp).
+    "6.0.1": "2026-10-13"
   };
 
   var list = document.querySelectorAll("time[data-rel]");
