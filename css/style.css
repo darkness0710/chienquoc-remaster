@@ -441,7 +441,7 @@ html.tabs-on .tab-panel + .tab-panel { border-top: 0; }
 .facts { list-style: none; margin: 12px 0 0 !important; padding: 0 !important; display: flex !important; flex-wrap: wrap; gap: 8px !important; }
 .facts li { padding: 3px 12px; border-radius: 999px; font-size: .85rem; color: var(--jade-400);
   border: 1px solid rgba(111, 214, 226, .35); background: rgba(111, 214, 226, .07); }
-/* Icon món cạnh tên mục (Bùa Ma Thuật, ảnh 79x128 lấy từ repo game godot/assets/custom/icon/item/). */
+/* Icon món cạnh tên mục (Bùa Ma Thuật, ảnh 79x128). */
 .gicon { display: inline-block; width: 32px; height: auto; margin-right: 10px; vertical-align: middle;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .5)); }
 .tip { margin-top: 14px !important; padding: 10px 14px; border-radius: 10px; font-size: .92rem !important;
@@ -1121,3 +1121,58 @@ html.vpage { scroll-padding-top: 122px; }
 .feat--forge .feat__art svg.art { stroke: #ffc27a; }
 .feat--coin .feat__art svg.art { stroke: var(--gold-300); }
 @media (prefers-reduced-motion: no-preference) { .feat__art svg.art { animation: bob 3.8s ease-in-out infinite; } }
+
+/* ---------- hướng dẫn, phiên bản: làm gọn (2026-10-14) ---------- */
+/* Thanh trên: chữ link không gãy dòng ở màn hẹp (390 px từng gãy "Hướng / dẫn", thanh cao 45 px). */
+.bar__link { white-space: nowrap; }
+@media (max-width: 459px) {
+  .bar__nav { gap: 12px; }
+  .bar__link { font-size: .84rem; }
+  .bar__nav .btn--sm { padding: 6px 12px; font-size: .82rem; }
+}
+@media (max-width: 359px) { .bar__nav { gap: 8px; } .bar__link { font-size: .78rem; } .bar__nav .btn--sm { padding: 6px 9px; font-size: .78rem; } }
+
+/* Hàng mục dính: mép mờ báo còn mục khuất để vuốt ngang. */
+.ptoc { -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 14px, #000 calc(100% - 28px), transparent);
+  mask-image: linear-gradient(90deg, transparent 0, #000 14px, #000 calc(100% - 28px), transparent);
+  padding-left: 14px; padding-right: 28px; }
+
+/* Mục chữ trái ảnh phải: chữ rộng hơn để bảng số đủ cột (bảng Cổ Mộ 6 cột từng bị cắt cột Phiếu ở 1280 px). */
+@media (min-width: 860px) {
+  .gpanel { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 0 28px; }
+  .gshot { top: 132px; }
+}
+
+/* Bảng số: chữ số cùng bề rộng, cột toàn số căn phải (lớp .num do js/guide.js gắn); bảng rộng hơn khung
+   (cuộn ngang được) có mép phải sáng nhẹ (lớp .is-scroll, cũng do js/guide.js). Bóng nền kiểu "local" đã thử: lộ dải màu
+   lệch nền thẻ ở mép phải. */
+.tbl { font-variant-numeric: tabular-nums; }
+.tbl.is-scroll { box-shadow: inset -16px 0 14px -12px rgba(232, 195, 106, .45); }
+.tbl th.num, .tbl td.num { text-align: right; }
+.tbl tbody tr:hover td { background: rgba(232, 195, 106, .05); }
+.gtext .tbl th, .gtext .tbl td { padding: 7px 10px; }
+@media (max-width: 539px) {
+  .tbl table { font-size: .88rem; }
+  .tbl th, .tbl td { padding: 7px 10px; }
+}
+
+/* Mục lục hướng dẫn: hai bản mới nhất cạnh nhau, các bản trước gập lại để thẻ chủ đề lên gần đầu trang. */
+.gnews { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 16px; }
+.gnews .v5strip { margin-bottom: 0; align-content: flex-start; }
+@media (max-width: 859px) { .gnews { grid-template-columns: minmax(0, 1fr); } }
+.gnews-wrap[hidden] { display: none; }
+.gnews-old { margin-bottom: 28px; border: 1px solid var(--line); border-radius: 16px; background: rgba(15, 29, 68, .45); }
+.gnews-old > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 20px;
+  cursor: pointer; list-style: none; font-weight: 600; color: var(--gold-400); }
+.gnews-old > summary::-webkit-details-marker { display: none; }
+.gnews-old > summary::after { content: ""; flex: 0 0 auto; width: 9px; height: 9px; margin-top: -4px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform .2s ease; }
+.gnews-old[open] > summary::after { margin-top: 4px; transform: rotate(-135deg); }
+.gnews-old > summary:hover { color: var(--gold-300); }
+.gnews-old[open] > summary { border-bottom: 1px solid var(--line); }
+.gnews-old .gnews { margin: 0; padding: 16px; }
+
+/* Trang Phiên bản: nhóm Giao diện, thẻ bản sắp ra mắt. */
+.vcard h3.g-ui { --c: #b9a6f5; }
+.vcard--next .vcard__ver { font-size: 1.6rem; }
+.vcard--next .note { border-left-color: var(--jade-400); background: rgba(111, 214, 226, .08); }

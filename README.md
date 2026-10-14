@@ -303,3 +303,9 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
 - 2026-10-13 (phiên phát, tag game 6.0.1 = 4b652401 lên VPS 10:33): `RELEASES["6.0.1"]` = 2026-10-13; bỏ "sắp ra mắt" của 6.0.1 (thẻ
   `#v6-0-1` thành `<time data-rel="6.0.1">`, bỏ `vcard--next` / `is-next`), trang chủ "đang chạy bản 6.0.1", mốc lộ trình `is-done`. Đối
   chiếu tag 6.0.1: Mao Sơn MS-B, side_board, Hộ Thân 3 s khớp; tin launcher news.json bản 6.0.1 khớp nội dung.
+- 2026-10-14 (làm gọn hướng dẫn + thẻ bản sắp ra mắt): thanh trên không gãy dòng ở 390 / 360 / 320 px; mục lục `huong-dan/`: hai bản mới nhất
+  cạnh nhau trong `#gnews`, các bản trước gập trong `details.gnews-old` (ô tìm nhanh ẩn cả `#gnews`); `.gpanel` máy tính chữ 1,3 : ảnh 1
+  (bảng Cổ Mộ 6 cột không còn bị cắt ở 1280 px); bảng `.tbl` chữ số đều cột, `js/guide.js` gắn `.num` (cột toàn số căn phải) và
+  `.is-scroll` (mép phải sáng khi còn cột khuất); hàng `.ptoc` mờ hai mép. Trang Phiên bản: thẻ `#v-sap-ra` "Bản sắp ra mắt"
+  (`vcard--next`, nhãn "Chưa phát", không có `<time data-rel>`), nhóm mới `h3.g-ui` Giao diện. Khi phát: đổi thành thẻ có số bản + ngày
+  như 6.0.1, bỏ `vcard--next` / `is-next`. Kiểm: 0 phần tử tràn ở 375 / 900 px mọi trang; ảnh trước / sau `tmp/ui/`.

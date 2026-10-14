@@ -14,7 +14,7 @@
   if (input) {
     var box = input.closest(".gsearch");
     var none = document.getElementById("gsearchNone");
-    var strip = document.querySelector(".v5strip");
+    var strip = document.getElementById("gnews") || document.querySelector(".v5strip");
     var cards = Array.prototype.slice.call(document.querySelectorAll(".topic"));
     cards.forEach(function (c) { c._t = norm(c.getAttribute("data-search") + " " + c.textContent).replace(/\s+/g, " "); });
     box.hidden = false;
@@ -44,6 +44,31 @@
       }
     });
   }
+
+  // ---------- 1b. Bảng số: cột mà mọi ô đều là số (300.000, 45 %, 1 / 2 / 3) thì căn phải ----------
+  var NUM = /^[\s\d.,%+×x\/~≈()-]*\d[\s\d.,%+×x\/~≈()-]*$/;
+  Array.prototype.forEach.call(document.querySelectorAll(".tbl table"), function (t) {
+    var rows = Array.prototype.slice.call(t.querySelectorAll("tbody tr"));
+    if (!rows.length || t.querySelector("[rowspan], [colspan]")) return;
+    var n = rows[0].cells.length;
+    for (var c = 1; c < n; c++) {
+      var ok = rows.every(function (r) { return r.cells[c] && NUM.test(r.cells[c].textContent.trim()); });
+      if (!ok) continue;
+      rows.forEach(function (r) { r.cells[c].classList.add("num"); });
+      var h = t.querySelector("thead tr");
+      if (h && h.cells[c]) h.cells[c].classList.add("num");
+    }
+  });
+
+  // Bảng rộng hơn khung: gắn .is-scroll để mép phải báo còn cột khuất (đổi khi xoay màn, đổi cỡ cửa sổ).
+  var tbls = Array.prototype.slice.call(document.querySelectorAll(".tbl"));
+  var markScroll = function () {
+    tbls.forEach(function (b) { b.classList.toggle("is-scroll", b.scrollWidth > b.clientWidth + 2 && b.scrollLeft + b.clientWidth < b.scrollWidth - 2); });
+  };
+  tbls.forEach(function (b) { b.addEventListener("scroll", markScroll, { passive: true }); });
+  window.addEventListener("resize", markScroll);
+  window.addEventListener("load", markScroll);
+  markScroll();
 
   // ---------- 2. Trang con: tô mục đang đọc trên hàng mục dính ----------
   var toc = document.querySelector(".ptoc");
