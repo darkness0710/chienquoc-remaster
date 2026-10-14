@@ -22,8 +22,6 @@
 </head>
 <body>
 
-<!-- Trang con hướng dẫn "Trang bị và rèn" (tách từ huong-dan/index.html cũ ngày 2026-10-08, nhánh web-5.0). Nguồn số liệu ghi trong
-     comment trên từng mục. Thêm / sửa mục: README.md §Hướng dẫn. -->
 
 <header class="bar">
   <div class="wrap bar__in">
@@ -74,10 +72,6 @@
   <div class="wrap gbody">
     <div class="guide">
 
-<!-- Khoá phái (bản 5.0): repo game nhánh feat/khoa-phai 7838b184 (gộp vào 5.0), gameplay/12 §1.10zi, 37 §4.60 (luật gốc
-     sys/user/equip.c:32-90, logic/inventory.gd equip_problem; tiệm NPC giữ hàng gốc nên 4 phái thiếu tiệm giáp cấp 20 trở lên).
-     Tooltip đỏ đúng dòng: item_slot.gd (int-5.0 35ef7b2d). Đồ đang mặc: tools/migrate/sect_armor_fix.py chạy một lần trên máy chủ
-     lúc phát (đồ trong túi / kho không đụng). -->
 <article class="gcard" id="khoa-phai">
   <h3>Ai mặc được đồ gì</h3>
   <ul class="facts">
@@ -146,7 +140,6 @@
           </figure>
           <div class="gtext">
             <p>Mỗi sao tăng chỉ số chính của món: vũ khí và hạng liên tăng công, áo nón yêu đới tăng kháng, giày tăng thân thủ và ngoại kháng. Đồ cấp càng cao, mỗi sao cộng càng nhiều.</p>
-            <!-- Bản 4.1 (repo game forge.json rates, nhật ký (278)): 100/90/80/.../10, trước 100/80/60/45/30/20/12/8/4/2. -->
             <div class="tbl">
               <table>
                 <thead><tr><th>Lên sao</th><th>Cần đá</th><th>Tỉ lệ (từ bản 4.1)</th></tr></thead>
@@ -168,9 +161,6 @@
           </div>
         </article>
 
-<!-- Bùa Ma Thuật (mới ở 3.4.2): forge.json charm {item remaster/bua_ma_thuat, n 1, fail keep}, rates 100..10 % (4.1; trước 100..2 %);
-             custom_items.json (value 8.000, chỉ thẻ Cổ Mộ Địa Ngục); gameplay/24 §Bùa; số lần rèn kì vọng: 37 §4.33
-             (không bùa E_k = (1 + (1 - p) E_{k-1}) / p, tính cả lần lên lại sao đã tụt; có bùa 1 / p, mỗi lần mất 1 lá). -->
 <article class="gcard" id="bua-ma-thuat">
           <h3><img class="gicon" src="../../assets/img/huong-dan/bua-ma-thuat.png" width="32" height="52" alt="">Bùa Ma Thuật</h3>
           <ul class="facts">
@@ -203,8 +193,6 @@
           <p class="tip">Theo tỉ lệ bản 4.1. Tới 7 sao rèn không bùa vẫn nhẹ; bùa đáng nhất ở 8 lên 9 và 9 lên 10. Cả 0 lên 10 sao một món tốn khoảng 30 lá (bản 4.0 khoảng 100).</p>
         </article>
 
-<!-- Bùa May Mắn (bản 4.1): repo game forge.json luck {item remaster/bua_may_man, n 1, pct 10}, Forge.luck_rate
-             (r + r x 10 / 100 làm tròn xuống, trần 100), nhật ký 2026-10-06b (279). -->
 <article class="gcard" id="bua-may-man">
           <h3>Bùa May Mắn</h3>
           <ul class="facts">
@@ -308,10 +296,8 @@
             <ul>
               <li><strong>Thành công:</strong> lên một phẩm, thêm 1 dòng phụ ngẫu nhiên, giữ nguyên sao và dòng cũ.</li>
               <li><strong>Thất bại:</strong> mất tiền, đồ giữ nguyên.</li>
-              <!-- equip_rules.json qualities[].sockets: Xanh 1, Vàng 3 (4.1: 2), Tím 3 (37 §4.42 SV2) -->
               <li><strong>Lỗ khảm:</strong> Xanh 1, Vàng 3, Tím 3.</li>
             </ul>
-            <!-- Bản 5.0: equip_rules.json upgrade {cash_per_level 4000, cash_base 90000, steps 35 / 8 %}, craft_part pct 25 (int-5.0). -->
             <p>Mỗi lần thử tốn <strong>4.000 × cấp đồ + 90.000</strong> lượng (đồ cấp 40: 250.000, cấp 50: 290.000). Nộp 1 <a href="../nghe/#co-quan">cấu kiện Cơ Quan</a> đúng bậc thì phí giảm 25 %.</p>
           <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Bỏ Thăng Phẩm Thạch, chỉ tốn ngân lượng; tỉ lệ tăng cao hơn (trước: Trắng lên Xanh 25 %, Xanh lên Vàng 5 %, mỗi lần 1 Thăng Phẩm Thạch + 4.000 × cấp đồ).</p></div>
 </div>
@@ -346,15 +332,7 @@
                 </tbody>
               </table>
             </div>
-            <!-- Bản 5.0: equip_rules.json reroll {cash_per_level 1000, cash_base 30000} (int-5.0). -->
             <p>Mỗi lần tốn <strong>1.000 × cấp đồ + 30.000</strong> lượng (đồ cấp 50: 80.000), khoá dòng không tốn thêm. Nộp 1 <a href="../nghe/#co-quan">cấu kiện Cơ Quan</a> đúng bậc thì phí giảm 25 %.</p>
-<!-- Bảng dòng tái tạo theo ô (bản 5.2, chủ repo 2026-10-10 "bổ sung mỗi loại trang bị tái tạo ra dòng gì"). Nguồn: repo game master
-     c439a62b, godot/data/custom/equip_rules.json: pools (bể dòng mỗi ô, hệ số x R), r + r_levels (R theo ô, nội suy thẳng giữa cấp
-     10 / 20 / 40 / 80 / 150), tiers (Thường 60 % ra 60 lần, Tốt 80 % ra 30, Hiếm 100 % ra 10), qualities[].lines (0 / 2 / 3 / 4 / 5);
-     logic/equip_rules.gd line_cap = round(hệ số x R), line_value = max(1, round(trần x % bậc)), roll_lines (rút đều loại chưa có,
-     bể ít loại hơn số dòng thì cho trùng); tên chỉ số: stat_defs.json. Số in bằng script nháp lines_table.py (đọc thẳng JSON).
-     Kiểm chéo: set sư môn bậc 1 (cấp 25) / bậc 2 (cấp 50) trong sect_sets.json khớp mức Hiếm (vd mũ cấp 25 Khí Huyết 37, Ngoại
-     Kháng 7). Đỏ: tài liệu game 29 "Đỏ chưa làm". -->
             <h4 id="dong-tai-tao">Mỗi ô ra dòng gì</h4>
             <p>Mỗi dòng phụ rút ngẫu nhiên một loại trong bể của ô (các loại ngang nhau), rồi rút bậc Thường, Tốt, Hiếm như bảng trên. Số dòng theo phẩm: <strong>Xanh 2, Vàng 3</strong> (tái tạo được); Tím là set sư môn, 4 dòng đặt sẵn; Đỏ 5 dòng, chưa có món nào.</p>
             <div class="tbl">
@@ -395,9 +373,6 @@
               <li>Không ô nào ra Thân Thủ hay dòng phần trăm (Chính Xác, Né Tránh, Bạo Kích, Hấp Thụ). Các chỉ số đó có ở ngọc khảm (Tinh Thạch) và dòng cuối của set sư môn.</li>
               <li>Pháp bảo, cánh, phi phong không có dòng phụ, không tái tạo.</li>
             </ul>
-            <!-- Set sư môn: sect_sets.json items[*].lines (4 dòng, 3 dòng phẳng = mức Hiếm bể của ô ở cấp món 25 / 50), rules.pct_line
-                 (common weapon / waist / boots 0,5 + 0,25 mỗi bậc; sect head / armor / neck 1 + 0,5; Phản Đòn kèm reflect_rand 20 + 10),
-                 rules.reroll_line (1 Tử Kim Tinh + 50.000, dòng cuối không đổi), tài liệu game 37 §4.63. Bạo Kích ghi phần vạn (100 = 1 %). -->
             <h4 id="dong-set">Dòng của set sư môn</h4>
             <p>Set sư môn (phẩm Tím) có 4 dòng: 3 dòng đầu là dòng phẳng của bể ô đó, đủ mức Hiếm theo cấp món (bậc 1 tính như cấp 25, bậc 2 như cấp 50); dòng cuối là dòng phần trăm riêng của set, cố định.</p>
             <div class="tbl">
@@ -422,9 +397,6 @@
 </div>
         </article>
 
-<!-- Phân giải (từ 4.2; bản 5.0: equip_rules.json salvage {cash_per_level 200, by_quality 1: sell/0032 n 1 rate 5, 2: sell/0032 n 1
-             rate 10}, int-5.0; 4.2: cash 1000, Xanh 30 % Tái Tạo, Vàng 5 / 3 Thăng Phẩm); logic/salvage.gd (không nhận set sư môn, ô giữ, đồ nhiệm vụ, đồ đang mặc;
-             phẩm khác Xanh / Vàng từ chối); gameplay/24 §Phân giải, 37 §4.43, nhật ký (291). -->
 <article class="gcard" id="phan-giai">
           <h3>Phân giải</h3>
           <ul class="facts">
@@ -452,9 +424,6 @@
         <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Phân giải ra Sơ Cấp Đoạn Thạch thay cho Thăng Phẩm, Tái Tạo Thạch; phí giảm từ 1.000 xuống 200 × cấp đồ.</p></div>
 </article>
 
-<!-- Phục hồi độ bền (bản 5.2): repo game master c439a62b (commit 550c437b), equip_rules.json restore {cash_x [0, 4000, 16000,
-     30000, 60000], min_pct 10}, logic/durability_restore.gd, gateway/forge_service.gd MENU việc 8 "Phục hồi độ bền"; tài liệu game
-     37 §4.67 (bảng giá). Cấp món = cost_level (set sư môn bậc 1 cấp 25, bậc 2 cấp 50). -->
 <article class="gcard" id="phuc-hoi-do-ben">
           <h3>Phục hồi độ bền <span class="v5tag">Bản 5.2</span></h3>
           <ul class="facts">

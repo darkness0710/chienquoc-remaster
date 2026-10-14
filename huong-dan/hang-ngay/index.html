@@ -22,8 +22,6 @@
 </head>
 <body>
 
-<!-- Trang con hướng dẫn "Việc hằng ngày" (tách từ huong-dan/index.html cũ ngày 2026-10-08, nhánh web-5.0). Nguồn số liệu ghi trong
-     comment trên từng mục. Thêm / sửa mục: README.md §Hướng dẫn. -->
 
 <header class="bar">
   <div class="wrap bar__in">
@@ -85,8 +83,6 @@
           </figure>
           <div class="gtext">
             <p>Gặp <strong>sư phụ</strong> ở căn cứ phái để nhận việc. Chưa biết đường thì nhờ <strong>Sứ Giả Môn Phái</strong> ở Chu Quốc đưa đi (miễn phí). Trong sổ nhiệm vụ, bấm tên NPC là tự chạy tới.</p>
-            <!-- Bản 5.2: repo game commit a727a729, sect_quests.json bank_per_day 20, bank_cap 20, limit 10 (độ dài chuỗi); daily_activities.json
-                 need_count 10; Nho Gia Lệnh mỗi chuỗi (bach_gia.json source sect_chain); tài liệu game 37 §4.39 CA1, 31. -->
             <p><span class="v5tag">Bản 5.2</span> Mỗi ngày lúc 23:00 túi việc về <strong>20 việc</strong>, tức hai chuỗi 10 việc, thưởng gấp đôi. Việc chưa làm <strong>không để dành</strong> sang hôm sau. Bảng Hoạt động hôm nay tính dòng sư môn đủ ở 10 việc.</p>
             <h4>Một chuỗi 10 việc</h4>
             <ul class="steps-mini">
@@ -134,11 +130,6 @@
             <figcaption>Truy bắt nhóm: ải 1 trên 7, phản đồ Thục Sơn</figcaption>
           </figure>
           <div class="gtext">
-            <!-- Bản 5.2 (gộp truy bắt): repo game master c439a62b, commit 0345e764; criminal.json rules.retired + bank_per_day 0
-                 (bỏ truy bắt một mình), team {min_members 1, max_members 5, near_tiles 8, level_gap 10, exp_kills 12, card.mul_pm 380,
-                 level_ref 40, level_cap 50, low_pow 2}, team.tiers {fee_per_level 0 / 23000 / 33500, cash_pm 660 / 1890 / 2630, last_flips
-                 2 / 3 / 3, phieu 1 / 1 / 2}, quà qua đủ 7 ải = tiers.<độ khó>.items của bản đơn cũ (gateway/criminal_team_service.gd
-                 _grant_finish) + Binh Gia Lệnh; tiền ròng thẻ: tài liệu game 37 §4.68 "Đã làm" (test/logic/bach_gia.gd _test_money). -->
             <h4>Một chuyến mỗi ngày <span class="v5tag">Bản 5.2</span></h4>
             <ul>
               <li>Mỗi ngày (làm mới 23:00) mỗi người được <strong>1 chuyến</strong> truy bắt, không để dành. Đi <strong>một mình</strong> hay cả đội <strong>2 đến 5 người</strong> đều được: đứng gần Vương Bộ Đầu, cấp lệch không quá 10. Đội trưởng chọn <strong>Truy bắt phản đồ</strong> rồi chọn độ khó; mọi người phải đủ cấp của độ khó đó.</li>
@@ -160,16 +151,9 @@
             <ul>
               <li>Quà qua ải đều khoá, trừ <a href="#bach-gia-lenh">Binh Gia Lệnh</a> (giao dịch được). Quà theo cấp lúc qua ải: Khó cấp 25 đến 29 được 2 Sơ Cấp Đoạn Thạch thay Trung Cấp; Địa Ngục cấp 35 đến 39 được 2 phiếu, 1 Trung Cấp và 18 % thêm 1 Cao Cấp.</li>
               <li>Khó và Địa Ngục: phản đồ ra chiêu dày hơn, chiêu đánh đau hơn, có tính cả pháp bảo của ngươi. Cả đội cùng ngã <strong>5 lần</strong> trong cả chuyến (Địa Ngục <strong>3 lần</strong>) là thua, không hoàn vé.</li>
-              <!-- criminal.json tiers.kho / dia_nguc potion_pm 750 / 500 (logic/potion_scale.gd, 37 §4.46 SL1 đổi 2026-10-09, commit 53999f71);
-                   hút máu nhân cùng hệ số (37 §4.69 mục 7, commit 80060bb8); no_pet_aggro, pet_dmg_pm 500. -->
               <li>Khó và Địa Ngục: thuốc máu (cả phần Khí Huyết của Tái Tạo Hoàn) chỉ còn <strong>75 %</strong> tác dụng, Địa Ngục <strong>50 %</strong>: viên hồi 1.000 máu còn 750, 500. Hút máu (dòng Hấp Thụ Khí Huyết, nội tại Huyết Chiến) cũng giảm như vậy. Phản đồ không bị thú khiêu khích, đòn của thú vào phản đồ chỉ còn một nửa.</li>
-              <!-- criminal.json: stats.min_hit_pm 20, tiers.kho/dia_nguc.stats.min_hit_pm 30 / 40; skills.dash after_sec 3, cd_sec 10 (37 §4.36) -->
               <li>Mỗi đòn phản đồ trúng ít nhất 2 % máu của người bị đánh (Khó 3 %, Địa Ngục 4 %); đứng ngoài tầm quá 3 giây thì phản đồ lướt tới.</li>
             </ul>
-            <!-- Bản 6.0: tài liệu game 70 §3 (C1-C4, Phi Tặc Vương, Song Sát), 71 QP1 (độc đắc Khó / Địa Ngục chọn con -> 1 Cao, thẻ beast Địa
-                 Ngục -> túi 90.000), QP3 (Bắt Sống +1 chỉ bảng ải cuối, tối đa 1), 70 §8 VG2 (lượt ngày tính lúc qua ải đầu); criminal.json
-                 team.variety (capture below_pct 10 kneel_sec 5 channel_sec 3; escape below_pct 30; tip ask_sec 15; fury 30 + 15 điểm, +20 %;
-                 rare 10 %; song_sat revive_sec 10), team.tiers.*.last_mix / jackpot; Quân Công quan_cong.points.cq_team 80 / 150 / 250. -->
             <h4 id="truy-bat-bien-co">Biến cố truy bắt <span class="v5tag">Bản 6.0</span></h4>
             <ul>
               <li><strong>Lượt ngày</strong> tính lúc qua <strong>ải đầu</strong>: thua ngay ải 1 thì vào lại được trong ngày; tự rời giữa chừng thì mất lượt hôm nay. Qua đủ 7 ải: thêm điểm <a href="../pho-ban/#quan-cong">Quân Công</a> (80 / 150 / 250 theo độ khó).</li>
@@ -195,21 +179,14 @@
                 </tbody>
               </table>
             </div>
-            <!-- criminal.json team.tiers.<độ khó>.revive_sec 10 / 20 / 30; cả đội ngã: CriminalTeamService._check_wipe (37 §4.34) -->
             <p class="tip">Trang bị bị khoá suốt lượt: mặc đồ tốt nhất trước khi đi. Chết thì sống lại ở đầu ải sau 10 giây (Khó 20 giây, Địa Ngục 30 giây). Cả đội cùng ngã thì phản đồ còn sống về chỗ cũ, hồi đầy máu. Lật cùng một bảng với cả đội: thẻ người khác đã lật thì không lật lại được.</p>
           <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Thẻ Thăng Phẩm Thạch thành túi 90.000 lượng; độc đắc mức Thường thành Trung Cấp Đoạn Thạch.</p></div>
           <div class="v5note"><p><span class="v5tag">Bản 6.0</span> Bảng ải cuối: độc đắc Khó và Địa Ngục thành 1 Cao Cấp Đoạn Thạch (bản 5.3: 1 và 2 Thẻ Thần Thú chọn con); thẻ Thần Thú ngẫu nhiên ở Địa Ngục thành túi 90.000 lượng.</p></div>
           <div class="v5note"><p><span class="v5tag">Bản 5.2</span> Truy bắt một mình gộp vào truy bắt nhóm: một chuyến 7 ải mỗi ngày, đi một mình hay cả đội, ăn bằng cả hai loại cũ trong khoảng nửa thời gian. Trước 5.2: mỗi ngày 5 vòng một mình (lộ phí Khó 3.000 × cấp, Địa Ngục 6.000 × cấp, quà vòng 5 nay thành quà qua đủ 7 ải) và 1 chuyến nhóm 2 đến 5 người (vé Thường 12.500, Khó 20.000, Địa Ngục 27.500 × cấp, thẻ Thường × 1, Khó × 1,4, Địa Ngục × 1,92). Thuốc máu trước 5.2 hồi tối đa 25 % Khí Huyết tối đa (Địa Ngục 20 %).</p></div>
-          <!-- Bản 5.3: tài liệu game 37 §4.72 A3 (truy bắt tính là phó bản khi chết, offline_gateway.gd _in_instance), A4b (quà ải chỉ người
-               có mặt: criminal_team_service.gd _present); nhật ký 2026-10-12 (362). -->
           <div class="v5note"><p><span class="v5tag">Bản 5.3</span> Chết trong lúc truy bắt tính như chết trong phó bản: <strong>không mất kinh nghiệm</strong>, không mất Ngân Lượng, trang bị chỉ mòn <strong>5 %</strong> độ bền (bản 5.2: mất 5 % kinh nghiệm, mòn 10 %). Quà qua ải (kinh nghiệm ải, phiếu, đồ ải cuối, Binh Gia Lệnh) chỉ trao cho người <strong>đang ở bản đồ ải</strong> lúc hạ xong: đồng đội đứng chỗ khác không nhận. Xem <a href="../pho-ban/#mot-minh-nhom">Đi một mình hay đi nhóm</a>.</p></div>
 </div>
         </article>
 
-<!-- Bách Gia Lệnh, Thiên Sứ Trao Đổi (bản 5.2): repo game master c439a62b, commit 0345e764; godot/data/custom/bach_gia.json (nguồn mỗi
-     lệnh, combos c2 / c4 với % quà, free_slots 2), custom_items.json remaster/*_gia_lenh (mô tả, không khoá), npc_overrides.json
-     (Thiên Sứ Trao Đổi Chu 080 dời tới (243, 261)), gateway/bach_gia_service.gd; tài liệu game 37 §4.68 (chốt: không trần cấp rơi
-     lệnh, không trần đổi, Mặc Gia mỗi lượt Thành Kiều qua 4 tướng, món Vàng combo 4 phong ấn sẵn, cấp làm tròn bội 5, ít nhất 20). -->
 <article class="gcard" id="bach-gia-lenh">
   <h3>Bách Gia Lệnh, Thiên Sứ Trao Đổi <span class="v5tag">Bản 5.2</span></h3>
   <ul class="facts">
@@ -258,14 +235,7 @@
             <figcaption>Trong kính: ba dạng yêu ma, đồng hồ 15 phút và số đã diệt</figcaption>
           </figure>
           <div class="gtext">
-            <!-- Bản 5.3: tài liệu game 37 §4.72 A1 (khoá trang bị), B1 (80 yêu ma cố định, mỗi người một vé); dungeon_gumu.json khối _mirror
-                 mobs_base 80, mobs_per_member 0 (tag 5.3.0); kinh nghiệm mỗi người = mỗi con x (9 + n) / 10: một mình 80, đội 5 là 112
-                 đơn vị (bản 5.2: 224); nhật ký 2026-10-12 (362). -->
             <p>Đội trưởng nói với Tả Khâu Minh, chọn một món trang bị phẩm Xanh trở lên trong hành trang làm vé (món bị đốt). <span class="v5tag">Bản 5.3</span> <strong>Mỗi người tốn một vé</strong>: đồng đội tự nộp món Xanh trở lên rẻ nhất trong hành trang của mình (món đang mặc không tính); ai thiếu thì cả đội chưa vào được, Tả Khâu Minh nêu tên người thiếu. Bản 5.2: một vé cho cả đội. Cả đội đứng gần, cấp lệch không quá 10.</p>
-            <!-- Bản 6.0: tài liệu game 70 §1, §7 (KM1-KM4), §8 (VG1, VG2); dungeon_gumu.json khối mirror: difficulties (min_level 20 / 30 / 40,
-                 fee 0 / 300000 / 600000, hp_pm / hit_pm 1000 / 1500 / 2000, rounds x per_round = 1 / 2 / 3 lật sau commit ffbc6ffc, phieu 1 / 1 / 2),
-                 ticket_cash 50000, variety (9 mã, Kính Vỡ, Yêu Khí; M1-M4; 7 boss; Kính Long 10 %), event_cfg, mirror_array (at_pct 40, images 3,
-                 swap_sec 15, heal_pm 50); Quân Công quan_cong.points.mirror 50 / 100 / 150. -->
             <p><span class="v5tag">Bản 6.0</span> Chọn một trong <strong>ba độ khó</strong>. Vé tự chọn món Xanh <strong>rẻ nhất</strong> trong hành trang (bảng chọn ghi món nào, còn mấy món Xanh); không có món Xanh thì nộp <strong>50.000 lượng</strong> thay vé. Lượt thưởng tính lúc hạ Kính Ma (bản 5.3: tính lúc vào): thua thì vào lại được trong ngày, tự rời thì mất lượt hôm nay (<a href="../pho-ban/#luat-ngay">luật chung</a>).</p>
             <div class="tbl">
               <table>
@@ -343,14 +313,10 @@
               <li>Mỗi bản đồ hoang có một con quái hiếm tên xanh. Bị hạ thì 60 phút sau hiện lại ở chỗ ngẫu nhiên.</li>
               <li>Mở <strong>Chiến Quốc Bảo Điển</strong>, thẻ <strong>Tống Yêu</strong> để xem map đang có con (quái từ thấp hơn bạn 10 cấp tới cao hơn 5 cấp), rồi tự đi tìm. Từ bản 5.2 mỗi dòng có nút <strong>Bay tới</strong>: tốn 5 Phi Hành Phù (phù khoá dùng trước), niệm 2 giây rồi bay đi. <span class="v5tag">Bản 5.3</span> Đáp ngay cạnh con quái (cách 1 tới 3 ô); con chưa hiện thì đáp ở cổng vào, nó vừa hiện là được đưa tới cạnh nó. Bản 5.2 chỉ đáp ở cổng vào bản đồ.</li>
               <li>Giết bao nhiêu con cũng được. Con nào cũng cho kinh nghiệm bằng 40 quái cùng cấp và ngân lượng bằng cấp quái × 750. <span class="v5tag">Bản 6.0</span> Thêm <strong>tiềm năng bằng cấp quái × 5</strong> mỗi lần hạ (cấp 40: 200, cấp 50: 250, cấp 55: 275), như bản gốc; vẫn trong trần tiềm năng cấp × 1.000.</li>
-              <!-- Bản 6.0: rare_monster.json rules.pot_per_level 5, tiers level 45 (151, 152), 50 (153, 171-174), 55 (071-073, open_at_level_cap 60),
-                   60 (031-033, open_at_level_cap 60; Triệu 031-033 chưa có trong khối mở map 60 nên chưa hiện); tài liệu game 72. -->
               <li><span class="v5tag">Bản 6.0</span> Thêm Tống Bảo <strong>cấp 45</strong> ở Kênh Trịnh Quốc 1, 2, <strong>cấp 50</strong> ở Kênh Trịnh Quốc 3 và Trường Bạch (map mới), <strong>cấp 55</strong> ở Yên Trường Thành (map mới). Trước bản 6.0 cao nhất là cấp 40.</li>
               <li><strong>5 lần đầu mỗi ngày</strong> (làm mới 23:00) có thêm một phần thuốc và có thể rơi đồ (bảng dưới). Từ lần thứ 6 vẫn đủ kinh nghiệm và ngân lượng, chỉ không rơi đồ. Bảo Điển ghi "Hôm nay còn N / 5 lần nhận đồ".</li>
               <li>Đội gây nhiều sát thương nhất được tính, không cần ra đòn cuối. Mỗi người trong đội nhận thưởng và tung đồ riêng.</li>
             </ul>
-            <!-- rare_monster.json bản 3.4.2: rules.daily_limit 5 (lần rơi đồ), gem_drops l1_pm 150 / l2_pm 30 (l2_min_level 30),
-                 gear_drop pm 100 (q 1 = Xanh, seal true), talisman_drop_pm 50, stone_drop sell/0032 pm 50; mỗi dòng một lần tung riêng. -->
             <div class="tbl">
               <table>
                 <thead><tr><th>Rơi thêm (5 lần đầu mỗi ngày)</th><th>Tỉ lệ</th></tr></thead>
@@ -381,8 +347,6 @@
           </div>
         </article>
 
-<!-- Trộm Bảo Phi Tặc (bản 4.1): repo game data/custom/treasure_thief.json, logic/treasure_thief.gd, tài liệu 37 §4.40;
-             số do phiên làm tính năng gửi 2026-10-06 (đã chốt với chủ repo). -->
 <article class="gcard" id="trom-bao">
           <h3>Trộm Bảo Phi Tặc</h3>
           <ul class="facts">
@@ -422,9 +386,6 @@
         <div class="v5note"><p><span class="v5tag">Bản 5.1</span> Món quý: Sơ Cấp Đoạn Thạch 10 % (trước 25 %), Tinh Thạch cấp 1 50 % (trước 35 %).</p></div>
 </article>
 
-<!-- Câu cá (mới ở 3.4.2): fishing.json (min_level 20, npc_range 10, cast_sec 60, casts_per_day 240, catch_pm 500,
-             sizes, shop), Ngư Ông npc_overrides.json maps.080.add (294,167); món custom_items.json (ca_nau_gung 1.400,
-             goi_ca 1.330 hồi trong 14 s, cấp 20; the_ca_voi mount_nr 044). Tài liệu 54 (196 điểm / ngày: 120 cá x 1,635). -->
 <article class="gcard" id="cau-ca">
           <h3>Câu cá ở Ngư Ông</h3>
           <ul class="facts">
@@ -468,10 +429,6 @@
         <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Tiệm Ngư Điểm bỏ Tái Tạo Thạch, Thăng Phẩm Thạch; thêm <strong>Cá</strong> (2 Ngư Điểm). Cá Nấu Gừng, Gỏi Cá Hảo Hạng lên 10 Ngư Điểm (trước 5).</p></div>
 </article>
 
-<!-- Điểm danh, Chiến Quốc Bảo Điển (bản 5.1): repo game 83166fb8 godot/data/custom/daily_checkin.json (cycle 7, daily spins 2 +
-     Chiến Quốc Lệnh 08/0006 below_cap, bonus ngày 7: 2 sell/0032 + 3 spins + 2 lệnh, online marks 900 / 1800 giây mỗi mốc 1 lượt,
-     makeup 5 điểm sư môn, ngày 7 x3, tối đa 2 lần mỗi vòng, trong 7 ngày), fortune_wheel.json tiers (16 ô, 100.000 phần:
-     3.000 / 10.000 / 35.000 / 37.000 / 5.000 / 10.000), tài liệu game 37 §4.64 DS4, DS5 (phương án A), DS7. Mọi quà khoá. -->
 <article class="gcard" id="diem-danh">
   <h3>Điểm danh, Chiến Quốc Bảo Điển</h3>
   <ul class="facts">
@@ -505,10 +462,6 @@
 </article>
 
 
-<!-- Thanh tiến độ cả server (bản 5.3, phát 2026-10-12). Nguồn: repo game tag 5.3.0, godot/data/custom/daily_activities.json
-     khoá server_bar {min_level 20, per_machine 2, marks 3 / 6 / 9 / 12 / 15: spins 2, sell/0032 x1, sell/0032 x2, sell/1032 x1,
-     sell/1032 x2}, luật godot/logic/server_bar.gd, tài liệu game 37 §4.71, nhật ký (360). Ảnh chưa có (cờ chụp --ui --demo-activity-bar).
-     Đã đối chiếu với tag 5.3.0: khớp. -->
 <article class="gcard" id="thanh-server">
   <h3>Thanh tiến độ cả server</h3>
   <ul class="facts">

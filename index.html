@@ -23,18 +23,6 @@
 </head>
 <body>
 
-<!-- Trang chủ. Lần làm lại 2026-10-08 (nhánh web-5.0, chủ repo: "làm lại trang chủ và hướng dẫn theo bản mới, trang chủ làm đẹp
-     hơn"): giữ đầu trang Đào Hoa (chủ repo đã duyệt qua nhiều lần, xem README §Lịch sử), thêm hàng nút cộng đồng (Facebook, Zalo,
-     Discord: about.json repo game), khối "Bản 5.0" #ban-5 (ảnh bản thử 5.0), mục Cộng đồng #cong-dong, hoa văn dưới
-     tiêu đề, dấu triện đỏ. Bản 5.0 đã phát (nhánh web-5.0-phat): ngày phát ở js/release.js, chỗ hiện ngày là <time data-rel="5.0">.
-     Bản 5.1 (2026-10-09, cùng ngày): nhãn đầu trang, dòng "đang chạy", khối .v5sec__more và chip 5.1 trong #ban-5, mốc cuối #lo-trinh.
-     Bản 5.2 (nhánh web-5.2, soạn trước 2026-10-10, gộp main khi máy chủ lên 5.2): ngày TẠM 10/10/2026 ở js/release.js RELEASES["5.2"],
-     phiên phát sửa ngày thật; chỗ hiện: nhãn đầu trang, .v5sec__more 5.2, mốc cuối #lo-trinh.
-     Bản 5.3 (phát 2026-10-12 14:06, tag game 5.3.0): RELEASES["5.3"]; nhãn đầu trang, "đang chạy bản 5.3", .v5sec__more 5.3,
-     chip 5.3, nút "Bản 5.3 có gì", mốc cuối #lo-trinh.
-     Bản 6.0 (phát 2026-10-12 23:58, tag game 6.0.0): RELEASES["6.0"]; nhãn đầu trang, "đang chạy bản 6.0", meta, dải số (cấp tối đa 60),
-     .v5sec__more 6.0, chip 6.0, nút "Bản 6.0 có gì", mốc cuối #lo-trinh.
-     Bản 6.0.1 (phát 2026-10-13 10:33, tag game 6.0.1): RELEASES["6.0.1"]; .v5sec__more 6.0.1, "đang chạy bản 6.0.1", mốc cuối #lo-trinh. -->
 
 <header class="bar">
   <div class="wrap bar__in">
@@ -53,9 +41,6 @@
 
 <main id="top">
 
-  <!-- Đầu trang (lần 3, 2026-10-06). Nền: assets/img/hero-bg.jpg (1508x1131) cho màn <= 1508 px, hero-bg-wide.jpg (2880x1200) cho
-       màn rộng hơn; ảnh không bao giờ hiện quá 1:1 (comment .hero3 ở CSS). Cánh hoa: 14 thẻ <i>, CSS thuần.
-       Link tải launcher có ở HAI chỗ: nút "Tải game" ở đây và nút ở #cai-dat. Link cộng đồng có ở đây, #cong-dong và chân trang. -->
   <section class="hero3">
     <div class="hero3__bg" aria-hidden="true"><picture>
       <source media="(min-width: 1509px)" srcset="assets/img/hero-bg-wide.jpg" width="2880" height="1200">
@@ -100,9 +85,6 @@
     </div>
   </section>
 
-  <!-- Bản 5.0 (đã phát, ngày ở js/release.js). Nguồn: repo game documents/tong-quan/62 (tình trạng), 37 §4.47-§4.59, 59 (nghề),
-       60 (bang), 61 (28 chiêu), 63 (bày bán), 65 (bảo thú). Ảnh: build/pet_book, build/nghe, build/bang, build/stall của repo game
-       (ảnh bản thử, cắt về assets/img/huong-dan/). Nhãn ngày: <time data-rel="5.0">, đổi ngày ở js/release.js (README §Sửa thường gặp). -->
   <section class="v5sec" id="ban-5">
     <div class="wrap">
       <div class="v5sec__head">
@@ -235,8 +217,6 @@
     </div>
   </section>
 
-  <!-- Video trailer: quay thẳng trong game bằng `./run.sh studio gumu` (repo game, tools/README §studio),
-       bản web 960x720 H.264 + AAC, faststart. Nút phát lớn do js/main.js gắn; không JS thì dùng nút của trình duyệt. -->
   <section class="section trailer" id="trailer">
     <div class="wrap">
       <p class="pill trailer__pill">Quay trong game, có nhạc nền</p>
@@ -273,8 +253,6 @@
     </div>
   </section>
 
-  <!-- Có gì trong game (bản đang chạy 5.0): lưới thẻ ảnh thật (assets/img/huong-dan/; thẻ Cổ Mộ dùng assets/img/hero-co-mo.jpg).
-       Thành Kiều và câu cá chưa có ảnh chụp: thẻ vẽ bằng CSS (cờ chụp câu cá: tài liệu game 54 §6, README.md). -->
   <section class="section" id="co-gi">
     <div class="wrap">
       <h2 class="title">Có gì trong game</h2>
@@ -357,7 +335,6 @@
         </li>
       </ul>
 
-      <!-- Tính năng khác: mỗi chip một link sang trang hướng dẫn. -->
       <ul class="chips reveal" aria-label="Tính năng khác">
         <li><a href="huong-dan/hang-ngay/#su-mon">Sư môn 20 việc mỗi ngày</a></li>
         <li><a href="huong-dan/hang-ngay/#vuong-bo-dau">Truy bắt một mình hoặc cả đội</a></li>
@@ -375,8 +352,6 @@
     </div>
   </section>
 
-  <!-- Bảy môn phái: ảnh chiêu từ trang hướng dẫn (assets/img/huong-dan/<phái>.jpg). Màu nhấn mỗi phái (--c) theo màu chiêu trong ảnh.
-       Điện thoại: một hàng vuốt ngang. -->
   <section class="section section--alt" id="mon-phai">
     <div class="wrap">
       <h2 class="title">Bảy môn phái</h2>
@@ -407,7 +382,6 @@
     </div>
   </section>
 
-  <!-- Lời hứa (giữ từ bản đầu 2026-09-30) + ảnh trượt cũ. Ảnh trượt: CSS scroll-snap; js/main.js thêm chấm vị trí, nút, tự chuyển 5 s. -->
   <section class="section" id="loi-hua">
     <div class="wrap promise">
       <div class="promise__text reveal">
@@ -458,8 +432,6 @@
     </div>
   </section>
 
-  <!-- Cộng đồng: link một nguồn ở repo game godot/data/custom/about.json (community.url, zalo.url, discord.url). Đổi link thì đổi cả
-       hàng nút đầu trang (.hero3__comm), chân trang (.foot__soc) và trang hướng dẫn giao-dich-cong-dong (#cong-dong, chân trang). -->
   <section class="section section--alt" id="cong-dong">
     <div class="wrap">
       <h2 class="title">Tham gia cộng đồng</h2>
@@ -472,7 +444,6 @@
     </div>
   </section>
 
-  <!-- Cài đặt 3 bước + cấu hình. Số (39 MB, 7 GB, 8 GB): phiên điều phối 2026-10-02. -->
   <section class="section" id="cai-dat">
     <div class="wrap">
       <h2 class="title">Cài đặt 3 bước</h2>
@@ -500,7 +471,6 @@
         <p class="note">Windows báo "Windows protected your PC" thì bấm More info, rồi Run anyway. Launcher chưa có chữ kí số, không phải virus.</p>
       </div>
 
-      <!-- Quà tân thủ: mã welcome bản 4.0 (godot/data/custom/gift_codes.json repo game, commit af9f694b, rev 1); welcome2 đã bỏ. -->
       <div class="gift reveal">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="11" rx="1.5"/><path d="M3 13h18M12 9v11M12 9c-2-4-6-4-6-1s6 1 6 1c2-4 6-4 6-1s-6 1-6 1"/></svg>
         <div>
@@ -519,7 +489,6 @@
     </div>
   </section>
 
-  <!-- Lộ trình. Chi tiết từng bản: phien-ban/. Mốc cuối là bản vá 6.0.1 (đã phát 2026-10-13), trước đó 6.0 (2026-10-12, cùng ngày 5.3), 5.2; 5.0 và 5.1 phát cùng ngày (bản chưa phát dùng class is-next, chữ "Sắp ra mắt"). -->
   <section class="section section--alt" id="lo-trinh">
     <div class="wrap">
       <h2 class="title">Từ kí ức tới máy chủ mới</h2>

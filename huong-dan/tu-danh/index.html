@@ -22,11 +22,6 @@
 </head>
 <body>
 
-<!-- Trang con hướng dẫn "Tự Đánh" (bản 5.1, viết 2026-10-09). Nguồn (repo game, commit 83166fb8 "Phát 5.1.0"):
-     godot/data/custom/auto_hunt.json (free_min 30, daily_cap_min 480, cards 60 / 300 phút, radius 8 / 4-15, potion hp 50 mp 30
-     min 10 max 90 step 5, low_hp_pct 20), treasury.json kim_nguyen_bao_goods (thẻ 4 / 18, không khoá), client/ui/auto_hunt_panel.gd
-     (chữ trên bảng), client/ui/auto_hunt.gd (vòng nghĩ, lý do dừng), gateway/auto_hunt_service.gd (cấm map, quái đặc biệt,
-     không x2), shortcuts_panel.gd KEYS (Alt+A); tài liệu 58 §5, nhật ký 2026-10-09 (330). Chưa có ảnh chụp trong game. -->
 
 <header class="bar">
   <div class="wrap bar__in">
@@ -77,7 +72,6 @@
   </ul>
   <ul>
     <li>Bấm <kbd>Alt+A</kbd> hoặc nút <strong>Tự Đánh</strong> để mở bảng thiết lập. Từ bản 5.2 nút nằm ở hàng nút việc hằng ngày, ngay sau nút Thành tựu (bản 5.1 ở hàng nút chức năng, trước Cài Đặt); nút sáng lên khi đang tự đánh.</li>
-    <!-- Bản 5.2: repo game commit 935285d0 (nhật ký game 2026-10-09 (333)): nút dời sang daily_hud sau Thành tựu, nền sáng khi chạy. -->
     <li>Đứng giữa bãi quái, chỉnh thiết lập rồi bấm <strong>Bắt đầu tại đây</strong>. Chỗ đang đứng là <strong>điểm bật</strong>: nhân vật chỉ tìm quái trong bán kính quanh điểm này, hết quái thì đi về đây chờ. Vòng bán kính hiện mờ trên mặt đất.</li>
     <li>Đang chạy, ngay trên hàng ô F1 tới F10 có dải chữ: giờ còn chạy được, số con đã diệt, kinh nghiệm và ngân lượng kiếm được từ lúc bật.</li>
     <li>Muốn dừng: bấm <kbd>Alt+A</kbd> lần nữa hoặc nút <strong>Dừng</strong> trên bảng.</li>

@@ -22,8 +22,6 @@
 </head>
 <body>
 
-<!-- Trang con hướng dẫn "Tiện ích" (tách từ huong-dan/index.html cũ ngày 2026-10-08, nhánh web-5.0). Nguồn số liệu ghi trong
-     comment trên từng mục. Thêm / sửa mục: README.md §Hướng dẫn. -->
 
 <header class="bar">
   <div class="wrap bar__in">
@@ -69,9 +67,6 @@
   <div class="wrap gbody">
     <div class="guide">
 
-<!-- Đồng hồ máy chủ (bản kế tiếp): repo game commit ce88e40b, tài liệu 41 GD36; logic/server_clock.gd, client/ui/server_clock_label.gd;
-             mốc qua ngày sect_quests.json daily.reset (23:00), làm mới tuần weekly.start_day; nhắc 22:30 / 22:55 / 23:00.
-             Ảnh: build/server_clock/clock_2241_crop.png repo game (--demo-clock=22:41), nén JPEG 85. -->
 <article class="gcard gpanel" id="dong-ho">
           <div class="ghead">
             <h3>Đồng hồ máy chủ</h3>
@@ -115,13 +110,10 @@
               <li>Phí theo quãng đường: Tân Thủ Thôn và Chu Quốc đi lại 1 ngân lượng, xa nhất Tân Thủ Thôn tới Côn Luân 1.700.</li>
             </ul>
             <p class="tip">Nước khác sẽ hiện thêm trong danh sách khi bản đồ nước đó mở.</p>
-            <!-- ItemDb.hotbar_ok nhận Phi Hành Phù (FlyCharm.is_charm), mô tả std/0409 item_names_vi.json -->
             <p>Trong cùng bản đồ thì dùng <strong>Phi Hành Phù</strong> (Tạp Hóa bán): niệm 2 giây rồi bay tới một chỗ ngẫu nhiên. Phù kéo được xuống ô phím, bấm phím là dùng.</p>
           </div>
         </article>
 
-<!-- Tiệm đồ (mở ở 3.4.2): gameplay/12 §1.10zh; ô NPC gameplay/npc/080-hoi-thoai.md (8004 / 8005 / 8006), 060-hoi-thoai.md (6004 / 6005);
-             Bảo Khố: treasury.json general (Thăng Phẩm 300.000, Tái Tạo 100.000). -->
 <article class="gcard" id="tiem-do">
           <h3>Tiệm đồ trong thành</h3>
           <ul class="facts">
@@ -143,10 +135,6 @@
         <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Bảo Khố thôi bán Thăng Phẩm Thạch (300.000) và Tái Tạo Thạch (100.000), có thêm tab Kim Nguyên Bảo (xem <a href="#bao-kho">Bảo Khố</a>).</p></div>
 </article>
 
-<!-- Bảo Khố + Kim Nguyên Bảo: treasury.json (open_tabs general + kim_nguyen_bao, kim_nguyen_bao_goods rỗng), treasure_thief.json
-     (kim_nguyen_bao_per_level 1 = cấp / 10, món quý 5 % túi 5), 37 §4.47, §4.48.
-     Bản 5.1 (repo game 83166fb8): kim_nguyen_bao_goods ngan_luong_bao 25, the_tu_danh 4, the_tu_danh_5 18 (không khoá);
-     custom_items.json remaster/ngan_luong_bao silver_bag {cash_per_level 2000, bands 66 % 60-100, 28 % 100-150, 6 % 150-300}, 37 §4.66, 58 §5. -->
 <article class="gcard" id="bao-kho">
   <h3>Bảo Khố, Kim Nguyên Bảo</h3>
   <ul class="facts">
@@ -178,8 +166,6 @@
     <li>Hàng tab này <strong>không khoá</strong>: giao dịch, tặng, bày bán được.</li>
     <li><strong>Ngân Lượng Bao</strong>: tiền khi mở bằng cấp của người mua lúc mua × 2.000 (trung bình), nhân hệ số may rủi: 66 % ra 60 tới 100 %, 28 % ra 100 tới 150 %, 6 % ra 150 tới 300 %. Cấp 50: 60.000 tới 300.000 lượng, trung bình khoảng 100.000. Túi tính theo cấp lúc mua, không theo cấp người mở; rê chuột lên túi để xem khoảng tiền. Mỗi túi một ô, không cộng chồng. Tiệm điểm sư môn cũng bán túi này giá 5 điểm (bản khoá).</li>
   </ul>
-  <!-- Bản 6.0: tài liệu game 74; treasury.json general + kim_nguyen_bao_goods dòng remaster/khai_mo_kho_2 (service store_page,
-       5000000 / 350); deny_text.json "kho chua mo"; client/ui/store_panel.gd (tab 1 / 2, thả lên tab). -->
   <h4 id="kho-trang-2">Kho trang 2 <span class="v5tag">Bản 6.0</span></h4>
   <ul>
     <li>Kho ở Quản Khố có thêm <strong>trang 2, thêm 64 ô</strong> (trang 1 vẫn 64 ô). Mở <strong>vĩnh viễn, theo nhân vật</strong>, mua một lần ở Bảo Khố, dòng <strong>Khai Mở Kho Tab 2</strong>: <strong>350 Kim Nguyên Bảo</strong> (tab Kim Nguyên Bảo) hoặc <strong>5.000.000 lượng</strong> (tab Ngân Lượng), chọn loại tiền nào cũng được.</li>
@@ -214,8 +200,6 @@
         <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Nghề <a href="../nghe/#luyen-don">Luyện Đơn</a> chế được thuốc hồi máu theo %, giải độc, tăng kháng, dùng xen với thuốc tiệm.</p></div>
 </article>
 
-<!-- Chế độ máy yếu (bản 5.2): repo game commit db011719, client/ui/low_spec.gd (ba công tắc hide_walkers / lite_peers / less_fx, lưu
-     user://window.cfg [graphics], áp ngay), client/ui/pause_menu.gd GRAPHICS_ROWS (nhóm "Hình ảnh" của bảng Cài Đặt); tài liệu game 52 §9. -->
 <article class="gcard" id="may-yeu">
   <h3>Chế độ máy yếu <span class="v5tag">Bản 5.2</span></h3>
   <ul class="facts">

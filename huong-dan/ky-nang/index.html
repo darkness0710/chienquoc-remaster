@@ -22,8 +22,6 @@
 </head>
 <body>
 
-<!-- Trang con hướng dẫn "Kĩ năng" (tách từ huong-dan/index.html cũ ngày 2026-10-08, nhánh web-5.0). Nguồn số liệu ghi trong
-     comment trên từng mục. Thêm / sửa mục: README.md §Hướng dẫn. -->
 
 <header class="bar">
   <div class="wrap bar__in">
@@ -85,14 +83,9 @@
               <li>Thêm <strong>3 chiêu chung</strong> (mở ở cấp 12, 25, 35) và <strong>2 nội tại</strong> tự mạnh lên theo tổng cấp chiêu của nhánh.</li>
               <li>Cấp 1 của mọi chiêu chỉ tốn ngân lượng, không tốn điểm. Cấp chiêu tối đa tăng theo cấp nhân vật.</li>
               <li>Kéo chiêu xuống ô phím để dùng.</li>
-              <!-- stat_defs.json sect_mods, StatCard.passive_rows (nhật ký game 2026-10-05 (257)) -->
               <li>Bảng nhân vật (<kbd>Alt+W</kbd>) có nhóm <strong>Nội tại môn phái</strong> cuối thẻ chỉ số: xem nội tại đang cộng bao nhiêu. Nhiều nội tại chỉ tính lúc đánh (vd tăng sát thương theo %) nên các dòng chỉ số khác không đổi số, đừng lo.</li>
-              <!-- Tẩy điểm: repo game tag 5.2.0 sect_skills.json rules.respec_cash_per_level 1000 (chủ repo 2026-10-10, trước 100.000 cố định),
-                   rebalance_epoch 2 (mọi nhân vật thêm một lần tẩy miễn phí), logic/sect_skill.gd respec_cost(t, st, level). -->
               <li><strong>Tẩy điểm</strong> ở sư phụ: lần đầu miễn phí, sau đó mỗi lần tốn <strong>cấp nhân vật × 1.000</strong> lượng (cấp 40: 40.000, cấp 50: 50.000; trước bản 5.2 là 100.000). <span class="v5tag">Bản 5.2</span> Mọi nhân vật được thêm <strong>một lần tẩy miễn phí</strong> vì bốn phái được cân lại chiêu (Mao Sơn, Cấm Vệ Quân, Đào Hoa, Vân Mộng).</li>
             </ul>
-            <!-- Chiêu nhánh cấp 40 (bản kế tiếp): repo game sect_skills.json master 29821792 (text.cd), so với tag 4.1.0;
-                 tài liệu 37 §4.45, 28, nhật ký (295). -->
             <h4>Chiêu cấp 40</h4>
             <ul>
               <li>Chiêu nhánh cấp 40 của bảy phái hồi nhanh hơn nhiều: <strong>10 giây</strong> với chiêu đánh một mục tiêu, <strong>12 giây</strong> với chiêu đánh vùng, Cam Lộ Trì <strong>15 giây</strong> (trước 20 tới 30 giây).</li>
@@ -104,8 +97,6 @@
 </div>
         </article>
 
-<!-- 28 chiêu cấp 45 / 50: repo game documents/tong-quan/61-chieu-cap-45-50.md §2b (tên cuối khi code), 37 §4.54, 62 (hàng 6 / 7 cần
-     25 / 35 điểm nhánh, trần nhánh 110). Số từng chiêu chưa ghi vì còn có thể chỉnh trước khi phát. -->
 <article class="gcard" id="chieu-45-50">
   <h3>Chiêu cấp 45 và 50</h3>
   <ul class="facts">
@@ -143,10 +134,6 @@
   <div class="v5note"><p><span class="v5tag">Bản 5.3</span> Đào Hoa Hộ Thể hàng 6 đổi <strong>Trấn Cổ Thần Uy</strong> thành <strong>Sư Tử Gầm</strong> (gầm choáng và khiêu khích quanh mình); Thục Sơn Kiếm hàng 7 <strong>Vạn Kiếm Quy Tông</strong> đổi tên <strong>Thiên Địa Kiếm Khí</strong> (bốn đợt kiếm khí, đợt cuối choáng). Bản gốc phải học hai chiêu này bằng sách cấp 150. Tên nhánh mới và hồi chiêu mới: <a href="#lam-lai-chieu">Làm lại chiêu 7 phái</a>.</p></div>
 </article>
 
-<!-- Làm lại chiêu 7 phái (bản 5.3, phát 2026-10-12 14:06). Nguồn: repo game master sau ebb935b3
-     (nhật ký (357)-(359), tài liệu 66 §6-§7, gameplay/12 "Làm lại chiêu 7 phái"). Bảng sinh bằng script so sect_skills.json
-     ở tag 5.2.0 với master (numbers.cd, numbers.pct cấp 1; chỉ dòng có đổi). Phiên phát: so lại với tag 5.3.0 (sect_skills.json
-     points_req 20 / 30, numbers.cd, numbers.pct), mọi dòng khớp; thêm dòng Triệu Hồi Quỷ Tốt (chiêu chung Mao Sơn, pct 60 -> 50, sót ở bản soạn). -->
 <article class="gcard" id="lam-lai-chieu">
   <h3>Làm lại chiêu 7 phái</h3>
   <ul class="facts">
@@ -255,10 +242,6 @@
   <p class="tip">Chiêu không có trong bảng giữ nguyên hồi chiêu và sát thương. Số đầy đủ từng cấp xem trong game (<kbd>Alt+R</kbd>, bấm vào chiêu).</p>
 </article>
 
-<!-- Kĩ năng giang hồ (bản kế tiếp): repo game godot/data/custom/jianghu_skills.json (rules per_char_level 5, min_char_level 10,
-             pot_per_level 1.500, cash_per_level 50.000, npc Vương Bộ Đầu 080, npc_range 6; skills[].per_level, max 10; active Lăng Ba Vi Bộ
-             locked_text "Sẽ mở ở bản sau"), gateway/jianghu_service.gd (dòng thoại "Học kĩ năng giang hồ" mở Alt+R tab giang hồ);
-             tài liệu 37 §4.41, 12 (Đợt cân bằng 2026-10-07), nhật ký (294). Ảnh: build/jianghu/learn.png repo game, cắt (110, 118)-(912, 1000). -->
 <article class="gcard gpanel" id="ki-nang-giang-ho">
           <div class="ghead">
             <h3>Kĩ năng giang hồ</h3>
@@ -316,8 +299,6 @@
           </div>
         </article>
 
-<!-- Tu Vị: repo game godot/data/custom/tu_vi.json (max_level 27, hours_step 1, spins_per_level 1, per_level hp 10 / ap 5 / cp 5),
-     tài liệu 50 §2. Bản 4.2: active_window_sec 300, daily_cap_sec 14400 (37 §4.39 CA4). Bản 5.0: cả hai = 0 (commit fcf1ac88). -->
 <article class="gcard" id="tu-vi">
   <h3>Tu Vị</h3>
   <ul class="facts">

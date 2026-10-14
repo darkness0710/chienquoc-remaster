@@ -22,8 +22,6 @@
 </head>
 <body>
 
-<!-- Trang con hướng dẫn "Phó bản" (tách từ huong-dan/index.html cũ ngày 2026-10-08, nhánh web-5.0). Nguồn số liệu ghi trong
-     comment trên từng mục. Thêm / sửa mục: README.md §Hướng dẫn. -->
 
 <header class="bar">
   <div class="wrap bar__in">
@@ -94,8 +92,6 @@
                 </tbody>
               </table>
             </div>
-            <!-- Bản 6.0: phí dungeon_gumu.json difficulties[].fee 300000 / 600000 / 900000 (repo game commit ffbc6ffc, chủ repo chỉnh tay
-                 2026-10-12; trước 200.000 / 500.000 / 700.000); Quân Công quan_cong.points.gumu [50, 100, 200, 300] (tài liệu game 71). -->
             <p><span class="v5tag">Bản 6.0</span> Phí vào <strong>300.000 / 600.000 / 900.000</strong> (bản 5.3: 200.000 / 500.000 / 700.000), bảng thẻ làm lại (dưới). Hạ Lữ Bố được điểm <a href="#quan-cong">Quân Công</a> thay điểm Cổ Mộ. Mỗi lượt có <a href="#thien-menh">Thiên Mệnh</a> và biến cố riêng, xem <a href="#co-mo-bien-co">Biến cố trong mộ</a>.</p>
             <h4>Trong mộ</h4>
             <ul>
@@ -103,16 +99,8 @@
               <li>Lữ Bố đánh người gây nhiều sát thương nhất, lướt tới người đứng xa, đánh lâu quá thì nổi giận.</li>
               <li>Thấy <strong>vòng đỏ</strong> dưới chân thì chạy ra ngay. Kéo Lữ Bố xa quá 15 ô thì hắn về chỗ, hồi đầy máu. <span class="v5tag">Bản 5.3</span> Lữ Bố chỉ nhắm người trong vùng 15 ô quanh chỗ đánh, không còn lướt đánh người vừa hồi sinh ở cửa mộ.</li>
               <li>Chết: hồi sinh ở cửa mộ sau 10 giây, không mất gì. Trang bị bị khoá, thuốc vẫn dùng được. Pháp bảo Chiêu Hồn kéo dậy được một lần mỗi lượt. <span class="v5tag">Bản 5.3</span> Chết trong Cổ Mộ, Phong Yêu Kính, Thành Kiều và truy bắt <strong>không mất kinh nghiệm</strong>, không mất Ngân Lượng, trang bị chỉ mòn <strong>5 %</strong> độ bền (bản 5.2: mất kinh nghiệm như chết ngoài bản đồ, đồ mòn 10 %).</li>
-              <!-- dungeon_gumu.json difficulties[].potion_pm 750 / 500 (bản 5.2, commit 53999f71, logic/potion_scale.gd; trước potion_cap_pm 250 / 200,
-                   37 §4.46 SL1); hút máu cùng hệ số (37 §4.69 mục 7). Âm Dương Gia Lệnh: bach_gia.json source gumu_boss. -->
               <li><span class="v5tag">Bản 5.2</span> Khó và Địa Ngục, trong mộ: thuốc máu (cả phần Khí Huyết của Tái Tạo Hoàn) chỉ còn <strong>75 %</strong> tác dụng, Địa Ngục <strong>50 %</strong>: viên hồi 1.000 máu còn 750, 500. Hút máu (dòng Hấp Thụ Khí Huyết, nội tại Huyết Chiến của Cấm Vệ) giảm như vậy. Đồ ăn và chiêu hồi máu của phái không bị giảm. Trước 5.2: mỗi viên hồi tối đa 25 % Khí Huyết tối đa (Địa Ngục 20 %).</li>
             </ul>
-            <!-- Lật theo nhịp (bản kế tiếp, repo game master ce88e40b): dungeon_gumu.json flip_rounds {round_sec 15, reveal_sec 3},
-                 difficulties[].rounds 1 / 2 / 3, cards_mix {mã: số thẻ} hoặc {mã: {count, n}} (n = lượng mỗi thẻ) + jackpot;
-                 tài liệu 33 §7, 37 §4.44, nhật ký (292). Cơ hội cả lượt: 1 - (1 - k / 16) ^ số nhịp (mỗi nhịp một bảng mới).
-                 Túi ngân lượng = phí x cash_cards small_pm 500 / big_pm 2000 phần nghìn x n. -->
-            <!-- Biến cố Cổ Mộ bản 6.0: tài liệu game 68 §4, §7.1-§7.5; dungeon_gumu.json variety, gumu_events, dong_trac, hulao, ally,
-                 _boss_hp_pm (VG4: Lữ Bố Địa Ngục boss_hp_pm 850). -->
             <h4 id="co-mo-bien-co">Biến cố trong mộ <span class="v5tag">Bản 6.0</span></h4>
             <ul>
               <li>Mỗi lượt <strong>chắc chắn một biến cố</strong> (Địa Ngục hai), xảy ra sau đợt Thạch Dũng thứ hai, trước khi đánh Lữ Bố. Không trùng biến cố lượt trước của cùng đội trưởng. Biến cố đếm <strong>đòn trúng</strong>, không đếm sát thương, nên phái nào cũng góp được.</li>
@@ -168,30 +156,13 @@
                 </tbody>
               </table>
             </div>
-            <!-- Bảng bản 6.0: dungeon_gumu.json difficulties[].cards_mix + jackpot, phieu_card 2 / 3 / 4 (repo game commit ffbc6ffc, chủ repo
-                 chỉnh tay 2026-10-12). Bảng phụ: side_board (tài liệu game 71 QP4): Sơ x1 4 thẻ, Thú Hồn x3 4 thẻ, 160.000 4 thẻ, 80.000 3 thẻ,
-                 độc đắc Sơ x3. Sinh bằng script đọc JSON (nháp phiên web 6.0). -->
             <p><span class="v5tag">Bản 6.0</span> Bảng trên là bảng mới của bản 6.0. Lượt lật thêm (<a href="#thien-menh">Khiêu Chiến</a>, biến cố Mộ Tặc và Mộ Đạo Sụp Đổ, hạ Đổng Trác) lật ở một <strong>bảng phụ</strong> sau nhịp cuối, không rút bảng chính: 4 thẻ Sơ Cấp Đoạn Thạch, 4 thẻ 3 Thú Hồn, 4 thẻ 160.000 lượng, 3 thẻ 80.000 lượng, độc đắc 3 Sơ Cấp Đoạn Thạch.</p>
-            <!-- Bảng bản 4.1 (tag 4.1.0 repo game, dungeon_gumu.json): Địa Ngục beast 1 + bua_may_man 1 (từ 4.1, trước beast 2).
-                 Cơ hội: 1 - C(16 - k, lượt) / C(16, lượt). -->
-            <!-- Tiệm: dungeon_gumu.json shop (bản 5.0, int-5.0: bỏ thang_pham / tai_tao; thẻ đá thành cash90000 / cash30000 = n x 90.000 / 30.000).
-                 Bản 5.1 (repo game 83166fb8, 37 §4.64 DS3a / DS6 / DS7): shop 600 / 200 / 150 / 40 / 15; Thường sell/0032 count 2 n 2;
-                 Địa Ngục sell/2032 count 2 n 2, bua_may_man 3. Cơ hội 3 nhịp: 1 - (1 - k / 16) ^ 3 (2/16: 33 %, 3/16: 46 %). -->
             <p class="tip">Bùa Ma Thuật, thú cưỡi Quý, Đỉnh Cấp Đoạn Thạch và Tinh Thạch cấp 3 chỉ Địa Ngục mới ra. Lượt thưởng tính lúc Lữ Bố chết: thua hoặc hết giờ thì chưa mất lượt, vào lại được trong ngày; tự rời giữa chừng thì mất lượt hôm nay (bản 6.0, xem <a href="#thien-menh">luật ngày</a>). Từ bản 6.0 điểm Cổ Mộ thành <a href="#quan-cong">Quân Công</a>, đổi ở Quân Công Phủ.</p>
           <div class="v5note"><p><span class="v5tag">Bản 5.0</span> Thẻ Thăng Phẩm Thạch thành thẻ ngân lượng (90.000 lượng mỗi viên); Tiệm Cổ Mộ bỏ Thăng Phẩm, Tái Tạo Thạch. Mỗi lượt có 2 <a href="../nghe/#bao-ruong">Bảo Rương</a> Tinh Xảo, mở bằng Chìa Khoá Vàng.</p></div>
           <div class="v5note"><p><span class="v5tag">Bản 5.1</span> Tiệm Cổ Mộ đắt hơn (trước: Thẻ Thần Thú chọn con 300, pháp bảo 100, Sơ Cấp 100, Tinh Thạch 25, Thú Hồn 10). Thường: thẻ Sơ Cấp 2 viên (trước 4). Địa Ngục: 2 thẻ Cao Cấp mỗi thẻ 2 viên (trước 4 thẻ 1 viên), Bùa May Mắn 3 thẻ (trước 1).</p></div>
 </div>
         </article>
 
-<!-- Thành Kiều Quân Doanh (ra ở 4.0). Nguồn (repo game, master 02b6db3c = bản 4.1.0): godot/data/custom/dungeon_thanhkieu.json
-             (npc_map 050, npc_tile (219, 67), max_members 5, level_gap 10, revive_sec 10, difficulties[] min_level / fee / minutes / flips / cards / jackpot,
-             board_sec 60, bosses[] skills / low / summon / van_ma, boss_ai blink_sec 15 / leash 20 / kill_heal_pm 20);
-             luật vào: godot/logic/thanh_kieu.gd + gateway/thanh_kieu_service.gd (vào không giới hạn, khoá trang bị, hồi sinh ở cửa);
-             nâng set: sect_sets.json rules.upgrade (1 Tử Kim Tinh + 10 điểm, 25 %, cấp món bậc 2 là 50); tài liệu 53 §3d / §3g, nhật ký (266).
-             Bản 5.1 (repo game 83166fb8): bảng thẻ theo dungeon_thanhkieu.json difficulties[].cards + jackpot (_tinh_cap, 37 §4.62, §4.64 DS3b / DS3c),
-             nâng set rate 20; tái tạo dòng set sect_sets.json rules.reroll_line (1 Tinh + 50.000), tiệm rules.tkt_shop (37 §4.63).
-             Cơ hội: 1 - C(16 - k, lượt) / C(16, lượt). Ảnh: ./run.sh shot ... --ui --map=050 --tile=222,66 --bang=dbg:level_max,npc/copy/0003,
-             cắt (172, 302)-(1338, 1015), thu về rộng 760. -->
 <article class="gcard gpanel" id="thanh-kieu">
           <div class="ghead">
             <h3>Doanh Trại Thành Kiều</h3>
@@ -218,20 +189,14 @@
                 </tbody>
               </table>
             </div>
-            <!-- Bản 6.0: dungeon_thanhkieu.json difficulties[0].fee 600000 (_fee_qp2, tài liệu game 71 QP2; trước 1.000.000); luật ngày chung
-                 70 §8 VG2 / VG3 (Core.claim_day, nhận quà lúc hạ Tư Tà); Địa Ngục min_level 60 mở khi trần 60 (73 B6); Quân Công
-                 quan_cong.points.thanhkieu 150 / 250 / 400. -->
             <p>Quân phí nộp mỗi lượt và không hoàn, kể cả khi thua hay hết giờ. <span class="v5tag">Bản 6.0</span> Quân phí Thường còn <strong>600.000</strong> (trước 1.000.000). Mỗi người chỉ nhận quà Thành Kiều <strong>1 lần mỗi ngày</strong> (tính lúc hạ Tư Tà), như ba phó bản kia: thua hay hết giờ thì vào lại được, tự rời giữa chừng thì mất lượt hôm nay. Trần cấp lên 60 nên <strong>Địa Ngục đã vào được</strong> (cần cấp 60).</p>
             <h4>Trong doanh trại</h4>
             <ul>
               <li>Doanh trại đầy phản quân và oán linh, không rơi đồ, không rơi tiền, chỉ cho kinh nghiệm. Ba tướng <strong>Mã Quỷ</strong>, <strong>Lương Hưng</strong>, <strong>Yến Thập Tam</strong> đứng chờ sẵn, đánh thứ tự nào cũng được. Hạ đủ ba con thì <strong>Tư Tà</strong> hiện ra ở hậu doanh phía tây. Từ bản 5.2 mỗi lượt hạ đủ 4 tướng, mỗi người nhận 1 <a href="../hang-ngay/#bach-gia-lenh">Mặc Gia Lệnh</a> (không khoá). <span class="v5tag">Bản 6.0</span> Mặc Gia Lệnh đi cùng lượt nhận quà trong ngày, nên mỗi ngày 1 lệnh (bản 5.3: tối đa 3).</li>
-              <!-- dungeon_thanhkieu.json mobs_base 45, mobs_per_member 5 (tag 5.3.0; trước 69 cố định = 65 điểm barrack.c + 4 tuần tra);
-                   bach_gia.json tokens.mac per_day 3; tài liệu game 37 §4.72 B2, A2. -->
               <li><span class="v5tag">Bản 5.3</span> Số quái thường theo cỡ đội: <strong>45 + 5 × số người</strong> (một mình 50, đội 5 là 70; bản 5.2: 69 con dù đông hay ít). Mỗi người rời lượt thì bớt 5 quái chưa ai đánh tới.</li>
               <li>Cả bốn tướng cứ 15 giây lại dịch chuyển tới cạnh người đang bị nhắm, hạ được ai thì hồi một ít máu, không bị choáng hay trói. Như Lữ Bố: đánh người gây nhiều sát thương nhất, lướt tới người đứng xa, đánh lâu quá thì nổi giận. Kéo xa quá 20 ô hoặc cả đội ngã thì tướng về chỗ, hồi đầy máu.</li>
               <li>Khó và Địa Ngục: mỗi tướng thêm chiêu, ra chiêu dày hơn. Thấy vòng báo dưới chân thì chạy ra.</li>
               <li>Chết: sống lại ở cửa doanh trại sau 10 giây. Trang bị bị khoá suốt lượt. <span class="v5tag">Bản 5.3</span> Chết không mất kinh nghiệm, không mất Ngân Lượng, trang bị chỉ mòn 5 % độ bền (bản 5.2: mất kinh nghiệm, mòn 10 %).</li>
-              <!-- dungeon_thanhkieu.json difficulties[].potion_pm 750 / 500 (bản 5.2, như Cổ Mộ). Mặc Gia Lệnh: bach_gia.json source thanhkieu. -->
               <li><span class="v5tag">Bản 5.2</span> Khó và Địa Ngục: thuốc máu (cả phần Khí Huyết của Tái Tạo Hoàn) chỉ còn <strong>75 %</strong> tác dụng, Địa Ngục <strong>50 %</strong>: viên hồi 1.000 máu còn 750, 500. Hút máu (dòng Hấp Thụ Khí Huyết, nội tại Huyết Chiến của Cấm Vệ) giảm như vậy. Đồ ăn và chiêu hồi máu của phái không bị giảm. Trước 5.2: mỗi viên hồi tối đa 25 % Khí Huyết tối đa (Địa Ngục 20 %).</li>
             </ul>
             <div class="tbl">
@@ -245,13 +210,6 @@
                 </tbody>
               </table>
             </div>
-            <!-- Lật theo nhịp (bản kế tiếp, repo game master ce88e40b): dungeon_thanhkieu.json difficulties[].rounds 1 / 2 / 3,
-                 cards {item, n, count} + jackpot, reveal_sec 12 (ngửa nhịp cuối rồi về Tần); giây mỗi nhịp dùng chung
-                 dungeon_gumu.json flip_rounds (15 / 3). Tài liệu 53 §3g, 37 §4.44, nhật ký (292).
-                 Cơ hội cả lượt: 1 - (1 - k / 16) ^ số nhịp. Trung bình Tử Kim Tinh mỗi người (bản 5.1): 7 x 1 / 16 = 0,44;
-                 2 x (5 x 2 + 2) / 16 = 1,5; 3 x (5 x 2 + 3 + 3) / 16 = 3. Bản 5.0: 1,31 / 2,25 / 3,38. -->
-            <!-- Biến cố Thành Kiều bản 6.0: tài liệu game 70 §2; dungeon_thanhkieu.json variety (commander_pm 100, link window_sec 60 heal_pm 300,
-                 rare Phàn Ô Kỳ 10 %), _su_kien granary / spy / surrender / horn. -->
             <h4 id="thanh-kieu-bien-co">Biến cố trong doanh trại <span class="v5tag">Bản 6.0</span></h4>
             <ul>
               <li><strong>Chỉ Huy Doanh</strong>: mỗi lượt một trong ba tướng đầu mang dấu Chỉ Huy (báo đầu lượt). Nó còn sống thì hai tướng kia đánh mạnh hơn 10 %: tính thứ tự đánh cho khéo.</li>
@@ -292,14 +250,9 @@
                 </tbody>
               </table>
             </div>
-            <!-- Bản 6.0: dungeon_thanhkieu.json difficulties[].cards + jackpot (repo game commit ffbc6ffc, chủ repo chỉnh tay 2026-10-12). -->
             <p><span class="v5tag">Bản 6.0</span> Bảng trên là bảng mới của bản 6.0: Thường nhiều ngân lượng hơn, ít Tử Kim Tinh hơn (2 thẻ, trước 7); Địa Ngục 8 thẻ Tử Kim Tinh 2 viên. Muốn nhiều Tử Kim Tinh thì đi Khó, Địa Ngục.</p>
             <div class="v5note"><p><span class="v5tag">Bản 5.1</span> Trước bản 5.1: Thường 4 thẻ 3 viên và độc đắc 9 viên (trung bình 1,3 viên mỗi người), Khó có thẻ 4 viên và độc đắc 6 viên (2,25), Địa Ngục độc đắc 5 viên (3,4). Thẻ Trung Cấp Đoạn Thạch ở Thường (3 viên), Khó (2 viên) đổi thành 1 Cao Cấp.</p></div>
-            <!-- sect_sets.json rules.upgrade.steps[0] {item tu_kim_tinh, n 1, points 10, cash 200000, rate 25}; rules.quality_mult 1,5
-                 (trước 1,6; equip_rules.json qualities[3].mult). Tài liệu 37 §4.42, nhật ký (291). -->
             <h4 id="nang-set">Tử Kim Tinh dùng làm gì</h4>
-            <!-- Nguồn Tử Kim Tinh bản 5.2: stall_bots.json sạp gold fixed (1 cái, 5.000.000, commit 326cfce5), bach_gia.json c4 30 %.
-                 Bản 5.3 (tag 5.3.0): fixed price 6250000. -->
             <p>Tử Kim Tinh có ở bảng thẻ Thành Kiều; từ bản 5.2 còn ở <a href="../bay-ban/#mua-hang">Sạp Hoàng Kim</a> chợ bot (6.250.000 lượng từ bản 5.3, bản 5.2: 5.000.000; không khoá) và quà đổi đủ 4 <a href="../hang-ngay/#bach-gia-lenh">Bách Gia Lệnh</a> (30 %). Tử Kim Tinh dùng để nâng set sư môn lên <strong>bậc 2</strong>. Nói với sư phụ, chọn <strong>Mua &amp; Nâng cấp đồ sư môn</strong>, tab <strong>Nâng cấp</strong>, kéo món set vào ô. Mỗi lần thử tốn 1 Tử Kim Tinh và 10 điểm sư môn, thành công <strong>20 %</strong> (trước bản 5.1: 25 %). Trượt thì mất cả hai nhưng giữ món. Thành công: món lên bậc 2 (cần cấp 50), giữ sao và ngọc khảm. Tử Kim Tinh khoá được dùng trước.</p>
             <p>Mỗi lần thử tốn thêm <strong>200.000 lượng</strong> (trượt cũng mất), tab Nâng cấp có dòng Ngân Lượng, đỏ khi thiếu. Chỉ số gốc của set sư môn ở mọi bậc giảm khoảng 6 % (hệ số phẩm Tím 1,6 xuống 1,5), cả set đang mặc.</p>
             <p>Trung bình mỗi món cần 5 lần thử: 5 Tử Kim Tinh, 50 điểm sư môn, 1 triệu lượng (cả bộ 6 món gấp sáu).</p>
@@ -327,10 +280,6 @@
 </div>
         </article>
 
-<!-- Phó bản một mình / nhóm (bản 5.3, phát 2026-10-12 14:06). Nguồn: repo game tag 5.3.0, tài liệu game 37 §4.72 (A1-A4, B1-B2, luật
-     chống lợi dụng), gameplay/12 "Phó bản một mình / nhóm", nhật ký 2026-10-12 (362); số: godot/gateway/run_hold.gd HOLD_SEC 120
-     (gameplay/12 còn ghi 60 s là cũ, 37 §4.72 và code là 120), dungeon_gumu.json khối _mirror mobs_base 80 / mobs_per_member 0,
-     dungeon_thanhkieu.json mobs_base 45 / mobs_per_member 5, bach_gia.json mac per_day 3. Phạt chết phó bản: nhật ký (357), 37 §4.72 A3. -->
 <article class="gcard" id="mot-minh-nhom">
   <h3>Đi một mình hay đi nhóm</h3>
   <ul class="facts">
@@ -357,9 +306,6 @@
   </div>
 </article>
 
-<!-- Bản 6.0: lõi biến cố chung bốn phó bản. Nguồn: tài liệu game 68 §3.2 (Thiên Mệnh, Khiêu Chiến, boss hiếm), 70 §0 / §8 (luật ngày VG2,
-     vé Phong Yêu Kính VG1); số: godot/data/custom/run_mods.json (11 mã, bad_by_tier 1 / 2 / 3, challenge_bad 1, cặp cấm scarce + spring),
-     variety của dungeon_gumu.json (Cổ Mộ + mirror), dungeon_thanhkieu.json, criminal.json team. -->
 <article class="gcard" id="thien-menh">
   <h3>Thiên Mệnh, biến cố, Khiêu Chiến <span class="v5tag">Bản 6.0</span></h3>
   <ul class="facts">
@@ -395,8 +341,6 @@
     </table>
   </div>
   <p>Mỗi phó bản đổi tên vài điều cho hợp chuyện (Cổ Mộ: Thạch Dũng Tự Bạo, Lữ Bố Cuồng Nộ, Thiết Kỵ Sớm; Phong Yêu Kính: Kính Vỡ, Yêu Khí; Thành Kiều: Phản Quân Tiếp Viện, Tướng Giặc Cuồng Nộ; truy bắt: Phản Đồ Cuồng Nộ). Phong Yêu Kính không có Cuồng Nộ, Hộ Vệ; truy bắt không có Hộ Vệ.</p>
-  <!-- Bản 6.0.1 (phát 2026-10-13, tag 6.0.1): tài liệu game 71 mục "Vòng Thưởng"; side_board ở dungeon_gumu.json (Cổ Mộ, mirror),
-       dungeon_thanhkieu.json, criminal.json team (nhánh merge-m). -->
   <h4 id="vong-thuong">Vòng Thưởng <span class="v5tag">Bản 6.0.1</span></h4>
   <p>Lượt lật thêm (Khiêu Chiến, biến cố, gặp hiếm, Bắt Sống) lật ở một nhịp riêng sau nhịp cuối, trên <strong>bảng thưởng 16 thẻ</strong> của từng phó bản (chung mọi độ khó), không rút bảng chính. Chỉ người có lượt thêm lật, mỗi lượt một thẻ; người khác xem. Bản 6.0: lượt thêm cộng vào nhịp cuối bảng chính (Cổ Mộ đã có bảng phụ).</p>
   <div class="tbl tbl--wrap">
@@ -419,8 +363,6 @@
   </ul>
 </article>
 
-<!-- Quân Công bản 6.0: tài liệu game 71 mục "Điểm chung Quân Công" và "Đã làm"; dungeon_gumu.json quan_cong (points, migrate_pm 1800)
-     + shop (than_thu_chon 1100, sell/0032 360, thu_hon 25, ngoc_*_1 70, std/95x1 270). -->
 <article class="gcard" id="quan-cong">
   <h3>Quân Công, Quân Công Phủ <span class="v5tag">Bản 6.0</span></h3>
   <ul class="facts">
