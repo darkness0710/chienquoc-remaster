@@ -18,7 +18,10 @@
     "6.0": "2026-10-12",
     // 6.0.1: ngày phát thật 2026-10-13 (tag 6.0.1 lên VPS 10:33). Đổi ngày thì đồng bộ chữ dự phòng
     // "13/10/2026" trong các thẻ <time data-rel="6.0.1"> (README §Sửa thường gặp).
-    "6.0.1": "2026-10-13"
+    "6.0.1": "2026-10-13",
+    // 6.1: ngày phát thật 2026-10-14 (tag 6.1.0, bản PC trọn gói; Android chưa phát). Đổi ngày thì đồng bộ
+    // chữ dự phòng "14/10/2026" trong các thẻ <time data-rel="6.1"> (README §Sửa thường gặp).
+    "6.1": "2026-10-14"
   };
 
   var list = document.querySelectorAll("time[data-rel]");
