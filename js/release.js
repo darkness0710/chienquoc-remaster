@@ -24,7 +24,8 @@
     "6.1": "2026-10-14",
     // 6.1.1: ngày phát thật 2026-10-15 (tag 6.1.1, PC + Android). Đổi ngày thì đồng bộ chữ dự phòng
     // "15/10/2026" trong các thẻ <time data-rel="6.1.1"> (README §Sửa thường gặp).
-    "6.1.1": "2026-10-15"
+    "6.1.1": "2026-10-15",
+    "6.1.2": "2026-10-15"
   };
 
   var list = document.querySelectorAll("time[data-rel]");
