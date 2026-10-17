@@ -26,7 +26,8 @@
     // "15/10/2026" trong các thẻ <time data-rel="6.1.1"> (README §Sửa thường gặp).
     "6.1.1": "2026-10-15",
     "6.1.2": "2026-10-15",
-    "6.1.3": "2026-10-16"
+    "6.1.3": "2026-10-16",
+    "6.2.0": "2026-10-17"
   };
 
   var list = document.querySelectorAll("time[data-rel]");
