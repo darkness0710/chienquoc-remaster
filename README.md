@@ -61,7 +61,18 @@ mục cũ có thay đổi ở 5.0 có khối `.v5note` cuối phần chữ và c
 | `tien-ich` | `dong-ho`, `dich-tram`, `tiem-do`, `bao-kho` (Kim Nguyên Bảo, 5.0; + `kho-trang-2` 6.0), `thuoc`, `thoi-tiet` |
 | `tu-danh` (5.1) | `tu-danh-bat`, `tu-danh-gio`, `tu-danh-thiet-lap`, `tu-danh-luat` (nguồn: `auto_hunt.json`, `client/ui/auto_hunt_panel.gd` repo game) |
 | `xep-hang` (6.0) | `danh-nhan-duong`, `luc-chien`, `danh-hieu` (nguồn: tài liệu game 69, `logic/rank.gd`, `client/ui/rank_panel.gd`) |
+| `cong-diem` (2026-10-17) | `co-ban`, `diem-dao-hoa` … `diem-van-mong` (một mục mỗi phái, tiền tố `diem-` để khỏi trùng id trang `mon-phai`), `tay-diem` (nguồn: `logic/stats.gd` `STAT_NUM`, `sect_skills.json` `power` ở **tag đã phát**) |
+| `ngan-luong` (2026-10-17) | `uoc-tinh`, `moi-ngay`, `theo-cap`, `pho-ban-tien`, `ban-do`, `giu-tien`, `tieu-tien` |
 | `phim-tat` | `ds-phim` (nguồn: `godot/client/ui/shortcuts_panel.gd` repo game) |
+
+**Khuôn mục (làm lại 2026-10-17, chủ repo chê "rối, bảng phải cuộn"):** hướng dẫn **chỉ ghi luật bản đang chạy**, lịch sử thay đổi
+để ở `phien-ban/` (không dùng lại `.v5note` / `.v5tag` trong hướng dẫn). Mỗi mục: `h3`, khung tóm tắt `<dl class="sum">` (2 tới 4 ô
+Mở từ / Ở đâu / Mấy lượt / Được gì), vài câu, các bước `<ol class="steps">`, ý cần nhớ `<ul>`, mẹo `.tip`, số sâu (công thức, tỉ lệ)
+gập trong `<details class="more"><summary>Số liệu chi tiết</summary>…</details>`. Bảng tối đa 4 cột, không rowspan/colspan, có `<thead>`:
+trên điện thoại `js/guide.js` tự biến bảng từ 3 cột thành thẻ dọc (`.tbl--stack`, nhãn cột lấy từ hàng tiêu đề), trừ bảng toàn số
+tối đa 4 cột (vừa màn, giữ dạng bảng). Thứ mới của bản đang chạy: `<span class="badge-new">Mới</span>`, phát bản sau thì bỏ.
+**Số lấy ở tag đã phát** của repo game (`git show <tag>:<file>`), không lấy thư mục làm việc: repo game thường có thay đổi chưa phát.
+Mục lục `huong-dan/` chia nhóm `.ggroup` (Mới vào game, Mỗi ngày làm gì, Mạnh lên, Chơi cùng người khác) và hàng cẩm nang nhanh `.quick`.
 
 **Thêm mục** vào trang có sẵn: chép một `<article class="gcard" id="…">` (chỉ chữ) hoặc `gcard gpanel` (chữ trái, ảnh phải:
 `.ghead` + `figure.gshot` + `.gtext`), thêm một link `#id` vào hàng `.ptoc` của trang đó và một chip vào thẻ chủ đề ở

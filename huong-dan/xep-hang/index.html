@@ -45,18 +45,17 @@
       <div class="ghero__row">
         <span class="ghero__icon"><svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0z"/><path d="M7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3"/></svg></span>
         <div>
-          <h1 class="ghero__title">Danh Nhân Đường <span class="v5tag v5tag--lg">Bản 6.0</span></h1>
+          <h1 class="ghero__title">Danh Nhân Đường</h1>
           <p class="ghero__lead">Bảng xếp hạng của cả server: lực chiến, cấp, đại đệ tử mỗi phái, kỷ lục phó bản, chuyên cần, thành tựu. Bấm <kbd>Alt+L</kbd> hoặc nút Danh Nhân Đường trên hàng nút hằng ngày.</p>
         </div>
       </div>
-            <div class="v5note v5note--page"><p><span class="v5tag">Bản 6.0</span> Tính năng mới của bản 6.0, đã phát <time data-rel="6.0" datetime="2026-10-12">12/10/2026</time>.</p></div>
     </div>
   </section>
 
   <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
-      <a class="is-v5" href="#danh-nhan-duong">Sáu bảng</a>
-      <a class="is-v5" href="#luc-chien">Lực chiến</a>
-      <a class="is-v5" href="#danh-hieu">Danh hiệu</a>
+      <a href="#danh-nhan-duong">Sáu bảng</a>
+      <a href="#luc-chien">Lực chiến</a>
+      <a href="#danh-hieu">Danh hiệu</a>
     </nav></div>
 
   <div class="wrap gbody">
@@ -64,59 +63,71 @@
 
 <article class="gcard" id="danh-nhan-duong">
   <h3>Sáu bảng xếp hạng</h3>
-  <ul class="facts">
-    <li class="v5">Bản 6.0</li>
-    <li><kbd>Alt+L</kbd>, chỉ khi chơi online</li>
-    <li>Làm mới mỗi 10 phút</li>
-  </ul>
-  <p>Theo Danh Nhân Đường của bản gốc. Nút nằm cuối hàng nút hằng ngày (góc trên trái, cạnh thanh máu). Mỗi bảng hiện <strong>top 50</strong>; dòng của chính ngươi luôn hiện cuối bảng, kể cả khi ngoài top. Lọc được theo môn phái.</p>
-  <div class="tbl tbl--wrap">
+  <dl class="sum">
+    <div><dt>Phím</dt><dd><kbd>Alt+L</kbd>, chỉ khi chơi online</dd></div>
+    <div><dt>Mỗi bảng</dt><dd>Top 50, lọc theo phái</dd></div>
+    <div><dt>Làm mới</dt><dd>Mỗi 10 phút</dd></div>
+  </dl>
+  <p>Theo Danh Nhân Đường của bản gốc. Nút nằm cuối hàng nút hằng ngày (góc trên trái, cạnh thanh máu). Dòng của chính bạn luôn hiện cuối bảng, kể cả khi ngoài top.</p>
+  <div class="tbl">
     <table>
-      <thead><tr><th>Bảng</th><th>Xếp theo</th></tr></thead>
+      <thead><tr><th>Bảng</th><th>Xếp theo</th><th>Làm mới</th></tr></thead>
       <tbody>
-        <tr><td>Lực Chiến</td><td>Điểm <a href="#luc-chien">lực chiến</a>.</td></tr>
-        <tr><td>Cấp Độ</td><td>Cấp; bằng cấp thì theo kinh nghiệm, rồi ai đạt trước.</td></tr>
-        <tr><td>Đại Đệ Tử</td><td>Người lực chiến cao nhất mỗi phái (7 dòng), chốt 0:00 hằng ngày.</td></tr>
-        <tr><td>Phó Bản</td><td>Đội qua <a href="../pho-ban/#co-mo">Cổ Mộ Địa Ngục</a> nhanh nhất tuần (tính từ lúc vào tới lúc hạ Lữ Bố), làm mới thứ Hai. Đội lập kỷ lục mới được báo kênh Thế Giới.</td></tr>
-        <tr><td>Chuyên Cần</td><td>Mỗi việc Hoạt động xong trong ngày được 1 điểm, cộng dồn cả tuần, làm mới thứ Hai.</td></tr>
-        <tr><td>Thành Tựu</td><td>Số thành tựu đã nhận quà.</td></tr>
+        <tr><td>Lực Chiến</td><td>Điểm <a href="#luc-chien">lực chiến</a></td><td>10 phút</td></tr>
+        <tr><td>Cấp Độ</td><td>Cấp, rồi kinh nghiệm</td><td>10 phút</td></tr>
+        <tr><td>Đại Đệ Tử</td><td>Lực chiến cao nhất mỗi phái</td><td>0:00 hằng ngày</td></tr>
+        <tr><td>Phó Bản</td><td>Qua <a href="../pho-ban/#co-mo">Cổ Mộ Địa Ngục</a> nhanh nhất tuần</td><td>Thứ Hai</td></tr>
+        <tr><td>Chuyên Cần</td><td>Việc Hoạt động đã xong trong tuần</td><td>Thứ Hai</td></tr>
+        <tr><td>Thành Tựu</td><td>Số thành tựu đã nhận quà</td><td>10 phút</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="tip">Không có bảng xếp theo ngân lượng: tránh lộ tài sản và gạ giao dịch. Lượt phó bản có dùng lệnh thử của người làm game không được ghi.</p>
+  <ul>
+    <li>Cấp Độ: bằng cấp thì xếp theo kinh nghiệm, rồi ai đạt trước.</li>
+    <li>Phó Bản: tính từ lúc vào tới lúc hạ Lữ Bố. Đội lập kỷ lục mới được báo kênh Thế Giới.</li>
+    <li>Chuyên Cần: mỗi việc Hoạt động xong trong ngày được 1 điểm, cộng dồn cả tuần.</li>
+  </ul>
+  <p class="tip">Không có bảng xếp theo ngân lượng: tránh lộ tài sản và gạ giao dịch.</p>
 </article>
 
 <article class="gcard" id="luc-chien">
   <h3>Lực chiến</h3>
-  <ul class="facts">
-    <li>Bảng nhân vật <kbd>Alt+W</kbd>, tab Tin tức</li>
-    <li>Tách Công và Thủ</li>
-  </ul>
+  <dl class="sum">
+    <div><dt>Xem ở</dt><dd><kbd>Alt+W</kbd>, tab Tin tức</dd></div>
+    <div><dt>Gồm</dt><dd>Công và Thủ</dd></div>
+  </dl>
+  <p>Lực chiến là con số ước lượng "mạnh tới đâu". Xem kèm Công và Thủ để biết đổi món đồ có lợi không.</p>
   <ul>
-    <li>Lực chiến là con số ước lượng "mạnh tới đâu", tính từ thứ thật sự đánh nhau: <strong>Công</strong> (sát thương mỗi giây, gồm chiêu hàng 1 thật của phái) và <strong>Thủ</strong> (Khí Huyết, kháng, phòng, né). Lực chiến bằng căn bậc hai của Công nhân Thủ, nên phái đánh và phái chịu đòn đều lên bảng được.</li>
-    <li>Đo bằng cách đánh một hình nhân chuẩn cấp 40, nên cấp, đồ, sao, ngọc khảm đều đẩy số lên. Một nhân vật cấp 40 mặc đồ Tím vào khoảng 10.000.</li>
-    <li>Xem ở bảng nhân vật (<kbd>Alt+W</kbd>), tab Tin tức: Lực Chiến kèm Công và Thủ, để biết đổi món đồ có lợi không. Không tính kinh nghiệm.</li>
-    <li><span class="v5tag">Bản 6.0.1</span> Tab Lực Chiến có cả nhân vật chưa vào game từ bản 6.0 (lực chiến đo từ bản lưu).</li>
+    <li><strong>Công:</strong> sát thương mỗi giây, gồm chiêu thật của phái.</li>
+    <li><strong>Thủ:</strong> Khí Huyết, kháng, phòng, né.</li>
+    <li>Cấp, đồ, sao, ngọc khảm đều đẩy số lên. Kinh nghiệm không tính.</li>
+    <li>Nhân vật chưa vào game lâu vẫn có trên bảng (lực chiến đo từ bản lưu).</li>
   </ul>
+  <details class="more"><summary>Cách tính</summary>
+    <ul>
+      <li>Lực chiến bằng căn bậc hai của Công nhân Thủ, nên phái đánh và phái chịu đòn đều lên bảng được.</li>
+      <li>Đo bằng cách đánh một hình nhân chuẩn cấp 40, dùng chiêu hàng 1 của phái. Một nhân vật cấp 40 mặc đồ Tím vào khoảng 10.000.</li>
+    </ul>
+  </details>
 </article>
 
 <article class="gcard" id="danh-hieu">
   <h3>Danh hiệu</h3>
-  <ul class="facts">
-    <li>Hiện trên tên và trong khung chat</li>
-    <li>Không cộng chỉ số</li>
-  </ul>
-  <div class="tbl tbl--wrap">
+  <dl class="sum">
+    <div><dt>Hiện ở</dt><dd>Trên tên, trong khung chat</dd></div>
+    <div><dt>Chỉ số</dt><dd>Không cộng gì</dd></div>
+  </dl>
+  <div class="tbl">
     <table>
       <thead><tr><th>Danh hiệu</th><th>Ai nhận</th><th>Giữ tới</th></tr></thead>
       <tbody>
-        <tr><td>Thiên Hạ Đệ Nhất</td><td>Hạng 1 bảng Lực Chiến</td><td>Lần chốt kế (0:00 hằng ngày)</td></tr>
-        <tr><td>&lt;Phái&gt; Đại Đệ Tử</td><td>Hạng 1 mỗi phái (ví dụ Thục Sơn Đại Đệ Tử)</td><td>Lần chốt kế (0:00 hằng ngày)</td></tr>
-        <tr><td>Phá Vô Song</td><td>Cả đội đang giữ kỷ lục Cổ Mộ Địa Ngục tuần</td><td>Hết tuần</td></tr>
+        <tr><td>Thiên Hạ Đệ Nhất</td><td>Hạng 1 Lực Chiến</td><td>0:00 hôm sau</td></tr>
+        <tr><td>&lt;Phái&gt; Đại Đệ Tử</td><td>Hạng 1 mỗi phái</td><td>0:00 hôm sau</td></tr>
+        <tr><td>Phá Vô Song</td><td>Cả đội giữ kỷ lục Cổ Mộ Địa Ngục</td><td>Hết tuần</td></tr>
       </tbody>
     </table>
   </div>
-  <p>Danh hiệu hiện thành dòng nhỏ trên tên nhân vật và trong khung chat. Có nhiều danh hiệu thì chọn cái muốn đeo ở ô Danh Hiệu trong bảng nhân vật (<kbd>Alt+W</kbd>). Danh hiệu chỉ để khoe, không cộng chỉ số.</p>
+  <p>Có nhiều danh hiệu thì chọn cái muốn đeo ở ô Danh Hiệu trong bảng nhân vật (<kbd>Alt+W</kbd>). Ví dụ danh hiệu phái: Thục Sơn Đại Đệ Tử.</p>
 </article>
 
     </div>

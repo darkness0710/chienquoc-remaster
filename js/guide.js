@@ -33,6 +33,10 @@
         });
       });
       if (none) none.hidden = shown > 0;
+      // Nhóm chủ đề (Mới vào game, Mỗi ngày...) không còn thẻ nào khớp thì ẩn cả nhóm.
+      document.querySelectorAll(".ggroup").forEach(function (g) {
+        g.hidden = !g.querySelector(".topic:not([hidden])");
+      });
       if (strip) strip.hidden = words.length > 0;
     };
     input.addEventListener("input", run);
@@ -55,9 +59,23 @@
       var ok = rows.every(function (r) { return r.cells[c] && NUM.test(r.cells[c].textContent.trim()); });
       if (!ok) continue;
       rows.forEach(function (r) { r.cells[c].classList.add("num"); });
+      Array.prototype.forEach.call(t.querySelectorAll("tfoot tr"), function (r) { if (r.cells[c]) r.cells[c].classList.add("num"); });
       var h = t.querySelector("thead tr");
       if (h && h.cells[c]) h.cells[c].classList.add("num");
     }
+  });
+
+  // Điện thoại: bảng từ 3 cột (không gộp ô) thành thẻ dọc, mỗi ô mang nhãn cột (CSS .tbl--stack).
+  Array.prototype.forEach.call(document.querySelectorAll(".tbl table"), function (t) {
+    var h = t.querySelector("thead tr");
+    if (!h || h.cells.length < 3 || t.querySelector("[rowspan], [colspan]")) return;
+    // Bảng số gọn (tối đa 4 cột, mọi cột sau cột đầu đều là số) vừa màn hẹp: giữ dạng bảng, dễ so hơn thẻ.
+    if (h.cells.length <= 4 && Array.prototype.slice.call(h.cells, 1).every(function (c) { return c.classList.contains("num"); })) return;
+    var names = Array.prototype.map.call(h.cells, function (c) { return c.textContent.trim(); });
+    Array.prototype.forEach.call(t.querySelectorAll("tbody tr, tfoot tr"), function (r) {
+      Array.prototype.forEach.call(r.cells, function (c, i) { c.setAttribute("data-label", names[i] || ""); });
+    });
+    t.parentNode.classList.add("tbl--stack");
   });
 
   // Bảng rộng hơn khung: gắn .is-scroll để mép phải báo còn cột khuất (đổi khi xoay màn, đổi cỡ cửa sổ).
