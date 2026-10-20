@@ -1,7 +1,8 @@
 # Chiến Quốc Remaster · trang tải game
 
 Trang tĩnh: HTML + CSS + hai file JS nhỏ (ảnh trượt, trang hướng dẫn), không cần build, không thư viện ngoài
-(chỉ font Google). Chạy trên VPS (Caddy): https://180-93-118-219.sslip.io/chienquoc-remaster/
+(chỉ font Google). Chạy trên VPS (Caddy): https://103-74-100-152.sslip.io/chienquoc-remaster/
+(từ 2026-10-20 máy Ryzen 103.74.100.152; máy cũ 180-93-118-219.sslip.io chỉ còn làm cầu nối vài tuần)
 
 ```
 ├── index.html          trang chủ: đầu trang .hero3 (ảnh Đào Hoa, cánh hoa bay, hàng nút cộng đồng .hero3__comm, dải số liệu),
@@ -320,3 +321,7 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   `.is-scroll` (mép phải sáng khi còn cột khuất); hàng `.ptoc` mờ hai mép. Trang Phiên bản: thẻ `#v-sap-ra` "Bản sắp ra mắt"
   (`vcard--next`, nhãn "Chưa phát", không có `<time data-rel>`), nhóm mới `h3.g-ui` Giao diện. Khi phát: đổi thành thẻ có số bản + ngày
   như 6.0.1, bỏ `vcard--next` / `is-next`. Kiểm: 0 phần tử tràn ở 375 / 900 px mọi trang; ảnh trước / sau `tmp/ui/`.
+- 2026-10-21 (theo game 6.5.0, máy chủ mới 103-74-100-152.sslip.io): link launcher 6.4.0 + APK sang máy mới, og:url / og:image mọi
+  trang; trang chủ "đang chạy bản 6.5.0", nhãn đầu trang 6.5, dòng `#ban-5` + mốc lộ trình 6.1 tới 6.5, chip bài mới; trang Phiên bản thêm
+  6.2.1, 6.2.2, 6.2.3, 6.3.0, 6.3.1, 6.3.2, 6.5.0 (6.4.0 không phát riêng, gộp vào 6.5.0), khoá tương ứng trong `RELEASES`. Nguồn: nhật ký
+  game (482)-(524), `note.txt` 6.5.0, tong-quan/00.

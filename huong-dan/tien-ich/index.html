@@ -8,10 +8,10 @@
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://180-93-118-219.sslip.io/chienquoc-remaster/huong-dan/tien-ich/">
+  <meta property="og:url" content="https://103-74-100-152.sslip.io/chienquoc-remaster/huong-dan/tien-ich/">
   <meta property="og:title" content="Tiện ích · Hướng dẫn Chiến Quốc Remaster">
   <meta property="og:description" content="Đồng hồ máy chủ, Dịch Trạm, tiệm đồ, Bảo Khố và Kim Nguyên Bảo, thuốc 1 giờ, chế độ máy yếu, thời tiết.">
-  <meta property="og:image" content="https://180-93-118-219.sslip.io/chienquoc-remaster/assets/img/og.jpg">
+  <meta property="og:image" content="https://103-74-100-152.sslip.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
@@ -144,7 +144,7 @@
   </dl>
   <p>Bảo Khố là cửa hàng mở ở bất cứ đâu, không cần tới NPC. Tab <strong>Ngân Lượng</strong> trả bằng lượng, tab <strong>Kim Nguyên Bảo</strong> trả bằng Kim Nguyên Bảo.</p>
   <ul>
-    <li><strong>Kim Nguyên Bảo</strong> chỉ có từ <a href="../hang-ngay/#trom-bao">Trộm Bảo Phi Tặc</a>. Khoá, không giao dịch; số đang có hiện ở hành trang.</li>
+    <li><strong>Kim Nguyên Bảo</strong> có từ <a href="../hang-ngay/#trom-bao">Trộm Bảo Phi Tặc</a> và <a href="../boss-the-gioi/">Boss thế giới</a> (hạng 1: 10, hạng 2 tới 3: 5, hạng 4 tới 10: 2, đòn cuối thêm 1). Khoá, không giao dịch; số đang có hiện ở hành trang.</li>
     <li>Hàng tab Kim Nguyên Bảo <strong>không khoá</strong>: giao dịch, tặng, bày bán được.</li>
     <li>Đồ lưng không còn bán ở Bảo Khố: đổi ở Quân Sư Vô Song Thành (<a href="../trang-bi/#do-lung">đồ lưng</a>).</li>
   </ul>
@@ -157,9 +157,18 @@
         <tr><td>Thẻ Tự Đánh (1 giờ)</td><td>4</td><td>+1 giờ <a href="../tu-danh/">Tự Đánh</a></td></tr>
         <tr><td>Thẻ Tự Đánh (5 giờ)</td><td>18</td><td>+5 giờ Tự Đánh</td></tr>
         <tr><td>Khai Mở Kho Tab 2</td><td>350</td><td>Mở <a href="#kho-trang-2">kho trang 2</a></td></tr>
+        <tr><td>Phù Thương Nhân</td><td>5</td><td>Mở bảng bán đồ cho tiệm ngay tại chỗ</td></tr>
+        <tr><td>Phù Kho Từ Xa</td><td>10</td><td>Mở kho ngay tại chỗ</td></tr>
       </tbody>
     </table>
   </div>
+  <h4>Phù Thương Nhân, Phù Kho Từ Xa</h4>
+  <ul>
+    <li>Dùng trong hành trang, mất một lá. <strong>Phù Thương Nhân</strong> chỉ bán đồ (giá như bán cho NPC), không mua được. <strong>Phù Kho Từ Xa</strong> mở kho như ở Quản Khố.</li>
+    <li>Bảng đóng khi bạn đóng nó, sang bản đồ khác hoặc sau 10 phút. Đang mở mà dùng thêm lá cùng loại thì chỉ mở lại bảng, không tốn thêm.</li>
+    <li>Không dùng được trong phó bản và truy bắt nhóm (không mất lá).</li>
+    <li>Hai loại phù không khoá: giao dịch, tặng, bày bán được.</li>
+  </ul>
   <h4>Ngân Lượng Bao</h4>
   <ul>
     <li>Mở ra ngân lượng theo <strong>cấp lúc mua</strong> (không theo cấp người mở). Rê chuột lên túi để xem khoảng tiền.</li>
@@ -219,8 +228,9 @@
   <ul>
     <li><strong>Ẩn khách dạo phố:</strong> bỏ các nhân vật ảo đi dạo ở căn cứ phái.</li>
     <li><strong>Người khác hiện gọn:</strong> người chơi khác hiện không cánh, phi phong, quầng vũ khí, vòng pháp bảo, thú cưỡi, ngoại trang.</li>
-    <li><strong>Bớt hiệu ứng người khác:</strong> không vẽ hình chiêu của người chơi khác, trừ chiêu trúng hay hồi máu cho mình. Quái vẫn đủ hình.</li>
+    <li><strong>Bớt hiệu ứng người khác, quái:</strong> không vẽ hình chiêu của người chơi khác, trừ chiêu trúng hay hồi máu cho mình. Hình chiêu của quái, boss ở xa mình (không nhắm mình) cũng bỏ. Vòng đỏ báo trước của boss luôn hiện.</li>
   </ul>
+  <p>Số sát thương bay trên đầu: số của mình luôn hiện đủ. Số của người khác tối đa 16 cái cùng bay, bật máy yếu thì còn 4. Đỡ giật ở phó bản đông người.</p>
   <p class="tip">Chỉ đổi hình trên máy bạn, không ảnh hưởng trận đánh hay người khác. Cài đặt lưu lại cho lần sau.</p>
 </article>
 
