@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chiến Trường · Hướng dẫn Chiến Quốc Remaster</title>
+  <meta name="description" content="Chiến Trường Trường Bình: Tần đánh Triệu tối thứ 2, 4, 6, Chủ nhật lúc 21:00, từ cấp 30. Hạ chủ tướng phe kia là thắng. Chiến Tích đổi kinh nghiệm, Vô Song Điểm Phiếu và danh hiệu tháng.">
+  <meta name="theme-color" content="#0a1330">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://103-74-100-152.sslip.io/chienquoc-remaster/huong-dan/chien-truong/">
+  <meta property="og:title" content="Chiến Trường · Hướng dẫn Chiến Quốc Remaster">
+  <meta property="og:description" content="Chiến Trường Trường Bình: Tần đánh Triệu tối thứ 2, 4, 6, Chủ nhật lúc 21:00, từ cấp 30. Hạ chủ tướng phe kia là thắng. Chiến Tích đổi kinh nghiệm, Vô Song Điểm Phiếu và danh hiệu tháng.">
+  <meta property="og:image" content="https://103-74-100-152.sslip.io/chienquoc-remaster/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+
+<header class="bar">
+  <div class="wrap bar__in">
+    <a class="brand" href="../../" aria-label="Chiến Quốc Remaster, về trang chủ">
+      <img src="../../assets/favicon.svg" alt="" width="32" height="32">
+      <span>Chiến Quốc <em>Remaster</em></span>
+    </a>
+    <nav class="bar__nav">
+      <a class="bar__link" href="../" aria-current="page">Hướng dẫn</a>
+      <a class="bar__link" href="../../phien-ban/">Phiên bản</a>
+      <a class="bar__link" href="../../tuyen-bo/">Tuyên bố</a>
+      <a class="btn btn--gold btn--sm" href="../../#cai-dat">Tải game</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="ghero">
+    <div class="wrap">
+      <nav class="crumb" aria-label="Đường dẫn"><a href="../">Hướng dẫn</a><span aria-hidden="true">/</span><span>Chiến Trường</span></nav>
+      <div class="ghero__row">
+        <span class="ghero__icon"><svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l10 10M4 4h4M4 4v4"/><path d="M20 4L10 14M20 4h-4M20 4v4"/><path d="M7 15l-3 3 2 2 3-3M17 15l3 3-2 2-3-3"/></svg></span>
+        <div>
+          <h1 class="ghero__title">Chiến Trường Trường Bình <span class="badge-new">Mới</span></h1>
+          <p class="ghero__lead">Tần đánh Triệu. Bốn tối mỗi tuần, người chơi chia hai phe, hạ chủ tướng phe kia là thắng. Kiếm Chiến Tích để đổi kinh nghiệm, Vô Song Điểm Phiếu và danh hiệu tháng.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ptoc-bar"><nav class="wrap ptoc" aria-label="Trong trang này">
+      <a href="#ctr-lich">Giờ và báo danh</a>
+      <a href="#ctr-tran">Thắng thế nào</a>
+      <a href="#ctr-danh">Đánh người</a>
+      <a href="#ctr-chien-tich">Chiến Tích</a>
+      <a href="#ctr-doi">Đổi Chiến Tích</a>
+      <a href="#ctr-danh-hieu">Danh hiệu</a>
+    </nav></div>
+
+  <div class="wrap gbody">
+    <div class="guide">
+
+<!-- Nguồn (repo game, bản 6.6.0 phát 2026-10-21): documents/gameplay/82-chien-truong.md (cả khung trận Thu gọn / Đầy đủ / Ẩn, nút Rời trận,
+     Tiểu Tướng Quân, đếm ngược chết), godot/data/custom/battlefield.json (guides, exchange), note.txt bản 6.6.0. Gói đổi kinh nghiệm theo
+     Level.base_exp_to_next (bảng gốc, 37 §4.116). Máu tướng, Chiến Tích, mốc danh hiệu có thể chỉnh ở bản sau. -->
+<article class="gcard" id="ctr-lich">
+  <h3>Giờ và báo danh</h3>
+  <dl class="sum">
+    <div><dt>Ngày</dt><dd>Thứ 2, 4, 6, Chủ nhật</dd></div>
+    <div><dt>Giờ</dt><dd>Báo danh 20:50, đánh 21:00 tới 21:30</dd></div>
+    <div><dt>Mở từ</dt><dd>Cấp 30, lẻ hoặc nhóm tối đa 3</dd></div>
+    <div><dt>Ở đâu</dt><dd>Trương Quả Lão, Chu Quốc (245, 161)</dd></div>
+  </dl>
+  <ol class="steps">
+    <li>20:50 cả server hiện bảng báo có nút <strong>Báo danh</strong> (đội trưởng có thêm <strong>Báo danh cả nhóm</strong>). Báo danh ở đâu cũng được, hoặc nói chuyện với Trương Quả Lão.</li>
+    <li>21:00 game tự chia hai phe Tần và Triệu theo lực chiến, cho hai phe ngang sức nhau.</li>
+    <li>Bảng <strong>Vào trận</strong> hiện 60 giây. Bấm là vào doanh trại phe mình. Quá 60 giây chưa bấm thì mất chỗ, báo danh lại như người vào muộn.</li>
+    <li>Hết trận, bảng tổng kết hiện, 60 giây sau game đưa bạn về cạnh Trương Quả Lão.</li>
+  </ol>
+  <ul>
+    <li>Nhóm báo danh cùng nhau thì vào cùng phe. Mọi người trong nhóm phải online và đủ cấp.</li>
+    <li>Mỗi máy (và mỗi đường mạng) tối đa 3 nhân vật, các nhân vật đó luôn cùng phe.</li>
+    <li>Mỗi phe cần ít nhất 3 người. Thiếu thì trận bị huỷ, ai đã báo danh và đang online vẫn được 10 Chiến Tích.</li>
+    <li>Từ 21:00 tới 21:20 vẫn báo danh được: người vào muộn vào thẳng phe đang ít điểm hơn.</li>
+    <li>Bảng báo chỉ hiện lần đầu trong ngày, bấm Từ chối là thôi. Bảng Hoạt động có dòng "Chiến Trường 21:00".</li>
+  </ul>
+  <p class="tip">Thứ 3, 5, 7 không có trận. Boss thế giới 20:30 thường xong trước 20:50, nên đánh boss xong vẫn kịp báo danh.</p>
+</article>
+
+<article class="gcard" id="ctr-tran">
+  <h3>Thắng thế nào</h3>
+  <dl class="sum">
+    <div><dt>Thắng ngay</dt><dd>Hạ chủ tướng phe kia</dd></div>
+    <div><dt>Tối đa</dt><dd>30 phút, hết giờ tính điểm</dd></div>
+    <div><dt>Chủ tướng</dt><dd>Tần: Bạch Khởi, Triệu: Liêm Pha</dd></div>
+  </dl>
+  <p>Mỗi phe có 1 chủ tướng và 4 tướng phụ đứng giữ doanh trại. Chủ tướng có khiên, không đánh được khi còn tướng phụ cùng phe sống. Hạ hết tướng phụ để phá khiên rồi hạ chủ tướng.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Việc</th><th>Điểm phe</th></tr></thead>
+      <tbody>
+        <tr><td>Hạ một tướng phụ</td><td>30</td></tr>
+        <tr><td>Hạ một người phe kia</td><td>2 (người bị Truy nã: 4)</td></tr>
+        <tr><td>Giữ một lá cờ</td><td>1 mỗi 10 giây</td></tr>
+        <tr><td>Hạ chủ tướng</td><td>Thắng ngay</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Hết 30 phút chưa ai hạ chủ tướng: phe nhiều điểm thắng, bằng điểm thì hoà.</li>
+    <li>Tướng tự đánh người phe kia lại gần, và hồi máu dần khi 10 giây không bị đánh. Máu tướng tính theo số người phe kia.</li>
+    <li><strong>Cờ</strong>: phe ít người hơn có dưới 6 người thì chỉ mở Cờ Trung ở giữa bản đồ, đủ 6 thì mở cả Cờ Tả, Cờ Trung, Cờ Hữu. Đứng trong vùng cờ 10 giây không có địch là chiếm được. Phe giữ Cờ Trung thì tướng phe đó hồi máu nhanh hơn.</li>
+    <li><strong>Khung trận</strong> mặc định ẩn để không che chỗ đánh. Nút <strong>cờ</strong> dưới thanh máu (chỉ hiện trong trận) bấm xoay vòng: <strong>Thu gọn</strong> (một dòng điểm hai phe và giờ còn), <strong>Đầy đủ</strong> (điểm, số tướng còn, cờ và việc nên làm tiếp, ví dụ "Hạ tướng phụ phe Triệu (còn 3) để phá khiên Liêm Pha"), rồi <strong>Ẩn</strong>. Khung Đầy đủ có nút ✕ để ẩn nhanh. Game nhớ chế độ bạn chọn cho trận sau.</li>
+    <li>Khi khung ẩn hoặc thu gọn, dòng việc nên làm vẫn hiện thoáng 5 giây lúc vào trận và mỗi khi mục tiêu đổi. Chữ báo to giữa màn luôn hiện.</li>
+  </ul>
+</article>
+
+<article class="gcard" id="ctr-danh">
+  <h3>Đánh người phe kia</h3>
+  <dl class="sum">
+    <div><dt>Máu</dt><dd>Gấp 1,5 khi ở trong trận</dd></div>
+    <div><dt>Chết</dt><dd>Không mất kinh nghiệm, không mòn đồ</dd></div>
+    <div><dt>Bảng</dt><dd>Giữ <kbd>Tab</kbd> (điện thoại: nút Bảng dưới thanh máu)</dd></div>
+  </dl>
+  <ul>
+    <li>Chỉ người phe kia là mục tiêu. Nút <strong>Đánh</strong> và chiêu đánh một kẻ địch tự nhắm: người vừa đánh mình, rồi người phe kia gần nhất, rồi tướng phe kia. PC bấm <kbd>Shift+Tab</kbd> để đổi sang người phe kia kế tiếp.</li>
+    <li>Người đánh người chỉ nhận 60 % sát thương, như tỉ thí. Người có công thấp hơn hẳn mặt bằng trận được nâng lên đủ 70 % mức giữa, để ai cũng góp sức được.</li>
+    <li>Chết: nằm 10 giây (phe đang thua xa: 5 giây), giữa màn hiện chữ to đếm ngược "Sống lại sau N giây ở doanh trại", không cần bấm hồi sinh. Trong lúc chờ vẫn giữ <kbd>Tab</kbd> xem bảng và gõ chat được. Sống lại ở doanh trại đầy máu, có 5 giây Hộ Thân. Không mất kinh nghiệm, không mất tiền, đồ không mòn.</li>
+    <li>Thuốc dùng được. Không dùng được Phi Hành Phù, Hồi Bang Phù, Nông Trại, tỉ thí, Đấu Trường, Kỳ Trận khi đang trong trận.</li>
+    <li>Kênh chat <strong>Phe</strong> (gõ "/p ") chỉ hiện trong trận, chỉ người cùng phe đọc được. Dòng "A hạ B" cũng hiện ở đây.</li>
+  </ul>
+  <h4>Bi Phẫn và Truy nã</h4>
+  <ul>
+    <li><strong>Bi Phẫn</strong>: bị người phe kia hạ mà từ lần chết trước chưa hạ hay hỗ trợ được ai thì thêm 1 tầng, tối đa 5. Mỗi tầng: gây thêm 8 % sát thương, nhận ít hơn 6 % sát thương từ người chơi. Hạ hoặc hỗ trợ hạ được một người thì bớt 2 tầng.</li>
+    <li><strong>Truy nã</strong>: hạ liền 5 người mà không chết thì bị Truy nã, cả trận được báo. Ai hạ được người bị Truy nã: thêm 5 Chiến Tích, phe được gấp đôi điểm.</li>
+  </ul>
+  <h4>Treo máy, bỏ trận</h4>
+  <ul>
+    <li>Góp sức là đánh người, đánh tướng phe kia, hồi máu đồng đội hoặc đứng trong vùng cờ. 3 phút không góp sức thì bị nhắc, 5 phút thì bị đưa về Chu Quốc, không có Chiến Tích, không báo danh lại được tối đó.</li>
+    <li>Rời trận (thoát game, rớt mạng) quá 60 giây là bỏ trận, cũng không có Chiến Tích. Trong 60 giây bấm Vào trận lại được.</li>
+    <li>Muốn tự rời giữa trận: bấm nút <strong>Rời trận</strong> dưới thanh máu, hoặc nói chuyện với <strong>Tiểu Tướng Quân</strong> ở doanh trại phe mình (Tần ô 40, 51; Triệu ô 201, 149). Game hỏi lại rồi mới đưa bạn về Chu Quốc. Rời giữa trận tính như bỏ trận: 0 Chiến Tích, không vào lại được tối đó.</li>
+  </ul>
+  <p class="tip">Người mới đừng ngại: chết không mất gì, Bi Phẫn làm bạn mạnh dần lên. Đi theo đồng đội, đánh tướng hoặc giữ cờ cũng được tính góp sức.</p>
+</article>
+
+<article class="gcard" id="ctr-chien-tich">
+  <h3>Chiến Tích mỗi trận</h3>
+  <dl class="sum">
+    <div><dt>Thắng</dt><dd>Thường 60 tới 90</dd></div>
+    <div><dt>Thua</dt><dd>Thường 25 tới 45</dd></div>
+    <div><dt>Huỷ trận</dt><dd>10</dd></div>
+  </dl>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Nguồn</th><th>Chiến Tích</th></tr></thead>
+      <tbody>
+        <tr><td>Vào trận và còn ở trận lúc hết</td><td>20</td></tr>
+        <tr><td>Phe thắng</td><td>25</td></tr>
+        <tr><td>Mỗi tướng phe kia bị hạ</td><td>3 (tối đa 15)</td></tr>
+        <tr><td>Đóng góp, xếp trong phe mình</td><td>Đầu phe 20, cuối phe 0</td></tr>
+        <tr><td>Top 3 đóng góp cả trận</td><td>10</td></tr>
+        <tr><td>Mỗi lần hạ người bị Truy nã</td><td>5</td></tr>
+        <tr><td>Bỏ trận, bị đưa ra vì treo máy</td><td>0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Đóng góp tính từ: hạ người, hỗ trợ hạ, sát thương lên tướng phe kia, máu hồi cho đồng đội, thời gian đứng giữ cờ.</li>
+    <li>Bảng tổng kết ghi rõ bạn được bao nhiêu Chiến Tích từ mỗi phần.</li>
+    <li>Bảng xếp hạng Chiến Tích tuần và tháng xem ở Trương Quả Lão, ở bảng tổng kết, hoặc nút Chiến Trường ở <a href="../xep-hang/">Danh Nhân Đường</a>.</li>
+  </ul>
+  <details class="more"><summary>Số liệu chi tiết</summary>
+    <ul>
+      <li>Điểm đóng góp: mỗi lần hạ người 10, mỗi lần hỗ trợ 4, mỗi 1 % máu tối đa tướng phe kia đã gây 1, mỗi 10 % máu tối đa đồng đội đã hồi 1, mỗi 10 giây đứng vùng cờ 1.</li>
+      <li>Hỗ trợ: gây sát thương lên người bị hạ trong 10 giây trước khi người đó chết (không tính người ra đòn cuối).</li>
+      <li>Thưởng đóng góp chia đều theo hạng trong phe, người đóng góp 0 thì được 0.</li>
+    </ul>
+  </details>
+</article>
+
+<article class="gcard" id="ctr-doi">
+  <h3>Đổi Chiến Tích</h3>
+  <dl class="sum">
+    <div><dt>Ở đâu</dt><dd>Trương Quả Lão, đứng gần</dd></div>
+    <div><dt>Kinh nghiệm</dt><dd>100 Chiến Tích một gói</dd></div>
+    <div><dt>Phiếu</dt><dd>10 Chiến Tích một phiếu, 25 mỗi tuần</dd></div>
+  </dl>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Đổi</th><th>Giá</th><th>Nhận</th></tr></thead>
+      <tbody>
+        <tr><td>Gói kinh nghiệm</td><td>100 Chiến Tích</td><td>12 % kinh nghiệm cần để lên cấp hiện tại, tính theo bảng gốc</td></tr>
+        <tr><td>Vô Song Điểm Phiếu (khoá)</td><td>10 Chiến Tích</td><td>1 phiếu, tối đa 25 phiếu mỗi tuần</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Mỗi lần đổi tối đa 8 gói kinh nghiệm. Ví dụ một gói: cấp 30 được 7.562, cấp 40 được 26.125 kinh nghiệm.</li>
+    <li>Gói tính theo bảng kinh nghiệm gốc, không theo giá lên cấp mới (từ bản 6.6.0 cấp 20 trở lên cần nhiều kinh nghiệm hơn, xem <a href="../bat-dau/#kinh-nghiem">Kinh nghiệm lên cấp</a>). Vì vậy một gói chỉ bằng khoảng 4 tới 5,5 % thanh kinh nghiệm ở cấp 20 tới 50, càng gần cấp 60 càng ít (cấp 59 khoảng 2 %). Dưới cấp 20 vẫn đủ 12 %.</li>
+    <li>Kho kinh nghiệm không đủ chỗ thì game bớt số gói. Ở trần cấp, phần thừa thành tiềm năng như thường.</li>
+    <li>Đổi chỉ trừ Chiến Tích đang có, không làm giảm Chiến Tích tháng (dùng xét danh hiệu).</li>
+    <li>Lượt phiếu tính theo tuần, không để dành sang tuần sau. Hành trang đầy thì phiếu vào túi chờ.</li>
+  </ul>
+  <p class="tip">Phiếu dùng đổi đồ lưng, thú cưỡi Truyền Thuyết, ngoại trang: xem <a href="../vo-song-diem-phieu/">Vô Song Điểm Phiếu</a>.</p>
+</article>
+
+<article class="gcard" id="ctr-danh-hieu">
+  <h3>Danh hiệu Chiến Trường</h3>
+  <dl class="sum">
+    <div><dt>Xét theo</dt><dd>Chiến Tích kiếm trong tháng này</dd></div>
+    <div><dt>Cộng</dt><dd>Ngoại Công và Nội Công</dd></div>
+    <div><dt>Làm mới</dt><dd>0:00 ngày 1 mỗi tháng</dd></div>
+  </dl>
+  <p>Đủ Chiến Tích trong tháng là tự có danh hiệu, không cần tới NPC, không cần đeo. Mỗi bậc cộng thẳng vào cả Ngoại Công lẫn Nội Công.</p>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Danh hiệu</th><th>Chiến Tích tháng</th><th>Công cộng thêm</th></tr></thead>
+      <tbody>
+        <tr><td>Tân Binh Chiến Quốc</td><td>30</td><td>+10</td></tr>
+        <tr><td>Ngũ Trường</td><td>60</td><td>+20</td></tr>
+        <tr><td>Bách Phu Trường</td><td>100</td><td>+40</td></tr>
+        <tr><td>Thiên Phu Trường</td><td>150</td><td>+60</td></tr>
+        <tr><td>Thiên Tướng Quân</td><td>200</td><td>+100</td></tr>
+        <tr><td>Bình Quốc Tướng Quân</td><td>260</td><td>+150</td></tr>
+        <tr><td>An Quốc Tướng Quân</td><td>330</td><td>+200</td></tr>
+        <tr><td>Trấn Quốc Tướng Quân</td><td>400</td><td>+260</td></tr>
+        <tr><td>Chính Dị Tướng Quân</td><td>500</td><td>+330</td></tr>
+        <tr><td>Phiêu Kỵ Đại Tướng Quân</td><td>600</td><td>+400</td></tr>
+        <tr><td>Thiên Hạ Đại Tướng Quân</td><td>Hạng 1 Chiến Tích tháng trước</td><td>+500 (thay bậc đang có)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Sang tháng mới mọi người về bậc 0 và đếm lại. Chiến Tích đang có (để đổi) vẫn giữ.</li>
+    <li><strong>Thiên Hạ Đại Tướng Quân</strong> giữ suốt tháng sau cho người đứng đầu Chiến Tích tháng vừa hết.</li>
+    <li>Đi đều 4 trận mỗi tuần thì khoảng tuần thứ 3 của tháng đạt Phiêu Kỵ Đại Tướng Quân.</li>
+    <li>Lực chiến dùng để chia phe, Danh Nhân Đường không tính phần danh hiệu này.</li>
+  </ul>
+</article>
+
+    </div>
+    <nav class="pnav" aria-label="Chủ đề khác"><a class="pnav__prev" href="../dau-truong/"><span>Trước</span><strong>Đấu Trường</strong></a><a class="pnav__all" href="../">Mục lục hướng dẫn</a><a class="pnav__next" href="../ky-tran/"><span>Tiếp</span><strong>Kỳ Trận</strong></a></nav>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div>
+      <a class="brand" href="../../"><img src="../../assets/favicon.svg" alt="" width="28" height="28"><span>Chiến Quốc <em>Remaster</em></span></a>
+      <p class="foot__small">Thiết kế và lập trình: darkness0710 và cộng đồng Chiến Quốc Remaster.</p>
+      <ul class="foot__soc" aria-label="Cộng đồng">
+        <li><a href="https://discord.gg/RQDAqRUQ5X" target="_blank" rel="noopener" aria-label="Discord"><svg class="soc" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.3 5.6A16 16 0 0015.4 4.4l-.5 1a14.6 14.6 0 00-5.8 0l-.5-1a16 16 0 00-3.9 1.2C2.2 9.3 1.5 13 1.8 16.6a16 16 0 004.8 2.4l1-1.6c-.6-.2-1.1-.5-1.6-.8l.4-.3a11.3 11.3 0 009.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 004.8-2.4c.4-4.2-.6-7.9-2.9-11zM8.7 14.4c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9zm6.6 0c-.9 0-1.6-.8-1.6-1.9s.7-1.9 1.6-1.9 1.6.8 1.6 1.9-.7 1.9-1.6 1.9z"/></svg></a></li>
+      </ul>
+    </div>
+    <ul class="foot__links">
+      <li><a href="../../">Trang chủ: tải game</a></li>
+      <li><a href="../../huong-dan/">Hướng dẫn: mục lục mọi chủ đề</a></li>
+      <li><a href="../../phien-ban/">Phiên bản: mỗi bản có gì mới</a></li>
+    </ul>
+    <p class="foot__small foot__legal">
+      Dự án phục dựng phi thương mại của người hâm mộ, làm để học tập và lưu giữ kí ức.
+      Tên gọi, hình ảnh và tài nguyên gốc của Chiến Quốc thuộc bản quyền của chủ sở hữu.
+    </p>
+  </div>
+</footer>
+
+<script src="../../js/guide.js" defer></script>
+<script src="../../js/release.js" defer></script>
+</body>
+</html>

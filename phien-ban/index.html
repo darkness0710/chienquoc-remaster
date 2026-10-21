@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Phiên bản · Chiến Quốc Remaster</title>
-  <meta name="description" content="Chiến Quốc Remaster qua từng phiên bản: ngày phát hành và thay đổi của mỗi bản, từ bản demo offline tới bản 6.5.1 đang chạy.">
+  <meta name="description" content="Chiến Quốc Remaster qua từng phiên bản: ngày phát hành và thay đổi của mỗi bản, từ bản demo offline tới bản 6.6.0 đang chạy.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://103-74-100-152.sslip.io/chienquoc-remaster/phien-ban/">
   <meta property="og:title" content="Các phiên bản Chiến Quốc Remaster">
-  <meta property="og:description" content="Mỗi bản có gì mới, cân bằng gì, sửa lỗi gì, kèm ngày phát hành. Bản 6.5.1 mới phát: Kỳ Trận dễ chơi hơn, sửa khung thoại Tân Thủ Tiên Cô, Ngư Ông đổi tới 99 lần mỗi tuần.">
+  <meta property="og:description" content="Mỗi bản có gì mới, cân bằng gì, sửa lỗi gì, kèm ngày phát hành. Bản 6.6.0 mới phát: Chiến Trường Trường Bình Tần đánh Triệu, Boss thế giới thêm trận 12:00, Bảo Điển Plus, phó bản dễ thở hơn.">
   <meta property="og:image" content="https://103-74-100-152.sslip.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -49,6 +49,7 @@
 
   <div class="vtoc-bar">
     <nav class="wrap vtoc" aria-label="Nhảy tới phiên bản">
+      <a href="#v6-6-0">6.6.0</a>
       <a href="#v6-5-1">6.5.1</a>
       <a href="#v6-5-0">6.5.0</a>
       <a href="#v6-3-2">6.3.2</a>
@@ -90,6 +91,62 @@
 
   <div class="wrap">
     <div class="vlist">
+
+      <!-- ================= 6.6.0 =================
+           Phát tối 2026-10-21 (ngày ở js/release.js). Nguồn: note.txt gốc repo game (bản 6.6.0), gameplay/82 (Chiến Trường), 83 (Bảo Điển Plus),
+           79 (Boss thế giới 2 trận), 24 (Khảm), tong-quan/37 §4.110, §4.111, §4.113 tới §4.116 (kinh nghiệm cấp 20-49, quái lệch cấp),
+           version.json level_need_mul, monster_tuning.json map_kill_exp.over_level, auto_hunt.json daily_cap_min, achievements.json. -->
+      <article class="vcard" id="v6-6-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">6.6.0</h2>
+          <time class="vcard__date" data-rel="6.6.0" datetime="2026-10-21">21/10/2026</time>
+          <span class="vcard__tag">Chiến Trường</span>
+        </header>
+        <p class="vcard__sum">Chiến Trường Trường Bình (Tần đánh Triệu), Bảo Điển Plus, Boss thế giới thêm trận 12:00, phó bản dễ thở hơn, kĩ năng giang hồ lên cấp 12, Bảo Khố bán phiếu và Bùa May Mắn khoá, khảm ngọc tự chọn viên, cấp 20 tới 49 cần nhiều kinh nghiệm hơn.</p>
+
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li><a href="../huong-dan/chien-truong/">Chiến Trường Trường Bình</a> (Tần đánh Triệu): tối thứ 2, 4, 6, Chủ nhật lúc 21:00, báo danh từ 20:50 ở Trương Quả Lão (Chu Quốc). Từ cấp 30, đi lẻ hoặc nhóm tối đa 3.</li>
+          <li>Chiến Trường: game tự chia phe theo lực chiến. Hạ chủ tướng phe kia là thắng, trận tối đa 30 phút. Ít nhất 3 người mỗi phe, thiếu thì huỷ trận và vẫn có 10 Chiến Tích.</li>
+          <li>Chiến Trường: nút Đánh tự nhắm người phe kia gần nhất. Giữ <kbd>Tab</kbd> (điện thoại: nút Bảng dưới thanh máu) xem bảng hạ, chết. Chết nhiều được Bi Phẫn, hạ liền 5 người bị Truy nã. Chết trong trận không mất kinh nghiệm, không mòn đồ, giữa màn đếm ngược tới lúc sống lại ở doanh trại.</li>
+          <li>Chiến Trường: khung trận mặc định ẩn. Nút cờ dưới thanh máu xoay Thu gọn, Đầy đủ, Ẩn; khung Đầy đủ có nút ✕.</li>
+          <li>Chiến Trường: muốn rời giữa trận bấm nút Rời trận dưới thanh máu hoặc nói chuyện với Tiểu Tướng Quân ở doanh trại phe mình (game hỏi lại trước). Rời giữa trận tính như bỏ trận: 0 Chiến Tích, không vào lại tối đó.</li>
+          <li>Chiến Tích đổi kinh nghiệm (100 Chiến Tích được 12 % giá lên cấp theo bảng gốc), Vô Song Điểm Phiếu khoá (tối đa 25 mỗi tuần) và mở danh hiệu tháng P001 tới P011 (cộng tới +500 Ngoại Công và Nội Công).</li>
+          <li><a href="../huong-dan/hang-ngay/#bao-dien-plus">Bảo Điển Plus</a>: tab mới trong Chiến Quốc Bảo Điển cho nhân vật đã xác thực, quay ra 1 tới 10 triệu ngân lượng.</li>
+          <li><a href="../huong-dan/boss-the-gioi/">Boss thế giới</a> thêm trận 12:00 trưa (vẫn có 20:30). Hai trận ở hai bản đồ khác nhau, mỗi trận nhận quà riêng.</li>
+          <li><a href="../huong-dan/ky-nang/#ki-nang-giang-ho">Kĩ năng giang hồ</a> (Vương Bộ Đầu): mở cấp 11 ở cấp 55, cấp 12 ở cấp 60.</li>
+          <li><a href="../huong-dan/tien-ich/#bao-kho">Bảo Khố</a>, tab Kim Nguyên Bảo: Vô Song Điểm Phiếu khoá 8 Kim Nguyên Bảo (tối đa 20 mỗi tuần), Bùa May Mắn khoá 150 (1 lá mỗi tuần).</li>
+        </ul>
+
+        <h3 class="g-bal">Phó bản dễ thở hơn</h3>
+        <ul>
+          <li><a href="../huong-dan/pho-ban/#co-mo">Cổ Mộ</a> Thường: đội dưới cấp 42 gặp Lữ Bố yếu hơn.</li>
+          <li>Cổ Mộ Khó bản plus: Lữ Bố yếu đi một chút.</li>
+          <li><a href="../huong-dan/hang-ngay/#phong-yeu-kinh">Phong Yêu Kính</a>: thời gian theo độ khó (Thường 20, Khó 25, Địa Ngục 30 phút); đi ít người thì ít yêu ma hơn (1 người 50 con, mỗi người thêm 10, tối đa 80); phiếu Khó 3, Địa Ngục 5; độ Thường không phải nộp đồ Xanh làm vé.</li>
+          <li><a href="../huong-dan/pho-ban/#trieu-van">Triệu Vân</a> mạnh hơn: người yếu mời vẫn được Triệu Vân đủ sức, máu trâu hơn, hút đòn tốt hơn, khiên Hộ Chủ hồi nhanh gấp đôi, boss tăng máu ít hơn khi mời.</li>
+        </ul>
+
+        <h3 class="g-bal">Kinh nghiệm và quà</h3>
+        <ul>
+          <li><a href="../huong-dan/bat-dau/#kinh-nghiem">Kinh nghiệm lên cấp</a>: cấp 20 tới 49 cần nhiều hơn (gấp 3 bảng gốc ở cấp 20, giảm dần còn gấp 2,8 ở cấp 40 và 2,2 ở cấp 49), nối liền nhịp cấp 50 tới 60. Kinh nghiệm đang có không mất.</li>
+          <li>Đánh quái cao hơn mình quá 5 cấp không còn thêm kinh nghiệm: tính như quái cao hơn 5 cấp.</li>
+          <li>Quà thành tựu cấp không còn ngân lượng (cấp 40: 2 Cao Cấp Đoạn Thạch khoá).</li>
+          <li><a href="../huong-dan/tu-danh/">Tự Đánh</a> tối đa 4 giờ mỗi ngày, tính cả giờ miễn phí.</li>
+        </ul>
+
+        <h3 class="g-ui">Giao diện</h3>
+        <ul>
+          <li><a href="../huong-dan/trang-bi/#kham-ngoc">Khảm ngọc</a>: không tự gắn viên đầu tiên nữa. Bấm ô Tinh Thạch (hoặc nút Chọn viên) để chọn viên hợp lỗ, có nút Bỏ (cả điện thoại).</li>
+          <li><a href="../huong-dan/trang-bi/#nang-sao">Nâng sao</a>: đồ set sư môn tối đa 8 sao, đồ thường vẫn 10.</li>
+        </ul>
+
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Rớt mạng trong phó bản rồi vào lại không còn kẹt "chưa có bản đồ".</li>
+          <li>Bị khai trừ khỏi nhóm là mất chỗ trong lượt phó bản.</li>
+          <li>Boss nhiệm vụ chủ tuyến do đồng đội hạ vẫn tính cho người nhận nhiệm vụ.</li>
+        </ul>
+      </article>
 
       <!-- Nguồn 6.5.1: note.txt gốc repo game, nhật ký (525)-(526). -->
       <article class="vcard" id="v6-5-1">

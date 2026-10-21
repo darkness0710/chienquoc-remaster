@@ -46,7 +46,7 @@ mục cũ có thay đổi ở 5.0 có khối `.v5note` cuối phần chữ và c
 
 | Trang `huong-dan/…/` | Mục (id) |
 |---|---|
-| `bat-dau` | `cai-dat-game`, `tan-thu` (bỏ qua Tân Thủ, 5.0), `tran-cap-60` (6.0) |
+| `bat-dau` | `cai-dat-game`, `tan-thu` (bỏ qua Tân Thủ, 5.0), `lo-trinh-cap`, `kinh-nghiem` (giá lên cấp, 6.6.0), `tran-cap-60` (6.0) |
 | `hang-ngay` | `su-mon`, `vuong-bo-dau`, `phong-yeu-kinh`, `tong-bao`, `trom-bao`, `cau-ca`, `diem-danh` (5.1), `thanh-server` (5.3), `truy-bat-bien-co` (6.0, trong `vuong-bo-dau`) |
 | `pho-ban` | `co-mo` (+ `co-mo-bien-co` 6.0), `thanh-kieu` (+ `thanh-kieu-bien-co` 6.0, `nang-set`, `tai-tao-set` và `tiem-tu-kim` 5.1), `mot-minh-nhom` (5.3), `thien-menh` (+ `luat-ngay`) và `quan-cong` (6.0) |
 | `nhiem-vu` | `ct-tong-quan`, `ct-vet-nut`, `ct-hoi-5` tới `ct-hoi-10`, `ho-phu` |
@@ -63,6 +63,7 @@ mục cũ có thay đổi ở 5.0 có khối `.v5note` cuối phần chữ và c
 | `tu-danh` (5.1) | `tu-danh-bat`, `tu-danh-gio`, `tu-danh-thiet-lap`, `tu-danh-luat` (nguồn: `auto_hunt.json`, `client/ui/auto_hunt_panel.gd` repo game) |
 | `xep-hang` (6.0) | `danh-nhan-duong`, `luc-chien`, `danh-hieu` (nguồn: tài liệu game 69, `logic/rank.gd`, `client/ui/rank_panel.gd`) |
 | `cong-diem` (2026-10-17) | `co-ban`, `diem-dao-hoa` … `diem-van-mong` (một mục mỗi phái, tiền tố `diem-` để khỏi trùng id trang `mon-phai`), `tay-diem` (nguồn: `logic/stats.gd` `STAT_NUM`, `sect_skills.json` `power` ở **tag đã phát**) |
+| `chien-truong` (6.6.0, 2026-10-21) | `ctr-lich`, `ctr-tran`, `ctr-danh`, `ctr-chien-tich`, `ctr-doi`, `ctr-danh-hieu` (tiền tố `ctr-` vì `ct-` đã dùng ở `nhiem-vu`; nguồn: tài liệu game gameplay/82, `battlefield.json`); giữa `dau-truong` và `ky-tran` |
 | `ngan-luong` (2026-10-17) | `uoc-tinh`, `moi-ngay`, `theo-cap`, `pho-ban-tien`, `ban-do`, `giu-tien`, `tieu-tien` |
 | `phim-tat` | `ds-phim` (nguồn: `godot/client/ui/shortcuts_panel.gd` repo game) |
 
@@ -325,3 +326,18 @@ cả từ để nhấn mạnh, không dùng gạch dài hay gạch nối đôi, 
   trang; trang chủ "đang chạy bản 6.5.0", nhãn đầu trang 6.5, dòng `#ban-5` + mốc lộ trình 6.1 tới 6.5, chip bài mới; trang Phiên bản thêm
   6.2.1, 6.2.2, 6.2.3, 6.3.0, 6.3.1, 6.3.2, 6.5.0 (6.4.0 không phát riêng, gộp vào 6.5.0), khoá tương ứng trong `RELEASES`. Nguồn: nhật ký
   game (482)-(524), `note.txt` 6.5.0, tong-quan/00.
+- 2026-10-21 (soạn trước bản 6.6.0, CHƯA PHÁT, máy chủ chạy 6.5.1; chủ repo tự đẩy lúc phát): thẻ `#v6-6-0` `vcard--next` + khối
+  `data-release-date`, link `.vtoc` `is-next`, dòng 6.6.0 đã chú thích trong `js/release.js`; trang chủ nhãn đầu trang "Sắp ra mắt", dòng
+  `.v5sec__more` 6.6.0, chip "Sắp có ở bản 6.6", nút "Bản 6.6 sắp có gì", mốc `is-next`. Chỗ đổi khi phát: comment "KHI PHÁT 6.6.0"
+  (index.html) và comment trên thẻ `#v6-6-0`. Trang mới `huong-dan/chien-truong/`; mục mới `hang-ngay/#chien-truong`,
+  `#bao-dien-plus`, `trang-bi/#kham-ngoc`; sửa Boss thế giới 2 trận, Phong Yêu Kính (giờ, số yêu ma, phiếu, vé), Cổ Mộ, Triệu Vân,
+  giang hồ cấp 12, Bảo Khố (phiếu, bùa khoá), nguồn Vô Song Điểm Phiếu. Nhãn `badge-new` "Mới" ở thứ của 6.6.0. Nguồn: repo game
+  master 929e7771 (chưa có tag), `note.txt` 6.6.0, gameplay/24, 79, 82, 83, 37 §4.110-§4.113.
+- 2026-10-21 tối (phát 6.6.0, chủ repo tự đẩy web sau khi game lên máy chủ): làm hết chỗ "KHI PHÁT 6.6.0": `RELEASES["6.6.0"]`
+  2026-10-21, nhãn đầu trang "Đã phát", dòng `#ban-5` 6.6.0, chip "Thêm ở bản 6.6", nút "Bản 6.6 có gì", mốc lộ trình `is-done`,
+  "đang chạy bản 6.6.0", meta trang chủ / Phiên bản; thẻ `#v6-6-0` bỏ `vcard--next` + `is-next`, thêm nhóm "Kinh nghiệm và quà"
+  (giá lên cấp 20-49, quái hơn 5 cấp, quà thành tựu cấp, Tự Đánh 4 giờ) và sửa lỗi boss chủ tuyến. Mục mới `bat-dau/#kinh-nghiem`
+  (bảng giá lên cấp 19-59, mới và gốc); Chiến Trường: khung trận Thu gọn / Đầy đủ / Ẩn, nút Rời trận, Tiểu Tướng Quân, đếm ngược
+  chết, gói kinh nghiệm theo bảng gốc; trang-bi nguồn Cao Cấp Đoạn Thạch thêm Thành tựu cấp 40; ngan-luong bỏ "thành tựu cấp" khỏi
+  nguồn tiền. Nguồn: `note.txt` 6.6.0, gameplay/82, 37 §4.116, `version.json level_need_mul`, `monster_tuning.json
+  map_kill_exp.over_level`, `achievements.json`, `logic/level.gd` (số trong bảng tính lại từ `ALL_EXP`, khớp `test/logic/cap60.gd`).
