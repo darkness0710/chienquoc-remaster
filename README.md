@@ -57,13 +57,14 @@ mục cũ có thay đổi ở 5.0 có khối `.v5note` cuối phần chữ và c
 | `bao-thu` (5.0) | `bat-thu`, `bao-thu-luc`, `thu-xuat-chien` |
 | `nghe` (5.0) | `hoc-nghe`, `thu-thap`, `luyen-don`, `co-quan`, `dau-bep`, `bao-ruong`, `so-tay` |
 | `bang-hoi` (5.0) | `lap-bang`, `nhiem-vu-bang`, `ki-nang-bang` |
-| `bay-ban` (5.0) | `bay-sap`, `mua-hang`, `kenh-giao-dich` |
+| `bay-ban` (5.0; từ 6.7.0 là trang **Ký Gửi**, giữ thư mục cũ để link cũ chạy) | `ky-gui`, `ky-gui-ban`, `mua-hang` (tab Người chơi + Hệ thống), `kenh-giao-dich`, `bay-sap` (chỉ còn ghi chú chợ cũ đã thay; nguồn: tài liệu game gameplay/85, `consign.json`, `stall_bots.json`) |
 | `giao-dich-cong-dong` | `to-doi`, `giao-dich`, `tang-qua`, `bang-huu`, `kenh-chat`, `cong-dong` |
-| `tien-ich` | `dong-ho`, `dich-tram`, `tiem-do`, `bao-kho` (Kim Nguyên Bảo, 5.0; + `kho-trang-2` 6.0), `thuoc`, `thoi-tiet` |
+| `tien-ich` | `dong-ho`, `dich-tram`, `tiem-do`, `bao-kho` (Kim Nguyên Bảo, 5.0; + `kho-trang-2` 6.0), `suc-dia` (6.7.0), `thuoc`, `may-yeu`, `thoi-tiet` |
 | `tu-danh` (5.1) | `tu-danh-bat`, `tu-danh-gio`, `tu-danh-thiet-lap`, `tu-danh-luat` (nguồn: `auto_hunt.json`, `client/ui/auto_hunt_panel.gd` repo game) |
 | `xep-hang` (6.0) | `danh-nhan-duong`, `luc-chien`, `danh-hieu` (nguồn: tài liệu game 69, `logic/rank.gd`, `client/ui/rank_panel.gd`) |
 | `cong-diem` (2026-10-17) | `co-ban`, `diem-dao-hoa` … `diem-van-mong` (một mục mỗi phái, tiền tố `diem-` để khỏi trùng id trang `mon-phai`), `tay-diem` (nguồn: `logic/stats.gd` `STAT_NUM`, `sect_skills.json` `power` ở **tag đã phát**) |
 | `chien-truong` (6.6.0, 2026-10-21) | `ctr-lich`, `ctr-tran`, `ctr-danh`, `ctr-chien-tich`, `ctr-doi`, `ctr-danh-hieu` (tiền tố `ctr-` vì `ct-` đã dùng ở `nhiem-vu`; nguồn: tài liệu game gameplay/82, `battlefield.json`); giữa `dau-truong` và `ky-tran` |
+| `bang-chien` (6.7.0, 2026-10-22) | `bc-lich`, `bc-dieu-kien`, `bc-coc`, `bc-qua` (tiền tố `bc-`; nguồn: tài liệu game gameplay/84, `guild_war.json`); giữa `chien-truong` và `ky-tran` |
 | `ngan-luong` (2026-10-17) | `uoc-tinh`, `moi-ngay`, `theo-cap`, `pho-ban-tien`, `ban-do`, `giu-tien`, `tieu-tien` |
 | `phim-tat` | `ds-phim` (nguồn: `godot/client/ui/shortcuts_panel.gd` repo game) |
 
