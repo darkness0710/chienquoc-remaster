@@ -125,6 +125,7 @@
             <li>Nút <strong>Mời nhóm</strong> mời bạn vào nhóm dù khác bản đồ, trừ khi một bên đang trong phó bản. Người lạ thì phải đứng gần mới mời được.</li>
             <li><strong>Tab Giang Hồ</strong>: mọi người đang chơi, người cùng cấp xếp trước, kèm bản đồ họ đang đứng. Kết bạn ở đây <strong>không cần đứng cùng bản đồ</strong>. Bấm Làm mới để xem lại danh sách.</li>
             <li>Xoá bạn thì mất ở cả hai phía.</li>
+            <li><strong>Tab Đã chặn</strong>: người bạn đã <a href="#chat-mat">chặn</a>, bỏ chặn ở đây.</li>
           </ul>
         </article>
 
@@ -135,6 +136,7 @@
       <div><dt>Chat</dt><dd><kbd>Enter</kbd></dd></div>
       <div><dt>Đổi kênh</dt><dd><kbd>Tab</kbd> trong khung chat, hoặc gõ tiền tố</dd></div>
       <div><dt>Biểu cảm</dt><dd>88 hình, gõ <code>#0</code> tới <code>#87</code></dd></div>
+      <div><dt>Mật</dt><dd>Gõ <code>/m Tên câu</code> hoặc bấm tên người chơi</dd></div>
     </dl>
   </div>
   <figure class="gshot">
@@ -152,15 +154,37 @@
           <tr><td>Bang</td><td>người cùng bang</td><td><code>/b</code></td></tr>
           <tr><td><a href="../bay-ban/#kenh-giao-dich">Giao Dịch</a></td><td>mọi người đang chơi, cấp 15, 200 lượng mỗi câu</td><td><code>/g</code></td></tr>
           <tr><td>Phe</td><td>cùng phe ở <a href="../chien-truong/">Chiến Trường</a>, cùng bang ở <a href="../bang-chien/">Bang Chiến</a></td><td><code>/p</code></td></tr>
+          <tr><td>Mật</td><td>một người bất kỳ đang trực tuyến</td><td><code>/m Tên</code></td></tr>
         </tbody>
       </table>
     </div>
     <ul>
-      <li>Biểu cảm: bấm nút mặt cười cạnh ô nhập để chọn, hoặc gõ <code>#</code> kèm số (ví dụ <code>#24</code>). Mỗi câu hiện tối đa 3 hình.</li>
-      <li>Hàng tab trên khung chat lọc kênh: Tất cả, Thế Giới (gồm cả Giao Dịch), Nhóm, Bang, Phe (chỉ khi đang trong trận), Hệ thống.</li>
-      <li>Mỗi câu có giờ ở đầu dòng. Bấm tên người nói để <strong>Nói riêng</strong>, <strong>Kết bạn</strong> hay <strong>Mời nhóm</strong>.</li>
+      <li>Biểu cảm: bấm nút mặt cười cạnh ô nhập để chọn, hoặc gõ <code>#</code> kèm số (ví dụ <code>#24</code>). Mỗi câu hiện tối đa 3 hình. Gửi xong bảng biểu cảm tự đóng.</li>
+      <li>Hàng thẻ trên khung chat lọc kênh: Tất cả, Thế Giới (gồm cả Giao Dịch), Nhóm, Bang, Hệ thống, Mật, thêm Phe khi đang trong trận. Điện thoại: hàng thẻ ở khung phóng to.</li>
+      <li>Thẻ Bang, Nhóm, Mật hiện chấm đỏ kèm số câu mới khi bạn đang xem thẻ khác. Mỗi kênh giữ riêng số dòng của mình, nên Thế Giới ồn không đẩy mất câu Bang.</li>
+      <li>Mỗi câu có giờ ở đầu dòng. Bấm tên người nói (chuột phải, hoặc chạm giữ trên điện thoại) để <strong>Mật</strong>, <strong>Kết bạn</strong>, <strong>Mời nhóm</strong>, <strong>Xem thông tin</strong> hay <strong>Chặn</strong>.</li>
     </ul>
-    <p class="tip">Nhắn riêng cho bằng hữu: ngay cạnh bảng Bằng Hữu.</p>
+    <h4 id="chat-mat">Mật (nhắn riêng) <span class="badge-new">Mới</span></h4>
+    <ul>
+      <li>Nhắn được cho <strong>bất kỳ ai đang trực tuyến</strong>, không cần là bằng hữu. Nhắn người không phải bằng hữu thì cần từ cấp 10.</li>
+      <li>Chọn Mật ở menu tên, hoặc gõ <code>/m Tên câu</code>. Nút kênh đổi thành "Mật → Tên", chữ tím: Enter gửi tiếp cho người đó tới khi bấm nút ✕ hay Esc.</li>
+      <li>Trong thẻ Mật, bấm tên trong dòng là đặt ngay người nhận. Mỗi giây một câu, không lặp nguyên câu vừa gửi trong 20 giây. Người nhận không trực tuyến thì game báo, tin không gửi.</li>
+      <li><strong>Chặn</strong>: không nhận tin mật, lời mời kết bạn, lời mời tổ đội của người đó (người kia không biết bị chặn). Câu ở kênh chung vẫn hiện. Xem, gỡ ở bảng Bằng Hữu, tab <strong>Đã chặn</strong>.</li>
+      <li>Ô nhắn ở bảng Bằng Hữu vẫn dùng được, tin hiện ở cả hai chỗ. Tin không lưu: thoát game là mất.</li>
+    </ul>
+    <h4 id="chat-cai-dat">Cài đặt khung chat, bong bóng chat <span class="badge-new">Mới</span></h4>
+    <ul>
+      <li>Nút <strong>bánh răng</strong> cuối hàng thẻ (điện thoại: ở khung phóng to) mở bảng cài đặt ngay tại chỗ: giờ đầu dòng, tin cường hoá, hiện bong bóng, mẫu bong bóng. Bấm là áp và lưu luôn. Cài Đặt (Esc) cũng có mục <strong>Khung chat</strong> với các ô này.</li>
+      <li><strong>Bong bóng chat</strong>: câu ở kênh Hiện tại nổi thành bong bóng trên đầu người nói cho mọi người cùng bản đồ thấy, giữ khoảng 5 tới 8 giây, tối đa 3 dòng, có cả biểu cảm. Tắt bằng ô "Hiện bong bóng chat" (chỉ trên máy bạn).</li>
+      <li>Mẫu bong bóng: Mặc định miễn phí, cùng 5 mẫu Ngọc Bích, Kim Long, Huyết Nguyệt, Mặc Trúc, Tử Vân. Mẫu màu nay có ở quà mốc 50 lượt của vòng quay sự kiện Hội Phiên Bản Mới (chọn 1 trong 5), không còn bán ở Bảo Khố; ai đã mua vẫn giữ.</li>
+    </ul>
+    <h4 id="chat-cuong-hoa">Tin cường hoá ở thẻ Hệ thống</h4>
+    <ul>
+      <li>Cả máy chủ thấy một dòng khi có người rèn may rủi ở mức cao: ép sao từ +7, hợp thành Đỉnh Cấp, Chí Tôn Cấp Đoạn Thạch hay Tinh Thạch cấp 7, nâng phẩm lên Vàng, Bạch Kim, nâng bậc set sư môn, đồ lưng, pháp bảo từ +7, thú cưỡi, thần thú từ 7 sao.</li>
+      <li>Ví dụ "Gaasuu ép [Hắc Long Kiếm] lên +8 thành công." Tên món là liên kết, rê chuột xem món.</li>
+      <li>Chỉ hiện ở thẻ Hệ thống, không vào Tất cả. Không muốn xem thì tắt ô "Tin cường hoá" ở cài đặt khung chat.</li>
+    </ul>
+    <p class="tip">Nhắn riêng: dùng thẻ Mật ngay trong khung chat, hoặc ô nhắn cạnh bảng Bằng Hữu.</p>
   </div>
 </article>
 

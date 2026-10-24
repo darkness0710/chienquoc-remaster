@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tự Đánh · Hướng dẫn Chiến Quốc Remaster</title>
-  <meta name="description" content="Tự Đánh (Alt+A): nhân vật tự tìm quái thường khắp bản đồ đang đứng, tự uống thuốc, nhặt đồ. Miễn phí 60 phút mỗi ngày, thêm giờ bằng Thẻ Tự Đánh, tối đa 4 giờ mỗi ngày.">
+  <meta name="description" content="Tự Đánh (Alt+A): nhân vật tự tìm quái thường khắp bản đồ đang đứng, tự uống thuốc, nhặt đồ, bán đồ khi túi đầy. Miễn phí 4 giờ mỗi ngày, thêm giờ bằng Thẻ Tự Đánh, tối đa 8 giờ mỗi ngày.">
   <meta name="theme-color" content="#0a1330">
 
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://103-74-100-152.sslip.io/chienquoc-remaster/huong-dan/tu-danh/">
   <meta property="og:title" content="Tự Đánh · Hướng dẫn Chiến Quốc Remaster">
-  <meta property="og:description" content="Tự Đánh (Alt+A): nhân vật tự tìm quái thường khắp bản đồ đang đứng, tự uống thuốc, nhặt đồ. Miễn phí 60 phút mỗi ngày, thêm giờ bằng Thẻ Tự Đánh, tối đa 4 giờ mỗi ngày.">
+  <meta property="og:description" content="Tự Đánh (Alt+A): nhân vật tự tìm quái thường khắp bản đồ đang đứng, tự uống thuốc, nhặt đồ, bán đồ khi túi đầy. Miễn phí 4 giờ mỗi ngày, thêm giờ bằng Thẻ Tự Đánh, tối đa 8 giờ mỗi ngày.">
   <meta property="og:image" content="https://103-74-100-152.sslip.io/chienquoc-remaster/assets/img/og.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -46,7 +46,7 @@
         <span class="ghero__icon"><svg class="ticon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 4v3M12 17v3M4 12h3M17 12h3"/><circle cx="12" cy="12" r="2"/></svg></span>
         <div>
           <h1 class="ghero__title">Tự Đánh</h1>
-          <p class="ghero__lead">Đứng ở bãi quái, bấm <kbd>Alt+A</kbd>: nhân vật tự tìm quái thường khắp bản đồ đang đứng, tự uống thuốc, nhặt đồ. Mỗi ngày miễn phí 60 phút.</p>
+          <p class="ghero__lead">Đứng ở bãi quái, bấm <kbd>Alt+A</kbd>: nhân vật tự tìm quái thường khắp bản đồ đang đứng, tự uống thuốc, nhặt đồ. Mỗi ngày miễn phí 4 giờ.</p>
         </div>
       </div>
     </div>
@@ -56,6 +56,8 @@
       <a href="#tu-danh-bat">Bật, dừng</a>
       <a href="#tu-danh-gio">Giờ và Thẻ Tự Đánh</a>
       <a href="#tu-danh-thiet-lap">Thiết lập</a>
+      <a href="#tu-danh-an-toan">Thuốc, lùi, về thành</a>
+      <a href="#tu-danh-ban">Tự bán, tự hồi sinh</a>
       <a href="#tu-danh-luat">Ở đâu, đánh gì</a>
     </nav></div>
 
@@ -65,41 +67,46 @@
 <article class="gcard" id="tu-danh-bat">
   <h3>Bật và dừng</h3>
   <dl class="sum">
-    <div><dt>Phím</dt><dd><kbd>Alt+A</kbd> hoặc nút Tự Đánh</dd></div>
+    <div><dt>Bật, tắt</dt><dd><kbd>Alt+A</kbd>; điện thoại: nút tròn Tự đánh</dd></div>
+    <div><dt>Thiết lập</dt><dd>Nút Thiết lập Tự Đánh ở hàng nút trên</dd></div>
     <div><dt>Ai dùng</dt><dd>Mọi phái</dd></div>
-    <div><dt>Miễn phí</dt><dd>60 phút mỗi ngày</dd></div>
+    <div><dt>Miễn phí</dt><dd>4 giờ mỗi ngày</dd></div>
   </dl>
+  <p>Bật, tắt và thiết lập là hai nút riêng.</p>
   <ol class="steps">
-    <li>Đứng ở bản đồ có quái, bấm <kbd>Alt+A</kbd> hoặc nút <strong>Tự Đánh</strong> (hàng nút việc hằng ngày, sau nút Thành tựu).</li>
-    <li>Chỉnh <a href="#tu-danh-thiet-lap">thiết lập</a>, bấm <strong>Bắt đầu</strong>. Nhân vật tìm con gần nhất trên cả bản đồ, đánh xong tìm con kế. Hết quái thì đứng yên chờ quái mọc lại.</li>
-    <li>Muốn dừng: bấm <kbd>Alt+A</kbd> lần nữa hoặc nút <strong>Dừng</strong>.</li>
+    <li>Lần đầu: bấm nút tròn <strong>Thiết lập Tự Đánh</strong> ở hàng nút việc hằng ngày cạnh thanh máu, chỉnh <a href="#tu-danh-thiet-lap">thiết lập</a>. Nút này chỉ mở và đóng bảng.</li>
+    <li>Đứng ở bản đồ có quái, bấm <kbd>Alt+A</kbd> (hoặc nút <strong>Bắt đầu</strong> trong bảng). Điện thoại: chạm nút tròn <strong>Tự đánh</strong> ở cụm nút Đánh, ngay trên ô cạnh 9 và 0; đang chạy nút sáng lên và đổi chữ thành <strong>Dừng</strong>.</li>
+    <li>Nhân vật tìm con gần nhất trên cả bản đồ, đánh xong tìm con kế. Hết quái thì đứng yên chờ quái mọc lại (quái chết mọc lại sau khoảng 9 giây).</li>
+    <li>Muốn dừng: bấm <kbd>Alt+A</kbd> lần nữa, chạm nút <strong>Dừng</strong> trên điện thoại hoặc nút <strong>Dừng</strong> trong bảng.</li>
   </ol>
   <ul>
     <li>Đang chạy, trên hàng ô F1 tới F10 có dải chữ: giờ còn lại, số con đã diệt, kinh nghiệm và ngân lượng kiếm được.</li>
-    <li>Tự dừng khi: tử trận (không tự hồi sinh), sang bản đồ khác, mất kết nối, hết giờ, đạt trần giờ trong ngày. Lần nào cũng có dòng báo.</li>
+    <li><strong>Tự đi tay là tắt:</strong> bấm đất, giữ chuột, kéo ngón hay đẩy joystick thì Tự Đánh tắt hẳn rồi nhân vật mới đi, có dòng "Đã tắt Tự Đánh vì bạn tự di chuyển." Muốn chạy lại thì bấm bật lần nữa. Bấm chiêu, uống thuốc bằng tay không tắt.</li>
+    <li>Tự dừng khi: tử trận (trừ khi bật <a href="#tu-danh-ban">tự hồi sinh tại chỗ</a>), sang bản đồ khác, mất kết nối, hết giờ, đạt trần giờ trong ngày. Lần nào cũng có dòng báo.</li>
   </ul>
-  <p class="tip">Thiết lập được nhớ riêng cho từng nhân vật trên máy bạn, lần sau mở bảng là có sẵn.</p>
+  <p class="tip">Chiêu dùng, ngưỡng thuốc, nhặt đồ được nhớ riêng cho từng nhân vật trên máy bạn. Các ô Hết giờ thì về thành, Túi đầy thì bán, Tự hồi sinh tại chỗ lưu trên máy chủ, đổi máy vẫn còn.</p>
 </article>
 
 <article class="gcard" id="tu-danh-gio">
   <h3>Giờ miễn phí và Thẻ Tự Đánh</h3>
   <dl class="sum">
-    <div><dt>Miễn phí</dt><dd>60 phút mỗi ngày</dd></div>
-    <div><dt>Trần</dt><dd>4 giờ mỗi ngày</dd></div>
+    <div><dt>Miễn phí</dt><dd>4 giờ (240 phút) mỗi ngày</dd></div>
+    <div><dt>Trần</dt><dd>8 giờ mỗi ngày</dd></div>
     <div><dt>Thêm giờ</dt><dd>Thẻ Tự Đánh ở Bảo Khố</dd></div>
   </dl>
   <ul>
-    <li>60 phút miễn phí làm mới lúc 23:00. Không dùng hết thì mất, không để dành.</li>
+    <li>4 giờ miễn phí làm mới lúc 23:00. Không dùng hết thì mất, không để dành.</li>
     <li>Dùng <strong>Thẻ Tự Đánh</strong> (trong hành trang hoặc nút trên bảng) là cộng giờ vào <strong>quỹ giờ</strong>. Quỹ giờ không mất khi qua ngày.</li>
-    <li>Mỗi ngày tối đa <strong>4 giờ</strong>, tính cả giờ miễn phí. Đạt trần thì dừng, quỹ còn lại để hôm sau.</li>
+    <li>Mỗi ngày tối đa <strong>8 giờ</strong>, tính cả giờ miễn phí. Đạt trần thì dừng, quỹ còn lại để hôm sau.</li>
     <li>Giờ chỉ trôi khi đang tự đánh và đang online: trừ miễn phí trước, rồi mới trừ quỹ.</li>
+    <li>Nút <strong>Đi và đánh</strong> của việc <a href="../hang-ngay/#su-mon">sư môn</a> đánh quái cũng chạy bằng Tự Đánh và trừ cùng quỹ giờ này.</li>
   </ul>
   <div class="tbl">
     <table>
       <thead><tr><th>Thẻ</th><th>Cộng vào quỹ</th><th>Giá</th></tr></thead>
       <tbody>
-        <tr><td>Thẻ Tự Đánh (1 giờ)</td><td>60 phút</td><td>10 Kim Nguyên Bảo</td></tr>
-        <tr><td>Thẻ Tự Đánh (5 giờ)</td><td>300 phút</td><td>Thôi bán, thẻ đã có vẫn dùng được</td></tr>
+        <tr><td>Thẻ Tự Đánh (1 giờ)</td><td>60 phút</td><td>5 Kim Nguyên Bảo</td></tr>
+        <tr><td>Thẻ Tự Đánh (5 giờ)</td><td>300 phút</td><td>20 Kim Nguyên Bảo</td></tr>
       </tbody>
     </table>
   </div>
@@ -124,10 +131,58 @@
   <ul>
     <li><strong>Chiêu dùng:</strong> đánh dấu các ô phím có chiêu muốn dùng; chiêu nào hồi xong thì ra, theo thứ tự hàng phím. Chưa chọn chiêu nào thì chỉ đánh thường. Chiêu phải chọn chỗ trên đất cũng dùng được: nhân vật đặt chiêu ngay ô con đang đánh; con đó ngoài tầm chiêu thì chuyển sang chiêu kế.</li>
     <li><strong>Nhặt đồ:</strong> bật tắt Ngân lượng, Thuốc, Khác; Trang bị chọn Trắng trở lên, Xanh trở lên hoặc Không nhặt. Chỉ nhặt đồ nằm trong 6 ô quanh chỗ đang đứng.</li>
-    <li><strong>Túi đầy:</strong> thôi nhặt, đánh tiếp; hoặc về thành rồi dừng.</li>
-    <li>Hết thuốc mà máu dưới 20 %: nhân vật niệm Tín Vật về thành rồi dừng (không chỉnh được).</li>
+    <li><strong>Túi đầy:</strong> thôi nhặt, đánh tiếp; hoặc về thành rồi dừng. Muốn treo lâu thì bật thêm <a href="#tu-danh-ban">Túi đầy thì bán</a>.</li>
+    <li><strong>Hết giờ thì về thành</strong> (mặc định bật): hết giờ hoặc chạm trần ngày lúc đang chạy thì nhân vật về điểm hồi sinh rồi dừng, khỏi đứng giữa bãi quái.</li>
+    <li><strong>Máu dưới 25 %:</strong> lùi chờ thuốc, hết thuốc thì về thành (không chỉnh được, xem <a href="#tu-danh-an-toan">bên dưới</a>).</li>
   </ul>
   <p class="tip">Mang đủ thuốc máu trước khi bật.</p>
+</article>
+
+<article class="gcard" id="tu-danh-an-toan">
+  <h3>Uống thuốc, lùi, về thành</h3>
+  <dl class="sum">
+    <div><dt>Ngưỡng nguy hiểm</dt><dd>Máu dưới 25 %</dd></div>
+    <div><dt>Thuốc</dt><dd>Mọi trang hành trang</dd></div>
+    <div><dt>Cổng</dt><dd>Không tự qua bản đồ khác</dd></div>
+  </dl>
+  <ul>
+    <li><strong>Chọn thuốc:</strong> tìm ở mọi trang hành trang. Dùng thuốc tiệm trước, chọn viên nhỏ nhất đủ hồi phần máu đang thiếu (không viên nào đủ thì viên lớn nhất). Thuốc tiệm đang hồi thì dùng thuốc Luyện Đơn. Tái Tạo Hoàn chỉ dùng lúc nguy hiểm. Không dùng đồ ăn.</li>
+    <li><strong>Máu dưới 25 %:</strong> còn thuốc mà thuốc đang hồi thì nhân vật lùi khoảng 8 ô ra xa đám quái chờ thuốc. Hết thuốc máu thì niệm Tín Vật về thành rồi dừng.</li>
+    <li><strong>Tống Bảo Tiểu Yêu:</strong> chỉ chủ động đánh khi máu trên 70 % và còn thuốc máu; đang đánh mà máu dưới 40 % thì bỏ nó một lúc.</li>
+    <li><strong>Không qua cổng:</strong> không nhắm quái, không nhặt đồ sát cổng, hướng lùi cũng tránh cổng, nên nhân vật không tự sang bản đồ khác.</li>
+    <li><strong>Không chạy theo quái người khác:</strong> bỏ qua quái người khác đang đánh. Con mà bạn hoặc bảo thú của bạn vừa đánh trúng, ở gần bạn, thì vẫn đánh tiếp như con nguyên máu.</li>
+    <li><strong>Điện thoại:</strong> màn hình giữ sáng suốt lúc Tự Đánh. Nếu game bị tắt ngầm mà nhân vật đang bị đánh, máu dưới 25 % và máy không phản hồi 10 giây, máy chủ đưa nhân vật về điểm hồi sinh rồi dừng.</li>
+  </ul>
+</article>
+
+<article class="gcard" id="tu-danh-ban">
+  <h3>Tự bán khi túi đầy, tự hồi sinh tại chỗ</h3>
+  <dl class="sum">
+    <div><dt>Tự bán</dt><dd>Túi còn 1 ô trống, giá tiệm</dd></div>
+    <div><dt>Tự hồi sinh</dt><dd>Tốn ngân lượng theo cấp</dd></div>
+    <div><dt>Mặc định</dt><dd>Cả hai tắt</dd></div>
+  </dl>
+  <h4>Túi đầy thì bán</h4>
+  <ul>
+    <li>Hàng <strong>Túi đầy thì bán</strong> trong bảng có ba ô: <strong>Trắng</strong>, <strong>Xanh</strong> (trang bị phẩm đó) và <strong>Thu thập</strong> (đồ tạp rơi từ quái chỉ để bán, như nút Bán đồ tạp ở tiệm).</li>
+    <li>Đang Tự Đánh mà túi chỉ còn 1 ô trống trở xuống: bán ngay tại chỗ các món khớp ô đã đánh dấu, giá như bán ở tiệm, không cần về thành, rồi đánh tiếp. Có dòng báo số món đã bán và số lượng thu được. Mỗi lần thử cách nhau 30 giây.</li>
+    <li>Không bao giờ bán: đồ đang mặc, đồ khoá, đồ nhiệm vụ, đồ sự kiện, đồ Bảo Khố, set sư môn, tín vật, đồ có sao, có khảm, có dòng set hay phong ấn, phẩm Vàng trở lên, đồ Trắng có dòng, đồ Xanh có dòng Hiếm. Đồ tạp mà việc sư môn hay bang đang cần cũng giữ lại.</li>
+  </ul>
+  <h4>Tự hồi sinh tại chỗ</h4>
+  <ul>
+    <li>Bật ô <strong>Tự hồi sinh tại chỗ</strong> ở hàng Tử trận (bảng ghi sẵn giá theo cấp của bạn). Tử trận lúc đang Tự Đánh ở bản đồ dã ngoại: 3 giây sau sống lại ngay chỗ đó với 50 % máu và pháp lực, trừ ngân lượng, Tự Đánh chạy tiếp.</li>
+    <li>Giá bằng 10 × cấp × cấp, ít nhất 1.000 lượng.</li>
+    <li>Không đủ tiền, hoặc chết lần thứ 3 trong 10 phút (quái quá mạnh): hồi sinh như thường về điểm hồi sinh (mất 10 % ngân lượng mang theo) rồi dừng, có dòng báo lý do.</li>
+    <li>Phạt chết (kinh nghiệm, độ bền) vẫn tính như thường.</li>
+  </ul>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Cấp</th><th>20</th><th>40</th><th>50</th><th>60</th></tr></thead>
+      <tbody>
+        <tr><td>Giá hồi sinh tại chỗ</td><td>4.000</td><td>16.000</td><td>25.000</td><td>36.000</td></tr>
+      </tbody>
+    </table>
+  </div>
 </article>
 
 <article class="gcard" id="tu-danh-luat">
@@ -138,10 +193,10 @@
     <div><dt>Đánh gì</dt><dd>Quái thường, không cao hơn bạn quá 5 cấp</dd></div>
   </dl>
   <ul>
-    <li>Bật được ở mọi bản đồ dã ngoại đang mở có quái thường, kể cả Tân Thủ Thôn.</li>
+    <li>Bật được ở mọi bản đồ dã ngoại đang mở có quái thường, kể cả Tân Thủ Thôn và Triệu Trường Thành 1 tới 3 (<a href="../bat-dau/#tran-cap-60">mở sớm cho cấp 60</a>).</li>
     <li>Không bật được: trong thành, căn cứ môn phái, phó bản, bản đồ sự kiện, Phong Yêu Kính, lúc đang truy bắt, tỉ thí hoặc tử trận.</li>
     <li>Tìm khắp bản đồ đang đứng, con gần mình trước. Bỏ qua quái cao hơn bạn quá 5 cấp, để khỏi đi lạc vào bãi quái quá mạnh.</li>
-    <li>Không đánh boss, Trộm Bảo Phi Tặc, Tống Bảo Tiểu Yêu, Bảo Bảo, Lữ Bố; bỏ qua quái người khác đang đánh.</li>
+    <li>Không đánh boss, Trộm Bảo Phi Tặc, Bảo Bảo, Lữ Bố; bỏ qua quái người khác đang đánh. Tống Bảo Tiểu Yêu chỉ đánh khi máu còn nhiều (<a href="#tu-danh-an-toan">xem trên</a>).</li>
     <li>Kinh nghiệm, ngân lượng và đồ rơi như đánh tay. Khí Vận vẫn áp.</li>
     <li>Giờ nhân đôi kinh nghiệm của Chiến Quốc Lệnh áp cả khi đang tự đánh (giờ nhân đôi trôi như đánh tay).</li>
   </ul>

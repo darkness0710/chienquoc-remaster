@@ -65,6 +65,7 @@ mục cũ có thay đổi ở 5.0 có khối `.v5note` cuối phần chữ và c
 | `cong-diem` (2026-10-17) | `co-ban`, `diem-dao-hoa` … `diem-van-mong` (một mục mỗi phái, tiền tố `diem-` để khỏi trùng id trang `mon-phai`), `tay-diem` (nguồn: `logic/stats.gd` `STAT_NUM`, `sect_skills.json` `power` ở **tag đã phát**) |
 | `chien-truong` (6.6.0, 2026-10-21) | `ctr-lich`, `ctr-tran`, `ctr-danh`, `ctr-chien-tich`, `ctr-doi`, `ctr-danh-hieu` (tiền tố `ctr-` vì `ct-` đã dùng ở `nhiem-vu`; nguồn: tài liệu game gameplay/82, `battlefield.json`); giữa `dau-truong` và `ky-tran` |
 | `bang-chien` (6.7.0, 2026-10-22) | `bc-lich`, `bc-dieu-kien`, `bc-coc`, `bc-qua` (tiền tố `bc-`; nguồn: tài liệu game gameplay/84, `guild_war.json`); giữa `chien-truong` và `ky-tran` |
+| `su-kien` (7.1.0, 2026-10-24) | `su-kien-chung`, `phien-ban-moi`, `vong-quay`, `hoi-dau-dong` (nguồn: tài liệu game he-thong/su-kien §1b, §1c, §10, `events.json`). Sự kiện hết hạn thì gỡ khối, giữ trang |
 | `ngan-luong` (2026-10-17) | `uoc-tinh`, `moi-ngay`, `theo-cap`, `pho-ban-tien`, `ban-do`, `giu-tien`, `tieu-tien` |
 | `phim-tat` | `ds-phim` (nguồn: `godot/client/ui/shortcuts_panel.gd` repo game) |
 

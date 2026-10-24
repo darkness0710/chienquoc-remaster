@@ -49,6 +49,9 @@
 
   <div class="vtoc-bar">
     <nav class="wrap vtoc" aria-label="Nhảy tới phiên bản">
+      <a class="is-next" href="#v7-1-0">7.1.0 sắp ra</a>
+      <a href="#v7-0-0">7.0.0</a>
+      <a href="#v6-7-0">6.7.0</a>
       <a href="#v6-6-0">6.6.0</a>
       <a href="#v6-5-1">6.5.1</a>
       <a href="#v6-5-0">6.5.0</a>
@@ -91,6 +94,131 @@
 
   <div class="wrap">
     <div class="vlist">
+
+      <!-- ================= 7.1.0 (SẮP RA) =================
+           Chưa phát, chưa có ngày (khi phát: bỏ vcard--next, thêm <time data-rel="7.1.0"> + RELEASES["7.1.0"] ở js/release.js,
+           đổi vtoc "is-next"). Nguồn: git log 7.0.0..HEAD repo game, nhật ký (559)-(598), next-update/note.txt, he-thong/su-kien §10. -->
+      <article class="vcard vcard--next" id="v7-1-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">7.1.0</h2>
+          <span class="vcard__tag">Sắp ra mắt</span>
+        </header>
+        <p class="vcard__sum">Đơn giản hoá: vào phó bản bằng Thẻ Phó Bản, ba mức Thường, Tinh Anh, Địa Ngục, vào là gặp trùm; ba việc chính mỗi ngày; set sư môn mạnh hơn; Ký Gửi bán được đồ khoá; Sơn Hà Chí, chủ tuyến hồi 13, 14, mở Triệu Trường Thành (quái 61 tới 65); sự kiện vòng quay Hội Phiên Bản Mới.</p>
+        <p class="note">Bản đang thử, chưa có ngày phát. Máy chủ vẫn chạy 7.0.0; nội dung dưới đây có thể còn đổi trước khi phát.</p>
+
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li><a href="../huong-dan/pho-ban/#the-pho-ban">Thẻ Phó Bản</a> (từ cấp 10): điểm danh +1, xong ngày +1, giữ tối đa 14, tặng 4 thẻ. Cổ Mộ, Phong Yêu Kính, Thành Kiều, truy bắt nhóm: mỗi người nộp 1 thẻ lúc vào, thua vẫn mất, không giới hạn số lượt. Bỏ phí vào, đội lệch tối đa 20 cấp.</li>
+          <li>Phó bản ba mức Thường, Tinh Anh, Địa Ngục; bỏ lính dọc đường, vào là gặp trùm; Phong Yêu Kính đánh hình chiếu của chính đội mình. Mỗi lượt lật 1 thẻ, mọi đồ phó bản khoá: Vương Bộ Đầu ra ngân lượng, Phong Yêu Kính ra phiếu, Cổ Mộ ra Đoạn Thạch, Thành Kiều ra Tử Kim Tinh hoặc Ngân Lượng Bao.</li>
+          <li><a href="../huong-dan/su-kien/">Hội Phiên Bản Mới</a> (mở cùng bản, tới 31/10 17:59, cấp 40): đổi Tử Kim Tinh, Vô Song Điểm Phiếu, ngân lượng lấy Lượt Quay, vòng quay 9 ô, quà mốc 10 tới 100 (mốc 50 chọn mẫu bong bóng chat, mốc 100 chọn Bí Kíp Lăng Ba Vi Bộ hoặc Thẻ Hoả Hồ Ly không khoá).</li>
+          <li><a href="../huong-dan/bay-ban/#ban-do-khoa">Ký Gửi bán đồ khoá</a> (cấp 40): Sơ, Trung, Cao Đoạn Thạch, Tử Kim Tinh, Vô Song Điểm Phiếu khoá bán được một lần, người mua nhận món vẫn khoá. Có khung giá, phí sàn 5 % + thuế 5 %, trần tuần cả bán lẫn mua.</li>
+          <li><a href="../huong-dan/nhiem-vu/#son-ha-chi">Sơn Hà Chí</a>: phó bản một người theo chương cho cấp 60, nhận ở sư phụ phái. Mỗi chương một lượt, ngã dọc đường về trạm không mất gì, thua trùm tối đa 3 lần mỗi ngày; qua chương tín vật phái lên 1 sao.</li>
+          <li><a href="../huong-dan/nhiem-vu/#ct-hoi-13">Chủ tuyến hồi 13, 14</a> (Trường Bạch, Trường Thành Yên). Mở sớm Triệu Trường Thành 1 tới 3 (quái 61 tới 65) cho người cấp 60; trần cấp vẫn 60.</li>
+          <li><a href="../huong-dan/set-su-mon/#set-tai-tao">Tái tạo dòng set</a> thành tab riêng: chọn loại chỉ số, giữ dòng cũ hay lấy dòng mới, thêm bậc Cực phẩm 150 %.</li>
+          <li>Chat: nhắn Mật cho bất kỳ ai đang online, 6 thẻ chat, Chặn, nút bánh răng cài đặt khung chat, bong bóng chat trên đầu nhân vật, tin cường hoá cả server ở kênh Hệ thống.</li>
+          <li>Lên cấp có hiệu ứng như bản gốc (nổ đỏ, cột sáng, chữ Tăng Cấp), người cùng bản đồ cũng thấy.</li>
+        </ul>
+
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li><a href="../huong-dan/hang-ngay/#hoat-dong">Việc chính trong ngày</a>: Điểm danh, Quà online (mốc 15 phút), Sư môn 10 việc, cộng 1 việc tự chọn bất kỳ; Câu cá thành việc tự chọn. Quà xong ngày thêm 1 Thẻ Phó Bản. Quỹ server mốc 10 tới 50 người.</li>
+          <li>Sư môn còn 10 việc mỗi ngày, quà mỗi việc x1,5, 2 điểm mỗi việc, có nút Đi và đánh, sư phụ mua hộ đồ còn thiếu.</li>
+          <li>Set sư môn: hệ số phẩm Tím 1,5 lên 1,6, Hoàng Kim 1,4 lên 1,6. Nâng set mỗi lần 2 Tử Kim Tinh + 5 điểm sư môn.</li>
+          <li>Tiệm sư môn bỏ Sơ Cấp Đoạn Thạch, Thẻ Thần Thú chọn con, Ngân Lượng Bao; Tử Kim Tinh đổi được 2 Cao Cấp Đoạn Thạch, Bùa May Mắn (5 Tinh), Bùa Ma Thuật (10 Tinh), mỗi hàng 1 lần mỗi tuần.</li>
+          <li>Rèn: Đoạn Thạch chồng được trong một ô; hợp thành nhiều lượt một lần; Cao lên Đỉnh 5 viên, Đỉnh lên Chí Tôn 8 viên, chắc chắn thành. Thăng phẩm lên Vàng, Bạch Kim rẻ hơn.</li>
+          <li>Trùm phó bản mức Thường nổi giận nhẹ hơn (không còn một đòn mất nửa máu); mọi mức có đồng hồ báo trước lúc trùm nổi giận.</li>
+          <li><a href="../huong-dan/tu-danh/">Tự Đánh</a>: miễn phí 4 giờ mỗi ngày, tối đa 8 giờ; thẻ 1 giờ 5 Kim Nguyên Bảo, gói 5 giờ 20. Túi gần đầy tự bán đồ rác, chết thì tự hồi sinh tại chỗ; hai nút riêng cho thiết lập và bật, tắt.</li>
+          <li>Quái thường sống lại sau 9 giây (trước 15). Né khi bị người chơi đánh tối đa 40 %.</li>
+          <li>Tập Kích Môn Phái đợt giữa lúc 18:00; Thành Kiều xen Ngân Lượng Bao vào bảng lật.</li>
+          <li>Bảo Khố tab Kim Nguyên Bảo bỏ Bùa May Mắn và bong bóng chat (đã mua thì giữ). Vô Song Điểm Phiếu tạm không mở thú cưỡi Truyền Thuyết và ngoại trang 52 tới 59 (đã mở giữ nguyên). Đổi tiềm năng lấy phiếu ở Vương Bộ Đầu từ cấp 60.</li>
+        </ul>
+
+        <h3 class="g-ui">Giao diện</h3>
+        <ul>
+          <li>Bảng Hoạt động to hơn, dòng dài có chú thích khi rê chuột hoặc chạm, nút Bay tới (1 Phi Hành Phù) ở các dòng có NPC.</li>
+          <li>Dải phó bản trên máy tính về cột trái dưới thanh máu (điện thoại giữ giữa trên); thanh boss thế giới lên cao, bấm xuyên được.</li>
+          <li>Bản đồ khu vực <kbd>Alt</kbd>+<kbd>D</kbd> có chấm đỏ mục tiêu như bản đồ góc.</li>
+          <li>Khung thú, đồng đội trên máy tính gọn hơn; Ngự Kiếm Phi Tiên bỏ vòng dưới chân.</li>
+        </ul>
+
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Dính Choáng hoặc Định thân trong lúc PK mà vẫn đi được.</li>
+          <li>Thẻ chi tiết tín vật trên điện thoại vỡ khung.</li>
+          <li>Nút trồng cây ăn quả không báo lý do khi vườn chưa mở.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 7.0.0 =================
+           Phát trưa 2026-10-23 12:01 (ngày ở js/release.js). Nguồn: git log 6.7.0..7.0.0 repo game, nhật ký (548). -->
+      <article class="vcard" id="v7-0-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">7.0.0</h2>
+          <time class="vcard__date" data-rel="7.0.0" datetime="2026-10-23">23/10/2026</time>
+          <span class="vcard__tag">Nông Trại mới</span>
+        </header>
+        <p class="vcard__sum">Nông trại làm lại trên bản đồ riêng, boss thế giới dễ thở hơn, pháp bảo đánh trùm, Tự Đánh an toàn hơn, tiệm bán đồ tạp một nút, hết khựng 10 phút một lần.</p>
+
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li><a href="../huong-dan/nong-trai/">Nông trại</a> làm lại: bản đồ nông trại riêng, giúp vườn bằng hữu, lên cấp nhanh gấp 3, mở ô và lên cấp rẻ, lãi 1,3 tới 2 lần tiền hạt, gieo lại tất cả một nút, đơn hàng Lão Nông ngày và tuần, thảo dược cho Luyện Đơn, Đầu Bếp, nuôi gà, heo, trâu, cây ăn quả.</li>
+          <li>Tiệm NPC: nút Tối đa gộp mọi chồng cùng loại, nút Bán đồ tạp bán một lần.</li>
+          <li><a href="../huong-dan/trang-bi/#phap-bao">Pháp bảo</a> Cổ Mộ có dòng đánh trùm (Linh Thông, Cửu Long, Nhiếp Hồn Phá Giáp, Chiêu Hồn, Truyền Thế).</li>
+        </ul>
+
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li><a href="../huong-dan/boss-the-gioi/">Boss thế giới</a>: máu còn một nửa, thú của chủ cũng đánh boss, hết giờ chưa hạ vẫn phát nửa quà theo hạng.</li>
+          <li>Nâng set sư môn bậc 1 lên 2: tỉ lệ 20 % lên 25 %.</li>
+          <li>Tín vật phái: hồi giữa hai lần dùng 60 giây xuống 15 giây.</li>
+          <li><a href="../huong-dan/tu-danh/">Tự Đánh</a> an toàn hơn: chọn thuốc theo túi, máu thấp thì lùi, hết thuốc về thành, không tự qua cổng bản đồ, không chạy theo quái người khác đang đánh; điện thoại giữ màn sáng khi Tự Đánh.</li>
+        </ul>
+
+        <h3 class="g-ui">Giao diện</h3>
+        <ul>
+          <li>Điện thoại: tên thú, đồng đội viết tắt, thanh máu rộng cố định; tắt joystick thì khung chat xuống góc dưới trái.</li>
+          <li>Bảng Hoạt động có nút Bay tới boss thế giới.</li>
+        </ul>
+
+        <h3 class="g-fix">Sửa lỗi</h3>
+        <ul>
+          <li>Máy chủ khựng vài trăm mili giây mỗi 10 phút khi làm mới bảng xếp hạng.</li>
+          <li>Đứng đánh bị kéo giật lùi.</li>
+        </ul>
+      </article>
+
+      <!-- ================= 6.7.0 =================
+           Phát tối 2026-10-22 19:11. Nguồn: commit ffc5b0aa repo game, nhật ký (543)-(544); hướng dẫn đã sửa ở commit 5a432a5. -->
+      <article class="vcard" id="v6-7-0">
+        <header class="vcard__head">
+          <h2 class="vcard__ver">6.7.0</h2>
+          <time class="vcard__date" data-rel="6.7.0" datetime="2026-10-22">22/10/2026</time>
+          <span class="vcard__tag">Bang Chiến</span>
+        </header>
+        <p class="vcard__sum">Bang Chiến tranh Cờ Hiệu, Ký Gửi thay bày sạp, Thẻ Súc Địa Thành Thốn, khung chat mới, đổi Tử Kim Tinh ở sư phụ.</p>
+
+        <h3 class="g-new">Tính năng mới</h3>
+        <ul>
+          <li><a href="../huong-dan/bang-chien/">Bang Chiến</a>: tối thứ 3, 5, 7 lúc 21:00, 20 phút, các bang tranh và giữ Cờ Hiệu.</li>
+          <li><a href="../huong-dan/bay-ban/">Ký Gửi</a> thay bày sạp: gửi đồ cho Thương Hội bán hộ, thoát game vẫn bán; kênh Giao Dịch ai cũng rao được.</li>
+          <li><a href="../huong-dan/tien-ich/#suc-dia">Thẻ Súc Địa Thành Thốn</a>: lướt 5 ô, hồi 15 giây; đổi ở sư phụ bằng Thẻ Lăng Ba Vi Bộ.</li>
+          <li>Khung chat mới: 88 biểu cảm, thẻ kênh, giờ gửi, bấm tên ra menu. Danh hiệu dạng biển sơn mài.</li>
+          <li>Vương Bộ Đầu đổi tiềm năng lấy Vô Song Điểm Phiếu khoá.</li>
+        </ul>
+
+        <h3 class="g-bal">Cân bằng</h3>
+        <ul>
+          <li><a href="../huong-dan/set-su-mon/#doi-su-phu">Tử Kim Tinh</a> đổi ở sư phụ lấy Cao Cấp Đoạn Thạch, Bùa Ma Thuật.</li>
+          <li>Tự Đánh nhận gấp đôi Chiến Quốc Lệnh. Trộm Bảo Phi Tặc 20 con mỗi giờ.</li>
+          <li>Đổi phái thì set sư môn tự quy đổi sang phái mới (giữ sao, ngọc).</li>
+        </ul>
+
+        <h3 class="g-ui">Giao diện</h3>
+        <ul>
+          <li>Khung phó bản và hàng nút tròn thu gọn được; khung mục tiêu hạ xuống dưới hàng nút. Chat điện thoại cao hơn.</li>
+          <li>Kéo được thuốc Luyện Đơn, món ăn, Chiến Quốc Lệnh, phù vào ô phím tắt. Chiến Trường vào lại trong 180 giây.</li>
+        </ul>
+      </article>
 
       <!-- ================= 6.6.0 =================
            Phát tối 2026-10-21 (ngày ở js/release.js). Nguồn: note.txt gốc repo game (bản 6.6.0), gameplay/82 (Chiến Trường), 83 (Bảo Điển Plus),
